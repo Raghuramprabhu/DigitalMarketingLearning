@@ -336,3 +336,72 @@ footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--ink-so
   .card, .story { padding: 18px; }
   .definition { padding: 20px; }
 }
+
+/* ---------- Ch2: decision equation ---------- */
+.equation {
+  font-family: var(--font-display); font-size: clamp(1.1rem, 3.4vw, 1.4rem);
+  text-align: center; padding: 22px; border-radius: var(--radius);
+  background: var(--card); border: 2px solid var(--teal); box-shadow: var(--shadow);
+  line-height: 1.6;
+}
+.equation .pos { color: var(--good); font-weight: 700; }
+.equation .neg { color: var(--bad); font-weight: 700; }
+
+/* ---------- Ch2: journey stages ---------- */
+.stages { display: grid; gap: 12px; counter-reset: stage; }
+.stage {
+  display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: start;
+  cursor: pointer; text-align: left; font: inherit; color: inherit; width: 100%;
+  transition: border-color .15s ease;
+}
+.stage:hover { border-color: var(--accent); }
+.stage .badge {
+  width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center;
+  justify-content: center; font-size: 1.5rem; background: var(--accent-soft);
+}
+.stage h3 { margin: 2px 0 2px; }
+.stage .q-in-head { color: var(--ink-soft); font-style: italic; font-size: .95rem; margin: 0; }
+.stage .more { display: none; margin-top: 10px; font-size: .95rem; }
+.stage.open .more { display: block; }
+.stage .more p { margin: 0 0 8px; }
+.stage .metric {
+  display: inline-block; font-size: .78rem; font-weight: 700; padding: 2px 8px;
+  border-radius: 999px; background: var(--teal-soft); color: var(--teal); margin: 2px 4px 2px 0;
+}
+
+/* ---------- Ch2: sorter game ---------- */
+.sorter-card {
+  text-align: center; font-family: var(--font-display); font-size: 1.2rem;
+  padding: 26px 18px; min-height: 120px; display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius); background: var(--bg-soft); border: 1px dashed var(--line);
+  margin-bottom: 14px; transition: background .2s;
+}
+.sorter-card.hit { background: var(--good-soft); border-color: var(--good); }
+.sorter-card.miss { background: var(--bad-soft); border-color: var(--bad); }
+.sorter-btns { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.sorter-btns .opt { text-align: center; padding: 10px 4px; font-size: .85rem; margin: 0; }
+.sorter-fb { min-height: 2.6em; margin-top: 12px; color: var(--ink-soft); font-size: .95rem; text-align: center; }
+.sorter-meta { display: flex; justify-content: space-between; font-size: .85rem; color: var(--ink-soft); margin-bottom: 8px; }
+
+/* ---------- Ch2: leak finder ---------- */
+.leak-row {
+  display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 10px; align-items: center;
+  padding: 8px 0; border-bottom: 1px solid var(--line);
+}
+.leak-row:last-child { border-bottom: 0; }
+.leak-row label { font-weight: 700; font-size: .95rem; }
+.leak-row input {
+  width: 100%; font: inherit; padding: 8px 10px; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+}
+.leak-row input:focus { outline: 2px solid var(--accent); border-color: transparent; }
+.leak-row .drop { font-size: .85rem; color: var(--ink-soft); text-align: right; }
+.leak-row.worst .drop { color: var(--bad); font-weight: 700; }
+.leak-row.worst label::after { content: " 🔥"; }
+.leak-verdict { margin-top: 14px; }
+
+@media (max-width: 560px) {
+  .sorter-btns { grid-template-columns: repeat(3, 1fr); }
+  .leak-row { grid-template-columns: 1fr 1fr; }
+  .leak-row .drop { grid-column: 1 / -1; text-align: left; }
+}
