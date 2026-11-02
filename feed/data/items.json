@@ -1,0 +1,535 @@
+{
+ "updated": "2026-11-02T03:24:55+00:00",
+ "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Close your eyes for 30 seconds and recall three things from today's feed without scrolling back. Then check.\n\nPulling memories out, rather than re-reading them, is how they stick.",
+   "q": "Little's Law in one line?",
+   "a": "Items in the system = arrival rate × time in system (L = λW).",
+   "edition": "2026-11-02-am",
+   "order": 49,
+   "id": "2026-11-02-am-049"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "There is nothing either good or bad, but thinking makes it so.",
+   "who": "Shakespeare, Hamlet II.ii",
+   "edition": "2026-11-02-am",
+   "order": 48,
+   "id": "2026-11-02-am-048"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Older than the Aztecs",
+   "body": "Teaching was happening at Oxford by 1096. The Aztec capital Tenochtitlan was founded in 1325, more than two centuries later.",
+   "hook": "Which institutions around you will still exist in 900 years?",
+   "edition": "2026-11-02-am",
+   "order": 47,
+   "id": "2026-11-02-am-047"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first published program",
+   "body": "In 1843 Ada Lovelace translated an article about Babbage's Analytical Engine and added notes three times longer than the original. Note G laid out step by step how the engine could compute Bernoulli numbers. It's often called the first published computer program, written for a machine that was never built.",
+   "hook": "What would it feel like to write code for a machine that doesn't exist yet?",
+   "edition": "2026-11-02-am",
+   "order": 46,
+   "id": "2026-11-02-am-046"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Park downhill",
+   "body": "Hemingway liked to stop writing while he still knew what came next, so the next morning's start was easy.\n\nFor ADHD this is gold. End every work block by writing one sentence: \"Next, I will…\". Starting is the hardest part; leave yourself a downhill start.",
+   "hook": "What's the one-line 'next' for the task you'll open after this?",
+   "edition": "2026-11-02-am",
+   "order": 45,
+   "id": "2026-11-02-am-045"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "Two lamps",
+   "body": "Two lamps hung in a temple corridor. One burned bright and needed refilling twice a night. The other burned low and lasted till dawn.\n\nThe priest never compared them. He knew some hours need brightness and some need endurance, and a corridor needs both.",
+   "who": "original micro-story",
+   "edition": "2026-11-02-am",
+   "order": 44,
+   "id": "2026-11-02-am-044"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "CAP, said properly",
+   "body": "CAP is often summarised as 'pick two of three.' More precisely: when a network partition happens, a distributed system must choose between consistency (refuse or delay answers) and availability (answer, possibly with stale data). When there's no partition, you can have both.\n\nBrewer stated it in 2000; Gilbert and Lynch proved it in 2002.",
+   "q": "When is CAP's trade-off forced?",
+   "a": "Only during a network partition. Then you choose consistency or availability.",
+   "edition": "2026-11-02-am",
+   "order": 43,
+   "id": "2026-11-02-am-043"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "Learn thoroughly what is worth learning, then stand by it in how you live.",
+   "who": "Thirukkural 391 (own rendering)",
+   "edition": "2026-11-02-am",
+   "order": 42,
+   "id": "2026-11-02-am-042"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Aryabhata's spinning Earth",
+   "body": "In 499 CE, at just 23, Aryabhata wrote the Aryabhatiya. He proposed that the stars' daily motion comes from Earth rotating on its axis, and gave a value of π accurate to four decimal places (3.1416). India's first satellite was named after him in 1975.",
+   "q": "What did Aryabhata say explains the stars' daily motion?",
+   "a": "Earth's rotation on its own axis.",
+   "edition": "2026-11-02-am",
+   "order": 41,
+   "id": "2026-11-02-am-041"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Context isn't memory",
+   "body": "A model's context window is like a desk: whatever is on it right now, it can use. Memory is the filing cabinet: what you choose to pull back onto the desk later.\n\nRAG (retrieval-augmented generation) is just a librarian who fetches the right files before each question. Most 'the AI forgot' problems are really retrieval problems.",
+   "hook": "In your own systems, where is the right information sitting in a cabinet nobody opens?",
+   "edition": "2026-11-02-am",
+   "order": 40,
+   "id": "2026-11-02-am-040"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Bananas are berries; strawberries aren't",
+   "body": "Botanically, a berry develops from a single flower's ovary with seeds inside the flesh, so bananas, tomatoes and even brinjal qualify. A strawberry's 'seeds' are actually tiny fruits on the outside of a swollen stem base, so it isn't a true berry at all.",
+   "edition": "2026-11-02-am",
+   "order": 39,
+   "id": "2026-11-02-am-039"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The Y2038 problem",
+   "body": "Unix counts time as seconds since 1 January 1970. In a signed 32-bit integer, that counter overflows at 03:14:07 UTC on 19 January 2038 and wraps around to 1901. Most modern systems use 64 bits now, but old embedded devices and file formats may still break.",
+   "hook": "What 32-bit assumptions are lurking in systems you've worked on?",
+   "edition": "2026-11-02-am",
+   "order": 38,
+   "id": "2026-11-02-am-038"
+  },
+  {
+   "topic": "chess",
+   "kind": "puzzle",
+   "title": "Building a bridge (the Lucena position)",
+   "body": "Rook and pawn vs rook, your pawn on the 7th, your king on the queening square, enemy rook cutting your king off from the side. How do you get out and promote?\n\nThe classic method: bring your rook to the 4th rank, walk the king out, and when checks come, block with the rook. That's 'building a bridge.'",
+   "q": "In the Lucena position, which rank does the rook go to, and why?",
+   "a": "The 4th rank, counting from your side. That way it can step in front of your king to block the checks once the king leaves the pawn.",
+   "edition": "2026-11-02-am",
+   "order": 37,
+   "id": "2026-11-02-am-037"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The inverted U",
+   "body": "In 1908 Yerkes and Dodson found that performance rises with arousal, but only up to a point. Then it falls. The peak sits lower for complex tasks than simple ones.\n\nTranslation: a little pressure sharpens you for routine work; for deep, tricky work (debugging, writing), calm wins.",
+   "hook": "Is the stress you feel today helping simple tasks or hurting complex ones?",
+   "edition": "2026-11-02-am",
+   "order": 36,
+   "id": "2026-11-02-am-036"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Late-November sky diary",
+   "body": "Mark these: Nov 16, Mars passes close to Jupiter. Nov 24, the full Moon is a supermoon. Nov 25, Uranus reaches opposition, its closest and brightest of the year (still needs binoculars and a dark sky).",
+   "source": {
+    "name": "Star Walk · Astronomy calendar 2026",
+    "url": "https://starwalk.space/en/news/astronomy-calendar-2026"
+   },
+   "edition": "2026-11-02-am",
+   "order": 35,
+   "id": "2026-11-02-am-035"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "What the river knows",
+   "body": "It never argues with the stone.\nIt simply goes around,\nand in a thousand years\nthe stone is sand,\nand the river\nis still a river.",
+   "who": "original for this feed",
+   "edition": "2026-11-02-am",
+   "order": 34,
+   "id": "2026-11-02-am-034"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 21 virtual threads, in one breath",
+   "body": "Platform threads map one-to-one onto OS threads and are expensive, so you pool them. Virtual threads (final in Java 21) are cheap threads managed by the JVM. When one blocks on I/O, the JVM parks it and frees the carrier thread.\n\nResult: you can write simple blocking code and still handle a million concurrent requests.",
+   "q": "What happens to a virtual thread when it blocks on I/O?",
+   "a": "The JVM unmounts it from its carrier OS thread, which is freed to run another virtual thread.",
+   "edition": "2026-11-02-am",
+   "order": 33,
+   "id": "2026-11-02-am-033"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Zero gets its rules",
+   "body": "In 628 CE the mathematician Brahmagupta, in his Brahmasphutasiddhanta, wrote the first known rules for doing arithmetic with zero as a number in its own right: a number minus itself is zero, anything times zero is zero. He also wrestled with division by zero, a problem that still trips up our code.",
+   "q": "Who first wrote down arithmetic rules for zero, and when?",
+   "a": "Brahmagupta, in 628 CE.",
+   "edition": "2026-11-02-am",
+   "order": 32,
+   "id": "2026-11-02-am-032"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "Men are disturbed not by things, but by the principles and notions which they form concerning things.",
+   "who": "Epictetus, Enchiridion 5 (tr. Carter, 1758)",
+   "edition": "2026-11-02-am",
+   "order": 31,
+   "id": "2026-11-02-am-031"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Body doubling",
+   "body": "Some tasks get done simply because someone else is in the room. That's body doubling. The other person doesn't help; their presence just anchors your attention.\n\nWorks remotely too: a silent video call with a friend, or a 'focus room' online. Even saying \"I'm starting X now\" to someone counts.",
+   "hook": "Who could be your silent co-worker for one hour this week?",
+   "edition": "2026-11-02-am",
+   "order": 30,
+   "id": "2026-11-02-am-030"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first programmers of ENIAC",
+   "body": "ENIAC, unveiled in 1946, was programmed by six women: Kay McNulty, Betty Jennings, Betty Snyder, Marlyn Wescoff, Fran Bilas and Ruth Lichterman. There were no programming languages; they worked from wiring diagrams and plugged cables by hand. For decades they went largely uncredited.",
+   "edition": "2026-11-02-am",
+   "order": 29,
+   "id": "2026-11-02-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Three hearts, blue blood",
+   "body": "An octopus has three hearts: two pump blood through the gills, one pumps it around the body. Its blood is blue because it carries oxygen with copper-based haemocyanin instead of our iron-based haemoglobin.",
+   "hook": "Why would copper beat iron in cold, low-oxygen seawater?",
+   "edition": "2026-11-02-am",
+   "order": 28,
+   "id": "2026-11-02-am-028"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The Zeigarnik effect, honestly",
+   "body": "In the 1920s Bluma Zeigarnik noticed that waiters remembered unpaid orders perfectly and forgot them once paid. Her experiments suggested unfinished tasks stay mentally 'open.'\n\nLater replications are mixed, but one useful finding holds: writing down a concrete plan for an unfinished task quiets the mental nagging. Closing the loop on paper is enough.",
+   "hook": "What open loop is humming in your head right now? Write the next step down.",
+   "edition": "2026-11-02-am",
+   "order": 27,
+   "id": "2026-11-02-am-027"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "A teaspoon of neutron star",
+   "body": "A neutron star packs more mass than the Sun into a ball about 20 km wide, roughly the size of a city. A teaspoon of its material would weigh on the order of a billion tonnes on Earth.",
+   "q": "Roughly how wide is a neutron star?",
+   "a": "About 20 km, city-sized, while holding more mass than the Sun.",
+   "edition": "2026-11-02-am",
+   "order": 26,
+   "id": "2026-11-02-am-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "More games than atoms",
+   "body": "Claude Shannon estimated the number of possible chess games at about 10^120, now called the Shannon number. The observable universe has roughly 10^80 atoms. No computer will ever solve chess by brute force, which is why intuition and pattern still matter.",
+   "hook": "If brute force is impossible, how do engines play so well?",
+   "edition": "2026-11-02-am",
+   "order": 25,
+   "id": "2026-11-02-am-025"
+  },
+  {
+   "topic": "ai",
+   "kind": "tip",
+   "title": "Evals are the unit tests of AI",
+   "body": "You wouldn't ship code without tests, but people ship prompts without evals all the time. An eval is a fixed set of inputs with known good outputs that you re-run after every change.\n\nStart tiny: 10 real examples, a pass/fail column. It turns 'feels better' into 'is better.'",
+   "edition": "2026-11-02-am",
+   "order": 24,
+   "id": "2026-11-02-am-024"
+  },
+  {
+   "topic": "writing",
+   "kind": "tip",
+   "title": "The three-beat story",
+   "body": "Every story that holds a room has three beats: someone wants something → something gets in the way → they (or we) change.\n\nNo change, no story; just an event. Before your next speech or blog post, write one line: \"Who changed, and how?\"",
+   "hook": "What's the smallest true story from your week that has all three beats?",
+   "edition": "2026-11-02-am",
+   "order": 23,
+   "id": "2026-11-02-am-023"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Idempotency keys: making 'retry' safe",
+   "body": "A payment request times out. Did it go through? If the client retries, you might charge twice.\n\nThe fix: the client sends a unique idempotency key with the request. The server stores the result against that key, so a repeat with the same key returns the stored result instead of doing the work again. Stripe made the pattern famous; every order and payment API needs it.",
+   "q": "What does the server do when it sees an idempotency key it has seen before?",
+   "a": "Returns the stored response from the first attempt without re-executing the operation.",
+   "edition": "2026-11-02-am",
+   "order": 22,
+   "id": "2026-11-02-am-022"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The temple whose shadow stories are wrong",
+   "body": "Rajaraja Chola I completed the Brihadeeswarar temple at Thanjavur around 1010 CE. Its tower rises about 66 metres. A popular legend says the tower casts no shadow at noon. It does cast one; it just falls on its own broad base. The real wonder is that it has stood for over a thousand years.",
+   "hook": "Why do we love myths about things that are already remarkable?",
+   "edition": "2026-11-02-am",
+   "order": 21,
+   "id": "2026-11-02-am-021"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "There are more things, Lucilius, likely to frighten us than there are to crush us; we suffer more often in imagination than in reality.",
+   "who": "Seneca, Letter XIII (tr. Gummere, 1917)",
+   "edition": "2026-11-02-am",
+   "order": 20,
+   "id": "2026-11-02-am-020"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Make time visible",
+   "body": "Time blindness is real: an ADHD brain often feels only 'now' and 'not now.' Move time outside your head. Use a visual countdown timer on the desk, or say out loud \"this gets 25 minutes.\" Analog clocks help more than digital ones, because you can see how much of the hour is left.",
+   "hook": "Where in your day does time disappear the most?",
+   "edition": "2026-11-02-am",
+   "order": 19,
+   "id": "2026-11-02-am-019"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Java was almost called Oak",
+   "body": "In 1991 James Gosling's team at Sun started the 'Green Project' to program consumer devices. Their language was called Oak, after a tree outside his office. A trademark clash forced a new name, and in 1995 it shipped as Java, sold on 'write once, run anywhere.'",
+   "q": "What was Java's original name, and why did it change?",
+   "a": "Oak. The name was already trademarked, so it was renamed Java before the 1995 launch.",
+   "edition": "2026-11-02-am",
+   "order": 18,
+   "id": "2026-11-02-am-018"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Cleopatra and the Moon landing",
+   "body": "Cleopatra lived closer in time to the Apollo 11 Moon landing than to the building of the Great Pyramid of Giza. The pyramid went up around 2560 BCE; she died in 30 BCE. That's about 2,530 years before her and 1,999 years after.",
+   "hook": "What else feels ancient but is actually 'recent'?",
+   "edition": "2026-11-02-am",
+   "order": 17,
+   "id": "2026-11-02-am-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "The physiological sigh",
+   "body": "Two inhales through the nose (a full one, then a short top-up) and one long, slow exhale through the mouth. A 2023 Stanford study found that five minutes a day of this 'cyclic sighing' lifted mood more than the same time spent on mindfulness meditation.\n\nIt's the fastest manual brake on stress your body offers.",
+   "source": {
+    "name": "Balban et al., Cell Reports Medicine (2023)",
+    "url": "https://doi.org/10.1016/j.xcrm.2022.100895"
+   },
+   "edition": "2026-11-02-am",
+   "order": 16,
+   "id": "2026-11-02-am-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Capablanca's unusual advice: learn endings first",
+   "body": "José Raúl Capablanca, world champion 1921–27, told beginners to study the endgame before anything else. With few pieces on the board, you learn what each piece is actually worth. Openings are memory. Endgames are understanding.",
+   "hook": "What's the 'endgame' of your own field: the simplest situation where the fundamentals show clearly?",
+   "edition": "2026-11-02-am",
+   "order": 15,
+   "id": "2026-11-02-am-015"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Leonids peak Nov 17–18",
+   "body": "The Leonid meteor shower peaks on the night of 17–18 November, at around 15 meteors an hour under dark skies. The Moon will have set by the second half of the night. Leonids are among the fastest meteors, hitting the air at about 70 km/s. They're dust from Comet Tempel–Tuttle.",
+   "hook": "A grain of sand making a streak across the whole sky. How much energy is that?",
+   "source": {
+    "name": "Universe Magazine · Celestial curiosities 2026",
+    "url": "https://universemagazine.com/en/celestial-curiosities-in-2026/"
+   },
+   "edition": "2026-11-02-am",
+   "order": 14,
+   "id": "2026-11-02-am-014"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: when a HashMap bucket turns into a tree",
+   "body": "Since Java 8, if one HashMap bucket collects more than 8 entries (and the table has at least 64 slots), that bucket turns from a linked list into a red-black tree. Worst-case lookup drops from O(n) to O(log n). It's a defence against bad hashCode() methods and hash-flooding attacks.",
+   "q": "Two conditions trigger treeification. What are they?",
+   "a": "More than 8 entries in one bucket (TREEIFY_THRESHOLD) and a table capacity of at least 64. Below 64 slots, HashMap resizes instead.",
+   "edition": "2026-11-02-am",
+   "order": 13,
+   "id": "2026-11-02-am-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The clockmaker's apprentice",
+   "body": "The apprentice asked why the old man oiled clocks that were running perfectly.\n\n\"Because,\" he said, \"the day it stops, you'll be busy with a hundred others. A clock doesn't ask for care when it needs it. It asks a month later, all at once.\"\n\nThe boy thought this was about clocks. Thirty years later, oiling a quiet clock in his own shop, he realised it never had been.",
+   "who": "original micro-story",
+   "edition": "2026-11-02-am",
+   "order": 12,
+   "id": "2026-11-02-am-012"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "An agent is just a loop",
+   "body": "Strip the hype and every AI agent is: observe → decide → act → check → repeat.\n\nMost agent failures aren't bad thinking. They're a bad 'check' step: the agent never verifies its action worked, so errors compound silently. If you build agents, spend your effort on the check.",
+   "hook": "In your own work, where is the 'check' step weakest?",
+   "edition": "2026-11-02-am",
+   "order": 11,
+   "id": "2026-11-02-am-011"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A day on Venus outlasts its year",
+   "body": "Venus turns on its axis once every 243 Earth days but goes around the Sun in about 225. It also spins backwards compared with most planets, so on Venus the Sun would rise in the west.",
+   "hook": "What could have knocked a whole planet into spinning backwards?",
+   "edition": "2026-11-02-am",
+   "order": 10,
+   "id": "2026-11-02-am-010"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Forgetting is the point",
+   "body": "In 1885 Hermann Ebbinghaus memorised nonsense syllables and tracked how fast he lost them. Recall fell steeply within the first day, then flattened.\n\nThe twist: each time you pull a memory back just as it's fading, it decays more slowly afterwards. That's the spacing effect. Struggling a little to remember is the signal that learning is happening.",
+   "q": "When is the best time to review something?",
+   "a": "Just as you're about to forget it, so retrieval takes some effort. Then space the next review further out.",
+   "edition": "2026-11-02-am",
+   "order": 9,
+   "id": "2026-11-02-am-009"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first actual bug",
+   "body": "On 9 September 1947, operators of the Harvard Mark II found a moth trapped in a relay. They taped it into the logbook with the note \"First actual case of bug being found.\" Grace Hopper loved telling the story. Engineers had already been using \"bug\" for faults, so the joke was that this one was literal.",
+   "q": "What machine was the famous moth found in?",
+   "a": "The Harvard Mark II, in 1947.",
+   "edition": "2026-11-02-am",
+   "order": 8,
+   "id": "2026-11-02-am-008"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "Your right is to the work alone, never to its fruits.",
+   "who": "Bhagavad Gita 2.47 (own rendering)",
+   "hook": "What would today look like if you judged it only by effort given?",
+   "edition": "2026-11-02-am",
+   "order": 7,
+   "id": "2026-11-02-am-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "A dam that has worked for nearly 2,000 years",
+   "body": "The Kallanai, or Grand Anicut, on the Kaveri is credited to the Chola king Karikalan, around the 2nd century CE. It's among the oldest water-diversion structures in the world still in use, and it still feeds irrigation channels in the delta today.",
+   "hook": "What makes a structure last 2,000 years when most concrete gives out in 100?",
+   "edition": "2026-11-02-am",
+   "order": 6,
+   "id": "2026-11-02-am-006"
+  },
+  {
+   "topic": "adhd",
+   "kind": "idea",
+   "title": "Interest is your ignition, not importance",
+   "body": "Many ADHD coaches describe attention as running on interest rather than importance. The usual starters go by the acronym INCUP: Interest, Novelty, Challenge, Urgency, Passion.\n\nWhen a task won't start, don't ask \"why can't I make myself?\" Ask which of the five you can add. Make it a race against a timer (challenge, urgency), try a new tool (novelty), or attach it to a question you care about (interest).",
+   "hook": "Which of the five is cheapest to add to your next boring task?",
+   "edition": "2026-11-02-am",
+   "order": 5,
+   "id": "2026-11-02-am-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Gukesh vs Sindarov: the world title match is three weeks away",
+   "body": "The 2026 World Championship match runs in Geneva from November 25 to December 15, with reigning champion Gukesh D defending against Javokhir Sindarov of Uzbekistan. Both players are about 20, making it the youngest pairing ever to contest the title.",
+   "hook": "What changes in a 14-game match that doesn't exist in a tournament?",
+   "source": {
+    "name": "Chessdom",
+    "url": "https://www.chessdom.com/page/6/"
+   },
+   "edition": "2026-11-02-am",
+   "order": 4,
+   "id": "2026-11-02-am-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Cab window, 10 pm",
+   "body": "The city folds its noise away\nlike laundry into drawers.\nOne lit window, then another —\nsomeone else's evening, not yours,\nand somehow that is restful:\nto pass a hundred lives\nand owe none of them a reply.",
+   "who": "original for this feed",
+   "edition": "2026-11-02-am",
+   "order": 3,
+   "id": "2026-11-02-am-003"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Little's Law: the formula hiding inside every queue",
+   "body": "L = λ × W. Items in the system = arrival rate × average time each one stays.\n\nIf 10 incidents arrive a day and each takes 3 days to close, you'll average about 30 open. The law doesn't care who works harder. To shrink the queue you can only reduce arrivals or reduce time-in-system.",
+   "hook": "Which lever is easier in your queue: fewer arrivals, or less time per item?",
+   "q": "Arrival rate doubles, time-per-item stays the same. What happens to the open queue?",
+   "a": "It doubles. L = λW is linear in both.",
+   "edition": "2026-11-02-am",
+   "order": 2,
+   "id": "2026-11-02-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Mistral opens up a trillion-parameter model",
+   "body": "Mistral released Large 4 with open weights: a trillion-parameter multimodal model that organisations can run on their own servers. It's pitched at software development and defensive security work, where companies don't want sensitive data leaving their walls.",
+   "hook": "If the weights are free, what are companies actually paying for?",
+   "source": {
+    "name": "The Neuron · Oct 30, 2026",
+    "url": "https://theneuron.ai/digest/everything-that-happened-in-ai-today-october-30-2026"
+   },
+   "edition": "2026-11-02-am",
+   "order": 1,
+   "id": "2026-11-02-am-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Before dawn: the Moon visits Mars and Jupiter",
+   "body": "Over the next couple of mornings a thin waning Moon slides past Mars and Jupiter, then Regulus, the heart of Leo. Look east in the hour before sunrise. Jupiter is the steady bright one; Mars is fainter and faintly orange.",
+   "q": "Why do stars twinkle but planets mostly don't?",
+   "a": "Stars are so far away they're effectively single points, so air turbulence bends that one point around. A planet shows a tiny disc, and the wobbles from different parts of the disc average out.",
+   "source": {
+    "name": "Star Walk · Astronomy calendar 2026",
+    "url": "https://starwalk.space/en/news/astronomy-calendar-2026"
+   },
+   "edition": "2026-11-02-am",
+   "order": 0,
+   "id": "2026-11-02-am-000"
+  }
+ ]
+}

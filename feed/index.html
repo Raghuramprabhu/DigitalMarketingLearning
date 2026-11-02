@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Calm Feed</title>
+  <meta name="description" content="A personal, calm, curated feed. No rage, no noise.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#14130f">
+  <script>try{var t=localStorage.getItem("calm-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="feed.css">
+</head>
+<body>
+
+  <header class="bar">
+    <div class="bar-inner">
+      <div class="brand"><span class="dot"></span>Calm Feed</div>
+      <div class="bar-actions">
+        <button class="icon-btn" id="savedToggle" type="button" title="Saved" aria-pressed="false">☆</button>
+        <button class="icon-btn" id="themeToggle" type="button" title="Theme">◐</button>
+      </div>
+    </div>
+    <nav class="chips" id="chips" aria-label="Topics"></nav>
+  </header>
+
+  <main class="feed">
+    <div class="edition-note" id="editionNote"></div>
+    <div id="cards"></div>
+    <div id="sentinel" class="sentinel"><span class="spinner"></span></div>
+    <div id="endNote" class="end-note" hidden>
+      <p>That's everything for now.</p>
+      <p class="muted">Fresh items arrive around 7:40 am and 10:40 pm.</p>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="feed.js"></script>
+</body>
+</html>
