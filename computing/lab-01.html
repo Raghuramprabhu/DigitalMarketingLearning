@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Lab · The life of 2 + 3</title>
+  <meta name="description" content="Play with simulators of every machine that ever added 2 + 3: gears, relays, logic gates, the JVM, and an LLM.">
+  <script>try{var t=localStorage.getItem("dml-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="lab.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap-wide topbar-inner">
+      <a class="brand" href="./"><span class="brand-dot"></span>Visual Lab</a>
+      <button class="theme-toggle" type="button">🌙 <span>Dark</span></button>
+    </div>
+    <div class="progress-bar"></div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" style="padding-bottom:6px">
+      <span class="eyebrow">Chapter 01 · picture-first version</span>
+      <h1>See 2 + 3 happen</h1>
+      <p class="lede">Eight machines, eight playgrounds. Don't read much. <strong>Tap things and watch.</strong> Each one is a real way people made matter add.</p>
+    </section>
+
+    <nav class="lab-nav">
+      <a href="#s1">1 Gears</a><a href="#s2">2 Babbage</a><a href="#s3">3 Switches</a><a href="#s4">4 Carry race</a>
+      <a href="#s5">5 Shrinking</a><a href="#s6">6 Java's journey</a><a href="#s7">7 JVM plates</a><a href="#s8">8 LLM</a>
+    </nav>
+
+    <!-- ========== 1. Pascaline ========== -->
+    <section class="station" id="s1">
+      <div class="station-head"><span class="station-num">1</span><h2>Gears that carry<small>Pascal · 1642</small></h2></div>
+      <div class="analogy"><span class="emo">🚗</span><p>You already know this machine: it's a <b>car's odometer</b>. When 0099 rolls to 0100, the units wheel pushes the next wheel along.</p></div>
+
+      <div class="sim">
+        <svg id="pascal-svg" viewBox="0 0 360 210" aria-label="Three number wheels with carry levers"></svg>
+        <div class="controls">
+          <button class="btn" type="button" data-padd="3">Turn + 3</button>
+          <button class="btn ghost" type="button" data-padd="1">+ 1</button>
+          <button class="btn ghost" type="button" data-pset="99">Set 099</button>
+          <button class="btn ghost" type="button" data-pset="2">Reset to 2</button>
+        </div>
+        <div class="readout" id="pascal-read">Shows <span class="big">002</span>. Tap "Turn + 3".</div>
+      </div>
+      <p class="notice"><b>Try:</b> Set 099, then + 1. Watch the orange levers flip one after another. That chain reaction is the <b>carry</b>, the hardest part of adding.</p>
+    </section>
+
+    <!-- ========== 2. Babbage ========== -->
+    <section class="station" id="s2">
+      <div class="station-head"><span class="station-num">2</span><h2>Squares by only adding<small>Babbage · 1822</small></h2></div>
+      <div class="analogy"><span class="emo">🧱</span><p>Growing a square of tiles: to go from 3×3 to 4×4 you add an <b>L-shape</b>. Each new L is just <b>2 tiles bigger</b> than the last one. No multiplying needed.</p></div>
+
+      <div class="sim">
+        <div class="sim-title">The tiles</div>
+        <div class="dots" id="dots"></div>
+        <div class="readout" id="dots-read"></div>
+      </div>
+      <div class="sim">
+        <div class="sim-title">Babbage's engine: three columns that only add</div>
+        <div class="engine">
+          <div class="col"><div class="cap">Answer<br>(tiles in square)</div><div class="wheelbox" id="e-ans">1</div></div>
+          <div class="col"><div class="cap">Next L-shape<br>size</div><div class="wheelbox" id="e-step">3</div></div>
+          <div class="col"><div class="cap">L grows by<br>(always)</div><div class="wheelbox" id="e-grow">2</div></div>
+        </div>
+        <div class="readout" id="engine-read">Turn the crank ↓</div>
+        <div class="controls"><button class="btn" type="button" id="crank">⟳ Turn the crank</button><button class="btn ghost" type="button" id="crank-reset">Reset</button></div>
+        <div class="tape" id="tape"><span>1</span></div>
+      </div>
+      <p class="notice"><b>Notice:</b> the engine never multiplies. Answer + L-size → new answer. L-size + 2 → next L-size. Babbage designed his engine to print whole books of tables this way, using nothing but adding gears.</p>
+    </section>
+
+    <!-- ========== 3. Switches ========== -->
+    <section class="station" id="s3">
+      <div class="station-head"><span class="station-num">3</span><h2>Adding with light switches<small>Stibitz &amp; Shannon · 1937</small></h2></div>
+      <div class="analogy"><span class="emo">💡</span><p>Stop thinking "numbers". Think <b>switch ON = 1, OFF = 0</b>. Then adding becomes a question of how you wire switches to a bulb.</p></div>
+
+      <div class="sim">
+        <div class="sim-title">a · The relay: a switch pressed by a magnet</div>
+        <svg id="relay-svg" viewBox="0 0 360 200"></svg>
+        <div class="controls"><button class="btn" type="button" id="relay-btn">Press the button</button></div>
+        <p class="notice" style="margin-top:8px">Left circuit powers a <b>magnet</b>. The magnet pulls the iron arm down, which closes the <b>right</b> circuit. Electricity flipping a switch means switches can control other switches. That's the whole trick of computers.</p>
+      </div>
+
+      <div class="sim">
+        <div class="sim-title">b · AND: two switches in a row</div>
+        <svg id="and-svg" viewBox="0 0 360 150"></svg>
+        <div class="readout" id="and-read"></div>
+        <p class="notice" style="margin-top:4px">Tap switches <b>A</b> and <b>B</b>. The bulb lights only if <b>both</b> are on. Like a door with two locks.</p>
+      </div>
+
+      <div class="sim">
+        <div class="sim-title">c · XOR: the staircase light</div>
+        <svg id="xor-svg" viewBox="0 0 360 170"></svg>
+        <div class="readout" id="xor-read"></div>
+        <p class="notice" style="margin-top:4px">Your <b>staircase light</b> has a switch at the bottom and one at the top. Flip either one and the light changes. The secret is the two <b>crossed wires</b>. It lights when the switches <b>disagree</b>.</p>
+      </div>
+
+      <div class="sim">
+        <div class="sim-title">d · Put them together: a machine that adds</div>
+        <div style="display:flex;justify-content:center;gap:12px;margin:6px 0 10px">
+          <button class="btn" type="button" id="ha-a">A = 0</button>
+          <span style="font:700 26px var(--font-display);align-self:center">+</span>
+          <button class="btn" type="button" id="ha-b">B = 0</button>
+        </div>
+        <svg id="ha-svg" viewBox="0 0 360 120"></svg>
+        <div class="readout" id="ha-read"></div>
+        <p class="notice" style="margin-top:4px"><b>XOR gives the answer digit, AND gives the carry.</b> Try 1 + 1: the answer bulb goes off and the carry bulb comes on, giving "10", which is binary for 2.</p>
+      </div>
+    </section>
+
+    <!-- ========== 4. Ripple vs lookahead ========== -->
+    <section class="station" id="s4">
+      <div class="station-head"><span class="station-num">4</span><h2>The carry race<small>every CPU, then and now</small></h2></div>
+      <div class="analogy"><span class="emo">🧑‍🤝‍🧑</span><p>Four people in a row, each adding one column. In a <b>ripple</b> adder, each person must <b>wait</b> for the carry from their right-hand neighbour, like passing a bucket down a line.</p></div>
+
+      <div class="sim">
+        <div class="fa-row" id="fa-row"></div>
+        <div class="carry-lane" id="carry-lane"><div class="carry-dot" id="carry-dot">1</div></div>
+        <div class="lookahead-bar" id="la-bar">🔮 Lookahead: works out every carry at once</div>
+        <div class="fa-row" id="fa-out"></div>
+        <div class="readout" id="fa-read">Pick numbers, then race.</div>
+        <div class="timer"><span>Ripple: <b id="t-ripple">–</b> steps</span><span>Lookahead: <b id="t-look">–</b> steps</span></div>
+        <div class="controls">
+          <button class="btn" type="button" id="go-ripple">🐢 Ripple add</button>
+          <button class="btn" type="button" id="go-look">⚡ Lookahead add</button>
+        </div>
+        <div class="controls">
+          <button class="btn ghost" type="button" data-fa="2,3">2 + 3</button>
+          <button class="btn ghost" type="button" data-fa="7,7">7 + 7</button>
+          <button class="btn ghost" type="button" data-fa="15,1">15 + 1</button>
+        </div>
+      </div>
+      <p class="notice"><b>Try 15 + 1 with ripple:</b> the carry has to walk through every column, just like Pascal's 099 + 1. Then press Lookahead: a helper peeks at all the columns first and hands out every carry at once. Real chips use lookahead; with 64 columns, waiting would be far too slow.</p>
+    </section>
+
+    <!-- ========== 5. Shrinking switch ========== -->
+    <section class="station" id="s5">
+      <div class="station-head"><span class="station-num">5</span><h2>The shrinking switch<small>1937 → today</small></h2></div>
+      <div class="analogy"><span class="emo">🔍</span><p>The adder never changed: it's still XOR + AND. What changed is the <b>switch</b> it's built from. Each one is smaller, faster and cooler than the last.</p></div>
+
+      <div class="sim">
+        <div class="size-stage" id="size-stage"></div>
+        <div class="scale-track"><div class="scale-pin" id="size-pin"></div></div>
+        <div class="scale-ends"><span>10 cm</span><span>1 mm</span><span>10 µm</span><span>10 nm</span></div>
+        <div class="size-meta"><h3 id="size-name"></h3><p id="size-desc"></p></div>
+        <div class="controls"><button class="btn ghost" type="button" id="size-prev">← Bigger</button><button class="btn" type="button" id="size-next">Smaller →</button></div>
+      </div>
+    </section>
+
+    <!-- ========== 6. Java pipeline ========== -->
+    <section class="station" id="s6">
+      <div class="station-head"><span class="station-num">6</span><h2>Java's journey to the adder<small>Sun · 1995 → today</small></h2></div>
+      <div class="analogy"><span class="emo">🗣️</span><p>Java ships one <b>universal script</b> (bytecode) instead of a version per country (CPU). On each machine, the JVM first acts as a <b>live translator</b>, line by line. If you keep repeating the same speech, it hands you a <b>printed translation</b> instead (the JIT).</p></div>
+
+      <div class="sim">
+        <div class="pipe">
+          <div class="stage-box" data-st="0"><span class="ic">✍️</span><div class="tx"><b>You write</b><span><code class="pill">int c = a + b;</code></span></div></div>
+          <div class="arrow-down">↓</div>
+          <div class="stage-box" data-st="1"><span class="ic">🏭</span><div class="tx"><b>javac compiles, once</b><span>into a .class file of bytecode</span></div></div>
+          <div class="arrow-down">↓</div>
+          <div class="stage-box" data-st="2"><span class="ic">📦</span><div class="tx"><b>Bytecode</b><span><code class="pill">iload_1 iload_2 iadd istore_3</code></span></div></div>
+          <div class="arrow-down">↓ the JVM on <em>this</em> machine</div>
+          <div class="lanes">
+            <div class="stage-box" data-st="3" id="lane-int"><span class="ic">🗣️</span><div class="tx"><b>Interpreter</b><span>translates every single time</span></div></div>
+            <div class="stage-box off" data-st="4" id="lane-jit"><span class="ic">⚡</span><div class="tx"><b>JIT compiler</b><span>native code, translated once</span></div></div>
+          </div>
+          <div style="font-size:13px;color:var(--ink-soft);margin-top:6px">How "hot" is this code? <span id="hot-count">0</span> runs</div>
+          <div class="hotbar"><i id="hotbar"></i></div>
+          <div class="arrow-down">↓</div>
+          <div class="stage-box" data-st="5"><span class="ic">🔲</span><div class="tx"><b>CPU's adder circuit</b><span>XOR + AND gates from station 3</span></div></div>
+        </div>
+        <div class="readout" id="pipe-read">Tap "Run once".</div>
+        <div class="controls"><button class="btn" type="button" id="run-once">▶ Run once</button><button class="btn ghost" type="button" id="run-many">⏩ Run 1,000 times</button><button class="btn ghost" type="button" id="run-reset">Reset</button></div>
+      </div>
+      <p class="notice"><b>Notice:</b> you compile <b>once</b>, but the same .class file runs on Windows, Linux or a Mac, because each has its own JVM. Code that runs often gets "hot" and is upgraded to fast native code. That's why Java servers feel slow for the first few minutes and then speed up. (Hot threshold here is illustrative.)</p>
+    </section>
+
+    <!-- ========== 7. JVM plates ========== -->
+    <section class="station" id="s7">
+      <div class="station-head"><span class="station-num">7</span><h2>Inside the JVM: a chef with plates<small>the stack machine</small></h2></div>
+      <div class="analogy"><span class="emo">🍽️</span><p>The JVM is a chef who can only touch the <b>top plate</b> of a stack. Ingredients are kept in labelled <b>drawers</b> (a, b, c). Every instruction is either "put a plate on top", "take the top plate off" or "combine the top two".</p></div>
+
+      <div class="sim kitchen" id="kitchen">
+        <div class="kitchen-grid">
+          <div>
+            <div class="sim-title">Drawers (local variables)</div>
+            <div class="drawers">
+              <div class="drawer" data-slot="0"><small>0 · args</small><b>…</b></div>
+              <div class="drawer" data-slot="1"><small>1 · a</small><b></b></div>
+              <div class="drawer" data-slot="2"><small>2 · b</small><b></b></div>
+              <div class="drawer" data-slot="3"><small>3 · c</small><b></b></div>
+            </div>
+          </div>
+          <div class="tray-wrap">
+            <div class="sim-title">Plate stack</div>
+            <div class="tray" id="tray"></div>
+          </div>
+        </div>
+        <div class="oplist" id="oplist"></div>
+        <div class="say" id="say">Tap Step to start cooking <code class="pill">int a = 2, b = 3; int c = a + b;</code></div>
+        <div class="controls"><button class="btn" type="button" id="k-step">Step ▶</button><button class="btn ghost" type="button" id="k-play">Play all</button><button class="btn ghost" type="button" id="k-reset">Reset</button></div>
+      </div>
+    </section>
+
+    <!-- ========== 8. LLM ========== -->
+    <section class="station" id="s8">
+      <div class="station-head"><span class="station-num">8</span><h2>How an LLM "adds"<small>2020s</small></h2></div>
+      <div class="analogy"><span class="emo">⌨️</span><p>An LLM is a giant, very smart <b>autocomplete</b>. It doesn't calculate 2 + 3; it predicts what text usually comes next, from patterns it learned while reading.</p></div>
+
+      <div class="sim">
+        <div class="sim-title">① Your words are cut into tokens</div>
+        <div class="tokrow" id="toks"></div>
+        <div class="sim-title" style="margin-top:12px">② They flow through layers of maths</div>
+        <svg class="net" id="net" viewBox="0 0 360 140"></svg>
+        <div class="counter">multiply-and-add operations so far<b id="mac">0</b></div>
+        <div class="sim-title" style="margin-top:12px">③ It scores possible next tokens</div>
+        <div id="probrows"></div>
+        <div class="answer-pop" id="answer">5</div>
+        <div class="controls"><button class="btn" type="button" id="ask">Ask "What is 2 + 3?"</button></div>
+      </div>
+      <p class="notice"><b>The irony:</b> to say "5", a large model does <b>over a hundred billion</b> multiply-and-adds, each one running on the adder circuits from station 3. (Scores above are illustrative; the operation count assumes a ~70B-parameter model.)</p>
+
+      <div class="sim">
+        <div class="sim-title">For a hard sum, a good assistant uses a tool</div>
+        <div class="toolchain" id="toolchain">
+          <div data-k="0">🤖<small>LLM</small></div><span class="arrow">→</span>
+          <div data-k="1">📝<small>writes code</small></div><span class="arrow">→</span>
+          <div data-k="2">💻<small>CPU runs it</small></div><span class="arrow">→</span>
+          <div data-k="3">⚙️<small>adder carries</small></div>
+        </div>
+        <div class="readout" id="tool-read"></div>
+        <div class="controls"><button class="btn ghost" type="button" id="ask-hard">Ask "48,317 × 9,206?"</button></div>
+      </div>
+      <p class="notice"><b>Full circle:</b> the most advanced AI hands the hard sum to a calculator, which still carries the one, just like Pascal's gears in station 1.</p>
+    </section>
+
+    <section class="block">
+      <div class="cliffhanger">
+        <span class="eyebrow">Want the full story behind each machine?</span>
+        <h2>Read the chapter version</h2>
+        <p style="margin:0 0 12px">Same eight stops, with the people, dates and "why it mattered", plus a quiz and flashcards.</p>
+        <a class="btn" href="01-the-life-of-2-plus-3.html">Open Chapter 01 →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>How Machines Think · Visual Lab 01</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="lab.js"></script>
+</body>
+</html>
