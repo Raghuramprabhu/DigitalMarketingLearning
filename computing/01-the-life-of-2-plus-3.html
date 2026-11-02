@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ch 1 · The life of 2 + 3</title>
+  <meta name="description" content="How machines learned to add, from Pascal's gears to the JVM to LLMs, told through one tiny sum.">
+  <script>try{var t=localStorage.getItem("dml-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="computing.css">
+</head>
+<body data-chapter="cs01">
+
+  <header class="topbar">
+    <div class="wrap-wide topbar-inner">
+      <a class="brand" href="./"><span class="brand-dot"></span>How Machines Think</a>
+      <button class="theme-toggle" type="button">🌙 <span>Dark</span></button>
+    </div>
+    <div class="progress-bar"></div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <span class="eyebrow">Chapter 01 · ~20 min · with toys to play with</span>
+      <h1>The life of 2 + 3</h1>
+      <p class="lede">Somebody somewhere just typed "what is 2 + 3?" into a chatbot. Between their thumb and the "5" on the screen, almost four hundred years of ideas fired in a fraction of a second. This chapter follows that one sum through every machine that ever learned to do it, from brass gears to the JVM to an LLM.</p>
+      <nav class="toc">
+        <a href="#story">Rouen, 1640</a>
+        <a href="#principles">3 jobs</a>
+        <a href="#gears">Gears</a>
+        <a href="#babbage">Babbage</a>
+        <a href="#switches">Switches</a>
+        <a href="#chips">Chips</a>
+        <a href="#languages">Languages</a>
+        <a href="#jvm">JVM</a>
+        <a href="#today">Today</a>
+        <a href="#llm">LLMs</a>
+        <a href="#quiz">Quiz</a>
+      </nav>
+    </section>
+
+    <!-- ===== Story ===== -->
+    <section class="block" id="story">
+      <h2>A teenager, a tax office, and a very long night</h2>
+      <div class="story">
+        <p><strong>Rouen, France, around 1640.</strong> Étienne Pascal has just been made a royal tax official for Normandy. His job is columns: endless columns of livres, sols and deniers, added by candlelight, then added again to check.</p>
+        <p>His son Blaise, still a teenager, watches him and notices something. Writing the digits isn't what makes his father tired, and neither is adding 7 and 5. It's the <em>remembering</em>: "carry the one" repeated ten thousand times, any one of which could be wrong.</p>
+        <p>So Blaise decides to build a box that remembers the carry for you. In 1642, at about 18, he has a working one.</p>
+        <p style="margin:0">That box, and everything that came after it, is about one deceptively simple question: <em>how do you make matter add?</em></p>
+      </div>
+      <div class="callout teal">
+        <strong>🔎 Pause and predict</strong>
+        You add 2 + 3 without thinking. But if you had to build a machine to do it, out of anything, what would be the <em>hardest</em> part? Hold your guess. Pascal's answer is the thread through this entire chapter.
+      </div>
+    </section>
+
+    <!-- ===== First principles ===== -->
+    <section class="block" id="principles">
+      <h2>First principles: addition is three jobs</h2>
+      <p>Strip away the numbers and any adding machine, whether a toddler's fingers or a GPU, has to do exactly three things:</p>
+      <div class="channels" style="margin:18px 0">
+        <div class="card"><span class="big">🗃️</span><h3>1. Hold</h3><p style="margin:0;color:var(--ink-soft)">Represent digits in something physical: a pebble, a gear tooth, a voltage.</p></div>
+        <div class="card"><span class="big">➕</span><h3>2. Combine</h3><p style="margin:0;color:var(--ink-soft)">Move from one state to another: 2, then three steps on, gives 5.</p></div>
+        <div class="card"><span class="big">↪️</span><h3>3. Carry</h3><p style="margin:0;color:var(--ink-soft)">When a column overflows, push one into the next column.</p></div>
+      </div>
+      <p>Jobs 1 and 2 are easy. Job 3 is the villain. The carry depends on the column before it, which can depend on the one before that. So the carry is what makes addition slow, error-prone and hard to build.</p>
+      <div class="callout">
+        <strong>💡 Keep this lens on</strong>
+        Every machine below is a new answer to "hold, combine, carry," and nearly every leap forward is really a better way of handling the carry. Watch for it.
+      </div>
+      <p style="color:var(--ink-soft);font-size:15px">Before machines there were tools: pebbles (the Latin <em>calculus</em> means "small stone", hence "calculate"), and the abacus. But with those, a human does the carry. Our story begins when the carry moved into the machine.</p>
+    </section>
+
+    <!-- ===== Era: Gears ===== -->
+    <section class="block era" id="gears">
+      <span class="pin"></span>
+      <span class="year">1642 · Rouen</span>
+      <h2>Gears: Pascal's carry that falls</h2>
+      <span class="speed-tag">Speed: one sum every few seconds, by hand</span>
+      <p>The Pascaline is a row of dials, one per column. Turn the units dial forward by 3 and it moves 3 teeth. That's <strong>hold</strong> and <strong>combine</strong> in one motion.</p>
+      <p>The genius is the <strong>carry</strong>. As a dial passes from 9 to 0, a little weighted lever (Pascal called it the <em>sautoir</em>) lifts and then drops, kicking the next dial forward by exactly one. The machine carries by gravity.</p>
+      <p>Play with it. Watch what happens when a carry has to ripple through several dials:</p>
+
+      <div class="card">
+        <div class="wheels" id="pascaline">
+          <div class="wheel" data-i="2"><span class="d">0</span><small>hundreds</small></div>
+          <div class="wheel" data-i="1"><span class="d">0</span><small>tens</small></div>
+          <div class="wheel" data-i="0"><span class="d">2</span><small>units</small></div>
+        </div>
+        <div class="btn-row">
+          <button class="btn" type="button" data-add="3">+ 3</button>
+          <button class="btn ghost" type="button" data-add="1">+ 1</button>
+          <button class="btn ghost" type="button" data-add="7">+ 7</button>
+          <button class="btn ghost" type="button" data-set="99">Set 099</button>
+          <button class="btn ghost" type="button" data-set="2">Reset to 2</button>
+        </div>
+        <div class="log-line" id="pascal-log">Starting at 2. Tap "+ 3".</div>
+      </div>
+
+      <div class="callout teal" style="margin-top:16px">
+        <strong>🔍 Try "Set 099", then "+ 1"</strong>
+        Watch the carry run through all three dials, one after another. That domino effect is called <strong>carry propagation</strong>, and it's the same problem chip designers still fight today. Keep it in mind.
+      </div>
+
+      <p>Pascal built around twenty of these. They were beautiful, expensive and touchy, and sold poorly. A German professor, Wilhelm Schickard, had sketched a "calculating clock" back in 1623, but his prototype was lost.</p>
+
+      <h3 style="margin-top:26px">1673 · Leibniz: a better drum, and a stranger idea</h3>
+      <p>Gottfried Leibniz improved the mechanism with a <em>stepped drum</em>: a cylinder with teeth of nine different lengths, so one crank could add a whole number in a single turn and repeat it for multiplication. Stepped-drum calculators were still being made in the 20th century.</p>
+      <p>But Leibniz's bigger gift was an idea he published in 1703: you can write every number with just two digits, <strong>0 and 1</strong>. He found it beautiful but impractical for gears. It waited 230 years for the right hardware.</p>
+    </section>
+
+    <!-- ===== Era: Babbage ===== -->
+    <section class="block era" id="babbage">
+      <span class="pin"></span>
+      <span class="year">1822 · London</span>
+      <h2>Babbage: turn <em>everything</em> into addition</h2>
+      <p>In the 1800s, navigation and engineering ran on printed tables of numbers: logarithms, squares, tide predictions. They were computed by hand, and they were full of errors that sank ships.</p>
+      <p>Charles Babbage noticed a trick. For many formulas, the gaps between neighbouring answers follow a pattern, and that pattern can be produced by <strong>addition alone</strong>. No multiplication needed. So he designed the <em>Difference Engine</em>: a machine that only adds, yet prints whole tables.</p>
+      <p>Here's the trick for square numbers. Tap "Next row" and notice that the machine never multiplies:</p>
+
+      <div class="card">
+        <table class="diff-table" id="diff">
+          <thead><tr><th>n</th><th>n² (the answer)</th><th>1st difference</th><th>2nd difference</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <p class="btn-row" style="margin-top:12px"><button class="btn" type="button" id="diff-next">Next row</button><button class="btn ghost" type="button" id="diff-reset">Reset</button></p>
+        <div class="log-line" id="diff-log">Rule: answer + 1st diff → next answer. 1st diff + 2 → next 1st diff.</div>
+      </div>
+
+      <p style="margin-top:16px">The second difference of squares is always 2. Feed in three starting numbers and a crank that only adds will generate squares forever. Babbage never finished it; Victorian engineering couldn't hold the tolerances, and the money ran out. In <strong>1991</strong>, London's Science Museum built his Difference Engine No. 2 from the original drawings, and it worked.</p>
+      <div class="callout">
+        <strong>🧠 The big idea to steal</strong>
+        <strong>Reduce hard operations to many easy ones.</strong> Babbage reduced tables to additions. Modern chips reduce multiplication to shifts and adds. LLMs, as you'll see, reduce "intelligence" to enormous numbers of multiply-and-adds.
+      </div>
+      <p>Babbage's next design, the Analytical Engine, could be <em>programmed</em> with punched cards. In 1843 Ada Lovelace published notes showing how it could compute Bernoulli numbers, often called the first published program, written for a machine that was never built. Remember that phrase. It comes back at the JVM.</p>
+    </section>
+
+    <!-- ===== Era: Switches ===== -->
+    <section class="block era" id="switches">
+      <span class="pin"></span>
+      <span class="year">1937 · a kitchen table in New Jersey</span>
+      <h2>Switches: when addition became logic</h2>
+      <div class="story">
+        <p><strong>November 1937.</strong> George Stibitz, a mathematician at Bell Labs, takes two telephone relays home from the scrap pile. A relay is just a switch flipped by an electromagnet: <em>on</em> or <em>off</em>.</p>
+        <p style="margin:0">At his kitchen table he nails them to a board, cuts contacts out of a tobacco tin, and wires in a battery and two flashlight bulbs. Bulb lit = 1, bulb dark = 0. He has built a machine that adds two binary digits. His wife later names it the <strong>Model K</strong>, K for kitchen.</p>
+      </div>
+      <p>The same year, a 21-year-old MIT student, Claude Shannon, proved in his master's thesis that circuits of switches can carry out <em>Boolean logic</em> (AND, OR, NOT). Leibniz's 0 and 1 finally had a body. Here's why that matters. Look at adding two single bits:</p>
+      <div class="compare" style="margin:14px 0">
+        <div class="card">
+          <h3>The sum bit</h3>
+          <p style="margin:0">0+0 → 0 · 0+1 → 1 · 1+0 → 1 · 1+1 → <strong>0</strong><br><span style="color:var(--ink-soft)">"1 if exactly one is on" = <strong>XOR</strong></span></p>
+        </div>
+        <div class="card">
+          <h3>The carry bit</h3>
+          <p style="margin:0">Only 1+1 → <strong>1</strong><br><span style="color:var(--ink-soft)">"1 if both are on" = <strong>AND</strong></span></p>
+        </div>
+      </div>
+      <p><strong>Addition is just two logic gates.</strong> Chain them column by column, feeding each carry into the next, and you can add numbers of any size. Flip the bits below to build 2 + 3 the way every computer since 1937 does it:</p>
+
+      <div class="card">
+        <div class="carries" id="carry-row"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="bits" data-row="a"><span class="lbl">A</span></div>
+        <div class="bits" data-row="b"><span class="lbl">B</span></div>
+        <div class="bits sum-row" data-row="s"><span class="lbl">Sum</span></div>
+        <div class="log-line" id="bit-log"></div>
+        <p class="btn-row" style="margin-top:8px"><button class="btn ghost" type="button" id="bits-23">Show 2 + 3</button><button class="btn ghost" type="button" id="bits-77">Try 7 + 7</button></p>
+      </div>
+      <p style="color:var(--ink-soft);font-size:15px;margin-top:12px">Columns are 16 · 8 · 4 · 2 · 1 (the 16s column only fills when the final carry spills over). Tap any A or B square. The orange marks above are carries; notice they still ripple right to left, just like Pascal's dials.</p>
+
+      <h3 style="margin-top:26px">1941 · Zuse's Z3, and 1945 · ENIAC</h3>
+      <p>In Berlin, Konrad Zuse, a civil engineer tired of hand calculations, built the <strong>Z3</strong> from about 2,600 relays. Completed in 1941, it's often called the first working programmable, fully automatic digital computer. It clicked through an addition in about <strong>0.8 seconds</strong>.</p>
+      <p>Relays are mechanical, and moving metal is slow. Vacuum tubes switch with no moving parts. <strong>ENIAC</strong> (USA, completed 1945) used about 18,000 of them, weighed around 30 tonnes, and managed <strong>5,000 additions per second</strong>, thousands of times faster than relays. It was programmed by six women (Kay McNulty, Betty Jennings, Betty Snyder, Marlyn Wescoff, Fran Bilas and Ruth Lichterman) who rewired it by hand for every new problem.</p>
+      <p style="color:var(--ink-soft);font-size:15px">A footnote you'll enjoy: Stibitz's later relay machines grew into a series at Bell Labs, and in 1960 one of his Model 5 machines was reportedly shipped to the Bihar Institute of Technology in India.</p>
+    </section>
+
+    <!-- ===== Era: Chips ===== -->
+    <section class="block era" id="chips">
+      <span class="pin"></span>
+      <span class="year">1947 → 1971</span>
+      <h2>Chips: the adder shrinks to nothing</h2>
+      <p>Tubes were hot, huge and burned out constantly. In <strong>December 1947</strong>, back at Bell Labs, Bardeen, Brattain and Shockley demonstrated the <strong>transistor</strong>: a switch made of solid crystal, with no vacuum, no filament and nothing to wear out.</p>
+      <p>Then in 1958–59, Jack Kilby (Texas Instruments) and Robert Noyce (Fairchild) showed you could put many transistors and their wiring onto one slice of silicon: the <strong>integrated circuit</strong>.</p>
+      <div class="story">
+        <p style="margin:0"><strong>The full circle:</strong> in 1971 a Japanese calculator company, Busicom, asked Intel for chips for a new desktop calculator. Federico Faggin, Ted Hoff, Stan Mazor and Masatoshi Shima came up with a general-purpose chip instead: the <strong>Intel 4004</strong>, about 2,300 transistors and the first commercial microprocessor. The machine that kicked off the PC age began as a way to add numbers for an office calculator. Pascal would have smiled.</p>
+      </div>
+    </section>
+
+    <!-- ===== Languages ===== -->
+    <section class="block era" id="languages">
+      <span class="pin"></span>
+      <span class="year">1940s → 1995</span>
+      <h2>Languages: the same 2 + 3, told more humanly</h2>
+      <p>Hardware solved "how do we add?". The next problem was "how do we <em>ask</em>?". Each step below is the same addition, described further from the wires and closer to how people think. Tap through:</p>
+
+      <div class="card">
+        <div class="tabs" id="ladder-tabs">
+          <button class="tab on" type="button" data-t="0">Machine code</button>
+          <button class="tab" type="button" data-t="1">Assembly</button>
+          <button class="tab" type="button" data-t="2">FORTRAN</button>
+          <button class="tab" type="button" data-t="3">C</button>
+          <button class="tab" type="button" data-t="4">Java</button>
+        </div>
+        <div class="tab-pane" data-t="0">
+<pre class="code">10111000 00000010 00000000 00000000 00000000
+10000011 11000000 00000011
+<span class="c">// hex: B8 02 00 00 00   83 C0 03   (x86)</span></pre>
+          <p class="tab-note">What the CPU actually reads. The first byte means "load the following number into register EAX"; the second instruction means "add 3 to EAX". In the 1940s, people wrote programs like this by hand.</p>
+        </div>
+        <div class="tab-pane" data-t="1" hidden>
+<pre class="code">mov  eax, 2     <span class="c">; put 2 in a register</span>
+add  eax, 3     <span class="c">; add 3 → eax now holds 5</span></pre>
+          <p class="tab-note">Same instructions with names instead of bit patterns. A program called an <em>assembler</em> translates them back into bits. One line still equals one machine instruction, and it only runs on that family of CPUs.</p>
+        </div>
+        <div class="tab-pane" data-t="2" hidden>
+<pre class="code">      K = 2
+      L = 3
+      M = K + L</pre>
+          <p class="tab-note">1957, IBM, John Backus's team. FORMula TRANslation: write the maths, and a <em>compiler</em> writes the machine code. Sceptics thought compiled code would be hopelessly slow; FORTRAN's compiler was good enough to win them over. (Names starting I–N were integers by default, hence K, L, M.)</p>
+        </div>
+        <div class="tab-pane" data-t="3" hidden>
+<pre class="code">int a = 2, b = 3;
+int c = a + b;   <span class="c">// compiles to one ADD for *this* CPU</span></pre>
+          <p class="tab-note">1972, Bell Labs (again!), Dennis Ritchie. Close to the hardware, fast, and portable at the <em>source</em> level. But the catch: the compiled program is native to one CPU. Ship to a different machine and you recompile.</p>
+        </div>
+        <div class="tab-pane" data-t="4" hidden>
+<pre class="code">int a = 2, b = 3;
+int c = a + b;   <span class="c">// javac → bytecode, NOT machine code</span></pre>
+          <p class="tab-note">1995, Sun, James Gosling. Looks almost identical to C, but the compiler doesn't target any real CPU. It targets an <em>imaginary</em> one. Why on earth would you do that? ↓</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== JVM ===== -->
+    <section class="block era" id="jvm">
+      <span class="pin"></span>
+      <span class="year">1995 · Sun Microsystems</span>
+      <h2>The JVM: a computer that doesn't exist</h2>
+      <p>Remember Ada Lovelace writing a program for a machine that was never built? Java did that on purpose.</p>
+      <p>The problem in the early 1990s: Gosling's team wanted code to run on set-top boxes, phones, Windows PCs, Sun workstations and Macs, all with different CPUs. Recompiling for each, as C requires, was a nightmare. So they invented a CPU that exists only as software: the <strong>Java Virtual Machine</strong>. You compile once to its instruction set, called <strong>bytecode</strong>, and every real device just needs a JVM that understands bytecode. "Write once, run anywhere."</p>
+      <p>The JVM's imaginary CPU has no registers. It's a <strong>stack machine</strong>: values get pushed onto a pile, and operations take values off the top and push results back. Here's the real bytecode <code>javac</code> produces for our two lines. Step through it:</p>
+
+      <div class="card">
+        <div class="jvm">
+          <div>
+            <h4 style="margin:0 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)">Bytecode</h4>
+            <ol class="ops" id="ops">
+              <li>iconst_2</li><li>istore_1</li><li>iconst_3</li><li>istore_2</li>
+              <li>iload_1</li><li>iload_2</li><li>iadd</li><li>istore_3</li>
+            </ol>
+          </div>
+          <div class="panel">
+            <h4>Operand stack</h4>
+            <div class="stack" id="stack"></div>
+            <h4>Local variables</h4>
+            <div class="locals" id="locals">
+              <div class="local"><small>0 · args</small><b>…</b></div>
+              <div class="local"><small>1 · a</small><b>–</b></div>
+              <div class="local"><small>2 · b</small><b>–</b></div>
+              <div class="local"><small>3 · c</small><b>–</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="callout explain-op" id="op-explain"><strong>Ready.</strong> Tap Step to run the first instruction.</div>
+        <p class="btn-row"><button class="btn" type="button" id="jvm-step">Step ▶</button><button class="btn ghost" type="button" id="jvm-reset">Reset</button></p>
+      </div>
+
+      <p style="margin-top:18px">Notice: <code>iadd</code> takes no arguments. It doesn't need to know <em>where</em> the numbers are, because they're always on top of the stack. That makes bytecode tiny and easy to translate on any CPU. (The <code>i</code> means int; there's also <code>ladd</code>, <code>fadd</code> and <code>dadd</code> for long, float and double.)</p>
+
+      <h3 style="margin-top:22px">"But isn't a pretend CPU slow?"</h3>
+      <p>Early Java was, because the JVM <em>interpreted</em> each bytecode one at a time. Then, around 1999–2000, Sun's <strong>HotSpot</strong> JVM added a <strong>JIT (just-in-time) compiler</strong>. It watches your program run, spots the "hot" methods that run thousands of times, and compiles <em>those</em> into native machine code for whatever real CPU it's on.</p>
+      <div class="callout teal">
+        <strong>🤯 The twist</strong>
+        A JIT can sometimes beat C, because it compiles <em>while watching real behaviour</em>. Run our snippet in a hot loop and the optimiser may notice that <code>a</code> and <code>b</code> never change and replace the whole thing with the constant <strong>5</strong>. The fastest addition is the one that never happens.
+      </div>
+      <p>So when Java adds 2 + 3, the full journey is: your source → <code>javac</code> → bytecode → the JVM interprets it → it gets hot → the JIT emits a real <code>ADD</code> instruction → the CPU's adder circuit, made of the logic gates from Stibitz's kitchen. Four centuries, stacked.</p>
+      <p style="color:var(--ink-soft)">Chapter 02 goes inside the JVM properly: class loading, the heap, garbage collection, and why your SAP Commerce server takes a minute to "warm up."</p>
+    </section>
+
+    <!-- ===== Today ===== -->
+    <section class="block era" id="today">
+      <span class="pin"></span>
+      <span class="year">Today</span>
+      <h2>The carry, defeated (almost)</h2>
+      <p>A modern CPU core runs at several billion ticks per second and can do several additions per tick. Billions of transistors, each a descendant of the 1947 switch.</p>
+      <p>And the villain? Pascal's ripple is still there in principle: in a 64-bit add, the top bit's answer depends on a carry that could start at the bottom. Rippling through 64 columns, one after another, would be too slow. So chips use <strong>carry-lookahead</strong> logic: for every column they compute in parallel, "will this column <em>generate</em> a carry, or <em>pass one along</em>?", and work out all the carries at once instead of waiting for the domino run. A 380-year-old problem, solved by thinking about the carries before they happen.</p>
+
+      <div class="card">
+        <h3 style="margin-top:0">How many additions per second? <span style="color:var(--ink-soft);font-weight:400;font-size:14px">(log scale: each step ×10)</span></h3>
+        <div class="ladder" id="speed-ladder">
+          <div class="rung" data-v="0.3"><div class="rung-top"><span>Pascaline, turned by hand</span><span>~1 every few s</span></div><div class="bar"></div></div>
+          <div class="rung" data-v="1.25"><div class="rung-top"><span>Zuse Z3 (relays), 1941</span><span>~1 per 0.8 s</span></div><div class="bar"></div></div>
+          <div class="rung" data-v="5000"><div class="rung-top"><span>ENIAC (vacuum tubes), 1945</span><span>5,000 / s</span></div><div class="bar"></div></div>
+          <div class="rung" data-v="90000"><div class="rung-top"><span>Intel 4004, 1971</span><span>~90,000 instr / s</span></div><div class="bar"></div></div>
+          <div class="rung" data-v="10000000000"><div class="rung-top"><span>One modern CPU core</span><span>~10 billion / s</span></div><div class="bar"></div></div>
+          <div class="rung" data-v="50000000000000"><div class="rung-top"><span>A modern AI GPU</span><span>tens of trillions / s</span></div><div class="bar"></div></div>
+        </div>
+        <p style="color:var(--ink-soft);font-size:14px;margin:12px 0 0">Rough orders of magnitude. Modern figures vary a lot by chip.</p>
+      </div>
+    </section>
+
+    <!-- ===== LLM ===== -->
+    <section class="block era" id="llm">
+      <span class="pin"></span>
+      <span class="year">2020s</span>
+      <h2>LLMs: adding by <em>not</em> adding</h2>
+      <p>Now the funny part. Ask an LLM "What is 2 + 3?" Nowhere inside does a circuit get the job "add 2 and 3." Instead:</p>
+      <ol>
+        <li><strong>Your text is cut into tokens</strong>, chunks the model has a vocabulary for (roughly like this; real tokenisers vary):
+          <div class="tokens"><span class="token">What</span><span class="token">·is</span><span class="token">·2</span><span class="token">·+</span><span class="token">·3</span><span class="token">?</span></div></li>
+        <li><strong>The model predicts the most likely next token.</strong> Having read billions of pages where "2 + 3" was followed by "5", it gives "5" a very high probability:
+          <div class="card" style="margin:10px 0">
+            <div class="probs" id="probs">
+              <div class="prob" data-p="97"><span class="t">5</span><div><div class="pb"></div></div><span class="v">97%</span></div>
+              <div class="prob" data-p="1.5"><span class="t">The</span><div><div class="pb"></div></div><span class="v">1.5%</span></div>
+              <div class="prob" data-p="0.8"><span class="t">2</span><div><div class="pb"></div></div><span class="v">0.8%</span></div>
+              <div class="prob" data-p="0.7"><span class="t">6</span><div><div class="pb"></div></div><span class="v">0.7%</span></div>
+            </div>
+            <p style="color:var(--ink-soft);font-size:13px;margin:8px 0 0">Illustrative numbers, not from a real model.</p>
+          </div></li>
+        <li><strong>It picks "5"</strong> and shows it to you.</li>
+      </ol>
+      <div class="callout teal">
+        <strong>😂 The irony you spotted</strong>
+        To produce that one token, a mid-sized model performs <em>tens to hundreds of billions</em> of multiply-and-add operations on a GPU. Each one runs through adder circuits descended from Stibitz's kitchen table. So yes: using an LLM to add 2 + 3 means doing billions of additions to recall that the answer is probably 5.
+      </div>
+      <p>For small sums, pattern-recall works beautifully. For something like 48,317 × 9,206, pure prediction can slip on a digit, because the model is recalling patterns, not running Pascal's carry. So modern assistants often do what any sensible person would: they write a line of code and hand it to a real calculator, a <em>tool</em>.</p>
+      <div class="story">
+        <p style="margin:0"><strong>The full circle:</strong> the most advanced language machine ever built, faced with a hard sum, reaches for a tiny program, which runs on a CPU, which does it with gates, which do it with carries. Four hundred years later, Blaise Pascal's carry is still doing the actual work.</p>
+      </div>
+    </section>
+
+    <!-- ===== Thread ===== -->
+    <section class="block">
+      <h2>The whole story in one breath</h2>
+      <div class="card">
+        <p style="margin:0">
+          <strong>Gears</strong> made the carry automatic (Pascal) →
+          <strong>Babbage</strong> turned hard maths into many additions →
+          <strong>switches</strong> turned addition into logic, XOR + AND (Stibitz, Shannon) →
+          <strong>tubes</strong> then <strong>transistors</strong> then <strong>chips</strong> made those switches fast and tiny →
+          <strong>languages</strong> let humans ask more naturally →
+          the <strong>JVM</strong> invented an imaginary CPU so one program runs everywhere, and the JIT makes it fast →
+          <strong>carry-lookahead</strong> beats the ripple →
+          <strong>LLMs</strong> predict "5" using billions of real additions, and call a calculator when it matters.
+        </p>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h3>✍️ Recall check</h3>
+        <p style="color:var(--ink-soft)">Without scrolling up: what's the "villain" of addition, and name three different ways people fought it?</p>
+        <textarea rows="3" style="width:100%;font:inherit;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);resize:vertical" placeholder="The villain is..."></textarea>
+        <p style="margin:12px 0 0"><button class="btn ghost" id="recall-reveal" type="button">Check yourself</button></p>
+        <div id="recall-answer" style="display:none;margin-top:12px" class="callout">
+          <strong>The carry.</strong> Pascal's falling <em>sautoir</em> lever · binary AND gates producing the carry bit · carry-lookahead computing all carries in parallel · (bonus) the JIT folding 2 + 3 into 5 so no carry happens at all.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Quiz ===== -->
+    <section class="block" id="quiz">
+      <h2>Quiz: pull it out of memory</h2>
+      <p>No scrolling up. Wrong guesses followed by the "why" teach faster than re-reading.</p>
+      <div class="card">
+        <div class="quiz-q">
+          <div class="q">1. What was the genuinely hard part Pascal's machine solved?</div>
+          <button class="opt" type="button">Displaying digits</button>
+          <button class="opt" type="button" data-right="1">The carry: pushing one into the next column automatically</button>
+          <button class="opt" type="button">Multiplication</button>
+          <button class="opt" type="button">Storing programs</button>
+          <div class="why">Holding and turning dials is easy. The sautoir lever that drops and kicks the next dial on is the invention.</div>
+        </div>
+        <div class="quiz-q">
+          <div class="q">2. Adding two single bits: the sum bit is ___ and the carry bit is ___.</div>
+          <button class="opt" type="button">AND, OR</button>
+          <button class="opt" type="button" data-right="1">XOR, AND</button>
+          <button class="opt" type="button">OR, NOT</button>
+          <button class="opt" type="button">XOR, OR</button>
+          <div class="why">Sum is 1 when exactly one input is 1 (XOR). Carry is 1 only when both are 1 (AND). That pair is called a half adder.</div>
+        </div>
+        <div class="quiz-q">
+          <div class="q">3. Why did Babbage's Difference Engine only need to add?</div>
+          <button class="opt" type="button">Victorian gears couldn't multiply</button>
+          <button class="opt" type="button" data-right="1">Differences between neighbouring values of a polynomial follow a pattern you can produce by repeated addition</button>
+          <button class="opt" type="button">The tables only contained sums</button>
+          <div class="why">For squares the second difference is always 2. Start with three numbers and pure addition generates the whole table.</div>
+        </div>
+        <div class="quiz-q">
+          <div class="q">4. Why does Java compile to bytecode instead of real machine code?</div>
+          <button class="opt" type="button">Bytecode runs faster than machine code</button>
+          <button class="opt" type="button">To hide the source code</button>
+          <button class="opt" type="button" data-right="1">So one compiled program runs on any device that has a JVM</button>
+          <button class="opt" type="button">Because Java has no compiler</button>
+          <div class="why">Write once, run anywhere. The JVM is an imaginary CPU; each real platform just needs a JVM that understands bytecode.</div>
+        </div>
+        <div class="quiz-q">
+          <div class="q">5. In the JVM, what does <code>iadd</code> do?</div>
+          <button class="opt" type="button">Adds two registers named in the instruction</button>
+          <button class="opt" type="button" data-right="1">Pops the top two ints off the operand stack and pushes their sum</button>
+          <button class="opt" type="button">Adds 1 to a local variable</button>
+          <div class="why">The JVM is a stack machine, so iadd needs no operands; they're always on top of the stack. (Adding to a local in place is a different instruction, iinc.)</div>
+        </div>
+        <div class="quiz-q">
+          <div class="q">6. When an LLM answers "5" to "2 + 3", what's mainly happening?</div>
+          <button class="opt" type="button">It runs a binary adder on 2 and 3</button>
+          <button class="opt" type="button" data-right="1">It predicts the most likely next token, using billions of multiply-adds</button>
+          <button class="opt" type="button">It looks up an answer table</button>
+          <div class="why">Prediction, not calculation. That's why, for hard arithmetic, good assistants call a real calculator tool.</div>
+        </div>
+        <div class="score"></div>
+        <p style="text-align:center;margin:14px 0 0"><button class="btn ghost" id="quiz-retry" type="button" style="display:none">↺ Retry</button></p>
+      </div>
+    </section>
+
+    <!-- ===== Flashcards ===== -->
+    <section class="block" id="flash">
+      <h2>Flashcards</h2>
+      <p>Say the answer out loud before flipping. Run them again tomorrow; spacing out reviews is what makes them stick.</p>
+      <div class="flash-wrap">
+        <div class="flashcard">
+          <div class="flash-face flash-front"><span class="txt"></span><small>tap to flip</small></div>
+          <div class="flash-face flash-back"><span class="txt"></span><small>tap to flip back</small></div>
+        </div>
+      </div>
+      <div class="flash-nav">
+        <button class="btn ghost" id="flash-prev" type="button">← Prev</button>
+        <span id="flash-count" style="color:var(--ink-soft)"></span>
+        <button class="btn ghost" id="flash-next" type="button">Next →</button>
+      </div>
+    </section>
+
+    <!-- ===== Exercise ===== -->
+    <section class="block" id="exercise">
+      <h2>🛠️ Your turn: teach it</h2>
+      <div class="card">
+        <p>The fastest way to own an idea is to explain it. Pick one:</p>
+        <ol>
+          <li><strong>The 2-minute talk:</strong> tell this story to a friend (or at Toastmasters) using only three "stations": Pascal's carry, Stibitz's kitchen, the LLM irony. End on the line "Pascal's carry is still doing the actual work."</li>
+          <li><strong>The code check:</strong> write <code>int c = 2 + 3;</code> in a Java file, compile it, and run <code>javap -c</code> on the class. Do you see <code>iadd</code>? (Spoiler: you probably won't. Find out why; it's the same trick as the JIT.)</li>
+          <li><strong>The connection:</strong> where in your own work does a hard problem get reduced to many easy steps, as Babbage did?</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Cliffhanger ===== -->
+    <section class="block">
+      <div class="cliffhanger">
+        <span class="eyebrow">Next · Chapter 02</span>
+        <h2>Why does a Java server need to "warm up"?</h2>
+        <p style="margin:0">The first request is slow, the thousandth is fast, and the code never changed. Inside the JVM: class loaders, the heap, the garbage collector, and the JIT watching your code like a coach watching an athlete.</p>
+      </div>
+    </section>
+
+    <nav class="chapter-nav">
+      <a class="btn ghost" href="./">← All chapters</a>
+      <a class="btn ghost" href="../">Site home</a>
+    </nav>
+  </main>
+
+  <footer>How Machines Think · Chapter 01</footer>
+
+  <script>
+    window.FLASHCARDS = [
+      { q: "The three jobs of any adding machine?", a: "Hold digits · Combine them · Carry overflow into the next column. The carry is the hard part." },
+      { q: "How did the Pascaline carry? (1642)", a: "A weighted lever (sautoir) lifted as a dial passed 9 and dropped to kick the next dial forward by one. Carry by gravity." },
+      { q: "Babbage's big idea?", a: "Reduce hard calculations (polynomial tables) to repeated addition via the method of differences." },
+      { q: "Sum bit and carry bit of a half adder?", a: "Sum = A XOR B. Carry = A AND B." },
+      { q: "What was the Model K?", a: "Stibitz's 1937 one-bit binary adder from scrap relays, tin strips and flashlight bulbs, built on his kitchen table." },
+      { q: "Why bytecode + JVM?", a: "Compile once to an imaginary CPU; any device with a JVM can run it. Write once, run anywhere." },
+      { q: "The 8 bytecodes for int a=2,b=3; c=a+b?", a: "iconst_2, istore_1, iconst_3, istore_2, iload_1, iload_2, iadd, istore_3." },
+      { q: "What does the JIT do?", a: "Watches running bytecode, finds hot methods, compiles them to native machine code, sometimes folding work away entirely." },
+      { q: "What is carry-lookahead?", a: "Computing whether each column will generate or propagate a carry in parallel, so all carries are known at once instead of rippling." },
+      { q: "How does an LLM 'add'?", a: "It predicts the next token ('5') from learned patterns, using billions of multiply-adds; for hard sums it calls a calculator tool." }
+    ];
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="ch01.js"></script>
+</body>
+</html>

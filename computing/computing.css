@@ -1,0 +1,112 @@
+/* "How Machines Think" section — widgets layered on the shared Field Notes styles */
+
+.era { position: relative; }
+section.block.era { padding-left: 30px; }
+.era::before {
+  content: ""; position: absolute; left: 8px; top: 40px; bottom: 0;
+  width: 2px; background: var(--line);
+}
+.era .pin {
+  position: absolute; left: 0; top: 30px; width: 18px; height: 18px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft);
+}
+.era .year {
+  font-family: var(--font-display); font-weight: 700; color: var(--accent);
+  font-size: 15px; letter-spacing: .04em;
+}
+.era h2 { margin-top: 2px; }
+
+.speed-tag {
+  display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .02em;
+  background: var(--teal-soft); color: var(--teal); border-radius: 999px; padding: 3px 10px; margin: 4px 0 10px;
+}
+
+/* --- Pascaline wheels --- */
+.wheels { display: flex; gap: 10px; justify-content: center; margin: 14px 0; }
+.wheel {
+  width: 64px; height: 84px; border-radius: 14px; border: 2px solid var(--line);
+  background: var(--bg-soft); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transition: border-color .2s, transform .2s;
+}
+.wheel .d { font-family: var(--font-display); font-size: 40px; font-weight: 700; line-height: 1; }
+.wheel small { color: var(--ink-soft); font-size: 11px; margin-top: 4px; }
+.wheel.carry { border-color: var(--accent); transform: translateY(-4px); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.log-line { text-align: center; color: var(--ink-soft); font-size: 14px; min-height: 22px; margin-top: 10px; }
+
+/* --- Difference engine --- */
+.diff-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; margin-top: 10px; }
+.diff-table th, .diff-table td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: center; }
+.diff-table th { font-size: 13px; color: var(--ink-soft); font-weight: 500; }
+.diff-table tr.fresh td { color: var(--accent); font-weight: 700; }
+
+/* --- Binary adder --- */
+.bits { display: grid; grid-template-columns: 44px repeat(5, 1fr) 52px; gap: 6px; align-items: center; margin: 6px 0; }
+.bits .lbl { color: var(--ink-soft); font-size: 14px; }
+.bits .dec { text-align: right; font-family: var(--font-display); font-weight: 700; }
+.bit {
+  height: 44px; min-width: 0; padding: 0; border-radius: 10px; border: 2px solid var(--line); background: var(--bg-soft);
+  font: 700 20px var(--font-body); color: var(--ink-soft); cursor: pointer;
+}
+.bit.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.bit.out { cursor: default; }
+.bit.out.on { background: var(--good); border-color: var(--good); color: var(--card); }
+.carries { display: grid; grid-template-columns: 44px repeat(5, 1fr) 52px; gap: 6px; font-size: 12px; color: var(--accent); text-align: center; min-height: 18px; }
+.bits.sum-row { border-top: 2px solid var(--ink); padding-top: 8px; }
+
+/* --- Code ladder tabs --- */
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.tab {
+  border: 1px solid var(--line); background: var(--bg-soft); color: var(--ink);
+  border-radius: 999px; padding: 6px 12px; font: 500 14px var(--font-body); cursor: pointer;
+}
+.tab.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+pre.code {
+  background: #1b1714; color: #f1e9de; border-radius: 12px; padding: 14px 16px; margin: 0;
+  font: 14px/1.6 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; overflow-x: auto; white-space: pre;
+}
+pre.code .c { color: #9c8f80; }
+.tab-note { color: var(--ink-soft); font-size: 15px; margin-top: 10px; }
+
+/* --- JVM stepper --- */
+.jvm { display: grid; grid-template-columns: 1.1fr 1fr; gap: 12px; }
+@media (max-width: 560px) { .jvm { grid-template-columns: 1fr; } }
+.ops { list-style: none; margin: 0; padding: 0; font: 15px ui-monospace, Menlo, Consolas, monospace; }
+.ops li { padding: 6px 10px; border-radius: 8px; color: var(--ink-soft); }
+.ops li.done { color: var(--ink); }
+.ops li.now { background: var(--accent-soft); color: var(--ink); font-weight: 700; }
+.panel h4 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); }
+.stack {
+  min-height: 120px; border: 2px dashed var(--line); border-top: none; border-radius: 0 0 12px 12px;
+  display: flex; flex-direction: column-reverse; gap: 6px; padding: 8px; margin-bottom: 12px;
+}
+.slot {
+  background: var(--teal); color: var(--card); border-radius: 8px; text-align: center;
+  font: 700 18px var(--font-body); padding: 6px; animation: drop .25s ease;
+}
+@keyframes drop { from { transform: translateY(-14px); opacity: 0; } to { transform: none; opacity: 1; } }
+.locals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.local { border: 1px solid var(--line); border-radius: 8px; padding: 6px 4px; text-align: center; background: var(--bg-soft); }
+.local small { display: block; color: var(--ink-soft); font-size: 11px; }
+.local b { font-size: 18px; }
+.local.hit { border-color: var(--accent); }
+.explain-op { margin-top: 12px; min-height: 48px; }
+
+/* --- Speed ladder --- */
+.ladder { display: flex; flex-direction: column; gap: 10px; }
+.rung .rung-top { display: flex; justify-content: space-between; font-size: 14px; gap: 10px; }
+.rung .rung-top span:last-child { color: var(--ink-soft); white-space: nowrap; }
+.rung .bar { height: 14px; border-radius: 999px; background: var(--accent); margin-top: 4px; transition: width .8s ease; width: 0; }
+
+/* --- LLM --- */
+.tokens { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.token { padding: 4px 10px; border-radius: 8px; font: 600 16px ui-monospace, Menlo, monospace; background: var(--teal-soft); color: var(--teal); }
+.probs { display: flex; flex-direction: column; gap: 6px; }
+.prob { display: grid; grid-template-columns: 40px 1fr 54px; gap: 8px; align-items: center; font-variant-numeric: tabular-nums; }
+.prob .pb { height: 12px; border-radius: 999px; background: var(--teal); }
+.prob .t { font: 700 16px ui-monospace, Menlo, monospace; text-align: center; }
+.prob .v { text-align: right; color: var(--ink-soft); font-size: 14px; }
+
+.thread {
+  border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; margin: 16px 0; color: var(--ink-soft); font-style: italic;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Machines Think</title>
+  <meta name="description" content="How computers really work, from first principles, one story at a time.">
+  <script>try{var t=localStorage.getItem("dml-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap-wide topbar-inner">
+      <a class="brand" href="./"><span class="brand-dot"></span>How Machines Think</a>
+      <button class="theme-toggle" type="button">🌙 <span>Dark</span></button>
+    </div>
+  </header>
+
+  <main class="wrap-wide">
+    <section class="hero">
+      <span class="eyebrow">A self-study series · from first principles</span>
+      <h1>Every program you've ever run<br>is, underneath, just adding.</h1>
+      <p class="lede">
+        How did matter learn to calculate? Why does Java need a "virtual" machine? What is an LLM actually doing when it answers you?
+        Each chapter starts with a story, builds the idea from the ground up, gives you something to play with, and then makes you recall it.
+      </p>
+    </section>
+
+    <h2>The roadmap</h2>
+    <p style="color:var(--ink-soft)">Chapters unlock as they're written. Finish a quiz and the chapter gets a tick.</p>
+
+    <div class="chapters">
+      <a class="card chapter" data-ch="cs01" href="01-the-life-of-2-plus-3.html">
+        <span class="status live">Live</span>
+        <div class="num">01</div>
+        <h3>The life of 2 + 3</h3>
+        <p>Pascal's gears → Stibitz's kitchen → chips → C → the JVM → LLMs. One sum, four centuries.</p>
+      </a>
+      <div class="card chapter locked"><span class="status soon">Soon</span><div class="num">02</div>
+        <h3>Inside the JVM</h3><p>Class loaders, the heap, garbage collection, and why servers "warm up."</p></div>
+      <div class="card chapter locked"><span class="status soon">Soon</span><div class="num">03</div>
+        <h3>Memory: where 5 actually lives</h3><p>Registers, cache, RAM, disk, and why distance is speed.</p></div>
+      <div class="card chapter locked"><span class="status soon">Soon</span><div class="num">04</div>
+        <h3>Threads & concurrency</h3><p>Two cooks, one kitchen: race conditions, locks, virtual threads.</p></div>
+      <div class="card chapter locked"><span class="status soon">Soon</span><div class="num">05</div>
+        <h3>How an LLM really works</h3><p>Tokens, embeddings, attention, from first principles.</p></div>
+    </div>
+  </main>
+
+  <footer><a href="../">← Site home</a> · How Machines Think</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
