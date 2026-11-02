@@ -1,6 +1,312 @@
 {
- "updated": "2026-11-02T03:24:55+00:00",
+ "updated": "2026-11-02T17:38:02+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Late tram",
+   "body": "Half the seats are sleeping,\nthe other half are me.\nThe city passes softly,\nlit like a slow sea.\n\nI do not need to be anywhere\nfaster than this light.\nThe stops say their own names aloud\nand hand me to the night.",
+   "edition": "2026-11-02-pm",
+   "order": 27,
+   "id": "2026-11-02-pm-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Consistent hashing in one breath",
+   "body": "With plain hash(key) mod N, adding one server reshuffles almost every key. Consistent hashing places both servers and keys on a ring and assigns each key to the next server clockwise. Add or remove a server and only about 1/N of the keys move. Virtual nodes (many points per server) smooth out the load.",
+   "q": "Roughly what fraction of keys move when you add a server under consistent hashing?",
+   "a": "About 1/N, versus nearly all keys with plain mod-N hashing.",
+   "edition": "2026-11-02-pm",
+   "order": 26,
+   "id": "2026-11-02-pm-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Total Chess pilot opens in Budapest on 10 November",
+   "body": "Norway Chess's FIDE-approved Total Chess event runs from 10 to 20 November at the Anantara New York Palace in Budapest. It combines three time controls: Fast Classic (45 minutes + 30 seconds), rapid and blitz. Twenty-four players, including Carlsen, Caruana, Praggnanandhaa, Arjun Erigaisi and Vaishali Rameshbabu, start with a blitz Swiss, then groups and knockouts. It pilots a full tour starting in March 2027.",
+   "source": {
+    "name": "World Chess",
+    "url": "https://worldchess.com/news/total-chess-2026-everything-you-need-to-know"
+   },
+   "edition": "2026-11-02-pm",
+   "order": 25,
+   "id": "2026-11-02-pm-025"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Enter late, leave early",
+   "body": "A screenwriting rule that works for any story: start a scene as late as possible and leave as soon as its point has landed. Skip the hellos and the walking in; open on the moment something shifts. Readers fill in the rest, and they enjoy doing it.",
+   "hook": "Wonder: which sentence in your last piece is the real first sentence?",
+   "edition": "2026-11-02-pm",
+   "order": 24,
+   "id": "2026-11-02-pm-024"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Olympus Mons, the gentle giant",
+   "body": "Olympus Mons on Mars is the tallest volcano known in the solar system, rising about 22 km above its surroundings, roughly two and a half times Everest's height above sea level. Its slopes are so gentle that someone standing on it would barely notice the climb, and the summit would sit beyond the horizon.",
+   "q": "Roughly how tall is Olympus Mons?",
+   "a": "About 22 km, around 2.5 times Everest's height above sea level.",
+   "edition": "2026-11-02-pm",
+   "order": 23,
+   "id": "2026-11-02-pm-023"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "To speak harsh words when sweet ones are at hand is like plucking unripe fruit when the ripe is there for the taking.",
+   "who": "Thirukkural 100 (own rendering)",
+   "edition": "2026-11-02-pm",
+   "order": 22,
+   "id": "2026-11-02-pm-022"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The Mother of All Demos",
+   "body": "On 9 December 1968 in San Francisco, Douglas Engelbart and his team showed the world a computer mouse, hypertext links, windowed views, collaborative real-time editing and video conferencing, all in one 90-minute presentation. Much of modern computing was previewed in that single afternoon.",
+   "q": "Who gave the 1968 'Mother of All Demos' that introduced the mouse?",
+   "a": "Douglas Engelbart.",
+   "edition": "2026-11-02-pm",
+   "order": 21,
+   "id": "2026-11-02-pm-021"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Make the first step embarrassingly small",
+   "body": "If a task won't start, shrink the first step until it feels almost silly: open the file; put on one shoe; write a single sentence. Starting is the bottleneck, and momentum usually does the rest. If it doesn't, that's fine too: you still moved, and that counts.",
+   "edition": "2026-11-02-pm",
+   "order": 20,
+   "id": "2026-11-02-pm-020"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Wombats make cube-shaped droppings",
+   "body": "Wombats are the only animals known to produce cube-shaped poo. A 2018 study found that the final stretch of their intestine has walls with varying stiffness that shape the droppings into cubes. Wombats stack them on rocks and logs as territorial markers, and the flat sides help them stay put.",
+   "hook": "Wonder: what other shapes could nature 'manufacture' without any moulds?",
+   "edition": "2026-11-02-pm",
+   "order": 19,
+   "id": "2026-11-02-pm-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Context compaction, the agent's tidy desk",
+   "body": "Long-running agents fill their context window with old tool outputs and chatter. Compaction replaces older turns with a short summary while keeping recent turns verbatim. It's a trade: you keep the thread of the work and free space, but anything the summary leaves out is gone. Good compaction keeps decisions, open questions and file paths; it drops raw logs.",
+   "hook": "Wonder: if you summarised your own workday in five lines, what would you be sure to keep?",
+   "edition": "2026-11-02-pm",
+   "order": 18,
+   "id": "2026-11-02-pm-018"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Nalanda, the great monastery-university",
+   "body": "Nalanda in present-day Bihar grew into a famous centre of learning from about the 5th century CE, under Gupta patronage. Students came from across Asia; the Chinese pilgrim-scholar Xuanzang studied there in the 7th century and wrote about its scholars and libraries. Its ruins are now a UNESCO World Heritage Site.",
+   "q": "Which Chinese scholar studied at Nalanda in the 7th century?",
+   "a": "Xuanzang.",
+   "edition": "2026-11-02-pm",
+   "order": 17,
+   "id": "2026-11-02-pm-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "fact",
+   "title": "The generation effect",
+   "body": "You remember information better when you produce it yourself than when you simply read it. Slamecka and Graf described this in 1978: completing 'hot: c___' (cold) sticks better than reading 'hot: cold'. A cheap way to use it: before re-reading notes, try to write the key point from memory first.",
+   "hook": "Wonder: what could you try to recall right now, before looking it up?",
+   "edition": "2026-11-02-pm",
+   "order": 16,
+   "id": "2026-11-02-pm-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java records: data, said plainly",
+   "body": "Records, final since Java 16 (JEP 395), are a compact way to declare a class that is just data: record Point(int x, int y) {}. The compiler supplies the constructor, accessors x() and y(), equals, hashCode and toString. Fields are final, so records are shallowly immutable, which makes them ideal for DTOs, map keys and values passed between threads.",
+   "q": "Which methods does the compiler generate for a Java record?",
+   "a": "A canonical constructor, accessor methods, equals, hashCode and toString.",
+   "edition": "2026-11-02-pm",
+   "order": 15,
+   "id": "2026-11-02-pm-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The opposition, in one picture",
+   "body": "In king-and-pawn endings, two kings standing on the same file with one empty square between them are 'in opposition'. Whoever is NOT to move holds the opposition, because the other king must step aside and give ground. Many 'drawn or won?' pawn endings come down to this tiny standoff.",
+   "q": "With kings facing each other one square apart, who has the opposition?",
+   "a": "The side that is not to move.",
+   "edition": "2026-11-02-pm",
+   "order": 14,
+   "id": "2026-11-02-pm-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The lending library of umbrellas",
+   "body": "The bus stop had a bucket of umbrellas and a sign: Take one. Bring one back. Nobody knew who started it. Mira took a yellow one in June and forgot it for months. In October she returned it with a second umbrella, blue, that she'd bought on purpose. The next morning both were gone, and someone had left a third: green, with a note tied to the handle that said only, 'Your turn was lovely.'",
+   "edition": "2026-11-02-pm",
+   "order": 13,
+   "id": "2026-11-02-pm-013"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Agents get their own identities in HashiCorp Vault",
+   "body": "At IBM TechXchange on 27 October, IBM made HashiCorp Vault 2.2 with Agent Identity generally available, and previewed a new Secure Hub. The idea: each AI agent gets its own managed identity and short-lived credentials, rather than borrowing a human's keys. Integrations named include watsonx Orchestrate, Amazon Bedrock, Microsoft Foundry and Google Gemini.",
+   "source": {
+    "name": "IBM Newsroom",
+    "url": "https://newsroom.ibm.com/2026-10-27-ibm-introduces-identity-and-control-for-ai-agents,-securing-frontier-intelligence-for-the-enterprise"
+   },
+   "edition": "2026-11-02-pm",
+   "order": 12,
+   "id": "2026-11-02-pm-012"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Sharks are older than trees",
+   "body": "Sharks appear in the fossil record around 450 million years ago. The earliest true trees came later, roughly 385 to 390 million years ago. So sharks were already swimming the seas before there were any forests on land.",
+   "q": "Which came first, sharks or trees?",
+   "a": "Sharks, by roughly 60 million years.",
+   "edition": "2026-11-02-pm",
+   "order": 11,
+   "id": "2026-11-02-pm-011"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Hubble and Webb read the solar system's oldest postcards",
+   "body": "Astronomers used Hubble and Webb together to study 27 small, distant objects beyond Neptune. These icy bodies have changed little since the solar system formed, so their surfaces act like a preserved record of the material the planets were built from.",
+   "hook": "Wonder: what would a 4.5-billion-year-old snowball tell you about the day it formed?",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/10/261031221209.htm"
+   },
+   "edition": "2026-11-02-pm",
+   "order": 10,
+   "id": "2026-11-02-pm-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Grace Hopper's nanosecond",
+   "body": "To explain why satellite signals and fast computers were limited by distance, Grace Hopper handed out pieces of wire about 30 cm (11.8 inches) long: the distance light travels in one billionth of a second. She'd sometimes contrast it with a coil of wire representing a microsecond, nearly 300 metres long.",
+   "hook": "Wonder: how far does light travel in the time your laptop finishes one clock cycle?",
+   "edition": "2026-11-02-pm",
+   "order": 9,
+   "id": "2026-11-02-pm-009"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Interleaving: mix the practice",
+   "body": "Practising one problem type in a block feels smooth, but mixing types (A, C, B, A, B, C) tends to produce better long-term results. Studies on maths learning, such as Rohrer and Taylor's, found that interleaved practice helps you learn to tell which method a problem needs, not just how to run the method. It feels harder while you do it, which is part of why it works.",
+   "q": "Why does interleaved practice often beat blocked practice?",
+   "a": "It trains you to recognise which strategy a problem needs, not just to execute one strategy repeatedly.",
+   "edition": "2026-11-02-pm",
+   "order": 8,
+   "id": "2026-11-02-pm-008"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "Nothing, Lucilius, is ours, except time.",
+   "who": "Seneca, Letters to Lucilius, Letter I (tr. Gummere)",
+   "edition": "2026-11-02-pm",
+   "order": 7,
+   "id": "2026-11-02-pm-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Leave a breadcrumb before you stop",
+   "body": "Before you step away from a task, write one line: the very next physical action. Not 'finish the report', but 'open the draft and rewrite the second heading'. Restarting is often the hardest part with ADHD; a breadcrumb means future-you doesn't have to rebuild the whole mental map before taking the first step.",
+   "edition": "2026-11-02-pm",
+   "order": 6,
+   "id": "2026-11-02-pm-006"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "1,330 couplets, built like a grid",
+   "body": "Thiruvalluvar's Thirukkural is precisely structured: 133 chapters of 10 couplets each, 1,330 kurals in all. It is divided into three books: Aram (virtue), Porul (wealth and statecraft) and Inbam (love). Each kural is a two-line venba of seven metrical feet, four in the first line and three in the second.",
+   "q": "How many chapters and couplets does the Thirukkural have?",
+   "a": "133 chapters of 10 couplets: 1,330 kurals, in three books (Aram, Porul, Inbam).",
+   "edition": "2026-11-02-pm",
+   "order": 5,
+   "id": "2026-11-02-pm-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Backpressure: letting the slow part say 'not yet'",
+   "body": "When a producer is faster than a consumer, something has to give. Without backpressure, queues grow until memory runs out. With it, the consumer signals how much it can take, and the producer slows down. Bounded queues that block, TCP's flow-control window, and Reactive Streams' request(n) are all the same idea: demand flows upstream, data flows downstream.",
+   "hook": "Wonder: where in your system is an unbounded queue quietly waiting to become a memory problem?",
+   "edition": "2026-11-02-pm",
+   "order": 4,
+   "id": "2026-11-02-pm-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Kettle",
+   "body": "The kettle hums its one long vowel,\nthe window fogs, then clears.\nNothing in this kitchen asks\nfor more than what is here.\n\nSteam climbs and quietly forgets\nthe water it once was.\nI pour, and let the evening be\nexactly what it does.",
+   "edition": "2026-11-02-pm",
+   "order": 3,
+   "id": "2026-11-02-pm-003"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Nihal Sarin enters the world top 20",
+   "body": "The November FIDE list has Nihal Sarin at 2720, up 11 points and climbing from #30 to #19, a career-best ranking. It follows a 5/6 score and a board-two gold medal at the European Club Cup in Budva. At the top, Magnus Carlsen is on 2823, and Javokhir Sindarov sits at #4 with 2782.",
+   "q": "What is Nihal Sarin's world ranking on the November 2026 FIDE list?",
+   "a": "#19, rated 2720: his career best.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/november-2026-fide-rating-list"
+   },
+   "edition": "2026-11-02-pm",
+   "order": 2,
+   "id": "2026-11-02-pm-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Southern Taurids peak this Thursday",
+   "body": "The Southern Taurid meteor shower peaks in the early hours of 5 November. Expect a gentle 5 to 10 meteors an hour, but Taurids are slow and sometimes bright: the occasional fireball is their signature. The debris comes from Comet Encke. The Northern Taurids follow, peaking closer to 12 November, just after the 9 November new Moon gives a dark sky.",
+   "q": "Which comet feeds the Taurid meteor showers?",
+   "a": "Comet 2P/Encke.",
+   "source": {
+    "name": "Space.com night sky, November 2026",
+    "url": "https://www.space.com/stargazing/what-to-look-for-in-night-sky-november-2026"
+   },
+   "edition": "2026-11-02-pm",
+   "order": 1,
+   "id": "2026-11-02-pm-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "OpenAI ships GPT-6.1 Terra for workflow agents",
+   "body": "OpenAI rolled out GPT-6.1 Terra on 26 October, a mid-tier model aimed at computer use and workflow automation. It is available in ChatGPT Work, Codex and the API, and is priced at half of the GPT-5.6 Terra model it replaces. On OpenAI's own internal stress test, its error rate fell from 53.6% to 16.7% at low reasoning effort, and to 4.3% at maximum effort.",
+   "hook": "Wonder: for your own agent tasks, would you rather pay for more 'thinking' per step, or for more steps?",
+   "source": {
+    "name": "The Autonomous Edge #13 (DEV)",
+    "url": "https://dev.to/theautonomousedge/the-autonomous-edge-issue-13-cheaper-agents-harder-governance-week-of-november-2-2026-e9"
+   },
+   "edition": "2026-11-02-pm",
+   "order": 0,
+   "id": "2026-11-02-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
