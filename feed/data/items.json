@@ -1,6 +1,329 @@
 {
- "updated": "2026-11-02T17:38:02+00:00",
+ "updated": "2026-11-03T02:12:44+00:00",
  "items": [
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Marcus Aurelius, Meditations 7.67",
+   "body": "Very little indeed is needed for living a happy life.",
+   "edition": "2026-11-03-am",
+   "order": 29,
+   "id": "2026-11-03-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Honeybees dance directions",
+   "body": "A forager bee that finds good flowers does a 'waggle dance' back in the hive. The angle of her waggle run, measured against straight up, matches the angle between the food and the Sun. How long she waggles tells the others how far away it is. Karl von Frisch shared a Nobel Prize in 1973 for working this out.",
+   "q": "What does the length of a bee's waggle run communicate?",
+   "a": "How far away the food source is.",
+   "edition": "2026-11-03-am",
+   "order": 28,
+   "id": "2026-11-03-am-028"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Sleep files the day's learning",
+   "body": "While you sleep, the brain replays and consolidates what you practised that day. That's why a skill can feel smoother the next morning even though you didn't practise overnight. A short review before bed, followed by a real night's sleep, is a quietly effective way to study.",
+   "edition": "2026-11-03-am",
+   "order": 27,
+   "id": "2026-11-03-am-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java sealed interfaces: a closed list of shapes",
+   "body": "A sealed interface names exactly which classes may implement it, for example: sealed interface Shape permits Circle, Square. Combine that with records and pattern-matching switch, and the compiler can confirm you've handled every case. Leave one out and the code won't compile.",
+   "q": "What does the 'permits' clause on a sealed interface do?",
+   "a": "It lists the only classes allowed to implement it, which lets switches over it be checked for exhaustiveness.",
+   "edition": "2026-11-03-am",
+   "order": 26,
+   "id": "2026-11-03-am-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Thirukkural 396 (own rendering)",
+   "body": "Dig a well in sand and water rises; learn, and wisdom rises the same way, the deeper you go.",
+   "edition": "2026-11-03-am",
+   "order": 25,
+   "id": "2026-11-03-am-025"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Sunlight is about eight minutes old",
+   "body": "On average, light from the Sun takes about 8 minutes and 20 seconds to reach Earth. Light from the Moon takes a little over a second. When you watch a sunrise, you're seeing the Sun as it was eight minutes earlier.",
+   "q": "How long does sunlight take to reach Earth, on average?",
+   "a": "About 8 minutes 20 seconds.",
+   "edition": "2026-11-03-am",
+   "order": 24,
+   "id": "2026-11-03-am-024"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Specific beats general",
+   "body": "'She brought food' slides right past the reader. 'She brought rasam in a steel tiffin, still warm' lands, because one concrete detail does the work of a paragraph of explaining. When a sentence feels flat, ask what someone would actually see, smell or hold.",
+   "edition": "2026-11-03-am",
+   "order": 23,
+   "id": "2026-11-03-am-023"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "C was made to rewrite an operating system",
+   "body": "Around 1972 at Bell Labs, Dennis Ritchie created the C language, growing it out of an earlier language called B. In 1973 most of Unix was rewritten in C. That made it much easier to move the system to new hardware, and many operating systems and languages since then descend from that choice.",
+   "q": "Which operating system was largely rewritten in C in 1973?",
+   "a": "Unix.",
+   "edition": "2026-11-03-am",
+   "order": 22,
+   "id": "2026-11-03-am-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Name the next action as a verb",
+   "body": "'Taxes' is a cloud. 'Open the bank app and download the October statement' is a step you can take. When a task feels heavy, rewrite it until it starts with a physical verb you could do in five minutes.",
+   "edition": "2026-11-03-am",
+   "order": 21,
+   "id": "2026-11-03-am-021"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Triangulation: losing a move on purpose",
+   "body": "In some king-and-pawn endings, the side to move is the one in trouble. A king can walk around a small triangle of three squares and come back to where it started, using up one tempo. The opponent's king, short on room, can't copy the manoeuvre. Now it's their move, and the position works in your favour.",
+   "q": "What does triangulation achieve in an endgame?",
+   "a": "It passes the obligation to move to the opponent by losing a tempo with the king.",
+   "edition": "2026-11-03-am",
+   "order": 20,
+   "id": "2026-11-03-am-020"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A flamboyance of flamingos",
+   "body": "A group of flamingos is called a flamboyance. Their pink colour comes from pigments called carotenoids in the algae and small shrimp they eat. A flamingo chick hatches grey-white and turns pink gradually as it grows.",
+   "hook": "Wonder: what would your own collective noun be?",
+   "edition": "2026-11-03-am",
+   "order": 19,
+   "id": "2026-11-03-am-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "A tool description is a prompt",
+   "body": "When an agent picks a tool, mostly what it has to go on is the tool's name and its short description. A vague description gets used in vague ways. Write each one like a note to a smart new colleague: what the tool does, when to use it, when not to, and what it returns.",
+   "edition": "2026-11-03-am",
+   "order": 18,
+   "id": "2026-11-03-am-018"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The Shore Temple at Mamallapuram",
+   "body": "The Shore Temple has stood beside the Bay of Bengal for about 1,300 years. It was built under the Pallava king Narasimhavarman II, also called Rajasimha, around the early 8th century. It's one of the earliest structural stone temples in South India, built from cut blocks of granite rather than carved out of a single rock.",
+   "q": "Which dynasty built the Shore Temple at Mamallapuram?",
+   "a": "The Pallavas, under Narasimhavarman II (Rajasimha).",
+   "edition": "2026-11-03-am",
+   "order": 17,
+   "id": "2026-11-03-am-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "Explain it to an empty chair",
+   "body": "Say a new idea out loud, as if you're teaching it to someone who isn't there. The places where you stumble are exactly the gaps in your understanding. This is the self-explanation effect, and it's one of the cheaper study habits that has been well studied.",
+   "edition": "2026-11-03-am",
+   "order": 16,
+   "id": "2026-11-03-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Write-ahead logs: write down the plan, then act",
+   "body": "Before a database changes its data files, it first appends a description of the change to a sequential log and makes sure that log is safely on disk. If the machine crashes partway through, replaying the log on restart brings everything back to a consistent state. Appending to a log is fast, and it turns 'what was I doing?' into a solved problem.",
+   "q": "Why does a database write to its WAL before the data files?",
+   "a": "So that after a crash it can replay the log and reach a consistent state.",
+   "edition": "2026-11-03-am",
+   "order": 15,
+   "id": "2026-11-03-am-015"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The bookbinder's spare thread",
+   "body": "Every evening the old bookbinder cut one extra length of thread and left it on the windowsill. 'For the book I haven't been given yet,' she would say. Years later, a girl brought her a notebook falling apart, full of a grandmother's recipes. The thread was waiting. It was exactly long enough.",
+   "edition": "2026-11-03-am",
+   "order": 14,
+   "id": "2026-11-03-am-014"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Chess.com Crazyhouse Championship starts 5 November",
+   "body": "In crazyhouse, a piece you capture changes sides and can be dropped back onto the board as your own. Chess.com's 2026 Crazyhouse Championship begins with 3+0 qualifying arenas on 5 November. Each arena winner goes through to an eight-player double-elimination final on 6 November. The prize fund is $2,500.",
+   "hook": "Wonder: how would your openings change if captured pieces came back to fight for you?",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/announcing-chesscom-crazyhouse-chess-championship-2026"
+   },
+   "edition": "2026-11-03-am",
+   "order": 13,
+   "id": "2026-11-03-am-013"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Saturn's rings are astonishingly thin",
+   "body": "Saturn's main rings are about 280,000 km across, yet in most places they're only tens of metres thick. If you shrank them to the width of a football field, they'd be much thinner than a sheet of paper. When Earth lines up edge-on with them, they nearly vanish from view.",
+   "q": "Roughly how thick are Saturn's main rings in most places?",
+   "a": "Only about tens of metres, even though they span about 280,000 km.",
+   "edition": "2026-11-03-am",
+   "order": 12,
+   "id": "2026-11-03-am-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Seneca, Letters to Lucilius 1",
+   "body": "While we are postponing, life speeds by.",
+   "edition": "2026-11-03-am",
+   "order": 11,
+   "id": "2026-11-03-am-011"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Karpathy builds a calm video library in one morning",
+   "body": "Andrej Karpathy used AI coding help to turn about 20 years of Hacker News video recommendations into a browsable site called HackerTube, and reportedly did it in a single morning. The finished site is just a quiet curated directory with no chatbot in it. The AI did the building and then stepped out of the way.",
+   "hook": "Wonder: what old pile of bookmarks of yours could become a little library?",
+   "source": {
+    "name": "The Neuron (Nov 2)",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-2-2026/"
+   },
+   "edition": "2026-11-03-am",
+   "order": 10,
+   "id": "2026-11-03-am-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first website is still online",
+   "body": "Tim Berners-Lee published the first website at CERN in 1991. It explained what the World Wide Web was and how to use it. CERN later put a restored copy back up at its original address, info.cern.ch, so you can still read it.",
+   "q": "At which lab was the first website published?",
+   "a": "CERN, in 1991.",
+   "edition": "2026-11-03-am",
+   "order": 9,
+   "id": "2026-11-03-am-009"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Keep a 'done list' next to the to-do list",
+   "body": "At the end of the day, write down three things you actually finished, small ones included. A to-do list only ever shows what's missing. A done list gives you proof that you moved, and that makes tomorrow's start easier.",
+   "edition": "2026-11-03-am",
+   "order": 8,
+   "id": "2026-11-03-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Keezhadi: a Sangam-age town by the Vaigai",
+   "body": "Near Madurai, excavations at Keezhadi have turned up an ancient urban settlement: brick buildings, drains, wells, beads, dice and pottery. Some of the pots carry Tamil-Brahmi letters. Taken together, the finds suggest literacy was quite widespread in early Tamil country.",
+   "q": "What script appears on pottery at Keezhadi?",
+   "a": "Tamil-Brahmi.",
+   "edition": "2026-11-03-am",
+   "order": 7,
+   "id": "2026-11-03-am-007"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Scotland's national animal is a unicorn",
+   "body": "The unicorn has been a Scottish heraldic symbol since at least the 15th century. You can see it on the royal coat of arms used in Scotland. It stood for purity and strength, and in legend it could only be tamed by someone pure of heart.",
+   "hook": "Wonder: what animal would you pick to stand for your own household?",
+   "edition": "2026-11-03-am",
+   "order": 6,
+   "id": "2026-11-03-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Circuit breakers: stop knocking on a closed door",
+   "body": "Once calls to a dependency start failing over and over, a circuit breaker 'opens' and fails fast for a while instead of piling up waiting requests. After a cool-down it goes 'half-open' and lets one trial call through. A success closes it again. A failure keeps it open. The point is that the struggling service gets room to recover.",
+   "q": "What are the three states of a circuit breaker?",
+   "a": "Closed (normal), open (fail fast) and half-open (let a trial call through).",
+   "edition": "2026-11-03-am",
+   "order": 5,
+   "id": "2026-11-03-am-005"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The spacing effect: let it fade a little",
+   "body": "Reviewing something just as it starts to slip makes the memory stronger than reviewing it while it still feels fresh. A small struggle to recall tells the brain the thing is worth keeping. A workable rhythm: look again after a day, then three days, then a week.",
+   "q": "Why does spaced review beat cramming?",
+   "a": "Recalling something as it begins to fade strengthens the memory more than re-reading it while it's still fresh.",
+   "edition": "2026-11-03-am",
+   "order": 4,
+   "id": "2026-11-03-am-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Sindarov comes back to win Clutch Chess in Saint Louis",
+   "body": "Javokhir Sindarov won the 2026 Clutch Chess: Champions Showdown with 20.5 points, after starting the final day 2½ points behind. Praggnanandhaa took second place, 1½ points back. Nakamura and Caruana made up the four-player field. The event ran from 27 to 29 October.",
+   "q": "Who came second at the 2026 Clutch Chess Champions Showdown?",
+   "a": "Praggnanandhaa, 1½ points behind Sindarov.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/sindarov-wins-2026-clutch-chess-champions-showdown"
+   },
+   "edition": "2026-11-03-am",
+   "order": 3,
+   "id": "2026-11-03-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "First light",
+   "body": "The milk van hums its single note,\nthe neem tree shakes the dark off slowly.\nNo one has asked anything of you yet.\nSit inside that for a minute.\nIt is the softest room in the house.",
+   "edition": "2026-11-03-am",
+   "order": 2,
+   "id": "2026-11-03-am-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Webb finds the interstellar comet's ice is unusual",
+   "body": "JWST looked at the interstellar comet 3I/ATLAS three times, starting in August 2025 and ending after its closest pass by the Sun. One water-ice signal stayed strong while two others hardly showed. The team's reading is that the ice comes as very fine, dusty grains, more like some distant objects beyond Neptune than like familiar comets. The study appeared in The Astrophysical Journal Letters.",
+   "q": "Which part of our solar system did 3I/ATLAS's ice most resemble?",
+   "a": "Some trans-Neptunian objects, the small icy bodies beyond Neptune.",
+   "source": {
+    "name": "Space.com",
+    "url": "https://space.com/astronomy/asteroids/james-webb-space-telescope-uncovers-new-clues-about-the-origins-of-interstellar-invader-comet-3i-atlas"
+   },
+   "edition": "2026-11-03-am",
+   "order": 1,
+   "id": "2026-11-03-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "DeepSeek shares a prototype coding agent that doesn't wait to be asked",
+   "body": "DeepSeek has shown a 'Super-Agent' for coding that offers fixes on its own initiative instead of waiting for a prompt. The code is up on GitHub as an open-source research prototype. DeepSeek says plainly that it isn't a finished product yet.",
+   "hook": "Wonder: when should a helper speak up, and when should it stay quiet?",
+   "source": {
+    "name": "AI Agents Directory news brief (Nov 1)",
+    "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-3"
+   },
+   "edition": "2026-11-03-am",
+   "order": 0,
+   "id": "2026-11-03-am-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
