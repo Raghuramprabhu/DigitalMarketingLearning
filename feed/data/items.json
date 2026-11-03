@@ -1,6 +1,341 @@
 {
- "updated": "2026-11-03T02:12:44+00:00",
+ "updated": "2026-11-03T17:15:01+00:00",
  "items": [
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Betelgeuse breathes slowly",
+   "body": "Betelgeuse, the red shoulder of Orion, swells and dims in a rhythm of roughly 430 days, with a longer cycle of about six years on top. It is around 650 light-years away, so the light you see tonight set out around the 1300s, when the Vijayanagara Empire was young.",
+   "hook": "Wonder: find Orion before dawn this week and compare Betelgeuse with orange Aldebaran nearby. Which looks brighter?",
+   "edition": "2026-11-03-pm",
+   "order": 29,
+   "id": "2026-11-03-pm-029"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "The short nap sweet spot",
+   "body": "Naps of about 10 to 20 minutes tend to lift alertness without the groggy feeling that longer naps can bring, because you wake before sliding into deep sleep. Early afternoon, when energy naturally dips, is the usual best time.",
+   "q": "Why do short naps avoid grogginess?",
+   "a": "You wake before entering deep sleep, so there's little sleep inertia.",
+   "edition": "2026-11-03-pm",
+   "order": 28,
+   "id": "2026-11-03-pm-028"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Filter coffee",
+   "body": "Decoction drips through the night,\npatient as rain on a tin roof.\n\nIn the morning, poured high\nfrom tumbler to dabara,\nthe froth rises like a small applause\nfor having waited.",
+   "edition": "2026-11-03-pm",
+   "order": 27,
+   "id": "2026-11-03-pm-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "A perfect 9/9 in Karnataka blitz",
+   "body": "FM Aarav Sarbalia won the Karnataka State Blitz Championship in Tumkur on 1 November with a perfect 9 out of 9. A day earlier he had finished second in the state rapid championship with 8 out of 9. ChessBase India ran a warm piece about the weekend, written by his father.",
+   "source": {
+    "name": "ChessBase India",
+    "url": "https://chessbase.in/news/how-a-halloween-night-helped-aarav-sarbalia-become-karnataka-state-blitz-champion"
+   },
+   "edition": "2026-11-03-pm",
+   "order": 26,
+   "id": "2026-11-03-pm-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Decide first",
+   "body": "First say to yourself what you would be; and then do what you have to do.",
+   "who": "Epictetus, Discourses 3.23",
+   "edition": "2026-11-03-pm",
+   "order": 25,
+   "id": "2026-11-03-pm-025"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Read replicas and the 'where did my write go?' moment",
+   "body": "A read replica copies the main database a little behind. If a user saves a profile and the next page reads from a replica, they may see the old value. A common fix is read-your-writes: for a short time after someone writes, send their reads to the primary.",
+   "q": "What is 'read-your-writes' consistency?",
+   "a": "A guarantee that a user always sees their own recent writes, often by reading from the primary for a short time after writing.",
+   "edition": "2026-11-03-pm",
+   "order": 24,
+   "id": "2026-11-03-pm-024"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Small galaxies let most of their oxygen go",
+   "body": "A Hubble survey of 37 nearby dwarf galaxies found they kept only about 11% of the oxygen their stars ever made, on average. The rest was likely blown out by exploding stars, because small galaxies have too little gravity to hold on. The oxygen isn't lost to the universe; it now drifts in the space around them.",
+   "hook": "Wonder: could some of the oxygen in our own bodies once have been blown out of a smaller galaxy?",
+   "source": {
+    "name": "Sci.News",
+    "url": "https://www.sci.news/astronomy/nearby-dwarf-galaxies-oxygen-hubble-15168.html"
+   },
+   "edition": "2026-11-03-pm",
+   "order": 23,
+   "id": "2026-11-03-pm-023"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Give transitions a soft landing",
+   "body": "Switching tasks is often the hardest part. Set a gentle five-minute warning before you need to stop, so the switch doesn't arrive as a jolt. Use the minutes to wind down: save, stretch, refill your water. The ending stops being a cliff and becomes a slope.",
+   "edition": "2026-11-03-pm",
+   "order": 22,
+   "id": "2026-11-03-pm-022"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "A hard drive that weighed a ton",
+   "body": "IBM's first hard disk, the 350 RAMAC of 1956, stored about five million characters on fifty spinning platters 24 inches across. The whole unit weighed roughly a ton. Today a fingernail-sized card holds far, far more.",
+   "q": "What year did IBM ship its first hard-disk system, the RAMAC?",
+   "a": "1956.",
+   "edition": "2026-11-03-pm",
+   "order": 21,
+   "id": "2026-11-03-pm-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let an object hold the feeling",
+   "body": "Instead of telling readers a character is lonely, show the second cup she still sets out each morning. Objects carry emotion without announcing it, and readers enjoy doing the last step of understanding themselves.",
+   "q": "What does 'let an object hold the feeling' mean?",
+   "a": "Show an emotion through a concrete thing a character uses or keeps, rather than naming the emotion.",
+   "edition": "2026-11-03-pm",
+   "order": 20,
+   "id": "2026-11-03-pm-020"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The Eiffel Tower is taller in summer",
+   "body": "Iron expands when it warms. On hot days the top of the Eiffel Tower can sit up to about 15 cm higher than on cold winter days, and it leans very slightly away from the sun as one side heats faster than the other.",
+   "hook": "Wonder: what other everyday things quietly grow and shrink with the seasons?",
+   "edition": "2026-11-03-pm",
+   "order": 19,
+   "id": "2026-11-03-pm-019"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Chola bronzes begin as wax",
+   "body": "The famous Chola bronzes, like the dancing Nataraja, were made by the lost-wax method. The sculptor shapes the figure in wax, coats it in clay, heats it so the wax runs out, then pours molten metal into the hollow. Each mould is broken to free the statue, so every piece is one of a kind. Artisans in Swamimalai, near Kumbakonam, still work this way.",
+   "q": "Why is every lost-wax bronze unique?",
+   "a": "The clay mould is broken to release the casting, so it can be used only once.",
+   "edition": "2026-11-03-pm",
+   "order": 18,
+   "id": "2026-11-03-pm-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Every agent needs a 'done' line",
+   "body": "An agent loop keeps going until something tells it to stop. A good stop condition is concrete: tests pass, the file exists, the user confirmed, or ten steps have passed. Without one, an agent can polish forever or wander. Writing the finish line first is half the design.",
+   "hook": "Wonder: what's the finish line for the task you're working on right now?",
+   "edition": "2026-11-03-pm",
+   "order": 17,
+   "id": "2026-11-03-pm-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "fact",
+   "title": "Doodling can help you listen",
+   "body": "In a 2009 study by Jackie Andrade, people who shaded shapes while listening to a dull phone message later recalled about 29% more of it than people who just listened. A light doodle may keep the mind from wandering off entirely.",
+   "q": "In Andrade's 2009 study, how much more did doodlers remember?",
+   "a": "About 29% more.",
+   "edition": "2026-11-03-pm",
+   "order": 16,
+   "id": "2026-11-03-pm-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The rule of the square",
+   "body": "Can a lone king catch a passed pawn? Draw an imaginary square: one side runs from the pawn to its promotion square, and the square extends sideways toward the king. If the king can step into that square on its move, it catches the pawn. If not, the pawn runs home. No counting needed, just a glance.",
+   "hook": "Wonder: why does a pawn on its starting rank need a slightly bigger square? (It can move two squares at once.)",
+   "edition": "2026-11-03-pm",
+   "order": 15,
+   "id": "2026-11-03-pm-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java try-with-resources: cleanup you can't forget",
+   "body": "Since Java 7, you can declare a resource inside try( ... ). When the block ends, normally or with an exception, Java calls close() on it for you, in reverse order of opening. It works with anything that implements AutoCloseable: files, sockets, database connections.\n\ntry (var in = Files.newBufferedReader(path)) { ... }",
+   "q": "Which interface must a class implement to be used in try-with-resources?",
+   "a": "AutoCloseable (Closeable extends it).",
+   "edition": "2026-11-03-pm",
+   "order": 14,
+   "id": "2026-11-03-pm-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The repair shop's waiting chair",
+   "body": "Mr. Iyer fixed radios that nobody needed anymore. People brought them anyway, and while he worked they sat in the single wooden chair by the door. He never hurried. One afternoon a girl asked why. He turned the dial until a station bloomed out of the hiss. 'Because,' he said, 'the waiting is part of what I'm giving back.'",
+   "edition": "2026-11-03-pm",
+   "order": 13,
+   "id": "2026-11-03-pm-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Perseverance becomes the farthest-driving vehicle on another world",
+   "body": "NASA's Perseverance rover has now driven 45.22 km (28.10 miles) on Mars, more than any vehicle has ever driven beyond Earth. It reached the mark on 11 October 2026, and Guinness presented a plaque to its engineering twin back on Earth. The rover can now also work out its position on its own by matching what it sees to orbital maps.",
+   "q": "How far has Perseverance driven on Mars?",
+   "a": "45.22 km (28.10 miles), a record for any vehicle on another world.",
+   "source": {
+    "name": "ScienceDaily (NASA)",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261101010536.htm"
+   },
+   "edition": "2026-11-03-pm",
+   "order": 12,
+   "id": "2026-11-03-pm-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "No longer talk about it",
+   "body": "No longer talk at all about the kind of man that a good man ought to be, but be such.",
+   "who": "Marcus Aurelius, Meditations 10.16 (George Long translation)",
+   "edition": "2026-11-03-pm",
+   "order": 11,
+   "id": "2026-11-03-pm-011"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Copilot gets 'connect once' tools",
+   "body": "GitHub has added connectors in preview that let Copilot reach about 26 services, including Slack, Figma, Notion and Linear. You sign in once and the connection works across the command line, the editor, mobile and the cloud. Less setup, more of the agent's time spent on the actual work.",
+   "source": {
+    "name": "AI Agent Store weekly news",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-03-pm",
+   "order": 10,
+   "id": "2026-11-03-pm-010"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Sea otters hold hands while they sleep",
+   "body": "Sea otters often sleep floating on their backs, and some hold paws or wrap themselves in kelp so they don't drift apart from each other. A floating group of resting otters is called a raft.",
+   "q": "What is a floating group of sea otters called?",
+   "a": "A raft.",
+   "edition": "2026-11-03-pm",
+   "order": 9,
+   "id": "2026-11-03-pm-009"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first mouse wore wood",
+   "body": "The first computer mouse, built in 1964 by Bill English from Douglas Engelbart's design, was a small wooden block with two metal wheels underneath and a single button on top. One wheel tracked left-right, the other up-down.",
+   "hook": "Wonder: why did it get called a 'mouse'? (The cord looked like a tail.)",
+   "edition": "2026-11-03-pm",
+   "order": 8,
+   "id": "2026-11-03-pm-008"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Bundle the dull with the delightful",
+   "body": "Save something you enjoy, like a favourite podcast or audiobook, only for a task you tend to avoid: laundry, dishes, expense reports. A 2014 study found people went to the gym more when their gripping audiobooks were only available there. The boring task becomes the doorway to the good thing.",
+   "q": "What is 'temptation bundling'?",
+   "a": "Pairing a treat you want with a task you avoid, and allowing the treat only during that task.",
+   "edition": "2026-11-03-pm",
+   "order": 7,
+   "id": "2026-11-03-pm-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The man who taught us to read Ashoka again",
+   "body": "For centuries, nobody could read the Brahmi script on Ashoka's pillars and rocks. In 1837, James Prinsep, working in Calcutta, cracked it, helped by short donor inscriptions at Sanchi that repeated the same word endings. Suddenly an emperor's messages from the 3rd century BCE could speak again.",
+   "hook": "Wonder: which script used in India today descends from Brahmi? (Nearly all of them do, Tamil included.)",
+   "edition": "2026-11-03-pm",
+   "order": 6,
+   "id": "2026-11-03-pm-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Bloom filters: a polite 'probably'",
+   "body": "A Bloom filter is a tiny bit array plus a few hash functions. To add an item, you set the bits its hashes point to. To check an item, you look at those bits: if any is 0, the item is definitely not there; if all are 1, it is probably there. Databases use them to skip disk reads for keys that can't exist.",
+   "q": "Can a Bloom filter give a false negative?",
+   "a": "No. It can give false positives ('probably there') but never false negatives.",
+   "edition": "2026-11-03-pm",
+   "order": 5,
+   "id": "2026-11-03-pm-005"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Guess first, learn better",
+   "body": "Trying to answer a question before you've learned the material, even when you get it wrong, tends to improve how well you remember the right answer afterwards. Researchers call this the pretesting effect. The guess seems to open a slot in your mind that the real answer then fills.",
+   "q": "What is the pretesting effect?",
+   "a": "Attempting to answer before learning, even wrongly, improves later memory of the correct answer.",
+   "edition": "2026-11-03-pm",
+   "order": 4,
+   "id": "2026-11-03-pm-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Firouzja wins the Bullet Brawl",
+   "body": "Alireza Firouzja won Chess.com's Bullet Brawl arena on 31 October with 170 points, just ahead of Hikaru Nakamura on 166. Nakamura led into the final stretch, but Firouzja scored 13.5 out of 15 in the last quarter of the two-hour, one-minute-per-side event. The next Brawl is on 7 November.",
+   "hook": "Wonder: what does a strong player still see in a one-minute game that the rest of us miss?",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/alireza-firouzja-wins-bullet-brawl-oct-31-2026"
+   },
+   "edition": "2026-11-03-pm",
+   "order": 3,
+   "id": "2026-11-03-pm-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night shift of the stars",
+   "body": "The city switches off its windows\none by one, like someone\nputting books back on a shelf.\n\nUp there, nobody clocks in.\nThe stars were already working\nlong before we needed light.",
+   "edition": "2026-11-03-pm",
+   "order": 2,
+   "id": "2026-11-03-pm-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Rubin may have found a new dwarf planet beyond Pluto",
+   "body": "The Vera Rubin Observatory has spotted a large icy world, provisionally called 2026 ED138, about 46 times farther from the Sun than Earth is. It is estimated at 600 to 1,500 km across and had been hiding against the crowded starfields of the Milky Way. If its size is confirmed, it could join Pluto, Ceres, Eris, Haumea and Makemake as a recognised dwarf planet.",
+   "q": "Roughly how far from the Sun is 2026 ED138, in AU?",
+   "a": "About 46 AU, beyond Pluto's average distance of about 40 AU.",
+   "source": {
+    "name": "Sci.News",
+    "url": "https://www.sci.news/astronomy/vera-rubin-observatory-possible-new-dwarf-planet-15166.html"
+   },
+   "edition": "2026-11-03-pm",
+   "order": 1,
+   "id": "2026-11-03-pm-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Android Studio lets you bring your own coding agent",
+   "body": "Android Studio's latest build lets developers pick from more than 40 coding agents and switch between them. They plug in through the open Agent Client Protocol, so an agent can see the project, run builds, and read the emulator's logs. The nice idea: the IDE becomes a shared workbench, and the agent is a swappable tool on it.",
+   "hook": "Wonder: what would you want any coding agent to be able to see in your project, and what should stay off-limits?",
+   "source": {
+    "name": "AI Agent Store weekly news",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-03-pm",
+   "order": 0,
+   "id": "2026-11-03-pm-000"
+  },
   {
    "topic": "wisdom",
    "kind": "quote",
