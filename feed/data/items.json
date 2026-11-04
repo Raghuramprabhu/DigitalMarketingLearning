@@ -1,6 +1,358 @@
 {
- "updated": "2026-11-04T02:13:43+00:00",
+ "updated": "2026-11-04T17:14:42+00:00",
  "items": [
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Earth is closest to the Sun in January",
+   "body": "Earth's orbit is slightly elliptical, and it reaches perihelion, its closest point to the Sun, in early January. Seasons come from the tilt of Earth's axis, not from distance, which is why January is winter in the north and summer in the south.",
+   "q": "Do seasons come from Earth's distance to the Sun?",
+   "a": "No. They come from the tilt of Earth's axis; Earth is actually closest to the Sun in early January.",
+   "edition": "2026-11-04-pm",
+   "order": 30,
+   "id": "2026-11-04-pm-030"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Thirukkural 423 (own rendering)",
+   "body": "Whatever you hear, and from whomever you hear it, wisdom is seeing the truth within it.",
+   "edition": "2026-11-04-pm",
+   "order": 29,
+   "id": "2026-11-04-pm-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Bus stop, after rain",
+   "body": "The puddle holds\na whole streetlight,\nquietly,\nlike a coin it found.\n\nThe bus comes.\nThe light shivers,\nsettles,\nkeeps it anyway.",
+   "edition": "2026-11-04-pm",
+   "order": 28,
+   "id": "2026-11-04-pm-028"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Desirable difficulties",
+   "body": "Robert and Elizabeth Bjork coined 'desirable difficulties' for learning conditions that feel harder in the moment but improve long-term memory: spacing practice out, mixing problem types, testing yourself instead of rereading. The struggle is not a sign it isn't working; often it is the work.",
+   "edition": "2026-11-04-pm",
+   "order": 27,
+   "id": "2026-11-04-pm-027"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Linux began as a hobby",
+   "body": "On 25 August 1991, a Finnish student named Linus Torvalds posted to a Usenet newsgroup that he was writing a free operating system for 386 PCs, just as a hobby, and asked what features people would like. That modest post grew into the kernel that now runs most of the world's servers and every Android phone.",
+   "hook": "Wonder: which of today's small hobby projects will quietly become infrastructure?",
+   "edition": "2026-11-04-pm",
+   "order": 26,
+   "id": "2026-11-04-pm-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "equals and hashCode travel together",
+   "body": "In Java, if two objects are equal by equals(), they must return the same hashCode(). Override one without the other and a HashMap or HashSet may file equal objects in different buckets, so lookups quietly fail. Records generate both for you, consistently.",
+   "q": "If a.equals(b) is true, what must be true of their hash codes?",
+   "a": "a.hashCode() must equal b.hashCode().",
+   "edition": "2026-11-04-pm",
+   "order": 25,
+   "id": "2026-11-04-pm-025"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The farthest point from Earth's centre",
+   "body": "Everest is the highest peak above sea level, but the summit of Chimborazo in Ecuador is the point on Earth's surface farthest from the planet's centre. Earth bulges at the equator, and Chimborazo sits almost on it.",
+   "hook": "Wonder: what else changes when you measure from the centre instead of the surface?",
+   "edition": "2026-11-04-pm",
+   "order": 24,
+   "id": "2026-11-04-pm-024"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "OpenAI builds its own Git backend",
+   "body": "OpenAI says it built Pando, a Git-compatible backend, to keep up with the volume of code changes from engineers and coding agents. It now hosts the company's main repository, cut median push latency by almost 80 per cent, and serves close to a petabyte of repository data each day.",
+   "q": "What is Pando?",
+   "a": "A Git-compatible backend OpenAI built to handle code changes from engineers and coding agents.",
+   "source": {
+    "name": "OpenAI",
+    "url": "https://openai.com/index/scaling-git-at-openai/"
+   },
+   "edition": "2026-11-04-pm",
+   "order": 23,
+   "id": "2026-11-04-pm-023"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let the character want something small",
+   "body": "A character doesn't need to want to save the world. A seat by the window, the last mango, one more minute before the alarm. A small, clear want on the first page gives readers something to lean toward, and it reveals personality in how the character goes after it.",
+   "edition": "2026-11-04-pm",
+   "order": 22,
+   "id": "2026-11-04-pm-022"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "A chess problem-solving final comes to Fujairah",
+   "body": "The Grand Final of the WFCC Fujairah Grand Prix will be held in Fujairah, UAE, from 27 to 30 November. Solvers race through six rounds of composed problems and studies, and a composing contest runs alongside, with the solvers voting for their favourite original creations.",
+   "hook": "Wonder: is solving a composed puzzle closer to playing chess or to reading poetry?",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/wfcc-grand-prix-final-fujairah-announcement"
+   },
+   "edition": "2026-11-04-pm",
+   "order": 21,
+   "id": "2026-11-04-pm-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Kailasanathar Temple, Kanchipuram",
+   "body": "The Kailasanathar Temple in Kanchipuram was built around 700 CE under the Pallava king Narasimhavarman II, also called Rajasimha. It is one of the earliest structural stone temples in Tamil Nadu, built of sandstone rather than cut into rock, and its walls are lined with small shrines and carvings.",
+   "q": "Which Pallava king built the Kailasanathar Temple in Kanchipuram?",
+   "a": "Narasimhavarman II (Rajasimha), around 700 CE.",
+   "edition": "2026-11-04-pm",
+   "order": 20,
+   "id": "2026-11-04-pm-020"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "One place, one kind of work",
+   "body": "Brains link places with habits. If you can, give each kind of task its own spot: deep study at the desk, email on the sofa, reading by the window. Over time, simply sitting down in the study chair starts to switch the right mode on, with less willpower needed.",
+   "edition": "2026-11-04-pm",
+   "order": 19,
+   "id": "2026-11-04-pm-019"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A model Earth with no life on it",
+   "body": "Researchers have built a computer model of a lifeless Earth that links the atmosphere to the planet's interior. It can reproduce today's habitable-looking conditions without any life at all, a useful reminder for future exoplanet hunters that 'habitable' and 'inhabited' are different words.",
+   "hook": "Wonder: what signal would truly convince you a distant world is alive?",
+   "source": {
+    "name": "Universe Today",
+    "url": "https://www.universetoday.com/articles/a-virtual-lifeless-earth-will-help-scientists-find-life-on-exoplanets"
+   },
+   "edition": "2026-11-04-pm",
+   "order": 18,
+   "id": "2026-11-04-pm-018"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "If-then plans",
+   "body": "Psychologist Peter Gollwitzer studied 'implementation intentions': plans phrased as 'If situation X, then I will do Y'. For example, 'If I sit down after dinner, then I open the Java notes first.' Linking an action to a cue makes it more likely to happen, because the cue does the remembering for you.",
+   "q": "What is the format of an implementation intention?",
+   "a": "'If situation X, then I will do Y.'",
+   "edition": "2026-11-04-pm",
+   "order": 17,
+   "id": "2026-11-04-pm-017"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Cache-aside, the polite cache",
+   "body": "In the cache-aside pattern, the application checks the cache first. On a miss it reads the database, stores the result in the cache with a time-to-live, and returns it. On writes it updates the database and deletes the cached entry, rather than trying to update it, so the next read refills it fresh. Simple, common, and easy to reason about.",
+   "hook": "Wonder: why is deleting a cache entry on write usually safer than updating it?",
+   "edition": "2026-11-04-pm",
+   "order": 16,
+   "id": "2026-11-04-pm-016"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "AI agents help run a radio telescope",
+   "body": "At SETI's Allen Telescope Array, AI agents now assist with telescope operations and signal analysis. Researchers say some jobs dropped from weeks to hours, and the system detected a pulsar in the Crab Nebula in real time, a familiar natural lighthouse rather than anything alien.",
+   "q": "What did the agent-assisted Allen Telescope Array detect in real time?",
+   "a": "A pulsar in the Crab Nebula.",
+   "source": {
+    "name": "The Decoder",
+    "url": "https://the-decoder.com/ai-agents-take-over-at-setis-allen-telescope-array-scanning-for-extraterrestrial-intelligence/"
+   },
+   "edition": "2026-11-04-pm",
+   "order": 15,
+   "id": "2026-11-04-pm-015"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The tailor's measuring tape",
+   "body": "For forty years the tailor wrote every customer's measurements in a ledger. When his granddaughter took over the shop, she found the margins full of tiny notes: 'stands straighter on Fridays', 'laughs with his whole chest, add room'. She bought a new ledger, kept the old one on the shelf, and on the first page of the new one she drew a wide, empty margin.",
+   "edition": "2026-11-04-pm",
+   "order": 14,
+   "id": "2026-11-04-pm-014"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Young players gather in Al Ain",
+   "body": "The fourth FIDE World Junior Rapid & Blitz Championships are under way in Al Ain, UAE, from 1 to 7 November, with 150 players from 40 countries. The nine-round rapid section finishes first, and blitz follows on 5–6 November. After three rounds, five players shared the Open lead on a perfect score.",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/continental-chess-presidents-inaugurate-world-junior-rapid-blitz-championships-in-al-ain/"
+   },
+   "edition": "2026-11-04-pm",
+   "order": 13,
+   "id": "2026-11-04-pm-013"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Hummingbirds can fly backwards",
+   "body": "Hummingbirds rotate their wings in a figure-eight pattern, producing lift on both the forward and back strokes. That lets them hover in place and even fly backwards, something almost no other bird can do.",
+   "q": "What wing motion lets hummingbirds hover and fly backwards?",
+   "a": "A figure-eight stroke that makes lift on both forward and back strokes.",
+   "edition": "2026-11-04-pm",
+   "order": 12,
+   "id": "2026-11-04-pm-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Marcus Aurelius, Meditations 10.16",
+   "body": "Waste no more time arguing about what a good man should be. Be one.",
+   "edition": "2026-11-04-pm",
+   "order": 11,
+   "id": "2026-11-04-pm-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The internet's first word was 'LO'",
+   "body": "On 29 October 1969, a student at UCLA tried to log in to a computer at the Stanford Research Institute over the young ARPANET. He typed L, then O, and the system crashed before the G. So the first message ever sent across the network that grew into the internet was, fittingly, 'LO'. A full login worked about an hour later.",
+   "q": "What were the first two letters sent over ARPANET?",
+   "a": "L and O; the system crashed before 'LOGIN' was finished.",
+   "edition": "2026-11-04-pm",
+   "order": 10,
+   "id": "2026-11-04-pm-010"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The sky Van Gogh actually saw",
+   "body": "A study in Scientific Reports argues that the sky in The Starry Night matches the pre-dawn view over Saint-Rémy around 22 July 1889, when a waning crescent Moon, Venus and the Hyades star cluster sat close together. The painting may be more of a sky diary than we assumed.",
+   "hook": "Wonder: which of your own skies would you want someone to identify 137 years later?",
+   "source": {
+    "name": "Universe Today",
+    "url": "https://www.universetoday.com/articles/new-research-resolves-the-mystery-behind-van-goghs-the-starry-night"
+   },
+   "edition": "2026-11-04-pm",
+   "order": 9,
+   "id": "2026-11-04-pm-009"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Attention residue",
+   "body": "When you switch from task A to task B, part of your mind stays behind on A, especially if A was left unfinished. Researcher Sophie Leroy named this 'attention residue' in 2009. A small fix: before switching, jot where you stopped and what comes next. It gives A a resting place so B gets more of you.",
+   "q": "What did Sophie Leroy call the leftover focus that lingers on a previous task?",
+   "a": "Attention residue.",
+   "edition": "2026-11-04-pm",
+   "order": 8,
+   "id": "2026-11-04-pm-008"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "FlashProve: proof of which model answered",
+   "body": "Anthropic, with collaborators from EPFL and MIT, has published FlashProve, an experimental system that attaches a cryptographic proof to a model's output showing it came from a specific, committed set of weights, without revealing the weights. It is released as research and code; no production deployment has been announced.",
+   "hook": "Wonder: could a model's answer one day come with a receipt, like a signed letter?",
+   "source": {
+    "name": "Anthropic",
+    "url": "https://www.anthropic.com/research/provable-inference"
+   },
+   "edition": "2026-11-04-pm",
+   "order": 7,
+   "id": "2026-11-04-pm-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Akam and puram: the two rooms of Sangam poetry",
+   "body": "Classical Sangam poems in Tamil are sorted into two great modes. Akam ('inner') poems explore love and private feeling, usually without naming the people involved. Puram ('outer') poems speak of public life: kings, generosity, valour and ethics. Landscapes such as hills, seashore and farmland carry the mood of akam poems.",
+   "q": "In Sangam poetry, which mode deals with love and inner feeling?",
+   "a": "Akam ('inner').",
+   "edition": "2026-11-04-pm",
+   "order": 6,
+   "id": "2026-11-04-pm-006"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Give stray thoughts a parking spot",
+   "body": "Keep one notepad (or one notes file) beside you while you work. When a 'must remember to…' thought arrives, write five words and go back. The brain lets go more easily once it trusts the thought is caught somewhere safe. Review the pad when the session ends, not during it.",
+   "edition": "2026-11-04-pm",
+   "order": 5,
+   "id": "2026-11-04-pm-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java Strings never change, and that's the gift",
+   "body": "A Java String is immutable: methods like toUpperCase() return a new String and leave the old one untouched. That makes Strings safe to share between threads, safe to use as HashMap keys, and lets the JVM pool identical literals. The cost: building text in a loop with + creates many throwaway objects, which is why StringBuilder exists.",
+   "q": "Why use StringBuilder instead of + inside a long loop?",
+   "a": "Strings are immutable, so each + creates a new object; StringBuilder appends into one mutable buffer.",
+   "edition": "2026-11-04-pm",
+   "order": 4,
+   "id": "2026-11-04-pm-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "World Senior Championship opens in Serbia",
+   "body": "The FIDE World Senior Championship has begun in Vrnjačka Banja, Serbia, with 385 players from 65 federations, including 44 grandmasters. Four nine-round Swiss sections run in parallel: Open and Women, each for players over 50 and over 65, all at a classical time control.",
+   "hook": "Wonder: what does a game look like after fifty years of pattern-building?",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/fide-world-senior-chess-championship-2026-begins-in-vrnjacka-banja-serbia/"
+   },
+   "edition": "2026-11-04-pm",
+   "order": 3,
+   "id": "2026-11-04-pm-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Rangoli at dusk",
+   "body": "She bends to the threshold\nwith a pinch of white,\nand the dots wait patiently\nto be joined into light.\n\nBy morning the feet\nwill have blurred every line.\nShe knows. She draws anyway.\nThat is the design.",
+   "edition": "2026-11-04-pm",
+   "order": 2,
+   "id": "2026-11-04-pm-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Apple opens Siri to app developers",
+   "body": "Apple has started a developer preview that lets apps plug their content and actions into Siri through App Intents, in the iOS 27.3 and sibling betas. Apps can offer multi-step 'Skills', such as checking an order and then arranging its delivery. Wider availability is planned later.",
+   "q": "Which Apple framework lets apps expose actions to Siri?",
+   "a": "App Intents.",
+   "source": {
+    "name": "Apple Developer",
+    "url": "https://developer.apple.com/news/?id=gdk2umrf"
+   },
+   "edition": "2026-11-04-pm",
+   "order": 1,
+   "id": "2026-11-04-pm-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "All five genetic letters found in asteroid Ryugu",
+   "body": "A Japanese team reports in Nature Astronomy that samples of asteroid Ryugu, brought home by JAXA's Hayabusa2 in 2020, contain all five nucleobases used in DNA and RNA: adenine, guanine, cytosine, thymine and uracil, in broadly similar amounts. It hints that these building blocks were common across the young Solar System.",
+   "hook": "Wonder: how many of life's ingredients were already drifting around before Earth existed?",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261102075903.htm"
+   },
+   "edition": "2026-11-04-pm",
+   "order": 0,
+   "id": "2026-11-04-pm-000"
+  },
   {
    "topic": "facts",
    "kind": "fact",
