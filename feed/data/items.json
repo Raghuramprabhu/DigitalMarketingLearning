@@ -1,6 +1,355 @@
 {
- "updated": "2026-11-03T17:15:01+00:00",
+ "updated": "2026-11-04T02:13:43+00:00",
  "items": [
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Koalas have fingerprints",
+   "body": "Koalas have fingerprints with loops and whorls so similar to ours that they can be hard to tell apart even under a microscope. They evolved separately, probably to help grip branches and handle leaves.",
+   "edition": "2026-11-04-am",
+   "order": 30,
+   "id": "2026-11-04-am-030"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Give your agent a budget",
+   "body": "A good agent loop has limits: maximum steps, maximum tool calls, maximum time or tokens. When the budget runs out, it stops and reports what it has, instead of wandering. Budgets turn 'it went quiet for an hour' into 'here's where I got to'.",
+   "hook": "Wonder: what budget would you give yourself for today's hardest task?",
+   "edition": "2026-11-04-am",
+   "order": 29,
+   "id": "2026-11-04-am-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Leave the last step to the reader",
+   "body": "Don't write 'she was heartbroken'. Write that she set two cups on the table, then put one back. Readers love to complete the thought themselves; the feeling they work out lands deeper than the one you hand them.",
+   "edition": "2026-11-04-am",
+   "order": 28,
+   "id": "2026-11-04-am-028"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "Ask 'why would that be true?'",
+   "body": "When you read a fact, pause and ask why it makes sense, and answer in a sentence. This 'elaborative interrogation' ties new information to what you already know, and studies find it helps facts stick better than rereading.",
+   "q": "What is elaborative interrogation?",
+   "a": "Asking yourself why a fact is true and explaining it, to link it to what you already know.",
+   "edition": "2026-11-04-am",
+   "order": 27,
+   "id": "2026-11-04-am-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Speed Chess Championship XI announced",
+   "body": "Chess.com announced the 11th Speed Chess Championship, its 10th-anniversary edition, with a $250,000 prize fund and live finals in London.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/announcing-speed-chess-championship-2026"
+   },
+   "edition": "2026-11-04-am",
+   "order": 26,
+   "id": "2026-11-04-am-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "The outbox pattern",
+   "body": "You need to save an order AND publish an 'order created' event. Doing both separately risks one succeeding and one failing. Instead, write the event into an 'outbox' table inside the same database transaction as the order. A separate relay reads the outbox and publishes. Either both are recorded, or neither.",
+   "q": "What problem does the outbox pattern solve?",
+   "a": "Keeping a database write and an event publish consistent without a distributed transaction.",
+   "edition": "2026-11-04-am",
+   "order": 25,
+   "id": "2026-11-04-am-025"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "As deep as the water",
+   "body": "The lotus stem rises as high as the water is deep;\na person rises as high as the depth within.",
+   "who": "Thirukkural 595 (rendering for this feed)",
+   "edition": "2026-11-04-am",
+   "order": 24,
+   "id": "2026-11-04-am-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Cut, copy, paste came from Xerox PARC",
+   "body": "Larry Tesler and Tim Mott built the Gypsy text editor at Xerox PARC in the mid-1970s, which popularised cut, copy and paste with a mouse. Tesler championed 'modeless' editing, where every key does the same thing no matter what mode you're in.",
+   "hook": "Wonder: how many times did you paste something today?",
+   "edition": "2026-11-04-am",
+   "order": 23,
+   "id": "2026-11-04-am-023"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The Moon is drifting away, slowly",
+   "body": "Laser beams bounced off mirrors left by Apollo astronauts show the Moon moving away from Earth by about 3.8 cm a year, roughly the speed your fingernails grow. Tides are the cause: they slowly pass Earth's spin energy to the Moon's orbit.",
+   "q": "How fast is the Moon receding from Earth?",
+   "a": "About 3.8 cm per year.",
+   "edition": "2026-11-04-am",
+   "order": 22,
+   "id": "2026-11-04-am-022"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Anthropic's Message Threads skip the resend",
+   "body": "A new public-beta API feature lets developers send a long conversation once, then only the new messages plus a thread ID. Anthropic says this cuts median time-to-first-token by about a third on very long requests.",
+   "source": {
+    "name": "AI Agent Store weekly news",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-04-am",
+   "order": 21,
+   "id": "2026-11-04-am-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Uthiramerur's palm-leaf pot",
+   "body": "Inscriptions on a temple wall at Uthiramerur, near Kanchipuram, dated to the reign of Parantaka Chola I (around 920 CE), describe how a village chose its committee members: names written on palm leaves were dropped into a pot, and a child drew them out. The rules also listed who was eligible to stand.",
+   "q": "In the Uthiramerur system, who drew the palm-leaf names from the pot?",
+   "a": "A young child.",
+   "edition": "2026-11-04-am",
+   "order": 20,
+   "id": "2026-11-04-am-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Ceiling fan",
+   "body": "Slow circles above the bed,\nlike someone stirring the room\nuntil the day dissolves.",
+   "edition": "2026-11-04-am",
+   "order": 19,
+   "id": "2026-11-04-am-019"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Decide once, then stop deciding",
+   "body": "Small decisions quietly drain the tank. Pick defaults for the repeat ones: the same breakfast on weekdays, a go-to lunch order, a fixed 'laundry day'. A default isn't a rule; you can break it any time. It just means the easy path is already chosen.",
+   "edition": "2026-11-04-am",
+   "order": 18,
+   "id": "2026-11-04-am-018"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "IceCube catches very high-energy neutrinos",
+   "body": "The IceCube detector, a cubic kilometre of Antarctic ice laced with sensors, is recording neutrinos carrying roughly ten billion times the energy of those from the Sun, messengers from far-off cosmic engines.",
+   "q": "Where is the IceCube neutrino detector?",
+   "a": "Buried in the ice at the South Pole, Antarctica.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261101010533.htm"
+   },
+   "edition": "2026-11-04-am",
+   "order": 17,
+   "id": "2026-11-04-am-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Walk, then brainstorm",
+   "body": "In Stanford experiments by Marily Oppezzo and Daniel Schwartz (2014), people came up with noticeably more creative uses for everyday objects while walking, even on a treadmill facing a blank wall, than while sitting. The boost lingered a little after they sat down.",
+   "hook": "Wonder: what problem could you take on a ten-minute walk today?",
+   "edition": "2026-11-04-am",
+   "order": 16,
+   "id": "2026-11-04-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java Optional: a return type, not a field",
+   "body": "Optional was designed to say 'this method might not have an answer'. Return it from finders; don't use it for fields, method parameters or collections (return an empty list instead). And prefer orElseGet(() -> expensive()) over orElse(expensive()) when the fallback is costly, because orElse always evaluates its argument.",
+   "q": "Why prefer orElseGet over orElse for an expensive fallback?",
+   "a": "orElse evaluates its argument every time; orElseGet only calls the supplier when the Optional is empty.",
+   "edition": "2026-11-04-am",
+   "order": 15,
+   "id": "2026-11-04-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Gawain Jones takes the English title",
+   "body": "Gawain Maroroa Jones won the 2026 English Championship unbeaten with 7.5/9, a full point ahead of Michael Adams. Elmira Mirzoeva won the women's title.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/english-championship-2026-main-tournament"
+   },
+   "edition": "2026-11-04-am",
+   "order": 14,
+   "id": "2026-11-04-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The night watchman of the bakery",
+   "body": "Every night at three, Ravi unlocked the bakery and switched on one lamp, not to work, just to listen. The dough rose in its tins with tiny sighs. He'd been a watchman for thirty years and this was the only building that seemed to breathe back. At five the bakers came, loud and floury. He handed them the keys and the quiet, and walked home with a warm bun in his pocket that nobody ever charged him for.",
+   "edition": "2026-11-04-am",
+   "order": 13,
+   "id": "2026-11-04-am-013"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Butterflies taste with their feet",
+   "body": "Butterflies have taste sensors on their feet. When a female lands on a leaf, she can 'taste' it to check that it's the right plant for her caterpillars before laying eggs.",
+   "q": "Why does a butterfly taste a leaf with its feet?",
+   "a": "To check it's the right food plant for its caterpillars before laying eggs.",
+   "edition": "2026-11-04-am",
+   "order": 12,
+   "id": "2026-11-04-am-012"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Meituan releases LongCat-2.5",
+   "body": "Meituan launched LongCat-2.5, a large multimodal model aimed at long coding sessions and visual understanding. It is a mixture-of-experts design: only a small slice of its parameters wakes up for each token.",
+   "hook": "Wonder: why might waking only part of a model per word save so much energy?",
+   "source": {
+    "name": "TechNode",
+    "url": "https://technode.com/2026/11/02/meituan-launches-longcat-2-5-multimodal-ai-model-for-extended-coding-tasks/"
+   },
+   "edition": "2026-11-04-am",
+   "order": 11,
+   "id": "2026-11-04-am-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The smiley was born on a bulletin board",
+   "body": "On 19 September 1982, Carnegie Mellon professor Scott Fahlman suggested typing :-) to mark jokes on the department's online bulletin board, and :-( for serious posts. It spread from there to the whole internet.",
+   "q": "Who proposed the :-) emoticon, and where?",
+   "a": "Scott Fahlman, on a Carnegie Mellon bulletin board in 1982.",
+   "edition": "2026-11-04-am",
+   "order": 10,
+   "id": "2026-11-04-am-010"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The world is change",
+   "body": "The universe is change; our life is what our thoughts make it.",
+   "who": "Marcus Aurelius, Meditations IV.3 (traditional rendering)",
+   "edition": "2026-11-04-am",
+   "order": 9,
+   "id": "2026-11-04-am-009"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Hera gets its first clear look at Didymos and Dimorphos",
+   "body": "ESA's Hera spacecraft has taken its first clear view of the asteroid pair that NASA's DART probe nudged in 2022. Hera is now closing in to map how the small moonlet was reshaped.",
+   "q": "What did DART do to the asteroid Dimorphos in 2022?",
+   "a": "It deliberately struck it to test whether an asteroid's path can be nudged.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261103003154.htm"
+   },
+   "edition": "2026-11-04-am",
+   "order": 8,
+   "id": "2026-11-04-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Delhi's iron pillar that rarely rusts",
+   "body": "The iron pillar now in Delhi's Qutb complex is about 1,600 years old, from the Gupta era, and still shows remarkably little rust. Metallurgists credit iron rich in phosphorus, which helps a thin, protective film form on the surface over time.",
+   "hook": "Wonder: what would a 1,600-year-old object of yours look like?",
+   "edition": "2026-11-04-am",
+   "order": 7,
+   "id": "2026-11-04-am-007"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Chunking: why masters see more",
+   "body": "In classic studies, strong chess players glanced at a real game position for a few seconds and rebuilt it far better than novices, but the advantage almost vanished for randomly scattered pieces. Experts don't have bigger memories; they store familiar patterns as single chunks.",
+   "q": "Why did experts' memory advantage shrink with random chess positions?",
+   "a": "Random positions have no familiar patterns to chunk, so experts lose their shortcut.",
+   "edition": "2026-11-04-am",
+   "order": 6,
+   "id": "2026-11-04-am-006"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Give your keys a home port",
+   "body": "Choose one spot by the door, a bowl or hook, for keys, wallet, earphones and badge. Things that leave the house only come back to that spot. You're not relying on remembering; you're relying on the place. Put tomorrow's must-carry item there tonight.",
+   "edition": "2026-11-04-am",
+   "order": 5,
+   "id": "2026-11-04-am-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Token bucket: rate limiting with a jar of coins",
+   "body": "Picture a jar that refills with one coin every 100 ms, up to a cap of 20. Each request spends a coin; an empty jar means 'wait'. The cap allows short bursts, the refill rate sets the long-run speed. Store just two numbers per client: tokens left and last refill time, and top up lazily when a request arrives.",
+   "q": "In a token bucket, what does the bucket's capacity control?",
+   "a": "How big a burst is allowed; the refill rate controls the sustained rate.",
+   "edition": "2026-11-04-am",
+   "order": 4,
+   "id": "2026-11-04-am-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Morning steel",
+   "body": "The tumbler on the counter\nholds one stripe of sun,\nlike it was asked to carry it\nand hasn't yet said no.\n\nI drink around the light.\nIt stays.",
+   "edition": "2026-11-04-am",
+   "order": 3,
+   "id": "2026-11-04-am-003"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Lazavik wins the KazChess Masters unbeaten",
+   "body": "Nineteen-year-old Denis Lazavik won the KazChess Masters in Almaty with 6.5/9 and no losses, half a point ahead of Daniil Dubov. Fourteen-year-old IM Mark Smirnov tied for third and earned his first GM norm.",
+   "q": "Which 14-year-old earned his first GM norm in Almaty?",
+   "a": "IM Mark Smirnov of Kazakhstan.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/kazchess-masters-almaty-2026-r9-2"
+   },
+   "edition": "2026-11-04-am",
+   "order": 2,
+   "id": "2026-11-04-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "OpenAI's LifeVal tests everyday chores",
+   "body": "OpenAI published LifeVal, a benchmark built from time-use studies and a survey of nearly 4,000 people. Instead of exam puzzles, it asks whether AI can help with ordinary life tasks like planning a household budget or finding childcare.",
+   "hook": "Wonder: which of your weekly chores would make a good benchmark question?",
+   "source": {
+    "name": "OpenAI",
+    "url": "https://openai.com/index/lifeval/"
+   },
+   "edition": "2026-11-04-am",
+   "order": 1,
+   "id": "2026-11-04-am-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Voyager 1 nears one light-day from home",
+   "body": "Launched in 1977, Voyager 1 is now approaching a full light-day from Earth: a radio message from mission control takes about 24 hours to reach it. Engineers keep it doing science with careful power-saving moves.",
+   "q": "Roughly how long will a radio signal take to reach Voyager 1 once it is one light-day away?",
+   "a": "About 24 hours.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261103003152.htm"
+   },
+   "edition": "2026-11-04-am",
+   "order": 0,
+   "id": "2026-11-04-am-000"
+  },
   {
    "topic": "facts",
    "kind": "fact",
