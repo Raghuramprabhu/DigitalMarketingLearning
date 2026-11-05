@@ -1,6 +1,342 @@
 {
- "updated": "2026-11-05T02:17:54+00:00",
+ "updated": "2026-11-05T17:15:22+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try answering before peeking: Who is Asia's first grandmaster? What does a heartbeat system listen for? What does WOOP stand for?",
+   "q": "Who became Asia's first grandmaster, in 1974?",
+   "a": "Eugenio Torre of the Philippines.",
+   "edition": "2026-11-05-pm",
+   "order": 29,
+   "id": "2026-11-05-pm-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "November, 6 pm",
+   "body": "The streetlights take their turns,\none, then the next, then all.\nA boy stops kicking his ball\nto watch the evening learn.",
+   "edition": "2026-11-05-pm",
+   "order": 28,
+   "id": "2026-11-05-pm-028"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Lightning is hotter than the Sun's surface",
+   "body": "A lightning bolt heats the air around it to roughly 30,000 °C for a split second, about five times the temperature of the Sun's visible surface. That sudden heating makes the air expand explosively, and the sound of it is thunder.",
+   "hook": "Wonder: what's the longest gap you've counted between a flash and its thunder?",
+   "edition": "2026-11-05-pm",
+   "order": 27,
+   "id": "2026-11-05-pm-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Philidor's third-rank defence",
+   "body": "In a rook ending where you defend against king, rook and pawn, keep your king in front of the pawn and your rook on your third rank (the sixth from the attacker's side). The enemy king can't advance without help. The moment the pawn steps forward, swing your rook to the back and check from behind; the attacker's king now has no shelter.",
+   "q": "In the Philidor defence, when does the defending rook go to the far side to check?",
+   "a": "As soon as the attacking pawn advances to the defender's third rank.",
+   "edition": "2026-11-05-pm",
+   "order": 26,
+   "id": "2026-11-05-pm-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Pick a shard key by how you read",
+   "body": "When data is split across machines, the shard key decides where each row lives. Choose it from your most common query: if most reads ask 'everything for this customer', shard by customer so one machine can answer. A key that spreads writes evenly but scatters every read across all shards is a quiet performance trap.",
+   "q": "What should mainly guide the choice of a shard key?",
+   "a": "Your most common access pattern, so typical queries hit a single shard.",
+   "edition": "2026-11-05-pm",
+   "order": 25,
+   "id": "2026-11-05-pm-025"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "Seek not that the things which happen should happen as you wish; but wish the things which happen to be as they are, and you will have a tranquil flow of life.",
+   "who": "Epictetus, Enchiridion 8 (tr. George Long)",
+   "edition": "2026-11-05-pm",
+   "order": 24,
+   "id": "2026-11-05-pm-024"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Earth's shadow is in the sky tonight",
+   "body": "Just after sunset, look east, opposite the Sun. A soft blue-grey band sits on the horizon: that is Earth's own shadow cast on the atmosphere. Above it glows a pink strip called the Belt of Venus. The same pair appears in the west just before sunrise.",
+   "hook": "Wonder: when did you last look away from a sunset?",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/space/when-can-you-see-earths-shadow/"
+   },
+   "edition": "2026-11-05-pm",
+   "order": 23,
+   "id": "2026-11-05-pm-023"
+  },
+  {
+   "topic": "writing",
+   "kind": "tip",
+   "title": "Give the scene a sound",
+   "body": "Most drafts lean on sight. Before you finish a scene, ask what can be heard: a gate latch, rain on a tin roof, a pressure cooker's whistle two houses away. One true sound places the reader in the room faster than three sentences of description.",
+   "edition": "2026-11-05-pm",
+   "order": 22,
+   "id": "2026-11-05-pm-022"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Where 'hello, world' came from",
+   "body": "The tradition of a first program that prints 'hello, world' traces to Brian Kernighan. It appeared in his 1972 tutorial for the B language at Bell Labs and became famous through The C Programming Language (1978), which he wrote with Dennis Ritchie.",
+   "q": "Which book made 'hello, world' famous?",
+   "a": "The C Programming Language (1978) by Kernighan and Ritchie.",
+   "edition": "2026-11-05-pm",
+   "order": 21,
+   "id": "2026-11-05-pm-021"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Map your good hours",
+   "body": "For a week, jot a one-word energy note (high, okay, low) every couple of hours. Patterns appear quickly. Then put your hardest thinking in your high slots and save email, errands and tidying for the low ones. It's working with your brain instead of against it.",
+   "hook": "Wonder: when in the day does your mind feel clearest?",
+   "edition": "2026-11-05-pm",
+   "order": 20,
+   "id": "2026-11-05-pm-020"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Saturn is less dense than water",
+   "body": "Saturn's average density is about 0.69 grams per cubic centimetre, lower than water's 1. That's the source of the famous line that it would float in a big enough bathtub, though as a ball of gas it would hardly hold together in one.",
+   "q": "Which planet in our solar system has an average density lower than water?",
+   "a": "Saturn.",
+   "edition": "2026-11-05-pm",
+   "order": 19,
+   "id": "2026-11-05-pm-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Small tools beat one giant tool",
+   "body": "When giving an agent tools, many small, clearly named ones usually work better than one tool with twenty optional settings. A narrow tool is easier for the model to choose correctly and easier for you to test. If two tools are always called together, that's the moment to combine them, not before.",
+   "edition": "2026-11-05-pm",
+   "order": 18,
+   "id": "2026-11-05-pm-018"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Geometry with ropes: the Sulba Sutras",
+   "body": "The Sulba Sutras, ancient Indian manuals for laying out fire altars, gave rules using stretched cords. Baudhayana's text states that the diagonal of a rectangle produces as much area as its two sides do separately, the relationship now known as the Pythagorean theorem. It also gives a remarkably close approximation of the square root of 2.",
+   "hook": "Wonder: what could you build with only a rope and some pegs?",
+   "edition": "2026-11-05-pm",
+   "order": 17,
+   "id": "2026-11-05-pm-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "Mental contrasting: picture the wish, then the snag",
+   "body": "Psychologist Gabriele Oettingen's research suggests pure positive daydreaming can sap drive. A better habit: imagine the outcome you want, then name the main inner obstacle, then plan what you'll do when it shows up. Her acronym is WOOP: Wish, Outcome, Obstacle, Plan.",
+   "q": "What does WOOP stand for?",
+   "a": "Wish, Outcome, Obstacle, Plan.",
+   "edition": "2026-11-05-pm",
+   "order": 16,
+   "id": "2026-11-05-pm-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "CompletableFuture: say what happens next",
+   "body": "In Java, a CompletableFuture lets you describe follow-up steps instead of waiting. thenApply transforms a result, thenCompose chains another async call, and thenCombine joins two independent results. Call join() only at the very edge of your program, so threads aren't parked waiting in the middle.",
+   "q": "When do you use thenCompose instead of thenApply?",
+   "a": "When the next step itself returns a CompletableFuture, so you get a flat future instead of a nested one.",
+   "edition": "2026-11-05-pm",
+   "order": 15,
+   "id": "2026-11-05-pm-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "A 15-year-old shares the lead at Tegernsee",
+   "body": "After five rounds of the Bavarian Championship in Gmund am Tegernsee, six players share first place on 4½ points, among them three Indian grandmasters. One of the leaders is 15-year-old German IM Hussain Besou, who beat former world junior champion Peter Acs in round five.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/tegernsee-open-2026-r5"
+   },
+   "edition": "2026-11-05-pm",
+   "order": 14,
+   "id": "2026-11-05-pm-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The piano tuner's last house",
+   "body": "Every Thursday the tuner saved the old teacher's upright for last. It never really needed him; she kept it beautifully. But she made cardamom tea, and he played one slow piece before leaving, and she said each time that it sounded better than before. He let her think it was his doing. It was the tea.",
+   "edition": "2026-11-05-pm",
+   "order": 13,
+   "id": "2026-11-05-pm-013"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Peanuts aren't nuts",
+   "body": "Peanuts are legumes, cousins of peas and beans. The plant flowers above ground, then pushes its developing pods down into the soil, where the 'nuts' ripen.",
+   "q": "What plant family do peanuts belong to?",
+   "a": "The legumes (pea and bean family).",
+   "edition": "2026-11-05-pm",
+   "order": 12,
+   "id": "2026-11-05-pm-012"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A year inside a pretend Mars",
+   "body": "Four volunteers, Ross Elder, Ellen Ellis, Matthew Montgomery and James Spicer, stepped out of NASA's 3D-printed Mars habitat at Johnson Space Center in Houston on 31 October after more than a year inside. Messages to the outside world had built-in delays of 26 to 44 minutes, just like real Earth–Mars calls. It was the second of three planned CHAPEA missions.",
+   "hook": "Wonder: what would you most miss after a year in a quiet Martian home?",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/human-world/nasa-mars-habitat-on-earth-yearlong-simulation/"
+   },
+   "edition": "2026-11-05-pm",
+   "order": 11,
+   "id": "2026-11-05-pm-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "It is not the man who has too little, but the man who craves more, that is poor.",
+   "who": "Seneca, Letters to Lucilius 2 (tr. Gummere)",
+   "edition": "2026-11-05-pm",
+   "order": 10,
+   "id": "2026-11-05-pm-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "ASCII: 128 characters to agree on",
+   "body": "Before 1963, different machines used different codes for letters, so text didn't travel well. ASCII, first published in 1963, fixed a shared table using 7 bits, giving 128 slots for letters, digits, punctuation and control signals like 'carriage return'. Its first 128 characters still sit unchanged at the start of Unicode today.",
+   "q": "How many characters does 7-bit ASCII define?",
+   "a": "128 (2 to the 7th power).",
+   "edition": "2026-11-05-pm",
+   "order": 9,
+   "id": "2026-11-05-pm-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Agents that remember between runs",
+   "body": "MongoDB has released an integration with Google's Agent Development Kit that stores an agent's sessions and memory in a database. The point is durability: an agent can pick up where it left off instead of starting every run from a blank slate.",
+   "hook": "Wonder: what should an assistant remember about yesterday, and what should it let go?",
+   "source": {
+    "name": "daily.dev",
+    "url": "https://daily.dev/posts/introducing-the-mongodb-google-adk-integration-durable-memory-for-agent-state-uacsoeofh"
+   },
+   "edition": "2026-11-05-pm",
+   "order": 8,
+   "id": "2026-11-05-pm-008"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Worked examples first, then fade them",
+   "body": "When you're new to a skill, studying a fully solved example teaches more than struggling alone, because your working memory isn't swamped. As you improve, the benefit flips: experts learn more from solving problems themselves (the 'expertise reversal' effect). A gentle path is to start with complete examples, then gradually hide more of each step.",
+   "q": "What is the expertise reversal effect?",
+   "a": "Supports that help beginners, like worked examples, help less (or even hinder) as learners gain expertise.",
+   "edition": "2026-11-05-pm",
+   "order": 7,
+   "id": "2026-11-05-pm-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Madras began with a land grant in 1639",
+   "body": "In August 1639 the East India Company's Francis Day obtained a strip of coastal land where Fort St George was then built; the town that grew around it became Madras, today's Chennai. The city now marks Madras Day every year on 22 August.",
+   "q": "Which fort was the seed of the city of Chennai?",
+   "a": "Fort St George, begun after the 1639 land grant.",
+   "edition": "2026-11-05-pm",
+   "order": 6,
+   "id": "2026-11-05-pm-006"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Let your body move while your mind works",
+   "body": "Fidgeting isn't always a distraction. A 2015 study of children with ADHD found more movement went along with better working-memory performance during the task. Try a standing desk, a stress ball, or pacing while you think through a problem, and notice what actually helps you focus.",
+   "hook": "Wonder: which small movement helps you think best?",
+   "edition": "2026-11-05-pm",
+   "order": 5,
+   "id": "2026-11-05-pm-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Heartbeats: how a cluster notices silence",
+   "body": "A node can't announce its own crash, so systems listen for the absence of a signal instead. Each node sends a small 'I'm alive' message every second or so; if several in a row go missing, others suspect it is down. The tuning is a trade: short timeouts detect failure fast but mistake a slow network for a dead node, long ones are calm but slow to react.",
+   "q": "Why do heartbeat systems usually wait for several missed beats, not one?",
+   "a": "A single missed beat is often just a slow or dropped message; waiting for several cuts false alarms.",
+   "edition": "2026-11-05-pm",
+   "order": 4,
+   "id": "2026-11-05-pm-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Pressing flowers",
+   "body": "Between two pages of an atlas\na marigold went flat and gold.\nYears later, looking up a river,\nI found the morning it was sold.",
+   "hook": "Wonder: what's tucked inside the books on your shelf?",
+   "edition": "2026-11-05-pm",
+   "order": 3,
+   "id": "2026-11-05-pm-003"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Eugenio Torre, Asia's first grandmaster, turns 75",
+   "body": "Born on 4 November 1951 in Iloilo City in the Philippines, Torre became the first Asian player to earn the grandmaster title in 1974. He holds the record for Chess Olympiad appearances, with 23. He was inducted into the World Chess Hall of Fame in 2021 and has a small personal chess museum near his home in Marikina City.",
+   "q": "How many Chess Olympiads has Eugenio Torre played, a record?",
+   "a": "23.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/eugenio-torre-75-years-birthday"
+   },
+   "edition": "2026-11-05-pm",
+   "order": 2,
+   "id": "2026-11-05-pm-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Netflix tries picking shows by mood",
+   "body": "Netflix has started testing 'AI Discover' on supported TVs in the US. Instead of typing a title, you choose a mood or situation, then narrow the suggestions with a few follow-up choices. Netflix calls it an experiment and will decide later what to expand.",
+   "hook": "Wonder: would you rather describe a feeling or a genre when choosing what to watch?",
+   "source": {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/"
+   },
+   "edition": "2026-11-05-pm",
+   "order": 1,
+   "id": "2026-11-05-pm-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Earth has a tiny new mini-moon: 2026 QQ8",
+   "body": "A rock only about a metre across has been quietly circling Earth since around April. It was first spotted on 20 August by Krisztián Sárneczky, and follow-up telescope looks confirmed it is natural, most likely a small asteroid rather than old rocket hardware. It should stay with us through December, then drift off on its own path in 2027.",
+   "hook": "Wonder: how many small 'moons' come and go without anyone noticing?",
+   "q": "About how big is the mini-moon 2026 QQ8?",
+   "a": "Roughly 1 metre (about 3 feet) across.",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/space/mini-moon-for-earth-2026-qq8/"
+   },
+   "edition": "2026-11-05-pm",
+   "order": 0,
+   "id": "2026-11-05-pm-000"
+  },
   {
    "topic": "ai",
    "kind": "idea",
