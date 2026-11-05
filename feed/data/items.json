@@ -1,6 +1,337 @@
 {
- "updated": "2026-11-04T17:14:42+00:00",
+ "updated": "2026-11-05T02:17:54+00:00",
  "items": [
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask the agent for its plan first",
+   "body": "For any agent task that changes things, have it write out its plan before it acts: the steps, the files or systems it will touch, and how it will know it's done. Reading a plan takes a minute; untangling a confident wrong turn takes an afternoon.",
+   "hook": "Wonder: which of your own tasks would go better if you wrote the plan first, too?",
+   "edition": "2026-11-05-am",
+   "order": 29,
+   "id": "2026-11-05-am-029"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "A knight on the rim",
+   "body": "The old saying 'a knight on the rim is dim' has geometry behind it. In the centre a knight can reach eight squares; on an edge, at most four; in a corner, only two. It isn't a law, just a gentle nudge to ask, before you move a knight sideways, where it can go next.",
+   "q": "How many squares can a knight reach from a corner?",
+   "a": "Two.",
+   "edition": "2026-11-05-am",
+   "order": 28,
+   "id": "2026-11-05-am-028"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Sagas: undo in small steps",
+   "body": "When one business action spans several services, a single database transaction can't cover it all. A saga splits it into local steps, each with a matching 'compensating' step: book the room, then charge the card; if charging fails, cancel the room. You trade instant all-or-nothing for a clear, reliable path back.",
+   "q": "In a saga, what replaces a rollback?",
+   "a": "Compensating actions that undo each completed step.",
+   "edition": "2026-11-05-am",
+   "order": 27,
+   "id": "2026-11-05-am-027"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Library, closing time",
+   "body": "The lights go off\none aisle at a time,\nlike someone saying\ngoodnight to each shelf.\n\nThe last reader\nmarks her page with a bus ticket\nand leaves the story\nwaiting, mid-sentence, for her.",
+   "edition": "2026-11-05-am",
+   "order": 26,
+   "id": "2026-11-05-am-026"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Bamboo you could almost watch grow",
+   "body": "Some bamboo species can grow close to 90 centimetres in a single day, among the fastest-growing plants on Earth. Bamboo is a grass, so it's a very ambitious cousin of your lawn.",
+   "hook": "Wonder: if you sat beside it all day, could you see it move?",
+   "edition": "2026-11-05-am",
+   "order": 25,
+   "id": "2026-11-05-am-025"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The internet's flag day",
+   "body": "On 1 January 1983, the ARPANET switched over to the TCP/IP protocols in one planned changeover, often called 'flag day'. Machines that hadn't made the switch could no longer talk on the network. The protocols adopted that day still carry most internet traffic.",
+   "q": "On what date did the ARPANET switch to TCP/IP?",
+   "a": "1 January 1983.",
+   "edition": "2026-11-05-am",
+   "order": 24,
+   "id": "2026-11-05-am-024"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Epictetus, Enchiridion 1",
+   "body": "Some things are in our control and others not.",
+   "edition": "2026-11-05-am",
+   "order": 23,
+   "id": "2026-11-05-am-023"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "ESCAPADE twins swing past Earth on the way to Mars",
+   "body": "NASA's two ESCAPADE spacecraft, built to study how Mars loses its upper atmosphere, are each due to make a powered flyby of Earth, firing their engines during the close pass to pick up speed toward Mars. NASA says this kind of manoeuvre is a first for its spacecraft.",
+   "q": "What will the ESCAPADE twins study at Mars?",
+   "a": "How Mars' upper atmosphere is stripped away into space.",
+   "source": {
+    "name": "NASA",
+    "url": "https://science.nasa.gov/blogs/escapade/2026/11/02/nasas-twin-escapade-spacecraft-to-slingshot-past-earth-on-way-to-mars/"
+   },
+   "edition": "2026-11-05-am",
+   "order": 22,
+   "id": "2026-11-05-am-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Put the task where you'll trip over it",
+   "body": "Out of sight really can mean out of mind. Leave the parcel to post by the front door, the library book on your shoes, the form on top of your laptop. Let your surroundings do the remembering, so your head doesn't have to.",
+   "edition": "2026-11-05-am",
+   "order": 21,
+   "id": "2026-11-05-am-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Panini's grammar in about 4,000 rules",
+   "body": "The Sanskrit grammarian Panini, usually dated to around the 4th century BCE (scholars still debate the exact time), described the whole language in the Ashtadhyayi, nearly 4,000 compact rules. Its rules call one another and build words step by step, which is why linguists and computer scientists still admire it as an early formal system.",
+   "hook": "Wonder: was the Ashtadhyayi, in a way, one of the world's first programs?",
+   "edition": "2026-11-05-am",
+   "order": 20,
+   "id": "2026-11-05-am-020"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Meta ships ML features 3.6× faster",
+   "body": "Meta's engineering team describes F3 Lightning, a system in its ads infrastructure where each machine-learning feature compiles, validates, deploys and rolls back on its own. Meta reports comparable features now reach production about 3.6 times faster, with no increase in compute cost.",
+   "source": {
+    "name": "Engineering at Meta",
+    "url": "https://engineering.fb.com/2026/11/03/ml-applications/f3-lightning-how-meta-accelerates-ads-ml-features-to-production/"
+   },
+   "edition": "2026-11-05-am",
+   "order": 19,
+   "id": "2026-11-05-am-019"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Leases: a lock that expires",
+   "body": "In a distributed system, a plain lock is dangerous: if its holder crashes, nobody can get it back. A lease is a lock with an expiry time. The holder must keep renewing it; if it goes quiet, the lease lapses and someone else can take over. Pair it with an increasing 'fencing token' so a slow old holder can't overwrite the new one's work.",
+   "q": "Why use a lease instead of a plain lock?",
+   "a": "It expires if the holder stops renewing it, so a crashed holder can't block everyone forever.",
+   "edition": "2026-11-05-am",
+   "order": 18,
+   "id": "2026-11-05-am-018"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The umbrella that came back",
+   "body": "Every monsoon the corner tea stall kept a bucket of forgotten umbrellas. Anyone could borrow one. Most never came back, and the old man never minded. One July a girl returned a faded green umbrella he'd lent her six years earlier. 'I'm a teacher now,' she said. 'My school has a bucket too.' He put the green one back in his own, right at the front.",
+   "edition": "2026-11-05-am",
+   "order": 17,
+   "id": "2026-11-05-am-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Familiar isn't the same as learned",
+   "body": "Rereading notes makes them feel familiar, and familiarity feels like knowing. Psychologists call this a fluency illusion. A gentler test: close the page and try to explain it in your own words. Whatever you can't recall is exactly what to look at again, and that's useful, not a failure.",
+   "q": "What is the 'fluency illusion'?",
+   "a": "Mistaking the easy familiarity of rereading for actually having learned something.",
+   "edition": "2026-11-05-am",
+   "order": 16,
+   "id": "2026-11-05-am-016"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Polar bears have black skin",
+   "body": "Under that white coat, a polar bear's skin is black. The fur hairs themselves aren't white either; they're translucent, and they look white because they scatter light, much the way snow does.",
+   "hook": "Wonder: what other 'colours' in nature are really just scattered light?",
+   "edition": "2026-11-05-am",
+   "order": 15,
+   "id": "2026-11-05-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The wrong-coloured bishop",
+   "body": "King, bishop and a rook's pawn (an a- or h-pawn) against a lone king can be a draw. If the bishop can't control the pawn's promotion square, and the defending king reaches that corner, it simply cannot be driven out. An extra bishop and pawn, and still no win: endgames love a quiet surprise.",
+   "q": "When is king + bishop + rook's pawn vs king a draw?",
+   "a": "When the bishop doesn't control the promotion square and the defending king reaches that corner.",
+   "edition": "2026-11-05-am",
+   "order": 14,
+   "id": "2026-11-05-am-014"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Where the word 'bit' came from",
+   "body": "The word 'bit', short for 'binary digit', was coined by statistician John Tukey. Claude Shannon used it in his landmark 1948 paper on information theory and credited Tukey for the word, and it has been the smallest unit of information ever since.",
+   "q": "Who coined the word 'bit'?",
+   "a": "John Tukey; Claude Shannon popularised it in 1948.",
+   "edition": "2026-11-05-am",
+   "order": 13,
+   "id": "2026-11-05-am-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Vary the length of your sentences",
+   "body": "A paragraph of same-length sentences reads like a metronome. Mix them. Let one sentence run long, gathering detail, letting the reader settle into its current. Then stop. The short one lands because the long one came first.",
+   "edition": "2026-11-05-am",
+   "order": 12,
+   "id": "2026-11-05-am-012"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Betelgeuse's hidden companion leaves a wake",
+   "body": "Astronomers say they have new evidence that a small, hidden companion star, named Siwarha, is moving through the outer atmosphere of the red supergiant Betelgeuse and stirring it up. That may explain some of the star's long-puzzling ripples and changes.",
+   "q": "What is the name given to Betelgeuse's hidden companion star?",
+   "a": "Siwarha.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261103003149.htm"
+   },
+   "edition": "2026-11-05-am",
+   "order": 11,
+   "id": "2026-11-05-am-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Marcus Aurelius, Meditations 5.16 (tr. George Long)",
+   "body": "Such as are thy habitual thoughts, such also will be the character of thy mind; for the soul is dyed by the thoughts.",
+   "edition": "2026-11-05-am",
+   "order": 10,
+   "id": "2026-11-05-am-010"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Speech recognition that doesn't transcribe itself",
+   "body": "Soniox has launched STT v6, a speech-to-text model covering more than 60 languages. For voice agents, it can take the agent's own spoken text as context and filter that audio out of the incoming stream, so the assistant doesn't end up transcribing its own voice. Real-time and batch versions are available.",
+   "hook": "Wonder: how do you teach a machine to tell its own voice from yours?",
+   "source": {
+    "name": "Soniox",
+    "url": "https://soniox.com/blog/soniox-stt-v6"
+   },
+   "edition": "2026-11-05-am",
+   "order": 9,
+   "id": "2026-11-05-am-009"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Choose a stopping point before you start",
+   "body": "Hyperfocus is easy to enter and hard to leave. Before you begin, decide where you'll stop: 'after this function', 'when the timer rings', 'at the end of this chapter'. Write it on a sticky note. A pre-chosen exit makes stopping feel like finishing, not like being interrupted.",
+   "edition": "2026-11-05-am",
+   "order": 8,
+   "id": "2026-11-05-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Arikamedu, a Roman trading port near Puducherry",
+   "body": "Around two thousand years ago, Arikamedu on the coast near present-day Puducherry was a busy trading town. Excavations, including Mortimer Wheeler's in 1945, found pieces of Roman wine jars and fine Mediterranean pottery alongside local beads, signs of a long sea trade between Tamil coasts and the Roman world.",
+   "hook": "Wonder: what did a Roman sailor think of his first plate of Tamil food?",
+   "edition": "2026-11-05-am",
+   "order": 7,
+   "id": "2026-11-05-am-007"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java streams are lazy on purpose",
+   "body": "In a Java Stream, filter and map don't do anything when you call them; they only describe the work. Nothing runs until a terminal operation such as collect, count or findFirst. That's why stream.filter(...).findFirst() can stop after the first match instead of scanning the whole list.",
+   "q": "When does a Java stream's filter actually run?",
+   "a": "Only when a terminal operation (collect, count, findFirst…) is called.",
+   "edition": "2026-11-05-am",
+   "order": 6,
+   "id": "2026-11-05-am-006"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A cloud can weigh as much as a hundred elephants",
+   "body": "The US Geological Survey estimates that a fluffy, ordinary cumulus cloud holds roughly 500 tonnes of water, about the weight of a hundred elephants. It floats because that water is spread out as countless tiny droplets in a huge volume of slightly warmer, rising air.",
+   "q": "Roughly how much water does a typical cumulus cloud hold?",
+   "a": "About 500 tonnes, roughly a hundred elephants' worth.",
+   "edition": "2026-11-05-am",
+   "order": 5,
+   "id": "2026-11-05-am-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Firouzja wins Titled Tuesday on 10/11",
+   "body": "Alireza Firouzja won the 3 November Titled Tuesday outright and unbeaten with 10/11, with Hikaru Nakamura second on 9.5/11. Eight players, including Nakamura, Firouzja and Wesley So, have now qualified for the Speed Chess Championship through their Titled Tuesday results.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/firouzja-wins-titled-tuesday-november-3-2026"
+   },
+   "edition": "2026-11-05-am",
+   "order": 4,
+   "id": "2026-11-05-am-004"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Words plus pictures",
+   "body": "Dual coding is the idea that we remember better when an idea arrives both as words and as an image. Sketch a quick box-and-arrow diagram next to your notes, and you give your memory two doors into the same room instead of one. The drawing doesn't need to be good, only yours.",
+   "hook": "Wonder: what would today's hardest idea look like as three boxes and two arrows?",
+   "edition": "2026-11-05-am",
+   "order": 3,
+   "id": "2026-11-05-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Pressure cooker, 7 am",
+   "body": "Three whistles from the kitchen,\neach one a little louder,\nlike someone counting\nslowly to wake the house.\n\nBy the third,\nthe dal is soft,\nthe window fogged,\nand everyone is up.",
+   "edition": "2026-11-05-am",
+   "order": 2,
+   "id": "2026-11-05-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "StateBench: remembering a fact vs. keeping track",
+   "body": "Ai2 has released StateBench, a benchmark that separates looking up a fixed fact from following a value as it changes step by step. Its matched tasks climb through four levels, and Ai2 reports frontier models drop to 13% accuracy or lower on the longest, hardest ones. Code and data are open.",
+   "q": "What skill does StateBench separate from simple fact retrieval?",
+   "a": "State tracking: following values as they are updated step by step.",
+   "source": {
+    "name": "Ai2 on Hugging Face",
+    "url": "https://huggingface.co/blog/allenai/statebench"
+   },
+   "edition": "2026-11-05-am",
+   "order": 1,
+   "id": "2026-11-05-am-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Rubin spots two more of the Milky Way's quiet companions",
+   "body": "The Vera C. Rubin Observatory has picked out two more faint satellites of our galaxy: one an ultra-faint dwarf galaxy, the other a globular cluster. Each is a small leftover from the Milky Way's long history of gathering up smaller neighbours.",
+   "q": "What two kinds of object did Rubin newly find around the Milky Way?",
+   "a": "An ultra-faint dwarf galaxy and a globular cluster.",
+   "source": {
+    "name": "Universe Today",
+    "url": "https://www.universetoday.com/articles/the-vera-rubin-has-found-two-more-of-the-milky-ways-dim-satellites"
+   },
+   "edition": "2026-11-05-am",
+   "order": 0,
+   "id": "2026-11-05-am-000"
+  },
   {
    "topic": "facts",
    "kind": "fact",
