@@ -1,6 +1,312 @@
 {
- "updated": "2026-11-06T02:13:22+00:00",
+ "updated": "2026-11-06T17:15:22+00:00",
  "items": [
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A parliament of owls",
+   "body": "A group of owls is often called a parliament—a name that comes from old English writing that pictured owls as wise. In real life most owls live alone or in pairs, so you rarely see a full parliament.",
+   "edition": "2026-11-06-pm",
+   "order": 28,
+   "id": "2026-11-06-pm-028"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Thirukkural 151 (own rendering)",
+   "body": "The earth holds up even those who dig into it. Bear with those who scorn you in the same way.",
+   "edition": "2026-11-06-pm",
+   "order": 27,
+   "id": "2026-11-06-pm-027"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Close your eyes and try: Who designed the first emoji set? What does a wood frog fill its cells with? Which constellation owns Alpheratz? Answers are on the cards above—check after you guess.",
+   "edition": "2026-11-06-pm",
+   "order": 26,
+   "id": "2026-11-06-pm-026"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Bookmark",
+   "body": "I left the story on page ninety\nwith a bus ticket as a hand to hold.\nThe people inside kept still all week,\nmid-sentence, mid-step,\npolite as guests,\nwaiting for me\nto come back and let them breathe.",
+   "edition": "2026-11-06-pm",
+   "order": 25,
+   "id": "2026-11-06-pm-025"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java's var is still static typing",
+   "body": "Since Java 10, var lets the compiler infer a local variable's type: var names = new ArrayList<String>(); The type is fixed at compile time, exactly as if you'd written it out. Use it where the right side already says the type; spell it out where it doesn't.",
+   "q": "Does `var` in Java make a variable dynamically typed?",
+   "a": "No. The type is inferred once at compile time and stays fixed.",
+   "edition": "2026-11-06-pm",
+   "order": 24,
+   "id": "2026-11-06-pm-024"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "An epic named after an anklet",
+   "body": "Silappatikaram, attributed to Ilango Adigal, is one of the great epics of Tamil literature. Its story turns on a single anklet, and it moves through three kingdoms—Chola, Pandya and Chera—giving a vivid picture of early Tamil city life, music and trade.",
+   "hook": "Wonder: why might a poet tie a whole epic to one small object?",
+   "edition": "2026-11-06-pm",
+   "order": 23,
+   "id": "2026-11-06-pm-023"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Give each task a start sound",
+   "body": "Pick one song or playlist that only plays when you start a certain kind of work. After a few days, pressing play becomes the cue, and your brain starts sliding into the task before you've argued with it.",
+   "edition": "2026-11-06-pm",
+   "order": 22,
+   "id": "2026-11-06-pm-022"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first emoji were 12 by 12 pixels",
+   "body": "In 1999 Shigetaka Kurita designed a set of 176 tiny pictures for NTT Docomo's i-mode phones in Japan. Each fit in a 12×12 grid. The set is now in the collection of the Museum of Modern Art in New York.",
+   "q": "How many emoji were in Shigetaka Kurita's 1999 set?",
+   "a": "176.",
+   "edition": "2026-11-06-pm",
+   "order": 21,
+   "id": "2026-11-06-pm-021"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The Moon hid Jupiter for a while",
+   "body": "On 3 November the Moon slid in front of Jupiter as seen from parts of Earth, an occultation that skywatchers photographed as the bright planet vanished behind the lunar edge and reappeared. The two meet again in the sky near the end of the month.",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/todays-image/moon-and-jupiter-hide-and-seek-occultation-nov-2026/"
+   },
+   "edition": "2026-11-06-pm",
+   "order": 20,
+   "id": "2026-11-06-pm-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Give the scene a clock",
+   "body": "A deadline makes ordinary moments lean forward: the train leaves at 6:40, the milk is about to boil over, the shop shutter is coming down. You don't need danger—just a small clock the reader can hear ticking.",
+   "edition": "2026-11-06-pm",
+   "order": 19,
+   "id": "2026-11-06-pm-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "METR: Anthropic models improving about twice as fast",
+   "body": "The evaluation nonprofit METR published an estimate that the pace at which Anthropic's models gain the ability to complete certain long tasks is roughly double what it was a year ago. It's a measurement of specific tasks, not a claim that everything got twice as good.",
+   "source": {
+    "name": "note.com AI news roundup (citing AP)",
+    "url": "https://note.com/tt_ap/n/n460166727834?hl=en"
+   },
+   "edition": "2026-11-06-pm",
+   "order": 18,
+   "id": "2026-11-06-pm-018"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Days used to be shorter",
+   "body": "Earth's spin is very slowly braking, mostly because of tides raised by the Moon. Hundreds of millions of years ago a day was only around 21–22 hours long, so a year had more than 400 sunrises.",
+   "hook": "Wonder: how do fossil corals record the number of days in an ancient year?",
+   "edition": "2026-11-06-pm",
+   "order": 17,
+   "id": "2026-11-06-pm-017"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Timelines: fan out on write or on read?",
+   "body": "For a feed, you can push each new post into every follower's list when it's written (fast reads, heavy writes) or assemble the feed when someone opens it (light writes, slower reads). Many systems mix both: push for most people, pull for accounts with millions of followers.",
+   "q": "What is the main cost of fan-out-on-write for a social feed?",
+   "a": "Every post must be written into every follower's timeline, which is heavy for very popular accounts.",
+   "edition": "2026-11-06-pm",
+   "order": 16,
+   "id": "2026-11-06-pm-016"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Feedback you can use today",
+   "body": "Feedback helps learning most when it says what to do next, not just whether you were right. 'Wrong' teaches little; 'your second step dropped a sign' teaches a lot. When you check your own work, look for the step, not the score.",
+   "edition": "2026-11-06-pm",
+   "order": 15,
+   "id": "2026-11-06-pm-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The outside passed pawn is a decoy",
+   "body": "In king-and-pawn endings, a passed pawn far from the other pawns is a quiet weapon. You push it, the enemy king must chase it, and while it's away your king walks in and eats the pawns it left behind.",
+   "q": "Why is an outside passed pawn strong in king-and-pawn endings?",
+   "a": "It drags the enemy king away, letting your king attack the pawns on the other side.",
+   "edition": "2026-11-06-pm",
+   "order": 14,
+   "id": "2026-11-06-pm-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The key-cutter's extra",
+   "body": "Every time he cut a key, the old man at the market cut a second one and hung it on a nail behind him. 'Whose are those?' a boy asked. 'Everyone forgets once,' he said, and went back to the grinding wheel. Years later the boy came back, locked out in the rain. The key was still there, a little dusty, waiting.",
+   "edition": "2026-11-06-pm",
+   "order": 13,
+   "id": "2026-11-06-pm-013"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "The Great Square borrows a star",
+   "body": "Pegasus, the winged horse, is high in the evening sky now, marked by four stars in a big square. One corner, Alpheratz, officially belongs to the neighbouring constellation Andromeda—the horse shares a star with the princess.",
+   "q": "Which constellation does Alpheratz, a corner of the Great Square, belong to?",
+   "a": "Andromeda.",
+   "edition": "2026-11-06-pm",
+   "order": 12,
+   "id": "2026-11-06-pm-012"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Small diffs keep you in the loop",
+   "body": "Ask a coding agent for one small change at a time rather than a sweeping rewrite. A 30-line diff you can actually read is worth more than 600 lines you skim and hope about. Review speed, not generation speed, is usually the real limit.",
+   "hook": "Wonder: how big a change can you review carefully in five minutes?",
+   "edition": "2026-11-06-pm",
+   "order": 11,
+   "id": "2026-11-06-pm-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Marcus Aurelius, Meditations 7.59 (tr. George Long)",
+   "body": "Look within. Within is the fountain of good, and it will ever bubble up, if thou wilt ever dig.",
+   "edition": "2026-11-06-pm",
+   "order": 10,
+   "id": "2026-11-06-pm-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "VisiCalc, the first PC spreadsheet",
+   "body": "In 1979 Dan Bricklin and Bob Frankston released VisiCalc for the Apple II. Change one number and every dependent cell updated—on a personal computer. Many businesses bought an Apple II just to run it.",
+   "q": "Which computer did VisiCalc first run on?",
+   "a": "The Apple II (1979).",
+   "edition": "2026-11-06-pm",
+   "order": 9,
+   "id": "2026-11-06-pm-009"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Tamil written on cave beds",
+   "body": "Some of the oldest Tamil writing sits on rock beds in caves near Madurai, such as at Mangulam. Carved in Tamil-Brahmi script around the 2nd century BCE, the lines record gifts of shelters to Jain monks.",
+   "q": "What script was used for the earliest Tamil cave inscriptions?",
+   "a": "Tamil-Brahmi.",
+   "edition": "2026-11-06-pm",
+   "order": 8,
+   "id": "2026-11-06-pm-008"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Think out loud",
+   "body": "When a task won't hold still in your head, narrate it: 'Okay, first I open the file, then I find the date column…'. Saying steps aloud moves them out of working memory and into the room, where they're easier to follow. Quietly mumbling counts.",
+   "edition": "2026-11-06-pm",
+   "order": 7,
+   "id": "2026-11-06-pm-007"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The frog that freezes for winter",
+   "body": "North American wood frogs can freeze almost solid in winter. Their hearts stop, much of their body water turns to ice, and sugar floods their cells to protect them. In spring they thaw and hop off.",
+   "q": "What does a wood frog load its cells with to survive freezing?",
+   "a": "Glucose (sugar), which acts like an antifreeze.",
+   "edition": "2026-11-06-pm",
+   "order": 6,
+   "id": "2026-11-06-pm-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "ConcurrentHashMap.computeIfAbsent, gently",
+   "body": "map.computeIfAbsent(key, k -> build(k)) on a ConcurrentHashMap runs atomically per key: two threads asking for the same missing key won't both build it. Keep the function short, and never let it modify the same map—other threads may be waiting on that key.",
+   "q": "Why keep the function passed to ConcurrentHashMap.computeIfAbsent short?",
+   "a": "It runs while that key's entry is locked; other threads updating it wait, and it must not modify the map itself.",
+   "edition": "2026-11-06-pm",
+   "order": 5,
+   "id": "2026-11-06-pm-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "College chess heads to the playoffs",
+   "body": "In the Collegiate Chess League, Saint Louis University and UT Dallas are locked in a close race for first place as the regular season winds down and the playoffs approach. University teams across the world play these matches online through the season.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/ccl-week-6-2026"
+   },
+   "edition": "2026-11-06-pm",
+   "order": 4,
+   "id": "2026-11-06-pm-004"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Practise at the edge, not the middle",
+   "body": "Deliberate practice means working just beyond what you can already do, with quick feedback, on one specific weakness. Playing through things you already handle well feels productive but teaches little. Pick the bar you keep fumbling, not the song you love.",
+   "hook": "Wonder: which part of your skill do you quietly avoid practising?",
+   "edition": "2026-11-06-pm",
+   "order": 3,
+   "id": "2026-11-06-pm-003"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Box builds a context layer for agents with Nvidia models",
+   "body": "Box says it is using Nvidia's AI models to build a 'context layer' for enterprise agents: a way to hand an agent the right documents and background before it decides or acts. It's another sign that the hard part of agents is less the model and more what you feed it.",
+   "q": "In agent design, what is a 'context layer' for?",
+   "a": "Gathering the right information (documents, history, permissions) to give the agent before it acts.",
+   "source": {
+    "name": "AI Agents Directory brief (via SiliconANGLE)",
+    "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-5-2026"
+   },
+   "edition": "2026-11-06-pm",
+   "order": 2,
+   "id": "2026-11-06-pm-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The Sun is settling down",
+   "body": "NOAA's sunspot count for October shows another sharp drop in Solar Cycle 25. After the busy peak of the last couple of years, our star is easing into the quieter half of its roughly 11-year rhythm.",
+   "hook": "Wonder: what flips inside the Sun every 11 years or so? (Its magnetic poles.)",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/sun/sun-news-activity-solar-flare-cme-aurora-updates/"
+   },
+   "edition": "2026-11-06-pm",
+   "order": 1,
+   "id": "2026-11-06-pm-001"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "After the guests leave",
+   "body": "The last diya on the step\nkeeps talking to the dark\nin a voice the size of a seed.\n\nNo one is listening now.\nIt does not seem to mind.\nIt was never burning for applause—\nonly for the next small circle of floor.",
+   "edition": "2026-11-06-pm",
+   "order": 0,
+   "id": "2026-11-06-pm-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
