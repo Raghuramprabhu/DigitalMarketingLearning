@@ -1,6 +1,332 @@
 {
- "updated": "2026-11-05T17:15:22+00:00",
+ "updated": "2026-11-06T02:13:22+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Evening, terrace",
+   "body": "Clothes on the line\nlift their sleeves to the breeze.\nA kite, very far, is someone's.\nThe first star says nothing,\nwhich is enough.",
+   "edition": "2026-11-06-am",
+   "order": 29,
+   "id": "2026-11-06-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Tardigrades survived open space",
+   "body": "In 2007, tiny tardigrades rode outside a capsule in low Earth orbit, exposed to vacuum and cosmic radiation. Back on Earth, many of them revived and some even laid eggs. They survive by drying out and pausing their metabolism.",
+   "hook": "Wonder: what does it feel like to pause, if you're a water bear?",
+   "edition": "2026-11-06-am",
+   "order": 28,
+   "id": "2026-11-06-am-028"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Pause before the step you can't undo",
+   "body": "A good agent design sorts actions into two piles: ones you can undo (drafting, reading, searching) and ones you can't (sending, paying, deleting). Let the agent run freely through the first pile and ask a person before anything in the second.",
+   "q": "Which agent actions deserve a human check?",
+   "a": "The irreversible ones: sending, paying, deleting.",
+   "edition": "2026-11-06-am",
+   "order": 27,
+   "id": "2026-11-06-am-027"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Effort pays its wage",
+   "body": "Even when fate will not allow a thing, honest effort still pays the wage of the work it took.",
+   "who": "Thirukkural 619 (own rendering)",
+   "edition": "2026-11-06-am",
+   "order": 26,
+   "id": "2026-11-06-am-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "Chess began as chaturanga",
+   "body": "The earliest known ancestor of chess, chaturanga, was played in India by around the 6th century CE. Its pieces stood for the four divisions of an army: infantry, cavalry, elephants and chariots. Those became pawns, knights, bishops and rooks.",
+   "hook": "Wonder: which modern piece was once an elephant?",
+   "edition": "2026-11-06-am",
+   "order": 25,
+   "id": "2026-11-06-am-025"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Retry with jitter",
+   "body": "When a service hiccups, a thousand clients that all retry after exactly one second will knock it over again together. Exponential backoff waits longer after each failure, and jitter adds a little randomness so the retries spread out instead of arriving as one wave.",
+   "q": "What does jitter add to retries?",
+   "a": "Randomness in the wait, so clients don't retry in lockstep.",
+   "edition": "2026-11-06-am",
+   "order": 24,
+   "id": "2026-11-06-am-024"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A two-day gathering for dark skies",
+   "body": "DarkSky International holds 'Under One Sky', a free-to-join virtual conference on 6 and 7 November, about protecting night skies from light pollution. Shielded, warm-coloured outdoor lights that point down are one of the easiest fixes anyone can make.",
+   "hook": "Wonder: when did you last see the Milky Way?",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/human-world/dark-sky-conference-under-one-sky-november-6-7-2026/"
+   },
+   "edition": "2026-11-06-am",
+   "order": 23,
+   "id": "2026-11-06-am-023"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first computer password",
+   "body": "MIT's Compatible Time-Sharing System, started around 1961 under Fernando Corbató, let many people share one computer. Each user got private files, so each needed a password. It's widely credited as the first computer password system.",
+   "q": "Why did CTSS need passwords?",
+   "a": "Many users shared one machine and each had private files.",
+   "edition": "2026-11-06-am",
+   "order": 22,
+   "id": "2026-11-06-am-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Call it a restart",
+   "body": "Dropping a habit for a few days is normal for any brain, and common for ADHD brains. Instead of 'I failed again', try 'restart day'. Pick the smallest version of the habit, do it once today, and count that as the streak beginning again.",
+   "edition": "2026-11-06-am",
+   "order": 21,
+   "id": "2026-11-06-am-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Rajaraja Chola measured the land",
+   "body": "Around the start of the 11th century, the Chola king Rajaraja I ordered a detailed survey of farmland across his kingdom so that revenue could be assessed fairly. One of his titles, Ulagalanda, is often read as 'he who measured the world'.",
+   "hook": "Wonder: how would you measure a kingdom with ropes and rods?",
+   "edition": "2026-11-06-am",
+   "order": 20,
+   "id": "2026-11-06-am-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Cut your first paragraph",
+   "body": "Many drafts warm up before they begin. Try deleting the opening paragraph and see if the piece starts better at the second. Often the first paragraph was for you, to find your way in; the reader can skip the stretching.",
+   "edition": "2026-11-06-am",
+   "order": 19,
+   "id": "2026-11-06-am-019"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The Sahara used to be green",
+   "body": "Between about 11,000 and 5,000 years ago, a wobble in Earth's orbit strengthened the African monsoon. The Sahara had lakes, grasslands, hippos and fishing villages. Rock art in the desert still shows cattle and swimmers.",
+   "q": "What turned the Sahara green for thousands of years?",
+   "a": "Small changes in Earth's orbit that strengthened the monsoon.",
+   "edition": "2026-11-06-am",
+   "order": 18,
+   "id": "2026-11-06-am-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Meta picks up Conductor, a tool for running many coding agents",
+   "body": "Meta acquired Conductor, a startup whose software lets a developer run several AI coding agents side by side, each on its own task. Terms weren't shared. It's another sign that the workflow is moving from one assistant to a small team of them.",
+   "source": {
+    "name": "MLQ.ai",
+    "url": "https://mlq.ai/news/meta-acquires-ai-coding-startup-conductor-for-undisclosed-sum"
+   },
+   "edition": "2026-11-06-am",
+   "order": 17,
+   "id": "2026-11-06-am-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "When gut feelings can be trusted",
+   "body": "Psychologists Daniel Kahneman and Gary Klein found common ground in 2009: intuition is reliable when the setting is regular enough to have patterns and you get quick, clear feedback on your guesses. A chess player's hunch qualifies; a guess about next year's stock prices doesn't.",
+   "hook": "Wonder: where in your work do you get fast, honest feedback?",
+   "edition": "2026-11-06-am",
+   "order": 16,
+   "id": "2026-11-06-am-016"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Doubts",
+   "body": "Our doubts are traitors,\nAnd make us lose the good we oft might win\nBy fearing to attempt.",
+   "who": "William Shakespeare, Measure for Measure",
+   "edition": "2026-11-06-am",
+   "order": 15,
+   "id": "2026-11-06-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Rooks belong behind passed pawns",
+   "body": "Tarrasch's rule: put your rook behind a passed pawn, yours or the opponent's. Behind your own pawn, the rook gains scope with every step the pawn takes. Behind the enemy pawn, it pins the pawn down without getting in the way.",
+   "q": "Behind or in front: where should a rook go with a passed pawn?",
+   "a": "Behind it, whichever side the pawn belongs to.",
+   "edition": "2026-11-06-am",
+   "order": 14,
+   "id": "2026-11-06-am-014"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Dead-letter queues: a quiet shelf for stuck messages",
+   "body": "If a message keeps failing, retrying it forever blocks everything behind it. A dead-letter queue moves it aside after a set number of attempts. The main flow keeps moving, and someone can inspect the shelf later, fix the cause and replay the message.",
+   "hook": "Wonder: where is the dead-letter queue in your own week?",
+   "edition": "2026-11-06-am",
+   "order": 13,
+   "id": "2026-11-06-am-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The left-luggage counter",
+   "body": "The man at the station's left-luggage counter had kept the blue suitcase for eleven days. On the twelfth, a woman came with the ticket, out of breath. 'Sorry,' she said. 'I needed somewhere to put it while I decided.' He handed it over. 'And?' She smiled and lifted it easily. 'I'm keeping it.'",
+   "edition": "2026-11-06-am",
+   "order": 12,
+   "id": "2026-11-06-am-012"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The loom that read cards",
+   "body": "In 1804 Joseph Marie Jacquard's loom wove patterns from chains of punched cards: a hole let a hook through, no hole held it back. Charles Babbage borrowed the idea for his Analytical Engine, and Herman Hollerith's census machines later used punched cards too.",
+   "q": "What did Jacquard's punched cards originally control?",
+   "a": "The threads of a weaving loom.",
+   "edition": "2026-11-06-am",
+   "order": 11,
+   "id": "2026-11-06-am-011"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Venus and Spica share the dawn",
+   "body": "These mornings, look east before sunrise: brilliant Venus sits near Spica, the brightest star in Virgo. Spica is actually two hot blue stars orbiting each other in about four days, roughly 250 light-years away, while Venus is a few light-minutes from us.",
+   "hook": "Wonder: the light from the two dots left them about 250 years apart. What was happening when Spica's light set out?",
+   "edition": "2026-11-06-am",
+   "order": 10,
+   "id": "2026-11-06-am-010"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Name the alarm after the action",
+   "body": "An alarm that just says '4:00' asks your brain to remember why it rang. Label it with the next physical step instead: 'Open laptop, reply to Priya.' When it goes off, the decision is already made and you only have to move.",
+   "edition": "2026-11-06-am",
+   "order": 9,
+   "id": "2026-11-06-am-009"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The sundial as tall as a building",
+   "body": "The Samrat Yantra at Jantar Mantar in Jaipur, built under Sawai Jai Singh II and completed in the 1730s, is a giant sundial whose triangular gnomon rises about 27 metres. Its shadow moves several centimetres a minute, so local solar time can be read to within a few seconds.",
+   "q": "Who built the Jaipur Jantar Mantar?",
+   "a": "Maharaja Sawai Jai Singh II.",
+   "edition": "2026-11-06-am",
+   "order": 8,
+   "id": "2026-11-06-am-008"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Sierra buys Anon to help agents use websites",
+   "body": "Customer-service AI company Sierra acquired Anon, whose browser-agent technology helps AI agents finish tasks on websites that don't offer an API. The idea: when there's no tidy back door, the agent can still walk through the front door like a person would.",
+   "source": {
+    "name": "Unite.AI",
+    "url": "https://www.unite.ai/sierra-acquires-anon-to-help-ai-agents-complete-web-workflows"
+   },
+   "edition": "2026-11-06-am",
+   "order": 7,
+   "id": "2026-11-06-am-007"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Water can boil and freeze at the same time",
+   "body": "At its triple point, about 0.01 °C and a pressure of around 0.6% of normal air pressure, water can exist as ice, liquid and vapour together in balance. In a vacuum chamber you can watch a dish of water bubble and frost over at once.",
+   "hook": "Wonder: what would a cup of tea do on the summit of Mars?",
+   "edition": "2026-11-06-am",
+   "order": 6,
+   "id": "2026-11-06-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java text blocks: strings that keep their shape",
+   "body": "Since Java 15, a text block starts with three double quotes and a newline. Inside, you can write JSON, SQL or HTML as it looks, without \\n and escaped quotes everywhere. Java strips the common leading indentation, so the block can sit neatly indented in your code.",
+   "q": "What opens a Java text block?",
+   "a": "Three double quotes (\"\"\") followed by a line break.",
+   "edition": "2026-11-06-am",
+   "order": 5,
+   "id": "2026-11-06-am-005"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Memory likes the room it was made in",
+   "body": "In a 1975 study, divers learned word lists either on a beach or underwater. They recalled more when tested in the same place they had learned. The lesson for study isn't to always use one desk; it's the opposite: practise in a few different places so the knowledge isn't tied to one setting.",
+   "hook": "Wonder: which of your skills only works at your own desk?",
+   "edition": "2026-11-06-am",
+   "order": 4,
+   "id": "2026-11-06-am-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "A 14-year-old earns a second GM norm",
+   "body": "At the KazChess Masters, which Denis Lazavik won unbeaten, 14-year-old International Master Mark Smirnov picked up his second grandmaster norm. Three norms plus a 2500 rating make a grandmaster, so he is now one good tournament away from the final norm.",
+   "q": "How many GM norms does a player usually need for the title?",
+   "a": "Three, plus a rating of at least 2500.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/lazavik-wins-kazchess-masters-smirnov-gm-norm"
+   },
+   "edition": "2026-11-06-am",
+   "order": 3,
+   "id": "2026-11-06-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Steel tumbler",
+   "body": "The tumbler sweats on the window sill,\nholding a small cold sea.\nOutside, the neem keeps still,\nas if it, too, were thirsty.\nI drink slowly. The afternoon\nmakes room.",
+   "edition": "2026-11-06-am",
+   "order": 2,
+   "id": "2026-11-06-am-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Could neutrinos warn us before the Blaze Star flares?",
+   "body": "T Coronae Borealis, the 'Blaze Star', is a recurrent nova: a white dwarf gathering gas from a companion star until a surface explosion makes it briefly bright enough to see without a telescope. It last did this in 1946. Astronomers are still waiting for the next outburst, and new research suggests a burst of neutrinos might arrive as an early heads-up.",
+   "q": "In what year did the Blaze Star last erupt?",
+   "a": "1946 (and before that, 1866).",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/space/blaze-star-nova-corona-borealis-how-to-see-it/"
+   },
+   "edition": "2026-11-06-am",
+   "order": 1,
+   "id": "2026-11-06-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Microsoft Clarity starts counting AI-agent visitors",
+   "body": "Microsoft's free website analytics tool, Clarity, added a view for visits made by AI agents rather than people. Site owners can see where an agent's automated journey through their pages went smoothly and where it got stuck or needed a check.",
+   "hook": "Wonder: if half your visitors were agents, what would you redesign first?",
+   "source": {
+    "name": "ContentGrip",
+    "url": "https://www.contentgrip.com/microsoft-clarity-agent-analytics"
+   },
+   "edition": "2026-11-06-am",
+   "order": 0,
+   "id": "2026-11-06-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
