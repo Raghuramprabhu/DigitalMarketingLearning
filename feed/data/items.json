@@ -1,6 +1,345 @@
 {
- "updated": "2026-11-06T17:15:22+00:00",
+ "updated": "2026-11-07T02:13:57+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Window seat",
+   "body": "The train hums its one long note.\nFields go by in no hurry,\na boy waves from a bicycle,\na heron forgets us mid-step.\nI had a list in my pocket.\nSomewhere after the third bridge\nit became a bookmark,\nthen nothing at all.",
+   "edition": "2026-11-07-am",
+   "order": 30,
+   "id": "2026-11-07-am-030"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Old windows aren't melting",
+   "body": "You may have heard that old church windows are thicker at the bottom because glass slowly flows. It doesn't, not on any human timescale. Old panes were made by spinning molten glass into uneven discs, and glaziers often set the heavier edge downward. At room temperature, a visible sag would take far longer than the age of the universe.",
+   "hook": "Wonder: if glass isn't flowing, what makes it different from a crystal like quartz?",
+   "edition": "2026-11-07-am",
+   "order": 29,
+   "id": "2026-11-07-am-029"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Let the agent read before it writes",
+   "body": "Before asking a coding agent to change anything, ask it to read the relevant files and tell you in a few lines how they fit together. If its summary is wrong, you've caught the misunderstanding before it became a diff. Cheap reading saves expensive undoing.",
+   "edition": "2026-11-07-am",
+   "order": 28,
+   "id": "2026-11-07-am-028"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Thirukkural 666 (own rendering)",
+   "body": "Those who plan will gain what they planned, just as they planned it, if they stay firm in the doing.",
+   "edition": "2026-11-07-am",
+   "order": 27,
+   "id": "2026-11-07-am-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Lamport clocks: ordering without a wall clock",
+   "body": "Servers' clocks drift, so timestamps can lie. A Lamport clock is just a counter: bump it on every event, send it with every message, and when you receive one, set yours to max(yours, theirs) + 1. Now if A caused B, A's number is always smaller, no synchronised watches needed.",
+   "q": "On receiving a message, how does a node update its Lamport clock?",
+   "a": "Set it to max(own counter, message's counter) + 1.",
+   "edition": "2026-11-07-am",
+   "order": 26,
+   "id": "2026-11-07-am-026"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "Take an awe walk",
+   "body": "In a 2020 study, older adults who took weekly 15-minute walks while deliberately noticing things that amazed them, like the size of trees or the colour of the sky, reported more positive feelings than those who simply walked. Their selfies also showed them taking up less of the frame, as if the world had grown bigger.",
+   "edition": "2026-11-07-am",
+   "order": 25,
+   "id": "2026-11-07-am-025"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Zwischenzug: the in-between move",
+   "body": "When your opponent expects an obvious recapture, look first for a stronger move in between, often a check or a threat that must be answered. Only then do you recapture, with a better position. The German word means 'intermediate move'. Before any 'automatic' move, ask: is there something more forcing first?",
+   "q": "What is a zwischenzug?",
+   "a": "An in-between move, often a check or threat, played instead of the expected reply before returning to it.",
+   "edition": "2026-11-07-am",
+   "order": 24,
+   "id": "2026-11-07-am-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Why email uses @",
+   "body": "In 1971 Ray Tomlinson sent the first networked email between two computers on ARPANET sitting side by side. He needed a symbol to separate a person's name from their machine and picked @, because it was on the keyboard and almost never appeared in names. User 'at' host.",
+   "hook": "Wonder: what do other languages call the @ sign? (Italian: chiocciola, the snail.)",
+   "edition": "2026-11-07-am",
+   "order": 23,
+   "id": "2026-11-07-am-023"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Mars overtakes Jupiter before dawn",
+   "body": "Look east in the hours before sunrise this month: Mars and Jupiter climb high near the Sickle of Leo. On 16 November Mars slides past Jupiter, and on 26 November it passes the star Regulus. Later in the month Mercury joins the dawn too, best seen around 16–26 November.",
+   "q": "On what date does Mars pass Jupiter in the November dawn sky?",
+   "a": "16 November.",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/stargazing/5-bright-planets-to-spot-in-november-when-and-where-to-see-them"
+   },
+   "edition": "2026-11-07-am",
+   "order": 22,
+   "id": "2026-11-07-am-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Three things, not thirty",
+   "body": "A long to-do list can feel like a wall of noise. Each morning, copy just three items onto a small card. Finish those and anything extra is a bonus. The full list still exists; it just doesn't get to shout at you all day.",
+   "edition": "2026-11-07-am",
+   "order": 21,
+   "id": "2026-11-07-am-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The neighbourhood map",
+   "body": "Meena drew a map of her street for a school project and, being thorough, marked everything: the dog that waits by gate 14, the bench where the old men argue about cricket, the mango tree that drops fruit on Tuesdays (it doesn't, but it felt like it). Her teacher gave it a B. The street gave it a frame. It hangs in the tea stall now, and strangers study it as if it were a country.",
+   "edition": "2026-11-07-am",
+   "order": 20,
+   "id": "2026-11-07-am-020"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Rani ki Vav, a stepwell like an upside-down temple",
+   "body": "In Patan, Gujarat, Rani ki Vav is an 11th-century stepwell associated with Queen Udayamati. Its terraces step down several storeys to the water, lined with hundreds of carved sculptures. It became a UNESCO World Heritage Site in 2014 and appears on the back of India's lavender ₹100 note.",
+   "q": "Which Indian banknote shows Rani ki Vav?",
+   "a": "The ₹100 note (the lavender series).",
+   "edition": "2026-11-07-am",
+   "order": 19,
+   "id": "2026-11-07-am-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Ask a decade of satellite photos a question",
+   "body": "Planet introduced an AI app that lets people search around ten years of its satellite imagery in plain language, rather than by coordinates and dates alone. Think 'new solar farms near this river' instead of hunting through tiles by hand.",
+   "hook": "Wonder: what slow change near your own town would you want to watch from above?",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
+   },
+   "edition": "2026-11-07-am",
+   "order": 18,
+   "id": "2026-11-07-am-018"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "Learn an idea through three examples",
+   "body": "An abstract idea sticks better when you see it in several different concrete cases, then notice what they share. One example teaches the example; three varied ones teach the idea. When you learn something new today, hunt for two more places it shows up.",
+   "edition": "2026-11-07-am",
+   "order": 17,
+   "id": "2026-11-07-am-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Crows remember faces",
+   "body": "Researchers at the University of Washington wore a particular mask while briefly catching and banding crows. For years afterwards, crows on campus scolded anyone wearing that mask, and even crows that never saw the original catching joined in. They seem to learn faces, and pass the lesson along.",
+   "q": "What did the University of Washington mask study show about crows?",
+   "a": "They recognise individual human faces for years and can learn from other crows which faces to watch.",
+   "edition": "2026-11-07-am",
+   "order": 16,
+   "id": "2026-11-07-am-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Nakamura opens with eight straight wins",
+   "body": "In Thursday's three 3+0 blitz events on Chess.com, Hikaru Nakamura won the first tournament with 10/11 after winning his first eight games. Parham Maghsoodloo took the second, and Sina Movahed won the third for his first title since March.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://chess.com/news/view/nakamura-maghsoodloo-movahed-3-0-thursday-11-5-2026"
+   },
+   "edition": "2026-11-07-am",
+   "order": 15,
+   "id": "2026-11-07-am-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 21: switch that understands shapes",
+   "body": "With pattern matching for switch (final in Java 21), you can switch on a type and bind it in one step: case Circle c -> Math.PI * c.r() * c.r(); case Square s -> s.side() * s.side();. Pair it with a sealed interface and the compiler can tell you when you've forgotten a case.",
+   "hook": "Wonder: what bug disappears when the compiler checks that every case is covered?",
+   "edition": "2026-11-07-am",
+   "order": 14,
+   "id": "2026-11-07-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let dialogue sidestep",
+   "body": "Real people rarely answer the question they were asked. 'Did you get the job?' 'Want some tea?' The dodge tells the reader more than a straight answer could. Try letting one character in your next scene answer a different question than the one asked.",
+   "edition": "2026-11-07-am",
+   "order": 13,
+   "id": "2026-11-07-am-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "White dwarfs that may stretch a famous limit",
+   "body": "A white dwarf normally can't be heavier than about 1.4 Suns, the Chandrasekhar limit, or it can no longer hold itself up. New simulations suggest that very strong magnetic fields might help some white dwarfs carry a little more mass than that. It's a model result for now, waiting for observations to test it.",
+   "q": "Roughly what is the Chandrasekhar limit for a white dwarf?",
+   "a": "About 1.4 times the Sun's mass.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261102202835.htm"
+   },
+   "edition": "2026-11-07-am",
+   "order": 12,
+   "id": "2026-11-07-am-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "who": "Seneca, Letters to Lucilius 2 (tr. Gummere)",
+   "body": "Everywhere means nowhere.",
+   "edition": "2026-11-07-am",
+   "order": 11,
+   "id": "2026-11-07-am-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Spacewar! (1962)",
+   "body": "At MIT in 1962, Steve Russell and friends wrote Spacewar! on a PDP-1: two little ships circling a star whose gravity pulled on them. It's one of the earliest video games, and because its code was shared freely, copies spread to computer labs across the country.",
+   "q": "On what computer was Spacewar! first written?",
+   "a": "The DEC PDP-1, at MIT.",
+   "edition": "2026-11-07-am",
+   "order": 10,
+   "id": "2026-11-07-am-010"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Perplexity introduces always-on 'Teammates'",
+   "body": "Perplexity launched Teammates, agents meant to keep working in the background on ongoing work tasks instead of answering one question and stopping. They start with Max subscribers on the web. The interesting shift: agents designed as colleagues with standing jobs, not one-off chats.",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
+   },
+   "edition": "2026-11-07-am",
+   "order": 9,
+   "id": "2026-11-07-am-009"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Thanjavur's palace library",
+   "body": "The Saraswati Mahal Library in Thanjavur grew from a royal collection of the Nayak kings and was greatly expanded by the Maratha ruler Serfoji II in the early 1800s. It holds thousands of palm-leaf and paper manuscripts in Tamil, Sanskrit, Marathi and other languages, and is counted among the oldest libraries in Asia.",
+   "q": "Which ruler greatly expanded Thanjavur's Saraswati Mahal Library in the early 1800s?",
+   "a": "Serfoji II.",
+   "edition": "2026-11-07-am",
+   "order": 8,
+   "id": "2026-11-07-am-008"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Start in the middle",
+   "body": "If the beginning of a task is the wall, skip it. Write the second paragraph first, fix the easy bug before the hard one, clean the one shelf you can see. Momentum built anywhere tends to carry you back to the start.",
+   "edition": "2026-11-07-am",
+   "order": 7,
+   "id": "2026-11-07-am-007"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "You can't see the Great Wall from orbit",
+   "body": "A popular myth says the Great Wall of China is visible to the naked eye from space. It's very long but only a few metres wide and close in colour to the land around it. Astronauts in low Earth orbit, including China's first, Yang Liwei, have said they couldn't pick it out unaided.",
+   "hook": "Wonder: what human-made things can astronauts see? (Hint: city lights at night.)",
+   "edition": "2026-11-07-am",
+   "order": 6,
+   "id": "2026-11-07-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Quorums: R + W > N",
+   "body": "Store each item on N replicas. Wait for W of them to confirm a write, and ask R of them on a read. If R + W > N, every read group overlaps every write group in at least one replica, so a read always touches someone who saw the latest write. N=3, W=2, R=2 is the classic, gentle choice.",
+   "q": "With N=3 replicas, why do W=2 and R=2 give you fresh reads?",
+   "a": "Because 2 + 2 > 3, any read set overlaps any write set in at least one replica that has the latest value.",
+   "edition": "2026-11-07-am",
+   "order": 5,
+   "id": "2026-11-07-am-005"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The curse of knowledge",
+   "body": "In a 1990 Stanford study, people tapped out the rhythm of well-known songs and guessed listeners would name about half. Listeners got roughly 1 in 40. The tappers could hear the melody in their heads; the listeners heard only knocks. Once you know something, it's hard to remember what not knowing felt like, so explain one step slower than feels necessary.",
+   "q": "What is the 'curse of knowledge'?",
+   "a": "Once you know something, it becomes hard to imagine not knowing it, so you overestimate how clear your explanation is.",
+   "edition": "2026-11-07-am",
+   "order": 4,
+   "id": "2026-11-07-am-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Chess returns to the Esports World Cup in 2027",
+   "body": "Chess.com confirmed chess will be back at the Esports World Cup next summer in Riyadh, where Magnus Carlsen will try for a third title after winning in 2025 and 2026. Qualification runs through the revamped Champions Chess Tour, with places also handed out via a points leaderboard built from Titled Tuesday, the Speed Chess Championship and the Chess.com Open.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/chess-returns-esports-world-cup-2027"
+   },
+   "edition": "2026-11-07-am",
+   "order": 3,
+   "id": "2026-11-07-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Ironing",
+   "body": "Sunday, and the iron sighs\nacross a cotton shirt.\nEach crease I press away\nis a small week ending:\nthe bus, the rain, the long meeting,\nall folded flat and warm,\nhung on the door\nlike a promise to try again.",
+   "edition": "2026-11-07-am",
+   "order": 2,
+   "id": "2026-11-07-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Airbnb plans a travel agent for 2027",
+   "body": "Airbnb's Brian Chesky says the company plans to launch an AI travel agent in the first half of 2027. The idea is a helper that can sort out bookings and smooth over small problems during a stay, rather than just a search box with a chat window.",
+   "q": "When does Airbnb plan to launch its AI travel agent?",
+   "a": "In the first half of 2027.",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
+   },
+   "edition": "2026-11-07-am",
+   "order": 1,
+   "id": "2026-11-07-am-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A spacewalk with Earth as the backdrop",
+   "body": "On 29 October, Canadian astronaut Joshua Kutryk paused mid-spacewalk for a photo with the blue Earth behind him, about 430 km above the South Atlantic. It was Canada's first spacewalk since 2019; he and NASA's Anil Menon were fitting one of the station's new roll-out solar arrays. Once all eight new arrays are in, NASA expects the station to have roughly 30% more power.",
+   "hook": "Wonder: how do you roll out a solar panel like a yoga mat in zero gravity?",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/space-exploration/human-spaceflight/earth-photobombs-spacewalking-canadian-astronaut-space-photo-of-the-day-for-nov-5-2026"
+   },
+   "edition": "2026-11-07-am",
+   "order": 0,
+   "id": "2026-11-07-am-000"
+  },
   {
    "topic": "facts",
    "kind": "fact",
