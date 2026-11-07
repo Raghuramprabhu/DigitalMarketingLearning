@@ -1,6 +1,354 @@
 {
- "updated": "2026-11-07T02:13:57+00:00",
+ "updated": "2026-11-07T17:18:16+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night auto",
+   "body": "The meter ticks in rupees and in stars.\nThe driver hums an old film tune, off-key,\nand the city, for once, does not argue.\nAt my gate he says, 'Slowly, sir,'\nas if the last three steps\nwere the hard part.",
+   "edition": "2026-11-07-pm",
+   "order": 30,
+   "id": "2026-11-07-pm-030"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try to answer from memory before peeking: How many chunks can working memory hold for most adults? What was hiding in Webb's images of 51 Eridani? Which company ran LEO I?",
+   "q": "Three answers?",
+   "a": "About four chunks; the gas giant 51 Eridani b; J. Lyons & Co., the tea-shop company.",
+   "edition": "2026-11-07-pm",
+   "order": 29,
+   "id": "2026-11-07-pm-029"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask the agent to point at the line",
+   "body": "When an agent tells you what a document or codebase says, ask it to quote the exact line and say where it came from. It costs a few words and turns 'trust me' into 'see for yourself'. If it can't find the line, that's useful to know too.",
+   "edition": "2026-11-07-pm",
+   "order": 28,
+   "id": "2026-11-07-pm-028"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The biggest desert is cold",
+   "body": "A desert is defined by how little precipitation it gets, not by heat. By that measure Antarctica, at about 14 million square kilometres, is the largest desert on Earth, larger than the Sahara.",
+   "hook": "Wonder: what other words do we picture wrongly because of one famous example?",
+   "edition": "2026-11-07-pm",
+   "order": 27,
+   "id": "2026-11-07-pm-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Luft: give your king air",
+   "body": "After castling, a king boxed in by its own pawns can be mated by a single rook or queen on the back rank. Players often push a pawn one square, like h3 or g3, to give the king a 'luft' (German for air): a breathing square to step into. Do it at a calm moment, not when you're under attack.",
+   "q": "What does 'luft' mean, and why make it?",
+   "a": "German for 'air'; a pawn move that gives the king an escape square against back-rank mates.",
+   "edition": "2026-11-07-pm",
+   "order": 26,
+   "id": "2026-11-07-pm-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Two-phase commit, gently",
+   "body": "When several databases must all commit or all cancel, two-phase commit uses a coordinator. Phase one: it asks everyone 'can you commit?' and each participant prepares and votes. Phase two: if all vote yes, it says 'commit'; otherwise 'abort'. The catch: if the coordinator goes quiet after the votes, prepared participants have to wait, which is why many systems prefer sagas for long workflows.",
+   "hook": "Wonder: what's the everyday version of 'everyone say yes before we book the tickets'?",
+   "edition": "2026-11-07-pm",
+   "order": 25,
+   "id": "2026-11-07-pm-025"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Saying and doing",
+   "body": "Saying is easy for anyone. Doing what you said, that is the rare thing.",
+   "who": "Thirukkural 664 (own rendering)",
+   "edition": "2026-11-07-pm",
+   "order": 24,
+   "id": "2026-11-07-pm-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "A tea shop built a business computer",
+   "body": "In 1951 J. Lyons & Co., a British chain of tea shops and bakeries, ran what is often called the world's first routine business job on its own computer, LEO I. The early tasks included valuing the bakeries' output. A company that sold cakes and tea helped invent business computing.",
+   "q": "What kind of company built LEO I?",
+   "a": "J. Lyons & Co., a British tea-shop and bakery company.",
+   "edition": "2026-11-07-pm",
+   "order": 23,
+   "id": "2026-11-07-pm-023"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let the place push back",
+   "body": "A setting is more than a backdrop. Let it make things a little harder: a power cut during the important call, rain that won't let the letter dry, a lift that only goes to the third floor. Small resistance from the world gives your character something to do, and reveals who they are when they do it.",
+   "edition": "2026-11-07-pm",
+   "order": 22,
+   "id": "2026-11-07-pm-022"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "That bright 'star' at dawn is Venus",
+   "body": "If you're up before sunrise, look low in the east: the brilliant point of light is Venus, now back in the morning sky. It keeps brightening through November toward its peak. Its glow comes from thick, reflective clouds that bounce back most of the sunlight that hits them.",
+   "q": "Why does Venus shine so brightly?",
+   "a": "Its thick clouds reflect most of the sunlight that reaches it.",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/stargazing/whats-that-bright-star-in-the-early-morning-sky-its-not-a-star-at-all"
+   },
+   "edition": "2026-11-07-pm",
+   "order": 21,
+   "id": "2026-11-07-pm-021"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Cursor's agent can now ship a small web app",
+   "body": "Cursor's cloud agent can now build a web app from plain-language instructions, set up a database and sign-in, and deploy it to a shareable link. Security checks run before anything goes live, and you have to approve the deployment yourself. It's available on paid plans with cloud agents turned on.",
+   "hook": "Wonder: what tiny app have you wanted for years but never had an afternoon for?",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
+   },
+   "edition": "2026-11-07-pm",
+   "order": 20,
+   "id": "2026-11-07-pm-020"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Tolkappiyam, the old grammar of Tamil",
+   "body": "The Tolkappiyam is the oldest surviving work of Tamil grammar. Beyond letters and words, its third book covers poetics: landscapes, themes and how poems express feeling. Scholars still debate its exact date, but it shaped how Tamil literature was read for centuries.",
+   "q": "Besides letters and words, what does the Tolkappiyam's third book cover?",
+   "a": "Poetics: subject matter, landscapes and how poems carry meaning.",
+   "edition": "2026-11-07-pm",
+   "order": 19,
+   "id": "2026-11-07-pm-019"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Try a sound backdrop",
+   "body": "Some people with ADHD focus better with steady background sound: brown noise, rain, or the hum of a café. The research is mixed and it doesn't suit everyone, so treat it as an experiment: try it for one work block, notice how it feels, and keep it only if it helps.",
+   "edition": "2026-11-07-pm",
+   "order": 18,
+   "id": "2026-11-07-pm-018"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Let a view of green restore you",
+   "body": "Attention Restoration Theory, from Rachel and Stephen Kaplan, suggests that natural scenes hold our attention gently, so the effortful, focused kind of attention gets to rest. Several studies find small improvements on attention tasks after time in nature. Even a few minutes by a window with trees is a reasonable, pleasant experiment.",
+   "edition": "2026-11-07-pm",
+   "order": 17,
+   "id": "2026-11-07-pm-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Sea stars run without a brain",
+   "body": "Starfish have no brain. A ring of nerves around the mouth links a nerve cord in each arm, and the arms coordinate well enough to choose a direction and crawl. They also see with a simple eye spot at the tip of each arm.",
+   "hook": "Wonder: who's in charge when every arm can vote?",
+   "edition": "2026-11-07-pm",
+   "order": 16,
+   "id": "2026-11-07-pm-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java: List.of vs Collections.unmodifiableList",
+   "body": "Collections.unmodifiableList(list) gives you a read-only view: you can't change it, but if someone changes the original list, the view changes too. List.of(...) (Java 9+) builds a truly immutable list that has no backing list, and it refuses null elements. Reach for List.of (or List.copyOf) when you want 'this will never change'.",
+   "q": "Does an unmodifiableList view change if the underlying list changes?",
+   "a": "Yes. It's only a read-only view; List.of/List.copyOf make a real immutable copy.",
+   "edition": "2026-11-07-pm",
+   "order": 15,
+   "id": "2026-11-07-pm-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "World Junior Rapid crowns its champions",
+   "body": "The FIDE World Junior Rapid Championship finished in Al Ain, UAE. Uzbekistan's GM Khumoyun Begmuratov won the open section unbeaten on 7.5/9, and Eline Roebers of the Netherlands won the girls' title with 7/9. The event drew 185 players from 40 countries.",
+   "q": "Who won the girls' title in Al Ain?",
+   "a": "Eline Roebers of the Netherlands, with 7/9.",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/world-junior-rapid-championship-2026-khumoyun-begmuratov-and-eline-roebers-capture-titles/"
+   },
+   "edition": "2026-11-07-pm",
+   "order": 14,
+   "id": "2026-11-07-pm-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The sign painter's last letter",
+   "body": "Every shop on the street had his letters: the bakery's curly B, the chemist's steady capitals. When he retired, the shopkeepers asked him for one more sign, for his own door. He thought for a week and painted only one word, in his plainest hand: 'Open.' He never said which way he meant it. People still stop to chat there.",
+   "edition": "2026-11-07-pm",
+   "order": 13,
+   "id": "2026-11-07-pm-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Send your name to Titan",
+   "body": "NASA is inviting the public to send their names to Saturn's moon Titan aboard Dragonfly, the rotorcraft that will fly between spots on Titan's surface. If the schedule holds, it is planned to begin exploring Titan in 2034. Titan is the only moon with a thick atmosphere, which is what makes flying there possible.",
+   "hook": "Wonder: what does it feel like to know your name is resting on a moon with methane rain?",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/space-exploration/launches-spacecraft/send-your-name-to-saturns-moon-titan-with-nasas-upcoming-dragonfly-mission"
+   },
+   "edition": "2026-11-07-pm",
+   "order": 12,
+   "id": "2026-11-07-pm-012"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Thinking Machines releases Inkling 2 Small",
+   "body": "Thinking Machines Lab released Inkling 2 Small, a model aimed at coding, visual tasks and longer autonomous work. It has 594 billion parameters in total but uses only about 17 billion for each request, a mixture-of-experts design. Developers can try it through the Tinker platform now, with downloadable weights planned after more safety testing.",
+   "q": "Roughly how many of Inkling 2 Small's parameters are active per request?",
+   "a": "About 17 billion (of 594 billion total).",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
+   },
+   "edition": "2026-11-07-pm",
+   "order": 11,
+   "id": "2026-11-07-pm-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The little candle",
+   "body": "How far that little candle throws his beams!\nSo shines a good deed in a naughty world.",
+   "who": "William Shakespeare, The Merchant of Venice",
+   "edition": "2026-11-07-pm",
+   "order": 10,
+   "id": "2026-11-07-pm-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "UTF-8 was sketched on a diner placemat",
+   "body": "In September 1992, Ken Thompson and Rob Pike worked out the design of UTF-8 over dinner at a New Jersey diner, by Pike's account on a placemat. Its clever trick: plain ASCII text is already valid UTF-8, so old files kept working while the world's scripts, including Tamil, got room to fit.",
+   "q": "Why could old ASCII files survive the move to UTF-8?",
+   "a": "Every ASCII byte is already valid UTF-8 with the same meaning.",
+   "edition": "2026-11-07-pm",
+   "order": 9,
+   "id": "2026-11-07-pm-009"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "About four things at once",
+   "body": "Working memory, the mental desk where you juggle ideas, holds far less than the old 'seven plus or minus two' suggests. Psychologist Nelson Cowan's work points to about four chunks for most adults. That's why writing a step down, or grouping items into bigger chunks, makes hard thinking feel lighter.",
+   "hook": "Wonder: which four things are on your mental desk right now?",
+   "edition": "2026-11-07-pm",
+   "order": 8,
+   "id": "2026-11-07-pm-008"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Everest's summit was once seabed",
+   "body": "The rock at the very top of Mount Everest is marine limestone, and it contains fossils of sea creatures such as trilobites and crinoids. It formed on an ancient ocean floor and was lifted more than eight kilometres as India pressed into Asia.",
+   "q": "What kind of rock is at Everest's summit?",
+   "a": "Marine limestone, with fossils of ancient sea life.",
+   "edition": "2026-11-07-pm",
+   "order": 7,
+   "id": "2026-11-07-pm-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Konark, a temple shaped like a chariot",
+   "body": "The Sun Temple at Konark in Odisha, built in the 13th century under the Eastern Ganga king Narasimhadeva I, was designed as the Sun god's chariot: 24 carved stone wheels along its base, drawn by seven stone horses. It is a UNESCO World Heritage Site, and its wheel appears on India's ₹10 note.",
+   "hook": "Wonder: how do you carve motion into something meant to stand still for centuries?",
+   "edition": "2026-11-07-pm",
+   "order": 6,
+   "id": "2026-11-07-pm-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Power of two choices",
+   "body": "A simple load-balancing trick: instead of sending a request to one random server, pick two at random and send it to the less busy one. That tiny comparison dramatically reduces how overloaded the worst server gets, compared with pure random choice, and it needs no global view of the whole cluster.",
+   "q": "In 'power of two choices', how many servers do you sample per request?",
+   "a": "Two, chosen at random; send to the less loaded one.",
+   "edition": "2026-11-07-pm",
+   "order": 5,
+   "id": "2026-11-07-pm-005"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "The one-box reset",
+   "body": "When a desk is too cluttered to start, don't tidy it. Sweep everything into one box, set it aside, and start working on the clear surface. Sort the box later, one item at a time, when you have spare energy. A clear surface now beats a perfect system someday.",
+   "hook": "Wonder: how much of 'I can't start' is really 'I can't see where to start'?",
+   "edition": "2026-11-07-pm",
+   "order": 4,
+   "id": "2026-11-07-pm-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Yakubboev takes Freestyle Friday",
+   "body": "GM Nodirbek Yakubboev won the November 6 Freestyle Friday with 9.5 points, half a point ahead of GM Ian Nepomniachtchi. It's his second Freestyle Friday title this year. In Freestyle (Chess960) the back-rank pieces are shuffled, so memorised openings help much less.",
+   "q": "Who finished half a point behind Yakubboev?",
+   "a": "Ian Nepomniachtchi, on 9 points.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/yakubboev-wins-freestyle-friday-november-6-2026"
+   },
+   "edition": "2026-11-07-pm",
+   "order": 3,
+   "id": "2026-11-07-pm-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Saturday, late",
+   "body": "The week folds itself\nlike a newspaper nobody finished.\nOn the sill, the tulsi\nkeeps its own small hours.\nI leave one light on —\nnot for anyone,\njust so the night\nhas somewhere to rest its eyes.",
+   "edition": "2026-11-07-pm",
+   "order": 2,
+   "id": "2026-11-07-pm-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Webb finds a planet that was hiding in plain sight",
+   "body": "51 Eridani b, a young gas giant about 11 times Jupiter's mass and roughly 97 light-years away, was spotted from the ground in 2015 but kept disappearing in Webb's images. A Northwestern team built a 'digital twin' of the telescope to subtract the star's glare precisely, and the planet stepped out of the dark. The method, called FLIP, was published in Nature this week.",
+   "q": "What did the team build to remove the starlight?",
+   "a": "A physics-based digital twin of the telescope (the FLIP method).",
+   "source": {
+    "name": "Space.com",
+    "url": "https://space.com/astronomy/exoplanets/giant-exoplanet-emerges-from-the-dark-when-the-james-webb-space-telescope-turns-out-the-starlight"
+   },
+   "edition": "2026-11-07-pm",
+   "order": 1,
+   "id": "2026-11-07-pm-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Gemini Omni 1.2 Flash makes longer video clips",
+   "body": "Google released Gemini Omni 1.2 Flash, its fast video model. Clips can now run up to 15 seconds instead of 10, you can refine a clip with follow-up prompts, and the price dropped about 30% to $0.07 per second of 720p video.",
+   "hook": "Wonder: what would you film if a 15-second clip cost less than a cup of tea?",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
+   },
+   "edition": "2026-11-07-pm",
+   "order": 0,
+   "id": "2026-11-07-pm-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
