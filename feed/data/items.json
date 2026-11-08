@@ -1,6 +1,356 @@
 {
- "updated": "2026-11-08T02:15:16+00:00",
+ "updated": "2026-11-08T17:14:16+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Clothesline, afternoon",
+   "body": "Shirts lift their arms\nto nobody in particular.\nA dupatta practises being a flag.\nBy four o'clock\neverything smells of sun\nand is ready to come home.",
+   "edition": "2026-11-08-pm",
+   "order": 30,
+   "id": "2026-11-08-pm-030"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Let the agent write its own checklist",
+   "body": "For a multi-step task, ask the agent to first write a short checklist of what 'done' includes, then tick items off as it works. The list becomes something you can read at a glance, and a skipped step shows up as an unticked box rather than a surprise.",
+   "edition": "2026-11-08-pm",
+   "order": 29,
+   "id": "2026-11-08-pm-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Hippos make their own sunscreen",
+   "body": "Hippos secrete a reddish-orange fluid from their skin that's often called 'blood sweat', though it's neither blood nor sweat. Its pigments absorb ultraviolet light and seem to help protect their skin.",
+   "hook": "Wonder: what other animals carry their own sun protection?",
+   "edition": "2026-11-08-pm",
+   "order": 28,
+   "id": "2026-11-08-pm-028"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The pre-mortem",
+   "body": "Before starting a project, imagine it's a year later and things didn't go well. Each person writes down why. Psychologist Gary Klein's technique makes it easier to voice quiet doubts, because you're explaining an imagined past rather than criticising a plan.",
+   "q": "In a pre-mortem, what do you imagine before starting?",
+   "a": "That the project has already gone badly, then list the reasons why.",
+   "edition": "2026-11-08-pm",
+   "order": 27,
+   "id": "2026-11-08-pm-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Least connections vs round robin",
+   "body": "Round robin hands requests out in turn, which is fair only if every request costs the same. When some requests are slow, 'least connections' sends new work to the server currently doing the least, so one stuck server doesn't keep receiving its share of traffic.",
+   "hook": "Wonder: what goes wrong if a 'least connections' balancer sees a brand-new server with zero connections?",
+   "edition": "2026-11-08-pm",
+   "order": 26,
+   "id": "2026-11-08-pm-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Good bishop, bad bishop",
+   "body": "A bishop is 'bad' when your own pawns sit on its colour and block its diagonals, and 'good' when they're on the other colour. A simple habit: when you fix pawns in place, put them on the opposite colour to your remaining bishop.",
+   "q": "What makes a bishop 'bad'?",
+   "a": "Your own pawns are fixed on the same colour squares, blocking it.",
+   "edition": "2026-11-08-pm",
+   "order": 25,
+   "id": "2026-11-08-pm-025"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Confine yourself to the present.",
+   "body": "Confine thyself to the present.",
+   "who": "Marcus Aurelius, Meditations (tr. George Long)",
+   "edition": "2026-11-08-pm",
+   "order": 24,
+   "id": "2026-11-08-pm-024"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Muziris, the pepper port",
+   "body": "Muziris, on the Kerala coast, was one of the great ports of the ancient Indian Ocean trade. A first-century Greek sailing guide, the Periplus of the Erythraean Sea, describes ships coming there for pepper. Excavations at Pattanam, near Kodungallur, are widely thought to have found part of it.",
+   "hook": "Wonder: how did monsoon winds decide when ships could sail to Muziris and back?",
+   "edition": "2026-11-08-pm",
+   "order": 23,
+   "id": "2026-11-08-pm-023"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Venus Express turns 21",
+   "body": "On 8 November 2005, Europe launched Venus Express, its first mission to Venus. Over more than nine years it watched a swirling vortex at the planet's south pole, found possible signs of active volcanoes, and showed that Venus has auroras of its own.",
+   "q": "Which mission, launched on 8 November 2005, found that Venus has its own auroras?",
+   "a": "ESA's Venus Express.",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/space-exploration/on-this-day-in-space-november-8-2026"
+   },
+   "edition": "2026-11-08-pm",
+   "order": 22,
+   "id": "2026-11-08-pm-022"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Pong's one-line manual",
+   "body": "Atari's 1972 Pong arcade cabinet came with possibly the shortest instructions in gaming: 'Avoid missing ball for high score.' Its simplicity was part of the appeal; anyone could walk up and play.",
+   "q": "What did the original Pong cabinet's instructions say?",
+   "a": "'Avoid missing ball for high score.'",
+   "edition": "2026-11-08-pm",
+   "order": 21,
+   "id": "2026-11-08-pm-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The mapmaker's blank corner",
+   "body": "Every map the old mapmaker sold had one small blank corner. Customers complained; he only smiled. Years later a girl brought one back with the corner filled in: a lane, a well, a tree she had drawn after walking there herself. He framed it, and from then on he charged a little less for maps with bigger corners.",
+   "edition": "2026-11-08-pm",
+   "order": 20,
+   "id": "2026-11-08-pm-020"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "OpenAI's BioBasicsBench: agents meet messy lab data",
+   "body": "OpenAI introduced BioBasicsBench, a 100-task benchmark that checks how well AI agents read raw, untidy wet-lab results and notice when an experiment looks off. It measures careful interpretation rather than textbook recall.",
+   "hook": "Wonder: what would a good 'that looks odd' instinct look like in an agent?",
+   "source": {
+    "name": "AIToolly",
+    "url": "https://aitoolly.com/ai-news/2026-11-07"
+   },
+   "edition": "2026-11-08-pm",
+   "order": 19,
+   "id": "2026-11-08-pm-019"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A sea lion that keeps the beat",
+   "body": "A California sea lion named Ronan learned to bob her head in time to music, and then kept the beat to songs she had never heard, at new tempos. Researchers had long thought rhythm-keeping needed vocal mimicry; Ronan showed it isn't so simple.",
+   "q": "What was surprising about Ronan the sea lion?",
+   "a": "She could keep time to music, even new songs and tempos, though sea lions aren't known vocal mimics.",
+   "edition": "2026-11-08-pm",
+   "order": 18,
+   "id": "2026-11-08-pm-018"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Self-explanation",
+   "body": "When you read a worked solution, pause at each step and say why it follows. Learners who explain steps to themselves, even silently, tend to understand and transfer the idea better than those who just reread. The gaps you notice while explaining are exactly the bits to study.",
+   "hook": "Wonder: which step in something you 'know' would you struggle to justify out loud?",
+   "edition": "2026-11-08-pm",
+   "order": 17,
+   "id": "2026-11-08-pm-017"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Chinese Rapid Championship reaches its final four",
+   "body": "The Chinese Rapid Championship's quarterfinals were decided, some only in blitz tiebreaks. Yu Yangyi, Xiao Tong, Xu Xiangyu and Lu Shanglei go through to the semifinals.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/chinese-rapid-championship-2026-quarterfinals"
+   },
+   "edition": "2026-11-08-pm",
+   "order": 16,
+   "id": "2026-11-08-pm-016"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Ask the question before you open the tab",
+   "body": "Research can become an endless corridor. Before searching, write the one question you're answering and what 'answered' looks like. When you find it, close the tabs. Anything else interesting goes on a 'later' list, not into this session.",
+   "hook": "Wonder: how often does a five-minute lookup become an hour, and what was the original question?",
+   "edition": "2026-11-08-pm",
+   "order": 15,
+   "id": "2026-11-08-pm-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java: fail-fast iterators",
+   "body": "Change an ArrayList while a for-each loop walks it and you'll usually get a ConcurrentModificationException. That's deliberate: the iterator notices the list's modification count changed and stops early rather than giving quietly wrong results. To remove while iterating, use iterator.remove() or list.removeIf(...).",
+   "q": "What's the safe way to remove elements from an ArrayList based on a condition?",
+   "a": "list.removeIf(condition), or iterator.remove() inside an explicit iterator loop.",
+   "edition": "2026-11-08-pm",
+   "order": 14,
+   "id": "2026-11-08-pm-014"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Northern Taurids peak around 12 November",
+   "body": "The Northern Taurid meteor shower peaks around 12 November, with roughly five meteors an hour under dark skies. Taurids are slow and known for occasional bright fireballs, and the Leonids follow before dawn on 17–18 November.",
+   "q": "Which shower peaks around 12 November, known for its slow, bright fireballs?",
+   "a": "The Northern Taurids.",
+   "source": {
+    "name": "Lake County News (NASA JPL 'What's Up')",
+    "url": "https://lakeconews.com/en/85662-space-news-whats-up-for-november-2026"
+   },
+   "edition": "2026-11-08-pm",
+   "order": 13,
+   "id": "2026-11-08-pm-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Save the weight for the end of the sentence",
+   "body": "English readers lean toward the last words of a sentence. Put the familiar part first and the new or striking part last. 'The letter she'd waited a year for came on a Tuesday' lands on an ordinary day; 'On a Tuesday, the letter came: the one she'd waited a year for' lands on the wait.",
+   "q": "Where in a sentence does emphasis naturally fall in English?",
+   "a": "Near the end, so place the new or important idea there.",
+   "edition": "2026-11-08-pm",
+   "order": 12,
+   "id": "2026-11-08-pm-012"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "A whole cliff turned into a story",
+   "body": "At Mamallapuram, Pallava-era sculptors carved a huge open-air relief across two boulders, about 27 metres long and 9 metres high. Often called Arjuna's Penance or the Descent of the Ganga, it is crowded with gods, sages, hunters and life-sized elephants, and a natural cleft down the middle stands in for the river.",
+   "hook": "Wonder: how did sculptors plan a scene that size before the first chisel stroke?",
+   "edition": "2026-11-08-pm",
+   "order": 11,
+   "id": "2026-11-08-pm-011"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Vercel Labs' agent-desktop reads the screen as structure",
+   "body": "Vercel Labs released agent-desktop, an open-source command-line tool that lets AI agents operate desktop apps on macOS, Windows and Linux. Instead of reading screenshots, it uses the operating system's accessibility tree, which uses fewer tokens and doesn't take over your cursor.",
+   "q": "What does agent-desktop use instead of screenshots to understand an app?",
+   "a": "The operating system's accessibility tree.",
+   "source": {
+    "name": "AIToolly",
+    "url": "https://aitoolly.com/ai-news/2026-11-07"
+   },
+   "edition": "2026-11-08-pm",
+   "order": 10,
+   "id": "2026-11-08-pm-010"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Small help, seen large",
+   "body": "Though the help given is as small as a millet seed, those who know its worth see it as large as a palm tree.",
+   "who": "Thirukkural 104 (own rendering)",
+   "edition": "2026-11-08-pm",
+   "order": 9,
+   "id": "2026-11-08-pm-009"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "On Venus the Sun rises in the west",
+   "body": "Venus spins in the opposite direction to most planets, and very slowly. Stand on its surface (if you could see through the clouds) and the Sun would rise in the west and set in the east.",
+   "hook": "Wonder: how might a planet end up spinning backwards in the first place?",
+   "edition": "2026-11-08-pm",
+   "order": 8,
+   "id": "2026-11-08-pm-008"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Memory that was woven by hand",
+   "body": "From the 1950s to the 1970s, many computers stored data in magnetic core memory: tiny ferrite rings threaded onto a grid of wires, often by hand. The Apollo guidance computer went further with 'core rope' memory, where its programs were literally woven: a wire passing through a core meant 1, around it meant 0.",
+   "q": "In Apollo's core rope memory, how was a 1 vs a 0 encoded?",
+   "a": "By whether a wire passed through a core (1) or bypassed it (0).",
+   "edition": "2026-11-08-pm",
+   "order": 7,
+   "id": "2026-11-08-pm-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "A checklist for the routine you 'already know'",
+   "body": "Pilots run checklists for things they've done thousands of times, because familiarity doesn't stop a skipped step. A short, visible list for your morning or leaving-the-house routine takes the remembering off your working memory. Tick it; don't trust it to your head.",
+   "hook": "Wonder: which daily routine of yours has a step that quietly goes missing?",
+   "edition": "2026-11-08-pm",
+   "order": 6,
+   "id": "2026-11-08-pm-006"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The method of loci",
+   "body": "Place each thing you want to remember at a spot along a route you know well: the gate, the stairs, the kitchen shelf. To recall, walk the route in your mind. It works because spatial memory is old, strong and orderly, so it lends its structure to facts that have none.",
+   "q": "What does the method of loci borrow to organise new memories?",
+   "a": "A familiar physical route: spatial memory gives the items an order and a place.",
+   "edition": "2026-11-08-pm",
+   "order": 5,
+   "id": "2026-11-08-pm-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Aadik Theophane Leninn becomes India's newest IM",
+   "body": "At the 1st Chola Chess GM tournament in Chennai, 14-year-old Aadik Theophane Leninn secured his final International Master norm with a round to spare. Going into the last round, GMs Pranesh M and Vitaliy Bernadskiy and Pa Iniyan shared the lead on 6 points.",
+   "q": "Which Chennai event saw Aadik Theophane Leninn complete his IM title?",
+   "a": "The 1st Chola Chess GM 2026.",
+   "source": {
+    "name": "ChessBase India",
+    "url": "https://www.chessbase.in/news/1st-chola-chess-gm-2026-round-8-report"
+   },
+   "edition": "2026-11-08-pm",
+   "order": 4,
+   "id": "2026-11-08-pm-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Power cut, 9 pm",
+   "body": "The fan slows to a stop\nand the street remembers its crickets.\nSomeone finds a candle,\nsomeone finds a story,\nand for an hour\nthe whole house sits in one room.",
+   "edition": "2026-11-08-pm",
+   "order": 3,
+   "id": "2026-11-08-pm-003"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Meta's Muse can now build small 'Spaces'",
+   "body": "Meta introduced Spaces for its Muse assistant: you describe what you need and it assembles a small app-like module inside the chat, such as a music tracker, a school dashboard or a trivia game. Muse also gained real-time voice conversations with an animated avatar for US users.",
+   "hook": "Wonder: what small tool would you ask for if building it took one sentence?",
+   "source": {
+    "name": "AI Agents Directory brief",
+    "url": "https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-november-7-2026"
+   },
+   "edition": "2026-11-08-pm",
+   "order": 2,
+   "id": "2026-11-08-pm-002"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Fencing tokens: the lease's missing half",
+   "body": "A lease can expire while its holder is paused (a long GC, a slow network) and still thinks it owns the lock. The fix: each new lease comes with a number that only ever goes up. The storage layer remembers the highest number it has seen and rejects writes carrying an older one.",
+   "q": "What stops a paused former lock-holder from overwriting newer data?",
+   "a": "A fencing token: a monotonically increasing number checked by the storage layer, which rejects stale tokens.",
+   "edition": "2026-11-08-pm",
+   "order": 1,
+   "id": "2026-11-08-pm-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The first of three supermoons rises on 24 November",
+   "body": "NASA JPL's November sky guide says the full Moon on 24 November will be a supermoon, the first of three in a row (November, December and January). Look east around sunset to catch it rising.",
+   "hook": "Wonder: why does a Moon near the horizon look bigger than one high in the sky, even when it isn't?",
+   "source": {
+    "name": "ScienceDaily (NASA JPL)",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261105224547.htm"
+   },
+   "edition": "2026-11-08-pm",
+   "order": 0,
+   "id": "2026-11-08-pm-000"
+  },
   {
    "topic": "facts",
    "kind": "fact",
