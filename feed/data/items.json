@@ -1,6 +1,340 @@
 {
- "updated": "2026-11-07T17:18:16+00:00",
+ "updated": "2026-11-08T02:15:16+00:00",
  "items": [
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Pluto's long year",
+   "body": "Pluto takes about 248 Earth years to go once around the Sun. Since its discovery in 1930, it has travelled less than half of one orbit.",
+   "hook": "Wonder: where in the sky will Pluto be when it finally completes its first 'discovery year'?",
+   "edition": "2026-11-08-am",
+   "order": 29,
+   "id": "2026-11-08-am-029"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Make 'I'm not sure' a valid answer",
+   "body": "If your instructions only reward answers, an agent will produce answers. Tell it explicitly that 'I'm not sure, here's what I'd check' is acceptable. You'll get fewer confident guesses and more useful next steps.",
+   "q": "What explicit permission reduces confident guessing from an agent?",
+   "a": "Allowing it to say it isn't sure and suggest what to check.",
+   "edition": "2026-11-08-am",
+   "order": 28,
+   "id": "2026-11-08-am-028"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Tea, second cup",
+   "body": "The first cup was for waking.\nThis one is for sitting\nwhile the light walks slowly\nacross the floor\nlooking for nothing in particular.",
+   "edition": "2026-11-08-am",
+   "order": 27,
+   "id": "2026-11-08-am-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Leko and Svidler will call the title match",
+   "body": "GMs Peter Leko and Peter Svidler will commentate the 14-game World Championship match between Gukesh and Javokhir Sindarov, which begins on 24 November at the Fondation Martin Bodmer near Geneva.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/world-championship-2026-commentators"
+   },
+   "edition": "2026-11-08-am",
+   "order": 26,
+   "id": "2026-11-08-am-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "What we may be",
+   "who": "Shakespeare, Hamlet",
+   "body": "We know what we are, but know not what we may be.",
+   "edition": "2026-11-08-am",
+   "order": 25,
+   "id": "2026-11-08-am-025"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Merkle trees: comparing big data cheaply",
+   "body": "A Merkle tree hashes data in blocks, then hashes those hashes up to a single root. Two replicas can compare roots; if they match, everything matches. If not, they walk down only the branches that differ. Cassandra and Dynamo-style stores use this for quiet background repair.",
+   "hook": "Wonder: how could two libraries check their catalogues match without reading every card?",
+   "edition": "2026-11-08-am",
+   "order": 24,
+   "id": "2026-11-08-am-024"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Pineapples take their time",
+   "body": "A pineapple plant usually needs around 18 to 24 months to produce a single fruit, and each plant gives just one main pineapple per cycle.",
+   "q": "Roughly how long does a pineapple take to grow?",
+   "a": "About 18 to 24 months.",
+   "edition": "2026-11-08-am",
+   "order": 23,
+   "id": "2026-11-08-am-023"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The floppy began at eight inches",
+   "body": "IBM's first floppy disk, introduced in 1971, was 8 inches across and read-only. It was made to load start-up instructions into mainframes. Smaller 5¼-inch and 3½-inch versions came later and carried software into homes.",
+   "hook": "Wonder: what's the oldest storage medium you've ever held?",
+   "edition": "2026-11-08-am",
+   "order": 22,
+   "id": "2026-11-08-am-022"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Old light from Andromeda",
+   "body": "On a dark November evening, the Andromeda Galaxy appears as a faint smudge to the naked eye. Its light set out about 2.5 million years ago, so the glow you see left before our own species existed.",
+   "q": "About how long has Andromeda's light been travelling to reach us?",
+   "a": "About 2.5 million years.",
+   "edition": "2026-11-08-am",
+   "order": 21,
+   "id": "2026-11-08-am-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let the first try fail",
+   "body": "When a character wants something, let their first attempt not quite work. The failure tells us what is in the way and makes the second attempt matter. Even in a 200-word story, one small stumble gives the ending somewhere to land.",
+   "hook": "Wonder: what does your character try first, and why doesn't it work?",
+   "edition": "2026-11-08-am",
+   "order": 20,
+   "id": "2026-11-08-am-020"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Reward now, not later",
+   "body": "Rewards that arrive weeks later barely register for many ADHD brains; rewards that arrive right away do. Attach a small, immediate treat to the end of a dull task, such as a favourite song, a walk to the balcony or a cup of tea, so finishing pays off on the spot.",
+   "edition": "2026-11-08-am",
+   "order": 19,
+   "id": "2026-11-08-am-019"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "A statue measured in couplets",
+   "body": "The Thiruvalluvar statue at Kanyakumari, unveiled on 1 January 2000, is 133 feet tall, one foot for each of the 133 chapters of the Thirukkural. It stands on a 38-foot pedestal that represents the 38 chapters on virtue.",
+   "q": "Why is the Thiruvalluvar statue 133 feet tall?",
+   "a": "One foot for each of the Thirukkural's 133 chapters.",
+   "edition": "2026-11-08-am",
+   "order": 18,
+   "id": "2026-11-08-am-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "How researchers use Claude",
+   "body": "Anthropic studied 207,049 research sessions with Claude and Claude Code. Use was heaviest in computer science, mathematics and statistics, mostly for analysing data and writing. The company suggests research output in some fields could grow considerably as these tools spread.",
+   "source": {
+    "name": "Anthropic",
+    "url": "https://www.anthropic.com/research/how-researchers-use-claude"
+   },
+   "edition": "2026-11-08-am",
+   "order": 17,
+   "id": "2026-11-08-am-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "Practise the way you'll perform",
+   "body": "Memory works best when practice resembles the moment you'll need it, an idea researchers call transfer-appropriate processing. If you'll need to explain a design aloud, rehearse by explaining it aloud, not just by re-reading notes.",
+   "hook": "Wonder: does your practice look like your real test?",
+   "edition": "2026-11-08-am",
+   "order": 16,
+   "id": "2026-11-08-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: HashMap makes no promise about order",
+   "body": "Iterating a HashMap can return keys in any order, and that order can change as the map grows. If you need insertion order, use LinkedHashMap; if you need sorted keys, use TreeMap. Tests that pass 'by luck' on HashMap order are a classic slow-burning bug.",
+   "q": "Which Java map keeps keys in insertion order?",
+   "a": "LinkedHashMap.",
+   "edition": "2026-11-08-am",
+   "order": 15,
+   "id": "2026-11-08-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Pin or skewer?",
+   "body": "Both are attacks along a line. In a pin, the piece in front is the less valuable one, and it can't move without exposing something bigger behind it. In a skewer, the valuable piece is in front; it has to step aside, and the piece behind it falls.",
+   "q": "In a skewer, is the more valuable piece in front or behind?",
+   "a": "In front: it must move, exposing the piece behind it.",
+   "edition": "2026-11-08-am",
+   "order": 14,
+   "id": "2026-11-08-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The last seat on the ferry",
+   "body": "She took the last seat on the ferry, next to a man holding a potted lemon tree. Halfway across, the wind turned and the boat rocked. Without a word, they each put a hand on the pot. On the far side he nodded, she nodded, and they walked off in different directions. She smelled lemon leaves on her fingers all afternoon.",
+   "edition": "2026-11-08-am",
+   "order": 13,
+   "id": "2026-11-08-am-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A gas that hints Mars may not be fully asleep",
+   "body": "Scientists report traces of hydrogen chloride in the Martian air, a gas that on Earth often comes from volcanoes. It could hint at recent volcanic activity on Mars, though the researchers are careful to call it a maybe.",
+   "hook": "Wonder: how do you take the pulse of a planet from orbit?",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/space/active-volcanoes-on-mars-hydrogen-chloride-trace-gas-orbiter/"
+   },
+   "edition": "2026-11-08-am",
+   "order": 12,
+   "id": "2026-11-08-am-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Grapes take their time",
+   "who": "Epictetus, Discourses",
+   "body": "No great thing is created suddenly, any more than a bunch of grapes or a fig.",
+   "edition": "2026-11-08-am",
+   "order": 11,
+   "id": "2026-11-08-am-011"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Sea otters have pockets",
+   "body": "Sea otters have a loose pouch of skin under each foreleg. They use it to carry food up from the sea floor, and often a favourite rock they use to crack open shells.",
+   "hook": "Wonder: what would you keep in your own built-in pocket?",
+   "edition": "2026-11-08-am",
+   "order": 10,
+   "id": "2026-11-08-am-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first .com",
+   "body": "The first .com domain name ever registered was symbolics.com, on 15 March 1985, by Symbolics, a company that made computers for running the Lisp language. For a while, registering a domain was a quiet, almost clerical act.",
+   "q": "What was the first .com domain registered?",
+   "a": "symbolics.com, in March 1985.",
+   "edition": "2026-11-08-am",
+   "order": 9,
+   "id": "2026-11-08-am-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Ai2 teaches robot arms with toy blocks",
+   "body": "The Allen Institute for AI released ToyBlocks, an open robot-arm simulator with 85,336 automatically generated demonstrations, about 1,600 hours of practice. Policies trained only in simulation did well on simple skills, though moving blocks to new places still trips them up. The training code and weights are open.",
+   "q": "Roughly how many hours of demonstrations come with Ai2's ToyBlocks?",
+   "a": "About 1,600 hours (85,336 demonstrations).",
+   "source": {
+    "name": "The Spokesman-Review",
+    "url": "https://www.spokesman.com/stories/2026/nov/06/why-a-seattle-ai-lab-is-making-robots-play-with-to/"
+   },
+   "edition": "2026-11-08-am",
+   "order": 8,
+   "id": "2026-11-08-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Ellora's Kailasa: a temple carved from the top down",
+   "body": "Cave 16 at Ellora, the Kailasa temple, was cut out of a single basalt hillside in the 8th century, traditionally credited to the Rashtrakuta king Krishna I. The builders worked downward from the top of the rock, removing stone to reveal courtyards, shrines and towers, so there was no room for a misplaced cut.",
+   "hook": "Wonder: how do you plan a building you can only subtract from?",
+   "edition": "2026-11-08-am",
+   "order": 7,
+   "id": "2026-11-08-am-007"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Snowflake IDs: unique and roughly in time order",
+   "body": "Twitter's Snowflake scheme builds a 64-bit ID from three parts: a millisecond timestamp (41 bits), a machine number (10 bits) and a per-millisecond counter (12 bits). Each machine can mint IDs without asking anyone, and sorting the IDs sorts them roughly by creation time.",
+   "q": "What are the three parts of a Snowflake ID?",
+   "a": "A timestamp, a machine ID and a sequence counter.",
+   "edition": "2026-11-08-am",
+   "order": 6,
+   "id": "2026-11-08-am-006"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The peak-end rule",
+   "body": "Research led by Daniel Kahneman found that people tend to remember an experience mostly by its most intense moment and by how it ended, rather than by its total length. A practical use: end a study or work session on something you can do well, so the memory of the session, and your wish to return, stays warm.",
+   "q": "According to the peak-end rule, which two moments shape how we remember an experience?",
+   "a": "The most intense moment (the peak) and the ending.",
+   "edition": "2026-11-08-am",
+   "order": 5,
+   "id": "2026-11-08-am-005"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Set the 'good enough' line first",
+   "body": "Before you start, write one sentence describing what 'done enough' looks like for this task. When you reach it, stop and call it finished. Perfectionism often hides inside tasks with no clear edge; a written edge makes stopping feel allowed.",
+   "hook": "Wonder: how much of a task is the last 10% of polish?",
+   "edition": "2026-11-08-am",
+   "order": 4,
+   "id": "2026-11-08-am-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Sunday, before anyone wakes",
+   "body": "The milk packet waits by the door,\ncold and patient.\nA crow says one word\nand decides that is enough.\nI do the same.",
+   "edition": "2026-11-08-am",
+   "order": 3,
+   "id": "2026-11-08-am-003"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "G.N. Gopal leads in Bavaria",
+   "body": "Indian GM G.N. Gopal is sole leader of the Bavarian Championship at Tegernsee with 5½ out of 6, after beating 15-year-old German IM Hussain Besou in round six. Twelve players sit half a point behind, so the final rounds should be lively.",
+   "q": "What was G.N. Gopal's score after six rounds at Tegernsee?",
+   "a": "5½ out of 6.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/tegernsee-open-2026-r6"
+   },
+   "edition": "2026-11-08-am",
+   "order": 2,
+   "id": "2026-11-08-am-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A dead star with two rings of debris",
+   "body": "Astronomers have found a white dwarf, the cooled core of a Sun-like star, circled by two separate rings of planetary debris with a gap between them. It offers a possible glimpse of what our own Solar System might look like billions of years from now, once the Sun has settled into a white dwarf.",
+   "q": "What kind of star is circled by the newly found double ring?",
+   "a": "A white dwarf, the leftover core of a Sun-like star.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261104012250.htm"
+   },
+   "edition": "2026-11-08-am",
+   "order": 1,
+   "id": "2026-11-08-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Anthropic sketches how agents could remember",
+   "body": "In a research post, Anthropic split agent memory into three layers: notes the agent writes while it works, a stronger model that decides which of those notes are worth keeping, and a tidying-up pass during idle time that the team calls \"dreaming\". The idea is that memory improves when it is reviewed, not just stored.",
+   "hook": "Wonder: what would you keep if you reviewed today's notes before bed?",
+   "source": {
+    "name": "Anthropic",
+    "url": "https://www.anthropic.com/research/components-of-agent-memory"
+   },
+   "edition": "2026-11-08-am",
+   "order": 0,
+   "id": "2026-11-08-am-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
