@@ -1,0 +1,246 @@
+/* Jathagam viewer — light mode only, built for an elderly Tamil reader on a phone.
+   Rules: big text, high contrast, one idea per block, every button has words, nothing hidden behind gestures. */
+
+:root {
+  --bg: #FBF7F0;
+  --card: #FFFFFF;
+  --line: #E0D5C5;
+  --ink: #1C1714;
+  --ink-soft: #4A403A;
+  --maroon: #7A1F14;
+  --green: #1D6B3A;
+  --green-bg: #E3F2E7;
+  --red: #9B2A1F;
+  --new-bg: #FFE3B8;
+  --new-ink: #6E3800;
+  --seen-bg: #ECE6DD;
+  --warn-bg: #FFF1C7;
+  --warn-line: #C99A06;
+  --warn-ink: #5C4300;
+  --focus: #1F5FBF;
+  --radius: 16px;
+  --tap: 3.2rem;
+  --font: "Noto Sans Tamil", "Tamil Sangam MN", "Nirmala UI", "Latha", system-ui, sans-serif;
+  color-scheme: light only;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html {
+  font-size: 21px; /* JS changes this for the அ− / அ+ buttons */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.65;
+  padding-bottom: env(safe-area-inset-bottom);
+  overflow-wrap: break-word;
+  overflow-x: clip;
+}
+
+button, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+/* ---------- top bar ---------- */
+.bar {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--maroon); color: #fff;
+  padding-top: env(safe-area-inset-top);
+}
+/* the bar uses px, not rem: it stays put when the reader enlarges the text */
+.bar-inner {
+  max-width: 640px; margin: 0 auto;
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px;
+  min-height: 72px;
+}
+.title { flex: 1; min-width: 0; margin: 0; font-size: 25px; font-weight: 700; line-height: 1.3; }
+.back-btn {
+  flex: 1; min-width: 0; text-align: left; white-space: nowrap;
+  background: #fff; color: var(--maroon);
+  border: 0; border-radius: 12px;
+  min-height: 56px; padding: 6px 14px;
+  font-weight: 700; font-size: 21px;
+}
+.size-btns { display: flex; gap: 8px; flex-shrink: 0; }
+.size-btn {
+  width: 58px; height: 56px;
+  background: rgba(255,255,255,.14); color: #fff;
+  border: 2px solid rgba(255,255,255,.55); border-radius: 12px;
+  font-weight: 700; font-size: 21px; line-height: 1;
+}
+.size-btn span { font-size: .8em; margin-left: 1px; }
+.size-btn:disabled { opacity: .4; }
+
+/* ---------- page ---------- */
+.page { max-width: 640px; margin: 0 auto; padding: 1rem .85rem 7rem; outline: none; }
+.loading, .empty { color: var(--ink-soft); text-align: center; padding: 2rem 0; }
+
+.sample-note {
+  background: var(--warn-bg); border: 2px dashed var(--warn-line); color: var(--warn-ink);
+  border-radius: var(--radius); padding: .6rem .9rem; margin: 0 0 1rem; font-size: .9rem;
+}
+
+.summary { margin: 0 0 1rem; font-size: 1.05rem; color: var(--ink-soft); }
+.summary b { color: var(--ink); }
+
+.big-btn {
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  width: 100%; min-height: 3.6rem; padding: .6rem 1rem;
+  border-radius: var(--radius); border: 0;
+  font-weight: 700; font-size: 1.05rem; text-decoration: none; text-align: center;
+}
+.big-btn.primary { background: var(--maroon); color: #fff; }
+.big-btn.plain { background: var(--card); color: var(--ink); border: 2px solid var(--line); }
+.start-btn { margin-bottom: 1.5rem; }
+
+/* ---------- sections + cards ---------- */
+.section-head { margin: 1.6rem 0 .6rem; font-size: 1.1rem; font-weight: 700; line-height: 1.45; }
+.section-head .count { color: var(--ink-soft); font-weight: 400; font-size: .9em; }
+
+.cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+
+.card {
+  display: block; position: relative;
+  background: var(--card); color: var(--ink); text-decoration: none;
+  border: 2px solid var(--line); border-radius: var(--radius);
+  padding: .8rem 2.6rem .85rem 1rem;
+}
+.card.is-liked { border-color: var(--green); border-width: 3px; }
+.card.is-new { border-color: #E3A24A; }
+.card.just-seen { animation: glow 2.4s ease-out 1; }
+@keyframes glow { 0% { box-shadow: 0 0 0 6px #FFD36E; } 100% { box-shadow: 0 0 0 0 transparent; } }
+@media (prefers-reduced-motion: reduce) { .card.just-seen { animation: none; box-shadow: 0 0 0 4px #FFD36E; } }
+
+.card::after {
+  content: "›"; position: absolute; right: .8rem; top: 50%; transform: translateY(-55%);
+  font-size: 2rem; color: var(--ink-soft); line-height: 1;
+}
+.card-name { display: block; overflow-wrap: anywhere; font-size: 1.2rem; font-weight: 700; line-height: 1.35; margin-bottom: .2rem; }
+.card-line { display: block; color: var(--ink-soft); }
+.card-line b { color: var(--ink); font-weight: 600; }
+
+.badge {
+  display: inline-block; vertical-align: middle;
+  font-size: .78rem; font-weight: 700; line-height: 1.4;
+  padding: .1rem .55rem; border-radius: 999px; margin: 0 0 .35rem;
+}
+.badge.new { background: var(--new-bg); color: var(--new-ink); }
+.badge.seen { background: var(--seen-bg); color: var(--ink-soft); }
+.badge.liked { background: var(--green-bg); color: var(--green); }
+.badge.rejected { background: #F6DEDA; color: var(--red); }
+
+.flag {
+  display: block; margin-top: .45rem; padding: .25rem .6rem;
+  background: var(--warn-bg); border-left: 5px solid var(--warn-line); color: var(--warn-ink);
+  border-radius: 8px; font-size: .9rem; font-weight: 600;
+}
+.has-note { display: block; margin-top: .35rem; font-size: .88rem; color: var(--ink-soft); }
+
+.hidden-link { margin-top: 2rem; }
+
+/* ---------- settings ---------- */
+.settings {
+  margin-top: 2rem; background: var(--card); border: 2px solid var(--line);
+  border-radius: var(--radius); padding: .9rem 1rem 1rem;
+}
+.settings h2 { margin: 0 0 .5rem; font-size: 1.05rem; }
+.settings label { display: block; font-weight: 600; margin-bottom: .35rem; }
+.settings .hint { display: block; color: var(--ink-soft); font-size: .88rem; font-weight: 400; margin-bottom: .45rem; }
+.settings select {
+  width: 100%; min-height: var(--tap); padding: .3rem .7rem;
+  border: 2px solid var(--ink-soft); border-radius: 12px; background: #fff;
+}
+.local-note { color: var(--ink-soft); font-size: .85rem; text-align: center; margin-top: 1.5rem; }
+
+/* ---------- detail ---------- */
+.d-name { overflow-wrap: anywhere; font-size: 1.55rem; line-height: 1.3; margin: .2rem 0 .3rem; }
+.d-status { margin-bottom: .8rem; }
+.d-status .badge { font-size: .9rem; padding: .15rem .7rem; }
+
+.speak-btn { margin: .2rem 0 1rem; }
+.speak-btn[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+.block {
+  background: var(--card); border: 2px solid var(--line); border-radius: var(--radius);
+  padding: .4rem 1rem .6rem; margin-bottom: 1rem;
+}
+.block h2 { font-size: 1rem; color: var(--maroon); margin: .5rem 0 .2rem; }
+
+.facts { margin: 0; }
+.fact { padding: .55rem 0; border-top: 1px solid var(--line); }
+.fact:first-child { border-top: 0; }
+.fact dt { font-size: .85rem; color: var(--ink-soft); font-weight: 600; }
+.fact dd { margin: 0; font-size: 1.12rem; font-weight: 600; line-height: 1.45; }
+.fact dd .sub { display: block; font-size: .88rem; font-weight: 400; color: var(--ink-soft); }
+.fact.warn dd { color: var(--red); }
+
+/* South Indian rasi chart (கட்டம்) — signs stay fixed, planets move */
+.kattam {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(4, minmax(4.1em, auto));
+  border: 3px solid var(--ink); background: var(--ink); gap: 2px;
+  margin: .6rem 0 .5rem; border-radius: 6px; overflow: hidden;
+  font-size: clamp(16px, 1rem, 22px); /* the chart stays readable at every text size without crowding */
+}
+.k-cell { background: #FFFDF8; padding: .2rem .25rem; display: flex; flex-direction: column; min-width: 0; }
+.k-sign { font-size: .62em; color: #8A7F76; line-height: 1.2; white-space: nowrap; overflow: hidden; }
+.k-planets { flex: 1; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 0 .3rem; font-weight: 700; font-size: .85em; line-height: 1.3; text-align: center; }
+.k-planets .lagna { color: var(--maroon); text-decoration: underline; text-underline-offset: 3px; }
+.k-planets .moon { color: var(--green); }
+.k-cell.is-rasi { background: #EEF7F0; }
+.k-cell.is-lagna { background: #FBEDEA; }
+.k-center {
+  grid-column: 2 / span 2; grid-row: 2 / span 2;
+  background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; font-weight: 700; color: var(--maroon); font-size: 1.15em; line-height: 1.3;
+}
+.k-center small { display: block; overflow-wrap: anywhere; padding: 0 .3rem; color: var(--ink-soft); font-weight: 400; font-size: .62em; margin-top: .2em; }
+.k-legend { font-size: .8rem; color: var(--ink-soft); margin: 0 0 .3rem; }
+.k-legend span { white-space: nowrap; margin-right: .6rem; }
+
+.note-box textarea {
+  width: 100%; min-height: 6rem; padding: .6rem .7rem; margin-top: .2rem;
+  border: 2px solid var(--ink-soft); border-radius: 12px; background: #fff; line-height: 1.5;
+}
+.note-saved { font-size: .85rem; color: var(--green); min-height: 1.4em; margin: .2rem 0 0; }
+
+.seen-info { color: var(--ink-soft); font-size: .88rem; text-align: center; margin: .5rem 0 1rem; }
+.next-btn { margin: .5rem 0 1rem; }
+
+.actions {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 9;
+  background: rgba(251,247,240,.97); border-top: 2px solid var(--line);
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+}
+.actions-inner { max-width: 640px; margin: 0 auto; display: flex; gap: 12px; }
+.act {
+  flex: 1; min-width: 0; min-height: 64px; border-radius: var(--radius);
+  font-weight: 700; font-size: 20px; line-height: 1.25; padding: 6px 6px;
+}
+.act.like { background: #fff; color: var(--green); border: 3px solid var(--green); }
+.act.like[aria-pressed="true"] { background: var(--green); color: #fff; }
+.act.reject { background: #fff; color: var(--red); border: 3px solid var(--red); }
+.act.restore { background: var(--maroon); color: #fff; border: 0; }
+
+/* ---------- toast ---------- */
+.toast {
+  position: fixed; left: 12px; right: 12px; bottom: calc(96px + env(safe-area-inset-bottom)); z-index: 20;
+  max-width: 620px; margin: 0 auto;
+  background: var(--ink); color: #fff; border-radius: var(--radius);
+  padding: .8rem 1rem; box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  display: flex; align-items: center; gap: .8rem; flex-wrap: wrap;
+}
+.toast.low { bottom: calc(16px + env(safe-area-inset-bottom)); }
+.toast-msg { margin: 0; flex: 1 1 10rem; font-weight: 600; }
+.toast-undo {
+  min-height: var(--tap); padding: .2rem 1rem; border-radius: 12px;
+  background: #FFD36E; color: var(--ink); border: 0; font-weight: 700;
+}

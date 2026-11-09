@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ஜாதகங்கள்</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#7A1F14">
+  <meta name="color-scheme" content="light only">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ஜாதகம்">
+  <link rel="stylesheet" href="jathagam.css">
+</head>
+<body>
+
+  <header class="bar">
+    <div class="bar-inner">
+      <button class="back-btn" id="backBtn" type="button" hidden>
+        <span aria-hidden="true">←</span> பின் செல்
+      </button>
+      <h1 class="title" id="title">ஜாதகங்கள்</h1>
+      <div class="size-btns" role="group" aria-label="எழுத்து அளவு">
+        <button type="button" id="smaller" class="size-btn" aria-label="எழுத்தைச் சிறிதாக்கு">அ<span>−</span></button>
+        <button type="button" id="bigger" class="size-btn" aria-label="எழுத்தைப் பெரிதாக்கு">அ<span>+</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="page" tabindex="-1">
+    <p class="loading">ஏற்றுகிறது…</p>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+    <p class="toast-msg" id="toastMsg"></p>
+    <button type="button" class="toast-undo" id="toastUndo" hidden>↺ திரும்பப் பெறு</button>
+  </div>
+
+  <script src="jathagam.js"></script>
+</body>
+</html>
