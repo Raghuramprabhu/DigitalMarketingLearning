@@ -1,6 +1,334 @@
 {
- "updated": "2026-11-08T17:14:16+00:00",
+ "updated": "2026-11-09T02:13:52+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try to answer before you peek.",
+   "q": "What happens to effort as a goal comes into view, and what's that called?",
+   "a": "Effort tends to speed up near the finish. It's called the goal-gradient effect.",
+   "edition": "2026-11-09-am",
+   "order": 29,
+   "id": "2026-11-09-am-029"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Long enough",
+   "body": "Life is long enough, if you know how to use it.",
+   "who": "Seneca, On the Shortness of Life (own rendering)",
+   "edition": "2026-11-09-am",
+   "order": 28,
+   "id": "2026-11-09-am-028"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Ledger of a slow evening",
+   "body": "Credit: one long shadow of the neem.\nCredit: the neighbour's radio, low.\nDebit: nothing.\nCarried forward: the last of the light,\nwhich I did not spend,\nonly watched.",
+   "edition": "2026-11-09-am",
+   "order": 27,
+   "id": "2026-11-09-am-027"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask the agent what it assumed",
+   "body": "When an agent finishes a task, ask one more question: 'List the assumptions you made that I didn't state.' Hidden guesses (which file, which time zone, which version) are where most quiet mistakes live, and naming them takes seconds.",
+   "edition": "2026-11-09-am",
+   "order": 26,
+   "id": "2026-11-09-am-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: sort by more than one thing",
+   "body": "Comparators chain cleanly:\n\npeople.sort(Comparator.comparing(Person::city)\n    .thenComparing(Person::age, Comparator.reverseOrder()));\n\nThis sorts by city, then oldest first within each city. Java's List.sort is stable, so items that are equal on every key keep their original order.",
+   "hook": "Wonder: why does a stable sort let you build multi-key sorts one key at a time?",
+   "edition": "2026-11-09-am",
+   "order": 25,
+   "id": "2026-11-09-am-025"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "CSIRAC, the computer that played music",
+   "body": "CSIRAC, Australia's first stored-program computer, was among the first computers anywhere to play music. Programmers made its speaker pulse at chosen rates to form notes, and it played tunes such as the 'Colonel Bogey March' for an audience in 1951. Today the machine is kept at Museums Victoria in Melbourne.",
+   "q": "Which early computer, now in Melbourne, played music in 1951?",
+   "a": "CSIRAC, Australia's first stored-program computer.",
+   "edition": "2026-11-09-am",
+   "order": 24,
+   "id": "2026-11-09-am-024"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "An admin hour for the small stuff",
+   "body": "Tiny chores (a form, a bill, a reply) each cost a switch of attention. Collect them in one list and give them a single weekly slot, with music and a cup of something. One hour of small wins in a row feels lighter than twenty interruptions scattered across the week.",
+   "edition": "2026-11-09-am",
+   "order": 23,
+   "id": "2026-11-09-am-023"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "A second crazyhouse crown for Awatramani",
+   "body": "Janak Awatramani won the 2026 Chess.com Crazyhouse Championship, his second title in the event. In crazyhouse, captured pieces switch sides and can be dropped back onto the board, so games stay lively to the end.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/2026-crazyhouse-chess-championship-awatramani"
+   },
+   "edition": "2026-11-09-am",
+   "order": 22,
+   "id": "2026-11-09-am-022"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The lotus pond of Sittanavasal",
+   "body": "In a Jain cave temple at Sittanavasal, in Pudukkottai district, faint old paintings still cover the ceiling: a lotus pond with fish, ducks, elephants and people gathering flowers. Dated by scholars to somewhere between the 7th and 9th centuries, they are among the oldest surviving paintings in Tamil Nadu.",
+   "hook": "Wonder: what made those pigments last more than a thousand years on a cave ceiling?",
+   "edition": "2026-11-09-am",
+   "order": 21,
+   "id": "2026-11-09-am-021"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Jupiter spins in under ten hours",
+   "body": "The largest planet has the shortest day in the solar system: Jupiter turns once in about 9 hours 56 minutes. The fast spin flattens it slightly, so it is noticeably wider at the equator than from pole to pole.",
+   "q": "How long is a day on Jupiter?",
+   "a": "About 9 hours 56 minutes, the shortest of any planet.",
+   "edition": "2026-11-09-am",
+   "order": 20,
+   "id": "2026-11-09-am-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "End the scene on a turn",
+   "body": "A useful test for any scene: is something different at the end compared with the start? A hope becomes a doubt, a secret becomes shared, a stranger becomes an ally. If nothing has turned, the scene may be scenery. Keep the best image and fold it into a scene that moves.",
+   "q": "What simple test tells you a scene is earning its place?",
+   "a": "Something has turned: a value or situation has changed between the scene's start and end.",
+   "edition": "2026-11-09-am",
+   "order": 19,
+   "id": "2026-11-09-am-019"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The Pacific is wider than the Moon",
+   "body": "At its widest, from Indonesia to the coast of Colombia, the Pacific Ocean stretches about 19,800 km. That's more than five times the Moon's diameter of about 3,475 km.",
+   "hook": "Wonder: how many Moons could you line up across the Pacific?",
+   "edition": "2026-11-09-am",
+   "order": 18,
+   "id": "2026-11-09-am-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Meta brings Active Memory to Muse users",
+   "body": "Meta is rolling out smaller models derived from its Muse Wonder series to all Muse and Meta AI users, keeping the larger Wonder Full for paid subscribers. The update adds Active Memory, which keeps useful information across conversations, and Active Focus, which helps a task pick up where it left off after an interruption.",
+   "source": {
+    "name": "AI Daily Digest, 8 Nov 2026 (DEV Community)",
+    "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-8-2026-openai-taps-hacktron-for-bug-hunts-muse-wonder-for-everyone-gin"
+   },
+   "edition": "2026-11-09-am",
+   "order": 17,
+   "id": "2026-11-09-am-017"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: counting with Map.merge",
+   "body": "Counting words used to take an if/else. Now it's one line:\n\ncounts.merge(word, 1, Integer::sum);\n\nIf the key is absent, merge stores 1. If it's present, it combines the old and new values with Integer::sum. If the function returns null, the entry is removed.",
+   "q": "What does map.merge(k, 1, Integer::sum) do when k is missing?",
+   "a": "It puts 1 for k. Otherwise it adds 1 to the existing count.",
+   "edition": "2026-11-09-am",
+   "order": 16,
+   "id": "2026-11-09-am-016"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The doorway effect",
+   "body": "Ever walked into a room and forgotten why? Experiments by Gabriel Radvansky and colleagues found that passing through a doorway makes people forget slightly more than walking the same distance in one room. Event boundaries seem to file away the previous 'scene'. Walking back to where you started often brings the thought back.",
+   "hook": "Wonder: does turning a page in a book count as a doorway?",
+   "edition": "2026-11-09-am",
+   "order": 15,
+   "id": "2026-11-09-am-015"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Think, then begin",
+   "body": "Think it through, then begin.\nTo begin and only then think\nis where the fault lies.",
+   "who": "Thirukkural 467 (own rendering)",
+   "edition": "2026-11-09-am",
+   "order": 14,
+   "id": "2026-11-09-am-014"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Checks, captures, threats",
+   "body": "Before every move in a sharp position, scan in a fixed order: every check, then every capture, then every threat, for both sides. The habit is boring, and that is why it works. It stops your eye from locking onto the one move it likes and missing the forcing reply.",
+   "q": "What's the order in the forcing-move scan?",
+   "a": "Checks, captures, threats, for you and for your opponent.",
+   "edition": "2026-11-09-am",
+   "order": 13,
+   "id": "2026-11-09-am-013"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Tennis for Two (1958)",
+   "body": "In October 1958, physicist William Higinbotham set up a game for visitors' day at Brookhaven National Laboratory: an analog computer drew a tennis court side-on on an oscilloscope screen, and two players used knobs and buttons to hit a glowing ball over the net. Visitors queued to play. It is often counted among the first video games, made four years before Spacewar!",
+   "hook": "Wonder: what's the smallest set of rules that still feels like a game?",
+   "edition": "2026-11-09-am",
+   "order": 12,
+   "id": "2026-11-09-am-012"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The stamp collector's duplicates",
+   "body": "Every Sunday the old man sorted his stamps, and every Sunday he set the duplicates aside in an envelope marked LATER. The girl next door asked what Later meant. He thought about it and handed her the envelope. She came back the next week with an album of her own and one stamp he had never seen. He found a fresh envelope and, after a moment, wrote NOW.",
+   "edition": "2026-11-09-am",
+   "order": 11,
+   "id": "2026-11-09-am-011"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A farewell to Swift",
+   "body": "After nearly 22 years watching the sky, NASA's Neil Gehrels Swift Observatory re-entered Earth's atmosphere on 4 November over North Sumatra. Its orbit had sunk faster than expected during the recent solar maximum. To mark its retirement, NASA's Astronomy Picture of the Day shared a mosaic built from Swift's ultraviolet images, a small thank-you for a career spent catching the universe's brightest flashes.",
+   "source": {
+    "name": "NASA APOD, 6 Nov 2026",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-6-a-farewell-to-swift/"
+   },
+   "edition": "2026-11-09-am",
+   "order": 10,
+   "id": "2026-11-09-am-010"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Say the time out loud",
+   "body": "A vague 'I'll send it later' slips away easily. A spoken 'I'll send it by 4' to a colleague or friend works better. A specific time plus another person who heard it gives you a gentle outside anchor, so you don't have to hold the deadline in your head alone.",
+   "edition": "2026-11-09-am",
+   "order": 9,
+   "id": "2026-11-09-am-009"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A giraffe's neck has seven bones",
+   "body": "A giraffe has seven neck vertebrae, the same number as you, a mouse or a whale. Each of the giraffe's is just much longer, up to about 25 cm.",
+   "q": "How many neck vertebrae does a giraffe have?",
+   "a": "Seven, the same as almost every mammal, including humans.",
+   "edition": "2026-11-09-am",
+   "order": 8,
+   "id": "2026-11-09-am-008"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Google's ADK 2.14 moves features to stable",
+   "body": "Google released Agent Development Kit 2.14.0, a major version that moves several experimental pieces to stable: execution environments, A2A (agent-to-agent) protocol support, evaluation modules and the core runtime. It also adds multi-run evaluation, so you can run the same test several times and see how consistent an agent is.",
+   "hook": "Wonder: if an agent passes a test once, how many reruns before you trust it?",
+   "source": {
+    "name": "AI Daily Digest, 8 Nov 2026 (DEV Community)",
+    "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-8-2026-openai-taps-hacktron-for-bug-hunts-muse-wonder-for-everyone-gin"
+   },
+   "edition": "2026-11-09-am",
+   "order": 7,
+   "id": "2026-11-09-am-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "A temple without brick, timber, metal or mortar",
+   "body": "At Mandagapattu, near Villupuram in Tamil Nadu, the Pallava king Mahendravarman I left an early 7th-century inscription in a small cave shrine. It proudly says the temple was made without brick, timber, metal or mortar. It was cut straight from the rock, an early step toward the rock-cut wonders later made at Mamallapuram.",
+   "q": "What four materials does the Mandagapattu inscription say were not used?",
+   "a": "Brick, timber, metal and mortar. The shrine was cut from living rock.",
+   "edition": "2026-11-09-am",
+   "order": 6,
+   "id": "2026-11-09-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Hedged requests: ask twice, politely",
+   "body": "Slow outliers dominate tail latency. A hedged request sends a query to one replica and, if no answer arrives within a short delay (say the 95th-percentile time), sends the same query to a second replica and uses whichever reply comes first. In Google's 'The Tail at Scale' (Dean & Barroso, 2013), this cut a benchmark's 99.9th-percentile latency from 1,800 ms to 74 ms while adding only about 2% more requests.",
+   "hook": "Wonder: why does waiting a little before the second request cost far less than sending both at once?",
+   "edition": "2026-11-09-am",
+   "order": 5,
+   "id": "2026-11-09-am-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Seniors halfway in Serbia",
+   "body": "The FIDE World Senior Championships in Vrnjačka Banja are past the halfway mark, with six rounds left and the final round on 14 November. In the Women 65+ section, WGM Galina Strutinskaya has a perfect 5/5. In Women 50+, Monica Calzetta Ruiz leads by half a point over Pia Cramling, and the Open 65+ has a five-way tie that includes Keith Arkell.",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/fide-world-senior-championships-2026-six-rounds-left-four-titles-at-stake/"
+   },
+   "edition": "2026-11-09-am",
+   "order": 4,
+   "id": "2026-11-09-am-004"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The goal-gradient effect",
+   "body": "We tend to speed up as a goal comes into view. In a 2006 study, coffee-shop customers bought coffees faster the closer their loyalty card got to a free drink. A card with 12 stamps, two already filled in, was completed faster than a blank 10-stamp card, even though both needed ten purchases.",
+   "q": "Why did the 12-stamp card with two free stamps get finished faster?",
+   "a": "It felt further along. Visible progress pulls effort forward (the goal-gradient effect).",
+   "edition": "2026-11-09-am",
+   "order": 3,
+   "id": "2026-11-09-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Monday, 6 am",
+   "body": "The milk packet waits on the step,\ncool as a promise.\nA crow tries one word, then another.\nThe week hasn't happened yet —\nfor now it is only this:\na tap running,\nthe kettle clearing its throat.",
+   "edition": "2026-11-09-am",
+   "order": 2,
+   "id": "2026-11-09-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Microsoft open-sources a package manager for agents",
+   "body": "Microsoft released APM (Agent Package Manager) under the MIT licence. You list an agent's skills, prompts, instructions, plugins and MCP servers in an apm.yml file, and APM installs them into supported tools such as GitHub Copilot, Claude Code and Cursor, with a lockfile so a setup can be reproduced exactly.",
+   "q": "What does APM's lockfile give you?",
+   "a": "A reproducible agent setup: the same skills and tool versions every time it's installed.",
+   "source": {
+    "name": "AI Daily Digest, 8 Nov 2026 (DEV Community)",
+    "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-8-2026-openai-taps-hacktron-for-bug-hunts-muse-wonder-for-everyone-gin"
+   },
+   "edition": "2026-11-09-am",
+   "order": 1,
+   "id": "2026-11-09-am-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A mountain at the Moon's south pole",
+   "body": "NASA's Astronomy Picture of the Day for 7 November showed the De Gerlache–Kocher massif, a mountain block rising about 4 km near the Moon's south pole. The photo, taken from Earth on 31 October, caught it at a lucky angle thanks to libration, the Moon's slow wobble. Nearby craters that never see sunlight probably hold water ice, and the massif has been considered as a landing site for future Artemis crews.",
+   "hook": "Wonder: how can a crater on a sunlit world stay dark for billions of years?",
+   "source": {
+    "name": "NASA APOD",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-7-de-gerlache-kocher-massif/"
+   },
+   "edition": "2026-11-09-am",
+   "order": 0,
+   "id": "2026-11-09-am-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
