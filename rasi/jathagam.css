@@ -213,6 +213,7 @@ button { cursor: pointer; }
 .note-saved { font-size: .85rem; color: var(--green); min-height: 1.4em; margin: .2rem 0 0; }
 
 .seen-info { color: var(--ink-soft); font-size: .88rem; text-align: center; margin: .5rem 0 1rem; }
+.source-info { color: var(--ink-soft); font-size: .8rem; margin: 0 .2rem .4rem; overflow-wrap: anywhere; }
 .next-btn { margin: .5rem 0 1rem; }
 
 .actions {

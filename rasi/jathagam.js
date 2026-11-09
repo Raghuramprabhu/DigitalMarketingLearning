@@ -140,6 +140,7 @@
     if (hasValue(it.nakshatram)) p.push(it.nakshatram + ' நட்சத்திரம்' + (it.padam ? ', ' + it.padam + ' ஆம் பாதம்' : ''));
     if (hasValue(it.lagnam)) p.push(it.lagnam + ' லக்னம்');
     if (hasValue(it.gothram)) p.push(it.gothram + ' கோத்திரம்');
+    if (hasValue(it.sect)) p.push(it.sect);
     if (hasValue(it.dob)) p.push('பிறந்த தேதி ' + formatDate(it.dob) + ', ' + weekdayOf(it.dob));
     if (hasValue(it.tob)) p.push('பிறந்த நேரம் ' + formatTime(it.tob));
     if (hasValue(it.pob)) p.push('பிறந்த ஊர் ' + it.pob);
@@ -147,6 +148,8 @@
     if (hasValue(it.dosham)) p.push('தோஷம் ' + it.dosham);
     if (hasValue(it.education)) p.push('படிப்பு ' + it.education);
     if (hasValue(it.job)) p.push('வேலை ' + it.job);
+    if (hasValue(it.workplace)) p.push('பணியிடம் ' + it.workplace);
+    if (hasValue(it.income)) p.push('வருமானம் ' + it.income);
     if (hasValue(it.height)) p.push('உயரம் ' + it.height);
     return p.join('. ') + '.';
   }
@@ -224,7 +227,7 @@
     }[st];
     var age = ageOf(it.dob);
     var line2 = [hasValue(it.rasi) ? '<b>' + esc(it.rasi) + '</b> ராசி' : '', esc(it.nakshatram)].filter(Boolean).join(' · ');
-    var line3 = [age != null ? age + ' வயது' : '', esc(it.job || it.pob)].filter(Boolean).join(' · ');
+    var line3 = [age != null ? age + ' வயது' : '', esc(it.workplace || it.job || it.pob)].filter(Boolean).join(' · ');
     var html = '<li><a class="card is-' + st + (it.id === lastViewedId ? ' just-seen' : '') + '" href="#/j/' + encodeURIComponent(it.id) + '" data-go>' +
       badge +
       '<span class="card-name">' + esc(it.name) + '</span>' +
@@ -375,14 +378,17 @@
       fact('நட்சத்திரம்', esc(it.nakshatram) + (it.padam ? ', ' + esc(it.padam) + '-ஆம் பாதம்' : '')) +
       fact('லக்னம்', esc(it.lagnam)) +
       fact('கோத்திரம்', esc(it.gothram)) +
+      fact('பிரிவு', esc(it.sect)) +
       fact('பிறந்த தேதி', hasValue(it.dob) ? formatDate(it.dob) : '', weekdayOf(it.dob)) +
       fact('பிறந்த நேரம்', hasValue(it.tob) ? formatTime(it.tob) : '') +
       fact('பிறந்த ஊர்', esc(it.pob)) +
+      fact('பூர்வீகம்', esc(it.native)) +
       fact('வயது', age != null ? age + ' வயது' : '') +
       fact('தோஷம்', dosham, '', doshamWarn ? 'warn' : '') +
       '</dl></section>';
 
-    var fam = fact('படிப்பு', esc(it.education)) + fact('வேலை', esc(it.job)) + fact('உயரம்', esc(it.height)) +
+    var fam = fact('படிப்பு', esc(it.education)) + fact('வேலை', esc(it.job)) + fact('பணியிடம்', esc(it.workplace)) +
+      fact('வருமானம்', esc(it.income)) + fact('உயரம்', esc(it.height)) + fact('பெற்றோர்', esc(it.parents)) +
       fact('தந்தை', esc(it.father)) + fact('தாய்', esc(it.mother)) + fact('உடன்பிறந்தோர்', esc(it.siblings));
     if (fam) html += '<section class="block"><h2>படிப்பு, வேலை, குடும்பம்</h2><dl class="facts">' + fam + '</dl></section>';
 
@@ -394,6 +400,7 @@
       '<textarea id="myNote" data-id="' + esc(id) + '" placeholder="இங்கே எழுதலாம். உதா: தொலைபேசியில் பேசினோம்.">' + esc(m.note || '') + '</textarea>' +
       '<p class="note-saved" id="noteSaved" aria-live="polite"></p></section>';
 
+    if (hasValue(it.source)) html += '<p class="source-info">ஆதாரம்: ' + esc(it.source) + '</p>';
     html += '<p class="seen-info">முதலில் பார்த்தது: ' + relDay(m.seen) + '</p>';
 
     var nx = nextNew(id);

@@ -2,7 +2,7 @@
 
 Live page: https://raghuramprabhu.github.io/DigitalMarketingLearning/rasi/
 
-Raghu pastes horoscope details in chat (usually English). Any Claude session asked to add them follows these steps.
+Raghu pastes horoscope details in chat (usually English): photos of matrimony ads, profile screenshots, or PDF lists such as the Swastik chart. Phone numbers, emails and photos are not copied onto the page; the `source` field keeps the registration number so the original can be looked up. Any Claude session asked to add them follows these steps.
 
 ## 1. Translate into Tamil and add to `rasi/data/jathagams.json`
 - Append new entries to `items`. Never change or reuse an existing `id`: the reader's seen / liked / hidden marks and notes are stored on his phone against that id.
@@ -22,7 +22,10 @@ Raghu pastes horoscope details in chat (usually English). Any Claude session ask
 | `dob` | `1995-05-20` | ISO date; the page shows the Tamil date, weekday and age |
 | `tob` | `06:45` | 24-hour; the page shows காலை / மதியம் / மாலை / இரவு |
 | `pob` | `மயிலாப்பூர், சென்னை` | |
-| `education`, `job`, `height`, `father`, `mother`, `siblings` | | free Tamil text |
+| `sect` | `ஐயர் — வடமாள்` | sect / subsect |
+| `native` | `தஞ்சாவூர்` | native place, if different from birth place |
+| `education`, `job`, `workplace`, `income`, `height`, `parents`, `father`, `mother`, `siblings` | | free Tamil text (`height` may include weight: `5 அடி 4 அங்குலம் · 58 கிலோ`) |
+| `source` | `ஸ்வஸ்திக் பட்டியல் … · GIY2601024` | where the profile came from, with its registration number |
 | `dosham` | `இல்லை` or `செவ்வாய் தோஷம் (7-ஆம் இடம்)` | anything other than `இல்லை` shows in red |
 | `notes` | | extra details from the source, translated |
 | `kattam` | `{ "2": ["La","Su","Me"], "4": ["Mo"] }` | rasi number (1 = மேஷம் … 12 = மீனம்) → planet codes `La Su Mo Ma Me Ju Ve Sa Ra Ke` |
@@ -36,6 +39,9 @@ Nakshatram spellings: அசுவினி, பரணி, கார்த்த
 2. Names and places: write in Tamil script, keep the spelling the family uses.
 3. Do not add anything that is not in the source. If something is unclear, ask Raghu instead of guessing.
 4. Check that the nakshatram belongs to the rasi given (e.g. பூசம் is only in கடகம்). If it doesn't, ask Raghu.
+
+### Bulk lists (Swastik PDF)
+The 31 Oct 2026 Swastik PDF was converted with a script: words were read by column position (`pdftotext -bbox`), then star / rasi / gothram / places / degrees mapped to Tamil with lookup tables. Only the Iyer sections were included (Raghu's choice). Ids are `sw-<regn>`; photo/ad entries are `img-…`.
 
 ## 2. Check and publish
 ```bash
