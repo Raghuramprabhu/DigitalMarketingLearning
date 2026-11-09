@@ -373,6 +373,14 @@
 
     if (sameGothram(it)) html += '<p class="flag" style="margin:0 0 1rem">⚠ இது நம் கோத்திரமே (' + esc(it.gothram) + ')</p>';
 
+    // phone numbers: big tap-to-call buttons, near the top
+    if (Array.isArray(it.phones) && it.phones.length) {
+      html += '<section class="block contact"><h2>📞 தொடர்புக்கு</h2>' + it.phones.map(function (ph) {
+        return '<a class="call-btn" href="tel:' + esc(ph.tel) + '"><span class="call-num">📞 ' + esc(ph.show || ph.tel) + '</span>' +
+          (ph.label ? '<span class="call-label">' + esc(ph.label) + '</span>' : '') + '</a>';
+      }).join('') + '</section>';
+    }
+
     html += '<section class="block"><h2>ஜாதக விவரம்</h2><dl class="facts">' +
       fact('ராசி', esc(it.rasi)) +
       fact('நட்சத்திரம்', esc(it.nakshatram) + (it.padam ? ', ' + esc(it.padam) + '-ஆம் பாதம்' : '')) +

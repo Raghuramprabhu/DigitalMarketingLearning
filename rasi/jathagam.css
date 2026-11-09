@@ -245,3 +245,13 @@ button { cursor: pointer; }
   min-height: var(--tap); padding: .2rem 1rem; border-radius: 12px;
   background: #FFD36E; color: var(--ink); border: 0; font-weight: 700;
 }
+
+/* ---------- phone numbers ---------- */
+.contact { border-color: var(--green); }
+.call-btn {
+  display: flex; flex-direction: column; justify-content: center;
+  min-height: 3.6rem; margin: .5rem 0; padding: .5rem 1rem;
+  background: var(--green); color: #fff; text-decoration: none; border-radius: var(--radius);
+}
+.call-num { font-size: min(1.15rem, 24px); font-weight: 700; white-space: nowrap; }
+.call-label { font-size: .85rem; opacity: .95; }

@@ -2,7 +2,7 @@
 
 Live page: https://raghuramprabhu.github.io/DigitalMarketingLearning/rasi/
 
-Raghu pastes horoscope details in chat (usually English): photos of matrimony ads, profile screenshots, or PDF lists such as the Swastik chart. Phone numbers, emails and photos are not copied onto the page; the `source` field keeps the registration number so the original can be looked up. Any Claude session asked to add them follows these steps.
+Raghu pastes horoscope details in chat (usually English): photos of matrimony ads, profile screenshots, or PDF lists such as the Swastik chart. Phone numbers ARE included (Raghu asked for them: they are the most important part); emails and photos are not copied. Any Claude session asked to add them follows these steps.
 
 ## 1. Translate into Tamil and add to `rasi/data/jathagams.json`
 - Append new entries to `items`. Never change or reuse an existing `id`: the reader's seen / liked / hidden marks and notes are stored on his phone against that id.
@@ -25,6 +25,7 @@ Raghu pastes horoscope details in chat (usually English): photos of matrimony ad
 | `sect` | `ஐயர் — வடமாள்` | sect / subsect |
 | `native` | `தஞ்சாவூர்` | native place, if different from birth place |
 | `education`, `job`, `workplace`, `income`, `height`, `parents`, `father`, `mother`, `siblings` | | free Tamil text (`height` may include weight: `5 அடி 4 அங்குலம் · 58 கிலோ`) |
+| `phones` | `[{"tel": "+919842160903", "show": "+91 98421 60903", "label": "தொடர்பு எண்"}]` | shown as big tap-to-call buttons; `tel` must be international format |
 | `source` | `ஸ்வஸ்திக் பட்டியல் … · GIY2601024` | where the profile came from, with its registration number |
 | `dosham` | `இல்லை` or `செவ்வாய் தோஷம் (7-ஆம் இடம்)` | anything other than `இல்லை` shows in red |
 | `notes` | | extra details from the source, translated |

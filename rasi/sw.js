@@ -1,6 +1,6 @@
 /* Network first, so new jathagams show up as soon as they are pushed.
    If the phone is offline, the last copy that loaded is shown instead. */
-var CACHE = 'jathagam-v2';
+var CACHE = 'jathagam-v3';
 var SHELL = ['./', 'index.html', 'jathagam.css', 'jathagam.js', 'data/jathagams.json', 'manifest.webmanifest', 'icons/icon-192.png'];
 
 self.addEventListener('install', function (e) {
