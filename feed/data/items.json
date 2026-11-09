@@ -1,6 +1,359 @@
 {
- "updated": "2026-11-09T02:13:52+00:00",
+ "updated": "2026-11-09T17:16:53+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try to answer before you peek.",
+   "q": "What is 'successive relearning', and which two habits does it combine?",
+   "a": "Quizzing to one correct answer per item, repeated across several days. It combines retrieval practice and spacing.",
+   "edition": "2026-11-09-pm",
+   "order": 30,
+   "id": "2026-11-09-pm-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night rain, Monday",
+   "body": "The rain arrives after dinner\nlike a guest who knows the way,\ntaps the window twice,\nand settles on the roof to talk\nabout nothing much,\nfor hours,\nin a voice that asks for no reply.",
+   "edition": "2026-11-09-pm",
+   "order": 29,
+   "id": "2026-11-09-pm-029"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Show the agent one finished example",
+   "body": "Describing the output you want takes a paragraph; showing one good example takes a moment and is usually clearer. Paste a single finished sample (a commit message, a summary, a table row) and say 'match this shape'. Agents copy structure faithfully, so one example often settles format questions that a page of rules leaves open.",
+   "hook": "Wonder: when could a single example mislead more than it helps?",
+   "edition": "2026-11-09-pm",
+   "order": 28,
+   "id": "2026-11-09-pm-028"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Everyone sees the same Moon phase",
+   "body": "At any moment, the Moon shows the same phase to everyone on Earth, because the phase depends only on where the Moon is relative to the Sun and Earth. What changes with where you stand is its tilt: a crescent can look like a smile near the equator and stand more upright farther north or south, and it appears flipped between the hemispheres.",
+   "hook": "Wonder: what would the Moon's phase look like to someone standing on the Moon?",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/moon-phases/do-we-all-see-the-same-moon-phase/"
+   },
+   "edition": "2026-11-09-pm",
+   "order": 27,
+   "id": "2026-11-09-pm-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: validate a record in its compact constructor",
+   "body": "Records can check their data without repeating every field:\n\nrecord Range(int lo, int hi) {\n    Range {\n        if (lo > hi) throw new IllegalArgumentException(\"lo > hi\");\n    }\n}\n\nThe compact constructor has no parameter list; the fields are assigned automatically after its body runs. You can even normalise values there by reassigning the parameters, like lo = Math.max(0, lo).",
+   "hook": "Wonder: why can you reassign the parameter but not this.lo inside a compact constructor?",
+   "edition": "2026-11-09-pm",
+   "order": 26,
+   "id": "2026-11-09-pm-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "At dawn",
+   "body": "At dawn, when you are slow to rise, keep this thought ready: I am getting up to do the work of a human being. Why grumble, if I am going to do what I was made for?",
+   "who": "Marcus Aurelius, Meditations 5.1 (own rendering)",
+   "edition": "2026-11-09-pm",
+   "order": 25,
+   "id": "2026-11-09-pm-025"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Prophylaxis: ask what they want",
+   "body": "Before choosing your move, ask one quiet question: 'If it were my opponent's turn, what would they play?' Aron Nimzowitsch called the habit of stopping that plan before it starts prophylaxis. Often the best move isn't an attack at all, just a pawn step or a rook shift that makes their best idea stop working.",
+   "q": "What is prophylaxis in chess?",
+   "a": "Preventing your opponent's plan before they can carry it out.",
+   "edition": "2026-11-09-pm",
+   "order": 24,
+   "id": "2026-11-09-pm-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "QWERTY came from a typewriter",
+   "body": "The QWERTY layout comes from the Sholes and Glidden typewriter, sold by Remington from 1874. Christopher Latham Sholes rearranged keys over several years of prototypes. The popular story says it was meant to slow typists down; historians think it was more about keeping often-paired letters apart so the typebars jammed less, and about how telegraph operators used early machines.",
+   "q": "Which machine gave us the QWERTY layout?",
+   "a": "The Sholes and Glidden typewriter, sold by Remington from 1874.",
+   "edition": "2026-11-09-pm",
+   "order": 23,
+   "id": "2026-11-09-pm-023"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Tidy one category, not one room",
+   "body": "'Clean the room' has no edges. 'Put away every cup' does. Pick one category (cups, chargers, clothes on the chair) and finish just that. It's easy to see when you're done, and the room often looks noticeably better after just two categories.",
+   "hook": "Wonder: which single category would change your desk the most?",
+   "edition": "2026-11-09-pm",
+   "order": 22,
+   "id": "2026-11-09-pm-022"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Carl Sagan was born on this day",
+   "body": "Carl Sagan was born on 9 November 1934 in Brooklyn. He helped design the plaques and Golden Records carried by the Pioneer and Voyager spacecraft and brought the cosmos to millions through the TV series Cosmos. He also suggested Voyager 1 turn its camera homeward in 1990, giving us the 'Pale Blue Dot' image.",
+   "q": "Which famous 1990 image did Carl Sagan push Voyager 1 to take?",
+   "a": "The 'Pale Blue Dot', Earth seen from about 6 billion km away.",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/space/carl-sagan-birthday-november-9-1934/"
+   },
+   "edition": "2026-11-09-pm",
+   "order": 21,
+   "id": "2026-11-09-pm-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Give your character a habit",
+   "body": "A small, repeated habit tells readers more than a paragraph of description: a man who folds every receipt into squares, a grandmother who taps the doorframe twice before leaving. Show it early, then let it change once at the moment that matters. When the habit breaks, readers feel the character break too.",
+   "hook": "Wonder: what habit of yours would a stranger notice first?",
+   "edition": "2026-11-09-pm",
+   "order": 20,
+   "id": "2026-11-09-pm-020"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "A Pallava king who wrote a comedy",
+   "body": "Mahendravarman I, the 7th-century Pallava king, is credited with writing Mattavilasa Prahasana ('The Farce of Drunken Revelry'), a one-act Sanskrit comedy. Its plot follows a lost begging bowl and the muddle of accusations that follows. Plays from the tradition are still staged in Kerala's Koodiyattam theatre.",
+   "q": "What kind of play did the Pallava king Mahendravarman I write?",
+   "a": "A one-act Sanskrit comedy (farce), Mattavilasa Prahasana.",
+   "edition": "2026-11-09-pm",
+   "order": 19,
+   "id": "2026-11-09-pm-019"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Successive relearning",
+   "body": "Combine two strong habits: retrieval and spacing. Quiz yourself until you get each item right once, then stop. Come back another day and do it again, and again a few days later. Research by Katherine Rawson and John Dunlosky found this 'successive relearning' gives durable memory for surprisingly little extra time, because later sessions get quicker.",
+   "hook": "Wonder: why do the later relearning sessions take less time than the first?",
+   "edition": "2026-11-09-pm",
+   "order": 18,
+   "id": "2026-11-09-pm-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Database agents for Oracle, Postgres and more",
+   "body": "Tessell launched three agents built with Google Gemini on Google Cloud: an Ops Agent for recovery and scaling, a Governance Agent for compliance settings, and a Migrate Agent for taking inventory before a move. They cover Oracle, SQL Server, PostgreSQL and MySQL, with an enterprise preview planned this quarter.",
+   "source": {
+    "name": "AI Agent Store",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-09-pm",
+   "order": 17,
+   "id": "2026-11-09-pm-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Venus, not Mercury, is the hottest planet",
+   "body": "Mercury is closest to the Sun, but Venus is hotter: its surface sits around 465 °C, day and night. Its thick carbon-dioxide atmosphere traps heat so well that it's hot enough to melt lead. Mercury, with almost no air, swings from scorching days to freezing nights.",
+   "q": "Which planet has the hottest surface, and why?",
+   "a": "Venus, because its thick CO2 atmosphere traps heat.",
+   "edition": "2026-11-09-pm",
+   "order": 16,
+   "id": "2026-11-09-pm-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Write-through vs write-behind caches",
+   "body": "A write-through cache writes to the cache and the database together, so reads after writes are fresh, but every write pays the database's cost. A write-behind (write-back) cache accepts the write in the cache and flushes to the database later in batches: fast, but a crash before the flush can lose data. Choose by asking: what does losing the last few seconds of writes cost me?",
+   "q": "What's the main risk of a write-behind cache?",
+   "a": "Writes not yet flushed to the database can be lost if the cache fails.",
+   "edition": "2026-11-09-pm",
+   "order": 15,
+   "id": "2026-11-09-pm-015"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The jasmine seller's last string",
+   "body": "At eight, the jasmine seller had one string left, too short to sell. She looked at the bus stop: a tired nurse, a boy with a schoolbag, an old man with a cloth bag of onions. She cut the string into three and handed them out without a word. The bus came. Three people rode home smelling of flowers and didn't know why they were smiling.",
+   "edition": "2026-11-09-pm",
+   "order": 14,
+   "id": "2026-11-09-pm-014"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Bullet Grandpa takes a game from Dubov",
+   "body": "In the Season 1 final of Chess.com's 100-0 Project, Arizona amateur Josh Smith, known online as Bullet Grandpa, won a game against super-GM Daniil Dubov in game 28. That one win meant there would be no 100-0 sweep. A small, happy reminder that every game starts level.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/bullet-grandpa-wins-2026-100-project-season-1"
+   },
+   "edition": "2026-11-09-pm",
+   "order": 13,
+   "id": "2026-11-09-pm-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Rubin finds a world that orbits backwards",
+   "body": "EarthSky reports that the Vera C. Rubin Observatory has found an object beyond Neptune on a retrograde orbit, travelling around the Sun in the opposite direction to the planets. Almost everything in the solar system circles the same way, a leftover from the spinning disc it formed in, so the backward ones are clues to old gravitational nudges.",
+   "hook": "Wonder: what could flip a small world's orbit around?",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/space/rubin-retrograde-object-far-solar-system-r631/"
+   },
+   "edition": "2026-11-09-pm",
+   "order": 12,
+   "id": "2026-11-09-pm-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Ripe fruit",
+   "body": "To speak harsh words when kind ones are at hand is like picking unripe fruit while ripe fruit hangs on the same tree.",
+   "who": "Thiruvalluvar, Thirukkural 100 (own rendering)",
+   "edition": "2026-11-09-pm",
+   "order": 11,
+   "id": "2026-11-09-pm-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Hamming's weekend problem",
+   "body": "At Bell Labs in the late 1940s, Richard Hamming ran long jobs on a relay computer over weekends. When the machine detected an error, it simply dropped his job, and he'd come back on Monday to nothing. Annoyed, he asked: if a machine can detect an error, why can't it fix one? His 1950 paper on error-correcting codes answered that, and Hamming codes still help protect data in memory today.",
+   "q": "What question led Richard Hamming to invent error-correcting codes?",
+   "a": "If the machine can detect an error, why can't it locate and correct it?",
+   "edition": "2026-11-09-pm",
+   "order": 10,
+   "id": "2026-11-09-pm-010"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Watching an agent from your phone",
+   "body": "DigitalOcean introduced Cuttlefish, an iPhone app for its Managed Agents. You can follow an agent's live session, approve or deny the tools it wants to use, steer it, or stop it. Managed Agents is still in public preview.",
+   "hook": "Wonder: which agent actions would you always want to approve yourself?",
+   "source": {
+    "name": "AI Agent Store",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-09-pm",
+   "order": 9,
+   "id": "2026-11-09-pm-009"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Measure chores in songs",
+   "body": "Minutes are abstract; songs are not. Put on one song and do the dishes until it ends. A song is about three or four minutes, has a clear finish line, and makes time something you can hear. If you want to keep going, play another; if not, you've still done a full song's worth.",
+   "q": "Why can a song work better than a minute timer for starting a chore?",
+   "a": "It makes time audible and gives a clear, short finish line.",
+   "edition": "2026-11-09-pm",
+   "order": 8,
+   "id": "2026-11-09-pm-008"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Sound is faster underwater",
+   "body": "In air at room temperature, sound travels about 343 metres per second. In seawater it travels about 1,500 metres per second, more than four times as fast, because water is far stiffer, which more than makes up for being denser. That's one reason whale calls can carry across whole ocean basins.",
+   "hook": "Wonder: is sound even faster through steel?",
+   "edition": "2026-11-09-pm",
+   "order": 7,
+   "id": "2026-11-09-pm-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Poompuhar, the port at the river's mouth",
+   "body": "Poompuhar, also called Kaveripattinam, sat where the Kaveri meets the sea and was a major early Chola port. Sangam-era works such as Pattinappalai and the Silappatikaram describe its busy markets, warehouses and ships. The Silappatikaram's heroine Kannagi and her husband Kovalan begin their story in this city.",
+   "q": "Which Chola port city, at the Kaveri's mouth, opens the Silappatikaram?",
+   "a": "Poompuhar (Kaveripattinam).",
+   "edition": "2026-11-09-pm",
+   "order": 6,
+   "id": "2026-11-09-pm-006"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The production effect",
+   "body": "Words you say out loud are remembered better than words you read silently. Researchers call this the production effect: saying, writing or typing an item makes it stand out from the rest. It works best when you produce only the key items, not everything, so the important lines become the distinctive ones.",
+   "hook": "Wonder: why does the effect shrink if you read every single word aloud?",
+   "edition": "2026-11-09-pm",
+   "order": 5,
+   "id": "2026-11-09-pm-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Vector clocks: who knew what, when",
+   "body": "A Lamport clock gives one number per event, which orders events but can't tell you whether two updates were concurrent. A vector clock keeps one counter per node. Each node bumps its own entry on every event and takes the element-wise maximum when it receives a message. If every entry of A is less than or equal to B's, then A happened before B; if neither dominates, the two were concurrent, and you have a real conflict to resolve.",
+   "q": "With vector clocks, how do you tell two events were concurrent?",
+   "a": "Neither vector is less-than-or-equal to the other in every entry.",
+   "edition": "2026-11-09-pm",
+   "order": 4,
+   "id": "2026-11-09-pm-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "No moon",
+   "body": "Tonight the moon took a day off.\nThe sky, unsupervised,\nlet every small star speak.\nI stood on the terrace a long time,\nlistening with my eyes.",
+   "edition": "2026-11-09-pm",
+   "order": 3,
+   "id": "2026-11-09-pm-003"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "India heads to the Asian Nations Cup",
+   "body": "The Asian Nations Chess Cup runs in Abu Dhabi from 9 to 18 November. India's squad includes GMs Nihal Sarin, Aravindh Chithambaram, V Pranav and M Pranesh, with WGM Vantika Agarwal, WIMs Guntaka Aamukta and Sirin Kalyani, WFM Shubhi Gupta and WCM Modipalli Deekshitha.",
+   "hook": "Wonder: in a team event, why does board order matter so much?",
+   "source": {
+    "name": "Telangana Today",
+    "url": "https://telanganatoday.com/indian-chess-team-set-for-asian-nations-cup-in-abu-dhabi"
+   },
+   "edition": "2026-11-09-pm",
+   "order": 2,
+   "id": "2026-11-09-pm-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "A 284-billion-parameter model on a CPU-only machine",
+   "body": "An open-source project called llama-modchip squeezes DeepSeek V4-Flash, a 284B-parameter model, into about 57 GB using a custom quantisation of roughly 1.7 bits per weight. Its authors report it running on 64 GB machines with no GPU (AMD Zen 5, Apple Silicon and ARM64) at around 9 to 15 tokens per second. Big models are slowly becoming things you can run at home.",
+   "q": "About how many bits per weight does llama-modchip use to fit a 284B model in ~57 GB?",
+   "a": "Roughly 1.7 bits per weight.",
+   "source": {
+    "name": "AI Weekly",
+    "url": "https://aiweekly.co/alerts/llama-modchip-runs-a-284b-deepseek-v4-flash-model-in-57gb-of-ram-on-a-cpu-only"
+   },
+   "edition": "2026-11-09-pm",
+   "order": 1,
+   "id": "2026-11-09-pm-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "New Moon tonight: the darkest skies of the month",
+   "body": "The Moon is new on 9 November, so the next few evenings are moonless and dark. EarthSky's November guide notes Mars and Jupiter drawing closer together in the sky. A clear night this week is a good one to step outside, let your eyes adjust for ten minutes, and see how many more stars appear.",
+   "hook": "Wonder: why does a new Moon rise and set with the Sun, so it never lights the night?",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/astronomy-essentials/visible-planets-tonight-mars-jupiter-venus-saturn-mercury/"
+   },
+   "edition": "2026-11-09-pm",
+   "order": 0,
+   "id": "2026-11-09-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
