@@ -1,6 +1,347 @@
 {
- "updated": "2026-11-10T02:14:24+00:00",
+ "updated": "2026-11-10T17:17:19+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Before you scroll on, try to recall: what made the Cat's Tail near Beta Pictoris? What does a bulkhead protect a service from? Who built a calculator for his tax-official father?",
+   "q": "Who built the Pascaline, and for whom?",
+   "a": "Blaise Pascal, around 1642, to help his father with tax sums.",
+   "edition": "2026-11-10-pm",
+   "order": 29,
+   "id": "2026-11-10-pm-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Evening, the last bus",
+   "body": "The conductor counts his coins\ninto little towers by the window.\nNobody is in a hurry now.\nThe road hums, the jasmine on the dashboard\nnods at every turn,\nand the town, one lit door at a time,\ngoes home.",
+   "edition": "2026-11-10-pm",
+   "order": 28,
+   "id": "2026-11-10-pm-028"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Stripe's internal helper agent, built in about a week",
+   "body": "Stripe described Kai, a company-wide productivity agent built in roughly a week on LangChain's LangGraph and Deep Agents tools. It reportedly reached around 5,000 internal users within about a month. The appeal of small, quick internal agents is that they meet people where their daily work already happens.",
+   "q": "Roughly how long did it take Stripe to build its internal agent Kai?",
+   "a": "About a week.",
+   "source": {
+    "name": "AIBriefs",
+    "url": "https://aibriefs.news/card/2d372091-9333-49b6-8d24-b87ca352a132"
+   },
+   "edition": "2026-11-10-pm",
+   "order": 27,
+   "id": "2026-11-10-pm-027"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The turtle that breathes through its tail end",
+   "body": "Australia's Fitzroy River turtle can take up oxygen through its cloaca, the opening at the back of its body, drawing in water across thin, blood-rich surfaces. This lets it stay underwater for very long stretches without coming up for air.",
+   "hook": "Wonder: how many other ways of breathing has evolution tried?",
+   "edition": "2026-11-10-pm",
+   "order": 26,
+   "id": "2026-11-10-pm-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Optimistic locking: check the version, then write",
+   "body": "Instead of locking a row while a user edits it, keep a version number. Read the row with its version, and when saving, update only if the version is still the same, bumping it as you go. If someone else saved first, nothing changes and you retry with fresh data. It works beautifully when conflicts are rare.",
+   "q": "In optimistic locking, what tells you someone else saved first?",
+   "a": "The version number no longer matches, so the update affects zero rows.",
+   "edition": "2026-11-10-pm",
+   "order": 25,
+   "id": "2026-11-10-pm-025"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "A staff on slippery ground",
+   "body": "The words of good people are like a walking stick on slippery ground: they keep you on your feet.",
+   "who": "Thirukkural 415 (own rendering)",
+   "edition": "2026-11-10-pm",
+   "order": 24,
+   "id": "2026-11-10-pm-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The coffee pot that went online",
+   "body": "In 1991, people in the Cambridge University Computer Lab got tired of walking to the Trojan Room coffee pot and finding it empty. They pointed a camera at it and wrote a small program to show the image on their screens. In 1993 it went on the web, and it's often called the first webcam.",
+   "q": "What did the famous Trojan Room camera watch?",
+   "a": "A coffee pot in the Cambridge Computer Lab.",
+   "edition": "2026-11-10-pm",
+   "order": 23,
+   "id": "2026-11-10-pm-023"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Interference: when similar things blur",
+   "body": "Learning two very similar things back to back can make them blur: the new phone number trips over the old one. Psychologists call this interference. A gentle fix is to study similar items side by side on purpose and name the difference out loud, so each one gets its own handle.",
+   "hook": "Wonder: which two things do you keep mixing up, and what's the one difference between them?",
+   "edition": "2026-11-10-pm",
+   "order": 22,
+   "id": "2026-11-10-pm-022"
+  },
+  {
+   "topic": "writing",
+   "kind": "tip",
+   "title": "Give each scene one clear change",
+   "body": "Before writing a scene, finish this sentence: at the start ___, by the end ___. A secret is out, a door closes, a mind turns. If nothing is different by the end, the scene may belong inside another one. Small changes are fine; they just have to be real.",
+   "q": "What quick test tells you if a scene earns its place?",
+   "a": "Something is different at the end than at the start.",
+   "edition": "2026-11-10-pm",
+   "order": 21,
+   "id": "2026-11-10-pm-021"
+  },
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "Tal, the magician, was born 90 years ago",
+   "body": "Mikhail Tal was born in Riga on 9 November 1936. Known as the Magician from Riga, he played wild, sacrificial attacks that were often hard to refute over the board, and he won the world title in 1960 at 23. His lesson for the rest of us: sometimes asking the opponent difficult questions is worth a pawn or two.",
+   "hook": "Wonder: when did you last make a move just to ask a hard question?",
+   "edition": "2026-11-10-pm",
+   "order": 20,
+   "id": "2026-11-10-pm-020"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Stones that ring",
+   "body": "At the Vittala temple in Hampi, built in the Vijayanagara era, the slender stone pillars of the main hall are known as musical pillars: tapped gently, different columns give different tones. Visitors today are asked not to tap them, so the stones stay whole for the next few centuries.",
+   "q": "Which Hampi temple is famous for its musical pillars?",
+   "a": "The Vittala temple.",
+   "edition": "2026-11-10-pm",
+   "order": 19,
+   "id": "2026-11-10-pm-019"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Pair the dull with the pleasant",
+   "body": "Save something you enjoy for a task you avoid: a favourite podcast only while folding laundry, a nice tea only during email. Researchers call this temptation bundling. The dull task borrows a little of the pleasant one's pull, and you get to stop waiting for motivation.",
+   "hook": "Wonder: which small treat could you link to tomorrow's least favourite chore?",
+   "edition": "2026-11-10-pm",
+   "order": 18,
+   "id": "2026-11-10-pm-018"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "The Saturn V's first flight",
+   "body": "On 9 November 1967, the Saturn V flew for the first time on Apollo 4, with no crew aboard. It tested all three stages at once, restarted the third stage in orbit, and sent the command module back into the atmosphere at Moon-return speed to prove its heat shield. Just over a year later, Saturn V carried people around the Moon.",
+   "q": "Was anyone aboard Apollo 4?",
+   "a": "No, it was an uncrewed test of the Saturn V.",
+   "edition": "2026-11-10-pm",
+   "order": 17,
+   "id": "2026-11-10-pm-017"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Tell the agent what 'done' looks like",
+   "body": "Agents tend to either stop too early or keep polishing forever. Give them a finish line they can check: 'done when the tests pass and the README mentions the new flag'. A concrete stop condition saves time, tokens and second-guessing on both sides.",
+   "hook": "Wonder: could you write the finish line of today's task in one sentence?",
+   "edition": "2026-11-10-pm",
+   "order": 16,
+   "id": "2026-11-10-pm-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: EnumMap when the keys are an enum",
+   "body": "If your map's keys are an enum, use EnumMap. Internally it's a plain array indexed by each constant's ordinal, so it's compact and fast, and it iterates in the enum's declared order. new EnumMap<>(Day.class) is all it takes.",
+   "q": "In what order does an EnumMap iterate its keys?",
+   "a": "In the order the enum constants are declared.",
+   "edition": "2026-11-10-pm",
+   "order": 15,
+   "id": "2026-11-10-pm-015"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The clockmaker's quiet hour",
+   "body": "Every shop clock in the lane ran a little wrong, and everyone knew to ask Mr. Rao for the real time. At four each afternoon he wound them all, one after another, and for a moment the whole street seemed to tick together. He never set them exactly right. 'If they all agreed,' he said, 'nobody would come in to ask.'",
+   "edition": "2026-11-10-pm",
+   "order": 14,
+   "id": "2026-11-10-pm-014"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Yu Yangyi keeps his Chinese Rapid title",
+   "body": "In Shaoxing, GM Yu Yangyi retained the Chinese Rapid Championship, beating 18-year-old Xiao Tong in a final that was level after rapid and blitz games and went to an Armageddon decider, which Yu won on move 48. Xiao had knocked out Ding Liren earlier. Lu Shanglei finished third.",
+   "q": "How was the Chinese Rapid final finally decided?",
+   "a": "By an Armageddon game, won by Yu Yangyi.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/chinese-rapid-championship-2026-final"
+   },
+   "edition": "2026-11-10-pm",
+   "order": 13,
+   "id": "2026-11-10-pm-013"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Why honey keeps",
+   "body": "Sealed honey resists spoiling for a very long time. It holds very little water, it's mildly acidic, and an enzyme bees add slowly produces a little hydrogen peroxide. Microbes that land in it get the water pulled right out of them. If it crystallises, it hasn't gone bad; warm the jar gently and it turns clear again.",
+   "q": "Does crystallised honey mean it has spoiled?",
+   "a": "No. It's just sugar forming crystals; gentle warming reverses it.",
+   "edition": "2026-11-10-pm",
+   "order": 12,
+   "id": "2026-11-10-pm-012"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Pascal's adding machine",
+   "body": "Around 1642, a teenage Blaise Pascal built a mechanical calculator to help his father, a tax official in Rouen, with endless sums. Turning dials moved geared wheels, and a clever ratchet carried a one to the next wheel, just like carrying in long addition. He made around fifty of these 'Pascalines' over the following decade.",
+   "hook": "Wonder: how do you make a gear 'carry the one'?",
+   "edition": "2026-11-10-pm",
+   "order": 11,
+   "id": "2026-11-10-pm-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The quiet room inside",
+   "body": "Nowhere either with more quiet or more freedom from trouble does a man retire than into his own soul.",
+   "who": "Marcus Aurelius, Meditations 4.3 (tr. George Long)",
+   "edition": "2026-11-10-pm",
+   "order": 10,
+   "id": "2026-11-10-pm-010"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "NASA's step-by-step road back to the Moon",
+   "body": "NASA has laid out a two-step plan. Artemis III, in 2027, is a crewed test flight in Earth orbit, where four astronauts on Orion will practise meeting and docking with the Blue Moon and Starship landers. Artemis IV, planned for 2028, is the landing itself. NASA also says rocket preparation times have been cut by about half.",
+   "q": "What is Artemis III now planned to practise?",
+   "a": "Rendezvous and docking with the lunar landers, in Earth orbit, in 2027.",
+   "source": {
+    "name": "ScienceDaily (NASA)",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261108233054.htm"
+   },
+   "edition": "2026-11-10-pm",
+   "order": 9,
+   "id": "2026-11-10-pm-009"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The forgetting curve",
+   "body": "In 1885 Hermann Ebbinghaus memorised lists of nonsense syllables and tested himself over days. Forgetting was steep at first and then levelled off. The kind part: each review made the next drop gentler. A short look back a day later, then a few days later, saves far more than one long session.",
+   "q": "What did Ebbinghaus find about forgetting over time?",
+   "a": "It's fastest at first, then levels off, and each review slows it further.",
+   "edition": "2026-11-10-pm",
+   "order": 8,
+   "id": "2026-11-10-pm-008"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Same model, different harness, very different results",
+   "body": "A researcher compared nine coding-agent harnesses running the same open models across nearly 29,000 trials. The harness alone moved the solve rate by about two times and the cost per solved task by roughly ten times or more. One updated harness jumped from near the bottom to tied for first. The quiet lesson: the scaffolding around a model matters as much as the model.",
+   "hook": "Wonder: how much of 'the model is smart' is really 'the loop around it is well built'?",
+   "source": {
+    "name": "AIBriefs",
+    "url": "https://aibriefs.news/card/d322755d-e1e5-4ff9-bdc7-f7f37dbf56f8"
+   },
+   "edition": "2026-11-10-pm",
+   "order": 7,
+   "id": "2026-11-10-pm-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Madhava's infinite series",
+   "body": "Madhava of Sangamagrama, who lived in Kerala around 1340 to 1425, founded a school of mathematics and astronomy. He and his students worked out infinite series for pi, sine and cosine, ideas that appeared in Europe only about two to three centuries later with Gregory, Newton and Leibniz. Much of his work survives through later Kerala texts such as the Yuktibhasa, written in Malayalam.",
+   "q": "Which region was home to Madhava's school of mathematics?",
+   "a": "Kerala (Sangamagrama, near present-day Irinjalakuda).",
+   "edition": "2026-11-10-pm",
+   "order": 6,
+   "id": "2026-11-10-pm-006"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "The two-minute version",
+   "body": "When a task feels too big to begin, ask: what's the two-minute version? Not 'clean the kitchen' but 'put the cups in the sink'. Not 'write the report' but 'type the three headings'. Starting is often the hardest part; once you're moving, you're free to stop or keep going. Both count.",
+   "q": "What question helps shrink a task you can't start?",
+   "a": "What's the two-minute version of this?",
+   "edition": "2026-11-10-pm",
+   "order": 5,
+   "id": "2026-11-10-pm-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Bulkheads: one leak shouldn't sink the ship",
+   "body": "Ships are split into watertight compartments so one hole floods one room, not the whole hull. Services can do the same: give each downstream dependency its own small thread pool or connection pool. If the recommendations service gets slow, it can only tie up its own ten threads, and checkout keeps working with the rest.",
+   "hook": "Wonder: which one slow dependency in your system could currently use up every thread?",
+   "edition": "2026-11-10-pm",
+   "order": 4,
+   "id": "2026-11-10-pm-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Pranesh wins the first Chola Chess Open",
+   "body": "GM Pranesh M won the inaugural Chola Chess Open in Chennai with 7/9, half a point clear, after beating Iniyan Panneerselvam in the final round. S. L. Narayanan took second on tiebreak. The event produced nine title norms, including a second GM norm for 16-year-old Viresh Sharnarthi and a first IM norm for 11-year-old Sarbartho Mani.",
+   "q": "How many title norms came out of the first Chola Chess Open?",
+   "a": "Nine.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/chola-chess-open-2026-final-report"
+   },
+   "edition": "2026-11-10-pm",
+   "order": 3,
+   "id": "2026-11-10-pm-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night train, Tuesday",
+   "body": "The carriage lights go soft at ten.\nA child asleep on a folded shawl,\na man peeling an orange in one long ribbon,\nthe window showing only us.\nOutside, somewhere, a village\nwith one lamp on,\nkeeping the dark company.",
+   "edition": "2026-11-10-pm",
+   "order": 2,
+   "id": "2026-11-10-pm-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A 93-billion-mile tail of dust around a young star",
+   "body": "Hubble has taken the first visible-light pictures of the 'Cat's Tail', a long, dark streak of dust beside the young star Beta Pictoris, about 63 light-years away. The structure stretches roughly 93 billion miles. Researchers think it is debris from a collision between two Pluto-sized bodies, made of very porous, carbon-rich grains about a micron across.",
+   "q": "What do astronomers think made the 'Cat's Tail' near Beta Pictoris?",
+   "a": "A collision between two Pluto-sized bodies; the tail is the leftover dust.",
+   "source": {
+    "name": "ScienceDaily (University of Arizona)",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261105224555.htm"
+   },
+   "edition": "2026-11-10-pm",
+   "order": 1,
+   "id": "2026-11-10-pm-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "DeepMind's agents check Signal's crypto code, proof by proof",
+   "body": "Google DeepMind introduced AlphaProof Code, a team of cooperating AI agents that write formal proofs in the Lean language. In about four weeks they verified the core cryptographic code of the Signal protocol all the way down to machine instructions, flagging roughly 1% of the code for people to review by hand. As a test, the team slipped two old, already-fixed bugs back into a copy, and the system produced checked proofs that those versions were unsafe.",
+   "hook": "Wonder: what would you trust more, a test that passed or a proof that can't be wrong?",
+   "source": {
+    "name": "Google DeepMind",
+    "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+   },
+   "edition": "2026-11-10-pm",
+   "order": 0,
+   "id": "2026-11-10-pm-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
