@@ -1,6 +1,356 @@
 {
- "updated": "2026-11-09T17:16:53+00:00",
+ "updated": "2026-11-10T02:14:24+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Bus depot, 8 pm",
+   "body": "Engines settle like tired cattle.\nA conductor counts coins into a cloth bag,\nthe same small music every night.\nThe last bus sighs its doors shut.\nAbove the tin roof, one star\nclocks in for its shift.",
+   "edition": "2026-11-10-am",
+   "order": 30,
+   "id": "2026-11-10-am-030"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Write the spec, then the code",
+   "body": "An agent that starts typing code straight away bakes its guesses into the design. A short written spec first, covering what is being built, what it won't do and how you'll know it works, gives you a cheap moment to catch a misunderstanding. Editing two paragraphs is much easier than unwinding two hundred lines.",
+   "hook": "Wonder: what's the smallest spec that would have saved your last rework?",
+   "edition": "2026-11-10-am",
+   "order": 29,
+   "id": "2026-11-10-am-029"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Sticky sessions vs stateless servers",
+   "body": "A load balancer can send each user back to the same server ('sticky sessions'), which is simple when that server holds the user's session in memory. But it makes scaling and restarts awkward: lose the server and you lose the session. The calmer design is to keep servers stateless and put session data in a shared store like Redis, so any server can answer any request.",
+   "q": "Why do stateless servers make scaling easier?",
+   "a": "Any server can handle any request, so you can add, remove or restart servers without losing user sessions.",
+   "edition": "2026-11-10-am",
+   "order": 28,
+   "id": "2026-11-10-am-028"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "To thine own self",
+   "body": "This above all: to thine own self be true,\nAnd it must follow, as the night the day,\nThou canst not then be false to any man.",
+   "who": "William Shakespeare, Hamlet",
+   "edition": "2026-11-10-am",
+   "order": 27,
+   "id": "2026-11-10-am-027"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Sloths are patient swimmers",
+   "body": "Sloths move slowly on land, but they swim well, using a breaststroke-like motion. By slowing their heart rate, they can hold their breath for up to about 40 minutes, longer than many marine mammals.",
+   "hook": "Wonder: what else looks slow only because we watch it in the wrong place?",
+   "edition": "2026-11-10-am",
+   "order": 26,
+   "id": "2026-11-10-am-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Nakamura wins a come-from-behind Bullet Brawl",
+   "body": "Hikaru Nakamura won Chess.com's 7 November Bullet Brawl, a two-hour one-minute arena with 225 players, finishing on 165 points. Ediz Gurel led for much of the event, but Nakamura closed it with a run of six straight wins to finish 12 points ahead. Parham Maghsoodloo was third.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/hikaru-nakamura-wins-bullet-brawl-nov-7-2026"
+   },
+   "edition": "2026-11-10-am",
+   "order": 25,
+   "id": "2026-11-10-am-025"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The transistor's quiet debut",
+   "body": "In December 1947, at Bell Labs, John Bardeen and Walter Brattain, working in William Shockley's group, got a small point-contact device to amplify a signal. It was the first working transistor. The three shared the 1956 Nobel Prize in Physics, and every chip today carries billions of the transistor's descendants.",
+   "q": "Where and when was the first working transistor demonstrated?",
+   "a": "Bell Labs, December 1947.",
+   "edition": "2026-11-10-am",
+   "order": 24,
+   "id": "2026-11-10-am-024"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Decide your 'stuck' move in advance",
+   "body": "Getting stuck isn't a failure; staying stuck for an hour is just expensive. Before you start, pick your stuck move: after ten minutes with no progress, I'll write down the exact question, ask someone, or switch to the smallest next piece. Deciding it now means you don't have to find willpower later.",
+   "hook": "Wonder: what's your usual sign that you've been stuck too long?",
+   "edition": "2026-11-10-am",
+   "order": 23,
+   "id": "2026-11-10-am-023"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Gommateshwara, carved from a single rock",
+   "body": "On the hill of Vindhyagiri at Shravanabelagola in Karnataka stands a statue of Bahubali about 17 metres tall, carved from one granite boulder around 983 CE under Chavundaraya, a minister of the Western Ganga dynasty. Every twelve years or so, the Mahamastakabhisheka festival bathes it in milk, turmeric and flower petals.",
+   "q": "Which dynasty's minister commissioned the Gommateshwara statue?",
+   "a": "Chavundaraya, minister of the Western Ganga dynasty.",
+   "edition": "2026-11-10-am",
+   "order": 22,
+   "id": "2026-11-10-am-022"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Two bright morning planets later this month",
+   "body": "If you're up before dawn, the next few weeks are kind. Mercury reaches its greatest distance west of the Sun on 21 November, its best morning showing for a while, low in the east. Venus reaches its greatest brilliancy in the morning sky on 29 November.",
+   "q": "On what date does Venus reach greatest brilliancy this month?",
+   "a": "29 November, in the morning sky.",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/astronomy-essentials/visible-planets-tonight-mars-jupiter-venus-saturn-mercury/"
+   },
+   "edition": "2026-11-10-am",
+   "order": 21,
+   "id": "2026-11-10-am-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Read it out loud",
+   "body": "Your ear catches what your eye forgives. Reading a draft aloud, even in a whisper, reveals sentences that run out of breath, words that repeat, and rhythms that clunk. Where you stumble, the reader will too. It takes five minutes and is the cheapest edit there is.",
+   "hook": "Wonder: why do we hear mistakes we can't see?",
+   "edition": "2026-11-10-am",
+   "order": 20,
+   "id": "2026-11-10-am-020"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The quiet eye",
+   "body": "Sport scientist Joan Vickers found that skilled performers, in golf putting, basketball free throws and more, tend to hold a steady final gaze on the target a little longer just before they move. This 'quiet eye' seems to give the brain a calm moment to set up the action, and it can be trained. A chess version might be one still look at the board before you touch a piece.",
+   "edition": "2026-11-10-am",
+   "order": 19,
+   "id": "2026-11-10-am-019"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: joining strings without the trailing comma",
+   "body": "Instead of a loop that adds commas and then trims the last one, let Java do it:\n\nString.join(\", \", names)\n\nor, from a stream:\n\nnames.stream().map(String::trim).collect(Collectors.joining(\", \", \"[\", \"]\"))\n\nThe second form also adds a prefix and suffix. Both quietly handle the empty and single-item cases.",
+   "q": "Which collector joins stream elements with a separator, prefix and suffix?",
+   "a": "Collectors.joining(delimiter, prefix, suffix).",
+   "edition": "2026-11-10-am",
+   "order": 18,
+   "id": "2026-11-10-am-018"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Petrichor has a birthday",
+   "body": "The earthy smell after the first rain has a name, petrichor, coined in 1964 by Australian scientists Isabel Joy Bear and Richard Thomas in the journal Nature. Part of the scent comes from geosmin, made by soil bacteria, which human noses can detect at astonishingly low concentrations.",
+   "q": "What is the smell of rain on dry earth called?",
+   "a": "Petrichor, a word coined in 1964.",
+   "edition": "2026-11-10-am",
+   "order": 17,
+   "id": "2026-11-10-am-017"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Long-running agent harnesses on Cloudflare",
+   "body": "Cloudflare has published reference setups for running three open agent harnesses, Codex, Exo and Nanocode, inside its Durable Objects. The point is persistence: conversation history, tool results and half-finished steps survive a restart, so an agent can pick up where it left off.",
+   "source": {
+    "name": "Cloudflare changelog",
+    "url": "https://developers.cloudflare.com/changelog/post/2026-11-09-codex-harness/"
+   },
+   "edition": "2026-11-10-am",
+   "order": 16,
+   "id": "2026-11-10-am-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Sasikiran wins in Bavaria",
+   "body": "Krishnan Sasikiran won the Bavarian Chess Championship at Gmund am Tegernsee with 7.5/9, first on tiebreaks ahead of Frederik Svane and Roven Vogel. FM Arun Daakshin also finished on 7.5. A neat detail: all four leaders won their final-round games with the black pieces. The open drew 548 players.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/tegernsee-open-2026-r9"
+   },
+   "edition": "2026-11-10-am",
+   "order": 15,
+   "id": "2026-11-10-am-015"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The wealth that stays",
+   "body": "Learning is the one wealth that does not wear away; other riches are not truly wealth at all.",
+   "who": "Thirukkural 400 (own rendering)",
+   "edition": "2026-11-10-am",
+   "order": 14,
+   "id": "2026-11-10-am-014"
+  },
+  {
+   "topic": "space",
+   "kind": "idea",
+   "title": "Gravity might tie and untie its own knots",
+   "body": "Two physicists, Luca Comisso and Felipe Asenjo, have rewritten Einstein's equations in a form that looks like the maths of plasmas. In that view, structures in a gravitational field could break and reconnect, much as solar magnetic field lines do, passing energy into matter. It is purely theoretical so far, but they suggest it might one day show up in gravitational waves from merging black holes.",
+   "hook": "Wonder: why does nature keep reusing the same patterns in very different places?",
+   "source": {
+    "name": "ScienceDaily (Columbia University)",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261104084011.htm"
+   },
+   "edition": "2026-11-10-am",
+   "order": 13,
+   "id": "2026-11-10-am-013"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The QR code began on a car-parts line",
+   "body": "In 1994, Masahiro Hara at Denso Wave, a Toyota group company, designed the QR code to track car parts faster than barcodes allowed. The black-and-white pattern was reportedly inspired by stones on a Go board. Denso chose not to enforce its patent, which is a big reason the code spread everywhere.",
+   "q": "What was the QR code originally designed to track?",
+   "a": "Automotive parts, at Denso Wave in 1994.",
+   "edition": "2026-11-10-am",
+   "order": 12,
+   "id": "2026-11-10-am-012"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The kolam at number 14",
+   "body": "Every morning the old woman at number 14 drew the same kolam: nine dots, one unbroken line looping around them. Every afternoon, school shoes scuffed it to dust. The boy from next door asked once why she bothered. She handed him the rice flour. He made a mess of it. The next day, a little less. By the monsoon, the line went all the way round without lifting, and she pretended not to watch.",
+   "edition": "2026-11-10-am",
+   "order": 11,
+   "id": "2026-11-10-am-011"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The hypercorrection effect",
+   "body": "Here is a kind surprise: the mistakes you were most sure about are often the easiest to fix. When people get confident answers wrong and then see the correct one, they tend to remember the correction better than for low-confidence errors (Butterfield and Metcalfe, 2001). A confident wrong guess is not wasted; it makes the right answer stand out.",
+   "hook": "Wonder: why might surprise help a memory stick?",
+   "edition": "2026-11-10-am",
+   "order": 10,
+   "id": "2026-11-10-am-010"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Robots that understand what you meant, not just what you said",
+   "body": "Researchers at MIT and NYU have built FLEX, a system that uses large language models to infer the wider intent behind a spoken instruction for robot motion. Tell a robot not to spill coffee on the laptop, and it learns to keep drinks away from electronics in general. The work, led by Andreea Bobu, will be presented at the Conference on Robot Learning.",
+   "q": "What does the FLEX system help a robot do?",
+   "a": "Generalise the intent behind a natural-language instruction, like keeping drinks away from all electronics, not just one laptop.",
+   "source": {
+    "name": "MIT News",
+    "url": "https://news.mit.edu/2026/ai-assisted-learning-platform-helps-robots-reason-beyond-literal-commands-1109"
+   },
+   "edition": "2026-11-10-am",
+   "order": 9,
+   "id": "2026-11-10-am-009"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "An octopus tastes with its arms",
+   "body": "The suckers on an octopus's arms carry chemical receptors, so touching something is also tasting it. Researchers at Harvard described these 'taste-by-touch' receptors in 2020. With much of its nervous system spread through the arms, each arm can explore a crevice fairly independently.",
+   "edition": "2026-11-10-am",
+   "order": 8,
+   "id": "2026-11-10-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Gangaikonda Cholapuram, the capital named for a river",
+   "body": "Around 1025 CE, Rajendra Chola I built a new capital in what is now Ariyalur district and named it Gangaikonda Cholapuram, 'the city of the Chola who took the Ganga', after his northern campaign. Its great Shiva temple echoes his father's Thanjavur temple but with gentler, curving lines. Today it is part of the UNESCO 'Great Living Chola Temples' listing.",
+   "hook": "Wonder: why would a king build a temple that looks like his father's, but softer?",
+   "edition": "2026-11-10-am",
+   "order": 7,
+   "id": "2026-11-10-am-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "A to-do list before bed",
+   "body": "If tomorrow's tasks keep circling as you try to sleep, write them down instead. In a 2018 sleep-lab study at Baylor University, people who spent five minutes writing a to-do list for the coming days fell asleep faster than those who wrote about tasks they had already finished. Paper holds the list, so your mind doesn't have to.",
+   "q": "In the Baylor study, which kind of bedtime writing helped people fall asleep faster?",
+   "a": "Writing a to-do list for the coming days, rather than listing tasks already done.",
+   "edition": "2026-11-10-am",
+   "order": 6,
+   "id": "2026-11-10-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Gossip protocols: news that spreads like a rumour",
+   "body": "In a big cluster, no single node can phone everyone. So each node, every second or so, picks a few random peers and swaps what it knows: who is alive, which version of a setting is current. Like village gossip, the news reaches everyone in roughly log(N) rounds, and no central server is needed. Cassandra and Consul use variations of this idea for membership and failure detection.",
+   "hook": "Wonder: why does random chatter spread information so reliably?",
+   "edition": "2026-11-10-am",
+   "order": 5,
+   "id": "2026-11-10-am-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Pranav V takes the World Junior Blitz title",
+   "body": "India's Pranav V won gold in the U20 Open of the World Junior Blitz Championship in Al Ain with 10.5 points, a point clear of Eldiyar Orozbaev and Robert Piliposyan. Days earlier he had also taken silver in the rapid event. In the girls' section, Valeria Kleymenova won gold on 10 points. The festival drew 185 young players from 40 countries.",
+   "q": "Where were the 2026 World Junior Rapid and Blitz Championships held?",
+   "a": "Al Ain, in the United Arab Emirates.",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/world-junior-blitz-championship-2026-pranav-v-and-kleymenova-claim-titles-in-al-ain/"
+   },
+   "edition": "2026-11-10-am",
+   "order": 4,
+   "id": "2026-11-10-am-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Tuesday, early",
+   "body": "The milk packet waits on the step,\ncold as a small promise.\nA crow tests the railing, decides against it.\nSomewhere a pressure cooker clears its throat.\nI have not opened the day yet.\nIt is still folded,\nlike a letter I already know is kind.",
+   "edition": "2026-11-10-am",
+   "order": 3,
+   "id": "2026-11-10-am-003"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A robot arm builds a truss in orbit, alone",
+   "body": "A Caltech robotic arm, part of DARPA's NOM4D programme, has assembled pieces of a truss structure in orbit with no astronauts nearby. The experiment, called ASTRA, is working toward an 11-bay frame for a 1.4-metre reflector antenna, and has completed its third bay. With only a handful of 15-minute radio windows a day, the team solved problems using an identical twin of the robot in their lab.",
+   "q": "How did the ASTRA team troubleshoot with so little contact time?",
+   "a": "They tested fixes on an identical twin of the robot in their lab on the ground.",
+   "source": {
+    "name": "ScienceDaily (Caltech)",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261108233043.htm"
+   },
+   "edition": "2026-11-10-am",
+   "order": 2,
+   "id": "2026-11-10-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Google shares a plugin that makes coding agents write a spec first",
+   "body": "Google has open-sourced the Elephant-Goldfish Model (EGM), an Apache 2.0 plugin for AI coding agents. Before any code is written, the agent drafts a specification in a Markdown file, and fresh, stateless subagents read it back to catch wrong assumptions early. Google says thousands of its engineers use it internally, though the README notes it isn't an officially supported product.",
+   "hook": "Wonder: why might a reviewer with no memory of the conversation spot more gaps than one who was there?",
+   "source": {
+    "name": "MarkTechPost",
+    "url": "https://www.marktechpost.com/2026/11/08/google-elephant-goldfish-model-plugin-spec-review-coding-agents"
+   },
+   "edition": "2026-11-10-am",
+   "order": 1,
+   "id": "2026-11-10-am-001"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Before you scroll, a small warm-up. Three questions from today's edition sit below; try each one in your head first, then check. Guessing before you know is part of how memory sticks.",
+   "q": "In the Bavarian Championship, who won on tiebreaks with 7.5/9?",
+   "a": "Krishnan Sasikiran, ahead of Frederik Svane and Roven Vogel.",
+   "edition": "2026-11-10-am",
+   "order": 0,
+   "id": "2026-11-10-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
