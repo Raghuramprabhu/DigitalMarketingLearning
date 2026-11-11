@@ -1,6 +1,341 @@
 {
- "updated": "2026-11-10T17:17:19+00:00",
+ "updated": "2026-11-11T02:19:45+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Before you scroll on, try to recall: what kind of engine is NASA's AMPERE prize for? Which way do grown-up sunflowers face? Which Chola temple is carved as a chariot?",
+   "q": "Why does a solar day on Mercury last two of its years?",
+   "a": "It spins slowly (59 days) while orbiting in 88 days, so sunrise to sunrise takes about 176 Earth days.",
+   "edition": "2026-11-11-am",
+   "order": 30,
+   "id": "2026-11-11-am-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Terrace, after the rain",
+   "body": "Water stands in the dent of the old chair.\nThe neem shakes off what it was holding.\nSomewhere a radio finds its station,\nloses it, finds it again.\nI do the same with the evening.",
+   "edition": "2026-11-11-am",
+   "order": 29,
+   "id": "2026-11-11-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The kiwi's very big egg",
+   "body": "A female kiwi lays an egg that can be around a fifth of her own body weight, one of the largest eggs relative to body size of any bird. The chick hatches well developed, with a yolk store that keeps it going for its first days.",
+   "edition": "2026-11-11-am",
+   "order": 28,
+   "id": "2026-11-11-am-028"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Read the trace, not just the answer",
+   "body": "An agent's final answer tells you what it concluded; its trace tells you how. When something goes wrong, the steps (which files it read, which tool calls failed, where it guessed) usually show the real fix faster than rewriting the prompt. Make the trace easy to read, and you'll improve the agent faster.",
+   "hook": "Wonder: what would you learn if you watched every step of your own work as closely?",
+   "edition": "2026-11-11-am",
+   "order": 27,
+   "id": "2026-11-11-am-027"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Like a good book",
+   "body": "The company of the good is like a fine book: the more often you return to it, the more it gives.",
+   "who": "Thirukkural 783 (own rendering)",
+   "edition": "2026-11-11-am",
+   "order": 26,
+   "id": "2026-11-11-am-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java: groupingBy in one line",
+   "body": "Collectors.groupingBy turns a list into a map of lists. For example, orders.stream().collect(groupingBy(Order::city)) gives a Map from each city to its orders. Add a second collector to summarise each group: groupingBy(Order::city, counting()) gives a count per city instead of the full lists.",
+   "edition": "2026-11-11-am",
+   "order": 25,
+   "id": "2026-11-11-am-025"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "A rook on the seventh rank",
+   "body": "A rook that reaches the opponent's second rank (your seventh) is often worth an extra pawn's activity. From there it attacks pawns that haven't moved and can trap the enemy king on its back rank. Two rooks doubled on the seventh are strong enough that players have a nickname for them: 'pigs on the seventh', because they eat everything.",
+   "q": "Why is a rook on the seventh rank so strong?",
+   "a": "It attacks unmoved pawns and can confine the enemy king to its back rank.",
+   "edition": "2026-11-11-am",
+   "order": 24,
+   "id": "2026-11-11-am-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "TIFRAC, an early computer built in India",
+   "body": "TIFRAC (Tata Institute of Fundamental Research Automatic Calculator) was designed and built at TIFR in Bombay in the late 1950s and was in use by 1960. It was one of the first electronic digital computers built in India, using thousands of vacuum tubes and a ferrite-core memory. It served Indian scientists for several years before commercial machines took over.",
+   "hook": "Wonder: what does it take to build a computer when there is no one to buy one from?",
+   "edition": "2026-11-11-am",
+   "order": 23,
+   "id": "2026-11-11-am-023"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Give messages their own visiting hours",
+   "body": "Turn off most notifications and pick two or three set times a day to check messages. Write those times on a sticky note so your brain can trust they'll come. Batching messages turns a hundred small interruptions into a few short, finished visits.",
+   "edition": "2026-11-11-am",
+   "order": 22,
+   "id": "2026-11-11-am-022"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "The Orion Nebula is a nursery you can see",
+   "body": "On November nights Orion climbs into the eastern sky by late evening. Below his belt hangs a short line of stars, his sword, and the fuzzy middle 'star' is the Orion Nebula, a cloud where new stars are forming about 1,300 light-years away. Even ordinary binoculars show it as a soft glow.",
+   "q": "What is the fuzzy patch in Orion's sword?",
+   "a": "The Orion Nebula, a star-forming cloud about 1,300 light-years away.",
+   "edition": "2026-11-11-am",
+   "order": 21,
+   "id": "2026-11-11-am-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Open with a question the reader wants answered",
+   "body": "A first line works when it makes the reader curious about something specific. 'The letter had been posted in 1994 and arrived on a Tuesday' asks a question without saying so. You don't need a mystery, just one small gap the reader wants filled, and then the patience to fill it at the right moment.",
+   "edition": "2026-11-11-am",
+   "order": 20,
+   "id": "2026-11-11-am-020"
+  },
+  {
+   "topic": "mind",
+   "kind": "fact",
+   "title": "Tip-of-the-tongue moments are normal",
+   "body": "Most people have a word stuck on the tip of the tongue now and then, often for names. You frequently know the first letter or the number of syllables while the word itself hides. Usually it turns up on its own a little later, so it helps to note what you were reaching for and move on.",
+   "hook": "Wonder: how can you know a word's first letter without knowing the word?",
+   "edition": "2026-11-11-am",
+   "order": 19,
+   "id": "2026-11-11-am-019"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Korkai, the pearl port of the Pandyas",
+   "body": "Korkai, near the mouth of the Tamirabarani river, was an early port of the Pandya kings and was known for its pearl fishery. Greek and Roman writers knew it too: the Periplus of the Erythraean Sea and Ptolemy mention a pearl-fishing place called Kolchoi. Over centuries the shoreline moved, and Korkai now sits a few kilometres inland.",
+   "q": "What was the ancient Pandya port of Korkai famous for?",
+   "a": "Its pearl fishery.",
+   "edition": "2026-11-11-am",
+   "order": 18,
+   "id": "2026-11-11-am-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Anthropic releases Claude Fable 5.2",
+   "body": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, aimed at long, complex technical work. Fable is available to everyone, while Mythos, which keeps some specialist capabilities, is offered to verified organisations. Anthropic says a team of more than 1,000 Fable 5.2 agents worked together for eight days to build a bootable operating system; that's the company's own report.",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-november-10-2026/"
+   },
+   "edition": "2026-11-11-am",
+   "order": 17,
+   "id": "2026-11-11-am-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The platypus glows",
+   "body": "Under ultraviolet light, platypus fur gives off a soft blue-green glow. Researchers reported it in 2020 after checking museum specimens. Nobody is yet sure whether the glow does anything for the animal or is simply a quirk of its fur.",
+   "edition": "2026-11-11-am",
+   "order": 16,
+   "id": "2026-11-11-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Load shedding: say no early, and politely",
+   "body": "When a service gets more requests than it can handle, trying to serve all of them can make it slow for everyone. Load shedding means refusing some work early, often with a quick 'try again later' (HTTP 503), so the requests you do accept still finish quickly. Good systems shed the least important work first, like background jobs before checkout.",
+   "hook": "Wonder: when is 'not now' the most helpful answer a server can give?",
+   "edition": "2026-11-11-am",
+   "order": 15,
+   "id": "2026-11-11-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Tata Steel 2027 announces its fields",
+   "body": "The 89th Tata Steel Chess tournament will run from 15 to 31 January 2027 in Wijk aan Zee, Netherlands. Defending champion Nodirbek Abdusattorov leads a 14-player Masters field that includes Javokhir Sindarov, Levon Aronian, Anish Giri, Alireza Firouzja and India's Nihal Sarin. India's Aravindh Chithambaram plays in the Challengers.",
+   "q": "Where is the Tata Steel Chess tournament held?",
+   "a": "Wijk aan Zee, Netherlands.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/abdusattorov-sindarov-top-tata-steel-chess-2027-field"
+   },
+   "edition": "2026-11-11-am",
+   "order": 14,
+   "id": "2026-11-11-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The lamp repairer",
+   "body": "Every lamp that came to Selvi's stall arrived with a story. 'It flickers when it rains,' said one man. 'It was my mother's,' said a girl, holding it like a bird. Selvi never asked more than she needed. She rewired, she polished, she tested each one in the dim corner by the cloth shop. On Sundays she kept one lamp lit that nobody had ever come back for. It was the brightest on the street, and she liked to think it was waiting patiently, the way she did.",
+   "edition": "2026-11-11-am",
+   "order": 13,
+   "id": "2026-11-11-am-013"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Mercury's long, slow day",
+   "body": "Mercury circles the Sun in 88 Earth days and spins once every 59 days. Put together, one sunrise to the next takes about 176 Earth days, so a single solar day on Mercury lasts two of its years.",
+   "hook": "Wonder: what would a calendar look like if one day lasted two years?",
+   "edition": "2026-11-11-am",
+   "order": 12,
+   "id": "2026-11-11-am-012"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Ctrl+Alt+Del was a developer's shortcut",
+   "body": "David Bradley, an engineer on the original IBM PC in 1981, created the Ctrl+Alt+Del key combination so developers could restart a machine without switching it off. He picked keys far apart on purpose, so nobody would press all three by accident. It was never meant for everyday users, which is why it feels a little awkward.",
+   "q": "Why were Ctrl, Alt and Del chosen for the restart shortcut?",
+   "a": "They were far apart, so it was hard to press them all by accident.",
+   "edition": "2026-11-11-am",
+   "order": 11,
+   "id": "2026-11-11-am-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Few things",
+   "body": "Occupy thyself with few things, says the philosopher, if thou wouldst be tranquil.",
+   "who": "Marcus Aurelius, Meditations 4.24 (tr. George Long)",
+   "edition": "2026-11-11-am",
+   "order": 10,
+   "id": "2026-11-11-am-010"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Wakeful rest: let it settle",
+   "body": "In studies by Michaela Dewar and colleagues, people who sat quietly for about ten minutes after learning a list remembered more later than people who went straight on to another task. The quiet seems to give fresh memories a chance to settle before new information crowds in. After a hard study block, try a few minutes of doing nothing at all, no phone.",
+   "q": "What did Dewar's studies find about resting quietly right after learning?",
+   "a": "A few minutes of quiet rest improved later recall compared with starting a new task.",
+   "edition": "2026-11-11-am",
+   "order": 9,
+   "id": "2026-11-11-am-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Meta's smallest Muse model, built for repetitive agent work",
+   "body": "Meta has released Muse Ember, the smallest and most efficient model in its Muse family. It is aimed at the many small, repeated steps agents take, rather than at deep reasoning, and is priced at $0.10 per million input tokens through Meta's Model API. Small, cheap models doing the routine steps, with bigger ones called only when needed, is becoming a common agent design.",
+   "hook": "Wonder: how much of an agent's day is routine work that a small model could do?",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-november-10-2026/"
+   },
+   "edition": "2026-11-11-am",
+   "order": 8,
+   "id": "2026-11-11-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Darasuram's temple on wheels",
+   "body": "The Airavatesvara Temple at Darasuram, near Kumbakonam, was built by the Chola king Rajaraja II in the 12th century. Its front hall is carved as a chariot, complete with stone wheels and horses. Together with Thanjavur and Gangaikonda Cholapuram it forms the UNESCO World Heritage site called the Great Living Chola Temples.",
+   "q": "Which Chola king built the Airavatesvara Temple at Darasuram?",
+   "a": "Rajaraja II, in the 12th century.",
+   "edition": "2026-11-11-am",
+   "order": 7,
+   "id": "2026-11-11-am-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Two choices, not ten",
+   "body": "When a decision stalls you (what to eat, which task first), shrink the menu to two options and pick one within a minute. A short list keeps the decision from swallowing the energy meant for the task. Any reasonable pick, made quickly, usually beats the perfect pick made an hour later.",
+   "edition": "2026-11-11-am",
+   "order": 6,
+   "id": "2026-11-11-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java: strip() knows more spaces than trim()",
+   "body": "String.trim() removes characters up to U+0020, which covers the ASCII space and control characters. Java 11's strip() uses Character.isWhitespace, so it also removes Unicode whitespace such as the ideographic space. For text that arrives from users in many languages, strip(), stripLeading() and stripTrailing() are usually the kinder choice.",
+   "q": "Which Java method removes Unicode whitespace: trim() or strip()?",
+   "a": "strip() (Java 11+). trim() only handles characters up to U+0020.",
+   "edition": "2026-11-11-am",
+   "order": 5,
+   "id": "2026-11-11-am-005"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Grown-up sunflowers face east",
+   "body": "Young sunflowers really do follow the Sun, turning west by day and back east overnight. Once they open, most stop and settle facing east. A 2016 study found that east-facing heads warm up faster in the morning and draw more bee visits.",
+   "hook": "Wonder: what does a flower gain by greeting the morning?",
+   "edition": "2026-11-11-am",
+   "order": 4,
+   "id": "2026-11-11-am-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Movahed takes his fourth Titled Tuesday of the year",
+   "body": "GM Sina Movahed won the 10 November Titled Tuesday on 9.5 points, edging GM Denis Lazavik on tiebreak, with GM Dmitry Andreikin third on 9. It was Movahed's fourth Titled Tuesday win of 2026, level with Jan-Krzysztof Duda for the most this year. He recovered from a fifth-round loss to Christopher Yoo to finish on top.",
+   "q": "Who finished second to Sina Movahed on tiebreak?",
+   "a": "GM Denis Lazavik, also on 9.5.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/movahed-wins-titled-tuesday-november-10-2026"
+   },
+   "edition": "2026-11-11-am",
+   "order": 3,
+   "id": "2026-11-11-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Wednesday, first light",
+   "body": "The milk packet waits on the step,\ncold as a small moon.\nA crow tests the parapet,\nthinks better of it.\nInside, the kettle starts its long vowel,\nand the day, not yet asked for anything,\nsits down beside me.",
+   "edition": "2026-11-11-am",
+   "order": 2,
+   "id": "2026-11-11-am-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "NASA offers a prize for gentler, longer-lasting thrusters",
+   "body": "NASA has opened the AMPERE Challenge, a $500,000 competition for US companies to build working Hall-effect thrusters in the 3 to 7 kilowatt range. These engines push charged particles with electric and magnetic fields: the thrust is tiny, but they sip propellant, which suits patient jobs like nudging a satellite's orbit over months. Registration runs until 27 January 2027.",
+   "hook": "Wonder: why would a spacecraft prefer a whisper of thrust that lasts for months over one big push?",
+   "source": {
+    "name": "ScienceDaily (NASA)",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261109205404.htm"
+   },
+   "edition": "2026-11-11-am",
+   "order": 1,
+   "id": "2026-11-11-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "IBM and Microsoft team up on 'Imagine Enterprise'",
+   "body": "On 10 November IBM and Microsoft announced Imagine Enterprise, a platform for building, running and governing AI agents that carry out industry-specific work. IBM brings more than 6,000 prebuilt agents and assets from its consulting arm; Microsoft supplies the cloud, data and security layer. The first ready-made frameworks cover financial services, insurance and retail.",
+   "q": "How many prebuilt agents and assets does IBM Consulting bring to Imagine Enterprise?",
+   "a": "More than 6,000.",
+   "source": {
+    "name": "Microsoft Source",
+    "url": "https://news.microsoft.com/source/2026/11/10/ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation"
+   },
+   "edition": "2026-11-11-am",
+   "order": 0,
+   "id": "2026-11-11-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
