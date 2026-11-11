@@ -1,6 +1,351 @@
 {
- "updated": "2026-11-11T02:19:45+00:00",
+ "updated": "2026-11-11T17:21:02+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Before you scroll on, try to recall: what does Voyager's Morse message spell? Which piece did Nimzowitsch prefer as a blockader? What is the dot on an i called?",
+   "q": "What did Carlsen score in the Budapest opening blitz?",
+   "a": "7/9, unbeaten.",
+   "edition": "2026-11-11-pm",
+   "order": 30,
+   "id": "2026-11-11-pm-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Before sleep",
+   "body": "The fan counts the same four words.\nA neighbour's tap runs, stops.\nI set down the day\nthe way you set down a full glass,\nslowly, watching the rim,\nand nothing spills.",
+   "edition": "2026-11-11-pm",
+   "order": 29,
+   "id": "2026-11-11-pm-029"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "WikiTrace: agent memory you can trace back",
+   "body": "Researchers describe WikiTrace, a memory design for agents with three linked layers: short lessons, compiled summaries, and the raw records of past runs they came from. Across five agent benchmarks it averaged 90.2%, versus 87.0% with lessons alone and 79.5% with no memory, while adding only about 17% extra compute at test time.",
+   "q": "What three layers does WikiTrace link?",
+   "a": "Insights (lessons), compilations, and the raw run trajectories.",
+   "source": {
+    "name": "AI Weekly",
+    "url": "https://aiweekly.co/ai-news-today"
+   },
+   "edition": "2026-11-11-pm",
+   "order": 28,
+   "id": "2026-11-11-pm-028"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A jiffy is a real unit",
+   "body": "'Back in a jiffy' sounds vague, but scientists have borrowed the word for exact durations. In physics it has been used for the time light takes to cross one centimetre, about 33 trillionths of a second. In computing, a jiffy is one tick of the system timer. Either way, it's quicker than anyone who says it.",
+   "edition": "2026-11-11-pm",
+   "order": 27,
+   "id": "2026-11-11-pm-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Change data capture: read the database's diary",
+   "body": "Every serious database keeps a log of its changes for its own recovery. Change data capture tools such as Debezium read that log and publish each insert, update and delete as an event. Search indexes, caches and analytics can follow along without the application having to remember to tell them, and without polling.",
+   "hook": "Wonder: what other systems already keep a diary you could read?",
+   "edition": "2026-11-11-pm",
+   "order": 26,
+   "id": "2026-11-11-pm-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Your own friend",
+   "body": "Lift yourself by your own effort; do not let yourself sink. You alone can be your own best friend.",
+   "who": "Bhagavad Gita 6.5 (own rendering)",
+   "edition": "2026-11-11-pm",
+   "order": 25,
+   "id": "2026-11-11-pm-025"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Blockade the passed pawn",
+   "body": "Aron Nimzowitsch, born 140 years ago this month, taught that a passed pawn should be stopped by a piece placed directly in front of it. A knight is ideal: it isn't hemmed in by the pawn, and from that square it still reaches in every direction. 'First restrain, then blockade, then destroy' is the order he recommended.",
+   "q": "Which piece did Nimzowitsch consider the best blockader?",
+   "a": "The knight.",
+   "edition": "2026-11-11-pm",
+   "order": 24,
+   "id": "2026-11-11-pm-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first text message said 'Merry Christmas'",
+   "body": "On 3 December 1992, engineer Neil Papworth sent 'Merry Christmas' from a computer to a mobile phone on the Vodafone network in the UK. Phones couldn't yet type replies, so the recipient simply read it. Within a decade, texting had become one of the most common ways people talk.",
+   "hook": "Wonder: what would you send if you knew it was the first message ever?",
+   "edition": "2026-11-11-pm",
+   "order": 23,
+   "id": "2026-11-11-pm-023"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Mars and Jupiter meet before dawn on 15 November",
+   "body": "Mars and Jupiter will be at their closest around 3 UTC on 15 November (8:30 am IST, so look in the hours before sunrise, low in the east). Mars passes about 1.2 degrees north of Jupiter, a little more than two full-Moon widths. Jupiter will be the brighter of the two; Mars has a faint orange tint.",
+   "q": "Which is brighter in the 15 November pairing, Mars or Jupiter?",
+   "a": "Jupiter.",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/astronomy-essentials/visible-planets-tonight-mars-jupiter-venus-saturn-mercury/"
+   },
+   "edition": "2026-11-11-pm",
+   "order": 22,
+   "id": "2026-11-11-pm-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Keep a few ready-made replies",
+   "body": "Small replies stall because each one needs a fresh start: 'Thanks, received', 'Can we move this to Thursday?', 'Here's the file you asked for'. Save your five most common messages as text shortcuts or notes. Sending one becomes a tap and a tweak, not a blank screen.",
+   "edition": "2026-11-11-pm",
+   "order": 21,
+   "id": "2026-11-11-pm-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Music written on a rock at Kudumiyanmalai",
+   "body": "On a rock face at Kudumiyanmalai, in Tamil Nadu's Pudukkottai district, there is an inscription from around the 7th century that records musical notation. It is one of the oldest surviving written records of Indian music, and it is often linked to the Pallava king Mahendravarman I, though scholars still discuss the attribution.",
+   "q": "Where is the old rock inscription recording musical notation?",
+   "a": "Kudumiyanmalai, in Pudukkottai district, Tamil Nadu.",
+   "edition": "2026-11-11-pm",
+   "order": 20,
+   "id": "2026-11-11-pm-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let the reader arrive a beat early",
+   "body": "If the reader can guess what a character is about to realise, just a moment before the character does, they lean in. Plant one small clue earlier in the scene, then let the character catch up. The reader feels clever, not tricked, and the realisation lands twice: once in them, once on the page.",
+   "edition": "2026-11-11-pm",
+   "order": 19,
+   "id": "2026-11-11-pm-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Anthropic adds Sheets, Meetings and Whiteboards to Claude",
+   "body": "At an event in San Francisco on 10 November, Anthropic introduced Claude Sheets (in beta on paid plans, with Excel export), Claude Meetings, which can join Google Meet calls for Team and Enterprise users, and Claude Whiteboards. Claude Data, the renamed Dashboards, became generally available alongside plugins for Adobe, Atlassian and HubSpot.",
+   "source": {
+    "name": "AI Weekly",
+    "url": "https://aiweekly.co/ai-news-today"
+   },
+   "edition": "2026-11-11-pm",
+   "order": 18,
+   "id": "2026-11-11-pm-018"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Avocados ripen only after picking",
+   "body": "An avocado stays firm while it hangs on the tree; it only begins to soften after it's picked. Growers can leave fruit on the branch for weeks or months as a kind of living storage. At home, putting one in a paper bag with a banana speeds things up, thanks to the ripening gas ethylene.",
+   "hook": "Wonder: what else in your kitchen is quietly waiting for its cue?",
+   "edition": "2026-11-11-pm",
+   "order": 17,
+   "id": "2026-11-11-pm-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "fact",
+   "title": "Name the feeling",
+   "body": "In a 2007 study led by Matthew Lieberman, people who picked a word for the emotion in a photo showed less amygdala activity than people who simply looked at it or matched it to another face. Researchers call this affect labelling. Quietly naming what you feel ('this is frustration') can take a little of the heat out of it.",
+   "q": "What is affect labelling?",
+   "a": "Putting a feeling into words, which in studies dampened emotional reactivity.",
+   "edition": "2026-11-11-pm",
+   "order": 16,
+   "id": "2026-11-11-pm-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: a default without the ternary",
+   "body": "Instead of `name != null ? name : \"guest\"`, write `Objects.requireNonNullElse(name, \"guest\")` (Java 9+). If the default is expensive to build, use `requireNonNullElseGet(name, () -> loadDefault())` so it's only created when needed. Small, but the intent reads in one glance.",
+   "q": "Which method avoids building an expensive default unless it's needed?",
+   "a": "Objects.requireNonNullElseGet, with a Supplier.",
+   "edition": "2026-11-11-pm",
+   "order": 15,
+   "id": "2026-11-11-pm-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Vaishali beats Niemann and So in Budapest",
+   "body": "In the Total Chess opening blitz, R. Vaishali beat Hans Niemann in round 1 and Wesley So in round 3, both with Black, and drew with Duda, Rapport, Giri and Assaubayeva, finishing on 4/9. She now plays in Group D alongside So, Arjun Erigaisi, Vachier-Lagrave, Niemann and Assaubayeva.",
+   "source": {
+    "name": "ChessBase India",
+    "url": "https://chessbase.in/news/magnus-carlsen-wins-total-chess-world-championship-pilot-2026-blitz"
+   },
+   "edition": "2026-11-11-pm",
+   "order": 14,
+   "id": "2026-11-11-pm-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The bell at the cycle shop",
+   "body": "Murugan's cycle shop had a bell on the door that had lost its clapper years ago. Customers still pushed the door and paused, waiting for the ring that never came. Murugan liked that pause. It was the moment people stopped hurrying. One evening a boy fixed the bell with a bolt from the spare-parts tin and rang it proudly. Murugan thanked him, and that night he took the bolt out again, gently, and kept it in his shirt pocket as a gift.",
+   "hook": "Wonder: what small 'broken' thing in your day actually helps you slow down?",
+   "edition": "2026-11-11-pm",
+   "order": 13,
+   "id": "2026-11-11-pm-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Wave at Voyager 1 in Morse code",
+   "body": "NASA says Voyager 1 will be one light-day from Earth at 10:16 UTC on 18 November 2026 (3:46 pm IST), about 25.9 billion kilometres away, 49 years after launch. To mark it, NASA's 'Shine Bright' event invites people to flash V-G-R in Morse code with a torch after sunset on 17 November: dot-dot-dot-dash, dash-dash-dot, dot-dash-dot.",
+   "hook": "Wonder: a message from Earth now takes a whole day to reach it. What would you send?",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/"
+   },
+   "edition": "2026-11-11-pm",
+   "order": 12,
+   "id": "2026-11-11-pm-012"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Moore's law began as a 1965 magazine piece",
+   "body": "In 1965 Gordon Moore wrote an article for Electronics magazine predicting that the number of components on a chip would double about every year. In 1975 he revised the pace to roughly every two years. It was an observation about engineering and economics, not a law of physics, yet the industry treated it as a target for decades.",
+   "q": "How did Moore revise his prediction in 1975?",
+   "a": "From doubling about every year to roughly every two years.",
+   "edition": "2026-11-11-pm",
+   "order": 11,
+   "id": "2026-11-11-pm-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Smile at it",
+   "body": "When trouble comes, meet it with a smile; nothing overcomes trouble quite like that.",
+   "who": "Thirukkural 621 (own rendering)",
+   "edition": "2026-11-11-pm",
+   "order": 10,
+   "id": "2026-11-11-pm-010"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Reminders that know where you are",
+   "body": "Time-based reminders often fire when you can't act on them. Most phones can remind you by place instead: 'buy batteries' when you reach the shop, 'take the parcel' when you leave home. The nudge arrives at the one moment it's useful, so you don't have to hold it in mind all day.",
+   "edition": "2026-11-11-pm",
+   "order": 9,
+   "id": "2026-11-11-pm-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Give the agent a way to say 'blocked'",
+   "body": "Agents tend to keep trying when they hit a wall: a missing permission, a vague requirement, a test that can't run. Add an explicit 'blocked' outcome with a short reason, and make it a respectable result rather than a failure. You'll get fewer creative workarounds and a clearer picture of what actually needs a human.",
+   "edition": "2026-11-11-pm",
+   "order": 8,
+   "id": "2026-11-11-pm-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Aathichoodi: Tamil wisdom in alphabetical order",
+   "body": "Avvaiyar's Aathichoodi is a set of very short lines of advice, each beginning with the next letter of the Tamil alphabet. The first, 'Aram seya virumbu', means 'Love to do good'. Because each line is only a few words and follows the alphabet, generations of Tamil children have learned their letters and their values together.",
+   "hook": "Wonder: what would your own alphabet of one-line advice say?",
+   "edition": "2026-11-11-pm",
+   "order": 7,
+   "id": "2026-11-11-pm-007"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The dot on the i has a name",
+   "body": "The little dot above a lowercase i or j is called a tittle. The word is centuries old, and it may even be behind the phrase 'to a T', meaning exactly, though that origin isn't certain.",
+   "q": "What is the dot above a lowercase i called?",
+   "a": "A tittle.",
+   "edition": "2026-11-11-pm",
+   "order": 6,
+   "id": "2026-11-11-pm-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Rendezvous hashing: let every node bid",
+   "body": "To decide which server owns a key, compute a score for every server, hash(key + server), and pick the highest. That's rendezvous (highest-random-weight) hashing. If a server leaves, only its keys move, each to its next-highest bidder; everything else stays put. It needs no ring and no virtual nodes, at the cost of scoring every server per lookup.",
+   "q": "In rendezvous hashing, which server owns a key?",
+   "a": "The one with the highest hash(key, server) score.",
+   "edition": "2026-11-11-pm",
+   "order": 5,
+   "id": "2026-11-11-pm-005"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Write it down to think better",
+   "body": "Working memory holds only a few things at a time. Psychologists call it cognitive offloading when you move some of that load into the world: a note, a sketch, a list. Research reviewed by Evan Risko and Sam Gilbert suggests people offload naturally when a task gets heavy, and it often improves performance. A messy scratch page is not a sign of weakness; it's extra working memory.",
+   "hook": "Wonder: which part of today's work could live on paper instead of in your head?",
+   "edition": "2026-11-11-pm",
+   "order": 4,
+   "id": "2026-11-11-pm-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Carlsen wins the Total Chess opening blitz unbeaten",
+   "body": "The Total Chess pilot in Budapest began on 10 November with a nine-round blitz Swiss for 24 players. Magnus Carlsen finished on 7/9 with five wins and four draws, half a point ahead of Maxime Vachier-Lagrave, with Levon Aronian third on 6. The blitz doesn't award prize money; it sets tiebreaks for the group stage, which runs 11 to 15 November at 45 minutes plus 30 seconds a move.",
+   "q": "What was Carlsen's score in the Budapest opening blitz?",
+   "a": "7/9, unbeaten (five wins, four draws).",
+   "source": {
+    "name": "ChessBase India",
+    "url": "https://chessbase.in/news/magnus-carlsen-wins-total-chess-world-championship-pilot-2026-blitz"
+   },
+   "edition": "2026-11-11-pm",
+   "order": 3,
+   "id": "2026-11-11-pm-003"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A lava world wearing a reflective veil",
+   "body": "Webb watched the super-Earth TOI-561 b for 37 hours, covering three of its orbits; it circles its star in under 10.5 hours, about 280 light-years away in Sextans. A planet that close should be scorched bare, yet the light suggests reflective clouds or haze that bounce much of the starlight back into space, like a sunscreen.",
+   "q": "How long does TOI-561 b take to orbit its star?",
+   "a": "Under 10.5 hours.",
+   "source": {
+    "name": "EarthSky",
+    "url": "https://earthsky.org/space/lava-planets-surprising-atmosphere-toi-561-b-super-earth/"
+   },
+   "edition": "2026-11-11-pm",
+   "order": 2,
+   "id": "2026-11-11-pm-002"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Wednesday, lamps on",
+   "body": "The vegetable cart folds its last shade.\nA boy carries home a single bulb\nas if it might spill.\nWindows take their turns lighting up,\nslow and unhurried,\nlike someone counting\nwho doesn't mind losing their place.",
+   "edition": "2026-11-11-pm",
+   "order": 1,
+   "id": "2026-11-11-pm-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Gemini 4 Carbon reaches the paid API",
+   "body": "Google has made Gemini 4 Carbon available to paid API and AI Ultra users, at an introductory $2 per million input tokens and $10 per million output tokens until 30 November. Google says it ranks first on several agent benchmarks, including CursorBench 4.0. It also brings a /swarm feature to Antigravity that turns a single prompt into a small team of coordinated agents.",
+   "hook": "Wonder: when one prompt becomes a team, who decides which agent does what?",
+   "source": {
+    "name": "AI Weekly",
+    "url": "https://aiweekly.co/ai-news-today"
+   },
+   "edition": "2026-11-11-pm",
+   "order": 0,
+   "id": "2026-11-11-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
