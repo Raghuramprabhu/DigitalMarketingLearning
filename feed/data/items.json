@@ -1,6 +1,351 @@
 {
- "updated": "2026-11-12T02:13:30+00:00",
+ "updated": "2026-11-12T17:15:03+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Before you scroll on, try to recall: how old is moonlight? What did 'robota' mean in Czech? Why can a B-tree answer range queries?",
+   "q": "Which comedy show gave Python its name?",
+   "a": "Monty Python's Flying Circus.",
+   "edition": "2026-11-12-pm",
+   "order": 30,
+   "id": "2026-11-12-pm-030"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Rehearse the agent before the stage",
+   "body": "Before an agent touches real email or real money, give it a sandbox with fake but realistic data and a few tricky scenarios: a missing file, an ambiguous request, a tool that times out. Watching it handle rehearsals tells you more than any demo, and the fixes are free.",
+   "edition": "2026-11-12-pm",
+   "order": 29,
+   "id": "2026-11-12-pm-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Pigeons, 7 am",
+   "body": "They queue on the parapet\nlike commuters with no train,\npuff, shuffle, settle.\nOne leaves.\nThe rest move up a step,\nas if it were their turn\nfor the sun.",
+   "edition": "2026-11-12-pm",
+   "order": 28,
+   "id": "2026-11-12-pm-028"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Tamarind is a bean",
+   "body": "The tamarind in your rasam comes from a pod, and the tree belongs to the legume family, alongside peas, beans and lentils. The sour pulp surrounds the seeds inside the brown, curved pods.",
+   "hook": "Wonder: which other kitchen staples are secretly legumes?",
+   "edition": "2026-11-12-pm",
+   "order": 27,
+   "id": "2026-11-12-pm-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Sambuev wins Sahel Chess Festival unbeaten",
+   "body": "Canadian grandmaster Bator Sambuev won the second Sahel Chess Festival in Monastir, Tunisia, with an unbeaten 8/9, ahead of Wafa Hamed and Valerio Carnicelli. More than 300 players took part, and Margarita Potapova earned a WGM norm.",
+   "q": "What score did Sambuev make at the Sahel Chess Festival?",
+   "a": "8/9, unbeaten.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/sahel-chess-festival-2026-report"
+   },
+   "edition": "2026-11-12-pm",
+   "order": 26,
+   "id": "2026-11-12-pm-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Blue-green deployments",
+   "body": "Run two identical environments: blue serves users while green gets the new release. Test green, then switch the router. If something looks off, switch back in seconds. The cost is double capacity during the swap; the gift is a calm, reversible release.",
+   "hook": "Wonder: how fast could you undo your last deployment?",
+   "edition": "2026-11-12-pm",
+   "order": 25,
+   "id": "2026-11-12-pm-025"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Sermons in stones",
+   "body": "And this our life, exempt from public haunt, finds tongues in trees, books in the running brooks, sermons in stones, and good in every thing.",
+   "who": "William Shakespeare, As You Like It",
+   "edition": "2026-11-12-pm",
+   "order": 24,
+   "id": "2026-11-12-pm-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Python is named after a comedy show",
+   "body": "When Guido van Rossum started Python around Christmas 1989, he picked the name because he was reading scripts of Monty Python's Flying Circus and wanted something short and a little mysterious. It was never named after the snake.",
+   "q": "What inspired the name of the Python language?",
+   "a": "Monty Python's Flying Circus.",
+   "edition": "2026-11-12-pm",
+   "order": 23,
+   "id": "2026-11-12-pm-023"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Moonlight is about 1.3 seconds old",
+   "body": "The Moon sits roughly 384,000 km away, so light reflected from its surface reaches your eyes in about 1.3 seconds. The moonlight you see is sunlight that has already travelled about eight minutes, bounced, and then taken a short extra hop.",
+   "q": "Roughly how long does light take to travel from the Moon to Earth?",
+   "a": "About 1.3 seconds.",
+   "edition": "2026-11-12-pm",
+   "order": 22,
+   "id": "2026-11-12-pm-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "One 'now' card",
+   "body": "Write the single task you're doing on a sticky note and put it at the edge of your screen. When you surface from a detour, the card answers 'what was I doing?' instantly. Swap the card only when the task is done or deliberately paused.",
+   "edition": "2026-11-12-pm",
+   "order": 21,
+   "id": "2026-11-12-pm-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Slow the clock when it matters",
+   "body": "Story time doesn't have to match real time. Skip a week in one line, then spend a whole paragraph on the three seconds before a door opens. Readers feel weight where you linger, so linger on the moment that changes things.",
+   "edition": "2026-11-12-pm",
+   "order": 20,
+   "id": "2026-11-12-pm-020"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The expertise reversal effect",
+   "body": "Step-by-step guidance that helps beginners can slow experts down: they already hold the steps in their heads, and reading them again adds load. As you improve, swap full worked examples for bare problems. Good teaching fades the scaffolding.",
+   "q": "What is the expertise reversal effect?",
+   "a": "Guidance that helps novices can hinder learners who are already skilled.",
+   "edition": "2026-11-12-pm",
+   "order": 19,
+   "id": "2026-11-12-pm-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Plurai raises money to build practice worlds for agents",
+   "body": "Plurai announced $13 million in seed funding to build simulation tools where AI agents can be tested and improved before they meet real users. The idea is a flight simulator for agents: rehearse many messy situations safely, then ship.",
+   "hook": "Wonder: what would a 'driving test' for your favourite agent include?",
+   "source": {
+    "name": "AI Agents Directory",
+    "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-11-2026"
+   },
+   "edition": "2026-11-12-pm",
+   "order": 18,
+   "id": "2026-11-12-pm-018"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Rainbows are full circles",
+   "body": "A rainbow is really a circle of light around the point directly opposite the Sun. From the ground the horizon cuts it into an arc, but from an aircraft or a high cliff you can sometimes see the whole ring.",
+   "q": "Why do we usually see only an arc of a rainbow?",
+   "a": "The ground cuts off the lower part of what is really a full circle.",
+   "edition": "2026-11-12-pm",
+   "order": 17,
+   "id": "2026-11-12-pm-017"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Ajanta, found again in 1819",
+   "body": "The Buddhist cave temples of Ajanta, carved and painted between roughly the 2nd century BCE and the 5th century CE, slipped out of common memory for centuries. In April 1819 a British officer, John Smith, came upon them from across the ravine and scratched his name on a wall. Today their murals are a UNESCO World Heritage Site.",
+   "hook": "Wonder: what kept those paintings safe through centuries of quiet?",
+   "edition": "2026-11-12-pm",
+   "order": 16,
+   "id": "2026-11-12-pm-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Overloading: one piece, two jobs",
+   "body": "A defender is overloaded when it guards two things at once. Attack one of them and it must choose, leaving the other unguarded. When you spot a piece doing double duty, ask what happens if you make it do just one.",
+   "hook": "Wonder: which of your pieces is quietly holding two posts right now?",
+   "edition": "2026-11-12-pm",
+   "order": 15,
+   "id": "2026-11-12-pm-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Why indexes are trees",
+   "body": "Most database indexes are B-trees: wide, shallow trees that keep keys in sorted order. Because each node holds hundreds of keys, even a billion rows sit only a few levels deep, so a lookup touches a handful of disk pages. Sorted order is also why the same index serves ranges like 'created between June and July'.",
+   "q": "Why can one B-tree index answer range queries?",
+   "a": "It keeps keys in sorted order, so a range is a contiguous walk.",
+   "edition": "2026-11-12-pm",
+   "order": 14,
+   "id": "2026-11-12-pm-014"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "ChatGPT opens a front desk for businesses",
+   "body": "OpenAI introduced Businesses in ChatGPT in beta. Verified businesses can claim a profile in a Business Hub, and Business Agents, clearly labelled assistants that speak for a brand, are rolling out first to eligible US online shops and services.",
+   "q": "What is the name of the brand-representing assistants in ChatGPT's new business feature?",
+   "a": "Business Agents.",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/"
+   },
+   "edition": "2026-11-12-pm",
+   "order": 13,
+   "id": "2026-11-12-pm-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The postbox at the corner",
+   "body": "Every evening Mrs. Iyer posted one letter, though no one knew to whom. The postman finally asked. 'To my granddaughter in Pune,' she said. 'She replies by phone, but she keeps the letters in a tin.' The next week the postman left a small note in her own box: 'Your handwriting is the best on my route.' She kept that in a tin too.",
+   "edition": "2026-11-12-pm",
+   "order": 12,
+   "id": "2026-11-12-pm-012"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Hubble revisits the Jellyfish Cluster",
+   "body": "New Hubble observations of Messier 30, a globular cluster about 27,500 light-years away in Capricornus, are helping astronomers ask whether some of its ancient stars, or even the whole cluster, first formed outside our galaxy. Its stars are among the oldest in the Milky Way.",
+   "hook": "Wonder: can a star cluster be an immigrant?",
+   "source": {
+    "name": "Sci.News",
+    "url": "https://www.sci.news/astronomy/hubble-globular-cluster-messier-30-15182.html"
+   },
+   "edition": "2026-11-12-pm",
+   "order": 11,
+   "id": "2026-11-12-pm-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "'Vague but exciting'",
+   "body": "In March 1989 Tim Berners-Lee handed his boss at CERN, Mike Sendall, a proposal for an information management system. Sendall wrote 'Vague but exciting...' on the cover and let him carry on. That proposal grew into the World Wide Web.",
+   "q": "What did Mike Sendall write on Tim Berners-Lee's 1989 proposal?",
+   "a": "'Vague but exciting...'",
+   "edition": "2026-11-12-pm",
+   "order": 10,
+   "id": "2026-11-12-pm-010"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Keep learning how to live",
+   "body": "As long as you live, keep learning how to live.",
+   "who": "Seneca, Letters to Lucilius 76",
+   "edition": "2026-11-12-pm",
+   "order": 9,
+   "id": "2026-11-12-pm-009"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Lyrics compete with reading",
+   "body": "Research on the 'irrelevant speech effect' finds that background speech, including sung lyrics, makes it harder to hold words in order in memory, even when you try to ignore it. Instrumental music or steady noise interferes far less. For reading and memorising, wordless sound is the kinder choice.",
+   "hook": "Wonder: does your study playlist have words in it?",
+   "edition": "2026-11-12-pm",
+   "order": 8,
+   "id": "2026-11-12-pm-008"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Where the word 'robot' came from",
+   "body": "'Robot' first appeared in Karel Čapek's 1920 Czech play R.U.R. It comes from the Czech robota, meaning forced labour, and Čapek credited his brother Josef with suggesting it.",
+   "q": "Who suggested the word 'robot' to Karel Čapek?",
+   "a": "His brother, Josef Čapek.",
+   "edition": "2026-11-12-pm",
+   "order": 7,
+   "id": "2026-11-12-pm-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Book the in-between time",
+   "body": "Time blindness often hides in the gaps: the walk, the parking, the 'just finishing this email'. When you add something to your calendar, add a separate 10–15 minute block before it called 'get there'. Transitions stop stealing from the thing itself, and you arrive less rushed.",
+   "hook": "Wonder: how long does getting ready actually take you, start to door?",
+   "edition": "2026-11-12-pm",
+   "order": 6,
+   "id": "2026-11-12-pm-006"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Total Chess: four groups, four leaders",
+   "body": "After the first day of Fast Classic group play at the Total Chess pilot in Budapest, Firouzja and Duda lead Group A, Caruana and Liem Le share Group B, Nepomniachtchi leads Group C and Vachier-Lagrave leads Group D, each on 4 points. Carlsen and Giri drew both their games. Wins count 3 points here, so every decisive game matters.",
+   "hook": "Wonder: how does 3 points for a win change the way a top player plays a level position?",
+   "source": {
+    "name": "Arab News",
+    "url": "https://www.arabnews.com/sport/quartet-shine-as-total-chess-world-championship-tour-pilot-beginsf-3011420"
+   },
+   "edition": "2026-11-12-pm",
+   "order": 5,
+   "id": "2026-11-12-pm-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: Collectors.partitioningBy",
+   "body": "When you need to split a list into two groups by a yes/no test, partitioningBy is clearer than groupingBy:\nMap<Boolean, List<Order>> split = orders.stream().collect(Collectors.partitioningBy(o -> o.total() > 1000));\nBoth keys, true and false, are always present, even if one list is empty, so you never get a surprise null.",
+   "q": "What keys does partitioningBy always return?",
+   "a": "Both true and false, even when a group is empty.",
+   "edition": "2026-11-12-pm",
+   "order": 4,
+   "id": "2026-11-12-pm-004"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Lothal's ancient dock",
+   "body": "At Lothal in Gujarat, Harappan builders around 2400 BCE lined a large rectangular basin with fired bricks. Many archaeologists read it as one of the world's earliest dockyards, linked by channel to a river that led to the sea, with warehouses and bead workshops nearby. Some scholars think it held water instead, which keeps the conversation lively.",
+   "q": "In which present-day Indian state is Lothal?",
+   "a": "Gujarat.",
+   "edition": "2026-11-12-pm",
+   "order": 3,
+   "id": "2026-11-12-pm-003"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Gemini Robotics 2.5 steps onto factory floors",
+   "body": "Google DeepMind announced Gemini Robotics 2.5, a model that turns what a robot sees and is told into actions. In reported trials, Apptronik's Apollo 2 humanoid reached a 96% success rate sorting car parts into kits at Mercedes-Benz plants in Germany and Hungary, and handled obstacles more safely than before.",
+   "q": "Which humanoid robot was reported using Gemini Robotics 2.5 for car-parts kitting?",
+   "a": "Apptronik's Apollo 2.",
+   "source": {
+    "name": "DEV Community AI Daily Digest",
+    "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-11-2026-claude-becomes-an-office-suite-chatgpt-gets-business-agents-3bg8"
+   },
+   "edition": "2026-11-12-pm",
+   "order": 2,
+   "id": "2026-11-12-pm-002"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Thursday, the fridge hums",
+   "body": "Everyone asleep.\nThe fridge keeps its one long note,\nthe clock adds a soft drum.\nI rinse the last cup\nand leave it upside down,\nready for morning\nlike a small promise.",
+   "edition": "2026-11-12-pm",
+   "order": 1,
+   "id": "2026-11-12-pm-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The oldest close pair of quasars",
+   "body": "Astronomers have found two quasars, brilliantly feeding supermassive black holes, sitting only about 18,100 light-years apart. We see them as they were roughly 900 million years after the Big Bang, and their masses are about 1.5 billion and 400 million Suns. Pairs this close, this early, are a fresh puzzle for how the first giant black holes grew.",
+   "hook": "Wonder: what would the night sky look like from a galaxy with two quasars?",
+   "source": {
+    "name": "Sci.News",
+    "url": "https://www.sci.news/astronomy/record-breaking-quasar-pair-early-universe-15191.html"
+   },
+   "edition": "2026-11-12-pm",
+   "order": 0,
+   "id": "2026-11-12-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
