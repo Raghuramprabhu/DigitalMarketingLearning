@@ -1,6 +1,350 @@
 {
- "updated": "2026-11-11T17:21:02+00:00",
+ "updated": "2026-11-12T02:13:30+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Before you scroll on, try to recall: why does Phobos rise in the west? What does Math.floorMod(-7, 3) return? Which parent seahorse carries the eggs?",
+   "q": "Who is India's 100th grandmaster?",
+   "a": "Anuj Shrivatri.",
+   "edition": "2026-11-12-am",
+   "order": 30,
+   "id": "2026-11-12-am-030"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask for two options, then a pick",
+   "body": "When an agent faces a design choice, ask it to sketch two approaches in a few lines each and then recommend one. You'll see the trade-off it noticed, catch the times its favourite rests on a wrong assumption, and stay the person who decides.",
+   "hook": "Wonder: what did the agent consider and quietly drop last time?",
+   "edition": "2026-11-12-am",
+   "order": 29,
+   "id": "2026-11-12-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The Moon has quakes",
+   "body": "Seismometers left by Apollo astronauts recorded moonquakes until 1977. Some are triggered by Earth's tides, some by meteorite impacts, and some by the surface warming and contracting as the long lunar day turns to night. Because the Moon is dry and rigid, it can ring for a long time after a quake.",
+   "q": "How do we know the Moon has quakes?",
+   "a": "Seismometers left by the Apollo missions recorded them until 1977.",
+   "edition": "2026-11-12-am",
+   "order": 28,
+   "id": "2026-11-12-am-028"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Ledger of things that went right",
+   "body": "The bus waited.\nThe dosa was crisp at the edge.\nA stranger held a door,\nand I held the next one.\nSmall sums,\nbut the column is longer than I thought.",
+   "edition": "2026-11-12-am",
+   "order": 27,
+   "id": "2026-11-12-am-027"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The first letter",
+   "body": "As every letter begins with A, so the whole world begins with the First Being.",
+   "who": "Thirukkural 1 (own rendering)",
+   "edition": "2026-11-12-am",
+   "order": 26,
+   "id": "2026-11-12-am-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Cursor pagination beats offset",
+   "body": "OFFSET 100000 makes the database walk past a hundred thousand rows before it returns anything, and new rows arriving mid-scroll shift every page. Cursor (or keyset) pagination instead says 'give me 50 rows after id 8812'. It uses the index directly, stays fast on page one thousand, and never shows the same row twice.",
+   "q": "Why does keyset pagination stay fast deep into results?",
+   "a": "It seeks straight to the cursor via the index instead of skipping rows.",
+   "edition": "2026-11-12-am",
+   "order": 25,
+   "id": "2026-11-12-am-025"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Bishops love pawns on both wings",
+   "body": "When pawns are spread across both sides of the board, a bishop usually beats a knight: it can sweep from one wing to the other in a single move, while the knight needs several hops. With all the pawns on one side, the knight's slowness matters far less.",
+   "hook": "Wonder: in your last endgame, which side were the pawns on?",
+   "edition": "2026-11-12-am",
+   "order": 24,
+   "id": "2026-11-12-am-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "COBOL was designed by committee, on purpose",
+   "body": "In 1959 a group called CODASYL, drawing on Grace Hopper's FLOW-MATIC, designed COBOL so business programs could read almost like English: ADD TAX TO TOTAL. The goal was a language that worked across different manufacturers' machines. Much of it still quietly runs payroll and banking systems today.",
+   "q": "Which earlier language strongly influenced COBOL?",
+   "a": "Grace Hopper's FLOW-MATIC.",
+   "edition": "2026-11-12-am",
+   "order": 23,
+   "id": "2026-11-12-am-023"
+  },
+  {
+   "topic": "space",
+   "kind": "tip",
+   "title": "The Pleiades are up all night",
+   "body": "In November the Pleiades, a little cluster of blue-white stars in Taurus, rise in the east soon after dark and stay up through the night. Most people see six or seven stars by eye. A pair of binoculars turns them into dozens, a sparkling handful of young siblings about 440 light-years away.",
+   "q": "Roughly how many Pleiades stars can most people see without binoculars?",
+   "a": "Six or seven.",
+   "edition": "2026-11-12-am",
+   "order": 22,
+   "id": "2026-11-12-am-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Turn the task into a question",
+   "body": "'Write the report' is a wall. 'What's the first sentence of the report?' is a door. Rephrasing a task as a small, specific question gives your curiosity something to grab, and once one answer is down the next question usually appears on its own.",
+   "hook": "Wonder: what's the first question hiding inside your biggest task?",
+   "edition": "2026-11-12-am",
+   "order": 21,
+   "id": "2026-11-12-am-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Vikramashila, Nalanda's sister",
+   "body": "Around the end of the 8th century, the Pala king Dharmapala founded Vikramashila in what is now Bihar. It grew into one of the great monastic universities of its age, and its scholar Atisha later travelled to Tibet in the 11th century, where his teaching left a lasting mark.",
+   "hook": "Wonder: what would a reading list at Vikramashila have looked like?",
+   "edition": "2026-11-12-am",
+   "order": 20,
+   "id": "2026-11-12-am-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The tailor's last button",
+   "body": "Every shirt Mr. Ilango finished had one button sewn on with a different thread, a pale blue. Customers rarely noticed. When his granddaughter asked, he said it was so he could find his own work again someday. Forty years later she found a shirt at a secondhand stall in Mylapore, turned the cuff, and there it was: blue, holding.",
+   "edition": "2026-11-12-am",
+   "order": 19,
+   "id": "2026-11-12-am-019"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The IKEA effect",
+   "body": "In 2012 Michael Norton, Daniel Mochon and Dan Ariely found people valued items they had assembled themselves, even plain flat-pack boxes, more than identical ones built for them. Effort breeds attachment. It is a useful nudge for learning: notes you make, rather than ones you're handed, tend to feel worth returning to.",
+   "q": "What is the IKEA effect?",
+   "a": "We value things more when we've helped build them.",
+   "edition": "2026-11-12-am",
+   "order": 18,
+   "id": "2026-11-12-am-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Adobe lets outside agents work on real project files",
+   "body": "Adobe added new agent features across Photoshop, Premiere and Firefly, and an MCP integration so outside AI agents can work with editable Adobe project files rather than flattened images. Photoshop 2027 also adds Relight and Generative Restyle.",
+   "q": "What does Adobe's MCP integration let outside agents do?",
+   "a": "Work with editable Adobe project files.",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/"
+   },
+   "edition": "2026-11-12-am",
+   "order": 17,
+   "id": "2026-11-12-am-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The cashew grows outside its fruit",
+   "body": "A cashew nut hangs beneath a fleshy, pear-shaped 'cashew apple', in a hard shell of its own. The apple is juicy and eaten fresh in Goa and Brazil, and in Goa it is also used to make feni. The nut has to be roasted or steamed out of its shell, which is why cashews are always sold shelled.",
+   "hook": "Wonder: what does a cashew apple taste like?",
+   "edition": "2026-11-12-am",
+   "order": 16,
+   "id": "2026-11-12-am-016"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Room for kindness",
+   "body": "Wherever there is a human being, there is an opportunity for a kindness.",
+   "who": "Seneca, On the Happy Life",
+   "edition": "2026-11-12-am",
+   "order": 15,
+   "id": "2026-11-12-am-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "The sidecar pattern",
+   "body": "Instead of building logging, TLS and retries into every service, run a small helper process beside each one: a sidecar. It shares the service's network and lifecycle, so the app talks to localhost and the sidecar handles the plumbing. Service meshes like Istio work this way, and teams can upgrade the plumbing without touching the app.",
+   "q": "What does a sidecar share with the service it sits beside?",
+   "a": "Its network and lifecycle (it starts and stops with it).",
+   "edition": "2026-11-12-am",
+   "order": 14,
+   "id": "2026-11-12-am-014"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Van Foreest and Martirosyan bounce back in Budapest",
+   "body": "On day two of the Total Chess pilot in Budapest, Jorden van Foreest beat Levon Aronian and Haik Martirosyan beat Shakhriyar Mamedyarov, both recovering from first-round losses. Magnus Carlsen and Anish Giri drew. No one has a perfect score yet, and only the four group winners go through to the title stage.",
+   "q": "How many players from each group reach the Total Chess title stage?",
+   "a": "Only the group winner.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/2026-total-chess-world-championship-tour-pilot-day-2"
+   },
+   "edition": "2026-11-12-am",
+   "order": 13,
+   "id": "2026-11-12-am-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let the ending echo the opening",
+   "body": "A short piece feels finished when its last image quietly answers its first. Open on a locked gate, close on someone leaving it open. The reader doesn't need it explained; they feel the circle close, and the change in between becomes the story.",
+   "hook": "Wonder: what object could open and close your next piece?",
+   "edition": "2026-11-12-am",
+   "order": 12,
+   "id": "2026-11-12-am-012"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "The Martian moon that rises in the west",
+   "body": "Phobos, the larger moon of Mars, circles the planet in about 7 hours 39 minutes, faster than Mars turns. So from the Martian surface it rises in the west and sets in the east, crossing the sky roughly twice a day.",
+   "q": "Why does Phobos rise in the west?",
+   "a": "It orbits Mars faster than Mars rotates.",
+   "edition": "2026-11-12-am",
+   "order": 11,
+   "id": "2026-11-12-am-011"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Keep a 'waiting for' list",
+   "body": "A surprising amount of mental noise comes from things you're waiting on: a reply, a parcel, a form. Give them one short list with the date you asked. Your brain can stop holding them, and a quick weekly glance tells you which ones need a gentle nudge.",
+   "hook": "Wonder: how many open loops are you quietly carrying right now?",
+   "edition": "2026-11-12-am",
+   "order": 10,
+   "id": "2026-11-12-am-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Wi-Fi doesn't stand for anything",
+   "body": "'Wi-Fi' was coined in 1999 by the branding firm Interbrand as a friendlier name than 'IEEE 802.11b Direct Sequence'. It was chosen as a pleasant echo of 'hi-fi'. The phrase 'wireless fidelity' was attached afterwards and was never the real meaning.",
+   "q": "Who coined the name Wi-Fi, and when?",
+   "a": "The branding firm Interbrand, in 1999.",
+   "edition": "2026-11-12-am",
+   "order": 9,
+   "id": "2026-11-12-am-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "End every agent run with a changelog",
+   "body": "When an agent finishes, ask it for a short list: files touched, commands run, anything it skipped and why. It takes a few seconds to read, and it turns 'it said it was done' into something you can check. Over time the changelogs also show you which tasks it handles well and which need a closer eye.",
+   "hook": "Wonder: what would you want to know first if a colleague did this work?",
+   "edition": "2026-11-12-am",
+   "order": 8,
+   "id": "2026-11-12-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Sanchi's great stupa",
+   "body": "The Great Stupa at Sanchi in Madhya Pradesh was first built in the 3rd century BCE under the emperor Ashoka, as a simple brick dome. Later generations enlarged it in stone and added four carved gateways, the toranas, which tell stories from the Buddha's life without ever showing him in human form; he appears as a footprint, a tree or an empty seat.",
+   "hook": "Wonder: how would you tell a story about someone without drawing them?",
+   "edition": "2026-11-12-am",
+   "order": 7,
+   "id": "2026-11-12-am-007"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Seahorse fathers carry the babies",
+   "body": "In seahorses, the female places her eggs into a pouch on the male's belly. He fertilises them, carries them for a few weeks, and then gives birth to tiny, fully formed seahorses, sometimes hundreds at once.",
+   "q": "Which seahorse parent carries the eggs until birth?",
+   "a": "The father, in a pouch on his belly.",
+   "edition": "2026-11-12-am",
+   "order": 6,
+   "id": "2026-11-12-am-006"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "First and last stick best",
+   "body": "Read someone a list of words and ask them to recall it: the first few and the last few come back most easily, and the middle sags. Psychologists call this the serial position effect, with primacy at the start and recency at the end. If a study session has a middle, give it a quick review on its own.",
+   "hook": "Wonder: which part of today's meeting can you remember least?",
+   "edition": "2026-11-12-am",
+   "order": 5,
+   "id": "2026-11-12-am-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "India welcomes its 100th grandmaster",
+   "body": "Anuj Shrivatri, 22, won the ASEAN Plus Open in the Philippines with a performance rating of 2586, completing the requirements for the grandmaster title. He becomes India's 100th GM, a round number that would have been hard to imagine when Viswanathan Anand became the first in 1988.",
+   "q": "Who became India's 100th grandmaster?",
+   "a": "Anuj Shrivatri, aged 22.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/india-s-100th-grandmaster"
+   },
+   "edition": "2026-11-12-am",
+   "order": 4,
+   "id": "2026-11-12-am-004"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java: Math.floorMod for wrap-around",
+   "body": "In Java, -7 % 3 is -1, because % keeps the sign of the left side. That surprises anyone wrapping an index around a ring buffer or a clock face. Math.floorMod(-7, 3) returns 2, which is usually what you meant: a result that is never negative when the divisor is positive.",
+   "q": "What does Math.floorMod(-7, 3) return?",
+   "a": "2 (whereas -7 % 3 is -1).",
+   "edition": "2026-11-12-am",
+   "order": 3,
+   "id": "2026-11-12-am-003"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "ElevenLabs releases Scribe v3",
+   "body": "ElevenLabs has a new speech-to-text model, Scribe v3, plus a live version for real-time use. In its multilingual tests the company reports about 27% fewer word errors than Scribe v2, and the live version adds speaker labels so a transcript knows who said what.",
+   "q": "What does Scribe v3 Live add for conversations?",
+   "a": "Speaker diarization: labels for who said what.",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/"
+   },
+   "edition": "2026-11-12-am",
+   "order": 2,
+   "id": "2026-11-12-am-002"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Thursday, before the milk comes",
+   "body": "The street is still deciding\nwhat colour it will be.\nA crow tries one word, then another.\nI hold the tumbler with both hands,\nnot because it is cold,\nbut because the morning is.",
+   "hook": "Wonder: what small object anchors your first ten minutes?",
+   "edition": "2026-11-12-am",
+   "order": 1,
+   "id": "2026-11-12-am-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The planet that stopped crossing its star",
+   "body": "Astronomers following the hot Jupiter TOI-2535 b with NASA's TESS satellite from 2019 to 2026 watched its transits drift early and late by up to six hours, grow shorter and shallower, and then stop altogether. A hidden neighbour on a tilted orbit is slowly tipping its path, so for now it simply misses our line of sight. The team expects it to start transiting again in 30 to 50 years.",
+   "q": "Why did TOI-2535 b stop transiting?",
+   "a": "A neighbouring planet on a tilted orbit is slowly tipping its orbit out of our line of sight.",
+   "source": {
+    "name": "BBC Sky at Night Magazine",
+    "url": "https://www.skyatnightmagazine.com/news/toi-2535-b-disappearing-planet"
+   },
+   "edition": "2026-11-12-am",
+   "order": 0,
+   "id": "2026-11-12-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
