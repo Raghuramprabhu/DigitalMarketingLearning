@@ -1,6 +1,345 @@
 {
- "updated": "2026-11-12T17:15:03+00:00",
+ "updated": "2026-11-13T02:13:06+00:00",
  "items": [
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A Mars day is a little longer",
+   "body": "A solar day on Mars, called a sol, lasts about 24 hours and 40 minutes. Mission teams on Earth who live on Mars time shift their schedules about 40 minutes later each day.",
+   "hook": "Wonder: what would you do with an extra 40 minutes every day?",
+   "edition": "2026-11-13-am",
+   "order": 30,
+   "id": "2026-11-13-am-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "The postman's bicycle",
+   "body": "Its bell has one opinion,\nits basket holds the town:\na birthday, a bill, a postcard\nfrom someone's sister in Kodaikanal,\nall leaning on each other\non the long ride down.",
+   "edition": "2026-11-13-am",
+   "order": 29,
+   "id": "2026-11-13-am-029"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Sliding-window rate limits",
+   "body": "A fixed-window limiter ('100 requests per minute, resetting at :00') lets bursts slip through at the boundary: 100 at 0:59, another 100 at 1:00. A sliding window counts requests over the last 60 seconds from right now, so the limit holds smoothly.\n\nA cheap version blends the current and previous window's counts, weighted by how far into the current window you are.",
+   "q": "What weakness of fixed-window rate limiting does a sliding window fix?",
+   "a": "Bursts at window boundaries, where a client can send almost double the limit in a short span.",
+   "edition": "2026-11-13-am",
+   "order": 28,
+   "id": "2026-11-13-am-028"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Answer harm with kindness",
+   "body": "To answer those who hurt you, do them good, until they feel ashamed; then let both the hurt and the kindness be forgotten.",
+   "who": "Thirukkural 314 (own rendering)",
+   "edition": "2026-11-13-am",
+   "order": 27,
+   "id": "2026-11-13-am-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Nakamura stays with Chess.com",
+   "body": "Hikaru Nakamura has signed a new long-term agreement with Chess.com, extending a partnership that began in 2013. He'll join the commentary team for some key games of the upcoming World Championship match, and a 'Hikaru vs. The World' event is planned for 2027.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/hikaru-nakamura-renews-with-chess-com"
+   },
+   "edition": "2026-11-13-am",
+   "order": 26,
+   "id": "2026-11-13-am-026"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Let the agent ask one question",
+   "body": "When you hand an agent a task, allow it exactly one clarifying question before it starts. One question forces it to find the biggest gap in your request, without turning the job into an interview.\n\nOften the question itself shows you what you forgot to say.",
+   "hook": "Wonder: what would your most-asked clarifying question be?",
+   "edition": "2026-11-13-am",
+   "order": 25,
+   "id": "2026-11-13-am-025"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Flow lives at the edge of skill",
+   "body": "Psychologist Mihaly Csikszentmihalyi found that deep absorption, which he called flow, tends to appear when a task's challenge sits just above your current skill. Too easy and you drift into boredom; too hard and you tense up.\n\nIf you're bored, add a constraint. If you're anxious, shrink the step.",
+   "edition": "2026-11-13-am",
+   "order": 24,
+   "id": "2026-11-13-am-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Tetris began in Moscow, 1984",
+   "body": "Alexey Pajitnov wrote the first Tetris in June 1984 on an Elektronika 60 computer at the Soviet Academy of Sciences. The name blends 'tetromino' (a shape of four squares) and 'tennis', his favourite sport.",
+   "q": "Which two words were blended to make the name 'Tetris'?",
+   "a": "Tetromino and tennis.",
+   "edition": "2026-11-13-am",
+   "order": 23,
+   "id": "2026-11-13-am-023"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A hidden twist in the solar wind",
+   "body": "Using Parker Solar Probe data, an international team found that turbulent magnetic fields in the solar wind flip their direction of rotation at very small scales. The flip happens where the plasma stops acting like a fluid and starts acting like individual particles, a clue that could help improve space-weather forecasts.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261109205411.htm"
+   },
+   "edition": "2026-11-13-am",
+   "order": 22,
+   "id": "2026-11-13-am-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Give big tasks a progress bar",
+   "body": "Long tasks feel endless because you can't see them moving. Split one into 10 pieces and draw 10 empty boxes on a sticky note. Fill a box each time a piece is done.\n\nWatching the bar fill gives your brain the steady small rewards it likes.",
+   "edition": "2026-11-13-am",
+   "order": 21,
+   "id": "2026-11-13-am-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Charminar, 1591",
+   "body": "Hyderabad's Charminar ('four minarets') was built in 1591 by Muhammad Quli Qutb Shah, the Qutb Shahi ruler who founded the city. It stood at the heart of the new city's layout, and its upper floor holds a small mosque.",
+   "hook": "Wonder: what does a city choose to put at its very centre?",
+   "edition": "2026-11-13-am",
+   "order": 20,
+   "id": "2026-11-13-am-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Give the reader a small mystery early",
+   "body": "Plant one unexplained detail in the first lines: a locked drawer, a name no one says, a coat that's too big. You don't need a big secret. A small open question gives the reader a reason to keep going, and answering it later feels like a reward.",
+   "edition": "2026-11-13-am",
+   "order": 19,
+   "id": "2026-11-13-am-019"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The far side isn't dark",
+   "body": "The side of the Moon we never see from Earth gets just as much sunlight as the side we do. 'Dark side' only meant unknown. During our new Moon, the far side is in full daylight.",
+   "q": "When the Moon is 'new' for us, what is the far side doing?",
+   "a": "Basking in full sunlight.",
+   "edition": "2026-11-13-am",
+   "order": 18,
+   "id": "2026-11-13-am-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Google Labs tries Tabletop",
+   "body": "Google Labs opened a waitlist for Tabletop, an experiment that builds small shared spaces from a prompt: a trip plan, a shared expense tracker, a dinner poll or a tournament bracket. Friends can join and edit together in real time. For now it's limited to adults in the US.",
+   "source": {
+    "name": "The Verge",
+    "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability"
+   },
+   "edition": "2026-11-13-am",
+   "order": 17,
+   "id": "2026-11-13-am-017"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Canary releases",
+   "body": "Instead of shipping a new version to everyone at once, send it to a small slice of traffic first, say 1%. Watch error rates and latency. If it behaves, widen the slice step by step; if not, roll back while most users never noticed.\n\nThe name comes from the canaries miners once carried as an early warning.",
+   "hook": "Wonder: what's the smallest audience that would still tell you something true?",
+   "edition": "2026-11-13-am",
+   "order": 16,
+   "id": "2026-11-13-am-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Zugzwang: when moving hurts",
+   "body": "Zugzwang is German for 'compulsion to move'. It describes a position where you'd be fine if you could pass, but every legal move makes things worse. It shows up most in king-and-pawn endings, where one spare tempo can decide the game.",
+   "q": "In which kind of position does zugzwang show up most often?",
+   "a": "Endgames, especially king-and-pawn endings.",
+   "edition": "2026-11-13-am",
+   "order": 15,
+   "id": "2026-11-13-am-015"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Running with the stars",
+   "body": "Look round at the courses of the stars, as if thou wert going along with them.",
+   "who": "Marcus Aurelius, Meditations 7.47 (George Long translation)",
+   "edition": "2026-11-13-am",
+   "order": 14,
+   "id": "2026-11-13-am-014"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Lumina: watching the first light spread",
+   "body": "MIT and Harvard researchers built a huge supercomputer simulation, called Lumina, that follows 2 billion years of early cosmic history across a region about 1.6 billion light-years wide. It shows how the first stars, galaxies and black holes slowly lit up and re-ionized the hydrogen and helium filling the young universe.",
+   "hook": "Wonder: what did the universe look like the moment its first stars switched on?",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261110042534.htm"
+   },
+   "edition": "2026-11-13-am",
+   "order": 13,
+   "id": "2026-11-13-am-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The ticket inspector's sums",
+   "body": "On the 7:10 local, the inspector never punched tickets right away. He asked each child on the way to school one sum. Seven eights. Twelve plus nineteen. A girl by the window got hers wrong every morning for a month, and every morning he said, 'Tomorrow, then.'\n\nIn March she held out her ticket and said, 'Fifty-six, before you ask.' He punched it with a little flourish, like a stamp in a passport.",
+   "edition": "2026-11-13-am",
+   "order": 12,
+   "id": "2026-11-13-am-012"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Git was written in a hurry",
+   "body": "In April 2005, after Linux lost free use of the BitKeeper tool, Linus Torvalds started writing Git. Within days it was tracking its own source code. A few months later he handed it to Junio Hamano, who has maintained it ever since.",
+   "hook": "Wonder: what would you build if you only had a couple of weeks and a clear need?",
+   "edition": "2026-11-13-am",
+   "order": 11,
+   "id": "2026-11-13-am-011"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The fresh start effect",
+   "body": "People are more likely to begin a new goal on a calendar landmark: a Monday, the first of the month, a birthday. Researchers Hengchen Dai, Katherine Milkman and Jason Riis called this the fresh start effect (2014).\n\nYou don't have to wait for one, though. You can draw your own line: 'After this cup of tea, a new chapter.'",
+   "q": "What do we call the boost in motivation people feel on dates like Mondays or birthdays?",
+   "a": "The fresh start effect.",
+   "edition": "2026-11-13-am",
+   "order": 10,
+   "id": "2026-11-13-am-010"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "There's no lead in a pencil",
+   "body": "Pencil 'lead' is graphite mixed with clay. Early users mistook graphite for a kind of lead ore, and the name stuck. Pencils have never had lead in their cores.",
+   "hook": "Wonder: how many everyday names are leftover mistakes?",
+   "edition": "2026-11-13-am",
+   "order": 9,
+   "id": "2026-11-13-am-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "A local AWS stand-in, written by agents",
+   "body": "Amazon released a free local tool that simulates more than 200 AWS services, so developers can test cloud code on their own machine. Amazon says AI agents wrote and maintain all of its code. It notes the emulator doesn't fully copy every real-world limit, such as service restrictions.",
+   "source": {
+    "name": "GeekWire",
+    "url": "https://www.geekwire.com/2026/aws-gives-developers-a-free-local-stand-in-for-its-cloud-built-from-scratch-by-ai-agents/"
+   },
+   "edition": "2026-11-13-am",
+   "order": 8,
+   "id": "2026-11-13-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Kodumanal, a Sangam-age workshop town",
+   "body": "Near the Noyyal river in Tamil Nadu's Erode district, excavations at Kodumanal have found an ancient craft centre: beads of beryl, quartz and carnelian, evidence of iron and steel working, and potsherds scratched with Tamil-Brahmi letters. Sangam poetry seems to remember it as Kodumanam.",
+   "q": "Which river does the ancient craft town of Kodumanal sit near?",
+   "a": "The Noyyal, in Erode district, Tamil Nadu.",
+   "edition": "2026-11-13-am",
+   "order": 7,
+   "id": "2026-11-13-am-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Count up, not down",
+   "body": "A countdown timer can feel like a ticking alarm. Try a stopwatch that counts up instead. It quietly shows how long you've been at something, so time becomes visible without the pressure of a deadline.\n\nWhen you stop, glance at it: 'I did 14 minutes.' That's a small, honest win.",
+   "hook": "Wonder: does your focus change when time feels like a tally rather than a fuse?",
+   "edition": "2026-11-13-am",
+   "order": 6,
+   "id": "2026-11-13-am-006"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Caruana and Niemann sweep in Budapest",
+   "body": "Day 3 of the Total Chess World Championship Tour pilot belonged to two players who won both their games. Fabiano Caruana beat Praggnanandhaa twice and leads Group B with 10 points; Hans Niemann beat Vaishali twice to share the Group D lead with Maxime Vachier-Lagrave. Bibisara Assaubayeva also earned a career-best win over Arjun Erigaisi in one of their games.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/2026-total-chess-world-championship-tour-pilot-day-3"
+   },
+   "edition": "2026-11-13-am",
+   "order": 5,
+   "id": "2026-11-13-am-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 21: getFirst, getLast, reversed",
+   "body": "Java 21 added sequenced collections (JEP 431). List, Deque and LinkedHashSet now share methods like getFirst(), getLast(), addFirst(), removeLast() and reversed().\n\nSo list.get(list.size() - 1) becomes list.getLast(), and list.reversed() gives a reversed view without copying.",
+   "q": "Which Java 21 method gives a reversed view of a List without copying it?",
+   "a": "list.reversed(), from the sequenced collections added in Java 21.",
+   "edition": "2026-11-13-am",
+   "order": 4,
+   "id": "2026-11-13-am-004"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Hubble's M30, a cluster swimming upstream",
+   "body": "A new Hubble image shows Messier 30, a globular cluster about 27,500 light-years away in Capricornus. Its stars are ancient, some estimated at 11.5 to 13.5 billion years old. M30 orbits against the direction the Milky Way spins, a hint that it may have been born elsewhere and adopted by our galaxy long ago.",
+   "hook": "Wonder: what would the sky look like from inside a ball of a hundred thousand stars?",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/astronomy/hubble-space-telescope/hubble-space-telescope-reveals-glittering-stars-with-mysterious-origins-space-photo-of-the-day-for-nov-11-2026"
+   },
+   "edition": "2026-11-13-am",
+   "order": 3,
+   "id": "2026-11-13-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Friday, first kettle",
+   "body": "The kettle clears its throat,\nthe window learns the colour grey,\na sparrow tests the railing\nlike it owns the day.\nNothing urgent is awake yet.\nI let it stay that way.",
+   "edition": "2026-11-13-am",
+   "order": 2,
+   "id": "2026-11-13-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Gemini gets an API for quick decisions",
+   "body": "Google introduced a Gemini Decisions API built for short verdicts rather than long answers. One request can carry up to 1,000 yes/no questions, multiple-choice picks or scoring criteria, and each answer comes back with a confidence score. It accepts text and other media as input.",
+   "hook": "Wonder: how many of your daily tasks are really a long list of small yes/no calls?",
+   "source": {
+    "name": "Google Blog",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+   },
+   "edition": "2026-11-13-am",
+   "order": 1,
+   "id": "2026-11-13-am-001"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Before you scroll, a warm-up: three small questions from this edition are waiting further down. Try answering each before you peek.",
+   "q": "What does 'zugzwang' mean in chess?",
+   "a": "Being forced to move when every move makes your position worse; German for 'compulsion to move'.",
+   "edition": "2026-11-13-am",
+   "order": 0,
+   "id": "2026-11-13-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
