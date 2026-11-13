@@ -1,6 +1,338 @@
 {
- "updated": "2026-11-13T02:13:06+00:00",
+ "updated": "2026-11-13T17:16:31+00:00",
  "items": [
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "An 85-letter hill",
+   "body": "A hill in New Zealand's Hawke's Bay carries one of the longest place names in the world: an 85-letter Māori name usually shortened to Taumata. It honours a traveller named Tamatea, who is said to have played his flute there.",
+   "hook": "Wonder: what would you name a hill after something you did there?",
+   "edition": "2026-11-13-pm",
+   "order": 29,
+   "id": "2026-11-13-pm-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Rice drying on the terrace",
+   "body": "Spread thin on an old sari,\nthe grains take the sun\none by one,\nwhile a crow considers\nand decides, for now,\nto be patient too.",
+   "edition": "2026-11-13-pm",
+   "order": 28,
+   "id": "2026-11-13-pm-028"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Head-of-line blocking",
+   "body": "When requests share one ordered line, a single slow one holds up everything behind it, even the quick ones. That's head-of-line blocking. HTTP/2 fixed it at the request level by multiplexing streams over one connection, and HTTP/3 (over QUIC) fixed it at the transport level, so one lost packet only stalls its own stream.",
+   "q": "What does HTTP/3 change so one lost packet doesn't stall every stream?",
+   "a": "It runs over QUIC, where each stream is delivered independently.",
+   "edition": "2026-11-13-pm",
+   "order": 27,
+   "id": "2026-11-13-pm-027"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Such stuff as dreams",
+   "body": "We are such stuff\nAs dreams are made on, and our little life\nIs rounded with a sleep.",
+   "who": "William Shakespeare, The Tempest",
+   "edition": "2026-11-13-pm",
+   "order": 26,
+   "id": "2026-11-13-pm-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The Réti manoeuvre: chase two goals at once",
+   "body": "In Richard Réti's 1921 study, White's king looks hopelessly far from Black's runaway pawn. But by walking diagonally, the king moves towards the enemy pawn and towards supporting its own pawn at the same time. Black can't stop both ideas, and the game is drawn.\n\nThe lesson: on a chessboard, a diagonal walk is as short as a straight one.",
+   "hook": "Wonder: where in life does one move serve two goals?",
+   "edition": "2026-11-13-pm",
+   "order": 25,
+   "id": "2026-11-13-pm-025"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The Memex, a 1945 dream of linked documents",
+   "body": "In his 1945 essay 'As We May Think', engineer Vannevar Bush imagined a desk called the Memex that stored a person's books and notes on microfilm and let them build 'trails' linking one document to another. Decades later, hypertext pioneers cited it as an inspiration for the web's links.",
+   "hook": "Wonder: what would your own trail of linked notes look like?",
+   "edition": "2026-11-13-pm",
+   "order": 24,
+   "id": "2026-11-13-pm-024"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Let the trained hands work",
+   "body": "When a skill is well learned, watching every step too closely can make it worse. Studies of skilled golfers and typists found that focusing on the mechanics under pressure disrupted fluent performance, while a simple outward focus, like the target or a single word, helped it flow.",
+   "q": "Why can thinking hard about each step hurt a well-practised skill?",
+   "a": "It disrupts the automatic, fluent control that practice built; an outward focus helps it run smoothly.",
+   "edition": "2026-11-13-pm",
+   "order": 23,
+   "id": "2026-11-13-pm-023"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Give the side character an errand",
+   "body": "A minor character feels real the moment they want something unrelated to the hero: the shopkeeper needs to close early for a wedding, the friend is hunting for a lost charger. One line of their own small errand makes the world feel busy and alive beyond the main plot.",
+   "hook": "Wonder: what is the most minor person in your story trying to get done today?",
+   "edition": "2026-11-13-pm",
+   "order": 22,
+   "id": "2026-11-13-pm-022"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "The Sun gets a little lighter every second",
+   "body": "Fusion in the Sun's core turns mass into energy, about four million tonnes every second. It sounds enormous, but the Sun is so vast that over its whole life so far it has lost only a tiny fraction of a percent of its mass this way.",
+   "hook": "Wonder: the sunlight on your face was, a moment ago, a little bit of the Sun's weight.",
+   "edition": "2026-11-13-pm",
+   "order": 21,
+   "id": "2026-11-13-pm-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Pamban Bridge, India's first sea bridge",
+   "body": "Opened in 1914, the Pamban railway bridge carried trains across the sea to Rameswaram island, making it India's first sea bridge. Its middle section was a lift span whose two halves rolled upward to let ships pass beneath.",
+   "q": "What made the old Pamban Bridge special when it opened in 1914?",
+   "a": "It was India's first sea bridge, with a middle span that opened upward for ships.",
+   "edition": "2026-11-13-pm",
+   "order": 20,
+   "id": "2026-11-13-pm-020"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Write the 'why' next to the 'what'",
+   "body": "A task like 'email Priya' is easy to skip; 'email Priya so the trip dates are settled' carries its own reason. Adding a few words of why gives your brain the interest and meaning it needs to start, and makes it clearer which tasks can quietly be dropped.",
+   "hook": "Wonder: which item on your list has no reason left?",
+   "edition": "2026-11-13-pm",
+   "order": 19,
+   "id": "2026-11-13-pm-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Anthropic: one shared agent beat many personal ones",
+   "body": "Anthropic's alignment team tested frontier models in four multi-agent settings where several people had to share an outcome. In every setting, the group did worse when each person had their own agent than when one shared agent served everyone. Three of the test environments are released as a benchmark, MAMUBench.",
+   "q": "In Anthropic's 'Worse Together' study, which setup gave better group outcomes?",
+   "a": "One shared agent serving everyone, rather than one agent per person.",
+   "source": {
+    "name": "Anthropic Alignment",
+    "url": "https://alignment.anthropic.com/2026/worse-together"
+   },
+   "edition": "2026-11-13-pm",
+   "order": 18,
+   "id": "2026-11-13-pm-018"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The see-through frog",
+   "body": "Glass frogs have translucent bellies, so you can see their organs from below. While they sleep, some species go a step further: they tuck most of their red blood cells away in the liver, which makes their bodies even more transparent.",
+   "hook": "Wonder: what else in nature hides by becoming clearer rather than darker?",
+   "edition": "2026-11-13-pm",
+   "order": 17,
+   "id": "2026-11-13-pm-017"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 16: Stream.toList()",
+   "body": "Since Java 16 you can write list.stream().filter(...).toList() instead of .collect(Collectors.toList()). It's shorter, and the result is unmodifiable: calling add() on it throws UnsupportedOperationException.\n\nNeed a list you can change later? Keep using Collectors.toCollection(ArrayList::new).",
+   "q": "Can you add elements to the list returned by Stream.toList()?",
+   "a": "No, it's unmodifiable; adding throws UnsupportedOperationException.",
+   "edition": "2026-11-13-pm",
+   "order": 16,
+   "id": "2026-11-13-pm-016"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The radio repairman's quiet",
+   "body": "Every radio that came into Selvam's shop got the same first test: he switched it on and listened to the hiss for a full minute. Customers fidgeted. 'The hiss tells me more than the music,' he'd say.\n\nOne evening a boy brought a radio that worked perfectly. 'My grandfather listened to it,' he said. 'I just wanted someone to hear it with.' Selvam turned it on, and they listened to the hiss together for a full minute, and then the news of rain, and then a song neither of them knew.",
+   "edition": "2026-11-13-pm",
+   "order": 15,
+   "id": "2026-11-13-pm-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The Saavedra position",
+   "body": "A famous endgame from 1895: White has a pawn about to promote against a lone rook. Making a queen sounds obvious, but Black has a trick that leads to stalemate. Promoting to a rook instead dodges the stalemate, and White wins with a double threat a move later.\n\nIt's one of the loveliest reminders that the 'best' piece isn't always the right one.",
+   "q": "What does White promote to in the Saavedra position?",
+   "a": "A rook, because a queen would allow a stalemate defence.",
+   "edition": "2026-11-13-pm",
+   "order": 14,
+   "id": "2026-11-13-pm-014"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Put the label on the picture",
+   "body": "When a diagram's labels sit in a separate legend, your eyes bounce back and forth and your working memory does the stitching. Researchers call this the split-attention effect. Placing each label right on the part it names, or the explanation next to the step it explains, makes the same material easier to learn.",
+   "hook": "Wonder: which of your own notes would get easier if the words moved closer to the picture?",
+   "edition": "2026-11-13-pm",
+   "order": 13,
+   "id": "2026-11-13-pm-013"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The Easter egg in Adventure",
+   "body": "Warren Robinett hid a secret room in Adventure, his 1980 game for the Atari 2600, with the words 'Created by Warren Robinett'. Atari didn't credit its programmers at the time, so he signed his work in secret. It's one of the most famous early video-game Easter eggs, and it helped the term catch on.",
+   "q": "Why did Warren Robinett hide his name inside Adventure?",
+   "a": "Atari didn't credit programmers, so he signed the game in a secret room.",
+   "edition": "2026-11-13-pm",
+   "order": 12,
+   "id": "2026-11-13-pm-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Clean within",
+   "body": "Keep the mind free of stain: that alone is virtue. Everything else is only noise.",
+   "who": "Thirukkural 34 (own rendering)",
+   "edition": "2026-11-13-pm",
+   "order": 11,
+   "id": "2026-11-13-pm-011"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A 'supernova impostor' finally explained",
+   "body": "For years, an object called AT 2016blu in the galaxy NGC 4559 kept flaring as if a star were exploding, yet the star never died. Astronomers now think a hidden companion, a black hole or neutron star, is feeding on an unstable massive star, and each feeding spell sets off an outburst that mimics a supernova.",
+   "hook": "Wonder: how many 'explosions' in the sky are really long conversations between two stars?",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/astronomy/black-holes/this-supernova-impostor-baffled-astronomers-for-15-years-until-they-found-a-hidden-black-hole-feeding-on-an-unstable-star"
+   },
+   "edition": "2026-11-13-pm",
+   "order": 10,
+   "id": "2026-11-13-pm-010"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Manimekalai, the epic that came next",
+   "body": "Manimekalai, one of the five great epics of Tamil literature, is often read as a sequel to Silappatikaram. Its heroine is the daughter of Kovalan and Madhavi, and her story follows a quieter path, towards learning, compassion and a begging bowl that never empties. It is traditionally credited to the poet Sattanar.",
+   "hook": "Wonder: what would it be like to write the sequel to someone else's famous story?",
+   "edition": "2026-11-13-pm",
+   "order": 9,
+   "id": "2026-11-13-pm-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "MCP and Agent Skills grow up in the open",
+   "body": "Google's open-source blog describes how the Model Context Protocol (MCP) and Agent Skills are now maintained under the Linux Foundation's Agentic AI Foundation, with Google Cloud engineers among the co-maintainers. The aim is a shared, open way to give agents tools and context, so one integration works across many agents.",
+   "q": "Which foundation now hosts MCP and Agent Skills?",
+   "a": "The Agentic AI Foundation (AAIF), part of the Linux Foundation.",
+   "source": {
+    "name": "Google Open Source Blog",
+    "url": "https://opensource.googleblog.com/2026/11/scaling-ai-agents-open-standards-mcp-aaif.html"
+   },
+   "edition": "2026-11-13-pm",
+   "order": 8,
+   "id": "2026-11-13-pm-008"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Apples float",
+   "body": "Apples float in water because roughly a quarter of their volume is air, trapped between their cells. That's why apple bobbing works at all.",
+   "q": "Why do apples float?",
+   "a": "About a quarter of an apple's volume is air trapped between its cells.",
+   "edition": "2026-11-13-pm",
+   "order": 7,
+   "id": "2026-11-13-pm-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "A five-minute Friday shutdown",
+   "body": "Before the weekend, spend five minutes closing loops: jot down what's half-done, where you left it, and the very next step for Monday. Then close the tabs.\n\nMonday-you gets a map instead of a fog, and weekend-you doesn't have to keep carrying it.",
+   "hook": "Wonder: what's the one line Monday-you would most like to find?",
+   "edition": "2026-11-13-pm",
+   "order": 6,
+   "id": "2026-11-13-pm-006"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Vallejo opens with three wins in Salamanca",
+   "body": "Paco Vallejo started the Salamanca Masters with a perfect 3/3, beating Anastasiia Hnatyshyn, José Martínez and Loek van Wely to take the sole lead. Martínez is second on 2/3. Eleven-year-old Bodhana Sivanandan bounced back from two early losses to beat Elisabeth Paehtz in round three.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/salamanca-festival-2026-1"
+   },
+   "edition": "2026-11-13-pm",
+   "order": 5,
+   "id": "2026-11-13-pm-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Event sourcing: keep the story, not just the ending",
+   "body": "Most databases store only the current state: balance = 420. Event sourcing stores every change instead: deposited 500, paid 80. The current state is just the events replayed in order.\n\nYou get a full history for free, can rebuild views later, and can answer 'how did we get here?'. The cost: replays get slow, so systems save periodic snapshots and replay only the events after them.",
+   "q": "In event sourcing, how is the current state of an account produced?",
+   "a": "By replaying its stored events in order, usually starting from the latest snapshot.",
+   "edition": "2026-11-13-pm",
+   "order": 4,
+   "id": "2026-11-13-pm-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Friday, the late lamp",
+   "body": "The week folds itself\nlike a shirt nobody asked to iron.\nOne lamp stays on in the hall,\nnot for work,\njust so the stairs remember\nwhere they go.",
+   "hook": "Wonder: what small light do you leave on for yourself?",
+   "edition": "2026-11-13-pm",
+   "order": 3,
+   "id": "2026-11-13-pm-003"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Earth's water may be homemade",
+   "body": "A new study suggests some of Earth's water may not have arrived on comets or asteroids at all. In lab conditions, hot rocky material reacting with hydrogen produced water, hinting that the young Earth's fiery early atmosphere could have made a large amount of its own, possibly many oceans' worth.",
+   "hook": "Wonder: the water in your glass might have been cooked up by the young planet itself.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261110042549.htm"
+   },
+   "edition": "2026-11-13-pm",
+   "order": 2,
+   "id": "2026-11-13-pm-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Databricks' Genie can keep working in the background",
+   "body": "Databricks has introduced an always-on mode for Genie, its data agent. Instead of waiting for each question, it can run in the background, pull together company information and take on longer assignments. A new 'Ontology' feature maps how people, projects and data relate to each other. The always-on mode is heading to preview first.",
+   "hook": "Wonder: what's one slow, repetitive question you'd hand to a background helper?",
+   "source": {
+    "name": "Databricks",
+    "url": "https://www.databricks.com/blog/new-genie-autonomous-ai-complex-enterprise-work"
+   },
+   "edition": "2026-11-13-pm",
+   "order": 1,
+   "id": "2026-11-13-pm-001"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Before you scroll, a warm-up: a few small questions from this edition are waiting further down. Try answering each before you peek.",
+   "q": "In the Saavedra position, why does White promote to a rook instead of a queen?",
+   "a": "A new queen allows a stalemate trick; the rook avoids stalemate and still wins.",
+   "edition": "2026-11-13-pm",
+   "order": 0,
+   "id": "2026-11-13-pm-000"
+  },
   {
    "topic": "facts",
    "kind": "fact",
