@@ -1,6 +1,359 @@
 {
- "updated": "2026-11-13T17:16:31+00:00",
+ "updated": "2026-11-14T02:13:52+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try answering before you peek. Pulling an answer out of memory strengthens it more than re-reading does.",
+   "q": "1) What did Perseverance confirm in old Mars rocks? 2) What does compaction do in an LSM tree? 3) Who won Freestyle Friday on 13 November?",
+   "a": "1) Complex organic carbon just below the surface. 2) Merges sorted on-disk files so reads touch fewer of them. 3) IM Khuong Duy Dau, 15, of Vietnam.",
+   "edition": "2026-11-14-am",
+   "order": 30,
+   "id": "2026-11-14-am-030"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "An ostrich's eye outweighs its brain",
+   "body": "An ostrich's eye is about 5 cm across, among the largest of any land animal, and each eye is bigger than its brain. Those huge eyes help it spot movement across open plains from a long way off.",
+   "hook": "Wonder: what would you notice if your eyes were the biggest thing in your head?",
+   "edition": "2026-11-14-am",
+   "order": 29,
+   "id": "2026-11-14-am-029"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The quality of mercy",
+   "body": "The quality of mercy is not strain'd,\nIt droppeth as the gentle rain from heaven\nUpon the place beneath: it is twice blest;\nIt blesseth him that gives and him that takes.",
+   "who": "Shakespeare, The Merchant of Venice (IV.i)",
+   "edition": "2026-11-14-am",
+   "order": 28,
+   "id": "2026-11-14-am-028"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "VS Code 1.146 helps you juggle many agents",
+   "body": "Microsoft's VS Code 1.146 adds tools for managing many agent sessions at once, so you can keep several parallel tasks visible instead of losing track of them in tabs. The release also starts a three-month countdown to retire the older Local agent harness, while the Copilot harness stays and keeps getting work.",
+   "q": "What's being retired in VS Code over the next three months?",
+   "a": "The Local agent harness (the Copilot harness stays).",
+   "source": {
+    "name": "AI Daily Digest (DEV Community), 13 Nov 2026",
+    "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-13-2026-gemini-4-hydrogen-goes-default-googles-gemini-glasses-open-2a94"
+   },
+   "edition": "2026-11-14-am",
+   "order": 27,
+   "id": "2026-11-14-am-027"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Ethernet began as a memo",
+   "body": "On 22 May 1973, Bob Metcalfe at Xerox PARC wrote a memo describing a way for computers in a building to share one cable and politely take turns talking. He called it Ethernet, borrowing the old idea of the 'luminiferous ether'. Versions of that idea still carry much of the world's local network traffic.",
+   "hook": "Wonder: what everyday technology around you started as a single page someone wrote?",
+   "edition": "2026-11-14-am",
+   "order": 26,
+   "id": "2026-11-14-am-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The windmill",
+   "body": "A windmill is a repeating discovered check: one piece shuttles back and forth, uncovering check each time and grabbing material on every swing while the king can only step aside. The most famous one came in Carlos Torre's win over Emanuel Lasker at Moscow 1925, where Torre's rook and bishop worked together to sweep up piece after piece.",
+   "q": "Which two players featured in the famous 1925 windmill game?",
+   "a": "Carlos Torre (winning) against Emanuel Lasker, Moscow 1925.",
+   "edition": "2026-11-14-am",
+   "order": 25,
+   "id": "2026-11-14-am-025"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Fourteenth of November",
+   "body": "The calendar says Saturday\nthe way a door says open.\n\nNothing urgent lives here.\nJust a window,\na fan turning slow enough to count,\nand the whole long afternoon\nfolded like a towel,\nwaiting.",
+   "edition": "2026-11-14-am",
+   "order": 24,
+   "id": "2026-11-14-am-024"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Raft leader election, in one breath",
+   "body": "In Raft, every node starts as a follower listening for heartbeats from a leader. If a follower hears nothing for a randomised timeout, it becomes a candidate, bumps the term number and asks others for votes. A majority makes it leader. The randomness is the clever bit: it makes it unlikely that two nodes stand for election at exactly the same moment, so ties settle quickly.",
+   "q": "Why are Raft election timeouts randomised?",
+   "a": "So nodes rarely become candidates at the same moment, which avoids repeated split votes.",
+   "edition": "2026-11-14-am",
+   "order": 23,
+   "id": "2026-11-14-am-023"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Sunlight's long walk out of the Sun",
+   "body": "The light reaching you took about eight minutes to cross space, but its energy spent far longer inside the Sun. Near the core, energy is absorbed and re-emitted countless times, wandering outward in a random walk. Estimates for that journey range from tens of thousands of years to far longer.",
+   "hook": "Wonder: how old is the warmth on your skin this morning, really?",
+   "edition": "2026-11-14-am",
+   "order": 22,
+   "id": "2026-11-14-am-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Hang the new habit on an old one",
+   "body": "New routines stick better when they ride on something you already do without thinking. 'After I switch on the kettle, I'll take my tablets.' 'After I close the laptop, I'll write tomorrow's first task.' The old habit becomes the reminder, so your memory doesn't have to be.",
+   "hook": "Wonder: which three things do you already do every single day that could carry a passenger?",
+   "edition": "2026-11-14-am",
+   "order": 21,
+   "id": "2026-11-14-am-021"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The # has a name: octothorpe",
+   "body": "The # symbol is called the octothorpe, a name usually traced to engineers at Bell Labs in the early 1960s, when the symbol was being added to telephone keypads. The 'octo' part points to its eight ends; the 'thorpe' part has several competing origin stories, and nobody is quite sure which is true.",
+   "q": "What is the formal name for the # symbol?",
+   "a": "The octothorpe.",
+   "edition": "2026-11-14-am",
+   "order": 20,
+   "id": "2026-11-14-am-020"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Willpower isn't a fuel tank (probably)",
+   "body": "'Ego depletion', the idea that self-control runs out like fuel, was popular for years. Then large, carefully planned replications across many labs found little or no effect. A kinder reading of the evidence: tiredness and boredom are real, but you're not a battery that hits zero. Rest, interest and good setup matter more than rationing yourself.",
+   "hook": "Wonder: which 'facts' about your own mind would you hold more loosely if they failed a replication?",
+   "edition": "2026-11-14-am",
+   "order": 19,
+   "id": "2026-11-14-am-019"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Bhimbetka's painted shelters",
+   "body": "In the forested hills of Madhya Pradesh, the rock shelters of Bhimbetka hold paintings of animals, dancers, hunters and riders. Some are thought to be around 10,000 years old, and people kept adding to the walls over many later periods. The site was recognised by UNESCO as a World Heritage Site in 2003.",
+   "q": "In which Indian state are the Bhimbetka rock shelters?",
+   "a": "Madhya Pradesh.",
+   "edition": "2026-11-14-am",
+   "order": 18,
+   "id": "2026-11-14-am-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "AWS gives agent runtimes their own sealed rooms",
+   "body": "Amazon updated the runtime behind Bedrock AgentCore for long-running, multi-step agent work. Each session gets hardware-level isolation, starts faster and has more compute, and billing follows actual usage rather than reserved capacity, which suits agents that sit idle while waiting on a tool.",
+   "hook": "Wonder: why does an agent that 'waits' a lot need different pricing from a web server?",
+   "source": {
+    "name": "AI Agents News Brief, 13 Nov 2026",
+    "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-13-2026"
+   },
+   "edition": "2026-11-14-am",
+   "order": 17,
+   "id": "2026-11-14-am-017"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Fix the verb, drop the adverb",
+   "body": "'She walked slowly' asks two words to do one job. 'She ambled', 'she trudged', 'she drifted' each carry a different mood in a single word. When you spot an adverb leaning on a verb, try swapping in a stronger verb. Keep the adverb only when it adds something the verb can't.",
+   "q": "What's a one-word alternative to 'walked slowly' that adds mood?",
+   "a": "Any precise verb, e.g. ambled, trudged, drifted, strolled.",
+   "edition": "2026-11-14-am",
+   "order": 16,
+   "id": "2026-11-14-am-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "A 15-year-old wins Freestyle Friday",
+   "body": "International Master Khuong Duy Dau, a 15-year-old from Vietnam, won Chess.com's Freestyle Friday on 13 November, finishing a clear 1.5 points ahead of second place. Freestyle (Chess960) shuffles the back-rank pieces, so memorised openings help much less and fresh thinking from move one is rewarded.",
+   "hook": "Wonder: which of your skills would survive if the 'starting position' of your work were shuffled?",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/dau-wins-freestyle-friday-november-13-2026"
+   },
+   "edition": "2026-11-14-am",
+   "order": 15,
+   "id": "2026-11-14-am-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 11: String.repeat",
+   "body": "Need a divider line or some padding? Since Java 11, \"-\".repeat(40) gives you forty dashes, no loop or StringBuilder needed. repeat(0) returns an empty string, and a negative count throws IllegalArgumentException.",
+   "q": "What does \"ab\".repeat(3) return?",
+   "a": "\"ababab\"",
+   "edition": "2026-11-14-am",
+   "order": 14,
+   "id": "2026-11-14-am-014"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "First, who you would be",
+   "body": "First say to yourself what you would be; and then do what you have to do.",
+   "who": "Epictetus, Discourses (III.23)",
+   "edition": "2026-11-14-am",
+   "order": 13,
+   "id": "2026-11-14-am-013"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "ELIZA, the 1966 conversation",
+   "body": "In the mid-1960s at MIT, Joseph Weizenbaum wrote ELIZA, a program that chatted by matching patterns and reflecting your words back, most famously in a 'DOCTOR' script that imitated a gentle therapist. It understood nothing, yet people found talking to it surprisingly absorbing. Weizenbaum himself became one of the first thoughtful voices asking how we should relate to machines that seem to listen.",
+   "hook": "Wonder: why does being heard feel real even when we know the listener is simple?",
+   "edition": "2026-11-14-am",
+   "order": 12,
+   "id": "2026-11-14-am-012"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A white dwarf that ticks every 7.9 minutes",
+   "body": "Astronomers from Curtin University and ICRAR found a white dwarf sending out radio pulses every 7.9 minutes while it orbits a Sun-like star. It's the first time this kind of slow, repeating radio signal has been traced to a white dwarf paired with a Sun-like partner, and the pulses seem to carry hints of activity on the companion star. The system goes by GPM J071507-114153.",
+   "q": "How often does this white dwarf's radio signal repeat?",
+   "a": "About every 7.9 minutes.",
+   "source": {
+    "name": "Sci.News",
+    "url": "https://www.sci.news/astronomy/long-period-transient-white-dwarf-sun-like-star-15195.html"
+   },
+   "edition": "2026-11-14-am",
+   "order": 11,
+   "id": "2026-11-14-am-011"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The library's returns slot",
+   "body": "Every night at closing, Meera emptied the returns slot. Most books came back silent. Some came back with things inside: a bus ticket, a pressed neem leaf, a shopping list that said only 'eggs, patience'.\n\nShe kept the list. Over the years she found it again three times, in three different books, in three different hands.\n\nShe never learned who wrote it first. She just bought eggs, and practised the other thing.",
+   "edition": "2026-11-14-am",
+   "order": 10,
+   "id": "2026-11-14-am-010"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Goats see in widescreen",
+   "body": "Goats, sheep and many other grazing animals have horizontal, rectangular pupils. The shape gives them a wide panoramic view of the ground around them, and remarkably, their eyes rotate as they lower their heads to graze so the pupils stay level with the horizon.",
+   "hook": "Wonder: what would your day look like with nearly all-round vision?",
+   "edition": "2026-11-14-am",
+   "order": 9,
+   "id": "2026-11-14-am-009"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Look at the target, not your elbow",
+   "body": "In motor learning, Gabriele Wulf and colleagues found again and again that people learn and perform better with an external focus (the path of the ball, the target, the effect of the movement) than an internal one (what the wrist or elbow is doing). Thinking about body parts tends to make movement stiffer. Coaches now often phrase cues outward: 'push the floor away' rather than 'straighten your knees'.",
+   "q": "Which usually works better for skilled movement: focus on your body, or on the movement's effect?",
+   "a": "On the effect (an external focus).",
+   "edition": "2026-11-14-am",
+   "order": 8,
+   "id": "2026-11-14-am-008"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "n8n opens up Nod, a personal agent that runs on your machine",
+   "body": "n8n Labs released Nod as open source under the Apache 2.0 licence. It's a personal automation agent that runs locally on a Mac, Windows PC or private server, works inside a sandboxed browser and desktop, and lets you pick which model powers it. The examples are pleasantly ordinary: preparing for a meeting, filing invoices, cancelling a subscription.",
+   "q": "What licence did n8n use for Nod?",
+   "a": "Apache 2.0.",
+   "source": {
+    "name": "AI Daily Digest (DEV Community), 13 Nov 2026",
+    "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-13-2026-gemini-4-hydrogen-goes-default-googles-gemini-glasses-open-2a94"
+   },
+   "edition": "2026-11-14-am",
+   "order": 7,
+   "id": "2026-11-14-am-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Kamban's Ramayana",
+   "body": "Around the 12th century, the Tamil poet Kambar retold the Ramayana in Tamil verse. The Kamba Ramayanam isn't a translation of Valmiki: it reshapes scenes, lingers on landscapes and emotions, and is loved for its music. A Tamil saying holds that even the loom in Kambar's house could sing verse.",
+   "hook": "Wonder: when a story is retold in a new language, how much of it becomes the new teller's?",
+   "edition": "2026-11-14-am",
+   "order": 6,
+   "id": "2026-11-14-am-006"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Start with a warm-up task",
+   "body": "'Eat the frog first' doesn't suit every brain. If starting is the hard part, begin with a tiny task you can finish in five minutes: reply to one message, rename one file. A quick win builds momentum, and momentum is easier to steer toward the big task than a cold start is. Just choose the warm-up in advance so it doesn't become the whole morning.",
+   "q": "What's the one guardrail for using a warm-up task?",
+   "a": "Pick it in advance and keep it tiny, so it leads into the main task instead of replacing it.",
+   "edition": "2026-11-14-am",
+   "order": 5,
+   "id": "2026-11-14-am-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Caruana touches 2800 in Budapest",
+   "body": "On day four of the Total Chess pilot in Budapest, Fabiano Caruana beat Vincent Keymer and climbed to 2800.0 on the live rating list. The same day Magnus Carlsen lost to Haik Martirosyan, a reminder that even long reigns at the top are made of ordinary, winnable games. Group play continues through 15 November.",
+   "hook": "Wonder: what does a rating number actually measure, a person or a recent run of games?",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/2026-total-chess-world-championship-tour-pilot-day-4"
+   },
+   "edition": "2026-11-14-am",
+   "order": 4,
+   "id": "2026-11-14-am-004"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "LSM trees: write fast, tidy later",
+   "body": "Many databases (Cassandra, RocksDB, LevelDB) use a log-structured merge tree. New writes go into a sorted in-memory table; when it fills, it's flushed to disk as an immutable sorted file. In the background, files are merged ('compaction') so reads don't have to check too many of them. The trade: writes are cheap and sequential, reads may touch several files, and compaction quietly does the housekeeping.",
+   "q": "In an LSM tree, what background process keeps reads from checking too many files?",
+   "a": "Compaction: merging the sorted on-disk files together.",
+   "edition": "2026-11-14-am",
+   "order": 3,
+   "id": "2026-11-14-am-003"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Perseverance confirms organic carbon in old Mars rocks",
+   "body": "NASA's Perseverance rover has confirmed complex organic carbon sitting just beneath the surface of ancient Martian rocks. Organic carbon isn't a sign of life by itself, but it is one of the ingredients scientists hope to find, and rocks that kept it safe for billions of years are exactly the kind worth bringing home one day.",
+   "q": "Does finding organic carbon on Mars prove there was life there?",
+   "a": "No. It's an ingredient for life, not proof of it; it can also form without biology.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261111005908.htm"
+   },
+   "edition": "2026-11-14-am",
+   "order": 2,
+   "id": "2026-11-14-am-002"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Saturday, slow tea",
+   "body": "No alarm today.\nThe light finds the kitchen first,\nthen the steel tumbler,\nthen me.\n\nThe tea takes its time.\nSo do I.\nSomewhere a crow is reading the morning aloud\nand nobody is asking it to hurry.",
+   "edition": "2026-11-14-am",
+   "order": 1,
+   "id": "2026-11-14-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Gemini 4 Hydrogen becomes Google's fast default",
+   "body": "Google released Gemini 4 Hydrogen, a quick, low-cost model that takes over from Gemini 3.8 Flash as the go-to choice for high-volume work, with coding agents in mind. It adds an extra 'xhigh' thinking level above the existing ones, and it showed up the same day inside Google's Antigravity editor alongside a mode that can hand a task between models mid-run.",
+   "hook": "Wonder: when a 'small' model gets good enough, what do you stop sending to the big one?",
+   "source": {
+    "name": "AI Daily Digest (DEV Community), 13 Nov 2026",
+    "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-13-2026-gemini-4-hydrogen-goes-default-googles-gemini-glasses-open-2a94"
+   },
+   "edition": "2026-11-14-am",
+   "order": 0,
+   "id": "2026-11-14-am-000"
+  },
   {
    "topic": "facts",
    "kind": "fact",
