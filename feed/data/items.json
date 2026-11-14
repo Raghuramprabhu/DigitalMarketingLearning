@@ -1,6 +1,347 @@
 {
- "updated": "2026-11-14T02:13:52+00:00",
+ "updated": "2026-11-14T17:14:27+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try answering before you peek. Pulling an answer out of memory strengthens it more than re-reading does.",
+   "q": "1) What does the Java 22 underscore mean? 2) Which project now hosts the Agent Name Service? 3) What are Titan's lakes made of?",
+   "a": "1) An unnamed variable you deliberately don't use. 2) The Linux Foundation. 3) Liquid methane and ethane.",
+   "edition": "2026-11-14-pm",
+   "order": 29,
+   "id": "2026-11-14-pm-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Ledger, Saturday night",
+   "body": "Two letters answered.\nOne plant watered twice by mistake.\nA long call with an old friend.\nNothing finished, nothing lost.\nI'll call it a fair day.",
+   "edition": "2026-11-14-pm",
+   "order": 28,
+   "id": "2026-11-14-pm-028"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Cats can't taste sweet",
+   "body": "Cats lack a working sweet-taste receptor: one of the two genes needed for it is broken in cats, as researchers reported in 2005. As strict meat-eaters they never needed it, so a cat ignoring cake isn't fussiness.",
+   "q": "Why don't cats care about sweet food?",
+   "a": "A gene needed for the sweet-taste receptor doesn't work in cats.",
+   "edition": "2026-11-14-pm",
+   "order": 27,
+   "id": "2026-11-14-pm-027"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "LangChain raises a Series C",
+   "body": "LangChain, maker of the LangChain framework and the LangSmith platform for testing and watching agents, raised $300 million at a $3 billion valuation, led by CapitalG. The company says LangSmith now has about 7,000 customers.",
+   "hook": "Wonder: why do agent teams need a place to watch traces, not just a framework?",
+   "source": {
+    "name": "AI Agent Store, week of 14 Nov 2026",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-14-pm",
+   "order": 26,
+   "id": "2026-11-14-pm-026"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The IBM PC's modest start",
+   "body": "IBM announced its Personal Computer, model 5150, on 12 August 1981. It ran an Intel 8088 at 4.77 MHz, and the base model came with just 16 KB of memory. Because IBM published its technical details and used off-the-shelf parts, other companies could build compatible machines, which is why 'PC' became a whole category.",
+   "q": "What processor did the original IBM PC use?",
+   "a": "The Intel 8088, at 4.77 MHz.",
+   "edition": "2026-11-14-pm",
+   "order": 25,
+   "id": "2026-11-14-pm-025"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Vachier-Lagrave unbeaten in Budapest's Group D",
+   "body": "After four days of the Total Chess pilot in Budapest, Maxime Vachier-Lagrave was the only player without a loss in Group D, three points clear of Hans Niemann. Firouzja, Caruana and Martirosyan led the other three groups. Group play runs to 15 November, then knockouts follow after a rest day.",
+   "source": {
+    "name": "Chess.com, Total Chess pilot Day 4",
+    "url": "https://www.chess.com/news/view/2026-total-chess-world-championship-tour-pilot-day-4"
+   },
+   "edition": "2026-11-14-pm",
+   "order": 24,
+   "id": "2026-11-14-pm-024"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Thinking makes it so",
+   "body": "There is nothing either good or bad, but thinking makes it so.",
+   "who": "Shakespeare, Hamlet (II.ii)",
+   "edition": "2026-11-14-pm",
+   "order": 23,
+   "id": "2026-11-14-pm-023"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Hinted handoff: hold the note for a friend",
+   "body": "In Dynamo-style stores like Cassandra, if a replica is down when a write arrives, another node accepts it and keeps a 'hint' saying who it was really for. When the missing node returns, the hint is replayed to it. Writes stay available during short outages, and the data finds its proper home later.",
+   "q": "What does a node store during hinted handoff?",
+   "a": "The write plus a hint naming the replica it was meant for, replayed when that replica returns.",
+   "edition": "2026-11-14-pm",
+   "order": 22,
+   "id": "2026-11-14-pm-022"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Titan's seas of methane",
+   "body": "Saturn's moon Titan is the only other world we know with stable liquid on its surface. It's far too cold for water to flow, so its lakes and seas are liquid methane and ethane. The largest, Kraken Mare, is bigger than the Caspian Sea, and Cassini radar mapped its shores.",
+   "hook": "Wonder: what would rain look like on a world where it rains methane?",
+   "edition": "2026-11-14-pm",
+   "order": 21,
+   "id": "2026-11-14-pm-021"
+  },
+  {
+   "topic": "mind",
+   "kind": "fact",
+   "title": "The Stroop effect",
+   "body": "In 1935 J. Ridley Stroop showed that naming the ink colour of a word is slower when the word spells a different colour, like RED printed in blue. Reading is so automatic that it competes with the task you meant to do. It's a gentle reminder that well-practised habits run whether or not you ask them to.",
+   "q": "Why is it slow to say 'blue' for the word RED printed in blue ink?",
+   "a": "Reading the word is automatic and competes with naming the ink colour.",
+   "edition": "2026-11-14-pm",
+   "order": 20,
+   "id": "2026-11-14-pm-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let a character be wrong",
+   "body": "Give a character one belief that is quietly mistaken: the neighbour is rude, the shortcut is faster, the letter was never sent. The reader enjoys sensing the gap, and the moment the character finds out becomes a ready-made turn in the story.",
+   "hook": "Wonder: what were you once sure about that turned out not to be true?",
+   "edition": "2026-11-14-pm",
+   "order": 19,
+   "id": "2026-11-14-pm-019"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "How Indian numerals reached Europe",
+   "body": "The digits 0 to 9 with place value were developed in India. Around 825 CE the Baghdad scholar al-Khwarizmi wrote a book on calculating with these 'Hindu numerals', and in 1202 Fibonacci's Liber Abaci showed European merchants how much easier they made sums than Roman numerals. Al-Khwarizmi's name also gave us the word 'algorithm'.",
+   "q": "Which word in English comes from al-Khwarizmi's name?",
+   "a": "Algorithm.",
+   "edition": "2026-11-14-pm",
+   "order": 18,
+   "id": "2026-11-14-pm-018"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "A gentle weekly look-ahead",
+   "body": "Saturday or Sunday evening, spend fifteen minutes with the calendar for the coming week. Note one thing per day that needs preparing (a form, a bag, a charger) and put each on the day before. It's not a full plan, just fewer surprises on Monday.",
+   "hook": "Wonder: what's one thing next week that would be easier if you set it out tonight?",
+   "edition": "2026-11-14-pm",
+   "order": 17,
+   "id": "2026-11-14-pm-017"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Google's agent teams that check their own work",
+   "body": "Google Research described Antigravity /teamwork, where several specialised Gemini 4 agents tackle open problems in maths and information theory. Each agent sees only the context it needs, and proposed answers go to 'falsifiers' such as the Lean 4 proof checker before anything is accepted. Google is opening the tools to outside researchers.",
+   "q": "What role does Lean 4 play in Antigravity /teamwork?",
+   "a": "It acts as a falsifier, checking candidate solutions before they're accepted.",
+   "source": {
+    "name": "Rio Rundown, AI News 14 Nov 2026",
+    "url": "https://riorundown.substack.com/p/ai-news-nov-14-2026-local-ai-ecosystem"
+   },
+   "edition": "2026-11-14-pm",
+   "order": 16,
+   "id": "2026-11-14-pm-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Shouldering: use your king as a wall",
+   "body": "In king endgames, the king can block the enemy king with its own body. Instead of racing straight for a pawn, step sideways or diagonally so the other king has to go around you. Those one or two lost tempi often decide whether a pawn queens or is caught.",
+   "hook": "Wonder: when is the fastest route not a straight line?",
+   "edition": "2026-11-14-pm",
+   "order": 15,
+   "id": "2026-11-14-pm-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Skip lists: a linked list with express lanes",
+   "body": "A skip list keeps sorted items in a linked list, then adds sparser 'express' levels above it, each node promoted by a coin flip. Searches ride the top lane and drop down as they get close, giving about O(log n) lookups without the rotations of a balanced tree. Redis uses skip lists for its sorted sets.",
+   "q": "How does a skip list decide which nodes get an express-lane level?",
+   "a": "Randomly, like a coin flip for each level.",
+   "edition": "2026-11-14-pm",
+   "order": 14,
+   "id": "2026-11-14-pm-014"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "While we postpone",
+   "body": "While we are postponing, life speeds by.",
+   "who": "Seneca, Letters to Lucilius, Letter 1 (tr. Gummere)",
+   "edition": "2026-11-14-pm",
+   "order": 13,
+   "id": "2026-11-14-pm-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Could dark energy once have been negative?",
+   "body": "Researchers at Istanbul Technical University explored a branch of a modified-gravity theory in which dark energy's effective density starts out negative in the early universe and crosses zero about 9.5 billion years ago. It's a theoretical model, not a finding: the authors note it still has to be tested against the full DESI survey data.",
+   "hook": "Wonder: how do astronomers 'look back' 9.5 billion years at all?",
+   "source": {
+    "name": "ScienceDaily, 13 Nov 2026",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261111005901.htm"
+   },
+   "edition": "2026-11-14-pm",
+   "order": 12,
+   "id": "2026-11-14-pm-012"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Dijkstra's twenty-minute algorithm",
+   "body": "In 1956 Edsger Dijkstra was shopping in Amsterdam with his fiancée, sat down at a café terrace, and worked out his shortest-path algorithm in about twenty minutes, without pencil or paper. He later said avoiding paper forced him to keep it simple. It was published in 1959 and still guides route-finding today.",
+   "q": "Where did Dijkstra design his shortest-path algorithm?",
+   "a": "At a café terrace in Amsterdam, in about twenty minutes, without paper.",
+   "edition": "2026-11-14-pm",
+   "order": 11,
+   "id": "2026-11-14-pm-011"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The bookstall's last customer",
+   "body": "At closing time the boy still stood by the comics, counting coins he did not have enough of. The old bookseller pulled the shutter halfway, then said he needed someone to check whether issue 12 had all its pages. The boy checked, carefully, every page. 'Good,' said the bookseller. 'Inspectors get paid in copies.'",
+   "edition": "2026-11-14-pm",
+   "order": 10,
+   "id": "2026-11-14-pm-010"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Muscle' means 'little mouse'",
+   "body": "The word muscle comes from the Latin musculus, 'little mouse'. Romans apparently thought a flexing muscle under the skin looked like a small mouse moving about.",
+   "hook": "Wonder: which other body words hide an animal?",
+   "edition": "2026-11-14-pm",
+   "order": 9,
+   "id": "2026-11-14-pm-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "A DNS-style address book for agents",
+   "body": "The Agent Name Service (ANS) is now a Linux Foundation project. It gives AI agents verifiable identities using DNS records tied to a domain plus certificates, so one agent can check that another really belongs to the organisation it claims. Eleven organisations are listed as early supporters.",
+   "hook": "Wonder: how does your browser already know a website is who it says it is?",
+   "source": {
+    "name": "AI Agent Store, week of 14 Nov 2026",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-14-pm",
+   "order": 8,
+   "id": "2026-11-14-pm-008"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Write the worry down before the test",
+   "body": "In a 2011 study in Science, Gerardo Ramirez and Sian Beilock had students spend ten minutes writing about their worries just before an exam. Anxious students who did this scored better than those who sat quietly. One idea: putting the worry on paper frees working memory that would otherwise be busy holding it.",
+   "q": "What did students do for ten minutes before the exam in Ramirez and Beilock's study?",
+   "a": "Wrote freely about their worries about the test.",
+   "edition": "2026-11-14-pm",
+   "order": 7,
+   "id": "2026-11-14-pm-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The big temple's tower at Thanjavur",
+   "body": "Rajaraja Chola I completed the Brihadisvara temple in Thanjavur around 1010 CE. Its tower rises about 66 metres and is built largely of granite, a stone not found close to the city, so huge blocks had to be brought in from elsewhere. It is part of UNESCO's 'Great Living Chola Temples', and worship there has continued for over a thousand years.",
+   "q": "Roughly when was Thanjavur's Brihadisvara temple completed?",
+   "a": "Around 1010 CE, under Rajaraja Chola I.",
+   "edition": "2026-11-14-pm",
+   "order": 6,
+   "id": "2026-11-14-pm-006"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "A ten-minute warning",
+   "body": "Switching away from something absorbing is often the hard part, not the next task itself. Set a soft alarm ten minutes before you need to stop, labelled with what comes next. The early nudge lets you find a natural pause instead of being yanked out mid-thought.",
+   "hook": "Wonder: which transition in your day is the bumpiest?",
+   "edition": "2026-11-14-pm",
+   "order": 5,
+   "id": "2026-11-14-pm-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Andreikin nearly sweeps the 3|0 Thursdays",
+   "body": "Chess.com runs three 3-minute 'Thursday' tournaments each week. On 12 November GM Dmitry Andreikin won two of them and finished half a point short of taking the third, the closest anyone has come to winning all three in one week.",
+   "hook": "Wonder: what keeps a blitz player steady across three tournaments in one day?",
+   "source": {
+    "name": "Chess.com News, 13 Nov 2026",
+    "url": "https://www.chess.com/news/view/andreikin-nearly-sweeps-3-0-thursday-tournaments"
+   },
+   "edition": "2026-11-14-pm",
+   "order": 4,
+   "id": "2026-11-14-pm-004"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 22: say 'I don't need this' with _",
+   "body": "Since Java 22, an underscore can stand in for a variable you must declare but never use: catch (NumberFormatException _) { ... }, or a lambda like (k, _) -> k. It also works inside record patterns, e.g. case Point(var x, _) -> x. The code now tells the reader, and the compiler, that ignoring the value is deliberate.",
+   "q": "Which Java version finalised unnamed variables with _?",
+   "a": "Java 22 (JEP 456).",
+   "edition": "2026-11-14-pm",
+   "order": 3,
+   "id": "2026-11-14-pm-003"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A 'digital twin' of Webb finds a planet in old data",
+   "body": "A Caltech-led team published a method called FLIP in Nature. It builds a detailed computer model of Webb's NIRCam camera so the starlight around a bright star can be subtracted more cleanly. In tests it was 2 to 15 times more sensitive, and it uncovered a planet that had been sitting unnoticed in images Webb had already taken.",
+   "q": "What does the FLIP method model in order to remove starlight?",
+   "a": "Webb's own NIRCam instrument, as a detailed 'digital twin'.",
+   "source": {
+    "name": "ScienceDaily, 10 Nov 2026",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261108233028.htm"
+   },
+   "edition": "2026-11-14-pm",
+   "order": 2,
+   "id": "2026-11-14-pm-002"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Saturday, half past ten",
+   "body": "The street has put its shoes away.\nOne window keeps a yellow square.\nThe kettle ticks as it cools down,\nand the week, folded, rests on a chair.",
+   "edition": "2026-11-14-pm",
+   "order": 1,
+   "id": "2026-11-14-pm-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Rivals team up on one open inference engine",
+   "body": "LMSYS announced an SGLang Consortium that brings NVIDIA, AMD, Intel, Google, Meta, Cloudflare, Modal and RadixArk together to steer the open-source SGLang serving engine across different hardware. No new version or benchmark came with it; the news is simply that chip makers who usually compete will coordinate on one shared piece of plumbing.",
+   "hook": "Wonder: why might competitors happily share the 'boring' layer of a stack?",
+   "source": {
+    "name": "Rio Rundown, AI News 14 Nov 2026",
+    "url": "https://riorundown.substack.com/p/ai-news-nov-14-2026-local-ai-ecosystem"
+   },
+   "edition": "2026-11-14-pm",
+   "order": 0,
+   "id": "2026-11-14-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
