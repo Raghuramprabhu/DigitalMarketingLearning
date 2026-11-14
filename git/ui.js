@@ -9,12 +9,27 @@
   const h = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const SVGNS = 'http://www.w3.org/2000/svg';
-  const sv = (tag, attrs, parent) => { const e = document.createElementNS(SVGNS, tag); for (const k in attrs || {}) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+  const CV = { '#0c0e13': '--bg', '#161a23': '--card', '#1c212c': '--card2', '#353e50': '--line2', '#3a1d1d': '--red', '#56d4dd': '--teal', '#6c7486': '--dim', '#79c0ff': '--blue', '#7ee787': '--green', '#a3abb9': '--soft', '#d2a8ff': '--purple', '#ece8e1': '--ink', '#f05033': '--orange', '#ff7b72': '--red', '#ffb454': '--amber', '#ff9bce': '--pink' };
+  const sv = (tag, attrs, parent) => {
+    const e = document.createElementNS(SVGNS, tag);
+    for (const k in attrs || {}) {
+      const v = String(attrs[k]);
+      if ((k === 'fill' || k === 'stroke') && (CV[v] || v.startsWith('var('))) e.style[k] = CV[v] ? `var(${CV[v]})` : v; else e.setAttribute(k, v);
+    }
+    if (parent) parent.appendChild(e); return e;
+  };
   const short = G.short;
   const store = {
     get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { } }
   };
+
+  // ---------------- theme ----------------
+  const LIGHT = () => document.documentElement.getAttribute('data-theme') === 'light';
+  const tb = $('#themebtn');
+  const paintBtn = () => { tb.innerHTML = LIGHT() ? '🌙<span> Dark</span>' : '☀️<span> Light</span>'; };
+  tb.addEventListener('click', () => { const t = LIGHT() ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', t); try { localStorage.setItem('dml-theme', t); } catch (e) { } paintBtn(); });
+  paintBtn();
 
   // ---------------- toasts & confetti ----------------
   function toast(msg) { const t = h('div', 'toast', msg); $('#toasts').appendChild(t); setTimeout(() => t.remove(), 3800); }
@@ -117,9 +132,9 @@
       nodes.forEach(n => { n.x += n.vx; n.y += n.vy; if (n.x < 0 || n.x > 1) n.vx *= -1; if (n.y < 0 || n.y > 1) n.vy *= -1; });
       for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
         const a = nodes[i], b = nodes[j]; const dx = (a.x - b.x) * W, dy = (a.y - b.y) * H; const d = Math.hypot(dx, dy);
-        if (d < 150 * devicePixelRatio) { x.strokeStyle = `rgba(240,80,51,${.16 * (1 - d / (150 * devicePixelRatio))})`; x.lineWidth = devicePixelRatio; x.beginPath(); x.moveTo(a.x * W, a.y * H); x.lineTo(b.x * W, b.y * H); x.stroke(); }
+        if (d < 150 * devicePixelRatio) { x.strokeStyle = `rgba(${LIGHT() ? '217,72,15' : '240,80,51'},${(LIGHT() ? .22 : .16) * (1 - d / (150 * devicePixelRatio))})`; x.lineWidth = devicePixelRatio; x.beginPath(); x.moveTo(a.x * W, a.y * H); x.lineTo(b.x * W, b.y * H); x.stroke(); }
       }
-      nodes.forEach((n, i) => { x.fillStyle = n.o ? `rgba(255,180,84,${.6 + .4 * Math.sin(t / 30 + i)})` : 'rgba(236,232,225,.35)'; x.beginPath(); x.arc(n.x * W, n.y * H, n.r * devicePixelRatio, 0, 7); x.fill(); });
+      nodes.forEach((n, i) => { x.fillStyle = n.o ? `rgba(${LIGHT() ? '181,98,10' : '255,180,84'},${.6 + .4 * Math.sin(t / 30 + i)})` : (LIGHT() ? 'rgba(31,26,22,.28)' : 'rgba(236,232,225,.35)'); x.beginPath(); x.arc(n.x * W, n.y * H, n.r * devicePixelRatio, 0, 7); x.fill(); });
       requestAnimationFrame(draw);
     }
     requestAnimationFrame(draw);
@@ -262,7 +277,7 @@
       if (prev && prev !== hx) { const n = hx.split('').filter((c, i) => c !== prev[i]).length; $('#hl-ava').textContent = `💥 ${n} of 40 characters changed. That's the avalanche effect.`; }
       else if (!prev) $('#hl-ava').textContent = 'Now change a single letter…';
       const id = $('#hl-ident'); id.innerHTML = '';
-      for (let i = 0; i < 25; i++) { const v = parseInt(hx.substr(i % 19 * 2, 2), 16); const on = parseInt(hx[(i * 7) % 40], 16) > 5; const cell = h('i'); cell.style.background = on ? `hsl(${(v * 1.41 + i * 3) % 360},70%,${45 + (v % 25)}%)` : '#1c212c'; id.appendChild(cell); }
+      for (let i = 0; i < 25; i++) { const v = parseInt(hx.substr(i % 19 * 2, 2), 16); const on = parseInt(hx[(i * 7) % 40], 16) > 5; const cell = h('i'); cell.style.background = on ? `hsl(${(v * 1.41 + i * 3) % 360},70%,${45 + (v % 25)}%)` : 'var(--card2)'; id.appendChild(cell); }
       prev = hx;
     }
     inp.addEventListener('input', upd); nl.addEventListener('change', upd);
@@ -860,7 +875,7 @@
     const cols = [['📁 Working folder', 'your files'], ['🎬 Staging area', '.git/index'], ['💻 Local repo', '.git/objects + refs'], ['☁️ Remote', 'origin (GitHub)']];
     const cx = i => 20 + i * 225 + 92;
     const defs = sv('defs', {}, svg);
-    [['a', '#ffb454'], ['t', '#56d4dd'], ['p', '#d2a8ff']].forEach(([id, c]) => { const m = sv('marker', { id: 'ch-' + id, viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 5, markerHeight: 5, orient: 'auto-start-reverse' }, defs); sv('path', { d: 'M0,0 L10,5 L0,10 z', fill: c }, m); });
+    [['a', 'var(--amber)'], ['t', 'var(--teal)'], ['p', 'var(--purple)']].forEach(([id, c]) => { const m = sv('marker', { id: 'ch-' + id, viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 5, markerHeight: 5, orient: 'auto-start-reverse' }, defs); sv('path', { d: 'M0,0 L10,5 L0,10 z', fill: c }, m); });
     cols.forEach(([t, s], i) => { sv('rect', { x: 20 + i * 225, y: 14, width: 185, height: 416, rx: 14, class: 'lane-box' }, svg); sv('text', { x: cx(i), y: 42, 'text-anchor': 'middle', fill: '#ece8e1', 'font-size': 16, 'font-weight': 700, 'font-family': 'DM Sans' }, svg).textContent = t; sv('text', { x: cx(i), y: 61, 'text-anchor': 'middle', fill: '#6c7486', 'font-size': 12, 'font-family': 'JetBrains Mono' }, svg).textContent = s; });
     const A = [
       [0, 1, 105, 'git add', 'a', 'Hash the file into a blob in .git/objects and point the index at it. Saved now, before any commit.'],
@@ -874,7 +889,7 @@
       [3, 0, 380, 'git pull', 'p', 'fetch + merge (or --rebase) in one go. This is where your work and teammates\' work meet.'],
       [3, 0, 420, 'git clone', 'p', 'Copy everything: all objects, all history. Sets up origin, origin/main and your own main, then fills your folder.']
     ];
-    const col = { a: '#ffb454', t: '#56d4dd', p: '#d2a8ff' };
+    const col = { a: 'var(--amber)', t: 'var(--teal)', p: 'var(--purple)' };
     A.forEach(([f, t, y, lab, k, why]) => {
       const g = sv('g', { class: 'arr' }, svg);
       const x1 = cx(f) + (t > f ? 40 : -40), x2 = cx(t) + (t > f ? -40 : 40);
