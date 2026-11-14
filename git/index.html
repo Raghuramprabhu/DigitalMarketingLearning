@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>git — The Story of the Information Manager from Hell</title>
+  <meta name="description" content="The history of Git, how it works underneath, and every important command, told as stories with live playgrounds.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="git.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="../">← <span>Field Notes</span></a>
+    <span class="logo">git<span>:story</span></span>
+    <div class="progress" id="progress"><div class="rail"></div><div class="fill"></div></div>
+    <button class="eggbtn" id="eggbtn" title="Hidden secrets found">🥚 <span id="eggcount">0</span>/<span id="eggtotal">10</span></button>
+  </div>
+</header>
+<div class="eggpanel" id="eggpanel">
+  <b>🥚 Easter eggs</b>
+  <div style="color:var(--soft);font-size:13px;margin-top:4px">There are secrets hidden across this page: in terminals, in history, in the footer. Curiosity is rewarded.</div>
+  <ul id="egglist"></ul>
+</div>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <canvas id="stars"></canvas>
+  <div class="hero-in">
+    <div>
+      <span class="eyebrow">A story in six acts · with playgrounds</span>
+      <h1>Ten days in April<br>that changed how the world <em>saves its work.</em></h1>
+      <p class="lede">
+        In 2005, the biggest open-source project on Earth lost its tools overnight. Its creator got angry, went quiet, and came back with something so simple and so strange that today nearly every programmer alive uses it.
+      </p>
+      <p class="lede" style="font-size:17px">This is that story. Then we open the machine, invent it again from scratch, and learn every important command by <b>watching what happens underneath</b>.</p>
+      <div class="ctas">
+        <a class="btn" href="#act1">Begin the story ↓</a>
+        <a class="btn ghost" href="#playground">Skip to the sandbox ⚡</a>
+      </div>
+    </div>
+    <div class="term-win" aria-label="A terminal replaying git's first commit">
+      <div class="tw-top"><i></i><i></i><i></i><span>~/git — April 2005</span></div>
+      <pre id="hero-term"></pre>
+    </div>
+  </div>
+  <div class="scroll-cue">scroll ⌄</div>
+</section>
+
+<section class="wide" style="padding-top:20px">
+  <div class="toc" id="toc">
+    <a href="#act1"><span class="n">ACT I</span><span class="hashy">e83c516</span><b>The Feud</b><small>A free license, a telnet session, and ten furious days.</small></a>
+    <a href="#act2"><span class="n">ACT II</span><span class="hashy">2a9f0c1</span><b>Invent It Yourself</b><small>Four attempts. By the last one, you've built Git.</small></a>
+    <a href="#act3"><span class="n">ACT III</span><span class="hashy">7d41b88</span><b>Under the Hood</b><small>Fingerprints, four objects, a chain of trust.</small></a>
+    <a href="#act4"><span class="n">ACT IV</span><span class="hashy">c0ffee1</span><b>Everyday Spells</b><small>init → add → commit → branch → merge → rebase.</small></a>
+    <a href="#act5"><span class="n">ACT V</span><span class="hashy">bad1dea</span><b>Time Travel</b><small>reset, revert, stash, reflog, bisect, blame.</small></a>
+    <a href="#act6"><span class="n">ACT VI</span><span class="hashy">5e11e8d</span><b>Many Laptops</b><small>clone, fetch, pull, push, and the force-push.</small></a>
+    <a href="#finale"><span class="n">FINALE</span><span class="hashy">HEAD</span><b>Your Turn</b><small>The full sandbox, your command deck, a quiz.</small></a>
+  </div>
+</section>
+
+<!-- ============================ ACT I ============================ -->
+<section class="act" id="act1" data-act="0">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT I</div>
+      <h2>The Information Manager from Hell</h2>
+      <p>How do thousands of strangers, on every continent, edit the same 6 million lines of code without destroying each other's work?</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl reveal">
+        <div class="date">AUGUST 1991 · HELSINKI</div>
+        <h3>A student posts a hobby project</h3>
+        <div class="card">
+          <p>A 21-year-old named <b>Linus Torvalds</b> announces a free operating system kernel, "just a hobby, won't be big." It becomes <b>Linux</b>. Within a few years, thousands of people are sending him improvements.</p>
+          <p>And here's the part that sounds insane today: for <b>ten years</b>, there was no version-control tool at the heart of it. People emailed <i>patches</i> (text files listing "remove this line, add that line"). Linus read them, applied them by hand, and published the result as a <code>.tar.gz</code> archive.</p>
+          <p><b>Linus was the version control system.</b> A human merge machine.</p>
+          <div class="quoteish">He once joked that only wimps use tape backups; real men upload their stuff to FTP and let the rest of the world mirror it.</div>
+          <p style="margin:0;color:var(--soft)">Hold on to that joke. "Let the world keep copies" is the seed of everything that follows.</p>
+        </div>
+      </div>
+
+      <div class="tl reveal">
+        <div class="date">1972 → 2000 · THE ANCESTORS</div>
+        <h3>Tools existed. Linus hated them.</h3>
+        <div class="card">
+          <div class="ancestors">
+            <div class="anc"><span class="yr">1972</span><b>SCCS</b><small>Bell Labs. One file at a time.</small></div>
+            <div class="anc"><span class="yr">1982</span><b>RCS</b><small>Stores changes as backward diffs.</small></div>
+            <div class="anc"><span class="yr">1990</span><b>CVS</b><small>Many files, one central server.</small></div>
+            <div class="anc"><span class="yr">2000</span><b>SVN</b><small>"CVS done right." Still central.</small></div>
+          </div>
+          <p>They all shared one idea: <b>a single central server is the truth.</b> You check out, edit, check in. No network? No history, no commits. Server dies? Everybody stops.</p>
+          <p>For a project like Linux, with no office, no company and no single owner, that was a terrible fit. Linus considered CVS so badly designed that he preferred emailed patches.</p>
+        </div>
+      </div>
+
+      <div class="tl reveal">
+        <div class="date">FEBRUARY 2002 · THE DEAL</div>
+        <h3>A free license with strings attached</h3>
+        <div class="card">
+          <p>A company called BitMover, led by <b>Larry McVoy</b>, made <b>BitKeeper</b>: a genuinely <i>distributed</i> tool where every developer had a full copy of the history. It was proprietary, but McVoy offered the kernel community a free license.</p>
+          <p>The catch: if you used the free version, you were not allowed to work on a competing version-control tool.</p>
+          <p>Free-software purists were furious. Using closed software to build the most famous open project in the world? But Linus was pragmatic: <b>it worked</b>. For three years kernel development flew faster than ever.</p>
+        </div>
+      </div>
+
+      <div class="tl reveal">
+        <div class="date">APRIL 2005 · THE TELNET INCIDENT</div>
+        <h3>Someone typed "help"</h3>
+        <div class="card">
+          <p><b>Andrew Tridgell</b>, the brilliant Australian behind Samba, wanted to write a free client that could talk to BitKeeper servers. How do you learn a secret protocol? He connected to a BitKeeper server with plain <code>telnet</code>… and typed <code>help</code>.</p>
+          <div class="mini-term" id="telnet-term"></div>
+          <p>The server politely listed its own commands. McVoy saw it as reverse-engineering in breach of the deal and <b>withdrew the free license</b>. Overnight, the Linux kernel, one of the most important pieces of software on Earth, had no version control.</p>
+        </div>
+      </div>
+
+      <div class="tl reveal">
+        <div class="date">3 APRIL 2005 · DAY ONE</div>
+        <h3>Linus stops working on Linux</h3>
+        <div class="card">
+          <p>He looked at every alternative and rejected them all. So he decided to write his own, with three rules that read like a grudge:</p>
+          <div class="rules">
+            <div class="rule"><span class="ic">🙃</span><b>Do the opposite of CVS</b>Use CVS as an example of what not to do. When in doubt, choose the exact opposite.</div>
+            <div class="rule"><span class="ic">🌍</span><b>Distributed</b>Every developer has the full history. No central boss.</div>
+            <div class="rule"><span class="ic">🛡️</span><b>Corruption-proof</b>Strong protection against damage, accidental <i>or</i> malicious.</div>
+            <div class="rule"><span class="ic">⚡</span><b>Absurdly fast</b>Applying a patch should take at most ~3 seconds. (He needed to apply hundreds a day.)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl reveal">
+        <div class="date">7 APRIL 2005 · DAY FOUR</div>
+        <h3>Git tracks itself</h3>
+        <div class="card">
+          <p>Four days after starting, Git was "self-hosting": the source code of Git was stored <i>in</i> Git. The very first commit is still there today, in every copy of Git's repository. Its message calls Git <i>"the information manager from hell."</i></p>
+          <p>Ever since, that first commit has kept the same 40-character name. Look at the terminal at the top of this page: that yellow hash is real. <span style="color:var(--dim)">(Try clicking it.)</span></p>
+          <div class="stats">
+            <div class="stat"><b>18 Apr</b><small>First merge of multiple branches</small></div>
+            <div class="stat"><b>16 Jun</b><small>Linux 2.6.12 released, managed by Git</small></div>
+            <div class="stat"><b>26 Jul</b><small>Linus hands Git to <b>Junio Hamano</b></small></div>
+            <div class="stat"><b>21 Dec</b><small>Git 1.0 released</small></div>
+          </div>
+          <p style="margin-top:14px">Linus wrote the core, then handed it over after <b>less than four months</b>. Junio Hamano, a quiet engineer from Japan, has stewarded Git for well over a decade since. Linus has said that much of the credit for what Git became belongs to Junio.</p>
+          <p style="margin:0;color:var(--soft)">Fun twist: the same month, <b>Matt Mackall</b> started <b>Mercurial</b> for the exact same reason. Two siblings, born of one feud.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="twist reveal" data-twist>
+      <div class="q">Why is it called "git"?</div>
+      <div class="tap">tap to reveal</div>
+      <div class="a">In British slang, a <i>git</i> is an unpleasant, stubborn person. Linus joked that he's an egotist who names all his projects after himself: first <b>Linux</b>, now <b>git</b>. The original README offers more meanings depending on your mood: "global information tracker" when it works, and something unprintable when it breaks. It also calls Git <b>"the stupid content tracker."</b> Remember that word, <i>stupid</i>. It's the key to everything in Act III.</div>
+    </div>
+
+    <div class="sub reveal">
+      <div class="kicker">Why "distributed" mattered</div>
+      <h3>Kill the server. See who survives.</h3>
+      <p>Old tools kept history in one place. Git gives <b>every laptop the entire history</b>. Try it: pick a world, then destroy the server.</p>
+    </div>
+    <div class="panel net reveal" id="net">
+      <div class="panel-title"><span>Centralized vs distributed</span>
+        <span class="seg" id="net-mode"><button class="on" data-m="c">CVS / SVN world</button><button data-m="d">Git world</button></span>
+      </div>
+      <svg viewBox="0 0 640 300" id="net-svg"></svg>
+      <div class="row" style="justify-content:center;margin-top:6px">
+        <button class="btn small" id="net-commit">✍️ Everyone commits</button>
+        <button class="btn small ghost" id="net-kill">💥 Destroy the server</button>
+        <button class="btn small ghost" id="net-reset">↺ Rebuild</button>
+      </div>
+      <div class="net-msg" id="net-msg">Each laptop is a developer. The box in the middle is the server.</div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl reveal">
+        <div class="date">2008 → TODAY · THE TAKEOVER</div>
+        <h3>From kernel tool to the world's default</h3>
+        <div class="card">
+          <p><b>April 2008:</b> GitHub launches, turning Git repositories into a social network. <b>2017:</b> Microsoft moves the entire Windows codebase (about 300 GB, 3.5 million files) into Git. <b>2018:</b> Microsoft buys GitHub for <b>$7.5 billion</b>.</p>
+          <p><b>February 2017:</b> Google and CWI Amsterdam produce the first real SHA-1 collision, two different PDFs with the same hash. Git, which names everything by SHA-1, hardens itself to detect such attacks and later adds a SHA-256 mode. (You'll see why that matters in Act III.)</p>
+          <div class="stats">
+            <div class="stat"><b>~94%</b><small>of developers use Git (Stack Overflow survey, 2022)</small></div>
+            <div class="stat"><b>100M+</b><small>developers on GitHub by 2023</small></div>
+            <div class="stat"><b>10 days</b><small>from first line to self-hosting... well, four</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recall-h">🧠 Recall before you scroll on</div>
+    <div class="recall">
+      <div class="flip"><div class="flip-in"><div class="fc front">What did Linux use for version control in its first 10 years?</div><div class="fc back">Nothing formal. Emailed patches + Linus applying them by hand + tarball releases.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">What single event forced Git into existence?</div><div class="fc back">BitKeeper's free license was withdrawn (April 2005) after Tridgell's reverse-engineering, the famous "telnet + help" moment.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">Linus's design rule about CVS?</div><div class="fc back">Take CVS as an example of what NOT to do. When in doubt, make the opposite decision.</div></div></div>
+    </div>
+
+    <p class="openloop reveal">Linus called Git "stupid." Not modest; literally stupid, by design. What could a stupid tracker possibly be doing that the clever ones couldn't? You're going to find out by inventing it yourself.</p>
+  </div>
+</section>
+
+<!-- ============================ ACT II ============================ -->
+<section class="act" id="act2" data-act="1">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT II</div>
+      <h2>Invent Git Yourself</h2>
+      <p>Forget everything. You're writing a novel and want to keep every version safe, and later share it with a co-author. Let's design a tool from first principles. Four attempts.</p>
+    </div>
+
+    <div class="panel stepper reveal" id="invent">
+      <div class="steps">
+        <button class="on" data-s="0">① Copies</button>
+        <button data-s="1">② Diffs</button>
+        <button data-s="2">③ Fingerprints</button>
+        <button data-s="3">④ No boss</button>
+      </div>
+
+      <div class="step-body on" data-s="0">
+        <h4>Attempt 1: just copy the folder</h4>
+        <p>Every time you finish a chapter, zip the whole folder. Simple, and it's what everyone does first.</p>
+        <div class="step-vis" id="copies-vis"></div>
+        <div class="problem"><b>Problems:</b> 50 versions × 200 MB = 10 GB of mostly identical bytes. No record of <i>why</i> anything changed. And when your co-author sends <code>novel_FINAL_meera.zip</code>, how do you combine her edits with yours?</div>
+        <button class="btn small" data-next>So store only what changed →</button>
+      </div>
+
+      <div class="step-body" data-s="1">
+        <h4>Attempt 2: store only the differences</h4>
+        <p>Keep version 1 in full, then store each later version as a <b>diff</b>: "line 40: delete; line 41: insert 'It was raining.'" Tiny! This is how RCS, CVS and SVN think.</p>
+        <div class="step-vis"><div class="chainbox" id="diff-vis"></div></div>
+        <div class="row" style="justify-content:center"><button class="btn small ghost" id="diff-rot">☠️ Corrupt one diff on disk</button></div>
+        <div class="problem"><b>Problems:</b> to see version 100 you must replay 99 diffs. One flipped bit in diff #3 silently poisons every version after it, and nothing tells you. And the diffs live on one central server.</div>
+        <button class="btn small" data-next>What if we stored snapshots, but cleverly? →</button>
+      </div>
+
+      <div class="step-body" data-s="2">
+        <h4>Attempt 3: snapshots named by fingerprints</h4>
+        <p>Here's the "stupid" idea. Store <b>every file in full</b>, but name each one by a <b>fingerprint of its content</b>: a hash. Identical content → identical name → stored once. Then a snapshot is just a <b>list of fingerprints</b>. And each snapshot records the fingerprint of the snapshot before it.</p>
+        <div class="step-vis" id="fp-vis"></div>
+        <p><b>Look what falls out for free:</b></p>
+        <ul>
+          <li><b>Deduplication:</b> 50 snapshots where chapter 1 never changed? Chapter 1 is stored <b>once</b>.</li>
+          <li><b>Instant comparison:</b> two files differ? Compare 40 characters, not 40 MB.</li>
+          <li><b>Tamper-evidence:</b> change one comma in an old chapter and its fingerprint changes, so the snapshot's fingerprint changes, so every later snapshot's fingerprint changes. Corruption can't hide.</li>
+        </ul>
+        <button class="btn small" data-next>Now share it, without a server →</button>
+      </div>
+
+      <div class="step-body" data-s="3">
+        <h4>Attempt 4: no boss</h4>
+        <p>Because names come from content, <b>any two computers can sync just by comparing lists of names</b>. "I have a1b2, c3d4, e5f6. You?" "I'm missing e5f6." Send one object. Done. Nobody needs to be "the server." Everyone holds the full history.</p>
+        <div class="step-vis" style="font-size:44px;gap:24px">💻 ⇄ 💻 ⇄ 💻</div>
+        <div class="callout gold"><div class="emo">🎉</div><div><p><b>Congratulations. You just invented Git.</b></p><p>Git is a <b>content-addressed database of snapshots</b> (files named by fingerprints), plus a few <b>sticky notes</b> (branches) pointing at the latest snapshots. Everything else, every command in this page, is built on that.</p></div></div>
+      </div>
+    </div>
+
+    <div class="twist reveal" data-twist>
+      <div class="q">Wait. Doesn't Git store diffs? Every tool shows me diffs!</div>
+      <div class="tap">tap to reveal</div>
+      <div class="a">No. Git stores <b>snapshots</b>. When you run <code>git diff</code> or look at a commit on GitHub, the diff is <b>computed on the spot</b> by comparing two snapshots. (Later, to save disk space, Git <i>does</i> compress similar objects into deltas inside "packfiles", but that's a storage trick hidden underneath. Your mental model should be: snapshots.)</div>
+    </div>
+
+    <p class="openloop reveal">"Fingerprint of the content" sounds like magic. What exactly is being fingerprinted, and how can 40 characters stand for a whole file?</p>
+  </div>
+</section>
+
+<!-- ============================ ACT III ============================ -->
+<section class="act" id="act3" data-act="2">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT III</div>
+      <h2>Under the Hood</h2>
+      <p>Open the <code>.git</code> folder and you'll find a tiny, beautiful database. Seven ideas explain all of it.</p>
+    </div>
+
+    <!-- 3.1 -->
+    <div class="sub reveal"><div class="kicker">3.1 · Fingerprints</div><h3>SHA-1: a blender for bytes</h3>
+      <p>A hash function takes any input (a word, a novel, a movie) and blends it into a fixed 40-character fingerprint. Same input → always the same fingerprint, on every computer on Earth. Change <b>one</b> letter → a totally different fingerprint. You cannot run the blender backwards.</p>
+      <p>Git doesn't hash just your file. It first glues on a tiny <b>header</b>: the type, a space, the size, and an invisible <b>null byte</b>. Type below and watch.</p>
+    </div>
+    <div class="panel reveal" id="hashlab">
+      <div class="panel-title"><span>🧪 Hash lab · real Git algorithm</span><span class="row">
+        <button class="btn small ghost" data-try="hello">hello</button>
+        <button class="btn small ghost" data-try="Hello">Hello</button>
+        <button class="btn small ghost" data-try="hello!">hello!</button>
+      </span></div>
+      <input type="text" id="hl-in" value="hello" aria-label="Text to hash" autocomplete="off">
+      <label style="display:block;margin-top:8px;font-size:14px;color:var(--soft)"><input type="checkbox" id="hl-nl" checked> add a newline at the end (like <code>echo</code> does)</label>
+      <div style="font:700 12px var(--font-mono);color:var(--soft);margin-top:12px">WHAT GIT ACTUALLY FEEDS INTO THE BLENDER:</div>
+      <div class="bytes" id="hl-bytes"></div>
+      <div class="machine"><span class="gear" id="hl-gear">⚙️</span> SHA-1 → the object's name</div>
+      <div class="hashrow">
+        <div><div class="hashout" id="hl-out"></div><div class="avalanche" id="hl-ava"></div></div>
+        <div class="ident" id="hl-ident" title="The same hash drawn as a picture"></div>
+      </div>
+      <p style="font-size:14px;color:var(--soft);margin:10px 0 0">✅ Real Git agrees: <code>echo hello | git hash-object --stdin</code> prints <code>ce01362…</code>. Run it on any computer and you'll get the same.</p>
+    </div>
+
+    <!-- 3.2 -->
+    <div class="sub reveal"><div class="kicker">3.2 · The four objects</div><h3>Everything Git stores is one of four things</h3>
+      <p>Every object is saved in <code>.git/objects/</code>, named by its own hash. These four colours appear in every playground on this page.</p>
+    </div>
+    <div class="objtypes reveal">
+      <div class="ot blob"><span class="ic">📄</span><b>blob</b><small>The raw contents of one file. No name, no date. Just bytes.</small></div>
+      <div class="ot tree"><span class="ic">📁</span><b>tree</b><small>A folder listing: "name → blob hash" (or → another tree).</small></div>
+      <div class="ot commit"><span class="ic">📸</span><b>commit</b><small>A snapshot label: one tree + parent commit(s) + author + time + message.</small></div>
+      <div class="ot tag"><span class="ic">🏷️</span><b>tag</b><small>A permanent, signed-able name for a commit: "v1.0".</small></div>
+    </div>
+    <div class="callout reveal"><div class="emo">💡</div><div><p>Notice what a <b>blob</b> doesn't have: a <b>file name</b>. Names live in trees. That's why renaming a file costs Git almost nothing, and why two identical files anywhere in history share <b>one</b> blob.</p></div></div>
+    <div class="panel om reveal" id="objmodel">
+      <div class="panel-title"><span>🔬 Two snapshots, side by side</span>
+        <span class="seg" id="om-pick"><button data-f="none" class="on">Change nothing</button><button data-f="README.md">Edit README.md</button><button data-f="app.js">Edit app.js</button><button data-f="both">Edit both</button></span>
+      </div>
+      <svg id="om-svg" viewBox="0 0 720 330"></svg>
+      <div class="om-note" id="om-note"></div>
+    </div>
+
+    <!-- 3.3 -->
+    <div class="sub reveal"><div class="kicker">3.3 · The chain of trust</div><h3>Try to rewrite history. Quietly.</h3>
+      <p>A commit's text includes its tree's hash <b>and its parent's hash</b>. So each commit's fingerprint depends on everything before it. (Cryptographers call this a <b>Merkle tree</b>; blockchains borrowed the same trick.) Below are four real commits. Edit what the <i>first</i> one stored, and watch the damage spread.</p>
+    </div>
+    <div class="panel merkle reveal" id="merkle">
+      <div class="panel-title"><span>⛓️ Tamper with commit #1</span><button class="btn small ghost" id="mk-reset">↺ Restore truth</button></div>
+      <div class="mchain" id="mk-chain"></div>
+      <label style="font:700 12px var(--font-mono);color:var(--soft)">FILE IN COMMIT #1 (recipe.txt):</label>
+      <input type="text" id="mk-in" value="Rasam: tamarind, tomato, pepper" autocomplete="off">
+      <div class="verdict" id="mk-verdict"></div>
+    </div>
+    <div class="callout reveal"><div class="emo">🛡️</div><div><p>That's Linus's "corruption-proof" rule, delivered by arithmetic. If you know the hash of the <b>latest</b> commit, you've verified the <b>entire history</b> behind it. And it's why the 2017 SHA-1 collision was a big deal, and why Git now detects collision attacks and supports SHA-256.</p></div></div>
+
+    <!-- 3.4 -->
+    <div class="sub reveal"><div class="kicker">3.4 · The .git folder</div><h3>The whole repository is one hidden folder</h3>
+      <p>Your project files are just a working copy. The <i>real</i> repository, every version ever, is <code>.git/</code>. Click around.</p>
+    </div>
+    <div class="panel reveal">
+      <div class="gx" id="gitx">
+        <ul id="gx-list"></ul>
+        <div class="gx-info" id="gx-info"></div>
+      </div>
+    </div>
+
+    <!-- 3.5 -->
+    <div class="sub reveal"><div class="kicker">3.5 · Squeezing</div><h3>zlib, then packfiles</h3>
+      <p>Each object is compressed with <b>zlib</b> before it's written. But imagine a 100 KB file you've edited 3 times: three nearly-identical blobs. Every so often (or when you run <code>git gc</code> or push), Git rolls loose objects into a <b>packfile</b> and stores similar objects as <b>deltas</b>. Plot twist: it keeps the <b>newest</b> version whole and the older ones as deltas, because you usually want the latest fastest.</p>
+    </div>
+    <div class="panel reveal" id="pack">
+      <div class="panel-title"><span>📦 Same three versions of style.css</span><button class="btn small" id="pack-go">Run git gc</button></div>
+      <div class="packbars" id="pack-bars"></div>
+      <div id="pack-msg" style="font-weight:600;min-height:24px"></div>
+    </div>
+
+    <!-- 3.6 -->
+    <div class="sub reveal"><div class="kicker">3.6 · Branches & HEAD</div><h3>A branch is a 41-byte sticky note</h3>
+      <p>In old systems a branch meant copying the whole project. In Git, a branch is <b>a text file containing one commit hash</b>. That's it. 40 hex characters plus a newline. Creating one is instant. Having 1,000 of them is fine.</p>
+      <p>And <code>HEAD</code>? It's the "<b>you are here</b>" marker on the map. Usually it doesn't hold a hash at all: it holds the <i>name of a branch</i>, like <code>ref: refs/heads/main</code>. When you commit, Git moves <b>the branch HEAD points to</b>. The sticky note slides forward; HEAD rides along.</p>
+    </div>
+    <div class="twist reveal" data-twist>
+      <div class="q">If a branch is just a pointer, what happens to commits when you delete a branch?</div>
+      <div class="tap">tap to reveal</div>
+      <div class="a">Nothing, immediately. The commits stay in <code>.git/objects</code>. They just become <b>unreachable</b>: no sticky note leads to them. Git's garbage collector only deletes unreachable objects after a grace period (typically weeks), and until then the <b>reflog</b> can find them. You'll use this to resurrect "deleted" work in Act V.</div>
+    </div>
+
+    <!-- 3.7 -->
+    <div class="sub reveal"><div class="kicker">3.7 · The three trees</div><h3>The photo studio</h3>
+      <p>Git juggles three versions of your project at all times. Think of a <b>photo studio</b>:</p>
+      <ul>
+        <li><b>📁 Working folder</b> is the messy dressing room where people get ready. Edit freely.</li>
+        <li><b>🎬 Staging area (the "index")</b> is the stage: you choose exactly who stands in the next photo. <code>git add</code> puts someone on stage.</li>
+        <li><b>📸 HEAD</b> is the last photo taken. <code>git commit</code> clicks the shutter on whatever's on stage.</li>
+      </ul>
+    </div>
+    <div class="panel studio reveal" id="studio">
+      <div class="zones">
+        <div class="zone" data-z="w"><h5>📁 Working folder</h5><small>your files on disk</small><div class="slot"></div></div>
+        <div class="zone" data-z="i"><h5>🎬 Staging (index)</h5><small>.git/index: the draft of the next commit</small><div class="slot"></div></div>
+        <div class="zone" data-z="h"><h5>📸 HEAD</h5><small>the last commit</small><div class="slot"></div><div class="minichain" id="st-chain"></div></div>
+      </div>
+      <div class="row" style="justify-content:center;margin-top:12px">
+        <button class="btn small" data-st="edit">✏️ Edit the file</button>
+        <button class="btn small" data-st="add">git add</button>
+        <button class="btn small" data-st="commit">git commit</button>
+        <button class="btn small ghost" data-st="unstage">git restore --staged</button>
+        <button class="btn small ghost" data-st="discard">git restore</button>
+      </div>
+      <div class="studio-msg" id="st-msg">All three agree: recipe v1 everywhere. Try ✏️ Edit.</div>
+    </div>
+
+    <div class="recall-h">🧠 Recall</div>
+    <div class="recall">
+      <div class="flip"><div class="flip-in"><div class="fc front">What exactly does Git hash to name a file's blob?</div><div class="fc back">"blob" + space + size + a null byte + the file's bytes. SHA-1 of that = the blob's name.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">Name the four object types and what each holds.</div><div class="fc back">blob = file contents · tree = names → hashes · commit = tree + parents + author + message · tag = a named, annotated pointer.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">Why can't you secretly alter an old commit?</div><div class="fc back">Its hash would change, which changes its child's "parent" line, which changes the child's hash… all the way to the tip.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">What IS a branch, physically?</div><div class="fc back">A 41-byte file in .git/refs/heads/ holding one commit hash. HEAD usually points to a branch name.</div></div></div>
+    </div>
+    <p class="openloop reveal">You now know the whole machine: objects, a chain, sticky notes, three trees. Every Git command is just a different way of moving those around. Let's cast some spells, and watch them work.</p>
+  </div>
+</section>
+
+<!-- ============================ ACT IV ============================ -->
+<section class="act" id="act4" data-act="3">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT IV</div>
+      <h2>Everyday Spells</h2>
+      <p>Meet the cast: <b>Paati</b> (grandma) wrote the family recipe book. <b>Amma</b> improved it. Now it's <b>yours</b>. Your cousin <b>Meera</b> in Bengaluru wants to contribute too. Each command below is a chapter of their story, with a live terminal running a real Git engine.</p>
+    </div>
+    <div class="callout reveal"><div class="emo">🕹️</div><div><p><b>How the playgrounds work:</b> click the glowing command chips (or type your own). The <b>graph</b> on top shows commits and sticky notes. The <b>three columns</b> are the three trees. The <span style="color:var(--teal)"><b>⚙️ Under the hood</b></span> panel narrates what Git just did internally. Click any coloured object to open it. Hashes are real SHA-1s.</p></div></div>
+  </div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-init">
+      <div class="spell-head"><div class="spell-icon">📔</div><div><h3>git init</h3><p class="tagline">Open a brand-new diary</p></div></div>
+      <p>Paati's recipes sit in a folder as plain files. To start keeping history, you open a diary for them. <code>git init</code> doesn't touch your files at all. It creates one hidden folder: <code>.git</code>.</p>
+      <div class="hoodbox"><h4>⚙️ Under the hood</h4><ol>
+        <li>Creates <code>.git/objects/</code> (the database, empty) and <code>.git/refs/heads/</code> (sticky notes, none yet).</li>
+        <li>Writes <code>.git/HEAD</code> = <code>ref: refs/heads/main</code>. HEAD points to a branch that <b>doesn't exist yet</b>: an "unborn branch". It's born with your first commit.</li>
+      </ol></div>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="init"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-add">
+      <div class="spell-head"><div class="spell-icon">🎬</div><div><h3>git add</h3><p class="tagline">Put someone on stage for the photo</p></div></div>
+      <p>You've typed out Paati's rasam recipe. <code>git add</code> says "this goes into the next snapshot." Here's the surprise most people never learn: <b>the file is saved into Git's database right now</b>, at <code>add</code> time, not at commit time.</p>
+      <div class="hoodbox"><h4>⚙️ Under the hood</h4><ol>
+        <li>Reads the file, prepends <code>blob &lt;size&gt;\0</code>, computes SHA-1 → the blob's name.</li>
+        <li>Compresses it with zlib and writes <code>.git/objects/ab/cdef…</code> (first 2 hex chars = folder name). If that blob already exists, writes nothing. Free dedupe.</li>
+        <li>Updates <code>.git/index</code>: "recipe.txt → that hash." The index is literally the draft of your next tree.</li>
+      </ol></div>
+      <p>Try the dedupe trick in the sandbox: copy the recipe into a second file with identical text, add it, and watch Git store <b>nothing new</b>.</p>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="add"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-commit">
+      <div class="spell-head"><div class="spell-icon">📸</div><div><h3>git commit</h3><p class="tagline">Click. The photo is permanent.</p></div></div>
+      <p>The stage is set. <code>git commit</code> takes the picture: a permanent snapshot with your name, the time, and a message explaining <i>why</i>. Commits are <b>immutable</b>. Not "hard to change": <i>impossible</i> to change, because changing anything changes the hash, which makes it a different commit.</p>
+      <div class="hoodbox"><h4>⚙️ Under the hood</h4><ol>
+        <li>Turns the index into a <b class="c-tree">tree</b> object (filename → blob hash list).</li>
+        <li>Writes a <b class="c-commit">commit</b> object: <code>tree</code>, <code>parent</code> (the previous commit), <code>author</code>, <code>committer</code>, a blank line, your message.</li>
+        <li>Overwrites the 41-byte file of the current branch with the new commit's hash. The sticky note moves forward. That's all "committing on a branch" means.</li>
+      </ol></div>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="commit"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-diff">
+      <div class="spell-head"><div class="spell-icon">🔎</div><div><h3>git status · diff · log · show</h3><p class="tagline">Spot the difference, read the diary backwards</p></div></div>
+      <p>Amma has been editing. What changed? <code>status</code> tells you <i>which</i> files differ across the three trees. <code>diff</code> shows <i>which lines</i>. <code>log</code> reads the diary from newest to oldest by following parent pointers, like walking footprints backwards. You can even <b>time-travel</b> with <code>git checkout HEAD~2</code> and look around the past.</p>
+      <div class="hoodbox"><h4>⚙️ Under the hood</h4><ol>
+        <li><code>status</code> compares hashes: working-file hash vs index hash vs HEAD-tree hash. Equal hashes = skip. (Real Git also caches file timestamps in the index so it doesn't even re-hash unchanged files. That's why it's instant on huge projects.)</li>
+        <li><code>diff</code> = working ↔ index. <code>diff --staged</code> = index ↔ HEAD. Diffs are computed live; they're never stored.</li>
+        <li><code>log</code> starts at HEAD and follows each commit's <code>parent</code> line. <code>HEAD~2</code> means "parent of parent of HEAD."</li>
+        <li><code>checkout &lt;old hash&gt;</code> writes a raw hash into HEAD: <b>detached HEAD</b>. You're visiting the past without a sticky note.</li>
+      </ol></div>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="diff"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-branch">
+      <div class="spell-head"><div class="spell-icon">🌿</div><div><h3>git branch · switch</h3><p class="tagline">Parallel universes for 41 bytes</p></div></div>
+      <p>You want to try a <i>spicy</i> rasam without ruining the family classic. Create a branch: a new sticky note on the same commit. Switch to it, experiment, commit. Switch back and the chillies <b>vanish from your folder</b>. Switch again and they're back. Nothing is copied; Git just rewrites the files that differ.</p>
+      <div class="hoodbox"><h4>⚙️ Under the hood</h4><ol>
+        <li><code>git branch spicy</code> writes <code>.git/refs/heads/spicy</code> containing the current commit's hash. Done.</li>
+        <li><code>git switch spicy</code> rewrites <code>.git/HEAD</code> to <code>ref: refs/heads/spicy</code>, then updates only the files whose blob hashes differ between the two snapshots.</li>
+        <li>If you have uncommitted edits that would be overwritten, Git refuses. It never silently destroys work.</li>
+      </ol></div>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="branch"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-merge">
+      <div class="spell-head"><div class="spell-icon">🌊</div><div><h3>git merge</h3><p class="tagline">Two rivers meet</p></div></div>
+      <p>The spicy experiment was a hit. Time to bring it into <code>main</code>. Depending on how the histories look, Git does one of three things:</p>
+      <div class="rules">
+        <div class="rule"><span class="ic">⏩</span><b>Fast-forward</b>main hasn't moved since you branched. Git just slides main's sticky note forward. No new commit at all.</div>
+        <div class="rule"><span class="ic">🔀</span><b>Three-way merge</b>Both sides moved. Git finds the <b>merge base</b> (last common ancestor), compares base ↔ ours ↔ theirs, and writes a commit with <b>two parents</b>.</div>
+        <div class="rule"><span class="ic">⚔️</span><b>Conflict</b>Both sides changed the <i>same lines</i> differently. Git can't read minds, so it writes both versions into the file with markers and asks you.</div>
+        <div class="rule"><span class="ic">🧮</span><b>The rule</b>For each file: if only one side changed it from base, take that side. If both changed it the same way, fine. Otherwise: conflict.</div>
+      </div>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="ff"></div></div>
+  <div class="wide"><div class="sandbox" data-scene="threeway"></div></div>
+  <div class="wrap"><p class="reveal" style="margin-top:30px">And now the drama. You made rasam spicy on a branch, while Amma, on <code>main</code>, changed the <b>same line</b> to add drumstick. Neither of you is wrong. Git won't guess.</p></div>
+  <div class="wide"><div class="sandbox" data-scene="conflict"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-rebase">
+      <div class="spell-head"><div class="spell-icon">🪄</div><div><h3>git rebase</h3><p class="tagline">Rewriting your travel journal so it reads in order</p></div></div>
+      <p>Merge keeps history honest: "these two lines of work happened in parallel, then joined." Rebase tells a cleaner story: "I started <i>after</i> the latest main." It <b>lifts your commits off</b> and <b>replays them</b> on top of the new base, as if you'd written them later.</p>
+      <div class="hoodbox"><h4>⚙️ Under the hood</h4><ol>
+        <li>Finds your commits that the target doesn't have.</li>
+        <li>For each one: computes what it changed relative to its old parent, applies that change on the new base, and writes a <b>brand-new commit</b>. New parent → new text → <b>new hash</b>.</li>
+        <li>Moves your branch to the last new commit. The originals aren't deleted; they become <b>unreachable ghosts</b> (watch them fade).</li>
+      </ol></div>
+      <p>Below are two identical universes. Same history, same starting point. Left: <b>merge</b>. Right: <b>rebase</b>. Click both and compare the graphs.</p>
+    </article>
+  </div>
+  <div class="wide">
+    <div class="twin reveal">
+      <div><h4>🔀 Team Merge</h4><div class="sandbox" data-scene="vs-merge"></div></div>
+      <div><h4>🪄 Team Rebase</h4><div class="sandbox" data-scene="vs-rebase"></div></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="callout warn reveal"><div class="emo">⚠️</div><div><p><b>The golden rule of rebase:</b> never rebase commits that other people already have. You'd be replacing commits they've built on with lookalikes that have different hashes. Their history and yours stop agreeing. Rebase your own unpushed work freely; merge shared work.</p></div></div>
+
+    <article class="spell reveal" id="cmd-tag">
+      <div class="spell-head"><div class="spell-icon">🏷️</div><div><h3>git tag</h3><p class="tagline">Carve a name into a milestone</p></div></div>
+      <p>The recipe book is "done" for Deepavali. A tag is a sticky note that <b>never moves</b>. A lightweight tag is just a ref file. An <b>annotated</b> tag is the 4th object type: it records who tagged, when, and why.</p>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="tag"></div></div>
+</section>
+
+<!-- ============================ ACT V ============================ -->
+<section class="act" id="act5" data-act="4">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT V</div>
+      <h2>Time Travel & Safety Nets</h2>
+      <p>Mistakes happen. The surprising truth: in Git, almost <b>nothing committed is ever truly lost</b>. Here's how to rewind, undo, hide, copy, investigate, and resurrect.</p>
+    </div>
+
+    <article class="spell reveal" id="cmd-reset">
+      <div class="spell-head"><div class="spell-icon">⏪</div><div><h3>git reset</h3><p class="tagline">Three rewind buttons, three levels of danger</p></div></div>
+      <p><code>reset</code> moves your branch's sticky note to another commit. The flag decides how many of the three trees get dragged along:</p>
+      <ul>
+        <li><b>--soft</b>: move the branch only. Your changes stay staged. ("Undo the commit, keep everything ready to re-commit.")</li>
+        <li><b>--mixed</b> (default): move branch + reset the staging area. Changes stay in your files, unstaged.</li>
+        <li><b>--hard</b>: move branch + staging + <b>overwrite your files</b>. Uncommitted work is gone.</li>
+      </ul>
+    </article>
+    <div class="panel reveal" id="resetvis">
+      <div class="panel-title"><span>⏪ reset to commit A, from D</span><span class="seg" id="rv-mode"><button data-m="soft">--soft</button><button data-m="mixed" class="on">--mixed</button><button data-m="hard">--hard</button></span></div>
+      <div class="rv">
+        <div class="lab">Branch pointer<small>which commit main names</small></div>
+        <div class="cmts" id="rv-cmts"><div class="cm">A</div><div class="cm">B</div><div class="cm">C</div><div class="cm">D</div><span class="ptr" id="rv-ptr">main</span></div>
+        <div class="lab">🎬 Staging area<small>.git/index</small></div><div><span class="box" id="rv-i">recipe @ D</span></div>
+        <div class="lab">📁 Working folder<small>your files</small></div><div><span class="box" id="rv-w">recipe @ D</span></div>
+      </div>
+      <div class="row" style="justify-content:center;margin-top:14px"><button class="btn small" id="rv-go">git reset --mixed A</button><button class="btn small ghost" id="rv-back">↺ back to D</button></div>
+      <div class="studio-msg" id="rv-msg"></div>
+    </div>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="reset"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-revert">
+      <div class="spell-head"><div class="spell-icon">↩️</div><div><h3>git revert</h3><p class="tagline">The public apology</p></div></div>
+      <p>Last week someone committed "10 spoons of salt" and everyone already pulled it. You can't erase it (that would break everyone's history, remember the chain). Instead, you <b>publish a correction</b>: a new commit that does the exact opposite. History only grows. Safe for shared branches.</p>
+      <div class="hoodbox"><h4>⚙️ Under the hood</h4><ol><li>Takes the bad commit and its parent, computes the reverse change, applies it on top of HEAD, writes a new commit "Revert …".</li><li>No commit is modified or removed. Your teammates just pull one more commit.</li></ol></div>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="revert"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-stash">
+      <div class="spell-head"><div class="spell-icon">🗄️</div><div><h3>git stash</h3><p class="tagline">Sweep your half-cooked mess into a drawer</p></div></div>
+      <p>You're halfway through a payasam recipe when Amma calls: "Urgent! Fix the rasam salt, guests are coming!" You can't commit half-written work. <code>git stash</code> sweeps it into a drawer, gives you a clean kitchen, and <code>git stash pop</code> brings it back later.</p>
+      <div class="hoodbox"><h4>⚙️ Under the hood</h4><ol><li>Secretly writes <b>two commits</b>: one for your staged state, one for your working files. Neither is on any branch; they hang off <code>refs/stash</code>.</li><li>Resets your folder to HEAD. Later, <code>pop</code> three-way merges the stash back in and drops the entry.</li></ol></div>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="stash"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-cherry">
+      <div class="spell-head"><div class="spell-icon">🍒</div><div><h3>git cherry-pick</h3><p class="tagline">Copy one recipe card from another notebook</p></div></div>
+      <p>Your <code>experiments</code> branch is a mess: a failed fusion dosa, a burnt kesari… and one gem: a perfect tempering technique. You don't want the branch. You want <b>that one commit</b>. Cherry-pick replays just its change onto your branch as a new commit.</p>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="cherry"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-reflog">
+      <div class="spell-head"><div class="spell-icon">🛟</div><div><h3>git reflog</h3><p class="tagline">The black-box flight recorder</p></div></div>
+      <p>It's midnight. You type <code>git reset --hard HEAD~3</code> by mistake. Three commits of work vanish from <code>git log</code>. Panic? No. Every time HEAD moves, Git writes a line in a private diary: the <b>reflog</b>. The commits were never deleted, just unreachable. Find the line, jump back.</p>
+      <div class="hoodbox"><h4>⚙️ Under the hood</h4><ol><li><code>.git/logs/HEAD</code> records every HEAD movement: commits, checkouts, resets, rebases. Local to your machine only.</li><li><code>HEAD@{1}</code> means "where HEAD was one move ago". <code>git reset --hard HEAD@{1}</code> is the universal undo.</li><li>Unreachable objects survive until garbage collection prunes them, by default weeks later.</li></ol></div>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="reflog"></div></div>
+
+  <div class="wrap">
+    <article class="spell reveal" id="cmd-bisect">
+      <div class="spell-head"><div class="spell-icon">🕵️</div><div><h3>git bisect</h3><p class="tagline">The detective who halves the suspects</p></div></div>
+      <p>The rasam tasted perfect at Pongal. Today it's terrible. Somewhere in the last 32 commits, someone ruined it. Checking every commit means up to 31 tastings. <code>git bisect</code> uses <b>binary search</b>: taste the middle commit, throw away the innocent half, repeat. <b>5 tastings</b>, guaranteed. With 1,000 commits: 10. With a million: 20.</p>
+    </article>
+    <div class="panel reveal" id="bisect">
+      <div class="panel-title"><span>🕵️ 32 commits. One culprit.</span><span class="row"><button class="btn small" id="bs-auto">▶ Let git bisect solve it</button><button class="btn small ghost" id="bs-new">🎲 New mystery</button></span></div>
+      <div style="font-size:14px;color:var(--soft)">Commit 1 is known <span style="color:var(--green)">good</span>, commit 32 is known <span style="color:var(--red)">bad</span>. Click commits to taste them yourself, or let bisect do it.</div>
+      <div class="bis-row" id="bs-row"></div>
+      <div class="bis-msg" id="bs-msg"></div>
+    </div>
+
+    <article class="spell reveal" id="cmd-blame">
+      <div class="spell-head"><div class="spell-icon">🏺</div><div><h3>git blame</h3><p class="tagline">Archaeology, one line at a time</p></div></div>
+      <p>Who added "a pinch of hing"? Blame shows, for every line, the commit and author that last introduced it. Three generations of cooks, one file. (Despite the name, it's for understanding, not for blaming.)</p>
+    </article>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="blame"></div></div>
+</section>
+
+<!-- ============================ ACT VI ============================ -->
+<section class="act" id="act6" data-act="5">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT VI</div>
+      <h2>Many Laptops, One Story</h2>
+      <p>Meera lives in Bengaluru. The family recipe book lives on GitHub. Both of you have the <b>entire</b> history on your laptops. So how do you stay in sync?</p>
+    </div>
+    <div class="rules reveal">
+      <div class="rule"><span class="ic">🧬</span><b>clone</b>Download every object, set up <code>origin</code> (a nickname for the server's URL), and create <code>origin/main</code>: a bookmark of where the server was.</div>
+      <div class="rule"><span class="ic">📥</span><b>fetch</b>Download new objects and move your <code>origin/*</code> bookmarks. <b>Never touches your branches or files.</b> Always safe.</div>
+      <div class="rule"><span class="ic">🔄</span><b>pull</b>fetch + merge (or <code>--rebase</code>). This is where your work and theirs combine.</div>
+      <div class="rule"><span class="ic">📤</span><b>push</b>Upload the objects the server is missing, then ask it to move its branch. It refuses if that would lose someone else's commits.</div>
+    </div>
+    <div class="callout reveal" style="margin-top:20px"><div class="emo">🔑</div><div><p><b>The mental model:</b> <code>origin/main</code> is not the server. It's your laptop's <i>last-known photo</i> of the server. It only updates when you fetch, pull or push. That's why <code>git status</code> can say "up to date" while Meera pushed ten minutes ago.</p></div></div>
+    <p class="reveal">Follow the story: clone, cook, push. Then Meera pushes while you're busy, and your push gets rejected. Fix it the right way.</p>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="remote"></div></div>
+  <div class="wrap">
+    <div class="callout warn reveal"><div class="emo">💣</div><div><p><b><code>git push --force</code></b> tells the server "make your branch match mine, whatever it loses." If Meera's commits weren't in your history, they're gone from the server. (They still exist on <i>her</i> laptop, which is distributed Git saving the day.) Safer cousin: <code>--force-with-lease</code>, which refuses if the server moved since you last looked.</p></div></div>
+    <div class="recall-h">🧠 Recall</div>
+    <div class="recall">
+      <div class="flip"><div class="flip-in"><div class="fc front">reset --soft vs --mixed vs --hard?</div><div class="fc back">soft: move branch. mixed: + reset index. hard: + overwrite working files.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">Shared branch has a bad commit. reset or revert?</div><div class="fc back">revert: adds an opposite commit, rewrites nothing. Safe for everyone who already pulled.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">You hard-reset away 3 commits. How to get them back?</div><div class="fc back">git reflog → find the line → git reset --hard HEAD@{n}</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">fetch vs pull?</div><div class="fc back">fetch: download + move origin/* bookmarks only. pull: fetch + merge into your branch.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINALE ============================ -->
+<section class="act" id="finale" data-act="6">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">FINALE</div>
+      <h2>Git in One Picture</h2>
+      <p>Every command you've met moves data between four places. Click an arrow.</p>
+    </div>
+  </div>
+  <div class="wide">
+    <div class="panel big reveal" id="cheat">
+      <svg id="cheat-svg" viewBox="0 0 900 420"></svg>
+      <div class="big-msg" id="cheat-msg">Hover or tap a command arrow.</div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="sub reveal" id="playground"><div class="kicker">The free sandbox</div><h3>Break anything. Nothing here is precious.</h3>
+      <p>A full repository with a GitHub-style server attached. Type <code>help</code> for every command. Hunt for the hidden commands (there are several). The terminal remembers your history with ↑ ↓.</p>
+    </div>
+  </div>
+  <div class="wide"><div class="sandbox" data-scene="free"></div></div>
+
+  <div class="wrap">
+    <div class="sub reveal"><div class="kicker">Your command deck</div><h3>Collect them all <span class="deck-count" id="deck-count"></span></h3>
+      <p>Every Git command you successfully run in any playground on this page unlocks its card. Saved in this browser.</p>
+    </div>
+    <div class="deck reveal" id="deck"></div>
+
+    <div class="sub reveal"><div class="kicker">Final recall</div><h3>Eight questions. No peeking.</h3></div>
+    <div class="quiz reveal" id="quiz"></div>
+    <div class="score" id="quiz-score"></div>
+
+    <div class="callout gold reveal"><div class="emo">🧭</div><div>
+      <p><b>The one-sentence summary you'll never forget:</b> Git is a stupid content tracker. It names every piece of content by its fingerprint, chains snapshots so the past can't lie, and moves 41-byte sticky notes around. Everything else is choreography.</p>
+    </div></div>
+    <p class="openloop reveal">Next time you type <code>git commit</code>, picture it: a blob, a tree, a commit, a sticky note sliding forward. And somewhere, a 2005 hash, e83c516, still sitting at the root of Git's own history.</p>
+  </div>
+</section>
+
+<footer>
+  <span class="peng" id="peng" title="?">🐧</span><br>
+  Built one prompt at a time · <a href="../">Marketing Field Notes</a> · <a href="../computing/">How Machines Think</a><br>
+  <span style="font-size:12px">Hashes on this page are computed with a from-scratch SHA-1, byte-for-byte identical to real Git.</span>
+</footer>
+
+<div class="toasts" id="toasts"></div>
+<canvas id="confetti"></canvas>
+<div class="g-tip" id="gtip"></div>
+
+<script src="engine.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
