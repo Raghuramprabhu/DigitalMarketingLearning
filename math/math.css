@@ -304,3 +304,41 @@ a.hub-card:hover { border-color: var(--x); transform: translateY(-3px); }
   .reveal { opacity: 1; transform: none; transition: none; }
   .beam, .pan { transition: none; }
 }
+
+/* ---------- story scenes (algebra page) ---------- */
+.scene { position: relative; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--x); border-radius: 6px var(--r) var(--r) 6px; padding: 18px 20px 16px; margin: 26px 0; box-shadow: var(--shadow); }
+.scene .when { font: 700 12px var(--font-mono); letter-spacing: .08em; color: var(--x); text-transform: uppercase; margin-bottom: 8px; }
+.scene p { font-size: 17.5px; }
+.scene p:last-child { margin-bottom: 0; }
+.histlink { display: block; margin: 34px 0 0; padding: 12px 16px; border: 1px dashed var(--line2); border-radius: 12px; color: var(--soft); text-decoration: none; font-size: 15px; transition: .2s; }
+.histlink:hover { border-color: var(--purple); color: var(--ink); }
+.histlink b { color: var(--purple); white-space: nowrap; }
+@media (max-width: 520px) { .hide-sm { display: none; } }
+
+/* ---------- history corner ---------- */
+.ribbon { display: flex; align-items: flex-start; gap: 0; overflow-x: auto; padding: 18px 4px 10px; margin: 26px 0 10px; scrollbar-width: thin; }
+.stone { flex: 1 0 92px; width: 92px; text-align: center; position: relative; text-decoration: none; color: var(--ink); }
+.stone::before { content: ""; position: absolute; top: 25px; left: 0; right: 0; height: 2px; background: var(--line2); z-index: 0; }
+.stone:first-child::before { left: 50%; } .stone:last-child::before { right: 50%; }
+.stone .dot { position: relative; z-index: 1; width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; font-size: 24px; background: var(--card); border: 2px solid var(--purple); transition: .2s; }
+.stone:hover .dot { transform: scale(1.12); background: var(--card2); }
+.stone .yr { font: 700 13px var(--font-mono); color: var(--purple); }
+.stone .who { font: 600 14px var(--font-display); line-height: 1.2; margin: 2px 0; }
+.stone .tag { font: 600 10.5px var(--font-mono); color: var(--dim); letter-spacing: .06em; }
+.gap { flex: 0 0 auto; width: 40px; text-align: center; font: 600 10px var(--font-mono); color: var(--dim); padding-top: 18px; position: relative; }
+.gap::before { content: ""; position: absolute; top: 25px; left: 0; right: 0; border-top: 2px dashed var(--line2); }
+.gap span { position: relative; top: 14px; }
+.hsec { padding: 60px 0 10px; }
+.hsec .act-head { margin-bottom: 24px; }
+.hsec .act-head .num { color: var(--purple); }
+.person { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; margin: 18px 0; box-shadow: var(--shadow); }
+.person-top { display: flex; gap: 16px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+.person .badge { width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; background: var(--card2); border: 1px solid var(--line2); flex: 0 0 auto; }
+.person h3 { margin: 0; font-size: 26px; }
+.person .meta { font: 600 13px var(--font-mono); color: var(--purple); }
+.person .say { font-size: 14px; color: var(--soft); }
+.person .say b { color: var(--ink); font-family: var(--font-mono); font-weight: 700; letter-spacing: .02em; }
+.gift { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin: 12px 0 4px; }
+.gift div { background: var(--card2); border: 1px solid var(--line2); border-radius: 12px; padding: 10px 12px; font-size: 14.5px; }
+.gift > div > b:first-child { display: block; font-size: 12px; font-family: var(--font-mono); color: var(--purple); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2px; }
+.backlink { display: inline-block; margin-top: 8px; font: 600 13px var(--font-mono); color: var(--x); text-decoration: none; }

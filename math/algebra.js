@@ -53,7 +53,8 @@
 
   /* ---------------- progress bar ---------------- */
   (function progress() {
-    const p = $('#progress'), fill = $('.fill', p);
+    const p = $('#progress'); if (!p) return;
+    const fill = $('.fill', p);
     const acts = $$('section.act');
     const labels = ['I', 'II', 'III', 'IV', 'V', '★'];
     const dots = acts.map((a, i) => {
@@ -259,7 +260,7 @@
       if (!broken && st.L.x === 1 && st.L.n === 0 && st.R.x === 0) {
         solved = true;
         msg.className = 'msg good';
-        msg.innerHTML = '🎉 The box is alone, and the scale is still level. So ' + X() + ' = ' + st.R.n + '. You just did what al-Khwārizmī taught in 820 CE.';
+        msg.innerHTML = '🎉 The box is alone, and the scale is still level. So ' + X() + ' = ' + st.R.n + '. Two moves did it: <b>Restore</b> and <b>Balance</b>.';
       }
     };
     const btn = (label, cls, fn) => {
@@ -270,16 +271,16 @@
       ops.innerHTML = '';
       const Ls = st.L, Rs = st.R;
       if (broken) {
-        btn('🦴 Restore it (al-jabr!)', '', () => doOp(() => {
+        btn('🦴 Restore the balance', '', () => doOp(() => {
           st[broken].n += 1; broken = null;
-          msg.className = 'msg'; msg.innerHTML = 'Balance restored. That is literally what <i>al-jabr</i> means. Now change <b>both</b> sides together.';
+          msg.className = 'msg'; msg.innerHTML = 'Balance restored. (Fun fact: the word "algebra" itself means <i>restoring</i>.) Now change <b>both</b> sides together.';
         }, []));
         return;
       }
       if (solved) { btn('New puzzle →', 'teal', newPuzzle); return; }
       const k = Math.min(Ls.n, Rs.n);
       if (k >= 1) btn('− 1 tile from both', 'ghost', () => doOp(() => { Ls.n--; Rs.n--; say('Same change on both sides: still balanced.'); }, [[L, 'one', 1], [R, 'one', 1]]));
-      if (k > 1) btn('− ' + k + ' tiles from both', '', () => doOp(() => { Ls.n -= k; Rs.n -= k; say('al-muqābala: the same ' + k + ' cancelled from both sides.'); }, [[L, 'one', k], [R, 'one', k]]));
+      if (k > 1) btn('− ' + k + ' tiles from both', '', () => doOp(() => { Ls.n -= k; Rs.n -= k; say('Balance move: the same ' + k + ' cancelled from both sides.'); }, [[L, 'one', k], [R, 'one', k]]));
       const kb = Math.min(Ls.x, Rs.x);
       if (kb >= 1) btn('− ' + (kb > 1 ? kb + ' boxes' : '1 box') + ' from both', '', () => doOp(() => { Ls.x -= kb; Rs.x -= kb; say('Boxes on both sides cancel, whatever is inside them.'); }, [[L, 'box', kb], [R, 'box', kb]]));
       if (Ls.x > 1 && Ls.n === 0 && Rs.x === 0) {
@@ -469,7 +470,7 @@
           steps.push(['Make the tea counts match: multiply Monday by ' + k1 + ' and Tuesday by ' + k2 + ' (both sides, always).',
             rec(a1 * k1, b1 * k1, c1 * k1) + '<br>' + rec(a2 * k2, b2 * k2, c2 * k2)]);
           const db = b1 * k1 - b2 * k2, dc = c1 * k1 - c2 * k2;
-          steps.push(['Subtract one from the other. Tea cancels out: that\'s al-muqābala.', '(' + b1 * k1 + ' − ' + b2 * k2 + ')' + Sa('s') + ' = ' + nice(c1 * k1) + ' − ' + nice(c2 * k2) + '  →  ' + db + Sa('s') + ' = ' + nice(dc)]);
+          steps.push(['Subtract one from the other. Tea cancels out: that\'s the Balance move.', '(' + b1 * k1 + ' − ' + b2 * k2 + ')' + Sa('s') + ' = ' + nice(c1 * k1) + ' − ' + nice(c2 * k2) + '  →  ' + db + Sa('s') + ' = ' + nice(dc)]);
           steps.push(['One unknown left. Share both sides.', Sa('s') + ' = ' + nice(dc) + ' ÷ ' + db + ' = ' + nice(s)]);
           steps.push(['Put the samosa price back into Monday\'s receipt.', a1 + T('t') + ' + ' + b1 + '×' + nice(s) + ' = ' + nice(c1) + '  →  ' + a1 + T('t') + ' = ' + nice(c1 - b1 * s) + '  →  ' + T('t') + ' = ' + nice(t)]);
         }
@@ -547,9 +548,9 @@
     const hide = { o: 0 };
     const sqR = { x: O, y: O, w: x, h: x, o: 1 };
     const steps = [
-      { eq: X() + '² + 10' + X() + ' = 39', msg: 'Start with the words. "A square": a real square whose side is the unknown ' + X() + '. Its area is ' + X() + '².',
+      { eq: X() + '² + 10' + X() + ' = 39', msg: 'The room is a square. Its side is the unknown ' + X() + ', so its floor area is ' + X() + '².',
         s: { sq: sqR, tsq: { x: O + x / 2, y: O + x / 2 + 7, o: 1, t: 'x²' }, sx: { x: O + x / 2, y: O - 8, o: 1, t: 'x' }, sy: { x: O - 12, y: O + x / 2 + 5, o: 1, t: 'x' } } },
-      { eq: X() + '² + <span class="vn">10' + X() + '</span> = 39', msg: '"Ten roots": a rectangle ' + X() + ' tall and 10 long. Its area is 10' + X() + '.',
+      { eq: X() + '² + <span class="vn">10' + X() + '</span> = 39', msg: 'The verandah: 10 m long and ' + X() + ' wide (same as the room). Its area is 10' + X() + '.',
         s: { A: { x: O, y: O + x + 40, w: 2 * f, h: x, o: 1 }, tA: { x: O + f, y: O + x + 40 + x / 2 + 7, o: 1, t: '10x' } } },
       { eq: X() + '² + <span class="vn">5' + X() + ' + 5' + X() + '</span> = 39', msg: 'Cut it in half: two strips, each 5 by ' + X() + '.',
         s: { A: { x: O, y: O + x + 40, w: f - 4, h: x, o: 1 }, B: { x: O + f + 4, y: O + x + 40, w: f - 4, h: x, o: 1 }, tA: { x: O + f / 2, y: O + x + 40 + x / 2 + 7, o: 1, t: '5x' }, tB: { x: O + f * 1.5, y: O + x + 40 + x / 2 + 7, o: 1, t: '5x' } } },
@@ -557,9 +558,9 @@
         s: { A: { x: O + x, y: O, w: f, h: x, o: 1 }, B: { x: O, y: O + x, w: x, h: f, o: 1 }, tA: { x: O + x + f / 2, y: O + x / 2 + 7, o: 1, t: '5x' }, tB: { x: O + x / 2, y: O + x + f / 2 + 7, o: 1, t: '5x' }, s5: { x: O + x + f / 2, y: O - 8, o: 1, t: '5' }, s5b: { x: O - 12, y: O + x + f / 2 + 5, o: 1, t: '5' } } },
       { eq: 'missing corner = 5 × 5 = <span class="veq">25</span>', msg: 'Look at the bottom-right. The shape <i>wants</i> to be a square, but a 5 by 5 corner is missing.',
         s: { corner: { x: O + x, y: O + x, w: f, h: f, o: .35 }, tC: { x: O + x + f / 2, y: O + x + f / 2 + 7, o: .6, t: '25?' } } },
-      { eq: X() + '² + 10' + X() + ' <span class="veq">+ 25</span> = 39 <span class="veq">+ 25</span> = 64', msg: '<b>al-jabr</b>: add the missing 25 to <i>both</i> sides. Now the shape is a perfect square of area 64.',
+      { eq: X() + '² + 10' + X() + ' <span class="veq">+ 25</span> = 39 <span class="veq">+ 25</span> = 64', msg: '<b>Restore move</b>: add the missing 25 to <i>both</i> sides. Now the shape is a perfect square of area 64.',
         s: { corner: { x: O + x, y: O + x, w: f, h: f, o: 1 }, tC: { x: O + x + f / 2, y: O + x + f / 2 + 7, o: 1, t: '25' }, big: { x: O - 6, y: O - 6, w: x + f + 12, h: x + f + 12, o: 1 } } },
-      { eq: '(' + X() + ' + 5)² = 64  →  ' + X() + ' + 5 = 8  →  ' + X() + ' = <span class="vx">3</span>', msg: 'A square of area 64 has side 8. Its side is ' + X() + ' + 5, so ' + X() + ' = 3. Check: 9 + 30 = 39 ✓. <span style="color:var(--soft)">(Brahmagupta would add: ' + X() + ' + 5 = −8 also works, so ' + X() + ' = −13. Al-Khwārizmī, measuring real lengths, ignored the "debt" answer.)</span>',
+      { eq: '(' + X() + ' + 5)² = 64  →  ' + X() + ' + 5 = 8  →  ' + X() + ' = <span class="vx">3</span>', msg: 'A square of area 64 has side 8. Its side is ' + X() + ' + 5, so ' + X() + ' = 3. The room is <b>3 m × 3 m</b>. Check: 9 + 30 = 39 ✓. <span style="color:var(--soft)">(Strictly, ' + X() + ' + 5 = −8 also works, giving ' + X() + ' = −13. A room can\'t be negative, so the tiler ignores it.)</span>',
         s: { corner: { x: O + x, y: O + x, w: f, h: f, o: 1 }, tC: { x: O + x + f / 2, y: O + x + f / 2 + 7, o: 1, t: '25' }, big: { x: O - 6, y: O - 6, w: x + f + 12, h: x + f + 12, o: 1 }, side: { x: O + x + f + 28, y: O + (x + f) / 2, o: 1, t: '8' }, sx: { x: O + x / 2, y: O - 8, o: 1, t: 'x=3' } } }
     ];
     // carry forward: each step inherits previous state unless overridden
@@ -869,7 +870,7 @@
       if (Math.abs(v - cur.ans) <= tol) {
         if (!done) { streak++; solvedN++; best = Math.max(best, streak); save(); }
         done = true;
-        m.className = 'msg good'; m.innerHTML = pick(['✓ Exactly.', '✓ Nailed it.', '✓ The balance holds.', '✓ al-Khwārizmī approves.', '✓ Clean.']) + ' Peek at the solution to compare your setup.';
+        m.className = 'msg good'; m.innerHTML = pick(['✓ Exactly.', '✓ Nailed it.', '✓ The balance holds.', '✓ Balanced and solved.', '✓ Clean.']) + ' Peek at the solution to compare your setup.';
         show('#ar-sol', true);
       } else {
         streak = 0;
