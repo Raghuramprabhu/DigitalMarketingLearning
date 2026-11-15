@@ -131,6 +131,9 @@
     waves.piano = periodic([0, 1, 0.55, 0.32, 0.24, 0.16, 0.1, 0.07, 0.05, 0.035, 0.02]);
     waves.organ = periodic([0, 1, 0.9, 0.45, 0.55, 0, 0.32, 0, 0.3, 0, 0, 0, 0.15]);
     waves.box = periodic([0, 1, 0, 0.12, 0, 0.05]);
+    // Free reed (harmonium): a buzzy, rich spectrum where the overtones barely fade, so it sounds nasal.
+    var reed = [0]; for (var hn = 1; hn <= 24; hn++) reed.push((hn === 1 ? 0.75 : 1) / Math.pow(hn, 0.72) * (hn >= 3 && hn <= 6 ? 1.25 : 1));
+    waves.reed = periodic(reed);
     $('#tapToStart').classList.add('gone');
   }
 
@@ -224,6 +227,31 @@
         kill: function (r) { holdAndRelease(g.gain, r, 0.01); all.forEach(function (o) { o.stop(r + 0.1); }); }
       };
     },
+    harmonium: function (m, f, vel, t) {
+      // Two reeds tuned a hair apart (that slow "beating" is the harmonium shimmer) + a bass reed an octave down.
+      var env = ac.createGain(), trem = ac.createGain(), lp = ac.createBiquadFilter(), nasal = ac.createBiquadFilter();
+      lp.type = 'lowpass'; lp.frequency.value = Math.min(f * 7, 5200); lp.Q.value = 0.4;
+      nasal.type = 'peaking'; nasal.frequency.value = 1500; nasal.Q.value = 1.1; nasal.gain.value = 5;
+      var a = osc(waves.reed, f, t, -4), b = osc(waves.reed, f, t, 5), c = osc(waves.reed, f / 2, t, 1), cg = ac.createGain();
+      cg.gain.value = 0.35;
+      a.connect(lp); b.connect(lp); c.connect(cg); cg.connect(lp); lp.connect(nasal); nasal.connect(env);
+      // air rushing through the reed
+      var n = ac.createBufferSource(); n.buffer = noiseBuf; n.loop = true;
+      var nf = ac.createBiquadFilter(); nf.type = 'bandpass'; nf.frequency.value = Math.min(f * 4, 6000); nf.Q.value = 0.8;
+      var ng = ac.createGain(); ng.gain.value = 0.05; n.connect(nf); nf.connect(ng); ng.connect(env); n.start(t);
+      // bellows: pressure rises and falls slightly as the hand pumps
+      env.connect(trem); trem.connect(master); trem.gain.value = 1;
+      var lfo = osc('sine', 0.45 + Math.random() * 0.3, t), lg = ac.createGain(); lg.gain.value = 0.07; lfo.connect(lg); lg.connect(trem.gain);
+      var lvl = 0.085 + vel * 0.03;
+      env.gain.setValueAtTime(0, t);
+      env.gain.linearRampToValueAtTime(lvl * 0.55, t + 0.025); // a reed takes a moment to "speak"
+      env.gain.linearRampToValueAtTime(lvl, t + 0.08);
+      var all = [a, b, c, n, lfo];
+      return {
+        release: function (r) { holdAndRelease(env.gain, r, 0.05); all.forEach(function (o) { o.stop(r + 0.5); }); },
+        kill: function (r) { holdAndRelease(env.gain, r, 0.01); all.forEach(function (o) { o.stop(r + 0.1); }); }
+      };
+    },
     musicbox: function (m, f, vel, t) {
       var g = ac.createGain(), a = osc(waves.box, f * 2, t), b = osc('sine', f * 2 * 4.2, t), bg = ac.createGain();
       bg.gain.value = 0.18; a.connect(g); b.connect(bg); bg.connect(g); g.connect(master);
@@ -299,12 +327,14 @@
     octSetting: store.get('octaves', 'auto'),
     startC: parseInt(store.get('startC', '48'), 10), // MIDI number of the leftmost C
     labels: store.get('labels', 'letters'),
+    keyLayout: store.get('keyLayout', 'rows'),
     hints: store.get('hints', (window.matchMedia && matchMedia('(pointer: coarse)').matches) ? '0' : '1') === '1'
   };
   var L = { W: 0, H: 0, dpr: 1, keys: [], byMidi: {}, kbTop: 0, kbH: 0, ww: 0, lo: 48, hi: 84 };
 
   function octavesFor(cssW) {
     if (view.octSetting !== 'auto') return parseInt(view.octSetting, 10);
+    if (view.keyLayout === 'full') return 5; // all 61 keys the layout can reach
     return Math.max(1, Math.min(4, Math.floor(cssW / 50 / 7)));
   }
 
@@ -395,8 +425,9 @@
       c.fillText(lbl, cx, k.y + k.h - 8 * d);
     }
     if (view.hints && KEY_HINT[k.m]) {
-      c.font = '600 ' + Math.max(8 * d, fs * 0.8) + 'px "JetBrains Mono", ui-monospace, monospace';
-      c.fillStyle = k.black ? 'rgba(255,255,255,0.55)' : 'rgba(40,34,30,0.38)';
+      var full = view.keyLayout === 'full'; // in full mode the letters ARE the sheet music, so make them readable
+      c.font = (full ? '700 ' : '600 ') + (full ? Math.max(10 * d, Math.min(L.ww * 0.42, 16 * d)) : Math.max(8 * d, fs * 0.8)) + 'px "JetBrains Mono", ui-monospace, monospace';
+      c.fillStyle = k.black ? (full ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.55)') : (full ? 'rgba(40,34,30,0.75)' : 'rgba(40,34,30,0.38)');
       c.fillText(KEY_HINT[k.m], cx, k.black ? k.y + k.h - 8 * d : k.y + k.h - 8 * d - fs * 1.35);
     }
   }
@@ -531,9 +562,30 @@
   var UPPER = [['KeyQ', 0], ['Digit2', 1], ['KeyW', 2], ['Digit3', 3], ['KeyE', 4], ['KeyR', 5], ['Digit5', 6], ['KeyT', 7], ['Digit6', 8], ['KeyY', 9], ['Digit7', 10], ['KeyU', 11],
     ['KeyI', 12], ['Digit9', 13], ['KeyO', 14], ['Digit0', 15], ['KeyP', 16], ['BracketLeft', 17], ['Equal', 18], ['BracketRight', 19]];
   var CODE_LABEL = { Comma: ',', Period: '.', Semicolon: ';', Slash: '/', BracketLeft: '[', BracketRight: ']', Equal: '=' };
+  // "Full" layout (OnlinePianist / VirtualPiano style): 36 white keys across four rows of the keyboard,
+  // and Shift + the same key plays the black key just above it. '1' = C, '8' = C, 't' = C, 's' = C, 'l' = C, 'm' = C.
+  var FULL_WHITE = ['Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6', 'Digit7', 'Digit8', 'Digit9', 'Digit0',
+    'KeyQ', 'KeyW', 'KeyE', 'KeyR', 'KeyT', 'KeyY', 'KeyU', 'KeyI', 'KeyO', 'KeyP',
+    'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyG', 'KeyH', 'KeyJ', 'KeyK', 'KeyL',
+    'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM'];
+  var SHIFTED_DIGIT = { Digit1: '!', Digit2: '@', Digit3: '#', Digit4: '$', Digit5: '%', Digit6: '^', Digit7: '&', Digit8: '*', Digit9: '(', Digit0: ')' };
+  var WHITE_STEPS = [0, 2, 4, 5, 7, 9, 11];
   var codeMap = {};
   function rebuildKeyMap() {
     codeMap = {}; KEY_HINT = {};
+    if (view.keyLayout === 'full') {
+      FULL_WHITE.forEach(function (code, i) {
+        var m = L.lo + Math.floor(i / 7) * 12 + WHITE_STEPS[i % 7];
+        var plain = code.replace('Key', '').replace('Digit', '').toLowerCase();
+        codeMap[code] = m; KEY_HINT[m] = plain;
+        if (IS_BLACK[(m + 1) % 12]) {
+          codeMap['S+' + code] = m + 1;
+          KEY_HINT[m + 1] = SHIFTED_DIGIT[code] || plain.toUpperCase();
+        }
+      });
+      buildLayers();
+      return;
+    }
     var oct = (L.hi - L.lo) / 12;
     var lowerBase = L.lo, upperBase = L.lo + 12;
     if (oct >= 3) { lowerBase = L.lo + 12; upperBase = L.lo + 24; } // keep the two rows centred on wide keyboards
@@ -555,14 +607,14 @@
     if (e.code === 'ArrowLeft') { e.preventDefault(); shiftOct(-1); return; }
     if (e.code === 'ArrowRight') { e.preventDefault(); shiftOct(1); return; }
     if (e.code === 'Escape') { silenceAll(); return; }
-    var m = codeMap[e.code]; if (m === undefined) return;
+    var m = (e.shiftKey && codeMap['S+' + e.code] !== undefined) ? codeMap['S+' + e.code] : codeMap[e.code];
+    if (m === undefined) return;
     e.preventDefault(); if (e.repeat) return;
     if (document.activeElement && document.activeElement.tagName === 'SELECT') document.activeElement.blur();
     initAudio(); noteOn(m, 0.78, 'k' + e.code);
   });
   window.addEventListener('keyup', function (e) {
     if (e.code === 'Space') { if (!latchSustain) setSustain(false); return; }
-    var m = codeMap[e.code]; if (m === undefined) return;
     // the key->note map may have shifted since keydown, so release whatever this key holds
     holders.forEach(function (set, mm) { if (set.has('k' + e.code)) noteOff(mm, 'k' + e.code); });
   });
@@ -610,6 +662,18 @@
   sel.volume.value = settings.volume;
   sel.reverb.checked = settings.reverb;
   sel.hints.checked = view.hints;
+  var layoutSel = $('#keyLayout'); layoutSel.value = view.keyLayout;
+  function showKeymapHelp() {
+    document.querySelectorAll('[data-layout]').forEach(function (el) { el.hidden = el.getAttribute('data-layout') !== view.keyLayout; });
+  }
+  showKeymapHelp();
+  layoutSel.addEventListener('change', function () {
+    view.keyLayout = this.value; store.set('keyLayout', this.value); this.blur();
+    if (this.value === 'full') view.startC = 36; // C2..C7, the standard 61-key range
+    else view.startC = 48;
+    store.set('startC', view.startC);
+    layout(recorder.isLive()); rebuildKeyMap(); showKeymapHelp();
+  });
 
   sel.instrument.addEventListener('change', function () { settings.instrument = this.value; store.set('instrument', this.value); this.blur(); });
   sel.octaves.addEventListener('change', function () {
@@ -629,7 +693,7 @@
       var demo = btn.getAttribute('data-demo'), keep = settings.instrument;
       var seq = demo === 'octave'
         ? [[57, 'piano'], [69, 'piano'], [81, 'piano']]
-        : [[60, 'piano'], [60, 'epiano'], [60, 'organ'], [60, 'strings'], [60, 'musicbox']];
+        : [[60, 'piano'], [60, 'epiano'], [60, 'organ'], [60, 'strings'], [60, 'harmonium'], [60, 'musicbox']];
       $('#studio').scrollIntoView({ behavior: 'smooth', block: 'center' });
       seq.forEach(function (s, i) {
         setTimeout(function () {

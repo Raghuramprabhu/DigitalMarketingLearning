@@ -43,6 +43,7 @@
           <option value="epiano">✨ Electric piano</option>
           <option value="organ">⛪ Organ</option>
           <option value="strings">🎻 Strings</option>
+          <option value="harmonium">🪗 Harmonium</option>
           <option value="musicbox">🔔 Music box</option>
         </select>
       </label>
@@ -81,6 +82,13 @@
         <input type="checkbox" id="reverb" checked>
         <span>Reverb</span>
       </label>
+      <label class="tool">
+        <span>Computer keys</span>
+        <select id="keyLayout">
+          <option value="rows">Piano rows (2 octaves)</option>
+          <option value="full">Full 61 keys · Shift = black</option>
+        </select>
+      </label>
       <label class="tool check">
         <input type="checkbox" id="kbHints" checked>
         <span>Key hints</span>
@@ -118,9 +126,17 @@
     <details class="keymap">
       <summary>⌨️ Computer-keyboard map & shortcuts</summary>
       <div class="keymap-in">
-        <p>Two rows, laid out like a piano. The <b>letters</b> are the white keys, the <b>row above</b> holds the black keys.</p>
-        <div class="kmrow"><span class="kmlabel">Upper octave</span><code>Q W E R T Y U I O P [ ]</code> white · <code>2 3 5 6 7 9 0 =</code> black</div>
-        <div class="kmrow"><span class="kmlabel">Lower octave</span><code>Z X C V B N M , . /</code> white · <code>S D G H J L ;</code> black</div>
+        <div data-layout="rows">
+          <p><b>Piano rows:</b> two rows, shaped like a piano. The <b>letters</b> are the white keys, the <b>row above</b> holds the black keys.</p>
+          <div class="kmrow"><span class="kmlabel">Upper octave</span><code>Q W E R T Y U I O P [ ]</code> white · <code>2 3 5 6 7 9 0 =</code> black</div>
+          <div class="kmrow"><span class="kmlabel">Lower octave</span><code>Z X C V B N M , . /</code> white · <code>S D G H J L ;</code> black</div>
+        </div>
+        <div data-layout="full" hidden>
+          <p><b>Full 61 keys</b> (the OnlinePianist / VirtualPiano style used by letter song-sheets): every white key runs left to right across your keyboard, top row first. Hold <b>Shift</b> with a key to play the black key just above it.</p>
+          <div class="kmrow"><span class="kmlabel">White keys</span><code>1 2 3 4 5 6 7 8 9 0</code> <code>q w e r t y u i o p</code> <code>a s d f g h j k l</code> <code>z x c v b n m</code></div>
+          <div class="kmrow"><span class="kmlabel">Every C</span><code>1</code> <code>8</code> <code>t</code> (middle C) <code>s</code> <code>l</code> <code>m</code></div>
+          <div class="kmrow"><span class="kmlabel">Black keys</span><code>Shift</code> + key, e.g. <code>!</code> = C♯, <code>T</code> = C♯ above middle C</div>
+        </div>
         <div class="kmrow"><span class="kmlabel">Shortcuts</span><code>Space</code> sustain pedal · <code>←</code> <code>→</code> octave · <code>Esc</code> silence everything</div>
         <p class="dim">Tip for phones: rotate to landscape for more keys. On a mouse or touch screen, press nearer the bottom of a key to play louder.</p>
       </div>
@@ -148,7 +164,7 @@
         <h4>How do you fake a piano?</h4>
         <p>A real string doesn't vibrate at one frequency. It vibrates at the note <i>and</i> at 2×, 3×, 4×… (the overtones), each quieter. That recipe of overtones is why a piano and an organ playing the same note sound different.</p>
         <p>The piano here stacks ten overtones, adds a tiny noise "thump" for the hammer, then lets the bright high overtones fade faster than the low ones, like a real string.</p>
-        <button type="button" class="btn small ghost" data-demo="timbre">▶ Same note, 5 different recipes</button>
+        <button type="button" class="btn small ghost" data-demo="timbre">▶ Same note, 6 different recipes</button>
       </article>
       <article class="t" style="--c: var(--violet)">
         <div class="ic">🎬</div>
