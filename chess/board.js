@@ -130,7 +130,7 @@
     while (svg.firstChild) svg.removeChild(svg.firstChild);
     var ns = 'http://www.w3.org/2000/svg';
     var defs = document.createElementNS(ns, 'defs');
-    ['a', 'b', 'c'].forEach(function (k) {
+    ['a', 'b', 'c', 'd', 'e'].forEach(function (k) {
       var mk = document.createElementNS(ns, 'marker');
       mk.setAttribute('id', 'ah-' + k + '-' + self.uid()); mk.setAttribute('markerWidth', '4'); mk.setAttribute('markerHeight', '4');
       mk.setAttribute('refX', '2.05'); mk.setAttribute('refY', '2'); mk.setAttribute('orient', 'auto');

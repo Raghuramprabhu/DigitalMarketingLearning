@@ -215,3 +215,16 @@ footer a { color: var(--dim); }
 .arena .task, #arena .task { color: var(--ink); }
 #arenaLog > div { border-left: 2px solid var(--line2); padding-left: 10px; margin-bottom: 6px; animation: fadeUp .3s; }
 #arenaName { margin-top: 12px; }
+/* choose-the-plan candidates (middlegame arena) */
+.choices { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+.choices .cand { flex: 1 1 110px; min-height: 48px; border-radius: 12px; border: 2px solid var(--line2); background: var(--card2); color: var(--ink); font: 700 17px var(--font-mono); cursor: pointer; transition: .15s; }
+.choices .cand b { color: var(--c, var(--gold)); margin-right: 6px; }
+.choices .cand:hover:not(:disabled) { border-color: var(--c, var(--gold)); transform: translateY(-2px); }
+.choices .cand.wrong { opacity: .45; text-decoration: line-through; border-color: var(--red); }
+.choices .cand.glow { border-color: var(--green); box-shadow: 0 0 0 3px rgba(126,231,135,.35); }
+.pagenav { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 22px; }
+.arr-d { stroke: #9775fa; } .ah-d { fill: #9775fa; }
+.arr-e { stroke: #3bc9db; } .ah-e { fill: #3bc9db; }
+.choices .cand.k-a b { color: #e9a53c; } .choices .cand.k-d b { color: #9775fa; } .choices .cand.k-e b { color: #3bc9db; }
+.choices .cand.k-a { border-left: 6px solid #e9a53c; } .choices .cand.k-d { border-left: 6px solid #9775fa; } .choices .cand.k-e { border-left: 6px solid #3bc9db; }
+@media (max-width: 520px) { .hide-sm { display: none; } .bar-in { gap: 7px; } .pill { padding: 4px 8px; } }

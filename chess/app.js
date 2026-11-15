@@ -6,9 +6,11 @@
   'use strict';
   var T = window.TACTICS, P = T.patterns;
   var ITEMS = {}; T.items.forEach(function (it) { ITEMS[it.id] = it; });
-  var FAMC = { guard: 'var(--guard)', line: 'var(--linec)', clock: 'var(--clock)' };
-  var FAMN = { guard: 'the guard', line: 'the line', clock: 'the clock' };
-  var ORDER = ['deflection', 'decoy', 'overload', 'interference', 'clearance', 'zwischenzug', 'windmill'];
+  var FAMC = T.famColors || { guard: 'var(--guard)', line: 'var(--linec)', clock: 'var(--clock)' };
+  var FAMN = T.famNames || { guard: 'the guard', line: 'the line', clock: 'the clock' };
+  var ORDER = T.order || ['deflection', 'decoy', 'overload', 'interference', 'clearance', 'zwischenzug', 'windmill'];
+  var NOUN = T.noun || 'pattern';
+  var TAIL = T.guessTail || 'Watch for the moment {fam} breaks.';
   function $(s, r) { return (r || document).querySelector(s); }
   function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
   function colorOf(p) { return FAMC[P[p].fam]; }
@@ -86,7 +88,7 @@
   };
   Viewer.prototype.buildGuess = function (gw) {
     var self = this, item = this.item;
-    var g = el('div', 'guess', '<div class="q">🕵️ Before you step through: which pattern do you smell?</div><div class="chips"></div><div class="verdict"></div>');
+    var g = el('div', 'guess', '<div class="q">🕵️ Before you step through: which ' + NOUN + ' do you smell?</div><div class="chips"></div><div class="verdict"></div>');
     var chips = $('.chips', g);
     ORDER.forEach(function (p) {
       var c = el('button', 'chip', P[p].name); c.type = 'button';
@@ -95,7 +97,7 @@
         c.classList.add(ok ? 'right' : 'wrong');
         if (ok || self.tries >= 1) {
           [].forEach.call(chips.children, function (x) { x.disabled = true; if (x.textContent === P[item.pattern].name) x.classList.add('right'); });
-          $('.verdict', g).innerHTML = ok ? (self.tries ? '✅ Got it on the second look.' : '✅ Sharp eye.') + ' Now watch it unfold.' : '❌ It\'s <b>' + P[item.pattern].name + '</b>. Watch for the moment ' + FAMN[P[item.pattern].fam] + ' breaks.';
+          $('.verdict', g).innerHTML = ok ? (self.tries ? '✅ Got it on the second look.' : '✅ Sharp eye.') + ' Now watch it unfold.' : '❌ It\'s <b>' + P[item.pattern].name + '</b>. ' + TAIL.replace('{fam}', FAMN[P[item.pattern].fam]);
           self.guessed = true; self.refresh();
           self.opts.onGuess && self.opts.onGuess(item, ok && !self.tries);
         } else { $('.verdict', g).textContent = 'Not quite. One more guess.'; }
@@ -158,7 +160,9 @@
   /* ---------- hero animation: Philidor's legacy on loop ---------- */
   (function () {
     var node = $('#heroBoard'); if (!node) return;
-    var it = ITEMS['s-philidor'], b = new MiniBoard(node, {}), i = 0;
+    var it = ITEMS[node.getAttribute('data-loop') || 's-philidor'], b = new MiniBoard(node, {}), i = 0;
+    if (!it) return;
+    b.setOrientation(it.orient);
     b.setFen(it.fen);
     function tick() {
       if (i < it.steps.length) { var s = it.steps[i++]; b.play(s.u, s.f); setTimeout(tick, i === it.steps.length ? 3200 : 1250); }
@@ -195,7 +199,7 @@
   var arenaRoot = $('#arena');
   if (arenaRoot) {
     var pIds = T.items.filter(function (x) { return x.kind === 'practice'; }).map(function (x) { return x.id; });
-    var KEY = 'dml-chess-arena';
+    var KEY = T.storeKey || 'dml-chess-arena';
     var prog = store.get(KEY, {});
     var order = shuffle(pIds), k = 0, cur = null;
     var board = new MiniBoard($('#arenaBoard'), { onMove: function (u) { userMove(u); } });
@@ -230,12 +234,15 @@
       log.innerHTML = ''; $('#arenaWhy').classList.remove('show'); $('#arenaName').innerHTML = '';
       $('#arenaHint').disabled = false; $('#arenaSolve').disabled = false;
       drawDeck();
-      setStatus('', (cur.orient === 'w' ? '○ White' : '● Black') + ' to move. Tap a piece, then tap where it goes.');
+      clearChoices();
+      var firstUser = cur.steps.filter(function (x) { return x.user; })[0] || {};
+      setStatus('', (cur.orient === 'w' ? '○ White' : '● Black') + ' to move. ' + (firstUser.choices ? 'Three candidate moves are drawn on the board. Pick the one that follows the principle.' : 'Tap a piece, then tap where it goes.'));
       advance();
     }
     function advance() {
       if (S.idx >= cur.steps.length) return finish();
       var st = cur.steps[S.idx];
+      if (st.user && st.choices) { showChoices(st); return; }
       if (st.user) { board.enable(st.legal); return; }
       board.disable(); S.busy = true;
       setTimeout(function () {
@@ -271,6 +278,37 @@
       if ((st.also || []).indexOf(u) >= 0) setStatus('meh', '🟡 That keeps an edge, but there is a sharper blow here. The pattern wants more. Try again.');
       else setStatus('no', '✗ Not this one. ' + (S.mistakes >= 2 && !S.hints ? 'Stuck? Try a hint.' : 'Look again: what is each defender\'s job?'));
     }
+    function clearChoices() { var c = $('#arenaChoices'); if (c) c.innerHTML = ''; }
+    function showChoices(st) {
+      var box = $('#arenaChoices'); if (!box) return;
+      board.disable(); box.innerHTML = '';
+      var opts = shuffle(st.choices), letters = 'ABC';
+      var kinds = ['a', 'd', 'e'];
+      function drawCands() { board.setArrows(opts.filter(function (c) { return !c.gone; }).map(function (c) { return { u: c.u, k: kinds[opts.indexOf(c)] }; })); }
+      opts.forEach(function (c) { c.gone = false; });
+      drawCands();
+      opts.forEach(function (c, i) {
+        var b = el('button', 'cand k-' + kinds[i], '<b>' + letters[i] + '</b> ' + c.s); b.type = 'button'; b._c = c;
+        b.onclick = function () {
+          if (S.busy || S.done) return;
+          if (c.ok) {
+            box.innerHTML = ''; board.setArrows([]);
+            setStatus('ok', '✓ <b>' + c.s + '</b>. ' + c.why);
+            S.busy = true;
+            var stp = cur.steps[S.idx];
+            board.play(stp.u, stp.f, function () {
+              S.busy = false;
+              addLog(stp.n || '<p><span class="mv">' + sanLabel(cur, S.idx) + '</span></p>');
+              S.idx++; setTimeout(advance, 900);
+            });
+          } else {
+            S.mistakes++; b.disabled = true; b.classList.add('wrong'); c.gone = true; drawCands();
+            setStatus('no', '✗ <b>' + c.s + '</b>: ' + c.why + ' Try another.');
+          }
+        };
+        box.appendChild(b);
+      });
+    }
     function mateFen(st, u) { return (st.mf && st.mf[u]) || st.f; }
     function flash(u) {
       board.setMarks([{ sq: u.slice(2, 4), cls: 'bad' }]);
@@ -280,13 +318,19 @@
       if (S.done) return;
       var st = cur.steps[S.idx]; if (!st || !st.user) return;
       S.hints++;
-      if (S.hints === 1) { S.revealed = true; setStatus('meh', '💡 Pattern: <b>' + P[cur.pattern].name + '</b>. ' + P[cur.pattern].hint); }
+      if (st.choices) {
+        if (S.hints === 1) { S.revealed = true; setStatus('meh', '💡 ' + NOUN.charAt(0).toUpperCase() + NOUN.slice(1) + ': <b>' + P[cur.pattern].name + '</b>. ' + P[cur.pattern].hint); }
+        else if (S.hints === 2) { var w = [].filter.call(document.querySelectorAll('#arenaChoices button'), function (b) { return !b._c.ok && !b.disabled; })[0]; if (w) { w.disabled = true; w.classList.add('wrong'); } setStatus('meh', '💡 One wrong candidate removed.'); }
+        else { [].forEach.call(document.querySelectorAll('#arenaChoices button'), function (b) { if (b._c.ok) b.classList.add('glow'); }); board.setArrows([{ u: st.u, k: 'c' }]); setStatus('meh', '💡 Play ' + st.s + '.'); }
+        return;
+      }
+      if (S.hints === 1) { S.revealed = true; setStatus('meh', '💡 ' + NOUN.charAt(0).toUpperCase() + NOUN.slice(1) + ': <b>' + P[cur.pattern].name + '</b>. ' + P[cur.pattern].hint); }
       else if (S.hints === 2) { board.setMarks([{ sq: st.u.slice(0, 2), cls: 'hint' }]); setStatus('meh', '💡 Move the highlighted piece.'); }
       else { board.setArrows([{ u: st.u, k: 'c' }]); setStatus('meh', '💡 Play ' + st.s + '.'); }
     };
     $('#arenaSolve').onclick = function () {
       if (S.done) return;
-      S.hints += 3; S.revealed = true; board.disable(); setStatus('meh', 'Here is the solution…');
+      S.hints += 3; S.revealed = true; board.disable(); clearChoices(); setStatus('meh', 'Here is the solution…');
       (function step() {
         if (S.idx >= cur.steps.length) return finish();
         var st = cur.steps[S.idx];
@@ -297,7 +341,7 @@
     $('#arenaNext').onclick = function () { open((k + 1) % order.length); arenaRoot.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
     $('#arenaShuffle').onclick = function () { order = shuffle(pIds); open(0); };
     function finish() {
-      S.done = true; board.disable();
+      S.done = true; board.disable(); clearChoices();
       var clean = !S.mistakes && !S.hints;
       if (S.hints < 3) {
         var prev = prog[cur.id] || {};
@@ -315,7 +359,7 @@
     function nameIt() {
       var box = $('#arenaName');
       if (S.revealed) { box.innerHTML = '<span class="tag" style="--c:' + colorOf(cur.pattern) + '">' + P[cur.pattern].name + '</span>'; return; }
-      box.innerHTML = '<div class="guess"><div class="q">🧠 Name the pattern you just used:</div><div class="chips"></div><div class="verdict"></div></div>';
+      box.innerHTML = '<div class="guess"><div class="q">🧠 Name the ' + NOUN + ' you just used:</div><div class="chips"></div><div class="verdict"></div></div>';
       var chips = $('.chips', box);
       ORDER.forEach(function (p) {
         var c = el('button', 'chip', P[p].name); c.type = 'button';
@@ -323,7 +367,7 @@
           var ok = p === cur.pattern;
           [].forEach.call(chips.children, function (x) { x.disabled = true; if (x.textContent === P[cur.pattern].name) x.classList.add('right'); });
           if (!ok) c.classList.add('wrong');
-          $('.verdict', box).innerHTML = ok ? 'Yes. You found it <i>and</i> named it, and naming it is what makes it stick.' : 'This one was <b>' + P[cur.pattern].name + '</b>. (Many combinations mix patterns; this is the main idea.)';
+          $('.verdict', box).innerHTML = ok ? 'Yes. You found it <i>and</i> named it, and naming it is what makes it stick.' : 'This one was <b>' + P[cur.pattern].name + '</b>. (Real games mix several ideas; this is the main one.)';
         };
         chips.appendChild(c);
       });
