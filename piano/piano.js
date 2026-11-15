@@ -109,11 +109,14 @@
     if (ac) { if (ac.state !== 'running') ac.resume(); return; }
     var AC = window.AudioContext || window.webkitAudioContext;
     if (!AC) { showMsg('This browser has no Web Audio support, so it cannot make sound.'); return; }
-    ac = new AC({ latencyHint: 'interactive' });
+    try { ac = new AC({ latencyHint: 0 }); } catch (e) { ac = new AC({ latencyHint: 'interactive' }); } // 0 = smallest buffer the device allows
+    setTimeout(reportLatency, 1500);
     master = ac.createGain(); master.gain.value = settings.volume;
-    comp = ac.createDynamicsCompressor();
-    comp.threshold.value = -16; comp.knee.value = 12; comp.ratio.value = 4;
-    comp.attack.value = 0.003; comp.release.value = 0.25;
+    // Soft limiter (tanh curve). Unlike a DynamicsCompressor it has no look-ahead, so it adds zero delay.
+    comp = ac.createWaveShaper();
+    var curve = new Float32Array(2048);
+    for (var ci = 0; ci < curve.length; ci++) { var x = ci / (curve.length - 1) * 2 - 1; curve[ci] = Math.tanh(x * 1.6) / Math.tanh(1.6); }
+    comp.curve = curve; comp.oversample = 'none';
     out = ac.createGain();
     var conv = ac.createConvolver(); conv.buffer = makeImpulse(2.4, 2.8);
     wet = ac.createGain(); wet.gain.value = settings.reverb ? 0.28 : 0;
@@ -129,6 +132,18 @@
     waves.organ = periodic([0, 1, 0.9, 0.45, 0.55, 0, 0.32, 0, 0.3, 0, 0, 0, 0.15]);
     waves.box = periodic([0, 1, 0, 0.12, 0, 0.05]);
     $('#tapToStart').classList.add('gone');
+  }
+
+  // How long between "note starts" and "sound leaves the speaker"? The browser can tell us.
+  function reportLatency() {
+    if (!ac) return;
+    var ms = Math.round(((ac.baseLatency || 0) + (ac.outputLatency || 0)) * 1000);
+    if (!ms) return;
+    var el = $('#latency'); el.hidden = false;
+    el.textContent = 'Sound delay ≈ ' + ms + ' ms';
+    el.className = 'latency ' + (ms > 60 ? 'bad' : ms > 30 ? 'ok' : 'good');
+    el.title = ms > 60 ? 'High delay. Bluetooth headphones/speakers usually add 150–300 ms that no web page can remove; try the device speaker or wired earphones.' : 'Low enough to feel instant.';
+    if (ms > 60) showMsg('Sound delay is about ' + ms + ' ms. If you are on Bluetooth headphones or a Bluetooth speaker, that link alone adds 150–300 ms, and no web page can remove it. The phone/laptop speaker or wired earphones will feel instant.');
   }
 
   function holdAndRelease(param, t, tc) {
@@ -202,7 +217,7 @@
       var a = osc('sawtooth', f, t, -8), b = osc('sawtooth', f, t, 7), c = osc('sawtooth', f / 2, t, 0);
       var cg = ac.createGain(); cg.gain.value = 0.3;
       a.connect(lp); b.connect(lp); c.connect(cg); cg.connect(lp); lp.connect(g); g.connect(master);
-      g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(0.07 + vel * 0.05, t + 0.18);
+      g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(0.07 + vel * 0.05, t + 0.05);
       var all = [a, b, c];
       return {
         release: function (r) { holdAndRelease(g.gain, r, 0.32); all.forEach(function (o) { o.stop(r + 2); }); },
@@ -277,7 +292,9 @@
   }
 
   /* ---------------- 4. stage ---------------- */
-  var cv = $('#stage'), g2 = cv.getContext('2d');
+  var cv = $('#stage');
+  // desynchronized = draw straight to screen, skipping a compositor frame of delay (Chrome/Edge)
+  var g2 = cv.getContext('2d', { alpha: false, desynchronized: true }) || cv.getContext('2d');
   var view = {
     octSetting: store.get('octaves', 'auto'),
     startC: parseInt(store.get('startC', '48'), 10), // MIDI number of the leftmost C
@@ -322,6 +339,7 @@
     }
     L = { W: W, H: H, dpr: dpr, keys: keys, byMidi: byMidi, kbTop: kbTop, kbH: kbH, ww: ww, lo: lo, hi: hi };
     $('#octLabel').textContent = noteName(lo);
+    buildLayers();
   }
 
   function keyAt(x, y) {
@@ -340,30 +358,81 @@
   };
   function now() { return performance.now() / 1000; }
 
-  function rr(x, y, w, h, r) {
+  function rr(c, x, y, w, h, r) {
     r = Math.min(r, w / 2, h / 2);
-    g2.beginPath(); g2.moveTo(x + r, y); g2.arcTo(x + w, y, x + w, y + h, r); g2.arcTo(x + w, y + h, x, y + h, r);
-    g2.arcTo(x, y + h, x, y, r); g2.arcTo(x, y, x + w, y, r); g2.closePath();
+    c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r);
+    c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath();
   }
 
   var KEY_HINT = {}; // midi -> computer key label (rebuilt when octave moves)
+  var GAP = '#171320';
 
+  /* --- key painters, shared by the cached layer and the "pressed" overlay --- */
+  function paintWhite(c, k, state) { // state: 0 up, 1 down, 2 ringing (sustain)
+    var d = L.dpr, down = state === 1;
+    var gr = c.createLinearGradient(0, k.y, 0, k.y + k.h);
+    if (down) { gr.addColorStop(0, 'hsl(' + hue(k.m) + ',80%,78%)'); gr.addColorStop(1, 'hsl(' + hue(k.m) + ',70%,64%)'); }
+    else { gr.addColorStop(0, '#f4f1ea'); gr.addColorStop(0.85, '#fffefb'); gr.addColorStop(1, state === 2 ? 'hsl(' + hue(k.m) + ',60%,85%)' : '#ddd8cd'); }
+    c.fillStyle = gr;
+    rr(c, k.x + 0.75 * d, k.y + (down ? 2 * d : 0), k.w - 1.5 * d, k.h - (down ? 2 * d : 0), 5 * d); c.fill();
+  }
+  function paintBlack(c, k, down) {
+    var d = L.dpr, gr = c.createLinearGradient(0, k.y, 0, k.y + k.h);
+    if (down) { gr.addColorStop(0, 'hsl(' + hue(k.m) + ',75%,45%)'); gr.addColorStop(1, 'hsl(' + hue(k.m) + ',80%,58%)'); }
+    else { gr.addColorStop(0, '#1b1a1f'); gr.addColorStop(0.9, '#34323a'); gr.addColorStop(1, '#141318'); }
+    c.fillStyle = gr; rr(c, k.x, k.y - 2 * d, k.w, k.h + (down ? 0 : -2 * d), 4 * d); c.fill();
+    if (!down) { c.fillStyle = 'rgba(255,255,255,0.08)'; c.fillRect(k.x + k.w * 0.18, k.y, k.w * 0.64, k.h * 0.85); }
+  }
+  function paintLabel(c, k) {
+    var d = L.dpr, cx = k.x + k.w / 2, lbl = null;
+    var fs = Math.max(9 * d, Math.min(L.ww * 0.3, 15 * d));
+    c.textAlign = 'center'; c.textBaseline = 'alphabetic';
+    if (view.labels === 'letters') lbl = k.black ? null : (k.m % 12 === 0 ? noteName(k.m) : NAMES[k.m % 12]);
+    if (view.labels === 'sargam') lbl = k.black ? null : SARGAM[k.m % 12];
+    if (lbl) {
+      c.font = '700 ' + fs + 'px "DM Sans", system-ui, sans-serif';
+      c.fillStyle = k.m % 12 === 0 ? '#b5452b' : 'rgba(40,34,30,0.55)';
+      c.fillText(lbl, cx, k.y + k.h - 8 * d);
+    }
+    if (view.hints && KEY_HINT[k.m]) {
+      c.font = '600 ' + Math.max(8 * d, fs * 0.8) + 'px "JetBrains Mono", ui-monospace, monospace';
+      c.fillStyle = k.black ? 'rgba(255,255,255,0.55)' : 'rgba(40,34,30,0.38)';
+      c.fillText(KEY_HINT[k.m], cx, k.black ? k.y + k.h - 8 * d : k.y + k.h - 8 * d - fs * 1.35);
+    }
+  }
+
+  /* --- the static parts are painted ONCE into off-screen layers, then just copied each frame --- */
+  var layers = { bg: null, kb: null, kbY: 0 };
+  function mkCanvas(w, h) { var c = document.createElement('canvas'); c.width = Math.max(1, w); c.height = Math.max(1, h); return c; }
+  function buildLayers() {
+    if (!L.W) return;
+    var d = L.dpr, W = L.W;
+    var bg = mkCanvas(W, Math.ceil(L.kbTop)), b = bg.getContext('2d');
+    var grd = b.createLinearGradient(0, 0, 0, L.kbTop);
+    grd.addColorStop(0, '#07060a'); grd.addColorStop(1, GAP);
+    b.fillStyle = grd; b.fillRect(0, 0, W, bg.height);
+    b.strokeStyle = 'rgba(255,255,255,0.05)'; b.lineWidth = d;
+    L.keys.forEach(function (k) { if (k.m % 12 === 0) { b.beginPath(); b.moveTo(k.x + 0.5, 0); b.lineTo(k.x + 0.5, L.kbTop); b.stroke(); } });
+
+    var kbY = Math.floor(L.kbTop - 4 * d);
+    var kb = mkCanvas(W, L.H - kbY), c = kb.getContext('2d');
+    c.translate(0, -kbY); // draw in stage coordinates
+    c.fillStyle = GAP; c.fillRect(0, kbY, W, L.H - kbY);
+    c.fillStyle = '#5a1420'; c.fillRect(0, L.kbTop - 4 * d, W, 4 * d); // felt strip
+    L.keys.forEach(function (k) { if (!k.black) paintWhite(c, k, 0); });
+    L.keys.forEach(function (k) { if (k.black) paintBlack(c, k, false); });
+    L.keys.forEach(function (k) { paintLabel(c, k); });
+    layers = { bg: bg, kb: kb, kbY: kbY };
+  }
+  var lastChordKey = '', lastChord = null;
   function draw() {
-    var W = L.W, H = L.H, d = L.dpr, t = now();
-    if (!W) return;
-    // background
-    var bg = g2.createLinearGradient(0, 0, 0, L.kbTop);
-    bg.addColorStop(0, '#07060a'); bg.addColorStop(1, '#171320');
-    g2.fillStyle = bg; g2.fillRect(0, 0, W, H);
+    var W = L.W, d = L.dpr, t = now();
+    if (!W || !layers.bg) return;
+    g2.drawImage(layers.bg, 0, 0);
 
-    // faint octave lines at every C
-    g2.strokeStyle = 'rgba(255,255,255,0.05)'; g2.lineWidth = 1 * d;
-    L.keys.forEach(function (k) { if (k.m % 12 === 0) { g2.beginPath(); g2.moveTo(k.x + 0.5, 0); g2.lineTo(k.x + 0.5, L.kbTop); g2.stroke(); } });
-
-    // rising bars
+    // rising bars: plain fills with a soft halo (no shadowBlur, which is the slow part)
     var speed = L.kbTop * 0.32; // px per second
     var keep = [];
-    g2.save();
     for (var i = 0; i < bars.list.length; i++) {
       var b = bars.list[i], k = L.byMidi[b.m];
       var top = L.kbTop - (t - b.t0) * speed;
@@ -372,65 +441,45 @@
       keep.push(b);
       if (!k) continue;
       var bw = k.black ? k.w * 0.9 : k.w * 0.72, bx = k.x + (k.w - bw) / 2;
-      var h = Math.max(bottom - top, 3 * d);
-      var hh = hue(b.m);
-      g2.shadowColor = 'hsla(' + hh + ',95%,60%,0.85)'; g2.shadowBlur = 14 * d;
-      var gr = g2.createLinearGradient(0, top, 0, bottom);
-      gr.addColorStop(0, 'hsla(' + hh + ',90%,72%,0.95)'); gr.addColorStop(1, 'hsla(' + hh + ',90%,55%,0.85)');
-      g2.fillStyle = gr; rr(bx, Math.max(top, -10), bw, h, Math.min(6 * d, bw / 2)); g2.fill();
+      var y = Math.max(top, -10), h = Math.max(bottom - y, 3 * d), hh = hue(b.m), rad = Math.min(6 * d, bw / 2);
+      g2.fillStyle = 'hsla(' + hh + ',95%,60%,0.22)'; rr(g2, bx - 4 * d, y - 4 * d, bw + 8 * d, h + 8 * d, rad + 4 * d); g2.fill();
+      g2.fillStyle = 'hsl(' + hh + ',90%,63%)'; rr(g2, bx, y, bw, h, rad); g2.fill();
+      g2.fillStyle = 'rgba(255,255,255,0.35)'; g2.fillRect(bx + bw * 0.2, y + 2 * d, bw * 0.6, Math.min(3 * d, h / 3));
     }
-    g2.restore();
     bars.list = keep;
 
-    // felt strip
-    g2.fillStyle = '#5a1420'; g2.fillRect(0, L.kbTop - 4 * d, W, 4 * d);
+    // keyboard: copy the cached layer, then repaint only keys that are down or ringing
+    g2.drawImage(layers.kb, 0, layers.kbY);
+    var anyDown = holders.size || sustained.size;
+    if (anyDown) {
+      var blacksToFix = {};
+      L.keys.forEach(function (k) {
+        if (k.black) return;
+        var st = holders.has(k.m) ? 1 : sustained.has(k.m) ? 2 : 0;
+        if (!st) return;
+        g2.fillStyle = GAP; g2.fillRect(k.x, k.y, k.w, k.h);
+        paintWhite(g2, k, st); paintLabel(g2, k);
+        if (L.byMidi[k.m - 1] && L.byMidi[k.m - 1].black) blacksToFix[k.m - 1] = 1;
+        if (L.byMidi[k.m + 1] && L.byMidi[k.m + 1].black) blacksToFix[k.m + 1] = 1;
+      });
+      Object.keys(blacksToFix).forEach(function (m) {
+        var k = L.byMidi[m]; if (!holders.has(+m)) { paintBlack(g2, k, false); paintLabel(g2, k); }
+      });
+      L.keys.forEach(function (k) {
+        if (!k.black || !holders.has(k.m)) return;
+        paintBlack(g2, k, true); paintLabel(g2, k);
+      });
+    }
 
-    // white keys
-    L.keys.forEach(function (k) {
-      if (k.black) return;
-      var down = holders.has(k.m), ring = !down && (sustained.has(k.m));
-      var gr = g2.createLinearGradient(0, k.y, 0, k.y + k.h);
-      if (down) { gr.addColorStop(0, 'hsl(' + hue(k.m) + ',80%,78%)'); gr.addColorStop(1, 'hsl(' + hue(k.m) + ',70%,64%)'); }
-      else { gr.addColorStop(0, '#f4f1ea'); gr.addColorStop(0.85, '#fffefb'); gr.addColorStop(1, ring ? 'hsl(' + hue(k.m) + ',60%,85%)' : '#ddd8cd'); }
-      g2.fillStyle = gr;
-      rr(k.x + 0.75 * d, k.y + (down ? 2 * d : 0), k.w - 1.5 * d, k.h - (down ? 2 * d : 0), 5 * d); g2.fill();
-    });
-    // black keys
-    L.keys.forEach(function (k) {
-      if (!k.black) return;
-      var down = holders.has(k.m);
-      var gr = g2.createLinearGradient(0, k.y, 0, k.y + k.h);
-      if (down) { gr.addColorStop(0, 'hsl(' + hue(k.m) + ',75%,45%)'); gr.addColorStop(1, 'hsl(' + hue(k.m) + ',80%,58%)'); }
-      else { gr.addColorStop(0, '#1b1a1f'); gr.addColorStop(0.9, '#34323a'); gr.addColorStop(1, '#141318'); }
-      g2.fillStyle = gr; rr(k.x, k.y - 2 * d, k.w, k.h + (down ? 0 : -2 * d), 4 * d); g2.fill();
-      if (!down) { g2.fillStyle = 'rgba(255,255,255,0.08)'; g2.fillRect(k.x + k.w * 0.18, k.y, k.w * 0.64, k.h * 0.85); }
-    });
-
-    // labels
-    var fs = Math.max(9 * d, Math.min(L.ww * 0.3, 15 * d));
-    g2.textAlign = 'center'; g2.textBaseline = 'alphabetic';
-    L.keys.forEach(function (k) {
-      var cx = k.x + k.w / 2, lbl = null;
-      if (view.labels === 'letters') lbl = k.black ? null : (k.m % 12 === 0 ? noteName(k.m) : NAMES[k.m % 12]);
-      if (view.labels === 'sargam') lbl = k.black ? null : SARGAM[k.m % 12];
-      if (lbl) {
-        g2.font = '700 ' + fs + 'px "DM Sans", system-ui, sans-serif';
-        g2.fillStyle = k.m % 12 === 0 ? '#b5452b' : 'rgba(40,34,30,0.55)';
-        g2.fillText(lbl, cx, k.y + k.h - 8 * d);
-      }
-      if (view.hints && KEY_HINT[k.m]) {
-        var hs = Math.max(8 * d, fs * 0.8);
-        g2.font = '600 ' + hs + 'px "JetBrains Mono", ui-monospace, monospace';
-        g2.fillStyle = k.black ? 'rgba(255,255,255,0.55)' : 'rgba(40,34,30,0.38)';
-        g2.fillText(KEY_HINT[k.m], cx, k.black ? k.y + k.h - 8 * d : k.y + k.h - 8 * d - fs * 1.35);
-      }
-    });
-
-    // chord + frequency readout (top-left; appears in recordings too)
-    var held = []; holders.forEach(function (_, m) { held.push(m); }); sustained.forEach(function (m) { if (held.indexOf(m) < 0) held.push(m); });
-    var pad = 16 * d;
+    // chord + frequency readout (top-left; appears in recordings too). Recomputed only when notes change.
+    var key = ''; holders.forEach(function (_, m) { key += m + ','; }); sustained.forEach(function (m) { key += m + ','; });
+    if (key !== lastChordKey) {
+      lastChordKey = key;
+      var held = []; holders.forEach(function (_, m) { held.push(m); }); sustained.forEach(function (m) { if (held.indexOf(m) < 0) held.push(m); });
+      lastChord = nameChord(held);
+    }
+    var ch = lastChord, pad = 16 * d;
     g2.textAlign = 'left'; g2.textBaseline = 'top';
-    var ch = nameChord(held);
     if (ch) {
       g2.font = '700 ' + Math.round(30 * d) + 'px "Fraunces", Georgia, serif';
       g2.fillStyle = 'rgba(255,255,255,0.92)'; g2.fillText(ch.big, pad, pad);
@@ -496,6 +545,7 @@
       });
     }
     add(UPPER, upperBase); add(LOWER, lowerBase);
+    buildLayers();
   }
   function typing(e) { var t = e.target; return t && (t.tagName === 'INPUT' && t.type === 'text' || t.tagName === 'TEXTAREA' || t.isContentEditable); }
 
@@ -566,10 +616,10 @@
     view.octSetting = this.value; store.set('octaves', this.value); this.blur();
     layout(recorder.isLive()); rebuildKeyMap();
   });
-  sel.labels.addEventListener('change', function () { view.labels = this.value; store.set('labels', this.value); this.blur(); });
+  sel.labels.addEventListener('change', function () { view.labels = this.value; store.set('labels', this.value); this.blur(); buildLayers(); });
   sel.volume.addEventListener('input', function () { settings.volume = parseFloat(this.value); store.set('volume', this.value); if (master) master.gain.setTargetAtTime(settings.volume, ac.currentTime, 0.02); });
   sel.reverb.addEventListener('change', function () { settings.reverb = this.checked; store.set('reverb', this.checked ? '1' : '0'); if (wet) wet.gain.setTargetAtTime(this.checked ? 0.28 : 0, ac.currentTime, 0.05); });
-  sel.hints.addEventListener('change', function () { view.hints = this.checked; store.set('hints', this.checked ? '1' : '0'); });
+  sel.hints.addEventListener('change', function () { view.hints = this.checked; store.set('hints', this.checked ? '1' : '0'); buildLayers(); });
   $('#sustainBtn').addEventListener('click', function () { initAudio(); latchSustain = !sustainOn; setSustain(!sustainOn); });
 
   /* ---------------- under-the-hood demos ---------------- */
@@ -717,6 +767,6 @@
   var resizeT;
   window.addEventListener('resize', function () { clearTimeout(resizeT); resizeT = setTimeout(function () { layout(); rebuildKeyMap(); }, 120); });
   layout(); rebuildKeyMap();
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { /* labels redraw next frame */ });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(buildLayers); // repaint labels in the real fonts
   requestAnimationFrame(loop);
 })();

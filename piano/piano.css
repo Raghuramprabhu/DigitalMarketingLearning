@@ -88,6 +88,10 @@ code { font-family: var(--font-mono); font-size: .85em; background: var(--card2)
 .rec-time { font: 700 18px var(--font-mono); color: var(--soft); min-width: 64px; }
 .rec-time.live { color: var(--red); }
 .rec-info { font: 500 12px var(--font-mono); color: var(--dim); }
+.latency { font: 600 12px var(--font-mono); padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line2); color: var(--soft); cursor: help; }
+.latency.good { color: var(--green); border-color: var(--green); }
+.latency.ok { color: var(--gold); border-color: var(--gold); }
+.latency.bad { color: var(--red); border-color: var(--red); }
 .rec-msg { margin: 10px 0 0; padding: 10px 12px; border-radius: 10px; background: var(--card2); border: 1px solid var(--line2); color: var(--soft); font-size: 15px; }
 
 .takes { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 12px; }
