@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Piano Studio · play, see and record</title>
+  <meta name="description" content="A browser piano you can play with mouse, touch, computer keys or a MIDI keyboard, and record as a video with sound. Pure frontend, no uploads.">
+  <script>(function(){var t=null;try{t=localStorage.getItem("dml-theme");}catch(e){}if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="piano.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="../">← <span>Field Notes</span></a>
+    <span class="logo">Piano<span> Studio</span></span>
+    <span class="grow"></span>
+    <a class="pill" href="#hood">🔬<span class="hide-sm"> Under the hood</span></a>
+    <button class="pill" id="themebtn" type="button" aria-label="Toggle light or dark mode">☀️ Light</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wide">
+    <span class="eyebrow">Play · see the music · record it as a video</span>
+    <h1>Twelve keys. <em>One</em> number repeated.<br>Everything you play is made of it.</h1>
+    <p class="lede">Tap the keys, use your computer keyboard, or plug in a MIDI keyboard. Every note rises off the keys as a coloured bar, and the chord you're holding gets named. Press <b>Record</b> and you get a video of the keyboard <i>with</i> the sound, ready to download or share.</p>
+  </div>
+</section>
+
+<main class="wide">
+  <section class="studio" id="studio">
+
+    <!-- ===== toolbar ===== -->
+    <div class="tools">
+      <label class="tool">
+        <span>Sound</span>
+        <select id="instrument">
+          <option value="piano">🎹 Grand piano</option>
+          <option value="epiano">✨ Electric piano</option>
+          <option value="organ">⛪ Organ</option>
+          <option value="strings">🎻 Strings</option>
+          <option value="musicbox">🔔 Music box</option>
+        </select>
+      </label>
+      <label class="tool">
+        <span>Keys</span>
+        <select id="octaves">
+          <option value="auto">Auto</option>
+          <option value="1">1 octave</option>
+          <option value="2">2 octaves</option>
+          <option value="3">3 octaves</option>
+          <option value="4">4 octaves</option>
+          <option value="5">5 octaves</option>
+        </select>
+      </label>
+      <div class="tool">
+        <span>Octave</span>
+        <div class="seg">
+          <button type="button" id="octDown" aria-label="Octave down">−</button>
+          <b id="octLabel">C4</b>
+          <button type="button" id="octUp" aria-label="Octave up">+</button>
+        </div>
+      </div>
+      <label class="tool">
+        <span>Labels</span>
+        <select id="labels">
+          <option value="letters">C D E</option>
+          <option value="sargam">Sa Re Ga</option>
+          <option value="off">Off</option>
+        </select>
+      </label>
+      <label class="tool">
+        <span>Volume</span>
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8">
+      </label>
+      <label class="tool check">
+        <input type="checkbox" id="reverb" checked>
+        <span>Reverb</span>
+      </label>
+      <label class="tool check">
+        <input type="checkbox" id="kbHints" checked>
+        <span>Key hints</span>
+      </label>
+      <button type="button" class="tool pedal" id="sustainBtn" aria-pressed="false" title="Hold Space, or tap to latch">
+        🦶 Sustain
+      </button>
+      <button type="button" class="tool pedal" id="midiBtn" hidden title="Use a USB or Bluetooth MIDI keyboard">
+        🎛 MIDI
+      </button>
+    </div>
+
+    <!-- ===== the stage: this canvas is exactly what gets recorded ===== -->
+    <div class="stage-wrap" id="stageWrap">
+      <canvas id="stage" aria-label="Piano keyboard. Click, tap or use your computer keys to play."></canvas>
+      <div class="tap-to-start" id="tapToStart">Tap a key to wake the sound 🔊</div>
+    </div>
+
+    <!-- ===== recorder ===== -->
+    <div class="recbar">
+      <button type="button" class="rec-btn" id="recBtn"><span class="dot"></span><span id="recLabel">Record</span></button>
+      <span class="rec-time" id="recTime">00:00</span>
+      <label class="tool check">
+        <input type="checkbox" id="waitFirst" checked>
+        <span>Start on my first note</span>
+      </label>
+      <span class="grow"></span>
+      <span class="rec-info" id="recInfo"></span>
+    </div>
+    <p class="rec-msg" id="recMsg" hidden></p>
+
+    <div class="takes" id="takes"></div>
+
+    <details class="keymap">
+      <summary>⌨️ Computer-keyboard map & shortcuts</summary>
+      <div class="keymap-in">
+        <p>Two rows, laid out like a piano. The <b>letters</b> are the white keys, the <b>row above</b> holds the black keys.</p>
+        <div class="kmrow"><span class="kmlabel">Upper octave</span><code>Q W E R T Y U I O P [ ]</code> white · <code>2 3 5 6 7 9 0 =</code> black</div>
+        <div class="kmrow"><span class="kmlabel">Lower octave</span><code>Z X C V B N M , . /</code> white · <code>S D G H J L ;</code> black</div>
+        <div class="kmrow"><span class="kmlabel">Shortcuts</span><code>Space</code> sustain pedal · <code>←</code> <code>→</code> octave · <code>Esc</code> silence everything</div>
+        <p class="dim">Tip for phones: rotate to landscape for more keys. On a mouse or touch screen, press nearer the bottom of a key to play louder.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== under the hood ===== -->
+  <section class="block" id="hood">
+    <div class="sec-head">
+      <div class="num">UNDER THE HOOD</div>
+      <h2>Three questions this page answers</h2>
+      <p>No sound files and no video server. Everything you hear and record is built in your browser, from scratch, while you play.</p>
+    </div>
+
+    <div class="trio">
+      <article class="t" style="--c: var(--gold)">
+        <div class="ic">🔢</div>
+        <h4>Why twelve keys, then repeat?</h4>
+        <p>A note is just air vibrating. Double the vibrations per second and your ear hears the <i>same</i> note, higher: that's an octave. Split that doubling into 12 equal steps and each step multiplies the frequency by <b class="mono">2<sup>1/12</sup> ≈ 1.0595</b>.</p>
+        <p>So key number <i>n</i> vibrates at <b class="mono">440 × 1.0595<sup>(n−69)</sup></b> Hz. Play any key and watch the top-left corner: the page does this sum live.</p>
+        <button type="button" class="btn small ghost" data-demo="octave">▶ Hear A3 → A4 → A5 (220 → 440 → 880)</button>
+      </article>
+      <article class="t" style="--c: var(--teal)">
+        <div class="ic">🌊</div>
+        <h4>How do you fake a piano?</h4>
+        <p>A real string doesn't vibrate at one frequency. It vibrates at the note <i>and</i> at 2×, 3×, 4×… (the overtones), each quieter. That recipe of overtones is why a piano and an organ playing the same note sound different.</p>
+        <p>The piano here stacks ten overtones, adds a tiny noise "thump" for the hammer, then lets the bright high overtones fade faster than the low ones, like a real string.</p>
+        <button type="button" class="btn small ghost" data-demo="timbre">▶ Same note, 5 different recipes</button>
+      </article>
+      <article class="t" style="--c: var(--violet)">
+        <div class="ic">🎬</div>
+        <h4>How does it record without screen-sharing?</h4>
+        <p>The keyboard isn't made of HTML buttons. It's drawn 60 times a second onto a single canvas, like frames of a film. The browser can hand you that canvas as a live <b>video stream</b>.</p>
+        <p>The sound engine also pipes its output into an <b>audio stream</b>. A <span class="mono">MediaRecorder</span> stitches the two together into one file. No permission pop-up, works on phones, and nothing leaves your device.</p>
+      </article>
+    </div>
+
+    <div class="chords-hint">
+      <h4>🎯 Try this</h4>
+      <p>Hold <b>C, E and G</b> together (keys <code>Z</code> <code>C</code> <code>B</code>). The stage says <i>C major</i>. Now move only the middle finger down one key, to E♭ (<code>D</code>). One key changes, and the mood flips from bright to sad: <i>C minor</i>. Can you find which single key turns it into <i>C augmented</i>, the "dream sequence" sound?</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">Built one prompt at a time · Piano Studio · Field Notes</footer>
+
+<script src="piano.js"></script>
+</body>
+</html>
