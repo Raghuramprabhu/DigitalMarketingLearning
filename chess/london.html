@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The London: the story · an opening system for hobby players</title>
+  <meta name="description" content="Learn the London System the story way: the setup and move order, the key lines, middlegame plans, two Carlsen masterpieces, and an arena of fresh puzzles that test what you learned.">
+  <script>(function(){var t=null;try{t=localStorage.getItem("dml-theme");}catch(e){}if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chess.css">
+  <style>
+    .radar { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 10px 0 0; }
+    .radar .r { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c); border-radius: 12px; padding: 14px 15px; }
+    .radar .r .if { font: 700 11px var(--font-mono); letter-spacing: .12em; color: var(--c); text-transform: uppercase; }
+    .radar .r b { display: block; font: 700 17px/1.3 var(--font-display); margin: 4px 0 6px; }
+    .radar .r p { margin: 0; color: var(--soft); font-size: 14.5px; }
+    .setup { font: 700 15px var(--font-mono); text-align: center; background: var(--card); border: 1px dashed var(--gold); border-radius: 12px; padding: 12px; margin: 18px 0; color: var(--gold); }
+    .gameintro { text-align: center; color: var(--soft); max-width: 680px; margin: 30px auto 0; }
+  </style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="../">← <span>Field Notes</span></a>
+    <span class="logo">The London<span>: the story</span></span>
+    <span class="grow"></span>
+    <a class="pill" href="./" title="Tactics page">⚔️<span class="hide-sm"> Tactics</span></a>
+    <a class="pill" href="middlegame.html" title="Strategy page">🗺️<span class="hide-sm"> Strategy</span></a>
+    <a class="pill score-pill" id="scorePill" href="#arena-sec" title="Arena puzzles solved">♞ 0</a>
+    <button class="pill" id="themebtn" type="button" aria-label="Toggle light or dark mode">☀️ Light</button>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wide hero-in">
+    <div>
+      <span class="eyebrow">Chess · opening system · for hobby players · fresh-position arena</span>
+      <h1>Build the same house<br><em>in any weather.</em></h1>
+      <p class="lede">The internet loves to mock it as "the boring opening". World champions keep winning with it. Magnus Carlsen made it his trademark, and in 2023 Ding Liren used it to win a game of the World Championship match.</p>
+      <p class="lede" style="font-size:17px">The London isn't a list of moves to memorise. It's a <b>house plan</b>: one setup, a few rules, and a handful of plans that work against almost anything Black does. Learn the plan and you can play it on move 5 or move 25.</p>
+      <div class="ctas">
+        <a class="btn" href="#principle">Start with the idea ↓</a>
+        <a class="btn ghost" href="#games-sec">Carlsen's London 👑</a>
+        <a class="btn ghost" href="#arena-sec">Arena ⚔️</a>
+      </div>
+    </div>
+    <div class="hero-board">
+      <div id="heroBoard" data-loop="l-battery"></div>
+      <div class="hero-cap">the house gets built, and then the roof falls in · loops forever</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FIRST PRINCIPLE ============================ -->
+<section class="block" id="principle">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">THE FIRST PRINCIPLE</div>
+      <h2>Why a system beats a memory test</h2>
+    </div>
+    <p>Most openings are like learning a city by memorising every street. Take one wrong turn on move 7 and you're lost. The London works the other way round: you carry your own house with you and build it wherever you land.</p>
+    <div class="setup">d4 · Bf4 · e3 · Nf3 · c3 · Nbd2 · Bd3 · (h3) · castle</div>
+    <p>A bit of history first. In the 1880s an Irish-American master, James Mason, kept playing an early Bf4 that others called an "irregular opening". It got its name when it showed up seven times at the great <b>London 1922</b> tournament, including games by Capablanca, Alekhine and Rubinstein. A century later it's one of the most popular openings in club chess.</p>
+    <p>Everything on this page comes from three jobs:</p>
+    <div class="trio">
+      <div class="t" style="--c:var(--guard)"><div class="ic">🧱</div><h4>Build the house</h4><p>Bishop out before the door closes. A pawn pyramid, and a knight's home on e5.</p><div class="pats">Bishop out first · Pyramid & e5</div></div>
+      <div class="t" style="--c:var(--linec)"><div class="ic">🛡️</div><h4>Guard the house</h4><p>Know the three ways Black attacks it: b2, your bishop, and ...e5.</p><div class="pats">The b2 question · Keep the bishop · vs fianchetto</div></div>
+      <div class="t" style="--c:var(--clock)"><div class="ic">⚡</div><h4>Strike from the house</h4><p>The h7 battery, and what to do when Black copies you.</p><div class="pats">The h7 battery · vs the mirror</div></div>
+    </div>
+    <div class="callout gold"><div class="emo">🧭</div><p><b>The question that runs the London:</b> "What did Black change about my house?" If he hit b2, guard or punish. If he challenged the bishop, keep it or take the h-file. If his knight left f6, look at h7. If he did nothing, put a knight on e5.</p></div>
+  </div>
+  <div class="wide" style="margin-top:26px">
+    <div class="toc">
+      <a href="#order" style="--c:var(--guard)"><span class="n">01 · BUILD</span><b>Bishop out first</b><small>The one move order you can't get wrong.</small></a>
+      <a href="#pyramid" style="--c:var(--guard)"><span class="n">02 · BUILD</span><b>Pyramid & e5</b><small>A home for the knight, then the Stonewall.</small></a>
+      <a href="#b2" style="--c:var(--linec)"><span class="n">03 · GUARD</span><b>The b2 question</b><small>...Qb6 and the poisoned pawn.</small></a>
+      <a href="#keep" style="--c:var(--linec)"><span class="n">04 · GUARD</span><b>Keep the bishop</b><small>Trade it? Then the h-file is mine.</small></a>
+      <a href="#kid" style="--c:var(--linec)"><span class="n">05 · GUARD</span><b>vs the fianchetto</b><small>h3, Be2, and count on e5.</small></a>
+      <a href="#battery" style="--c:var(--clock)"><span class="n">06 · STRIKE</span><b>The h7 battery</b><small>The Greek gift, London-style.</small></a>
+      <a href="#mirror" style="--c:var(--clock)"><span class="n">07 · STRIKE</span><b>vs the mirror</b><small>When Black copies you with ...Bf5.</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 1 ============================ -->
+<section class="lesson" id="order" style="--c:var(--guard)">
+  <div class="wrap">
+    <div class="kick">Idea 01 · build the house</div>
+    <h3>Bishop out first</h3>
+    <div class="metaphor">Get the bike out of the garage before you park the car in front of it.</div>
+    <div class="story">
+      <p>Every 1.d4 player has the same headache: the bishop on c1. Play e3 too early and it's walled in behind its own pawns, like a bike stuck behind the car in the garage. The older Colle system lives with that. The London fixes it with one simple rule.</p>
+      <p><b>Bf4 comes before e3.</b> Bishop out, then close the door. Everything else in the setup is flexible.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Your pawns will end up on c3, d4 and e3, which are dark squares. The bishop that moves on dark squares would be blocked by them, so it must get <b>outside</b> the chain first. The light-squared bishop goes to d3, where the pawns don't block it.</p></div>
+    <div class="tells">
+      <div>Is the c1 bishop already outside before you play e3?</div>
+      <div>Knight to d2, not c3: c3 is reserved for the pawn.</div>
+      <div>Bd3 aims at h7, the target of half the London's attacks.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="l-order"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Why is the knight developed to d2 instead of the more natural c3?</div><div class="tap">tap to reveal</div>
+      <div class="a">Because <b>c3 belongs to the pawn</b>. The c3 pawn completes the pyramid that makes d4 unbreakable, and it gives the queen the b3 and c2 squares. From d2 the knight still supports e4 and can go to f3 or b3.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 2 ============================ -->
+<section class="lesson" id="pyramid" style="--c:var(--guard)">
+  <div class="wrap">
+    <div class="kick">Idea 02 · build the house</div>
+    <h3>The pyramid and the knight on e5</h3>
+    <div class="metaphor">The house comes with a guest room. The knight lives there.</div>
+    <div class="story">
+      <p>When Black sets up with ...d5 and ...e6, something quietly happens: neither black pawn can ever attack <b>e5</b> again. Your d4 pawn guards it. It's an outpost handed to you by the structure, a guest room in the enemy's half.</p>
+      <p>Put a knight there and support it with f2-f4, and you get the <b>Stonewall</b> formation: a knight on e5 that nothing can shift, and a straight path for your queen and rook toward Black's king.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>A pawn chain defends <i>and</i> creates squares. The pyramid c3-d4-e3 hands you e5. If Black trades your knight there, recapture with a pawn (dxe5 or fxe5) and you gain space, often kicking his f6 knight away from his king.</p></div>
+    <div class="tells">
+      <div>Black has ...d5 and ...e6: e5 is yours.</div>
+      <div>No black knight or bishop can easily trade on e5: go there.</div>
+      <div>Plan after Ne5 + f4: Qf3, Rf3-h3, or g4-g5.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="l-pyramid"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Black can't kick your e5 knight with a pawn. So what can he do?</div><div class="tap">tap to reveal</div>
+      <div class="a">He can <b>trade it</b> (...Nxe5, ...Bxe5, or ...Nd7 to challenge it), or play ...f6, which weakens e6 and his king. When he trades, recapture with a pawn: a white pawn on e5 kicks the f6 knight away and cramps Black's kingside.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 3 ============================ -->
+<section class="lesson" id="b2" style="--c:var(--linec)">
+  <div class="wrap">
+    <div class="kick">Idea 03 · guard the house</div>
+    <h3>The b2 question</h3>
+    <div class="metaphor">Every house has a back door. Know where yours is.</div>
+    <div class="story">
+      <p>When the bishop leaves c1 it takes away the only minor piece that guarded <b>b2</b>. Black's most popular plan against the London (...c5 plus ...Qb6) knocks on exactly that door, hitting b2 and d4 at once.</p>
+      <p>Two ways to answer. The calm way: guard it with <b>Qb3</b> (offering a queen trade), <b>Qc1</b> or Qc2. The cheeky way: leave it and make the pawn poisonous. When Black's queen goes to b2 she's far from home, and the square <b>c7</b> becomes a fork square for your knight.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>A grabbed pawn costs the grabber <b>time and distance</b>: a queen on b2 or a2 can be chased (Rb1) and is far from her king. But punishing the grab needs a target. Look for <b>c7</b>: if it's unguarded, Nb5 or Nxd5 threatens Nc7+, forking king and rook.</p></div>
+    <div class="tells">
+      <div>...c5 and ...Qb6 on the board: decide now. Guard (Qb3/Qc1) or gambit (Nc3)?</div>
+      <div>Black's queen on b2: Rb1 hits it with tempo.</div>
+      <div>Is c7 guarded? If not, a knight on b5 or d5 forks.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="l-b2"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">When does the knight-to-c7 trick NOT work?</div><div class="tap">tap to reveal</div>
+      <div class="a">When <b>c7 is guarded</b>. Stockfish shows it clearly: after 1.d4 Nf6 2.Bf4 c5 3.e3 Qb6 4.Nc3 Qxb2, Black has no pawn on d5 yet, so ...Nd5 can come back to guard c7 and the trick only equalises. With the pawn on d5, the knight can't get to d5, and the trick wins. Same idea, different board: always check the fork square.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 4 ============================ -->
+<section class="lesson" id="keep" style="--c:var(--linec)">
+  <div class="wrap">
+    <div class="kick">Idea 04 · guard the house</div>
+    <h3>Keep the bishop, or take the h-file</h3>
+    <div class="metaphor">If someone takes your bicycle, at least make them leave the gate open.</div>
+    <div class="story">
+      <p>The f4-bishop is the London's main character, so Black spends a lot of energy trying to remove it: ...Bd6 offering a trade, or ...Nh5 chasing it. You don't have to panic. Step back to g3 (or h2, after h3) and keep it on the same diagonal.</p>
+      <p>And if Black does take it on g3? Recapture <b>hxg3</b>. Your pawns look ugly, but the h-file is now open, your rook on h1 points straight at h7, and Black's castled king has a new problem.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Every trade changes the structure, so ask what the recapture gives <i>you</i>. hxg3 trades a bishop for an open file aimed at the enemy king. That's why London players often delay castling short: the rook on h1 might be more useful staying where it is.</p></div>
+    <div class="tells">
+      <div>...Bd6: answer Bg3, keeping the diagonal.</div>
+      <div>...Nh5: the bishop needs a safe square (g3 or h2). An early h3 prepares h2.</div>
+      <div>...Bxg3: recapture hxg3 and look at h7.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="l-keep"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">After ...Bxg3, why recapture with the h-pawn and not the f-pawn?</div><div class="tap">tap to reveal</div>
+      <div class="a">hxg3 opens the <b>h-file</b> toward Black's king and keeps your f-pawn free for f4 or e3-e4 ideas. fxg3 opens the f-file but leaves e3 a lonely, backward pawn. The doubled g-pawns after hxg3 sound bad, but they control f4 and h4 and can even advance (Carlsen's g3-g4 in the famous games below).</div></div>
+  </div>
+</section>
+
+<!-- ============================ 5 ============================ -->
+<section class="lesson" id="kid" style="--c:var(--linec)">
+  <div class="wrap">
+    <div class="kick">Idea 05 · guard the house</div>
+    <h3>Against the fianchetto (King's Indian setup)</h3>
+    <div class="metaphor">Before you answer a knock at the door, count who's outside.</div>
+    <div class="story">
+      <p>Some opponents don't play ...d5 at all. They put a bishop on g7, a pawn on d6, and wait to hit you with <b>...e5</b>, gaining the centre and attacking your bishop at the same time.</p>
+      <p>The London's answer is a few quiet, wise moves: h3 to give the bishop a safe square on h2, a modest Be2, and castling. Then when ...e5 comes, you <b>count</b> before you react.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>A pawn break is a <b>counting problem</b>. Your f4-bishop and f3-knight both hit e5. If Black plays ...e5 with fewer defenders than you have attackers, dxe5 wins a pawn. If he has prepared it properly (...Nbd7, ...Re8, ...Qe7), retreat with Bh2 and keep the pressure.</p></div>
+    <div class="tells">
+      <div>...g6 and ...Bg7: play h3 early, so the bishop has h2.</div>
+      <div>Be2, not Bd3: on d3 the bishop gets hit by ...e5-e4.</div>
+      <div>...e5 on the board: count attackers and defenders before retreating.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="l-kid"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Why is the "book move" Bh2 sometimes a mistake after ...e5?</div><div class="tap">tap to reveal</div>
+      <div class="a">Because books describe the <i>prepared</i> ...e5. When Black pushes it early, with e5 attacked twice and defended once, Stockfish prefers <b>dxe5</b>, winning a pawn by simple counting. Books give you the plan; counting tells you if the plan applies right now. The Arena has an example.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 6 ============================ -->
+<section class="lesson" id="battery" style="--c:var(--clock)">
+  <div class="wrap">
+    <div class="kick">Idea 06 · strike from the house</div>
+    <h3>The h7 battery</h3>
+    <div class="metaphor">The guard on h7 has one friend. Watch the friend.</div>
+    <div class="story">
+      <p>Your bishop on d3 has stared at h7 since move 8. Your queen can join it from c2 or h5, and after hxg3 your rook stares at it from h1. In most games nothing happens, because Black's knight on f6 guards h7.</p>
+      <p>But knights like to move. The instant it leaves f6 (to d7, e4, or anywhere), h7 might be left with no defender at all, and the most famous sacrifice in chess appears: <b>Bxh7+</b>, the Greek gift.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>A battery is two or more pieces on one line. h7 is defended only by the king and the f6-knight, so when that knight moves, <b>count the battery</b>. Bishop plus queen (or plus the h-file rook) against the king alone usually means a sacrifice is worth calculating.</p></div>
+    <div class="tells">
+      <div>The black knight just left f6.</div>
+      <div>Your queen can reach h5 or the h-file fast, or your rook is already on h1.</div>
+      <div>A white knight can jump to g5 or e5 to join the attack.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="l-battery"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Name three conditions that make Bxh7+ work.</div><div class="tap">tap to reveal</div>
+      <div class="a">(1) <b>No knight on f6</b> guarding h7. (2) <b>Fast reinforcements</b>: a knight to g5 or e5, and a queen to h5, or a rook already on the h-file. (3) Black can't easily cover g5 or the h-file (no dark-squared bishop on e7, say). Missing one condition? Calculate carefully. Missing two? Don't sacrifice.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 7 ============================ -->
+<section class="lesson" id="mirror" style="--c:var(--clock)">
+  <div class="wrap">
+    <div class="kick">Idea 07 · strike from the house</div>
+    <h3>Against the mirror (...Bf5)</h3>
+    <div class="metaphor">When someone copies your homework, ask what they skipped.</div>
+    <div class="story">
+      <p>The London's trick is getting the bishop outside the pawn chain. So a clever opponent just copies it: 2...Bf5, and now <i>his</i> problem bishop is free too. It's the most annoying reply there is.</p>
+      <p>You can't out-copy a copier, so you change the subject. Either <b>trade his copy</b> with Bd3, or attack what his bishop left behind: with the bishop gone from c8, the pawn on <b>b7</b> has lost a guard, and c4 plus Qb3 hits it.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Every move leaves something behind. When a piece leaves home, the squares and pawns it used to protect become a little weaker. Against the mirror, the weak spots are b7 and the long-term light squares.</p></div>
+    <div class="tells">
+      <div>Black's bishop is on f5: offer the trade with Bd3.</div>
+      <div>Bishop gone from c8: is b7 hanging after c4 and Qb3?</div>
+      <div>Locked centre after ...c4: play a4-a5 on the queenside (Carlsen vs Giri).</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="l-mirror"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Black played ...Bf5, ...e6 and ...Nd7, but not ...Qb6 or ...Qc8. You've played c4 and Qb3. What do you check first?</div><div class="tap">tap to reveal</div>
+      <div class="a"><b>b7.</b> The bishop that guarded it is on f5, the knight on d7 doesn't guard it, and the queen on d8 doesn't either. If Qxb7 doesn't walk into a trap, it's a free pawn. There's an Arena puzzle on exactly this.</div></div>
+  </div>
+</section>
+
+<!-- ============================ MIDDLEGAME RADAR ============================ -->
+<section class="block" id="radar" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">MIDDLEGAME RADAR</div>
+      <h2>"When you see this, think that."</h2>
+      <p>The London's middlegames repeat themselves, which is its biggest gift to a hobby player. Keep these ideas on your radar during a game.</p>
+    </div>
+  </div>
+  <div class="wide">
+    <div class="radar">
+      <div class="r" style="--c:var(--clock)"><span class="if">If the f6 knight moves</span><b>Look at h7.</b><p>Count bishop + queen (or h-file rook) against the king. Bxh7+ might be on.</p></div>
+      <div class="r" style="--c:var(--linec)"><span class="if">If ...Bxg3 is played</span><b>hxg3, and don't rush to castle.</b><p>The rook on h1 is aimed at h7. Castle later, or even long.</p></div>
+      <div class="r" style="--c:var(--guard)"><span class="if">If your knight sits on e5 untouched</span><b>f4, then Qf3 / Rf3-h3 / g4.</b><p>The Stonewall attack. Bring pieces toward the king one at a time.</p></div>
+      <div class="r" style="--c:var(--guard)"><span class="if">If Black's knight lands on e4</span><b>Trade it, then count.</b><p>Bd3 and Qf3 often win the e4 pawn after Nxe4 dxe4.</p></div>
+      <div class="r" style="--c:var(--linec)"><span class="if">If ...c5 and ...Qb6 appear</span><b>Guard b2 or punish the grab.</b><p>Qb3, Qc1 or Qc2. If the queen takes b2: Rb1 and knight jumps to c7.</p></div>
+      <div class="r" style="--c:var(--linec)"><span class="if">If ...e5 hits your bishop</span><b>Count e5 first.</b><p>More attackers than defenders: dxe5. Otherwise Bh2 (after h3) and keep the pressure.</p></div>
+      <div class="r" style="--c:var(--clock)"><span class="if">If Black locks with ...c4</span><b>Play on the wings.</b><p>a4-a5 to open the a-file, or e3-e4 to open the centre.</p></div>
+      <div class="r" style="--c:var(--clock)"><span class="if">If Black piles onto the kingside</span><b>Break in the centre.</b><p>c3-c4 or e3-e4 opens a new front while his pieces are busy (Carlsen's 18.c4).</p></div>
+      <div class="r" style="--c:var(--clock)"><span class="if">If Black copies with ...Bf5</span><b>Bd3, or c4 + Qb3.</b><p>Trade the copied bishop, or go after b7, the pawn it stopped guarding.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAMOUS GAMES ============================ -->
+<section class="block" id="games-sec" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">CARLSEN'S LONDON · TWO FAMOUS GAMES</div>
+      <h2>The world champion builds the same house.</h2>
+      <p>Step through both games move by move. Almost every idea from the seven lessons shows up, and that's the point: the London keeps reaching the same kind of positions.</p>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="g-ghaem"></div></div>
+  <p class="gameintro">Next: what Carlsen does when the opponent refuses everything and copies his bishop.</p>
+  <div class="wide"><div data-hero="g-giri"></div></div>
+</section>
+
+<!-- ============================ ARENA ============================ -->
+<section class="block" id="arena-sec" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">THE ARENA · NEW POSITIONS</div>
+      <h2>You've never seen these positions.<br>You've seen every idea.</h2>
+      <p>Every puzzle comes from a London move order that doesn't appear in the lessons. Each can be solved using one of the seven ideas, and Stockfish checked every step (equally good moves are accepted). Tap a piece, then its destination. The hint button shows the idea first.</p>
+    </div>
+  </div>
+  <div class="wide">
+    <div class="scoreline" id="arenaScore"></div>
+    <div class="toolbar"><button class="btn small ghost" id="arenaShuffle" type="button">🔀 Shuffle</button><button class="btn small ghost" id="arenaReset" type="button">Reset progress</button></div>
+    <div class="deck" id="arenaDeck"></div>
+    <div class="viewer" id="arena">
+      <div><div class="vb" id="arenaBoard"></div></div>
+      <div class="vt">
+        <div class="title" id="arenaTitle"></div>
+        <div class="src" id="arenaSrc"></div>
+        <div class="task" id="arenaTask"></div>
+        <div class="choices" id="arenaChoices"></div>
+        <div class="status" id="arenaStatus"></div>
+        <div class="ctrls">
+          <button id="arenaHint" type="button">💡 Hint</button>
+          <button id="arenaSolve" type="button">Show solution</button>
+          <button id="arenaRetry" type="button">↺ Retry</button>
+          <button id="arenaNext" class="main" type="button">Next puzzle ▶</button>
+        </div>
+        <div class="narr" id="arenaLog" style="min-height:0"></div>
+        <div class="why" id="arenaWhy"><div class="lbl">Why it worked</div><div id="arenaWhyT"></div></div>
+        <div id="arenaName"></div>
+      </div>
+    </div>
+    <div class="pagenav"><a class="btn ghost" href="./">⚔️ Tactics: the story</a><a class="btn ghost" href="middlegame.html">🗺️ Strategy: the story</a><a class="btn ghost" href="../">← Field Notes</a></div>
+  </div>
+</section>
+
+<footer>
+  Lesson lines and famous games are replayed move by move through a rules engine. Lesson lines were sanity-checked and every arena step was verified with Stockfish 16.<br>
+  Game scores: Carlsen–Ghaem Maghami (Baku Olympiad 2016) and Carlsen–Giri (Bilbao 2016), as published by ChessBase and The Spectator. Pieces: "cburnett" set by Colin M.L. Burnett, CC BY-SA 3.0, via lichess.org.
+</footer>
+
+<script src="board.js"></script>
+<script src="london-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
