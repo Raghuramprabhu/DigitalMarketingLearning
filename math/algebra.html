@@ -54,7 +54,8 @@
     <a href="#act3"><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="n">ACT III · WEEK 2</span><b>Two Unknowns</b><small>The canteen menu vanished. Two receipts remain.</small></a>
     <a href="#act4"><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="n">ACT IV · WEEK 3</span><b>The Square</b><small>Dad's garden, a tiler's puzzle, a tiffin price.</small></a>
     <a href="#act5"><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="n">ACT V · WEEK 4</span><b>Growth</b><small>Grandpa's chessboard, and a home-loan letter.</small></a>
-    <a href="#arena"><span class="n">FINALE</span><b>The Arena</b><small>Fresh real-life problems, every time.</small></a>
+    <a href="#quest"><span class="n">FINALE</span><b>The Quest</b><small>Five playgrounds. Solve step by step.</small></a>
+    <a href="#arena"><span class="n">PRACTICE</span><b>The Arena</b><small>Fresh real-life problems, every time.</small></a>
   </div>
 </section>
 
@@ -101,10 +102,10 @@
       <div class="msg" id="scale-msg"></div>
     </div>
 
-    <div class="twist reveal" data-twist>
+    <div class="twist pz reveal">
       <div class="q">At school you were told: "move +30 to the other side and it becomes −30." What's really happening?</div>
-      <div class="tap">tap to reveal</div>
-      <div class="a">Nothing moves. You <b>subtract 30 from both sides</b>. On the left, +30 − 30 vanishes. On the right, the −30 is what you subtracted. The "move and flip the sign" shortcut works, but it hides the scale. When you get confused, go back to the scale: whatever you do, do it to both sides.</div>
+      <div class="tap">🔍 See it step by step</div>
+      <ol class="psrc"><li><span class="e">15<span class="vx">x</span> + 30 = 150</span>Start with Kavya's balance.</li><li><span class="e">15<span class="vx">x</span> + 30 <span class="veq">− 30</span> = 150 <span class="veq">− 30</span></span>Subtract 30 from <b>both</b> sides. Nothing moves: both pans simply lose 30.</li><li><span class="e">15<span class="vx">x</span> = 120</span>On the left, +30 − 30 cancels to nothing. On the right, 150 − 30 = 120. The "−30" on the right is the 30 you removed from that side too.</li></ol><div class="psrc pans"><b>Nothing ever "moves across".</b> "Move it and flip the sign" is just a shortcut for "do the same thing to both sides". When you get confused, go back to the scale.</div>
     </div>
 
     <div class="sub reveal">
@@ -113,12 +114,12 @@
       <p>Tap each card. Try the equation in your head before you look.</p>
     </div>
     <div class="cases reveal">
-      <div class="case"><div class="ic">🏷️</div><h4>Tuesday: the sale tag</h4><p>"20% off!" Kavya paid ₹960 for a kurta. What was the original price?</p><div class="tap">tap to solve</div>
-        <div class="sol"><span class="eqn"><span class="vx">x</span> − 0.2<span class="vx">x</span> = 960</span>That's 0.8<span class="vx">x</span> = 960, so <b><span class="vx">x</span> = ₹1,200</b>. (Not ₹960 + 20% = ₹1,152. The 20% was of the <i>bigger</i> number.)</div></div>
-      <div class="case"><div class="ic">🍽️</div><h4>Wednesday: the dinner split</h4><p>Five friends split the bill equally. Kavya also left a ₹100 tip herself, and paid ₹420 in all. What was the bill?</p><div class="tap">tap to solve</div>
-        <div class="sol"><span class="eqn"><span class="vx">x</span>/5 + 100 = 420</span>Remove 100 from both sides: <span class="vx">x</span>/5 = 320. Multiply both by 5: <b><span class="vx">x</span> = ₹1,600</b>.</div></div>
-      <div class="case"><div class="ic">🌡️</div><h4>Thursday: the fever</h4><p>Her thermometer says 102 °F. The doctor asks in Celsius. (F = 1.8 C + 32)</p><div class="tap">tap to solve</div>
-        <div class="sol"><span class="eqn">1.8<span class="vx">C</span> + 32 = 102</span>1.8<span class="vx">C</span> = 70, so <b><span class="vx">C</span> ≈ 38.9 °C</b>.</div></div>
+      <div class="case pz" data-answer="1200" data-unit="₹"><div class="ic">🏷️</div><h4>Tuesday: the sale tag</h4><p>"20% off!" Kavya paid ₹960 for a kurta. What was the original price?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">original price = <span class="vx">x</span></span>Name the unknown. Call the original price x.</li><li><span class="e"><span class="vx">x</span> − 0.2<span class="vx">x</span> = 960</span>20% off means she paid x minus 20% of x.</li><li><span class="e">0.8<span class="vx">x</span> = 960</span>x − 0.2x is 0.8x (one whole minus 0.2).</li><li><span class="e"><span class="vx">x</span> = 960 ÷ 0.8 = 1,200</span>Divide both sides by 0.8.</li></ol><div class="psrc pans"><b>₹1,200.</b> The trap: adding 20% to ₹960 gives ₹1,152, which is wrong, because the 20% was taken off the <i>bigger</i> original price.</div></div>
+      <div class="case pz" data-answer="1600" data-unit="₹"><div class="ic">🍽️</div><h4>Wednesday: the dinner split</h4><p>Five friends split the bill equally. Kavya also left a ₹100 tip herself, and paid ₹420 in all. What was the bill?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">each share = <span class="vx">x</span>/5</span>Call the bill x. Each of the 5 friends pays x/5.</li><li><span class="e"><span class="vx">x</span>/5 + 100 = 420</span>Kavya paid her share plus the ₹100 tip.</li><li><span class="e"><span class="vx">x</span>/5 = 320</span>Balance: remove 100 from both sides.</li><li><span class="e"><span class="vx">x</span> = 320 × 5 = 1,600</span>Multiply both sides by 5.</li></ol><div class="psrc pans"><b>₹1,600.</b> Check: 1,600 ÷ 5 = 320, plus 100 = 420 ✓</div></div>
+      <div class="case pz" data-answer="38.9" data-unit="°C" data-tol="0.15"><div class="ic">🌡️</div><h4>Thursday: the fever</h4><p>Her thermometer says 102 °F. The doctor asks in Celsius. (F = 1.8 C + 32)</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">102 = 1.8<span class="vx">C</span> + 32</span>Put F = 102 into the formula.</li><li><span class="e">70 = 1.8<span class="vx">C</span></span>Balance: remove 32 from both sides.</li><li><span class="e"><span class="vx">C</span> = 70 ÷ 1.8 ≈ 38.9</span>Divide both sides by 1.8.</li></ol><div class="psrc pans"><b>≈ 38.9 °C</b>, a real fever (normal is about 37 °C).</div></div>
     </div>
 
     <div class="recall-h">🧠 Recall before you scroll on</div>
@@ -186,10 +187,10 @@
       <p>Her zig-zag day comes to 26 km. Cab: ₹518. Scooter: ₹328. She saved ₹190, and now she knows the rule: <b>under ~13 km, cab; over it, scooter.</b> Her colleague and her mother were each right, on different days.</p>
     </div>
 
-    <div class="twist reveal" data-twist>
+    <div class="twist pz reveal" data-answer="-40" data-unit="°">
       <div class="q">Celsius and Fahrenheit are both lines. Is there a temperature where they show the same number?</div>
-      <div class="tap">tap to reveal</div>
-      <div class="a">Set them equal: <span class="eqn"><span class="vx">C</span> = 1.8<span class="vx">C</span> + 32 → −0.8<span class="vx">C</span> = 32 → <span class="vx">C</span> = −40</span> At <b>−40°</b>, both thermometers agree. Two lines, one crossing point: the same idea as the cab and the scooter.</div>
+      <div class="tap">🔍 Solve it step by step</div>
+      <ol class="psrc"><li><span class="e">F = <span class="vx">x</span> and C = <span class="vx">x</span></span>"Same number on both" means F = C. Call that number x.</li><li><span class="e"><span class="vx">x</span> = 1.8<span class="vx">x</span> + 32</span>Put x in for both F and C in F = 1.8C + 32.</li><li><span class="e"><span class="vx">x</span> − 1.8<span class="vx">x</span> = 32</span>Balance: remove 1.8x from both sides.</li><li><span class="e">−0.8<span class="vx">x</span> = 32</span>x − 1.8x = −0.8x.</li><li><span class="e"><span class="vx">x</span> = 32 ÷ (−0.8) = −40</span>Divide both sides by −0.8.</li></ol><div class="psrc pans"><b>−40°.</b> Check: 1.8 × (−40) + 32 = −72 + 32 = −40 ✓. Two lines, one crossing point: the same idea as the cab and the scooter.</div>
     </div>
 
     <div class="callout reveal">
@@ -336,19 +337,19 @@
       <div class="msg" id="fence-msg"></div>
     </div>
 
-    <div class="twist reveal" data-twist>
+    <div class="twist pz reveal">
       <div class="q">Why is a negative times a negative a positive?</div>
-      <div class="tap">tap to reveal</div>
-      <div class="a">Think of "× negative" as <b>taking away</b>. Say Kavya carries three ₹500 late fees (−500 each). The office <b>cancels</b> them: it removes (−3) of the (−500) debts. Her balance goes <b>up</b> by ₹1,500. So (−3) × (−500) = +1,500. Removing a bad thing is a good thing.</div>
+      <div class="tap">🔍 See it step by step</div>
+      <ol class="psrc"><li><span class="e">3 × (−500) = −1,500</span>Kavya carries three ₹500 late fees. Each is a debt: −500. Three of them: −1,500.</li><li><span class="e">(−3) × (−500)</span>The office <b>cancels</b> them. "× negative" means <i>taking away</i>: remove three copies of the debt.</li><li><span class="e">(−3) × (−500) = +1,500</span>Taking away ₹1,500 of debt leaves her ₹1,500 better off.</li></ol><div class="psrc pans"><b>Negative × negative = positive</b>: removing a bad thing is a good thing.</div>
     </div>
 
     <div class="cases reveal">
-      <div class="case"><div class="ic">🍱</div><h4>Mum's tiffin business</h4><p>At ₹80 she sells 50 tiffins a day. Every ₹1 she adds loses half a customer. Best price?</p><div class="tap">tap to solve</div>
-        <div class="sol">Raise by <span class="vx">p</span>: revenue = (80 + <span class="vx">p</span>)(50 − 0.5<span class="vx">p</span>). It's a parabola whose peak is at <span class="vx">p</span> = 10. Charge <b>₹90</b>: 45 tiffins, ₹4,050 a day, more money for less cooking.</div></div>
-      <div class="case"><div class="ic">🚗</div><h4>Braking distance</h4><p>Kavya's brother doubles his speed from 40 to 80 km/h. How much longer to stop?</p><div class="tap">tap to solve</div>
-        <div class="sol">Braking distance grows with <b>speed²</b>. Double the speed → 2² = <b>4× the distance</b>. That's why 80 in a 40 zone isn't "twice" as risky. It's x² on the road.</div></div>
-      <div class="case"><div class="ic">🧮</div><h4>The formula, finally</h4><p>Do the tile trick once, for <i>every</i> equation of the form ax² + bx + c = 0…</p><div class="tap">tap to see</div>
-        <div class="sol"><span class="eqn"><span class="vx">x</span> = (−b ± √(b² − 4ac)) / 2a</span>The famous school formula is just the tile-rearranging trick done in general. The ± is because a square has two square roots: one positive, one negative.</div></div>
+      <div class="case pz" data-answer="90" data-unit="₹"><div class="ic">🍱</div><h4>Mum's tiffin business</h4><p>At ₹80 she sells 50 tiffins a day. Every ₹1 she adds loses half a customer. Best price?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">price = 80 + <span class="vx">p</span></span>Raise the price by p rupees.</li><li><span class="e">sales = 50 − 0.5<span class="vx">p</span></span>Every ₹1 loses half a customer.</li><li><span class="e">R = (80 + <span class="vx">p</span>)(50 − 0.5<span class="vx">p</span>)</span>Revenue = price × sales: x meets itself, so it's a parabola.</li><li><span class="e">zeros: <span class="vx">p</span> = −80 and <span class="vx">p</span> = 100</span>Revenue is zero if tiffins are free (p = −80) or if nobody buys (p = 100).</li><li><span class="e"><span class="vx">p</span> = (−80 + 100) ÷ 2 = 10</span>A parabola peaks exactly halfway between its zeros.</li><li><span class="e">R = 90 × 45 = ₹4,050</span>Price ₹90, sales 45. (Today: 80 × 50 = ₹4,000.)</li></ol><div class="psrc pans"><b>₹90.</b> More money, and five fewer tiffins to cook.</div></div>
+      <div class="case pz" data-answer="4" data-unit="×"><div class="ic">🚗</div><h4>Braking distance</h4><p>Kavya's brother doubles his speed from 40 to 80 km/h. How many times longer to stop?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">d grows like v²</span>Braking distance grows with the <b>square</b> of speed (the energy to get rid of is ½mv²).</li><li><span class="e">(2v)² = 4v²</span>Double the speed: (2v)² = 4 × v².</li><li><span class="e">d → 4 × d</span>So the braking distance becomes four times as long.</li></ol><div class="psrc pans"><b>4×.</b> If a car needs 10 m to brake at 40 km/h, it needs about 40 m at 80. That's x² on the road.</div></div>
+      <div class="case pz"><div class="ic">🧮</div><h4>The formula, finally</h4><p>Do the tile trick once, for <i>every</i> equation of the form ax² + bx + c = 0.</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">a<span class="vx">x</span>² + b<span class="vx">x</span> + c = 0</span>Start with the general equation.</li><li><span class="e"><span class="vx">x</span>² + (b/a)<span class="vx">x</span> = −c/a</span>Divide both sides by a; remove c from both sides.</li><li><span class="e"><span class="vx">x</span>² + (b/a)<span class="vx">x</span> <span class="veq">+ (b/2a)²</span> = (b/2a)² − c/a</span>Restore: add the missing corner (half of b/a, squared) to both sides.</li><li><span class="e">(<span class="vx">x</span> + b/2a)² = (b² − 4ac) / 4a²</span>The left side is now a perfect square. Tidy the right side.</li><li><span class="e"><span class="vx">x</span> = (−b ± √(b² − 4ac)) / 2a</span>Square-root both sides (± because a square has two roots) and subtract b/2a.</li></ol><div class="psrc pans"><b>The quadratic formula</b> is just the tile trick done once, in general.</div></div>
     </div>
 
     <div class="recall-h">🧠 Recall before you scroll on</div>
@@ -404,12 +405,12 @@
     </div>
 
     <div class="cases reveal">
-      <div class="case"><div class="ic">⏳</div><h4>The rule of 72</h4><p>How long until something doubles at r% a year? Exactly: log 2 ÷ log(1 + r). In your head:</p><div class="tap">tap to see</div>
-        <div class="sol"><span class="eqn">years to double ≈ 72 ÷ r</span>FD at 7% → ~10 years. At 12% → ~6 years.</div></div>
-      <div class="case"><div class="ic">🛒</div><h4>Inflation, the silent thief</h4><p>At 6% inflation, when does ₹1 lakh buy only half of what it buys today?</p><div class="tap">tap to solve</div>
-        <div class="sol">72 ÷ 6 = <b>~12 years</b>. (Exactly: log 2 ÷ log 1.06 ≈ 11.9.) Money sitting idle isn't safe; it's shrinking on a schedule.</div></div>
-      <div class="case"><div class="ic">💳</div><h4>Credit-card debt</h4><p>Unpaid card balance at ~3% a month. How fast does it double?</p><div class="tap">tap to solve</div>
-        <div class="sol">3% a month ≈ 42.6% a year compounded. 72 ÷ 42.6 ≈ <b>under 2 years</b>. Exponential growth works against you just as hard as it works for you.</div></div>
+      <div class="case pz"><div class="ic">⏳</div><h4>The rule of 72</h4><p>Why does "72 ÷ rate" tell you how many years money takes to double?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">(1 + r)<sup><span class="vx">n</span></sup> = 2</span>Doubling means start × (1 + r)ⁿ = 2 × start.</li><li><span class="e"><span class="vx">n</span> = log 2 ÷ log(1 + r)</span>The unknown is in the exponent, so take logarithms.</li><li><span class="e"><span class="vx">n</span> ≈ 0.69 ÷ r</span>For small rates, log(1 + r) ≈ r, and log 2 ≈ 0.693 (natural logs).</li><li><span class="e"><span class="vx">n</span> ≈ 69 ÷ (rate in %) → use 72</span>72 is easier: it divides by 2, 3, 4, 6, 8, 9, 12, and it is more accurate for typical rates.</li></ol><div class="psrc pans"><b>Years to double ≈ 72 ÷ rate%.</b> FD at 7% → ~10 years. At 12% → ~6 years.</div></div>
+      <div class="case pz" data-answer="12" data-unit="years" data-tol="0.6"><div class="ic">🛒</div><h4>Inflation, the silent thief</h4><p>At 6% inflation, in how many years does ₹1 lakh buy only half of what it buys today?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">(1.06)<sup><span class="vx">n</span></sup> = 2</span>Prices grow 6% a year. Your money buys half as much once prices double.</li><li><span class="e"><span class="vx">n</span> ≈ 72 ÷ 6 = 12</span>Rule of 72.</li><li><span class="e">exact: log 2 ÷ log 1.06 ≈ 11.9</span>The exact answer agrees.</li></ol><div class="psrc pans"><b>~12 years.</b> Money sitting idle isn't safe; it's shrinking on a schedule.</div></div>
+      <div class="case pz" data-answer="1.95" data-unit="years" data-tol="0.35"><div class="ic">💳</div><h4>Credit-card debt</h4><p>An unpaid card balance grows ~3% a month. In about how many years does it double?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">(1.03)<sup>12</sup> ≈ 1.426</span>3% a month compounds 12 times a year: debt × 1.426 every year, i.e. 42.6% a year.</li><li><span class="e">72 ÷ 42.6 ≈ 1.7 years</span>Rule of 72 estimate (it runs a little low at high rates).</li><li><span class="e">exact: log 2 ÷ log 1.03 ≈ 23.4 months</span>The exact answer: about 1.95 years.</li></ol><div class="psrc pans"><b>Under 2 years.</b> Exponential growth works against you just as hard as it works for you.</div></div>
     </div>
 
     <div class="scene reveal">
@@ -424,10 +425,8 @@
       <p>Borrow <span class="vn">P</span> at monthly rate <span class="vn">r</span> for <span class="vn">n</span> months. Find the fixed monthly payment <span class="vx">E</span> that brings the balance to exactly zero. Tap each step.</p>
     </div>
     <div class="cases reveal" id="emi-derive" style="grid-template-columns:1fr">
-      <div class="case"><h4>① What happens each month?</h4><div class="tap">tap</div><div class="sol">The balance grows by interest, then the EMI is subtracted: <span class="eqn">B<sub>next</sub> = B × (1 + r) − <span class="vx">E</span></span></div></div>
-      <div class="case"><h4>② Unroll all n months</h4><div class="tap">tap</div><div class="sol">Each EMI paid also "would have grown" until the end. For the loan to hit zero, the loan grown for n months must equal all the EMIs grown to the end: <span class="eqn">P(1+r)<sup>n</sup> = <span class="vx">E</span> [ (1+r)<sup>n−1</sup> + … + (1+r) + 1 ]</span></div></div>
-      <div class="case"><h4>③ The cancel-the-middle trick</h4><div class="tap">tap</div><div class="sol">Call the bracket S with q = 1+r: S = 1 + q + … + q<sup>n−1</sup>. Multiply by q: qS = q + … + q<sup>n</sup>. Subtract one from the other and everything in the middle cancels (the Balance move again!): <span class="eqn">qS − S = q<sup>n</sup> − 1  →  S = (q<sup>n</sup> − 1) / r</span></div></div>
-      <div class="case"><h4>④ Solve for E</h4><div class="tap">tap</div><div class="sol"><span class="eqn"><span class="vx">E</span> = P · r · (1+r)<sup>n</sup> / ((1+r)<sup>n</sup> − 1)</span>That's the formula behind every home, car and personal loan in India. Kavya plugs in her numbers: ₹26,992. The bank was honest. Now let's see where it goes.</div></div>
+      <div class="case pz"><div class="ic">🏦</div><h4>Build the EMI formula</h4><p>Borrow P at monthly rate r for n months. Find the EMI E that brings the balance to exactly zero.</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">B<sub>next</sub> = B × (1 + r) − <span class="vx">E</span></span><b>Each month:</b> the balance grows by interest, then the EMI is subtracted.</li><li><span class="e">P(1+r)<sup>n</sup> = <span class="vx">E</span> [ (1+r)<sup>n−1</sup> + … + (1+r) + 1 ]</span><b>Unroll n months.</b> For the loan to hit zero, the loan grown for n months must equal every EMI grown to the end.</li><li><span class="e">S = 1 + q + … + q<sup>n−1</sup>   and   qS = q + … + q<sup>n</sup></span><b>The cancel-the-middle trick.</b> Call the bracket S, with q = 1 + r. Multiply it by q.</li><li><span class="e">qS − S = q<sup>n</sup> − 1  →  S = (q<sup>n</sup> − 1) / r</span>Subtract: every middle term cancels (the Balance move again!).</li><li><span class="e"><span class="vx">E</span> = P · r · (1+r)<sup>n</sup> / ((1+r)<sup>n</sup> − 1)</span><b>Solve for E</b>: divide both sides by S.</li><li><span class="e">P = 30,00,000 · r = 0.0075 · n = 240 → E ≈ ₹26,992</span>Kavya's numbers.</li></ol><div class="psrc pans"><b>E = P·r·(1+r)ⁿ / ((1+r)ⁿ − 1)</b>: the formula behind every home, car and personal loan. ₹26,992: the bank was honest.</div></div>
     </div>
 
     <div class="sub reveal">
@@ -449,10 +448,10 @@
       <div class="msg" id="emi-msg"></div>
     </div>
 
-    <div class="twist reveal" data-twist>
+    <div class="twist pz reveal">
       <div class="q">Why do early EMIs barely dent the loan, and why does prepaying early help so much?</div>
-      <div class="tap">tap to reveal</div>
-      <div class="a">Interest is charged on the <b>remaining balance</b>, which is biggest at the start. The EMI is fixed, so in the early years interest eats most of it. Every rupee prepaid early removes that rupee's interest for <i>every remaining month</i>: exponential growth working for you instead of the bank. Slide "extra / month" above and watch the years vanish.</div>
+      <div class="tap">🔍 See it step by step</div>
+      <ol class="psrc"><li><span class="e">interest = balance × r</span>Interest is charged on the <b>remaining balance</b>.</li><li><span class="e">30,00,000 × 0.0075 = ₹22,500</span>Month 1 on Kavya's loan: ₹22,500 of interest.</li><li><span class="e">26,992 − 22,500 = ₹4,492</span>So only ₹4,492 of the first EMI actually reduces the loan.</li><li><span class="e">small cut → balance stays big → interest stays big</span>The balance falls slowly, so interest stays high for years. That's the red in the chart.</li><li><span class="e">prepay ₹1 now → no interest on it, every remaining month</span>A rupee prepaid early stops earning interest for the bank in <i>every</i> remaining month. Compounding now works for you.</li></ol><div class="psrc pans"><b>Interest is front-loaded</b>, so early prepayment has the biggest effect. Slide "extra / month" above and watch the years vanish.</div>
     </div>
 
     <div class="scene reveal">
@@ -474,13 +473,27 @@
   </div>
 </section>
 
-<!-- ============================ ARENA ============================ -->
-<section class="act" id="arena" data-act="5">
+<!-- ============================ QUEST ============================ -->
+<section class="act" id="quest" data-act="5">
   <div class="wrap">
     <div class="act-head reveal">
-      <div class="num">FINALE</div>
+      <div class="num">FINALE · THE QUEST</div>
+      <h2>Five stations. Your moves.</h2>
+      <p>Each station is a playground. You solve a fresh problem one step at a time by choosing your next move. Wrong choices aren't failures: each one shows <i>why</i> it doesn't work. Finish with no slips for ⭐⭐⭐.</p>
+    </div>
+    <div class="qmap reveal" id="qmap"></div>
+    <div class="stage reveal" id="stage"></div>
+    <div class="cert" id="cert"></div>
+  </div>
+</section>
+
+<!-- ============================ ARENA ============================ -->
+<section class="act" id="arena" data-act="6">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">FREE PRACTICE</div>
       <h2>The Arena</h2>
-      <p>Fresh real-life problems, generated every time, so you can't memorise them. Pick a level or go mixed. Write the equation <i>before</i> you calculate.</p>
+      <p>Finished the Quest? Here's endless practice: fresh real-life problems, generated every time, so you can't memorise them. Type your answer, then open the step-by-step solution to compare.</p>
     </div>
     <div class="arena-card reveal" id="ar">
       <div class="arena-top">
@@ -494,7 +507,7 @@
         <span class="unit" id="ar-unit"></span>
         <button class="btn small" id="ar-check">Check</button>
         <button class="btn small ghost" id="ar-hint">💡 Hint</button>
-        <button class="btn small ghost" id="ar-show">Show solution</button>
+        <button class="btn small ghost" id="ar-show">🔍 Step-by-step solution</button>
         <button class="btn small teal" id="ar-new">New problem →</button>
       </div>
       <div class="hint" id="ar-hintbox"></div>
