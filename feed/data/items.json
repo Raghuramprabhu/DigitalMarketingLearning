@@ -1,6 +1,331 @@
 {
- "updated": "2026-11-15T02:15:29+00:00",
+ "updated": "2026-11-15T17:21:19+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try answering before you peek. Pulling an answer out of memory strengthens it more than re-reading does.",
+   "q": "1) How far away were Euclid's record quasars, in redshift? 2) What does Arrays.asList refuse to do? 3) Who coined 'software' in print?",
+   "a": "1) About 7.77 and 7.69. 2) Grow or shrink: add() and remove() throw. 3) John Tukey, in 1958.",
+   "edition": "2026-11-15-pm",
+   "order": 29,
+   "id": "2026-11-15-pm-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Filter, refilled",
+   "body": "The decoction drips through the night,\none patient brown bead at a time.\nNo one is watching.\nThat's how the best things are made:\nslowly, in the dark,\nready by morning.",
+   "edition": "2026-11-15-pm",
+   "order": 28,
+   "id": "2026-11-15-pm-028"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "There's a word for winter sun: apricity",
+   "body": "'Apricity' means the warmth of the sun in winter. It appears in Henry Cockeram's English dictionary of 1623 and then mostly vanished from use, but it's a lovely word to have for that first sunny patch on a cold morning.",
+   "q": "What does 'apricity' mean?",
+   "a": "The warmth of the sun in winter.",
+   "edition": "2026-11-15-pm",
+   "order": 27,
+   "id": "2026-11-15-pm-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Count-min sketch: counting in a small box",
+   "body": "To count how often millions of different items appear, without a giant map, keep a small grid of counters: a few rows, each with its own hash function. For each item, bump one counter per row. To estimate a count, take the smallest of its counters. Collisions can only add, never subtract, so the answer may run a little high but never low.",
+   "hook": "Wonder: where would 'never too low, sometimes a bit high' be good enough for you?",
+   "edition": "2026-11-15-pm",
+   "order": 26,
+   "id": "2026-11-15-pm-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Think of their virtues",
+   "body": "When thou wishest to delight thyself, think of the virtues of those who live with thee.",
+   "who": "Marcus Aurelius, Meditations 6.48 (tr. George Long)",
+   "edition": "2026-11-15-pm",
+   "order": 25,
+   "id": "2026-11-15-pm-025"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The desperado",
+   "body": "When one of your pieces is going to be captured anyway, it can become a desperado: before it goes, it grabs whatever it can, often with check or with a capture of its own. Before you recapture automatically, check whether the opponent's doomed piece can take something first, and whether yours can.",
+   "q": "What's a desperado in chess?",
+   "a": "A piece that's lost anyway and grabs as much material as it can before it's taken.",
+   "edition": "2026-11-15-pm",
+   "order": 24,
+   "id": "2026-11-15-pm-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first 'software' in print",
+   "body": "The statistician John Tukey is credited with the earliest known published use of 'software' in the computing sense, in a 1958 article in the American Mathematical Monthly. He contrasted it with the 'hardware' of tubes, transistors and wires. A decade earlier he had also coined 'bit'.",
+   "hook": "Wonder: which everyday tech word of today will sound quaint in sixty years?",
+   "edition": "2026-11-15-pm",
+   "order": 23,
+   "id": "2026-11-15-pm-023"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Let the agent fetch tools, not carry them all",
+   "body": "Giving an agent every tool description up front fills its context and blurs its choices. A calmer pattern: keep a short core set always visible, and let the agent search a catalogue for anything else when it needs it. It's how a good workshop works: a few tools on the bench, the rest labelled on the wall.",
+   "q": "What's the downside of loading every tool description into an agent's context at once?",
+   "a": "It fills the context and makes choosing the right tool harder.",
+   "edition": "2026-11-15-pm",
+   "order": 22,
+   "id": "2026-11-15-pm-022"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Name things the way your character would",
+   "body": "A botanist sees 'a neem, a tamarind, two gulmohars'; a tired commuter sees 'trees'. The words you use for objects quietly tell the reader whose eyes we're behind. In a close point of view, let the nouns come from the character's own knowledge, job and mood, and you'll rarely need to say what they're feeling.",
+   "edition": "2026-11-15-pm",
+   "order": 21,
+   "id": "2026-11-15-pm-021"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Andromeda is wider than six full Moons",
+   "body": "To the naked eye, the Andromeda Galaxy is just a faint oval smudge, because you only see its bright core. Long-exposure photos reveal its full disc stretching about three degrees across the sky, roughly six times the width of the full Moon. If its outer glow were bright enough to see, it would be one of the largest things in the night sky.",
+   "hook": "Wonder: what else is up there, large but too faint to notice?",
+   "edition": "2026-11-15-pm",
+   "order": 20,
+   "id": "2026-11-15-pm-020"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Owls can't move their eyes",
+   "body": "An owl's large eyes are tube-shaped and fixed in their sockets, so it can't roll them to glance sideways. Instead it turns its whole head, as far as about 270 degrees, thanks to extra neck vertebrae and blood vessels arranged to keep flowing while it twists.",
+   "q": "Why does an owl turn its head so far?",
+   "a": "Its tube-shaped eyes are fixed in their sockets and can't move.",
+   "edition": "2026-11-15-pm",
+   "order": 19,
+   "id": "2026-11-15-pm-019"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Srirangam's gopuram, finished centuries later",
+   "body": "The base of the great southern gateway tower at Srirangam's Ranganathaswamy Temple was begun centuries ago and then left unfinished. It was completed only in 1987, rising in 13 tiers to about 73 metres, making it one of the tallest temple towers in Asia. Generations walked past a gateway waiting to be finished.",
+   "hook": "Wonder: what's something you started that could still be finished, slowly?",
+   "edition": "2026-11-15-pm",
+   "order": 18,
+   "id": "2026-11-15-pm-018"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The mere-exposure effect",
+   "body": "In studies going back to Robert Zajonc in 1968, people tend to like things more simply because they've seen them before: unfamiliar words, faces, shapes, tunes. The effect is gentle and fades if repetition turns into overload. It's one reason a new piece of music or a new habit often feels better on the fifth try than the first.",
+   "q": "What's the mere-exposure effect?",
+   "a": "We tend to like things more just because we've encountered them before.",
+   "edition": "2026-11-15-pm",
+   "order": 17,
+   "id": "2026-11-15-pm-017"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Keep supplies where the task happens",
+   "body": "If the scissors live in the kitchen but parcels get opened in the hallway, every parcel becomes a small expedition. Buy a second cheap pair, a spare charger, an extra pen, and keep each one where the job actually happens. Removing one walk across the house removes one chance to get sidetracked.",
+   "hook": "Wonder: which object do you most often walk to fetch?",
+   "edition": "2026-11-15-pm",
+   "order": 16,
+   "id": "2026-11-15-pm-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The fortress",
+   "body": "Sometimes the side with less material can build a position the stronger side simply cannot break: the king guards the entry squares, a piece covers the rest, and no pawn can make progress. That's a fortress. When you're worse, ask not 'how do I win this back?' but 'is there a setup where nothing gets in?' Many lost-looking endgames are saved this way.",
+   "hook": "Wonder: what would a fortress look like in a busy week?",
+   "edition": "2026-11-15-pm",
+   "order": 15,
+   "id": "2026-11-15-pm-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Tail latency grows with fan-out",
+   "body": "If a single server answers slowly 1% of the time, that sounds fine. But a request that fans out to 100 servers has to wait for the slowest one: the chance that at least one is slow is 1 − 0.99^100, about 63%. That's why large systems obsess over the 99th percentile, and why Jeff Dean and Luiz Barroso's 2013 'The Tail at Scale' recommends hedged and tied requests.",
+   "q": "With a 1% slow rate per server, about how often does a 100-way fan-out hit at least one slow server?",
+   "a": "About 63% of the time (1 − 0.99^100).",
+   "edition": "2026-11-15-pm",
+   "order": 14,
+   "id": "2026-11-15-pm-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The bangle seller's spare",
+   "body": "Every evening at the temple steps, the bangle seller kept one glass bangle off the stick: a plain green, slightly too big for anyone. Children asked about it; she said it was for later. Tonight a small girl came with her grandmother, whose wrist had grown thin. The green one slid on and stayed. 'Later,' the seller said, and began threading a new spare.",
+   "edition": "2026-11-15-pm",
+   "order": 13,
+   "id": "2026-11-15-pm-013"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Plain keyword search keeps up at picking tools",
+   "body": "A community analysis published on Towards Data Science tested how agents find the right tool from a large catalogue. On a 200-question slice of the ToolRet benchmark, classic BM25 keyword search tied an 8-billion-parameter embedding model while running about 40 times faster on a CPU. Both did worse as the tool pool grew, a reminder that well-described tools matter more than fancy retrieval.",
+   "hook": "Wonder: where in your own stack might a simple method quietly match a heavy one?",
+   "source": {
+    "name": "Towards Data Science",
+    "url": "https://towardsdatascience.com/keyword-search-tied-an-8b-embedding-model-at-picking-agent-tools"
+   },
+   "edition": "2026-11-15-pm",
+   "order": 12,
+   "id": "2026-11-15-pm-012"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Gemini XII, sixty years on",
+   "body": "From 11 to 15 November 1966, Jim Lovell and Buzz Aldrin flew Gemini XII, the last mission of the Gemini programme. Earlier spacewalks had left astronauts exhausted. Aldrin, who had rehearsed underwater, used handholds, foot restraints and frequent rests, and spent about five and a half hours working outside the capsule across three outings. It showed that careful, unhurried work in space was possible, just in time for Apollo.",
+   "q": "What helped Aldrin's Gemini XII spacewalks succeed where earlier ones had tired astronauts out?",
+   "a": "Underwater rehearsal, handholds and foot restraints, and planned rests.",
+   "edition": "2026-11-15-pm",
+   "order": 11,
+   "id": "2026-11-15-pm-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Aim high anyway",
+   "body": "Let every thought you think be a thought of rising. Even if the aim falls short, the aiming is never wasted.",
+   "who": "Thirukkural 596 (own rendering)",
+   "edition": "2026-11-15-pm",
+   "order": 10,
+   "id": "2026-11-15-pm-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Hollerith's census cards",
+   "body": "The 1880 US census took most of a decade to tabulate by hand. For 1890, Herman Hollerith's electric tabulator read punched cards, one per person: a pin passing through a hole closed a circuit and moved a counter dial. The count went far faster. Hollerith's company later merged into the firm that, in 1924, renamed itself IBM.",
+   "q": "How did Hollerith's tabulator 'read' a punched card?",
+   "a": "Pins passed through the holes and closed electric circuits, each advancing a counter.",
+   "edition": "2026-11-15-pm",
+   "order": 9,
+   "id": "2026-11-15-pm-009"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The narwhal's tusk is a tooth",
+   "body": "A narwhal's long, spiralled tusk is not a horn: it's a canine tooth, usually the left one, that grows straight out through the upper lip. It can reach around three metres, and it twists in a left-handed spiral as it grows. Most tusked narwhals are males, though a few females grow one too.",
+   "hook": "Wonder: why might a tooth grow in a spiral rather than straight?",
+   "edition": "2026-11-15-pm",
+   "order": 8,
+   "id": "2026-11-15-pm-008"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Change blindness",
+   "body": "In a 1998 study by Daniel Simons and Daniel Levin, a researcher stopped passers-by to ask for directions. Midway through, two workers carried a door between them, and the researcher was swapped for a different person. About half the people giving directions didn't notice. We see far less detail than it feels like we do; attention, not the eyes, decides what gets stored.",
+   "q": "In the 'door study', roughly what share of people failed to notice they were talking to a new person?",
+   "a": "About half.",
+   "edition": "2026-11-15-pm",
+   "order": 7,
+   "id": "2026-11-15-pm-007"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Giri takes the lead in Group C",
+   "body": "On the penultimate day of the Total Chess pilot in Budapest, Anish Giri beat Abhimanyu Mishra to move to the top of Group C. In Group D, Arjun Erigaisi beat Maxime Vachier-Lagrave, leaving Vachier-Lagrave, Hans Niemann and Erigaisi level at the top, while Alireza Firouzja still leads Group A. Only the four group winners go through to the knockout, so Sunday's final round settles it.",
+   "hook": "Wonder: how differently would you play knowing only first place in your group counts?",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/2026-total-chess-world-championship-tour-pilot-day-5"
+   },
+   "edition": "2026-11-15-pm",
+   "order": 6,
+   "id": "2026-11-15-pm-006"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Thanjavur paintings glow with real gold",
+   "body": "The Thanjavur style of painting flourished under the Nayak and later Maratha rulers of Thanjavur, roughly from the 17th to the 19th century. Artists built up raised relief with a chalk-and-gum paste, then laid thin gold foil over it, so haloes and jewellery catch the light. Some panels are also set with glass beads or stones, and the deep reds, greens and blues around them make the gold seem to float.",
+   "q": "What gives Thanjavur paintings their raised, glowing details?",
+   "a": "A built-up chalk-and-gum relief covered with thin gold foil, sometimes set with beads or stones.",
+   "edition": "2026-11-15-pm",
+   "order": 5,
+   "id": "2026-11-15-pm-005"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Claude helps read Gödel's shorthand notebooks",
+   "body": "Logician Jan von Plato told The Guardian that Claude worked through Kurt Gödel's 1,009 pages of notes, written in the old Gabelsberger shorthand, in a couple of days this autumn. The reading surfaced hundreds of proved results that had never been catalogued, reported as 663 theorems. Scholars still check each one; the AI's job was to make a near-unreadable archive searchable.",
+   "hook": "Wonder: what other notebooks are waiting, unread, in a script few people can still decipher?",
+   "source": {
+    "name": "AI Weekly (citing The Guardian)",
+    "url": "https://aiweekly.co/alerts/von-plato-uses-claude-to-extract-663-theorems-from-gdel-notes"
+   },
+   "edition": "2026-11-15-pm",
+   "order": 4,
+   "id": "2026-11-15-pm-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Sunday, 10 pm",
+   "body": "The week is folded on the chair,\nits sleeves still holding the shape of my arms.\nThe kitchen tap lets go one drop,\nthen thinks better of the next.\nSomewhere a scooter takes the long way home.\nI leave the window open a finger's width\nso tomorrow can find its way in quietly.",
+   "edition": "2026-11-15-pm",
+   "order": 3,
+   "id": "2026-11-15-pm-003"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java: Arrays.asList is fixed-size",
+   "body": "Arrays.asList(a, b, c) gives you a list that is a thin view over an array. You can set() an element (and it writes through to the array), but add() or remove() throws UnsupportedOperationException. If you need a growable list, wrap it: new ArrayList<>(Arrays.asList(...)). If you want a fully unchangeable one, List.of(...) is clearer, and it rejects nulls.",
+   "q": "What happens if you call add() on the list returned by Arrays.asList?",
+   "a": "It throws UnsupportedOperationException, because the list is fixed-size.",
+   "edition": "2026-11-15-pm",
+   "order": 2,
+   "id": "2026-11-15-pm-002"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Turn off the badges",
+   "body": "Those little red number bubbles on app icons are designed to tug at you, and each tug costs a moment of attention. Go through your phone once and switch off badges for everything except the two or three apps where a count really matters. The apps still work; they just stop calling your name.",
+   "hook": "Wonder: which single badge do you check most without needing to?",
+   "edition": "2026-11-15-pm",
+   "order": 1,
+   "id": "2026-11-15-pm-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Euclid finds the most distant quasars yet",
+   "body": "ESA's Euclid telescope has turned up 31 quasars from the early universe, 12 of them at redshift 7 or beyond. Two set new distance records, at redshifts 7.77 and 7.69, edging past the previous record of 7.64 from 2021. Each was already shining as brightly as about a trillion Suns when the universe was roughly 670 million years old, about 5% of its present age.",
+   "q": "Roughly how old was the universe when the light from Euclid's record quasars set out?",
+   "a": "About 670 million years old, around 5% of its current age.",
+   "source": {
+    "name": "ScienceDaily (ESA)",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261112230504.htm"
+   },
+   "edition": "2026-11-15-pm",
+   "order": 0,
+   "id": "2026-11-15-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
