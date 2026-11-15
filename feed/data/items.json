@@ -1,6 +1,344 @@
 {
- "updated": "2026-11-14T17:14:27+00:00",
+ "updated": "2026-11-15T02:15:29+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try answering before you peek. Pulling an answer out of memory strengthens it more than re-reading does.",
+   "q": "1) What did Cloudflare open-source this week? 2) What does Java's String.formatted do? 3) Who won Women 50+ at the World Senior Championships?",
+   "a": "1) Kitesurf, its browser engine for AI agents. 2) Fills a format string, called on the string itself. 3) Pia Cramling.",
+   "edition": "2026-11-15-am",
+   "order": 29,
+   "id": "2026-11-15-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Sea otters keep a favourite rock",
+   "body": "Sea otters use stones to crack open shellfish, floating on their backs and banging the shell against a rock on their chest. Many keep a favourite stone tucked in the loose skin pouch under a forearm and carry it from dive to dive.",
+   "hook": "Wonder: what's your own favourite, well-worn tool?",
+   "edition": "2026-11-15-am",
+   "order": 28,
+   "id": "2026-11-15-am-028"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Name the tools the way you'd name them for a new colleague",
+   "body": "Agents choose tools largely from their names and descriptions. 'search_orders_by_customer_email' gets picked correctly far more often than 'query2'. Write each tool's name and one-line description as if handing it to a new teammate on day one: what it does, when to use it, and what it returns.",
+   "hook": "Wonder: would a new teammate understand your tool names without asking?",
+   "edition": "2026-11-15-am",
+   "order": 27,
+   "id": "2026-11-15-am-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "The Immortal Game",
+   "body": "In London in 1851, Adolf Anderssen sacrificed a bishop, both rooks and then his queen against Lionel Kieseritzky, and still delivered checkmate with his three remaining minor pieces. It was a casual game, played between sessions of a tournament, yet it's still taught as a celebration of daring, open play.",
+   "q": "Which pieces did Anderssen give up in the Immortal Game?",
+   "a": "A bishop, both rooks and his queen.",
+   "edition": "2026-11-15-am",
+   "order": 26,
+   "id": "2026-11-15-am-026"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Give the scene a weather of its own",
+   "body": "Weather in a story doesn't need to mirror the mood. A quarrel in bright, cheerful sunshine, or good news on a dull, drizzly afternoon, can feel truer and more surprising than a storm on cue. Choose the weather, then let your character notice it once, in their own words.",
+   "hook": "Wonder: what's the least likely weather for the scene you're writing?",
+   "edition": "2026-11-15-am",
+   "order": 25,
+   "id": "2026-11-15-am-025"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Pipes began as a garden-hose memo",
+   "body": "In a 1964 memo Doug McIlroy wrote that programs should connect like segments of garden hose, so the output of one could screw into the next. The idea waited until 1973, when Ken Thompson added pipes to Unix in a single night of work. The humble | still lets small tools team up into big jobs.",
+   "hook": "Wonder: which two small tools in your day could be joined like hose?",
+   "edition": "2026-11-15-am",
+   "order": 24,
+   "id": "2026-11-15-am-024"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Bluebirds aren't blue inside",
+   "body": "Most birds can't make blue pigment. A bluebird's or blue jay's feathers contain tiny structures that scatter blue light back at your eye. Crush a blue feather and the colour vanishes into brown-grey, because the structure, not a dye, made the blue.",
+   "q": "Why does a crushed blue feather lose its colour?",
+   "a": "The blue comes from the feather's microscopic structure, not pigment.",
+   "edition": "2026-11-15-am",
+   "order": 23,
+   "id": "2026-11-15-am-023"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Mariner 9, the first Mars orbiter",
+   "body": "In November 1971 NASA's Mariner 9 became the first spacecraft to orbit another planet. It arrived during a global dust storm and simply waited for the dust to settle. When the air cleared, it mapped most of Mars and revealed giant volcanoes and the vast canyon system now called Valles Marineris, named after the spacecraft.",
+   "hook": "Wonder: what would you photograph first if you'd waited months for the dust to clear?",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/space-exploration/on-this-day-in-space-november-13-2026"
+   },
+   "edition": "2026-11-15-am",
+   "order": 22,
+   "id": "2026-11-15-am-022"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Madurai's towers of colour",
+   "body": "The Meenakshi Amman Temple in Madurai has 14 gopurams, its tall gateway towers, crowded with thousands of painted figures of gods, animals and guardians. Much of the complex we see today was built or rebuilt under the Nayak rulers in the 16th and 17th centuries, and the tallest tower, on the south side, rises about 50 metres.",
+   "q": "How many gopurams does the Meenakshi Amman Temple have?",
+   "a": "Fourteen.",
+   "edition": "2026-11-15-am",
+   "order": 21,
+   "id": "2026-11-15-am-021"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The frequency illusion",
+   "body": "Learn a new word or notice a new car model, and suddenly it seems to be everywhere. It isn't more common; your attention has a new filter, and memory pays extra attention when the new thing turns up. Learners can use it on purpose: name a concept clearly and you'll start spotting it in the wild.",
+   "hook": "Wonder: what idea from this feed might you start noticing everywhere this week?",
+   "edition": "2026-11-15-am",
+   "order": 20,
+   "id": "2026-11-15-am-020"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 9: Stream.iterate with a stop sign",
+   "body": "The three-argument Stream.iterate(seed, hasNext, next) works like a for loop as a stream: Stream.iterate(1, x -> x < 1000, x -> x * 2) gives 1, 2, 4 … 512 and then stops. No limit() guessing, and no infinite stream by accident.",
+   "q": "What are the three arguments to Stream.iterate in Java 9+?",
+   "a": "A seed, a condition to keep going, and a step function.",
+   "edition": "2026-11-15-am",
+   "order": 19,
+   "id": "2026-11-15-am-019"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Not in our stars",
+   "body": "The fault, dear Brutus, is not in our stars,\nBut in ourselves.",
+   "who": "Shakespeare, Julius Caesar",
+   "hook": "Wonder: what small thing is already within your reach today?",
+   "edition": "2026-11-15-am",
+   "order": 18,
+   "id": "2026-11-15-am-018"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The lost-and-found shelf",
+   "body": "At the small station, the stationmaster kept a lost-and-found shelf: one glove, a tiffin box, a child's blue pencil. Every Sunday he dusted them and set them a little straighter. Nobody ever came for the glove. But one morning a girl stepped off the 7:10, walked straight to the shelf, and took the pencil. 'I drew the river with it,' she said, 'and it wasn't finished.' He nodded as if he'd been expecting her all year.",
+   "edition": "2026-11-15-am",
+   "order": 17,
+   "id": "2026-11-15-am-017"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "OpenAI and Databricks lay out the playbook",
+   "body": "Databricks published a guide to its partnership with OpenAI, describing three common ways companies use the pair: ChatGPT with a Databricks Genie plugin for business users, Codex routed through Databricks' gateway for engineers, and custom agents built on GPT models. The idea is that AI works on a company's governed data without that data needing to leave its guarded home.",
+   "source": {
+    "name": "Databricks blog",
+    "url": "https://www.databricks.com/blog/openai-and-databricks-enterprise-ai-your-governed-data"
+   },
+   "edition": "2026-11-15-am",
+   "order": 16,
+   "id": "2026-11-15-am-016"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Batch errands by place, not by list",
+   "body": "A long errand list feels like ten separate efforts. Group the items by where they happen ('near the bank', 'at home on the phone', 'online'), then do one place at a time. Every switch between places costs energy, so fewer switches leaves more for the errands themselves.",
+   "q": "Why group errands by location?",
+   "a": "It cuts the number of switches, and each switch costs energy.",
+   "edition": "2026-11-15-am",
+   "order": 15,
+   "id": "2026-11-15-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The minority attack",
+   "body": "In some Queen's Gambit structures, White has two pawns on the queenside against Black's three. Oddly, White pushes those fewer pawns forward (b4–b5) to swap them off and leave Black with a weak, isolated or backward pawn on c6 or d5. The smaller group attacks the bigger one to create a long-term target.",
+   "hook": "Wonder: when does having fewer pawns on a wing make attacking easier?",
+   "edition": "2026-11-15-am",
+   "order": 14,
+   "id": "2026-11-15-am-014"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Sketchpad, drawing with light",
+   "body": "In 1963 Ivan Sutherland built Sketchpad for his MIT PhD. With a light pen on a screen, you could draw lines and circles, copy shapes, and add constraints like 'keep these lines parallel'. It introduced ideas we now take for granted (objects and instances, zooming, direct manipulation) and is often called the ancestor of graphical interfaces and CAD.",
+   "q": "What input device did Sketchpad use?",
+   "a": "A light pen.",
+   "edition": "2026-11-15-am",
+   "order": 13,
+   "id": "2026-11-15-am-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Endeavour's new home opens",
+   "body": "California's new Air & Space Center in Los Angeles, the home of space shuttle Endeavour, opened to visitors on 13 November. Endeavour flew 25 missions before retiring in 2011, and in its new gallery it is displayed upright, ready-for-launch style, with its external tank and boosters.",
+   "hook": "Wonder: how does a 37-metre spacecraft feel when you stand beneath it?",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/space-exploration/californias-brand-new-air-and-space-center-home-of-the-space-shuttle-endeavour-opens-today"
+   },
+   "edition": "2026-11-15-am",
+   "order": 12,
+   "id": "2026-11-15-am-012"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 15: String.formatted",
+   "body": "Instead of String.format(\"Hi %s, you have %d items\", name, n), you can write \"Hi %s, you have %d items\".formatted(name, n). Same format rules, but it reads left to right and chains nicely, especially after a text block.",
+   "hook": "Wonder: where in your code does a format string hide at the end of a long line?",
+   "edition": "2026-11-15-am",
+   "order": 11,
+   "id": "2026-11-15-am-011"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Nice' used to mean foolish",
+   "body": "The word 'nice' comes through Old French from Latin nescius, 'not knowing'. In medieval English it meant silly or ignorant. Over the centuries it drifted to 'fussy', then 'precise' (a 'nice distinction'), and only later to 'pleasant'.",
+   "q": "What did the Latin root of 'nice' mean?",
+   "a": "'Not knowing' (nescius).",
+   "edition": "2026-11-15-am",
+   "order": 10,
+   "id": "2026-11-15-am-010"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The Kural reaches English readers",
+   "body": "In 1886 the missionary scholar G. U. Pope published an English translation of the Thirukkural, Thiruvalluvar's 1,330 couplets. He spent decades in Tamil Nadu and grew so fond of the language that he asked to be remembered as a student of Tamil. His translation helped carry the Kural's quiet, practical wisdom to readers far beyond the Tamil country.",
+   "hook": "Wonder: which couplet would you choose to carry into another language?",
+   "edition": "2026-11-15-am",
+   "order": 9,
+   "id": "2026-11-15-am-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "llama.cpp reaches version 1.0",
+   "body": "The team behind llama.cpp, the popular engine for running language models on ordinary computers, released v1.0.0 of both llama.cpp and its ggml library on 13 November. The new version numbers follow semantic versioning: a major bump now signals a breaking change to the public C API, minor bumps add features or models, and patches fix bugs. The project is about three and a half years old and supports more than 150 model architecture variants.",
+   "q": "In llama.cpp's new scheme, what does a major version bump signal?",
+   "a": "A breaking change to its public C API.",
+   "source": {
+    "name": "Hugging Face blog",
+    "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+   },
+   "edition": "2026-11-15-am",
+   "order": 8,
+   "id": "2026-11-15-am-008"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Vary the practice",
+   "body": "Practising one exact version of a skill feels smooth, but practising small variations often transfers better. Children who practised beanbag throws at two distances did well at a third distance they'd never tried. Change the angle, the example, the wording, and your brain learns the rule underneath rather than one groove.",
+   "hook": "Wonder: what's one small variation you could add to something you practise?",
+   "edition": "2026-11-15-am",
+   "order": 7,
+   "id": "2026-11-15-am-007"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Sunday, the slow gate",
+   "body": "The gate creaks once\nand then decides\nto stay half open.\n\nA neighbour's radio,\nlow, somewhere.\nThe dosa pan, warming.\n\nNo one is late today.\nEven the crows\nare taking their time.",
+   "edition": "2026-11-15-am",
+   "order": 6,
+   "id": "2026-11-15-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Hot keys and salted keys",
+   "body": "Sharding spreads data by key, but one popular key (a celebrity's post, a big customer) can still pin a single shard at 100%. One fix is salting: write to key#0 … key#9 chosen at random, so the load lands on ten shards. The price is on the read side: you now read all ten and combine them. Salt only the keys that are truly hot.",
+   "q": "What does 'salting' a hot key trade away?",
+   "a": "Cheaper reads: you must read and merge all the salted copies.",
+   "edition": "2026-11-15-am",
+   "order": 5,
+   "id": "2026-11-15-am-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Cramling and Strutinskaya crowned senior champions",
+   "body": "The FIDE World Senior Championships finished in Vrnjačka Banja, Serbia, on 14 November, with 385 players from 65 countries. Pia Cramling won Women 50+ with 9/11, and Galina Strutinskaya took Women 65+ with an outstanding 10/11. Murtas Kazhgaleyev won Open 50+ on 8.5/11, and Zurab Sturua topped a three-way tie on 8.5/11 in Open 65+, ahead of Keith Arkell and Alexander Mikhalevski.",
+   "q": "Who won the Women 65+ title, and with what score?",
+   "a": "Galina Strutinskaya, 10/11.",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/world-senior-chess-champions-2026-crowned-in-vrnjacka-banja-serbia/"
+   },
+   "edition": "2026-11-15-am",
+   "order": 4,
+   "id": "2026-11-15-am-004"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "One tab in, one tab out",
+   "body": "Open browser tabs quietly pile up as unfinished promises. Try a simple rule while you work: before opening a new tab, close one you're done with. If a tab still matters, drop its link into a 'later' note so closing it doesn't feel like losing it.",
+   "hook": "Wonder: how many of your open tabs are really reminders in disguise?",
+   "edition": "2026-11-15-am",
+   "order": 3,
+   "id": "2026-11-15-am-003"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "The night it rained meteors",
+   "body": "On 17 November 1966, observers in the western United States saw the Leonids turn into a true meteor storm, with peak rates estimated at around 144,000 meteors an hour, dozens every second for a short while. Storms like that happen when Earth passes through an unusually dense, fresh trail of dust left by Comet Tempel–Tuttle. In an ordinary year the Leonids give a calm handful an hour, and that's still lovely.",
+   "q": "Which comet leaves the dust that becomes the Leonids?",
+   "a": "Comet Tempel–Tuttle.",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/stargazing/meteor-showers/60-years-ago-the-leonid-meteor-shower-produced-144-000-meteors-per-hour-could-it-happen-again"
+   },
+   "edition": "2026-11-15-am",
+   "order": 2,
+   "id": "2026-11-15-am-002"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Friendship's real work",
+   "body": "Friendship is not for laughing together. It is for stepping in, firmly, when a friend begins to stray.",
+   "who": "Thirukkural 784 (own rendering)",
+   "edition": "2026-11-15-am",
+   "order": 1,
+   "id": "2026-11-15-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Cloudflare open-sources Kitesurf",
+   "body": "Cloudflare has released Kitesurf, its experimental browser engine built for AI agents, as open source. Kitesurf runs inside lightweight V8 isolates on Cloudflare Workers rather than as a full desktop browser. Now anyone can read the code, run it locally, or deploy their own copy to their Workers account.",
+   "hook": "Wonder: what does a browser look like when nobody needs to see the pixels?",
+   "source": {
+    "name": "Cloudflare blog",
+    "url": "https://blog.cloudflare.com/kitesurf-open-source/"
+   },
+   "edition": "2026-11-15-am",
+   "order": 0,
+   "id": "2026-11-15-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
