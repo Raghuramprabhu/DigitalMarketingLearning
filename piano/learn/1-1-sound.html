@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.1 What is a note? · Music: the story</title>
+  <meta name="description" content="Vibration, frequency, the octave, the fifth, and why there are 12 keys: Pythagoras and Bharata's two veenas, with playable experiments.">
+  <script>(function(){var t=null;try{t=localStorage.getItem("dml-theme");}catch(e){}if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="learn.css">
+  <style>
+    .sweep { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .sweep input[type=range] { flex: 1; min-width: 220px; }
+    .ratio-msg { min-height: 1.6em; font-weight: 700; }
+    .circle-box { display: grid; grid-template-columns: minmax(240px, 340px) 1fr; gap: 18px; align-items: start; }
+    @media (max-width: 720px) { .circle-box { grid-template-columns: 1fr; } }
+    #fifths svg { width: 100%; height: auto; }
+    .steps { font: 500 13.5px var(--font-mono); color: var(--soft); max-height: 300px; overflow: auto; }
+    .steps div { padding: 3px 0; border-bottom: 1px dotted var(--line); }
+    .steps b { color: var(--gold); }
+    .reveal { display: none; }
+    .reveal.on { display: block; }
+  </style>
+</head>
+<body data-lesson="1-1">
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="./">← <span class="hide-sm">Syllabus</span></a>
+    <a class="logo" href="./">Music<span>: the story</span></a>
+    <span class="grow"></span>
+    <select class="pill" id="instrPick" aria-label="Instrument for examples">
+      <option value="piano">🎹 Piano</option><option value="harmonium">🪗 Harmonium</option><option value="epiano">✨ E-piano</option><option value="strings">🎻 Strings</option>
+    </select>
+    <button class="pill" id="themebtn" type="button">☀️ Light</button>
+  </div>
+  <div class="readbar"></div>
+</header>
+
+<main class="wrap">
+  <section class="l-hero">
+    <span class="eyebrow">Level 1 · Lesson 1 · Sound itself</span>
+    <h1>What <em>is</em> a note?</h1>
+    <p class="lede">Before names, scales or ragas, there is only air being pushed. Here's how a push becomes a note, why some notes feel like "the same note again", and where the number 12 really comes from.</p>
+    <div class="goals"><h4>By the end you'll be able to</h4><ul>
+      <li>Explain a note as a frequency, and an octave as "double it".</li>
+      <li>Say why Sa–Pa (the fifth) is the second-strongest bond in music, East and West.</li>
+      <li>Rebuild the 12 keys from scratch by stacking fifths, and explain the tiny gap that forced a compromise.</li>
+      <li>Tell an octave from any other leap by ear.</li>
+    </ul></div>
+  </section>
+
+  <div class="story">
+    <p><b>Two stories, both about strings.</b> In Greece, legend says <b>Pythagoras</b> walked past a blacksmith's shop. Some hammers clanged together sweetly, others harshly. He went home, stretched strings, and found that the sweet pairs were lengths in <b>simple ratios</b>: 2 : 1, 3 : 2, 4 : 3. (The hammer part is physically wrong, but the ratio part is right, and it shaped Western music for 2,500 years.)</p>
+    <p>In India, the <b>Natyashastra</b>, attributed to <b>Bharata</b> and written roughly 2,000 years ago, describes an experiment with <b>two identical veenas</b>. One stays fixed (the <i>dhruva</i> veena). The other (the <i>chala</i> veena) is retuned down in tiny steps and compared, over and over. From this he counted <b>22 shrutis</b>, the smallest pitch steps the ear can use inside an octave.</p>
+    <p>Two people, two continents, the same method: <b>compare one vibrating string with another, and listen to the relationship</b>. That's still the whole game.</p>
+  </div>
+
+  <h2>1 · A note is a repeat count</h2>
+  <p>Pluck a string and it swings back and forth, shoving the air each time. Your eardrum gets pushed in the same rhythm. If the pushes come <b>regularly</b>, your brain hears a <b>pitch</b>. If they're random, you hear noise (wind, a "shhh").</p>
+  <p>The number of pushes per second is the <b>frequency</b>, measured in <b>hertz (Hz)</b>. Human ears catch roughly 20 Hz to 20,000 Hz. More pushes per second = higher note. The A above middle C is fixed by international agreement at <b>440 Hz</b>.</p>
+
+  <div class="widget">
+    <h4>🎚 Experiment: find the "same note" again</h4>
+    <p class="cap" style="margin-top:0">Turn on the <b>reference</b> (a steady 220 Hz). Then turn on the <b>slider tone</b> and drag it slowly upward. Listen for a moment where the two suddenly <i>blend</i>, as if they're one note. Where does it happen?</p>
+    <div class="row">
+      <button type="button" class="btn small ghost" id="refBtn">🔈 Reference 220 Hz: off</button>
+      <button type="button" class="btn small ghost" id="swBtn">🔈 Slider tone: off</button>
+    </div>
+    <div class="sweep">
+      <input type="range" id="sw" min="0" max="1000" value="0" aria-label="Frequency">
+      <span class="readout" id="swHz">220 Hz</span>
+    </div>
+    <p class="ratio-msg" id="swMsg">&nbsp;</p>
+    <p class="cap">The readout shows the slider frequency and how many times bigger it is than the reference. Watch the ratio when the sounds "lock".</p>
+  </div>
+
+  <details class="recall"><summary>At what ratio did the two tones melt into "the same note, higher"? And what's the second place where they sounded unusually sweet?</summary><div>At <b>×2</b> (440 Hz against 220). That's the <b>octave</b>. The second sweet spot is at <b>×1.5</b> (330 Hz): the <b>fifth</b>, called <b>Pa</b> in Indian music. If you heard a calm blend near ×1.33 too, that's the <b>fourth</b> (Ma).</div></details>
+
+  <h2>2 · The octave: double it, and it's "the same" note</h2>
+  <p>Here's a strange fact your brain treats as obvious: 220 Hz and 440 Hz are <b>different</b> pitches, yet we give them the <b>same name</b>. Why? Look at the push patterns. Every second push of the 440 lines up exactly with a push of the 220. The two waves agree all the time, so the ear files them together.</p>
+  <div class="row">
+    <button type="button" class="hz" data-hz="110,220,440,880" data-dur="0.8" data-instr="piano">▶ A at 110 → 220 → 440 → 880 Hz</button>
+    <button type="button" class="hz" data-hz="220 440" data-dur="2.2">▶ 220 + 440 together</button>
+  </div>
+
+  <div class="duo">
+    <div class="w"><h4>Western</h4><p>Calls the distance an <b>octave</b> (Latin <i>octo</i>, eight) because it's the 8th note of the scale: C D E F G A B <b>C</b>. Notes an octave apart share a letter. Middle C is <b>C4</b>, the one above is <b>C5</b>.</p></div>
+    <div class="e"><h4>Indian</h4><p>The seven notes S R G M P D N form a <b>saptak</b> (a "group of seven"), and the 8th is Sa again, one register up. Registers: <b>mandra</b> (lower), <b>madhya</b> (middle), <b>taar</b> (upper; Carnatic says <i>tara sthayi</i>). A dot above a swara means taar: <b>Ṡ</b>.</p></div>
+  </div>
+  <div class="meet"><h4>Where they meet</h4><p>Both systems count <b>seven</b> named notes and then start again. "Octave" counts the arrival note (8). "Saptak" counts the seven inside. Same physics, different bookkeeping.</p></div>
+
+  <h2>3 · The fifth: Sa and Pa</h2>
+  <p>After ×2, the next simplest ratio is <b>×3/2 = ×1.5</b>. The waves line up every 3 pushes of one and 2 of the other: still very regular, so it sounds stable and open. In the West it's the <b>perfect fifth</b> (C → G). In India it's <b>Sa → Pa</b>. And <i>Panchama</i> literally means "fifth".</p>
+  <p>That's why Pa is <b>achala</b> (immovable) in Indian theory: unlike Re, Ga, Dha, Ni, it never gets a komal or tivra version. And it's why the <b>tanpura</b>, the drone behind almost every Indian classical performance, is usually tuned <b>Pa – Sa – Sa – Sa</b>. Listen:</p>
+  <div class="row">
+    <button type="button" class="hz" data-hz="220 330" data-dur="2.4">▶ Pure fifth (220 + 330)</button>
+    <button type="button" class="hz" data-hz="220 311.13" data-dur="2.4">▶ Compare: a tense pair (220 + 311)</button>
+    <button type="button" class="drone" data-sa="C4">🪔 Tanpura drone (Pa–Sa–Sa–Sa)</button>
+  </div>
+  <p class="aside">The fifth turned upside down is the <b>fourth</b> (×4/3): Sa → <b>Ma</b>. Go up a fifth from Ma and you land on Sa again. The West names this note the <b>subdominant</b>, the "dominant below", because it sits a fifth <i>under</i> the tonic just as the dominant (G, Pa) sits a fifth above. <i>Madhyama</i> means "the middle" one.</p>
+
+  <details class="recall"><summary>Why does Pa have no komal or tivra form, when Re, Ga, Dha and Ni all do?</summary><div>Because Pa is the fifth, the simplest relationship after the octave (3 : 2). It's a fixed pillar, like Sa itself. That's why Sa and Pa are called <b>achala swaras</b> (immovable notes). Ma, the next-strongest (4 : 3), is allowed one alternative: tivra Ma.</div></details>
+
+  <h2>4 · Why 12? Build the keyboard yourself</h2>
+  <p>Here's a puzzle a Greek and an Indian would both have enjoyed. Start on C (Sa). Go up a fifth (×1.5) to G. From G, another fifth: D. Keep going. Whenever you fly past double, drop an octave (÷2) to stay in range. How many fifths until you come back home to C?</p>
+
+  <div class="widget" id="fifths">
+    <h4>🔄 Stack fifths and see where you land</h4>
+    <div class="circle-box">
+      <div id="circleSvg"></div>
+      <div>
+        <div class="row">
+          <button type="button" class="btn" id="fStep">+ Go up a fifth</button>
+          <button type="button" class="btn small ghost" id="fReset">↺ Restart</button>
+        </div>
+        <div class="steps" id="fSteps"><div>Start: <b>C</b> · ratio 1.0000 · 261.63 Hz</div></div>
+      </div>
+    </div>
+    <div class="reveal" id="fReveal">
+      <p style="margin-top:14px"><b>Twelve fifths later you're <i>almost</i> back on C, but not quite.</b> You're about 1.36% sharp: <b>23.5 cents</b> (a cent is 1/100 of a piano semitone). That gap is called the <b>Pythagorean comma</b>. Hear it:</p>
+      <div class="row">
+        <button type="button" class="hz" data-hz="261.63 265.19" data-dur="3">▶ True C + the 12th fifth, together (hear the wobble)</button>
+        <button type="button" class="hz" data-hz="261.63,265.19" data-dur="1.1">▶ One after the other</button>
+      </div>
+      <p>That wobble ("beating", about 3–4 times a second) is two almost-equal frequencies drifting in and out of step. Nature doesn't close the circle. So to build an instrument that works in every key, people <b>cheat</b>: shave every fifth a hair (from ×1.5 to ×1.4983, just 2 cents), so 12 of them land exactly on 7 octaves. Each of the 12 steps then becomes the same size: <b>×2<sup>1/12</sup> ≈ ×1.0595</b>. That compromise is <b>equal temperament</b>, and it's how a piano, and a harmonium, is tuned.</p>
+    </div>
+  </div>
+
+  <div class="meet"><h4>Where they meet, and where they part</h4>
+    <p><b>The 12 comes from the fifth.</b> Twelve fifths almost equal seven octaves (1.5<sup>12</sup> ≈ 129.7, and 2<sup>7</sup> = 128). That near-miss is why both Western and Indian music use 12 pitch positions per octave (Carnatic calls them the 12 <b>swarasthanas</b>).</p>
+    <p><b>But Indian music never fully accepted the cheat.</b> A singer with a tanpura tunes each note to the drone by ear, which pulls it toward pure ratios, and Bharata's 22 shrutis describe finer shades than 12 keys can hold. This is one reason <b>All India Radio banned the harmonium from 1940 to 1971</b> (and even then allowed it back only as accompaniment): its fixed, tempered notes, unable to glide, were seen as un-Indian. Fun twist: the first exact maths for equal temperament came from China. Prince Zhu Zaiyu published it in 1584, one year before Simon Stevin worked it out in Europe.</p>
+  </div>
+
+  <details class="recall"><summary>Explain to an imaginary friend, in two sentences, why a piano has 12 keys per octave and not 10 or 15.</summary><div>Stacking the most natural interval, the fifth (×1.5), twelve times brings you almost exactly back to the starting note seven octaves up, so 12 is where the cycle (nearly) closes. Equal temperament shaves each fifth slightly so the cycle closes perfectly, giving 12 equal steps.</div></details>
+
+  <h2>5 · Check yourself</h2>
+  <div class="quiz" data-key="q1">
+    <p class="q">A string vibrates at 300 Hz. Which frequency is the same note one octave higher?</p>
+    <div class="opts">
+      <button class="opt" data-correct>600 Hz</button>
+      <button class="opt">450 Hz</button>
+      <button class="opt">312 Hz</button>
+      <button class="opt">900 Hz</button>
+    </div>
+    <p class="why">Octave = ×2. 450 Hz is ×1.5, a fifth (Pa above it). 900 Hz is ×3: an octave plus a fifth.</p>
+  </div>
+  <div class="quiz" data-key="q2">
+    <p class="q">If Sa is 240 Hz, roughly what is Pa?</p>
+    <div class="opts">
+      <button class="opt" data-correct>360 Hz</button>
+      <button class="opt">480 Hz</button>
+      <button class="opt">320 Hz</button>
+      <button class="opt">300 Hz</button>
+    </div>
+    <p class="why">Pa is the fifth: ×3/2 = 360 Hz. (320 Hz is ×4/3, which is Ma. 300 Hz is ×5/4, which is Ga in pure tuning.)</p>
+  </div>
+  <div class="quiz" data-key="q3">
+    <p class="q">Why can't you tune all twelve fifths perfectly pure and still return exactly to your starting note?</p>
+    <div class="opts">
+      <button class="opt" data-correct>Because 1.5 multiplied 12 times (≈129.7) isn't a power of 2 (128): the circle misses by the Pythagorean comma.</button>
+      <button class="opt">Because strings stretch as they get warmer.</button>
+      <button class="opt">Because there are only 7 notes in a scale.</button>
+      <button class="opt">Because the ear can't hear the difference anyway.</button>
+    </div>
+    <p class="why">The comma (~23.5 cents) is pure arithmetic: powers of 3 never equal powers of 2. Every tuning system is a way of hiding that gap somewhere.</p>
+  </div>
+  <div class="quiz" data-key="q4">
+    <p class="q">Which statement best describes how Indian classical music relates to the 12 equal steps of a keyboard?</p>
+    <div class="opts">
+      <button class="opt" data-correct>It uses 12 note positions, but singers tune by ear to the drone, so actual pitches can differ from equal temperament; theory also describes 22 shrutis.</button>
+      <button class="opt">It uses exactly the piano's equal-tempered pitches.</button>
+      <button class="opt">It uses 22 equal steps instead of 12.</button>
+      <button class="opt">It doesn't use octaves.</button>
+    </div>
+    <p class="why">The 12 swarasthanas are the "map". The shrutis and tuning-by-ear are the "territory". Shrutis are not equal-sized steps, and the octave is central to both systems.</p>
+  </div>
+
+  <h2>6 · Ear test: octave or not?</h2>
+  <p>You'll hear two notes, one after the other. Are they the <b>same note an octave apart</b>, or <b>two different notes</b>? (Tip: an octave sounds "hollow" and settled. A different note sounds like the melody has gone somewhere.)</p>
+  <div id="earOct"></div>
+
+  <div class="takeaways">
+    <h3>Takeaways</h3>
+    <ul>
+      <li>A note is a <b>frequency</b>: regular pushes of air per second. A = 440 Hz is the agreed reference.</li>
+      <li><b>×2 = octave</b>: same note name, higher. West: C4 → C5. India: madhya Sa → taar Ṡ (a saptak later).</li>
+      <li><b>×1.5 = fifth</b> = Sa → Pa (Panchama, "the fifth"). Pa and Sa are <b>achala</b>, so the tanpura is tuned Pa–Sa–Sa–Sa.</li>
+      <li>Twelve fifths ≈ seven octaves → <b>12 notes per octave</b>. The leftover gap is the <b>Pythagorean comma</b>.</li>
+      <li><b>Equal temperament</b> spreads that gap evenly (each step ×1.0595). Indian music keeps the 12 positions, but its ear tuning and its 22-shruti theory go finer.</li>
+    </ul>
+  </div>
+
+  <div class="l-end">
+    <button class="done-btn" data-lesson="1-1">Mark this lesson complete</button>
+    <a class="nav-next" href="1-2-names.html">Next: C D E meets Sa Re Ga →</a>
+  </div>
+</main>
+
+<script src="../engine.js"></script>
+<script src="learn.js"></script>
+<script>
+(function () {
+  var PS = window.PS, LK = window.LK;
+
+  /* ---------- frequency sweep ---------- */
+  var ref = null, sw = null, swHz = 220;
+  function tone(hz) {
+    LK.ensureAudio();
+    var ac = PS.ctx, o = ac.createOscillator(), g = ac.createGain();
+    o.type = 'triangle'; o.frequency.value = hz; o.connect(g); g.connect(PS.master);
+    g.gain.setValueAtTime(0, ac.currentTime); g.gain.linearRampToValueAtTime(0.13, ac.currentTime + 0.05); o.start();
+    return { o: o, g: g, stop: function () { g.gain.setTargetAtTime(0, ac.currentTime, 0.04); o.stop(ac.currentTime + 0.3); } };
+  }
+  var slider = document.getElementById('sw');
+  function sliderHz() { return 200 * Math.pow(900 / 200, slider.value / 1000); } // 200 → 900 Hz, log scale
+  function updSweep() {
+    swHz = sliderHz();
+    document.getElementById('swHz').textContent = Math.round(swHz) + ' Hz · ×' + (swHz / 220).toFixed(2);
+    if (sw) sw.o.frequency.setTargetAtTime(swHz, PS.ctx.currentTime, 0.015);
+    var r = swHz / 220, msg = '';
+    if (Math.abs(r - 2) < 0.012) msg = '🎯 ×2: the octave. Same note, higher. This is "A" again.';
+    else if (Math.abs(r - 1.5) < 0.008) msg = '✨ ×1.5: the fifth (Pa). Open and stable.';
+    else if (Math.abs(r - 4 / 3) < 0.007) msg = '🌿 ×1.33: the fourth (Ma). Calm.';
+    else if (Math.abs(r - 1) < 0.006) msg = '= ×1: unison. Identical.';
+    else if (Math.abs(r - 3) < 0.02) msg = '×3: an octave plus a fifth.';
+    document.getElementById('swMsg').textContent = msg || ' ';
+  }
+  slider.addEventListener('input', updSweep);
+  slider.value = 0; updSweep();
+  document.getElementById('refBtn').addEventListener('click', function () {
+    if (ref) { ref.stop(); ref = null; this.textContent = '🔈 Reference 220 Hz: off'; this.classList.remove('on'); }
+    else { ref = tone(220); this.textContent = '🔊 Reference 220 Hz: on'; }
+  });
+  document.getElementById('swBtn').addEventListener('click', function () {
+    if (sw) { sw.stop(); sw = null; this.textContent = '🔈 Slider tone: off'; }
+    else { sw = tone(swHz); this.textContent = '🔊 Slider tone: on'; }
+  });
+
+  /* ---------- stacking fifths ---------- */
+  var FIFTH_NAMES = ['C', 'G', 'D', 'A', 'E', 'B', 'F♯', 'C♯', 'G♯', 'D♯', 'A♯', 'E♯ (≈F)', 'B♯ (≈C)'];
+  var SARGAM = ['S', 'P', 'R', 'D', 'G', 'N', 'M (tivra)', 'r', 'd', 'g', 'n', 'm', 'S?'];
+  var r = 1, n = 0, C = 261.63;
+  function svg() {
+    var cx = 150, cy = 150, R = 115, h = '<svg viewBox="0 0 300 300" role="img" aria-label="Circle of fifths being built">';
+    h += '<circle cx="150" cy="150" r="' + R + '" fill="none" stroke="var(--line2)" stroke-width="2"/>';
+    // positions by pitch (semitone index around the clock), so you see the spiral fill all 12 slots
+    var pts = [];
+    var rr = 1;
+    for (var i = 0; i <= n; i++) {
+      var cents = 1200 * Math.log2(rr), ang = (cents / 1200) * 2 * Math.PI - Math.PI / 2;
+      pts.push([cx + R * Math.cos(ang), cy + R * Math.sin(ang), i]);
+      rr *= 1.5; while (rr >= 2) rr /= 2;
+    }
+    for (i = 1; i < pts.length; i++) h += '<line x1="' + pts[i - 1][0] + '" y1="' + pts[i - 1][1] + '" x2="' + pts[i][0] + '" y2="' + pts[i][1] + '" stroke="var(--both)" stroke-opacity=".45" stroke-width="1.5"/>';
+    pts.forEach(function (p) {
+      var last = p[2] === n, home = p[2] === 0;
+      h += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="' + (last ? 9 : 6) + '" fill="' + (home ? 'var(--gold)' : last ? 'var(--east)' : 'var(--west)') + '"/>';
+      var lx = 150 + (p[0] - 150) * 1.2, ly = 150 + (p[1] - 150) * 1.2 + 4;
+      if (p[2] < 12) h += '<text x="' + lx + '" y="' + ly + '" text-anchor="middle" font-family="DM Sans" font-weight="700" font-size="13" fill="var(--ink)">' + FIFTH_NAMES[p[2]].split(' ')[0] + '</text>';
+    });
+    if (n === 12) h += '<text x="150" y="156" text-anchor="middle" font-family="Fraunces" font-size="15" fill="var(--east)">so close…</text>';
+    h += '</svg>';
+    document.getElementById('circleSvg').innerHTML = h;
+  }
+  function step() {
+    if (n >= 12) return;
+    n++; r *= 1.5; var folded = false; while (r >= 2) { r /= 2; folded = true; }
+    var hz = C * r, cents = 1200 * Math.log2(r), et = Math.round(cents / 100) * 100, off = cents - et;
+    var line = document.createElement('div');
+    line.innerHTML = 'Fifth ' + n + ': <b>' + FIFTH_NAMES[n] + '</b> <span class="dim">(' + SARGAM[n] + ')</span> · ratio ' + r.toFixed(4) + (folded ? ' <span class="dim">(dropped an octave)</span>' : '') + ' · ' + hz.toFixed(2) + ' Hz · ' + (off >= 0 ? '+' : '') + off.toFixed(1) + ' cents vs piano';
+    document.getElementById('fSteps').appendChild(line);
+    PS.note(0, 0.9, { hz: hz, instr: LK.instr });
+    svg();
+    if (n === 12) { document.getElementById('fReveal').classList.add('on'); document.getElementById('fStep').disabled = true; }
+  }
+  document.getElementById('fStep').addEventListener('click', function () { LK.ensureAudio(); step(); });
+  document.getElementById('fReset').addEventListener('click', function () {
+    r = 1; n = 0; document.getElementById('fSteps').innerHTML = '<div>Start: <b>C</b> · ratio 1.0000 · 261.63 Hz</div>';
+    document.getElementById('fReveal').classList.remove('on'); document.getElementById('fStep').disabled = false; svg();
+  });
+  svg();
+
+  /* ---------- ear test ---------- */
+  LK.game(document.getElementById('earOct'), {
+    title: 'Octave or not?', rounds: 8,
+    intro: 'Eight rounds. Use headphones or a decent speaker if you can.',
+    make: function () {
+      var base = 160 + Math.random() * 180, isOct = Math.random() < 0.5;
+      var others = [1.5, 4 / 3, 1.78, 1.89, 2.12, 1.68, 2.25, 1.2];
+      var ratio = isOct ? 2 : LK.pick(others), up = Math.random() < 0.75;
+      var a = up ? base : base * ratio, b = up ? base * ratio : base;
+      return {
+        prompt: 'Two notes, one after the other:',
+        play: function () { PS.note(0, 0.8, { hz: a, instr: LK.instr }); PS.note(0, 0.9, { hz: b, instr: LK.instr, delay: 0.95 }); },
+        options: [{ label: '🔁 Same note (octave)', value: true }, { label: '↗ Different note', value: false }],
+        answer: isOct,
+        explain: isOct ? 'Ratio ×2: the octave.' : 'Ratio ×' + ratio.toFixed(2) + ': a different note, not an octave.'
+      };
+    }
+  });
+})();
+</script>
+</body>
+</html>
