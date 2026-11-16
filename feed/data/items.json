@@ -1,6 +1,350 @@
 {
- "updated": "2026-11-16T02:20:16+00:00",
+ "updated": "2026-11-16T17:15:43+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try answering before you peek. Pulling an answer out of memory strengthens it more than re-reading does.",
+   "q": "1) Which country's old name hides in 'serendipity'? 2) What does HashMap.newHashMap(100) promise? 3) Who first spotted Euclid's first comet, and at which university?",
+   "a": "1) Sri Lanka (Serendip). 2) Room for 100 mappings without resizing. 3) Mikko Pöntinen, University of Helsinki.",
+   "edition": "2026-11-16-pm",
+   "order": 29,
+   "id": "2026-11-16-pm-029"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "digna brings data-quality checks to your own agents",
+   "body": "digna has launched digna Agentic, digna Data Reconciliation and the digna Engine, tools for checking data quality that can run on-premises, in a private cloud or in a customer's own cloud account. An MCP server lets assistants like ChatGPT, Claude, Gemini and open models ask questions of them. A tidy example of agents being plugged into existing tools rather than replacing them.",
+   "hook": "Wonder: which tool you already use would you most like an agent to be able to ask questions of?",
+   "source": {
+    "name": "AI Agent Store, week of 16 Nov 2026",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-16-pm",
+   "order": 28,
+   "id": "2026-11-16-pm-028"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A banana plant is a giant herb",
+   "body": "The banana 'tree' has no wood. Its trunk is a pseudostem made of tightly wrapped leaf bases, which makes the banana the largest herbaceous flowering plant. After it fruits, that stem dies back and new shoots grow from the underground base to take its place.",
+   "hook": "Wonder: what else in the kitchen garden is not quite what it seems?",
+   "edition": "2026-11-16-pm",
+   "order": 27,
+   "id": "2026-11-16-pm-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Debounce vs throttle",
+   "body": "Both calm down a noisy stream of events, in different ways. Debounce waits until things go quiet: run the search only after the user stops typing for 300 ms. Throttle sets a steady pace: handle scroll at most once every 100 ms, no matter how many events arrive. Ask: do I want the final value after a burst (debounce), or regular updates during it (throttle)?",
+   "q": "Updating a progress indicator while a user scrolls: debounce or throttle?",
+   "a": "Throttle, for regular updates during the burst.",
+   "edition": "2026-11-16-pm",
+   "order": 26,
+   "id": "2026-11-16-pm-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Love all, trust a few",
+   "body": "Love all, trust a few, do wrong to none.",
+   "who": "William Shakespeare, All's Well That Ends Well",
+   "edition": "2026-11-16-pm",
+   "order": 25,
+   "id": "2026-11-16-pm-025"
+  },
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "You may castle with a rook under attack",
+   "body": "Castling is forbidden if your king is in check, would pass through an attacked square, or would land on one. But the rook has no such rule. It can be attacked, and when castling queenside it may cross b1 (or b8) even if that square is covered. Plenty of club players skip a good castle because they think otherwise.",
+   "q": "In queenside castling, may the rook cross an attacked b1 square?",
+   "a": "Yes. Only the king's start, path and landing squares must be safe.",
+   "edition": "2026-11-16-pm",
+   "order": 24,
+   "id": "2026-11-16-pm-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Turing's 1936 paper",
+   "body": "In 1936, at 24, Alan Turing published 'On Computable Numbers'. To answer a question in pure logic, he imagined a simple machine that reads and writes symbols on a tape, following a table of rules, and showed that one 'universal' machine could imitate any other. It was a thought experiment, but it's the idea underneath every stored-program computer.",
+   "q": "What could Turing's 'universal machine' do?",
+   "a": "Imitate any other such machine, given its rules on the tape.",
+   "edition": "2026-11-16-pm",
+   "order": 23,
+   "id": "2026-11-16-pm-023"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "When the alarm rings, stand up first",
+   "body": "A timer goes off and the brain says 'one more minute', and then it's an hour. Make the rule about your body, not your decision: when the alarm rings, stand up. You can sit back down if you truly want to, but standing breaks the spell and gives your brain a moment to choose on purpose.",
+   "edition": "2026-11-16-pm",
+   "order": 22,
+   "id": "2026-11-16-pm-022"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Emergency-blanket film for Moon-base insulation",
+   "body": "Engineers at the University of Pennsylvania stacked hundreds of thin Mylar sheets, the shiny film in emergency blankets, into a light insulation they call HyLIFS. Their small samples held up under heavy compression, about 20 MPa, through repeated cycles. That could one day help shelters keep warm through the long lunar night, though the team says making it at scale is still to be worked out.",
+   "hook": "Wonder: what else in a first-aid kit might be quietly space-grade?",
+   "source": {
+    "name": "ScienceDaily (University of Pennsylvania)",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261115085549.htm"
+   },
+   "edition": "2026-11-16-pm",
+   "order": 21,
+   "id": "2026-11-16-pm-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Keep the small promises you make",
+   "body": "Anton Chekhov advised that if a gun hangs on the wall in the first act, it should be used by the last. The principle works for small things too: a locked drawer, a half-finished letter, a recipe nobody can get right. Readers notice what you linger on and quietly wait. Either pay it off, or don't linger.",
+   "hook": "Wonder: what detail in your current draft is quietly making a promise?",
+   "edition": "2026-11-16-pm",
+   "order": 20,
+   "id": "2026-11-16-pm-020"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Madras had an observatory in 1786",
+   "body": "In 1786 William Petrie set up a private astronomical observatory in Madras, one of the earliest modern observatories in Asia. A few years later the East India Company took it over, and it was used for star catalogues, timekeeping and mapping India. In 1899 its astronomy work moved up to the clearer skies of Kodaikanal, where a solar observatory still watches the Sun.",
+   "hook": "Wonder: what would the night sky over Madras have looked like in 1786, without city lights?",
+   "edition": "2026-11-16-pm",
+   "order": 19,
+   "id": "2026-11-16-pm-019"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Judge your learning later, not right away",
+   "body": "Right after studying something, it feels familiar, so we overrate how well we'll remember it. In a 1991 study, Thomas Nelson and John Dunlosky found that predictions made after a short delay were far more accurate than ones made immediately. So test yourself a bit later, not straight after reading, before deciding what you know.",
+   "q": "When are judgments of 'I know this' most accurate?",
+   "a": "After a delay, not immediately after studying.",
+   "edition": "2026-11-16-pm",
+   "order": 18,
+   "id": "2026-11-16-pm-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Make an agent's write actions safe to repeat",
+   "body": "A developer-forum bug report this week described an approved tool write running twice when a response continued. Whether or not that bug gets fixed, it's a good reminder: anything an agent does that changes the world (sending, booking, paying, posting) should be idempotent. Give each action a unique key and have the tool ignore a repeat of a key it has already seen.",
+   "q": "What simple guard makes a repeated agent action harmless?",
+   "a": "An idempotency key: a unique ID per action that the tool remembers and refuses to apply twice.",
+   "source": {
+    "name": "AI Agent Store, week of 16 Nov 2026",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-16-pm",
+   "order": 17,
+   "id": "2026-11-16-pm-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Rats laugh when tickled",
+   "body": "Neuroscientist Jaak Panksepp found that young rats, when tickled, give off rapid high-pitched chirps around 50 kHz, too high for us to hear without special equipment. They chase the tickling hand for more, much like children playing. He described it as a kind of rat laughter.",
+   "hook": "Wonder: how many happy sounds in the world are just out of our hearing range?",
+   "edition": "2026-11-16-pm",
+   "order": 16,
+   "id": "2026-11-16-pm-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The isolated queen's pawn",
+   "body": "A pawn on d4 (or d5) with no friendly pawns on the c- or e-files is an isolated queen's pawn. In the middlegame it's often a strength: open files for your rooks, a strong outpost on e5, and room for an attack. In the endgame it tends to become a target. So the side with the IQP usually wants action early, and the opponent wants trades, plus a knight parked on the square right in front of it.",
+   "q": "Why does the side facing an IQP usually welcome piece trades?",
+   "a": "The pawn's dynamic strengths fade and it becomes a weak target in the endgame.",
+   "edition": "2026-11-16-pm",
+   "order": 15,
+   "id": "2026-11-16-pm-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 19: HashMap.newHashMap(n)",
+   "body": "new HashMap<>(100) doesn't mean 'room for 100 entries'; it sets the initial capacity, and with the default 0.75 load factor the map resizes after about 75. Since Java 19 you can say what you mean: HashMap.newHashMap(100) sizes the map so 100 mappings fit without resizing. There are matching factories for LinkedHashMap, HashSet, LinkedHashSet and WeakHashMap.",
+   "q": "With default settings, about when does new HashMap<>(100) first resize?",
+   "a": "After roughly 75 entries (capacity × 0.75 load factor).",
+   "edition": "2026-11-16-pm",
+   "order": 14,
+   "id": "2026-11-16-pm-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The watchman's crossword",
+   "body": "Every night the building watchman did the newspaper crossword, and every morning he left it on the lift ledge with one clue unsolved. For months nobody touched it. Then one Tuesday the gap was filled in, in green ink. The next day, another. He never found out who it was, and he never asked. He just started leaving two clues blank, so they'd both have something to look forward to.",
+   "edition": "2026-11-16-pm",
+   "order": 13,
+   "id": "2026-11-16-pm-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Why Uranus and Neptune have tilted magnetic fields",
+   "body": "Uranus's magnetic field is tilted about 59 degrees from its spin axis and Neptune's about 47, far more than Earth's. New simulations led by Chi Yan at the University of Texas suggest the reason: electrical conductivity that rises with depth inside these ice giants. The models also predict the magnetic poles could wander noticeably within decades, something future auroral images from Webb might check.",
+   "q": "Roughly how tilted is Uranus's magnetic field from its spin axis?",
+   "a": "About 59 degrees.",
+   "source": {
+    "name": "ScienceDaily (UT Jackson School of Geosciences)",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261114202204.htm"
+   },
+   "edition": "2026-11-16-pm",
+   "order": 12,
+   "id": "2026-11-16-pm-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The sweetest music",
+   "body": "'The flute is sweet, the veena is sweet,' say those who have never heard the babble of their own little ones.",
+   "who": "Thirukkural 66 (own rendering)",
+   "edition": "2026-11-16-pm",
+   "order": 11,
+   "id": "2026-11-16-pm-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The Altair 8800 on a magazine cover",
+   "body": "The January 1975 cover of Popular Electronics showed the Altair 8800, a build-it-yourself computer kit from MITS in Albuquerque, based on Intel's 8080 chip. It had switches and blinking lights instead of a keyboard and screen. Two young fans, Bill Gates and Paul Allen, wrote a BASIC interpreter for it, which became the first product of their new company, Microsoft.",
+   "q": "Which processor powered the Altair 8800?",
+   "a": "The Intel 8080.",
+   "edition": "2026-11-16-pm",
+   "order": 10,
+   "id": "2026-11-16-pm-010"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Keep a low-energy menu",
+   "body": "Some hours the brain is a sports car, some hours it's a bicycle with a flat. Write a short list of useful tasks that need almost no willpower: sort the downloads folder, water the plants, rename files, refill the stapler. When energy dips, pick from the menu instead of forcing the hard thing or scrolling. It's still progress.",
+   "hook": "Wonder: what three tasks would go on your low-energy menu?",
+   "edition": "2026-11-16-pm",
+   "order": 9,
+   "id": "2026-11-16-pm-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "AT&T runs about 500 agent workflows in production",
+   "body": "AT&T says its Business Agent Foundry now runs close to 500 agentic workflows in production, handling over a million transactions a month and about 45 billion tokens a day. Uses include customer provisioning, network operations and sales prospecting, and it plans to triple the count within a year. These are the company's own figures.",
+   "hook": "Wonder: which boring, repeatable task in your week would make a good first agent workflow?",
+   "source": {
+    "name": "AI Agent Store, week of 16 Nov 2026",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-16-pm",
+   "order": 8,
+   "id": "2026-11-16-pm-008"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Serendipity' came from Sri Lanka's old name",
+   "body": "In 1754 the writer Horace Walpole coined 'serendipity' in a letter, inspired by a tale called The Three Princes of Serendip, whose heroes kept discovering things they weren't looking for. Serendip is an old name for Sri Lanka. So the word for happy accidents is a little souvenir from an island just south of Tamil Nadu.",
+   "q": "Which country's old name is hidden in 'serendipity'?",
+   "a": "Sri Lanka (Serendip).",
+   "edition": "2026-11-16-pm",
+   "order": 7,
+   "id": "2026-11-16-pm-007"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Hick's law: more choices, slower start",
+   "body": "In the early 1950s William Hick and Ray Hyman found that the time people take to choose grows with the number of options, roughly with its logarithm. Doubling the options adds about the same small delay each time. It's why a short menu feels fast. When you're stuck, try trimming the choices before trying harder.",
+   "hook": "Wonder: which daily choice could you shrink to two options?",
+   "edition": "2026-11-16-pm",
+   "order": 6,
+   "id": "2026-11-16-pm-006"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The Ashtadiggajas: eight poets, eight elephants",
+   "body": "Krishnadevaraya, who ruled Vijayanagara from 1509 to 1529, gathered eight celebrated Telugu poets at his court. They were called the Ashtadiggajas, after the eight mythical elephants said to hold up the eight directions of the world. Allasani Peddana, honoured as the 'grandfather of Telugu poetry', was among them, and later tradition counts the witty Tenali Ramakrishna too. The king was a poet himself.",
+   "q": "Why were Krishnadevaraya's eight court poets called the Ashtadiggajas?",
+   "a": "After the eight mythical elephants that hold up the eight directions.",
+   "edition": "2026-11-16-pm",
+   "order": 5,
+   "id": "2026-11-16-pm-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Nakamura's 74th Bullet Brawl",
+   "body": "Hikaru Nakamura won Saturday's Bullet Brawl on Chess.com with 178 points, 21 clear of Jeffery Xiong. It's his 74th Bullet Brawl title and his 25th of 2026 alone. IM Renato Terry was third, and WIM Melika Mohammadi took the women's prize. The next Brawl is on 21 November.",
+   "hook": "Wonder: what does one-minute chess train that slow chess can't?",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/hikaru-nakamura-wins-bullet-brawl-nov-14-2026"
+   },
+   "edition": "2026-11-16-pm",
+   "order": 4,
+   "id": "2026-11-16-pm-004"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "CQRS: one model to write, another to read",
+   "body": "CQRS (Command Query Responsibility Segregation) splits a system's writes from its reads. Commands go to a model shaped for rules and consistency; queries hit read models shaped for the screens that need them, often denormalised copies kept up to date from events. It shines when reads and writes look very different, and it's overkill for a simple CRUD app, because you now own the job of keeping the read side in sync.",
+   "q": "What new job does CQRS give you in exchange for tailored read models?",
+   "a": "Keeping the read models in sync with the write side (usually eventually consistent).",
+   "edition": "2026-11-16-pm",
+   "order": 3,
+   "id": "2026-11-16-pm-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Monday, the water tank",
+   "body": "Up on the roof the tank is filling,\na low hum like someone thinking.\nThe day's dishes are drying in a row,\neach one a small finished thing.\nDown the lane a scooter coughs, then settles.\nThe week has started.\nThat was the hard part,\nand it's done.",
+   "edition": "2026-11-16-pm",
+   "order": 2,
+   "id": "2026-11-16-pm-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Euclid finds its first comet",
+   "body": "ESA's Euclid telescope, built to map dark matter, has discovered its first comet: C/2026 S1 (Euclid), about 1.3 billion km away, between the orbits of Jupiter and Saturn. Mikko Pöntinen of the University of Helsinki spotted it as a small streak across five sets of images from September. A fuzzy glow around it hints that it's already shedding dust and gas.",
+   "q": "Between which two planets' orbits was Euclid's first comet found?",
+   "a": "Jupiter and Saturn.",
+   "source": {
+    "name": "Space.com, 16 Nov 2026",
+    "url": "https://www.space.com/astronomy/comets/euclid-discovers-its-1st-comet-space-photo-of-the-day-for-nov-16-2026"
+   },
+   "edition": "2026-11-16-pm",
+   "order": 1,
+   "id": "2026-11-16-pm-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "ElevenLabs previews ElevenAI for meetings",
+   "body": "ElevenLabs has opened early-access sign-ups for ElevenAI, an app that transcribes meetings, keeps their context searchable, and offers dictation in more than 90 languages. A companion agent can act on the notes afterwards, for example by drafting the follow-up email. It's a preview for now, so details may change.",
+   "q": "What can ElevenAI's agent do with meeting notes?",
+   "a": "Act on them, for example drafting a follow-up email.",
+   "source": {
+    "name": "AI Agent Store, week of 16 Nov 2026",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-16-pm",
+   "order": 0,
+   "id": "2026-11-16-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9652,331 +9996,6 @@
    "edition": "2026-11-02-am",
    "order": 30,
    "id": "2026-11-02-am-030"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The first programmers of ENIAC",
-   "body": "ENIAC, unveiled in 1946, was programmed by six women: Kay McNulty, Betty Jennings, Betty Snyder, Marlyn Wescoff, Fran Bilas and Ruth Lichterman. There were no programming languages; they worked from wiring diagrams and plugged cables by hand. For decades they went largely uncredited.",
-   "edition": "2026-11-02-am",
-   "order": 29,
-   "id": "2026-11-02-am-029"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Three hearts, blue blood",
-   "body": "An octopus has three hearts: two pump blood through the gills, one pumps it around the body. Its blood is blue because it carries oxygen with copper-based haemocyanin instead of our iron-based haemoglobin.",
-   "hook": "Why would copper beat iron in cold, low-oxygen seawater?",
-   "edition": "2026-11-02-am",
-   "order": 28,
-   "id": "2026-11-02-am-028"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The Zeigarnik effect, honestly",
-   "body": "In the 1920s Bluma Zeigarnik noticed that waiters remembered unpaid orders perfectly and forgot them once paid. Her experiments suggested unfinished tasks stay mentally 'open.'\n\nLater replications are mixed, but one useful finding holds: writing down a concrete plan for an unfinished task quiets the mental nagging. Closing the loop on paper is enough.",
-   "hook": "What open loop is humming in your head right now? Write the next step down.",
-   "edition": "2026-11-02-am",
-   "order": 27,
-   "id": "2026-11-02-am-027"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "A teaspoon of neutron star",
-   "body": "A neutron star packs more mass than the Sun into a ball about 20 km wide, roughly the size of a city. A teaspoon of its material would weigh on the order of a billion tonnes on Earth.",
-   "q": "Roughly how wide is a neutron star?",
-   "a": "About 20 km, city-sized, while holding more mass than the Sun.",
-   "edition": "2026-11-02-am",
-   "order": 26,
-   "id": "2026-11-02-am-026"
-  },
-  {
-   "topic": "chess",
-   "kind": "fact",
-   "title": "More games than atoms",
-   "body": "Claude Shannon estimated the number of possible chess games at about 10^120, now called the Shannon number. The observable universe has roughly 10^80 atoms. No computer will ever solve chess by brute force, which is why intuition and pattern still matter.",
-   "hook": "If brute force is impossible, how do engines play so well?",
-   "edition": "2026-11-02-am",
-   "order": 25,
-   "id": "2026-11-02-am-025"
-  },
-  {
-   "topic": "ai",
-   "kind": "tip",
-   "title": "Evals are the unit tests of AI",
-   "body": "You wouldn't ship code without tests, but people ship prompts without evals all the time. An eval is a fixed set of inputs with known good outputs that you re-run after every change.\n\nStart tiny: 10 real examples, a pass/fail column. It turns 'feels better' into 'is better.'",
-   "edition": "2026-11-02-am",
-   "order": 24,
-   "id": "2026-11-02-am-024"
-  },
-  {
-   "topic": "writing",
-   "kind": "tip",
-   "title": "The three-beat story",
-   "body": "Every story that holds a room has three beats: someone wants something → something gets in the way → they (or we) change.\n\nNo change, no story; just an event. Before your next speech or blog post, write one line: \"Who changed, and how?\"",
-   "hook": "What's the smallest true story from your week that has all three beats?",
-   "edition": "2026-11-02-am",
-   "order": 23,
-   "id": "2026-11-02-am-023"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Idempotency keys: making 'retry' safe",
-   "body": "A payment request times out. Did it go through? If the client retries, you might charge twice.\n\nThe fix: the client sends a unique idempotency key with the request. The server stores the result against that key, so a repeat with the same key returns the stored result instead of doing the work again. Stripe made the pattern famous; every order and payment API needs it.",
-   "q": "What does the server do when it sees an idempotency key it has seen before?",
-   "a": "Returns the stored response from the first attempt without re-executing the operation.",
-   "edition": "2026-11-02-am",
-   "order": 22,
-   "id": "2026-11-02-am-022"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "The temple whose shadow stories are wrong",
-   "body": "Rajaraja Chola I completed the Brihadeeswarar temple at Thanjavur around 1010 CE. Its tower rises about 66 metres. A popular legend says the tower casts no shadow at noon. It does cast one; it just falls on its own broad base. The real wonder is that it has stood for over a thousand years.",
-   "hook": "Why do we love myths about things that are already remarkable?",
-   "edition": "2026-11-02-am",
-   "order": 21,
-   "id": "2026-11-02-am-021"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "body": "There are more things, Lucilius, likely to frighten us than there are to crush us; we suffer more often in imagination than in reality.",
-   "who": "Seneca, Letter XIII (tr. Gummere, 1917)",
-   "edition": "2026-11-02-am",
-   "order": 20,
-   "id": "2026-11-02-am-020"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Make time visible",
-   "body": "Time blindness is real: an ADHD brain often feels only 'now' and 'not now.' Move time outside your head. Use a visual countdown timer on the desk, or say out loud \"this gets 25 minutes.\" Analog clocks help more than digital ones, because you can see how much of the hour is left.",
-   "hook": "Where in your day does time disappear the most?",
-   "edition": "2026-11-02-am",
-   "order": 19,
-   "id": "2026-11-02-am-019"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Java was almost called Oak",
-   "body": "In 1991 James Gosling's team at Sun started the 'Green Project' to program consumer devices. Their language was called Oak, after a tree outside his office. A trademark clash forced a new name, and in 1995 it shipped as Java, sold on 'write once, run anywhere.'",
-   "q": "What was Java's original name, and why did it change?",
-   "a": "Oak. The name was already trademarked, so it was renamed Java before the 1995 launch.",
-   "edition": "2026-11-02-am",
-   "order": 18,
-   "id": "2026-11-02-am-018"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Cleopatra and the Moon landing",
-   "body": "Cleopatra lived closer in time to the Apollo 11 Moon landing than to the building of the Great Pyramid of Giza. The pyramid went up around 2560 BCE; she died in 30 BCE. That's about 2,530 years before her and 1,999 years after.",
-   "hook": "What else feels ancient but is actually 'recent'?",
-   "edition": "2026-11-02-am",
-   "order": 17,
-   "id": "2026-11-02-am-017"
-  },
-  {
-   "topic": "mind",
-   "kind": "tip",
-   "title": "The physiological sigh",
-   "body": "Two inhales through the nose (a full one, then a short top-up) and one long, slow exhale through the mouth. A 2023 Stanford study found that five minutes a day of this 'cyclic sighing' lifted mood more than the same time spent on mindfulness meditation.\n\nIt's the fastest manual brake on stress your body offers.",
-   "source": {
-    "name": "Balban et al., Cell Reports Medicine (2023)",
-    "url": "https://doi.org/10.1016/j.xcrm.2022.100895"
-   },
-   "edition": "2026-11-02-am",
-   "order": 16,
-   "id": "2026-11-02-am-016"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Capablanca's unusual advice: learn endings first",
-   "body": "José Raúl Capablanca, world champion 1921–27, told beginners to study the endgame before anything else. With few pieces on the board, you learn what each piece is actually worth. Openings are memory. Endgames are understanding.",
-   "hook": "What's the 'endgame' of your own field: the simplest situation where the fundamentals show clearly?",
-   "edition": "2026-11-02-am",
-   "order": 15,
-   "id": "2026-11-02-am-015"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Leonids peak Nov 17–18",
-   "body": "The Leonid meteor shower peaks on the night of 17–18 November, at around 15 meteors an hour under dark skies. The Moon will have set by the second half of the night. Leonids are among the fastest meteors, hitting the air at about 70 km/s. They're dust from Comet Tempel–Tuttle.",
-   "hook": "A grain of sand making a streak across the whole sky. How much energy is that?",
-   "source": {
-    "name": "Universe Magazine · Celestial curiosities 2026",
-    "url": "https://universemagazine.com/en/celestial-curiosities-in-2026/"
-   },
-   "edition": "2026-11-02-am",
-   "order": 14,
-   "id": "2026-11-02-am-014"
-  },
-  {
-   "topic": "craft",
-   "kind": "tip",
-   "title": "Java: when a HashMap bucket turns into a tree",
-   "body": "Since Java 8, if one HashMap bucket collects more than 8 entries (and the table has at least 64 slots), that bucket turns from a linked list into a red-black tree. Worst-case lookup drops from O(n) to O(log n). It's a defence against bad hashCode() methods and hash-flooding attacks.",
-   "q": "Two conditions trigger treeification. What are they?",
-   "a": "More than 8 entries in one bucket (TREEIFY_THRESHOLD) and a table capacity of at least 64. Below 64 slots, HashMap resizes instead.",
-   "edition": "2026-11-02-am",
-   "order": 13,
-   "id": "2026-11-02-am-013"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The clockmaker's apprentice",
-   "body": "The apprentice asked why the old man oiled clocks that were running perfectly.\n\n\"Because,\" he said, \"the day it stops, you'll be busy with a hundred others. A clock doesn't ask for care when it needs it. It asks a month later, all at once.\"\n\nThe boy thought this was about clocks. Thirty years later, oiling a quiet clock in his own shop, he realised it never had been.",
-   "who": "original micro-story",
-   "edition": "2026-11-02-am",
-   "order": 12,
-   "id": "2026-11-02-am-012"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "An agent is just a loop",
-   "body": "Strip the hype and every AI agent is: observe → decide → act → check → repeat.\n\nMost agent failures aren't bad thinking. They're a bad 'check' step: the agent never verifies its action worked, so errors compound silently. If you build agents, spend your effort on the check.",
-   "hook": "In your own work, where is the 'check' step weakest?",
-   "edition": "2026-11-02-am",
-   "order": 11,
-   "id": "2026-11-02-am-011"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "A day on Venus outlasts its year",
-   "body": "Venus turns on its axis once every 243 Earth days but goes around the Sun in about 225. It also spins backwards compared with most planets, so on Venus the Sun would rise in the west.",
-   "hook": "What could have knocked a whole planet into spinning backwards?",
-   "edition": "2026-11-02-am",
-   "order": 10,
-   "id": "2026-11-02-am-010"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Forgetting is the point",
-   "body": "In 1885 Hermann Ebbinghaus memorised nonsense syllables and tracked how fast he lost them. Recall fell steeply within the first day, then flattened.\n\nThe twist: each time you pull a memory back just as it's fading, it decays more slowly afterwards. That's the spacing effect. Struggling a little to remember is the signal that learning is happening.",
-   "q": "When is the best time to review something?",
-   "a": "Just as you're about to forget it, so retrieval takes some effort. Then space the next review further out.",
-   "edition": "2026-11-02-am",
-   "order": 9,
-   "id": "2026-11-02-am-009"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The first actual bug",
-   "body": "On 9 September 1947, operators of the Harvard Mark II found a moth trapped in a relay. They taped it into the logbook with the note \"First actual case of bug being found.\" Grace Hopper loved telling the story. Engineers had already been using \"bug\" for faults, so the joke was that this one was literal.",
-   "q": "What machine was the famous moth found in?",
-   "a": "The Harvard Mark II, in 1947.",
-   "edition": "2026-11-02-am",
-   "order": 8,
-   "id": "2026-11-02-am-008"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "body": "Your right is to the work alone, never to its fruits.",
-   "who": "Bhagavad Gita 2.47 (own rendering)",
-   "hook": "What would today look like if you judged it only by effort given?",
-   "edition": "2026-11-02-am",
-   "order": 7,
-   "id": "2026-11-02-am-007"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "A dam that has worked for nearly 2,000 years",
-   "body": "The Kallanai, or Grand Anicut, on the Kaveri is credited to the Chola king Karikalan, around the 2nd century CE. It's among the oldest water-diversion structures in the world still in use, and it still feeds irrigation channels in the delta today.",
-   "hook": "What makes a structure last 2,000 years when most concrete gives out in 100?",
-   "edition": "2026-11-02-am",
-   "order": 6,
-   "id": "2026-11-02-am-006"
-  },
-  {
-   "topic": "adhd",
-   "kind": "idea",
-   "title": "Interest is your ignition, not importance",
-   "body": "Many ADHD coaches describe attention as running on interest rather than importance. The usual starters go by the acronym INCUP: Interest, Novelty, Challenge, Urgency, Passion.\n\nWhen a task won't start, don't ask \"why can't I make myself?\" Ask which of the five you can add. Make it a race against a timer (challenge, urgency), try a new tool (novelty), or attach it to a question you care about (interest).",
-   "hook": "Which of the five is cheapest to add to your next boring task?",
-   "edition": "2026-11-02-am",
-   "order": 5,
-   "id": "2026-11-02-am-005"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Gukesh vs Sindarov: the world title match is three weeks away",
-   "body": "The 2026 World Championship match runs in Geneva from November 25 to December 15, with reigning champion Gukesh D defending against Javokhir Sindarov of Uzbekistan. Both players are about 20, making it the youngest pairing ever to contest the title.",
-   "hook": "What changes in a 14-game match that doesn't exist in a tournament?",
-   "source": {
-    "name": "Chessdom",
-    "url": "https://www.chessdom.com/page/6/"
-   },
-   "edition": "2026-11-02-am",
-   "order": 4,
-   "id": "2026-11-02-am-004"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Cab window, 10 pm",
-   "body": "The city folds its noise away\nlike laundry into drawers.\nOne lit window, then another —\nsomeone else's evening, not yours,\nand somehow that is restful:\nto pass a hundred lives\nand owe none of them a reply.",
-   "who": "original for this feed",
-   "edition": "2026-11-02-am",
-   "order": 3,
-   "id": "2026-11-02-am-003"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Little's Law: the formula hiding inside every queue",
-   "body": "L = λ × W. Items in the system = arrival rate × average time each one stays.\n\nIf 10 incidents arrive a day and each takes 3 days to close, you'll average about 30 open. The law doesn't care who works harder. To shrink the queue you can only reduce arrivals or reduce time-in-system.",
-   "hook": "Which lever is easier in your queue: fewer arrivals, or less time per item?",
-   "q": "Arrival rate doubles, time-per-item stays the same. What happens to the open queue?",
-   "a": "It doubles. L = λW is linear in both.",
-   "edition": "2026-11-02-am",
-   "order": 2,
-   "id": "2026-11-02-am-002"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Mistral opens up a trillion-parameter model",
-   "body": "Mistral released Large 4 with open weights: a trillion-parameter multimodal model that organisations can run on their own servers. It's pitched at software development and defensive security work, where companies don't want sensitive data leaving their walls.",
-   "hook": "If the weights are free, what are companies actually paying for?",
-   "source": {
-    "name": "The Neuron · Oct 30, 2026",
-    "url": "https://theneuron.ai/digest/everything-that-happened-in-ai-today-october-30-2026"
-   },
-   "edition": "2026-11-02-am",
-   "order": 1,
-   "id": "2026-11-02-am-001"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Before dawn: the Moon visits Mars and Jupiter",
-   "body": "Over the next couple of mornings a thin waning Moon slides past Mars and Jupiter, then Regulus, the heart of Leo. Look east in the hour before sunrise. Jupiter is the steady bright one; Mars is fainter and faintly orange.",
-   "q": "Why do stars twinkle but planets mostly don't?",
-   "a": "Stars are so far away they're effectively single points, so air turbulence bends that one point around. A planet shows a tiny disc, and the wobbles from different parts of the disc average out.",
-   "source": {
-    "name": "Star Walk · Astronomy calendar 2026",
-    "url": "https://starwalk.space/en/news/astronomy-calendar-2026"
-   },
-   "edition": "2026-11-02-am",
-   "order": 0,
-   "id": "2026-11-02-am-000"
   }
  ]
 }
