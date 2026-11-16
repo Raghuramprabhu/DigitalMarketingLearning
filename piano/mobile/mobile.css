@@ -7,7 +7,7 @@
 html { height: 100%; scroll-behavior: auto; }
 body.m {
   position: fixed; inset: 0; margin: 0; overflow: hidden;
-  display: grid; grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr) auto;
+  display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr) auto;
   grid-template-areas: "top" "stage" "dock";
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   font-size: 16px; line-height: 1.45;
@@ -138,3 +138,15 @@ body.m.rot-90 { transform: translateY(var(--vh, 100vh)) rotate(-90deg); padding:
 .land .m-sheet.open .m-panel { transform: translate(-50%, 0); }
 .land.m .takes { grid-template-columns: 1fr 1fr; }
 .land.m .take video { max-height: 46vh; }
+
+/* ---------- the whole-piano strip ---------- */
+body.m { grid-template-rows: auto auto minmax(0, 1fr) auto; grid-template-areas: "top" "map" "stage" "dock"; }
+body.m.land { grid-template-rows: auto auto minmax(0, 1fr); grid-template-areas: "top dock" "map map" "stage stage"; }
+.m-map { grid-area: map; position: relative; height: 30px; min-width: 0; touch-action: none; cursor: pointer; }
+/* absolutely placed, so its pixel size can never push the page wider */
+.m-map canvas { position: absolute; left: 8px; top: 3px; width: calc(100% - 16px); height: calc(100% - 8px); border-radius: 5px; }
+.land .m-map { height: 26px; }
+.land .m-map canvas { top: 0; height: calc(100% - 4px); }
+.m-map.off { opacity: .35; pointer-events: none; }
+.m .stops { gap: 7px; }
+.m .stop span { padding: 8px 13px; font-size: 14px; }

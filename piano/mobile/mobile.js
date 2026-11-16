@@ -35,6 +35,54 @@
     b.addEventListener('click', function () { closeSheet(settings); });
   });
 
+  /* ---------- the whole-piano strip: see where you are, tap or drag to jump ---------- */
+  var IS_BLACK = [0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0], LOW = 21, HIGH = 108; // A0..C8
+  var WHITES = []; for (var mm = LOW; mm <= HIGH; mm++) if (!IS_BLACK[mm % 12]) WHITES.push(mm); // 52
+  var map = $('#miniMap'), mapWrap = $('#miniMapWrap'), mctx = map.getContext('2d'), stageCv = $('#stage');
+  var kv = { lo: 48, hi: 79, whites: 19, slidable: true };
+  function drawMap() {
+    var r = map.getBoundingClientRect(); if (!r.width) return;
+    var turned = body.hasAttribute('data-rot');
+    var cssW = turned ? r.height : r.width, cssH = turned ? r.width : r.height;
+    var d = Math.min(3, window.devicePixelRatio || 1), W = Math.round(cssW * d), H = Math.round(cssH * d);
+    if (map.width !== W || map.height !== H) { map.width = W; map.height = H; }
+    var c = mctx, ww = W / WHITES.length;
+    c.clearRect(0, 0, W, H);
+    c.fillStyle = '#16131c'; c.fillRect(0, 0, W, H);
+    WHITES.forEach(function (m, i) {
+      c.fillStyle = m === 60 ? '#f2c9cf' : '#d9d3c7'; c.fillRect(i * ww + d * 0.5, 0, ww - d, H);
+    });
+    WHITES.forEach(function (m, i) {
+      if (IS_BLACK[(m + 1) % 12] && m + 1 <= HIGH) { c.fillStyle = '#26232b'; c.fillRect((i + 1) * ww - ww * 0.3, 0, ww * 0.6, H * 0.58); }
+    });
+    // C labels when there is room
+    if (ww > 9 * d) {
+      c.fillStyle = '#7a6f62'; c.font = '600 ' + Math.round(8 * d) + 'px system-ui'; c.textAlign = 'center'; c.textBaseline = 'bottom';
+      WHITES.forEach(function (m, i) { if (m % 12 === 0) c.fillText('C' + (m / 12 - 1), i * ww + ww / 2, H - d); });
+    }
+    // the visible window
+    var a = WHITES.indexOf(kv.lo), last = kv.hi; while (IS_BLACK[last % 12]) last--;
+    var b = WHITES.indexOf(last);
+    if (a < 0 || b < 0) return;
+    c.fillStyle = 'rgba(10,8,14,.55)'; c.fillRect(0, 0, a * ww, H); c.fillRect((b + 1) * ww, 0, W - (b + 1) * ww, H);
+    c.strokeStyle = '#e9b44c'; c.lineWidth = 2 * d; c.strokeRect(a * ww + d, d, (b - a + 1) * ww - 2 * d, H - 2 * d);
+  }
+  stageCv.addEventListener('keyview', function (e) { kv = e.detail; mapWrap.classList.toggle('off', !kv.slidable); drawMap(); });
+  window.addEventListener('resize', function () { setTimeout(drawMap, 160); });
+  function mapPick(e) {
+    var r = map.getBoundingClientRect(), a = +(body.getAttribute('data-rot') || 0), f;
+    if (a === 90) f = (e.clientY - r.top) / r.height; else if (a === -90) f = (r.bottom - e.clientY) / r.height;
+    else f = (e.clientX - r.left) / r.width;
+    var centre = Math.floor(Math.max(0, Math.min(0.9999, f)) * WHITES.length);
+    var i = Math.max(0, Math.min(WHITES.length - kv.whites, centre - Math.floor(kv.whites / 2)));
+    stageCv.dispatchEvent(new CustomEvent('setstart', { detail: { midi: WHITES[i], quiet: false } }));
+  }
+  var mapDown = false;
+  mapWrap.addEventListener('pointerdown', function (e) { e.preventDefault(); mapDown = true; try { mapWrap.setPointerCapture(e.pointerId); } catch (x) { } mapPick(e); });
+  mapWrap.addEventListener('pointermove', function (e) { if (mapDown) mapPick(e); });
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(function (t) { mapWrap.addEventListener(t, function () { mapDown = false; }); });
+  drawMap();
+
   /* ---------- MIDI: Safari on iPhone has no Web MIDI ---------- */
   if (navigator.requestMIDIAccess) $('#noMidi').hidden = true;
 

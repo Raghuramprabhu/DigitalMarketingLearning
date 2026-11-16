@@ -91,6 +91,7 @@
   settings.instrument = store.get('instrument', 'piano');
   settings.volume = parseFloat(store.get('volume', '0.8'));
   settings.reverb = store.get('reverb', '1') === '1';
+  try { var savedReeds = JSON.parse(store.get('reeds', 'null')); if (savedReeds) for (var rk in savedReeds) settings.reeds[rk] = !!savedReeds[rk]; } catch (x) { }
   var INSTR = PS.INSTR;
   function initAudio() {
     var first = !ac;
@@ -283,6 +284,7 @@
     $('#octLabel').textContent = noteName(lo);
     syncZoomBtns();
     buildLayers();
+    cv.dispatchEvent(new CustomEvent('keyview', { detail: { lo: L.lo, hi: L.hi, whites: L.perRow * L.rows.length, slidable: ZOOM && view.keyLayout !== 'full' } }));
   }
 
   /* --- key size (+ = fewer, wider keys; − = more, narrower keys) --- */
@@ -300,18 +302,27 @@
       kind: kind, whites: L.perRow, rows: L.rows.length, keyPx: Math.round(L.ww / L.dpr), from: noteName(L.lo), to: noteName(lastWhiteKey()), fixed: view.keyLayout === 'full'
     } }));
   }
-  // ◀ ▶ : slide the keyboard one white key, keeping the key width
-  function panBy(d) {
-    if (!ZOOM || !L.W || view.keyLayout === 'full') { announce('pan'); return false; }
+  // Put the leftmost key on any white key (keeping the key width). Returns false if nothing moved.
+  function setStart(m, quiet) {
+    if (!ZOOM || !L.W || view.keyLayout === 'full') { if (!quiet) announce('pan'); return false; }
     if (!(parseInt(view.zoom[L.orient], 10) > 0)) { view.zoom[L.orient] = String(L.perRow); store.set('zoom-' + L.orient, L.perRow); } // freeze today's width
-    var before = view.startC;
-    if (d > 0 && lastWhiteKey() < HIGHEST) view.startC = whiteAfter(view.startC, 1);
-    if (d < 0 && view.startC > LOWEST) view.startC = whiteBefore(view.startC);
-    if (view.startC === before) return false;
-    store.set(START_KEY, view.startC);
-    layout(recorder.isLive()); rebuildKeyMap(); announce('pan');
+    if (IS_BLACK[m % 12]) m--;
+    var shown = L.perRow * L.rows.length, maxStart = LOWEST;
+    while (whiteAfter(maxStart, shown - 1) < HIGHEST) maxStart = whiteAfter(maxStart, 1);
+    m = Math.max(LOWEST, Math.min(maxStart, m));
+    if (m === view.startC) return false;
+    view.startC = m; store.set(START_KEY, m);
+    layout(recorder.isLive()); rebuildKeyMap();
+    if (!quiet) announce('pan');
     return true;
   }
+  // ◀ ▶ : slide one white key
+  function panBy(d) {
+    if (!L.W) return false;
+    return setStart(d > 0 ? whiteAfter(view.startC, 1) : view.startC > LOWEST ? whiteBefore(view.startC) : view.startC);
+  }
+  // other code (the phone page's whole-piano strip) can ask for a new leftmost key
+  cv.addEventListener('setstart', function (e) { setStart(e.detail.midi, e.detail.quiet); });
   // tap = one key; hold = keep sliding, faster the longer you hold
   function holdRepeat(btn, d) {
     if (!btn) return;
@@ -507,10 +518,22 @@
   cv.addEventListener('pointerdown', function (e) {
     e.preventDefault(); initAudio();
     try { cv.setPointerCapture(e.pointerId); } catch (x) { }
-    var p = pt(e), k = keyAt(p.x, p.y); if (!k) return;
+    var p = pt(e), k = keyAt(p.x, p.y);
+    if (!k) { // the dark area above the keys: drag sideways to slide the keyboard (phone page)
+      if (ZOOM && view.keyLayout !== 'full') drags.set(e.pointerId, { x0: p.x, start: view.startC, ww: L.ww });
+      return;
+    }
     pointers.set(e.pointerId, k.m); noteOn(k.m, velFrom(k, p.y), 'p' + e.pointerId);
   });
+  var drags = new Map(); // pointerId -> {x0, start, ww}
   cv.addEventListener('pointermove', function (e) {
+    var dg = drags.get(e.pointerId);
+    if (dg) { // finger moves right -> the keys follow it right -> lower notes come in from the left
+      var steps = Math.round((pt(e).x - dg.x0) / dg.ww), m = dg.start;
+      for (var i = 0; i < Math.abs(steps); i++) m = steps > 0 ? (m > LOWEST ? whiteBefore(m) : m) : whiteAfter(m, 1);
+      setStart(m, true);
+      return;
+    }
     if (!pointers.has(e.pointerId)) return;
     var p = pt(e), k = keyAt(p.x, p.y), cur = pointers.get(e.pointerId);
     var nm = k ? k.m : null; if (nm === cur) return;
@@ -519,6 +542,7 @@
     if (k) noteOn(k.m, velFrom(k, p.y), 'p' + e.pointerId); // glissando
   });
   function pointerEnd(e) {
+    if (drags.has(e.pointerId)) { var dg = drags.get(e.pointerId); drags.delete(e.pointerId); if (view.startC !== dg.start) announce('pan'); return; }
     if (!pointers.has(e.pointerId)) return;
     var cur = pointers.get(e.pointerId); pointers.delete(e.pointerId);
     if (cur !== null) noteOff(cur, 'p' + e.pointerId);
@@ -654,7 +678,22 @@
     layout(recorder.isLive()); rebuildKeyMap(); showKeymapHelp();
   });
 
-  sel.instrument.addEventListener('change', function () { settings.instrument = this.value; store.set('instrument', this.value); this.blur(); });
+  sel.instrument.addEventListener('change', function () { settings.instrument = this.value; store.set('instrument', this.value); this.blur(); syncStops(); });
+  // Harmonium reed stops (checkboxes with data-reed). Pulling a stop while another sound is chosen switches to the 3-reed harmonium.
+  var reedBoxes = document.querySelectorAll('[data-reed]');
+  function syncStops() {
+    reedBoxes.forEach(function (b) { b.checked = !!settings.reeds[b.getAttribute('data-reed')]; });
+    var box = $('#reedStops'); if (box && box.hasAttribute('data-auto-hide')) box.hidden = settings.instrument !== 'harmonium3';
+  }
+  reedBoxes.forEach(function (b) {
+    b.addEventListener('change', function () {
+      settings.reeds[b.getAttribute('data-reed')] = b.checked;
+      store.set('reeds', JSON.stringify(settings.reeds));
+      if (settings.instrument !== 'harmonium3') { settings.instrument = 'harmonium3'; sel.instrument.value = 'harmonium3'; store.set('instrument', 'harmonium3'); }
+      syncStops();
+    });
+  });
+  syncStops();
   sel.octaves.addEventListener('change', function () {
     view.octSetting = this.value; store.set('octaves', this.value); this.blur();
     if (ZOOM) { view.zoom = { up: 'auto', side: 'auto' }; store.set('zoom-up', 'auto'); store.set('zoom-side', 'auto'); } // octaves win

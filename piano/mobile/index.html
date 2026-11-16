@@ -33,13 +33,19 @@
       <option value="epiano">✨ E-piano</option>
       <option value="organ">⛪ Organ</option>
       <option value="strings">🎻 Strings</option>
-      <option value="harmonium">🪗 Harmonium</option>
+      <option value="harmonium">🪗 Harmonium · 2 reeds</option>
+      <option value="harmonium3">🪗 Harmonium · 3 reeds</option>
       <option value="musicbox">🔔 Music box</option>
     </select>
   </label>
   <button type="button" class="m-icon m-rot" id="rotBtn" aria-label="Turn the page sideways">⟳</button>
   <button type="button" class="m-icon" id="openSettings" aria-label="Settings">⚙︎</button>
 </header>
+
+<!-- ===== the whole 88-key piano in miniature: tap or drag to jump (not part of the recording) ===== -->
+<div class="m-map" id="miniMapWrap" aria-label="Whole piano. Tap or drag to move the keyboard there.">
+  <canvas id="miniMap"></canvas>
+</div>
 
 <!-- ===== the stage: this canvas is exactly what gets recorded ===== -->
 <main class="m-stage" id="studio">
@@ -106,9 +112,22 @@
           <option value="off">Off</option>
         </select></label>
       <p class="m-note">Upright, the top row is one octave above the bottom row. Sideways, Auto gives one long keyboard of <b>2.6 octaves</b> (C to G, 19 white keys). Stacked rows use whole octaves.</p>
+      <p class="m-note"><b>Jump anywhere:</b> the thin strip at the top is the whole 88-key piano. The bright window is what you see. Tap or drag it to jump straight to any range, at the same key size. You can also <b>swipe sideways on the dark area above the keys</b> to slide the keyboard under your finger.</p>
       <p class="m-note"><b>Slide:</b> <b>◀ ▶</b> in the dock move the keyboard one white key lower or higher, keeping the key size; hold to keep sliding. The middle shows the leftmost key, e.g. <b>G3</b> for a song in Safed 5. A Bluetooth keyboard's ← → still jump a whole octave.</p>
       <p class="m-note"><b>Key size:</b> the <b>− ⌸ +</b> buttons in the dock. <b>+</b> gives fewer, wider keys; <b>−</b> gives more, narrower ones, one white key per tap. Upright and sideways each remember their own size. Picking an octave count above resets it. Press nearer the bottom of a key to play louder.</p>
       <p class="m-note">Rotation lock on? Tap <b>⟳</b> at the top to turn the page sideways anyway. Tap again to flip it the other way, and a third time to go back upright.</p>
+    </div>
+
+    <div class="m-group">
+      <h4>Harmonium stops</h4>
+      <div class="m-btns stops" id="reedStops">
+        <label class="stop"><input type="checkbox" data-reed="bass"><span>Bass</span></label>
+        <label class="stop"><input type="checkbox" data-reed="male"><span>Male</span></label>
+        <label class="stop"><input type="checkbox" data-reed="male2"><span>Male 2</span></label>
+        <label class="stop"><input type="checkbox" data-reed="female"><span>Female</span></label>
+        <label class="stop"><input type="checkbox" data-reed="tremolo"><span>Tremolo</span></label>
+      </div>
+      <p class="m-note">For <b>🪗 Harmonium · 3 reeds</b> (pulling a stop switches to it). <b>Bass</b> sounds an octave below, <b>Male</b> at the note, <b>Female</b> an octave above. Bass + Male + Female is the classic triple reed. <b>Male 2</b> is tuned slightly sharp and beats against Male, for the Male-Male-Female kind. <b>Tremolo</b> makes the sound flutter.</p>
     </div>
 
     <div class="m-group">

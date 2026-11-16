@@ -47,10 +47,19 @@
           <option value="epiano">✨ Electric piano</option>
           <option value="organ">⛪ Organ</option>
           <option value="strings">🎻 Strings</option>
-          <option value="harmonium">🪗 Harmonium</option>
+          <option value="harmonium">🪗 Harmonium · 2 reeds</option>
+          <option value="harmonium3">🪗 Harmonium · 3 reeds</option>
           <option value="musicbox">🔔 Music box</option>
         </select>
       </label>
+      <div class="tool stops" id="reedStops" data-auto-hide hidden title="Like pulling the stops on a real harmonium">
+        <span>Reed stops</span>
+        <label class="stop"><input type="checkbox" data-reed="bass"><span>Bass</span></label>
+        <label class="stop"><input type="checkbox" data-reed="male"><span>Male</span></label>
+        <label class="stop"><input type="checkbox" data-reed="male2"><span>Male 2</span></label>
+        <label class="stop"><input type="checkbox" data-reed="female"><span>Female</span></label>
+        <label class="stop"><input type="checkbox" data-reed="tremolo"><span>Tremolo</span></label>
+      </div>
       <label class="tool">
         <span>Keys</span>
         <select id="octaves">

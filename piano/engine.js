@@ -13,7 +13,9 @@
 (function () {
   'use strict';
   var ac = null, master, comp, out, wet, recDest, noiseBuf, waves = {};
-  var settings = { instrument: 'piano', volume: 0.8, reverb: true };
+  var settings = { instrument: 'piano', volume: 0.8, reverb: true,
+    // stops of the 3-reed harmonium: bass = octave below, male = at pitch, male2 = at pitch tuned a little sharp, female = octave above
+    reeds: { bass: true, male: true, male2: false, female: true, tremolo: false } };
 
   function makeImpulse(sec, decay) {
     var len = Math.floor(ac.sampleRate * sec), buf = ac.createBuffer(2, len, ac.sampleRate);
@@ -59,6 +61,9 @@
     // Free reed (harmonium): a buzzy, rich spectrum where the overtones barely fade, so it sounds nasal.
     var reed = [0]; for (var hn = 1; hn <= 24; hn++) reed.push((hn === 1 ? 0.75 : 1) / Math.pow(hn, 0.72) * (hn >= 3 && hn <= 6 ? 1.25 : 1));
     waves.reed = periodic(reed);
+    // Female reeds are small and thin: fewer strong overtones, a brighter, lighter voice.
+    var reedF = [0]; for (var hf = 1; hf <= 14; hf++) reedF.push(1 / Math.pow(hf, 0.95) * (hf === 2 ? 1.2 : 1));
+    waves.reedF = periodic(reedF);
   }
 
   function holdAndRelease(param, t, tc) {
@@ -159,6 +164,40 @@
       env.gain.linearRampToValueAtTime(lvl * 0.55, t + 0.025); // a reed takes a moment to "speak"
       env.gain.linearRampToValueAtTime(lvl, t + 0.08);
       var all = [a, b, c, n, lfo];
+      return {
+        release: function (r) { holdAndRelease(env.gain, r, 0.05); all.forEach(function (o) { o.stop(r + 0.5); }); },
+        kill: function (r) { holdAndRelease(env.gain, r, 0.01); all.forEach(function (o) { o.stop(r + 0.1); }); }
+      };
+    },
+    harmonium3: function (m, f, vel, t) {
+      // Triple-reed harmonium. Each pulled stop opens one bank of reeds; every bank has its own size, so its own
+      // colour and its own speaking speed (big bass reeds take longest to start sounding).
+      var R = settings.reeds || {}, on = { bass: !!R.bass, male: !!R.male, male2: !!R.male2, female: !!R.female };
+      if (!on.bass && !on.male && !on.male2 && !on.female) on.male = true; // all stops in: a real one would be silent; keep one reed
+      var env = ac.createGain(), trem = ac.createGain(), nasal = ac.createBiquadFilter();
+      nasal.type = 'peaking'; nasal.frequency.value = 1500; nasal.Q.value = 1.1; nasal.gain.value = 4;
+      var all = [], weight = 0;
+      function bank(wave, hz, cents, gain, cutoff, speak) {
+        var o = osc(wave, hz, t, cents), lp = ac.createBiquadFilter(), g = ac.createGain();
+        lp.type = 'lowpass'; lp.frequency.value = Math.min(cutoff, 9000); lp.Q.value = 0.4;
+        g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(gain * 0.5, t + speak * 0.4); g.gain.linearRampToValueAtTime(gain, t + speak);
+        o.connect(lp); lp.connect(g); g.connect(nasal); all.push(o); weight += gain;
+      }
+      if (on.bass) bank(waves.reed, f / 2, 1, 0.8, f * 3.5, 0.09);     // 16-foot: an octave down, dark, slowest
+      if (on.male) bank(waves.reed, f, -2, 1, f * 7, 0.05);            // 8-foot: the main voice
+      if (on.male2) bank(waves.reed, f, 9, 0.85, f * 7, 0.055);        // 8-foot, tuned sharp: beats against Male ("musette")
+      if (on.female) bank(waves.reedF, f * 2, 2, 0.55, f * 12, 0.03);  // 4-foot: an octave up, bright, quick
+      nasal.connect(env);
+      var n = ac.createBufferSource(); n.buffer = noiseBuf; n.loop = true;
+      var nf = ac.createBiquadFilter(); nf.type = 'bandpass'; nf.frequency.value = Math.min(f * 4, 6000); nf.Q.value = 0.8;
+      var ng = ac.createGain(); ng.gain.value = 0.04; n.connect(nf); nf.connect(ng); ng.connect(env); n.start(t); all.push(n);
+      env.connect(trem); trem.connect(master); trem.gain.value = 1;
+      var lfo = osc('sine', 0.45 + Math.random() * 0.3, t), lg = ac.createGain(); lg.gain.value = 0.07; lfo.connect(lg); lg.connect(trem.gain); all.push(lfo);
+      if (R.tremolo) { // the Tremolo stop: a spinning flap that chops the air about 5–6 times a second
+        var tl = osc('sine', 5.6, t), tg = ac.createGain(); tg.gain.value = 0.24; tl.connect(tg); tg.connect(trem.gain); all.push(tl);
+      }
+      var lvl = (0.068 + vel * 0.025) * 1.15 / Math.sqrt(weight); // more reeds = richer, not much louder
+      env.gain.setValueAtTime(lvl, t);
       return {
         release: function (r) { holdAndRelease(env.gain, r, 0.05); all.forEach(function (o) { o.stop(r + 0.5); }); },
         kill: function (r) { holdAndRelease(env.gain, r, 0.01); all.forEach(function (o) { o.stop(r + 0.1); }); }
