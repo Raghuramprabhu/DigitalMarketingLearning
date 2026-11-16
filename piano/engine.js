@@ -33,6 +33,8 @@
     if (ac) { if (ac.state !== 'running') ac.resume(); return; }
     var AC = window.AudioContext || window.webkitAudioContext;
     if (!AC) return;
+    // iPhone: treat this page like a music app, so sound still plays when the ring/silent switch is on silent (iOS 17+).
+    try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) { }
     try { ac = new AC({ latencyHint: 0 }); } catch (e) { ac = new AC({ latencyHint: 'interactive' }); } // 0 = smallest buffer the device allows
     master = ac.createGain(); master.gain.value = settings.volume;
     // Soft limiter (tanh curve). Unlike a DynamicsCompressor it has no look-ahead, so it adds zero delay.

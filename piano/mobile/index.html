@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Piano Studio · phone</title>
+  <meta name="description" content="Piano Studio tuned for phones: two stacked keyboards in portrait, a full-width keyboard in landscape, and video recording with sound.">
+  <meta name="theme-color" content="#0e0d0b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Piano">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <script>(function(){var t=null;try{t=localStorage.getItem("dml-theme");}catch(e){}if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../piano.css">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body class="m">
+
+<!-- ===== top: back, sound, settings ===== -->
+<header class="m-top">
+  <a class="m-back" href="../" aria-label="Back to the full Piano Studio">‹</a>
+  <span class="m-logo">Piano</span>
+  <label class="m-sound">
+    <span class="sr">Sound</span>
+    <select id="instrument">
+      <option value="piano">🎹 Grand piano</option>
+      <option value="epiano">✨ E-piano</option>
+      <option value="organ">⛪ Organ</option>
+      <option value="strings">🎻 Strings</option>
+      <option value="harmonium">🪗 Harmonium</option>
+      <option value="musicbox">🔔 Music box</option>
+    </select>
+  </label>
+  <button type="button" class="m-icon" id="openSettings" aria-label="Settings">⚙︎</button>
+</header>
+
+<!-- ===== the stage: this canvas is exactly what gets recorded ===== -->
+<main class="m-stage" id="studio">
+  <div class="stage-wrap" id="stageWrap">
+    <canvas id="stage" data-rows="auto" data-kb-frac="0.62" aria-label="Piano keyboard. Touch the keys to play; several fingers at once work."></canvas>
+    <div class="tap-to-start" id="tapToStart">Tap a key to wake the sound 🔊</div>
+    <div class="m-recflag" aria-hidden="true"><i></i><span>REC</span></div>
+    <div class="m-armflag" aria-hidden="true">Play a note to start recording</div>
+  </div>
+  <p class="rec-msg m-toast" id="recMsg" hidden></p>
+</main>
+
+<!-- ===== dock: octave, pedal, record, takes ===== -->
+<nav class="m-dock">
+  <div class="seg m-oct">
+    <button type="button" id="octDown" aria-label="Octave down">−</button>
+    <b id="octLabel">C4</b>
+    <button type="button" id="octUp" aria-label="Octave up">+</button>
+  </div>
+  <button type="button" class="pedal m-pedal" id="sustainBtn" aria-pressed="false" title="Tap to hold every note (sustain pedal)">🦶<span class="m-txt"> Sustain</span></button>
+  <span class="m-grow"></span>
+  <button type="button" class="rec-btn m-rec" id="recBtn"><span class="dot"></span><span class="sr" id="recLabel">Record</span></button>
+  <span class="rec-time m-time" id="recTime">00:00</span>
+  <button type="button" class="m-icon m-takes" id="openTakes" aria-label="Recorded takes">🎞<b id="takeCount" hidden>0</b></button>
+</nav>
+
+<!-- ===== settings sheet ===== -->
+<div class="m-sheet" id="settingsSheet" role="dialog" aria-modal="true" aria-labelledby="setTitle" hidden>
+  <div class="m-scrim" data-close></div>
+  <section class="m-panel">
+    <div class="m-grab"></div>
+    <header class="m-head"><h3 id="setTitle">Settings</h3><button type="button" class="m-icon" data-close aria-label="Close">✕</button></header>
+
+    <div class="m-group">
+      <h4>Keyboard</h4>
+      <label class="m-row"><span>Rows</span>
+        <select id="rows">
+          <option value="auto">Auto</option>
+          <option value="1">1 row</option>
+          <option value="2">2 stacked</option>
+        </select></label>
+      <label class="m-row"><span>Octaves per row</span>
+        <select id="octaves">
+          <option value="auto">Auto</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select></label>
+      <label class="m-row"><span>Key names</span>
+        <select id="labels">
+          <option value="letters">C D E</option>
+          <option value="sargam">Sa Re Ga</option>
+          <option value="off">Off</option>
+        </select></label>
+      <p class="m-note">Upright, the top row is one octave above the bottom row. Turn the phone sideways for one long keyboard. Press nearer the bottom of a key to play louder.</p>
+    </div>
+
+    <div class="m-group">
+      <h4>Sound</h4>
+      <label class="m-row"><span>Volume</span><input type="range" id="volume" min="0" max="1" step="0.01" value="0.8"></label>
+      <label class="m-row m-check"><span>Reverb (concert hall)</span><input type="checkbox" id="reverb" checked></label>
+      <div class="m-row"><span>Sound delay</span><span class="latency" id="latency" hidden></span></div>
+      <p class="m-note">Bluetooth earbuds add 150–300 ms of delay that no web page can remove. The phone speaker or wired earphones feel instant.</p>
+    </div>
+
+    <div class="m-group">
+      <h4>Recording</h4>
+      <label class="m-row m-check"><span>Start on my first note</span><input type="checkbox" id="waitFirst" checked></label>
+      <p class="m-note"><span class="rec-info" id="recInfo"></span><br>The video is exactly the stage: upright gives a tall video (good for Reels and Status), sideways gives a wide one. Use <b>Share → Save Video</b> to put a take in Photos.</p>
+    </div>
+
+    <div class="m-group">
+      <h4>External keyboards</h4>
+      <label class="m-row"><span>Bluetooth typing keyboard</span>
+        <select id="keyLayout">
+          <option value="rows">Piano rows (2 octaves)</option>
+          <option value="full">Full 61 keys · Shift = black</option>
+        </select></label>
+      <label class="m-row m-check"><span>Show key letters</span><input type="checkbox" id="kbHints"></label>
+      <div class="m-row"><span>MIDI keyboard</span><button type="button" class="pedal" id="midiBtn" hidden>🎛 Connect</button><span class="m-dim" id="noMidi">Not supported in Safari on iPhone</span></div>
+      <details class="keymap">
+        <summary>Typing-keyboard map</summary>
+        <div class="keymap-in">
+          <div data-layout="rows">
+            <div class="kmrow"><span class="kmlabel">Upper</span><code>Q W E R T Y U I O P [ ]</code> · black <code>2 3 5 6 7 9 0 =</code></div>
+            <div class="kmrow"><span class="kmlabel">Lower</span><code>Z X C V B N M , . /</code> · black <code>S D G H J L ;</code></div>
+          </div>
+          <div data-layout="full" hidden>
+            <div class="kmrow"><span class="kmlabel">White</span><code>1…0</code> <code>q…p</code> <code>a…l</code> <code>z…m</code></div>
+            <div class="kmrow"><span class="kmlabel">Black</span><code>Shift</code> + the key below it</div>
+          </div>
+          <div class="kmrow"><span class="kmlabel">Keys</span><code>Space</code> sustain · <code>←</code><code>→</code> octave · <code>Esc</code> silence</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="m-group">
+      <h4>How it works</h4>
+      <p class="m-note">Every note is built from overtones in your browser, and key <i>n</i> vibrates at <span class="mono">440 × 2<sup>(n−69)/12</sup></span> Hz. The readout on the stage does this sum live.</p>
+      <div class="m-btns">
+        <button type="button" class="btn small ghost" data-demo="octave">▶ A3 → A4 → A5</button>
+        <button type="button" class="btn small ghost" data-demo="timbre">▶ One note, 6 sounds</button>
+      </div>
+      <p class="m-note">Try: hold <b>C E G</b> (C major), then slide the middle finger down one key to E♭. One key flips the mood: <i>C minor</i>.</p>
+    </div>
+
+    <div class="m-group">
+      <h4>More</h4>
+      <div class="m-btns">
+        <button class="btn small ghost" id="themebtn" type="button">☀️ Light</button>
+        <a class="btn small ghost" href="../learn/">🎓 Learn music</a>
+        <a class="btn small ghost" href="../percussion/">🥁 Rhythm</a>
+        <a class="btn small ghost" href="../">🖥 Full studio</a>
+      </div>
+      <p class="m-note" id="a2hs">Tip: in Safari tap <b>Share → Add to Home Screen</b>. It then opens full-screen, without the address bar, so you get bigger keys.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ===== takes sheet ===== -->
+<div class="m-sheet" id="takesSheet" role="dialog" aria-modal="true" aria-labelledby="takesTitle" hidden>
+  <div class="m-scrim" data-close></div>
+  <section class="m-panel">
+    <div class="m-grab"></div>
+    <header class="m-head"><h3 id="takesTitle">Your takes</h3><button type="button" class="m-icon" data-close aria-label="Close">✕</button></header>
+    <p class="m-note m-empty" id="takesEmpty">Nothing recorded yet. Tap the red button, play, then tap it again to stop. Takes live only on this page until you save or share them.</p>
+    <div class="takes" id="takes"></div>
+  </section>
+</div>
+
+<script src="../engine.js"></script>
+<script src="../piano.js"></script>
+<script src="mobile.js"></script>
+</body>
+</html>

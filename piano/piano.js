@@ -176,10 +176,19 @@
     startC: parseInt(store.get('startC', '48'), 10), // MIDI number of the leftmost C
     labels: store.get('labels', 'letters'),
     keyLayout: store.get('keyLayout', 'rows'),
-    hints: store.get('hints', (window.matchMedia && matchMedia('(pointer: coarse)').matches) ? '0' : '1') === '1'
+    hints: store.get('hints', (window.matchMedia && matchMedia('(pointer: coarse)').matches) ? '0' : '1') === '1',
+    // Stacked keyboard rows (the phone page uses 2 in portrait). Pages without data-rows stay at 1 row.
+    rows: cv.dataset.rows ? store.get('rows', cv.dataset.rows) : '1'
   };
-  var L = { W: 0, H: 0, dpr: 1, keys: [], byMidi: {}, kbTop: 0, kbH: 0, ww: 0, lo: 48, hi: 84 };
+  var KB_FRAC = parseFloat(cv.dataset.kbFrac) || 0.46; // share of each row's height given to the keys
+  var L = { W: 0, H: 0, dpr: 1, keys: [], byMidi: {}, kbTop: 0, kbH: 0, ww: 0, lo: 48, hi: 84, rows: [] };
 
+  function rowsFor(r) {
+    if (view.keyLayout === 'full') return 1; // 61 keys in one line, matching letter song-sheets
+    if (view.rows === 'auto') return r.height > r.width ? 2 : 1;
+    return view.rows === '2' ? 2 : 1;
+  }
+  // octaves PER ROW
   function octavesFor(cssW) {
     if (view.octSetting !== 'auto') return parseInt(view.octSetting, 10);
     if (view.keyLayout === 'full') return 5; // all 61 keys the layout can reach
@@ -198,33 +207,40 @@
       W = Math.round(r.width * dpr / 2) * 2; H = Math.round(r.height * dpr / 2) * 2; // even dims for video encoders
       cv.width = W; cv.height = H;
     }
-    var oct = octavesFor(r.width);
+    var nRows = rowsFor(r), per = octavesFor(r.width), oct = per * nRows;
     view.startC = Math.max(12, Math.min(108 - 12 * oct, view.startC));
-    var lo = view.startC, hi = lo + 12 * oct;
-    var whites = 0; for (var m = lo; m <= hi; m++) if (!IS_BLACK[m % 12]) whites++;
-    var ww = W / whites;
-    var kbH = Math.min(H * 0.46, ww * 5.4, 260 * dpr);
-    var kbTop = H - kbH;
-    var keys = [], byMidi = {}, wi = 0;
-    for (m = lo; m <= hi; m++) {
-      var k = { m: m, black: !!IS_BLACK[m % 12] };
-      if (!k.black) { k.x = wi * ww; k.w = ww; k.h = kbH; wi++; }
-      else {
-        var bw = ww * 0.58, nudge = { 1: -0.12, 3: 0.12, 6: -0.14, 8: 0, 10: 0.14 }[m % 12] * bw;
-        k.x = wi * ww - bw / 2 + nudge; k.w = bw; k.h = kbH * 0.62;
+    var lo = view.startC;
+    // One row: C..C inclusive, as before. Several rows: each row is C..B, and row 0 (the top one) holds the highest notes.
+    var hi = nRows === 1 ? lo + 12 * per : lo + 12 * oct - 1;
+    var keys = [], byMidi = {}, rows = [];
+    for (var ri = 0; ri < nRows; ri++) {
+      var rlo = lo + 12 * per * (nRows - 1 - ri), rhi = nRows === 1 ? hi : rlo + 12 * per - 1;
+      var top = Math.round(H * ri / nRows), bottom = ri === nRows - 1 ? H : Math.round(H * (ri + 1) / nRows);
+      var whites = 0, m; for (m = rlo; m <= rhi; m++) if (!IS_BLACK[m % 12]) whites++;
+      var ww = W / whites;
+      var kbH = Math.min((bottom - top) * KB_FRAC, ww * 5.4, 260 * dpr);
+      var kbTop = bottom - kbH, wi = 0;
+      for (m = rlo; m <= rhi; m++) {
+        var k = { m: m, black: !!IS_BLACK[m % 12], row: ri };
+        if (!k.black) { k.x = wi * ww; k.w = ww; k.h = kbH; wi++; }
+        else {
+          var bw = ww * 0.58, nudge = { 1: -0.12, 3: 0.12, 6: -0.14, 8: 0, 10: 0.14 }[m % 12] * bw;
+          k.x = wi * ww - bw / 2 + nudge; k.w = bw; k.h = kbH * 0.62;
+        }
+        k.y = kbTop; keys.push(k); byMidi[m] = k;
       }
-      k.y = kbTop; keys.push(k); byMidi[m] = k;
+      rows.push({ top: top, bottom: bottom, kbTop: kbTop, kbH: kbH, ww: ww });
     }
-    L = { W: W, H: H, dpr: dpr, keys: keys, byMidi: byMidi, kbTop: kbTop, kbH: kbH, ww: ww, lo: lo, hi: hi };
+    L = { W: W, H: H, dpr: dpr, keys: keys, byMidi: byMidi, kbTop: rows[0].kbTop, kbH: rows[0].kbH, ww: rows[0].ww, lo: lo, hi: hi, rows: rows };
     $('#octLabel').textContent = noteName(lo);
     buildLayers();
   }
 
   function keyAt(x, y) {
-    if (y < L.kbTop) return null;
-    var i, k;
-    for (i = 0; i < L.keys.length; i++) { k = L.keys[i]; if (k.black && x >= k.x && x < k.x + k.w && y < k.y + k.h) return k; }
-    for (i = 0; i < L.keys.length; i++) { k = L.keys[i]; if (!k.black && x >= k.x && x < k.x + k.w) return k; }
+    var i, k, last = L.rows.length - 1;
+    for (i = 0; i < L.keys.length; i++) { k = L.keys[i]; if (k.black && x >= k.x && x < k.x + k.w && y >= k.y && y < k.y + k.h) return k; }
+    // (a finger dragged off the bottom edge still counts as on the bottom row's white keys)
+    for (i = 0; i < L.keys.length; i++) { k = L.keys[i]; if (!k.black && x >= k.x && x < k.x + k.w && y >= k.y && (y < k.y + k.h || k.row === last)) return k; }
     return null;
   }
 
@@ -281,46 +297,52 @@
   }
 
   /* --- the static parts are painted ONCE into off-screen layers, then just copied each frame --- */
-  var layers = { bg: null, kb: null, kbY: 0 };
+  var layers = { rows: null }; // per keyboard row: { bg, top, kb, kbY }
   function mkCanvas(w, h) { var c = document.createElement('canvas'); c.width = Math.max(1, w); c.height = Math.max(1, h); return c; }
   function buildLayers() {
     if (!L.W) return;
-    var d = L.dpr, W = L.W;
-    var bg = mkCanvas(W, Math.ceil(L.kbTop)), b = bg.getContext('2d');
-    var grd = b.createLinearGradient(0, 0, 0, L.kbTop);
-    grd.addColorStop(0, '#07060a'); grd.addColorStop(1, GAP);
-    b.fillStyle = grd; b.fillRect(0, 0, W, bg.height);
-    b.strokeStyle = 'rgba(255,255,255,0.05)'; b.lineWidth = d;
-    L.keys.forEach(function (k) { if (k.m % 12 === 0) { b.beginPath(); b.moveTo(k.x + 0.5, 0); b.lineTo(k.x + 0.5, L.kbTop); b.stroke(); } });
+    var d = L.dpr, W = L.W, out = [];
+    L.rows.forEach(function (R, ri) {
+      var rk = L.keys.filter(function (k) { return k.row === ri; });
+      var bandH = R.kbTop - R.top;
+      var bg = mkCanvas(W, Math.ceil(bandH)), b = bg.getContext('2d');
+      var grd = b.createLinearGradient(0, 0, 0, bandH);
+      grd.addColorStop(0, '#07060a'); grd.addColorStop(1, GAP);
+      b.fillStyle = grd; b.fillRect(0, 0, W, bg.height);
+      b.strokeStyle = 'rgba(255,255,255,0.05)'; b.lineWidth = d;
+      rk.forEach(function (k) { if (k.m % 12 === 0) { b.beginPath(); b.moveTo(k.x + 0.5, 0); b.lineTo(k.x + 0.5, bandH); b.stroke(); } });
 
-    var kbY = Math.floor(L.kbTop - 4 * d);
-    var kb = mkCanvas(W, L.H - kbY), c = kb.getContext('2d');
-    c.translate(0, -kbY); // draw in stage coordinates
-    c.fillStyle = GAP; c.fillRect(0, kbY, W, L.H - kbY);
-    c.fillStyle = '#5a1420'; c.fillRect(0, L.kbTop - 4 * d, W, 4 * d); // felt strip
-    L.keys.forEach(function (k) { if (!k.black) paintWhite(c, k, 0); });
-    L.keys.forEach(function (k) { if (k.black) paintBlack(c, k, false); });
-    L.keys.forEach(function (k) { paintLabel(c, k); });
-    layers = { bg: bg, kb: kb, kbY: kbY };
+      var kbY = Math.floor(R.kbTop - 4 * d);
+      var kb = mkCanvas(W, R.bottom - kbY), c = kb.getContext('2d');
+      c.translate(0, -kbY); // draw in stage coordinates
+      c.fillStyle = GAP; c.fillRect(0, kbY, W, R.bottom - kbY);
+      c.fillStyle = '#5a1420'; c.fillRect(0, R.kbTop - 4 * d, W, 4 * d); // felt strip
+      rk.forEach(function (k) { if (!k.black) paintWhite(c, k, 0); });
+      rk.forEach(function (k) { if (k.black) paintBlack(c, k, false); });
+      rk.forEach(function (k) { paintLabel(c, k); });
+      out.push({ bg: bg, top: R.top, kb: kb, kbY: kbY });
+    });
+    layers = { rows: out };
   }
   var lastChordKey = '', lastChord = null;
   function draw() {
     var W = L.W, d = L.dpr, t = now();
-    if (!W || !layers.bg) return;
-    g2.drawImage(layers.bg, 0, 0);
+    if (!W || !layers.rows || layers.rows.length !== L.rows.length) return;
+    layers.rows.forEach(function (lr) { g2.drawImage(lr.bg, 0, lr.top); });
 
-    // rising bars: plain fills with a soft halo (no shadowBlur, which is the slow part)
-    var speed = L.kbTop * 0.32; // px per second
+    // rising bars: plain fills with a soft halo (no shadowBlur, which is the slow part).
+    // Each row's bars rise through that row's own band; anything that strays is covered by the keyboard layers below.
     var keep = [];
     for (var i = 0; i < bars.list.length; i++) {
-      var b = bars.list[i], k = L.byMidi[b.m];
-      var top = L.kbTop - (t - b.t0) * speed;
-      var bottom = b.t1 === null ? L.kbTop : L.kbTop - (t - b.t1) * speed;
-      if (bottom < 0) continue;
+      var b = bars.list[i], k = L.byMidi[b.m], R = L.rows[k ? k.row : 0];
+      var speed = (R.kbTop - R.top) * 0.32; // px per second
+      var top = R.kbTop - (t - b.t0) * speed;
+      var bottom = b.t1 === null ? R.kbTop : R.kbTop - (t - b.t1) * speed;
+      if (bottom < R.top) continue;
       keep.push(b);
       if (!k) continue;
       var bw = k.black ? k.w * 0.9 : k.w * 0.72, bx = k.x + (k.w - bw) / 2;
-      var y = Math.max(top, -10), h = Math.max(bottom - y, 3 * d), hh = hue(b.m), rad = Math.min(6 * d, bw / 2);
+      var y = Math.max(top, R.top - 10), h = Math.max(bottom - y, 3 * d), hh = hue(b.m), rad = Math.min(6 * d, bw / 2);
       g2.fillStyle = 'hsla(' + hh + ',95%,60%,0.22)'; rr(g2, bx - 4 * d, y - 4 * d, bw + 8 * d, h + 8 * d, rad + 4 * d); g2.fill();
       g2.fillStyle = 'hsl(' + hh + ',90%,63%)'; rr(g2, bx, y, bw, h, rad); g2.fill();
       g2.fillStyle = 'rgba(255,255,255,0.35)'; g2.fillRect(bx + bw * 0.2, y + 2 * d, bw * 0.6, Math.min(3 * d, h / 3));
@@ -328,7 +350,7 @@
     bars.list = keep;
 
     // keyboard: copy the cached layer, then repaint only keys that are down or ringing
-    g2.drawImage(layers.kb, 0, layers.kbY);
+    layers.rows.forEach(function (lr) { g2.drawImage(lr.kb, 0, lr.kbY); });
     var anyDown = holders.size || sustained.size;
     if (anyDown) {
       var blacksToFix = {};
@@ -434,7 +456,7 @@
       buildLayers();
       return;
     }
-    var oct = (L.hi - L.lo) / 12;
+    var oct = Math.round((L.hi - L.lo) / 12);
     var lowerBase = L.lo, upperBase = L.lo + 12;
     if (oct >= 3) { lowerBase = L.lo + 12; upperBase = L.lo + 24; } // keep the two rows centred on wide keyboards
     if (oct <= 1) { lowerBase = L.lo - 12; upperBase = L.lo; }        // 1-octave view: upper row = what you see
@@ -531,6 +553,14 @@
   sel.labels.addEventListener('change', function () { view.labels = this.value; store.set('labels', this.value); this.blur(); buildLayers(); });
   sel.volume.addEventListener('input', function () { settings.volume = parseFloat(this.value); store.set('volume', this.value); if (master) master.gain.setTargetAtTime(settings.volume, ac.currentTime, 0.02); });
   sel.reverb.addEventListener('change', function () { settings.reverb = this.checked; store.set('reverb', this.checked ? '1' : '0'); if (wet) wet.gain.setTargetAtTime(this.checked ? 0.28 : 0, ac.currentTime, 0.05); });
+  var rowsSel = $('#rows'); // only on pages that offer stacked rows
+  if (rowsSel) {
+    rowsSel.value = view.rows;
+    rowsSel.addEventListener('change', function () {
+      view.rows = this.value; store.set('rows', this.value); this.blur();
+      layout(recorder.isLive()); rebuildKeyMap();
+    });
+  }
   sel.hints.addEventListener('change', function () { view.hints = this.checked; store.set('hints', this.checked ? '1' : '0'); buildLayers(); });
   $('#sustainBtn').addEventListener('click', function () { initAudio(); latchSustain = !sustainOn; setSustain(!sustainOn); });
 
