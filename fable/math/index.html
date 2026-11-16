@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="math" data-fb-mode="glide" data-fb-key="math/index.html" data-fb-root="../" data-fb-title="Math: the story">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math: the story · Fable</title>
+  <meta name="description" content="Mathematics from first principles, told as stories, with playgrounds that solve real everyday problems.">
+  <script>try{localStorage.setItem("fable-theme","dark");localStorage.setItem("fable-calm-theme","dark")}catch(e){}document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="math.css">
+  <link rel="stylesheet" href="../core/fable.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="../">← <span>Fable</span></a>
+    <span class="logo">math<i>:</i>story</span>
+    <div style="flex:1"></div>
+    <button class="theme-btn" id="themebtn" type="button">☀️ Light</button>
+  </div>
+</header>
+
+<main class="wrap" style="max-width:1000px;padding-top:60px">
+  <span class="eyebrow">A self-study series · from first principles</span>
+  <h1 style="font-size:clamp(38px,6vw,64px);line-height:1.05">Every formula was once<br>somebody's <span style="color:var(--x);font-style:italic">real problem.</span></h1>
+  <p style="color:var(--soft);font-size:19px;max-width:680px">An heir splitting land. A merchant pricing grain. A king who lost a bet over a chessboard. Each subject here starts with the people who needed it, rebuilds the idea from scratch, and then hands you a playground where it solves a problem from <i>your</i> week.</p>
+
+  <div class="hub-grid">
+    <a class="hub-card" href="algebra.html"><span class="st live">LIVE</span><div class="glyph">x</div><h3>Algebra</h3><p>One ordinary month, five unknowns: an auto fare, a cab-vs-scooter day, two receipts, a garden, a home loan. Plus a separate History corner.</p></a>
+    <div class="hub-card locked"><span class="st soon">SOON</span><div class="glyph">%</div><h3>Number sense</h3><p>Zero's journey from India, place value, percentages, and why "50% off then 50% off" isn't free.</p></div>
+    <div class="hub-card locked"><span class="st soon">SOON</span><div class="glyph">△</div><h3>Geometry &amp; trig</h3><p>How tall is that temple gopuram, measured from where you stand with a phone?</p></div>
+    <div class="hub-card locked"><span class="st soon">SOON</span><div class="glyph">⚄</div><h3>Probability</h3><p>Is the extended warranty worth it? A gamblers' letter in 1654 that invented risk.</p></div>
+    <div class="hub-card locked"><span class="st soon">SOON</span><div class="glyph">σ</div><h3>Statistics</h3><p>Is that 4.8★ rating real? Averages that lie and the questions that catch them.</p></div>
+    <div class="hub-card locked"><span class="st soon">SOON</span><div class="glyph">∫</div><h3>Calculus</h3><p>Newton, Leibniz and Kerala's Mādhava: what "rate of change" really means.</p></div>
+    <div class="hub-card locked"><span class="st soon">SOON</span><div class="glyph">[ ]</div><h3>Linear algebra</h3><p>The maths inside every AI model: vectors, matrices, and why a picture is a list of numbers.</p></div>
+  </div>
+</main>
+<footer>Built one prompt at a time · <a href="../">Field Notes</a></footer>
+<script>
+(function(){var b=document.getElementById('themebtn');var L=function(){return document.documentElement.getAttribute('data-theme')==='light';};var p=function(){b.textContent=L()?'🌙 Dark':'☀️ Light';};p();
+b.addEventListener('click',function(){var t=L()?'dark':'light';document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('fable-theme',t);}catch(e){}p();});})();
+</script>
+<script src="../core/fable.js" defer></script>
+</body>
+</html>

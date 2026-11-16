@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="chess" data-fb-mode="journey" data-fb-key="chess/index.html" data-fb-root="../" data-fb-title="Tactics" data-fb-scenes="section.hero, section.block, section.lesson">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tactics: the story · seven advanced chess patterns · Fable</title>
+  <meta name="description" content="Seven advanced chess tactics (deflection, decoy, overloading, interference, clearance, zwischenzug and the windmill) told as stories from famous games, with shuffled case files and a practice arena.">
+  <script>try{localStorage.setItem("fable-theme","dark");localStorage.setItem("fable-calm-theme","dark")}catch(e){}document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chess.css">
+  <link rel="stylesheet" href="../core/fable.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="../">← <span>Fable</span></a>
+    <span class="logo">Tactics<span>: the story</span></span>
+    <span class="grow"></span>
+    <a class="pill" href="middlegame.html" title="Middlegame strategy page">🗺️<span class="hide-sm"> Strategy</span></a>
+    <a class="pill" href="london.html" title="London System page">♙<span class="hide-sm"> London</span></a>
+    <a class="pill score-pill" id="scorePill" href="#arena-sec" title="Arena puzzles solved">♞ 0</a>
+    <button class="pill" id="themebtn" type="button" aria-label="Toggle light or dark mode">☀️ Light</button>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wide hero-in">
+    <div>
+      <span class="eyebrow">Chess · seven advanced patterns · with a practice arena</span>
+      <h1>Every piece has a job.<br><em>Tactics begin</em> the moment one can't do it.</h1>
+      <p class="lede">A king, buried alive by his own army. A queen offered on a square where three pawns could take her, and spectators throwing gold coins onto the board. A 13-year-old who leaves his queen hanging and wins the "Game of the Century".</p>
+      <p class="lede" style="font-size:17px">These aren't seven tricks to memorise. They're seven ways to break <b>one</b> idea. Learn the idea and you can see the tricks coming.</p>
+      <div class="ctas">
+        <a class="btn" href="#principle">Start with the idea ↓</a>
+        <a class="btn ghost" href="#cases-sec">Case files 🗂</a>
+        <a class="btn ghost" href="#arena-sec">Arena ⚔️</a>
+      </div>
+    </div>
+    <div class="hero-board">
+      <div id="heroBoard"></div>
+      <div class="hero-cap">a king, smothered by his own pieces · loops forever</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FIRST PRINCIPLE ============================ -->
+<section class="block" id="principle">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">THE FIRST PRINCIPLE</div>
+      <h2>How do you rob a museum?</h2>
+    </div>
+    <p>Picture a museum at night. The diamond sits in a glass case. What actually protects it?</p>
+    <p>Not "the museum". Three specific things: a <b class="c-guard">guard</b> standing next to it, a <b class="c-line">line of sight</b> from the camera in the corner, and <b class="c-clock">time</b>, because the alarm gives the police a few minutes to arrive. Take away any one of those three and the diamond is yours.</p>
+    <p>A chess defence is built from exactly the same three materials. Every square near the king and every piece worth protecting is defended by <b>someone</b> (a guard), usually <b>along a line</b> (rooks, bishops and queens defend from far away), and only if the defender has <b>time</b> to respond. So there are exactly three ways to break in:</p>
+    <div class="trio">
+      <div class="t" style="--c:var(--guard)"><div class="ic">💂</div><h4>Attack the guard</h4><p>Move it, lure it, or give it too many jobs.</p><div class="pats">Deflection · Decoy · Overloading</div></div>
+      <div class="t" style="--c:var(--linec)"><div class="ic">📏</div><h4>Attack the line</h4><p>Cut the defender's line, or open your own.</p><div class="pats">Interference · Clearance</div></div>
+      <div class="t" style="--c:var(--clock)"><div class="ic">⏳</div><h4>Attack the clock</h4><p>Never let the defender have a free move.</p><div class="pats">Zwischenzug · Windmill</div></div>
+    </div>
+    <div class="callout gold"><div class="emo">🧭</div><p><b>The question that finds tactics:</b> before looking for clever moves, point at each enemy defender and ask, <i>"What is your job? What are you standing on? How much time do you have?"</i> The weak answer is where the combination is.</p></div>
+    <p>Every combination on this page uses one of these seven patterns, and the great ones stack two or three. Each pattern below starts with a famous game you can step through, move by move.</p>
+  </div>
+  <div class="wide" style="margin-top:26px">
+    <div class="toc">
+      <a href="#deflection" style="--c:var(--guard)"><span class="n">01 · GUARD</span><b>Deflection</b><small>Pull the guard away from the gate.</small></a>
+      <a href="#decoy" style="--c:var(--guard)"><span class="n">02 · GUARD</span><b>Decoy</b><small>Invite a piece onto a poisoned square.</small></a>
+      <a href="#overload" style="--c:var(--guard)"><span class="n">03 · GUARD</span><b>Overloading</b><small>One guard, two gates.</small></a>
+      <a href="#interference" style="--c:var(--linec)"><span class="n">04 · LINE</span><b>Interference</b><small>Build a wall across the line of sight.</small></a>
+      <a href="#clearance" style="--c:var(--linec)"><span class="n">05 · LINE</span><b>Clearance</b><small>Your own piece is the traffic jam.</small></a>
+      <a href="#zwischenzug" style="--c:var(--clock)"><span class="n">06 · CLOCK</span><b>Zwischenzug</b><small>The expected reply can wait.</small></a>
+      <a href="#windmill" style="--c:var(--clock)"><span class="n">07 · CLOCK</span><b>Windmill</b><small>The sails never stop turning.</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 1. DEFLECTION ============================ -->
+<section class="lesson" id="deflection" style="--c:var(--guard)">
+  <div class="wrap">
+    <div class="kick">Pattern 01 · attack the guard</div>
+    <h3>Deflection</h3>
+    <div class="metaphor">Pull the guard away from the gate.</div>
+    <div class="story">
+      <p>Back to the museum. The guard by the diamond is huge, armed and loyal. You can't beat him. So you set off the fire alarm in the <i>other</i> wing. He runs. He's still huge, armed and loyal. He's just not <b>there</b> any more.</p>
+      <p>That's deflection. You don't defeat the defender. You give it an order it can't refuse (a check to answer, a piece to recapture, a threat to stop) and that order takes it somewhere else.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>A defender is not a piece. It's a <b>piece on a square</b>. Its defensive power exists only from where it stands. Change the square, and the defence disappears even though the piece is still alive.</p></div>
+    <div class="tells">
+      <div>A mating square or promotion square guarded by <b>one</b> piece.</div>
+      <div>You have a check or capture that the guard is the only piece able to answer.</div>
+      <div>The guard is a <b>blocker</b>: it sits on a line you need open.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="hero-deflection"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Deflection vs. just capturing the defender: what's the real difference?</div><div class="tap">tap to reveal</div>
+      <div class="a">Capturing the guard ("removing the defender") kills it. Deflection keeps it alive but <b>relocates</b> it. Both leave the job undone. Deflection is often the only option when you can't capture the guard, and it usually costs you the bait.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 2. DECOY ============================ -->
+<section class="lesson" id="decoy" style="--c:var(--guard)">
+  <div class="wrap">
+    <div class="kick">Pattern 02 · attack the guard</div>
+    <h3>Decoy</h3>
+    <div class="metaphor">Invite the king to a dinner he can't leave.</div>
+    <div class="story">
+      <p>A mousetrap doesn't chase the mouse. It decides <i>where</i> the mouse will be, then makes that spot irresistible.</p>
+      <p>Some squares on the board are "loaded": stand there and you're on the same line as an enemy rook, or on the fork square of a knight, or in a corner where your own pieces will smother you. A decoy sacrifice puts the bait <b>on</b> that square. The enemy has to take it, and taking it means standing on the trap.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Deflection cares where the piece <b>leaves</b>. Decoy cares where it <b>arrives</b>. If you can name a square where the enemy king (or queen) would be lost, ask: <i>what can I sacrifice on that square that he must take?</i></p></div>
+    <div class="tells">
+      <div>A square next to the king that's on one of your lines (rook file, bishop diagonal).</div>
+      <div>A knight-fork square, or a square that allows a double check.</div>
+      <div>A sacrifice with only <b>one</b> legal way to capture it.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="hero-decoy"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Why are double checks the decoy's best friend?</div><div class="tap">tap to reveal</div>
+      <div class="a">Against a double check you can't block and you can't capture both checkers. The only legal answer is a king move. So once the king has been lured into a double check, you choose where he walks, and you've already decided where that ends.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 3. OVERLOADING ============================ -->
+<section class="lesson" id="overload" style="--c:var(--guard)">
+  <div class="wrap">
+    <div class="kick">Pattern 03 · attack the guard</div>
+    <h3>Overloading</h3>
+    <div class="metaphor">One guard, two gates.</div>
+    <div class="story">
+      <p>A waiter serving two tables does fine until both tables raise their hands at the same moment. He hasn't become a worse waiter. He has just been asked to be in two places at once.</p>
+      <p>In chess, defenders quietly collect jobs: guard the back rank, protect that knight, cover that square. Each job alone is easy. An overloaded defender is one whose jobs can be called in at the same time.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Defence is <b>accounting</b>. List the important targets and write the defenders next to each one. If the same defender's name appears twice, that defender is overloaded: hit one target and the other is free. Often you don't even need a sacrifice, just a capture.</p></div>
+    <div class="tells">
+      <div>A piece that is the <b>only</b> guard of two different things.</div>
+      <div>A back rank whose only guard is also defending something else.</div>
+      <div>Pawns sheltering the king that also guard squares in front of them.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="hero-overload"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Is the queen too strong to be overloaded?</div><div class="tap">tap to reveal</div>
+      <div class="a">No. The queen is the <i>most</i> overloaded piece in most games, precisely because she's strong enough to be given every job. Power doesn't protect a defender. The number of jobs it has does. Watch for her in the case files.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 4. INTERFERENCE ============================ -->
+<section class="lesson" id="interference" style="--c:var(--linec)">
+  <div class="wrap">
+    <div class="kick">Pattern 04 · attack the line</div>
+    <h3>Interference</h3>
+    <div class="metaphor">Build a wall across the line of sight.</div>
+    <div class="story">
+      <p>The museum camera in the corner watches the diamond from forty metres away. You don't need to smash the camera. You just need to wheel a tall statue in front of it.</p>
+      <p>Rooks, bishops and queens defend from a distance, along a line. A line has empty squares on it, and every empty square is a place where something can be put. Interference drops a piece onto the line, and suddenly the far-away guard sees nothing.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>A long-range defence is only as strong as the <b>emptiest square</b> on its line. Interference works when capturing the intruder costs too much, or, deadliest of all, when the intruder stands where <b>two</b> defensive lines cross, so whichever defender captures it blocks the other.</p></div>
+    <div class="tells">
+      <div>A rook, bishop or queen guarding something from far away.</div>
+      <div>An empty square on that line that you can reach, ideally with a protected piece.</div>
+      <div>Two enemy defensive lines that <b>cross</b> on one square.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="hero-interference"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Why can't you interfere with a knight's defence?</div><div class="tap">tap to reveal</div>
+      <div class="a">A knight jumps. It has no line, so there's nothing to block. Interference only works against the "line pieces": bishops, rooks and queens. Against a knight-guard you have to go back to the guard family: deflect it, decoy it, or overload it.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 5. CLEARANCE ============================ -->
+<section class="lesson" id="clearance" style="--c:var(--linec)">
+  <div class="wrap">
+    <div class="kick">Pattern 05 · attack the line</div>
+    <h3>Clearance</h3>
+    <div class="metaphor">Your own piece is the traffic jam.</div>
+    <div class="story">
+      <p>An ambulance is stuck behind a car. The car isn't an enemy. It's just in the way. The fix: the car pulls over, <i>fast</i>, before the gap closes again.</p>
+      <p>Attacks need open lines and empty squares. Very often the piece clogging your attack is your own: a knight in front of your queen, a rook on the square your knight needs. Clearance gets it out of the way, and the art is to make it leave <b>with a threat</b>, so the opponent has no time to plug the hole.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Interference blocks <b>their</b> line. Clearance opens <b>yours</b>. A clearing move must cost the opponent a tempo (check, capture, or a threat he must answer), or he will simply close the line again.</p></div>
+    <div class="tells">
+      <div>A battery (queen + bishop, rook + rook) where the front piece is <b>yours</b> and blocking.</div>
+      <div>A key square occupied by your own piece.</div>
+      <div>A sacrifice that seems to do nothing except vacate a square.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="hero-clearance"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Go back to Fischer's 19.Rf6 in the Interference game. Interference or clearance?</div><div class="tap">tap to reveal</div>
+      <div class="a"><b>Both.</b> Rf6 cut the g7-bishop's line to e5 (interference), so that e4-e5 could then open the d3-bishop's diagonal to h7 (clearance). The best combinations stack patterns, which is why you learn them separately first.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 6. ZWISCHENZUG ============================ -->
+<section class="lesson" id="zwischenzug" style="--c:var(--clock)">
+  <div class="wrap">
+    <div class="kick">Pattern 06 · attack the clock</div>
+    <h3>Zwischenzug <span style="font-size:.5em;color:var(--dim);font-style:italic">(tsvish-en-tsook)</span></h3>
+    <div class="metaphor">The expected reply can wait.</div>
+    <div class="story">
+      <p>Someone insults you. Everyone in the room waits for your comeback. Instead you say, calmly: "Your car is being towed." They run outside. You can deliver the comeback later, if you still need to.</p>
+      <p><i>Zwischenzug</i> is German for "in-between move". Chess feels like a conversation (he takes, I take back), and that feeling is a trap. Before the obvious reply, you can insert a move that hurts more: a check, a bigger threat, a capture elsewhere. The original question doesn't go away. It just gets answered on your terms.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>A move should be judged by its <b>consequences</b>, not by what it's "replying to". If the enemy piece that just captured is stuck (it can't escape), your recapture will still be there in one move, so spend this move on something bigger first.</p></div>
+    <div class="tells">
+      <div>A piece just captured and it's trapped or can't retreat.</div>
+      <div>You have a check available before recapturing.</div>
+      <div>Both sides have pieces hanging. Whoever moves decides the order.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="hero-zwischenzug"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">What's the 3-second habit that finds zwischenzugs?</div><div class="tap">tap to reveal</div>
+      <div class="a">Before every "obvious" move, especially a recapture, scan for <b>checks, captures, threats</b>, in that order, for both sides. Strong players don't have better instincts here. They just refuse to skip the scan.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 7. WINDMILL ============================ -->
+<section class="lesson" id="windmill" style="--c:var(--clock)">
+  <div class="wrap">
+    <div class="kick">Pattern 07 · attack the clock</div>
+    <h3>The Windmill</h3>
+    <div class="metaphor">The sails never stop turning.</div>
+    <div class="story">
+      <p>A revolving door: every push brings the next panel around. You never get a gap to slip through the other way.</p>
+      <p>A <b>discovered check</b> is the strongest move in chess: the front piece moves wherever it likes, and the piece behind it gives check. Now imagine the front piece can come back with a check of its own, and then leave again with another discovered check. The defender spends every move answering checks while your piece eats everything along its path.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Time is a resource, and each check costs the defender one move. A discovered check gives you a <b>free move</b> on top of the check. A windmill chains them in a loop (direct check, discovered check, direct check...) so the defender never gets a single free move.</p></div>
+    <div class="tells">
+      <div>Your piece stands in front of your rook/bishop/queen, aimed at the enemy king.</div>
+      <div>The enemy king is boxed in, with only two squares to shuttle between.</div>
+      <div>Loose enemy pieces along the path your front piece can travel.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="hero-windmill"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Why must the windmill alternate a direct check with a discovered check?</div><div class="tap">tap to reveal</div>
+      <div class="a">The front piece has to get back to its loaded square (g7 in Torre's game) without giving the opponent a free move, so it returns <b>with</b> check. Then it leaves again with a discovered check. If even one move in the loop is quiet, the defender gets the move he needs to break the line.</div></div>
+    <p class="openloop">You now know all seven. Time to find out if you can see them when nobody tells you which one it is.</p>
+  </div>
+</section>
+
+<!-- ============================ CASE FILES ============================ -->
+<section class="block" id="cases-sec" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">CASE FILES · SOLVED EXAMPLES</div>
+      <h2>Name it before you see it.</h2>
+      <p>Each case is shuffled and unlabelled. Guess the pattern first (that's active recall, the part that makes it stick), then step through the story.</p>
+    </div>
+  </div>
+  <div class="wide" id="cases">
+    <div class="toolbar"><button class="btn small ghost" id="caseShuffle" type="button">🔀 Shuffle cases</button><button class="btn small" id="caseNext" type="button">Next case ▶</button></div>
+    <div class="deck" id="caseDeck"></div>
+    <div id="caseViewer"></div>
+  </div>
+</section>
+
+<!-- ============================ ARENA ============================ -->
+<section class="block" id="arena-sec" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">THE ARENA · YOUR TURN</div>
+      <h2>Harder. Mixed. No labels.</h2>
+      <p>Tap a piece, then tap its destination. The opponent answers by himself. The hint button gives the pattern name first, then the piece, then the move. Each hint costs you a "clean" solve.</p>
+    </div>
+  </div>
+  <div class="wide">
+    <div class="scoreline" id="arenaScore"></div>
+    <div class="toolbar"><button class="btn small ghost" id="arenaShuffle" type="button">🔀 Shuffle</button><button class="btn small ghost" id="arenaReset" type="button">Reset progress</button></div>
+    <div class="deck" id="arenaDeck"></div>
+    <div class="viewer" id="arena">
+      <div><div class="vb" id="arenaBoard"></div></div>
+      <div class="vt">
+        <div class="title" id="arenaTitle"></div>
+        <div class="src" id="arenaSrc"></div>
+        <div class="task" id="arenaTask"></div>
+        <div class="status" id="arenaStatus"></div>
+        <div class="ctrls">
+          <button id="arenaHint" type="button">💡 Hint</button>
+          <button id="arenaSolve" type="button">Show solution</button>
+          <button id="arenaRetry" type="button">↺ Retry</button>
+          <button id="arenaNext" class="main" type="button">Next puzzle ▶</button>
+        </div>
+        <div class="narr" id="arenaLog" style="min-height:0"></div>
+        <div class="why" id="arenaWhy"><div class="lbl">Why it worked</div><div id="arenaWhyT"></div></div>
+        <div id="arenaName"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="border-top:1px solid var(--line);padding-top:50px">
+  <div class="wrap" style="text-align:center">
+    <div class="num" style="font:700 13px var(--font-mono);letter-spacing:.2em;color:var(--gold)">NEXT CHAPTER</div>
+    <h2>Tactics decide what happens. Strategy decides where.</h2>
+    <p style="color:var(--soft);font-size:18px">Seven middlegame principles: pawn skeletons, outposts, bad bishops, open files and more, told through Botvinnik, Kasparov, Fischer and Karpov.</p>
+    <a class="btn" href="middlegame.html">🗺️ Strategy: the story →</a>
+  </div>
+</section>
+
+<footer>
+  Every position is replayed move by move through a rules engine, and every arena answer (and every alternative move) was checked with Stockfish 16.<br>
+  Pieces: "cburnett" set by Colin M.L. Burnett, CC BY-SA 3.0, via lichess.org. · <a href="../">Back to Field Notes</a>
+</footer>
+
+<script src="board.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script src="../core/fable.js" defer></script>
+</body>
+</html>

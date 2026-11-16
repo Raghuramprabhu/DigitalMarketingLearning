@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="home" data-fb-mode="hub" data-fb-root="./" data-fb-title="Fable" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fable · everything you are learning, told again</title>
+  <meta name="description" content="A night sky of seven worlds: marketing, machines, git, chess, algebra, music and a calm feed. One scene at a time.">
+  <meta name="theme-color" content="#07060f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307060f'/%3E%3Ccircle cx='32' cy='32' r='15' fill='%23ffc76b'/%3E%3Ccircle cx='26' cy='29' r='2.6' fill='%231a1026'/%3E%3Ccircle cx='38' cy='29' r='2.6' fill='%231a1026'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="core/fable.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); font: 17px/1.55 var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    button { font: inherit; color: inherit; }
+
+    /* ---------- layout: words on the left, the sky on the right ---------- */
+    .sky-page { min-height: 100svh; display: grid; grid-template-columns: minmax(320px, 0.82fr) 1.5fr; gap: 10px; padding: 0 clamp(18px, 4vw, 64px); }
+    .words { align-self: center; padding: 40px 0; position: relative; z-index: 2; }
+    .hello { display: flex; align-items: baseline; gap: .35em; flex-wrap: wrap; font: 700 13px var(--font-mono); letter-spacing: .2em; text-transform: uppercase; color: var(--fb-a); }
+    .hello input {
+      width: 9ch; min-width: 6ch; background: none; border: 0; border-bottom: 1px dashed color-mix(in oklch, var(--fb-a) 50%, transparent);
+      font: inherit; letter-spacing: inherit; text-transform: inherit; color: #fff; padding: 2px 0; border-radius: 0;
+    }
+    .hello input::placeholder { color: var(--dim); }
+    .hello input:focus { outline: 0; border-bottom-style: solid; }
+    h1.mark {
+      margin: 6px 0 4px -.04em; font: italic 500 clamp(92px, 15vw, 220px)/1 var(--font-display); letter-spacing: -.04em;
+      background: linear-gradient(100deg, #fff 10%, #ffe9b8 30%, var(--fb-a) 48%, #ff9ecb 66%, #b9a2ff 82%, #fff 96%);
+      background-size: 240% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+      animation: mark-in 1.5s .2s var(--fb-ease) both, shimmer 9s ease-in-out infinite alternate; padding: .06em .14em .14em .05em; width: fit-content; transform-origin: 0 60%;
+    }
+    @keyframes shimmer { to { background-position: 100% 0; } }
+    @keyframes mark-in { from { opacity: 0; letter-spacing: .22em; filter: blur(18px); transform: scale(1.06); } }
+    .line { max-width: 24em; font-size: clamp(18px, 1.5vw, 21px); color: var(--soft); margin: 6px 0 26px; }
+    .line b { color: #fff; font-weight: 700; }
+    .words > * { animation: fb-up .9s var(--fb-ease) both; }
+    .words > .hello { animation-delay: .15s; } .words > .line { animation-delay: .8s; } .words > .go { animation-delay: .95s; }
+    .words > .tally { animation-delay: 1.1s; } .words > .tiny { animation-delay: 1.25s; }
+
+    .go { display: grid; gap: 12px; max-width: 430px; }
+    .resume {
+      position: relative; display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; align-items: center; text-align: left; cursor: pointer;
+      padding: 18px 20px; border-radius: 24px; border: 0; color: #150d06; text-decoration: none;
+      background: linear-gradient(135deg, #fff3cf, var(--fb-a) 48%, var(--fb-a2));
+      box-shadow: 0 16px 50px var(--fb-glow); transition: transform .25s var(--fb-ease), box-shadow .25s;
+      animation: fb-call 3s ease-in-out infinite;
+    }
+    .resume:hover { transform: translateY(-3px) scale(1.02); }
+    .resume:active { transform: scale(.97); }
+    .resume small { grid-column: 1; font: 700 11px var(--font-mono); letter-spacing: .18em; text-transform: uppercase; opacity: .7; }
+    .resume b { grid-column: 1; font: 700 20px/1.2 var(--font-body); }
+    .resume i { grid-column: 2; grid-row: 1 / span 2; font: 400 34px/1 var(--font-display); transition: transform .25s var(--fb-ease); }
+    .resume:hover i { transform: translateX(6px); }
+    .dice {
+      padding: 14px 20px; border-radius: 20px; cursor: pointer; text-align: left; font-weight: 700; color: #fff;
+      background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .14); transition: background .2s, transform .2s var(--fb-ease);
+    }
+    .dice:hover { background: rgba(255, 255, 255, .12); transform: translateY(-2px); }
+    .dice small { display: block; font-weight: 400; color: var(--dim); font-size: 13.5px; }
+    .tally { display: flex; gap: 22px; margin-top: 26px; font: 700 12px var(--font-mono); letter-spacing: .08em; color: var(--dim); text-transform: uppercase; }
+    .tally b { display: block; font: italic 600 34px/1 var(--font-display); color: #fff; letter-spacing: 0; text-transform: none; margin-bottom: 4px; }
+    .tiny { margin-top: 26px; font-size: 13px; color: var(--dim); }
+    .tiny a { color: var(--soft); }
+
+    /* ---------- the constellation ---------- */
+    .stage { position: relative; min-height: 100svh; }
+    .stage svg.lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+    .stage svg.lines path { fill: none; stroke: rgba(255, 255, 255, .22); stroke-width: 1.2; stroke-dasharray: 3 9; stroke-linecap: round; }
+    .stage svg.lines path.draw { stroke-dasharray: var(--len); stroke-dashoffset: var(--len); animation: draw 2.4s .9s ease-out forwards; stroke: rgba(255, 255, 255, .16); }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    .orb {
+      --h: 60; --s: clamp(104px, 10.5vw, 158px);
+      position: absolute; left: var(--x); top: var(--y); width: var(--s); margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
+      background: none; border: 0; padding: 0; cursor: pointer; text-align: center; -webkit-tap-highlight-color: transparent;
+      animation: orb-in 1.1s var(--fb-ease) both; animation-delay: calc(var(--n) * 110ms + 500ms);
+      transition: opacity .4s, filter .4s;
+    }
+    @keyframes orb-in { from { opacity: 0; transform: scale(.2); filter: blur(16px); } }
+    .orb .ball {
+      position: relative; display: grid; place-items: center; width: var(--s); height: var(--s); border-radius: 50%;
+      background:
+        radial-gradient(circle at 32% 26%, rgba(255, 255, 255, .95), transparent 26%),
+        radial-gradient(circle at 34% 30%, oklch(0.88 0.13 var(--h)), oklch(0.62 0.20 var(--h)) 46%, oklch(0.30 0.14 calc(var(--h) - 30)) 82%, oklch(0.16 0.08 calc(var(--h) - 40)));
+      box-shadow: 0 0 70px oklch(0.75 0.18 var(--h) / .45), inset -14px -18px 40px rgba(0, 0, 0, .45);
+      animation: bob calc(5s + var(--n) * .7s) ease-in-out infinite alternate; animation-delay: calc(var(--n) * -1.3s);
+      transition: transform .45s var(--fb-ease), box-shadow .45s;
+    }
+    @keyframes bob { from { translate: 0 -9px; } to { translate: 0 9px; } }
+    .orb .ball::after { /* progress ring */
+      content: ""; position: absolute; inset: -9px; border-radius: 50%;
+      background: conic-gradient(#fff calc(var(--p, 0) * 1%), rgba(255, 255, 255, .13) 0);
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2.5px));
+              mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2.5px));
+    }
+    .orb .glyph { font: 400 calc(var(--s) * .4)/1 var(--font-display); color: #fff; text-shadow: 0 2px 18px rgba(0, 0, 0, .5); }
+    .orb .glyph svg { width: 1em; height: 1em; display: block; }
+    .orb .glyph i { font-style: italic; }
+    .orb .name { display: block; margin-top: 18px; font: italic 600 clamp(17px, 1.5vw, 22px)/1.1 var(--font-display); color: #fff; white-space: nowrap; }
+    .orb .sub { display: block; margin-top: 3px; font: 700 10.5px var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: oklch(0.86 0.12 var(--h)); white-space: nowrap; }
+    .orb:hover .ball, .orb:focus-visible .ball, .orb.pick .ball { transform: scale(1.16); box-shadow: 0 0 120px oklch(0.8 0.2 var(--h) / .8), inset -14px -18px 40px rgba(0, 0, 0, .35); }
+    .stage.dim .orb:not(:hover):not(.pick):not(:focus-visible) { opacity: .35; filter: saturate(.5); }
+    .orb.small { --s: clamp(84px, 8vw, 118px); }
+
+    /* ---------- a world opens ---------- */
+    .world {
+      --h: 60; position: fixed; inset: 0; z-index: 7000; overflow: auto; -webkit-overflow-scrolling: touch;
+      background:
+        radial-gradient(80% 70% at 18% 20%, oklch(0.50 0.19 var(--h) / .95), transparent 70%),
+        radial-gradient(70% 70% at 90% 90%, oklch(0.32 0.15 calc(var(--h) - 50) / .9), transparent 70%),
+        oklch(0.15 0.06 var(--h));
+      clip-path: circle(0 at var(--cx, 50%) var(--cy, 50%)); transition: clip-path .75s cubic-bezier(.7, 0, .2, 1); visibility: hidden;
+    }
+    .world.open { clip-path: circle(150vmax at var(--cx, 50%) var(--cy, 50%)); visibility: visible; }
+    .world.shut { visibility: visible; transition-duration: .45s; }
+    .world-in { min-height: 100%; display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(20px, 5vw, 80px); align-items: center; padding: clamp(70px, 9vh, 110px) clamp(20px, 6vw, 90px) 60px; max-width: 1400px; margin: 0 auto; }
+    .world .x {
+      position: fixed; top: 18px; right: 18px; z-index: 2; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; font-size: 22px;
+      background: rgba(0, 0, 0, .3); border: 1px solid rgba(255, 255, 255, .25); color: #fff; transition: transform .3s var(--fb-ease), background .2s;
+    }
+    .world .x:hover { transform: rotate(90deg) scale(1.1); background: rgba(0, 0, 0, .5); }
+    .world .big { font: 400 clamp(90px, 16vw, 230px)/.9 var(--font-display); color: #fff; opacity: .95; text-shadow: 0 10px 80px rgba(0, 0, 0, .35); }
+    .world .big svg { width: 1em; height: 1em; display: block; } .world .big i { font-style: italic; }
+    .world .wsub { font: 700 12px var(--font-mono); letter-spacing: .26em; text-transform: uppercase; color: rgba(255, 255, 255, .75); margin-top: 18px; }
+    .world h2 { margin: 6px 0 12px; font: italic 600 clamp(40px, 6vw, 84px)/1 var(--font-display); color: #fff; }
+    .world .hook { max-width: 26em; font-size: clamp(18px, 1.6vw, 22px); color: rgba(255, 255, 255, .86); margin: 0; }
+    .world.open .intro > * { animation: fb-up .8s var(--fb-ease) both; }
+    .world.open .intro > :nth-child(1) { animation: fb-pop .9s .15s var(--fb-ease) both; }
+    .world.open .intro > :nth-child(2) { animation-delay: .3s; } .world.open .intro > :nth-child(3) { animation-delay: .38s; } .world.open .intro > :nth-child(4) { animation-delay: .46s; }
+    .doors { display: grid; gap: 12px; }
+    .door {
+      position: relative; display: grid; grid-template-columns: auto 1fr auto; gap: 4px 16px; align-items: center; padding: 18px 20px; border-radius: 22px;
+      text-decoration: none; color: #fff; background: rgba(8, 6, 20, .42); border: 1px solid rgba(255, 255, 255, .16);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      transition: transform .3s var(--fb-ease), background .25s, border-color .25s;
+    }
+    .world.open .door { animation: door-in .7s var(--fb-ease) both; animation-delay: calc(var(--n) * 70ms + 420ms); }
+    @keyframes door-in { from { opacity: 0; transform: translateX(60px) scale(.96); } }
+    .door:hover, .door:focus-visible { transform: translateX(-8px) scale(1.015); background: rgba(8, 6, 20, .62); border-color: #fff; }
+    .door .no { grid-column: 1; grid-row: 1 / span 2; font: italic 600 30px/1 var(--font-display); color: oklch(0.88 0.12 var(--h)); min-width: 1.4em; }
+    .door b { grid-column: 2; grid-row: 1; font: 700 19px/1.25 var(--font-body); }
+    .door .desc { grid-column: 2; grid-row: 2; font-size: 14.5px; color: rgba(255, 255, 255, .72); }
+    .door em { grid-column: 3; grid-row: 1 / span 2; font: 700 11px var(--font-mono); font-style: normal; letter-spacing: .1em; text-transform: uppercase; padding: 6px 10px; border-radius: 99px; white-space: nowrap; background: rgba(255, 255, 255, .12); }
+    .door em.done { background: #fff; color: #120b05; }
+    .door em.going { background: oklch(0.88 0.12 var(--h)); color: #120b05; }
+    .door .meter { position: absolute; left: 20px; right: 20px; bottom: 7px; height: 2px; border-radius: 2px; background: rgba(255, 255, 255, .12); overflow: hidden; }
+    .door .meter u { display: block; height: 100%; width: calc(var(--p) * 1%); background: #fff; }
+    .door.minor { padding: 12px 20px; } .door.minor b { font-size: 16.5px; } .door.minor .no { font-size: 20px; }
+
+    /* ---------- first-arrival overture ---------- */
+    .overture { position: fixed; inset: 0; z-index: 9450; display: grid; place-items: center; background: var(--fb-night); cursor: pointer; animation: ov-out .55s 1.55s ease-in forwards; }
+    .overture b { width: 10px; height: 10px; border-radius: 50%; background: #fff; box-shadow: 0 0 30px 8px var(--fb-a), 0 0 120px 40px var(--fb-glow); animation: ov-spark 1.6s cubic-bezier(.6, 0, .3, 1) forwards; }
+    .overture span { position: absolute; bottom: 14vh; font: 700 11px var(--font-mono); letter-spacing: .3em; text-transform: uppercase; color: var(--dim); animation: fb-fade-in .6s .5s both; }
+    @keyframes ov-spark { 0% { transform: scale(0); opacity: 0; } 25% { transform: scale(1); opacity: 1; } 60% { transform: scale(1.6); } 100% { transform: scale(320); opacity: 1; background: var(--fb-night); box-shadow: none; } }
+    @keyframes ov-out { to { opacity: 0; visibility: hidden; } }
+
+    /* ---------- phone: the sky becomes a path ---------- */
+    @media (max-width: 880px) {
+      .sky-page { grid-template-columns: 1fr; padding: 0 18px; }
+      .words { padding: 56px 0 10px; }
+      .stage { min-height: 0; display: grid; gap: 54px; padding: 50px 0 90px; }
+      .orb { --s: 116px; position: relative; left: auto; top: auto; margin: 0; width: auto; display: flex; align-items: center; gap: 20px; text-align: left; justify-self: start; }
+      .orb:nth-child(even) { justify-self: end; flex-direction: row-reverse; text-align: right; }
+      .orb.small { --s: 96px; }
+      .orb .ball { flex: none; }
+      .orb .name { margin-top: 0; font-size: 22px; white-space: normal; }
+      .world-in { grid-template-columns: 1fr; align-items: start; gap: 26px; padding-top: 84px; }
+      .world .big { font-size: 88px; }
+      .door { grid-template-columns: auto 1fr; } .door em { grid-column: 2; grid-row: 3; justify-self: start; margin-top: 4px; }
+    }
+    html.fb-calm h1.mark, html.fb-calm .orb .ball, html.fb-calm .resume { animation: none; }
+    html.fb-calm .world { transition-duration: .2s; }
+    @media (prefers-reduced-motion: reduce) {
+      h1.mark, .orb, .orb .ball, .resume, .words > * { animation: none !important; }
+      .world { transition-duration: .01s; } .overture { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="sky-page">
+  <section class="words">
+    <div class="hello"><span id="greet">Good evening,</span> <input id="who" type="text" maxlength="18" placeholder="friend" aria-label="Your name (stays on this device)" autocomplete="off" spellcheck="false"></div>
+    <h1 class="mark">Fable</h1>
+    <p class="line">Everything you are learning, told again. <b>One scene at a time</b>, nothing else on stage.</p>
+    <div class="go">
+      <a class="resume" id="resume" href="#"><small id="resumeK">Start here</small><b id="resumeT">Pick any light in the sky</b><i>&rarr;</i></a>
+      <button class="dice" id="dice" type="button">&#10022; Let the sky choose<small>Too many options? One tap and it picks for you.</small></button>
+    </div>
+    <div class="tally" aria-live="polite">
+      <div><b id="tSparks">0</b>sparks</div>
+      <div><b id="tDone">0</b>stories finished</div>
+      <div><b id="tDays">1</b>nights here</div>
+    </div>
+    <p class="tiny">Outside the sky: <a href="../">the classic edition</a> · <a href="../deepavali/">Diya Cloud</a> · <a href="../rasi/">Jathagam</a></p>
+  </section>
+
+  <nav class="stage" id="stage" aria-label="Worlds">
+    <svg class="lines" id="lines" aria-hidden="true"></svg>
+  </nav>
+</div>
+
+<div class="world" id="world" role="dialog" aria-modal="true" aria-labelledby="wName">
+  <button class="x" id="wClose" type="button" aria-label="Back to the sky">&#10005;</button>
+  <div class="world-in">
+    <div class="intro">
+      <div class="big" id="wGlyph"></div>
+      <div class="wsub" id="wSub"></div>
+      <h2 id="wName"></h2>
+      <p class="hook" id="wHook"></p>
+    </div>
+    <div class="doors" id="wDoors"></div>
+  </div>
+</div>
+
+<script src="core/fable.js"></script>
+<script>
+(function () {
+  'use strict';
+  var F = window.Fable, D = document, $ = function (id) { return D.getElementById(id); };
+  var stage = $('stage'), lines = $('lines'), worldEl = $('world');
+  var POS = { marketing: [17, 24], machines: [50, 15], git: [82, 27], math: [67, 55], chess: [33, 52], music: [47, 83], calm: [84, 80] };
+  var ORDER = ['marketing', 'machines', 'git', 'math', 'chess', 'music', 'calm'];
+
+  /* ----- overture, once per session ----- */
+  var firstTime = false;
+  try { firstTime = !sessionStorage.getItem('fable-overture'); sessionStorage.setItem('fable-overture', '1'); } catch (e) { }
+  if (firstTime && !F.calm()) {
+    var ov = F.el('div', 'overture', '<b></b><span>tap to skip</span>'); D.body.appendChild(ov);
+    ov.onclick = function () { ov.remove(); }; setTimeout(function () { ov.remove(); }, 2200);
+  }
+
+  /* ----- greeting ----- */
+  var hr = new Date().getHours();
+  $('greet').textContent = (hr < 5 ? 'Still up,' : hr < 12 ? 'Good morning,' : hr < 17 ? 'Good afternoon,' : hr < 22 ? 'Good evening,' : 'Late night,');
+  var who = $('who'); who.value = F.store.get('name', '') || '';
+  function fit() { var n = Math.max(5, (who.value || who.placeholder).length); who.style.width = 'calc(' + n + 'ch + ' + (n * .2 + .5) + 'em)'; } fit();
+  who.addEventListener('input', function () { F.store.set('name', who.value.trim()); fit(); });
+
+  /* ----- progress ----- */
+  function prog(k) { return F.store.get('p:' + k, null); }
+  function pct(k) { var p = prog(k); if (!p || !p.n) return 0; return p.done ? 100 : Math.min(99, Math.round(p.seen.length / p.n * 100)); }
+  function worldPct(w) { var ds = w.doors.filter(function (d) { return !d.tool; }); if (!ds.length) return 0; return Math.round(ds.reduce(function (a, d) { return a + pct(d.k); }, 0) / ds.length); }
+  var done = 0; F.worlds.forEach(function (w) { w.doors.forEach(function (d) { var p = prog(d.k); if (p && p.done) done++; }); });
+  $('tSparks').textContent = F.sparks(); $('tDone').textContent = done; $('tDays').textContent = (F.store.get('days', [1]) || [1]).length;
+
+  /* ----- orbs ----- */
+  var orbs = {};
+  ORDER.forEach(function (id, n) {
+    var w = F.worldOf(id), b = F.el('button', 'orb' + (id === 'calm' ? ' small' : ''),
+      '<span class="ball"><span class="glyph">' + w.glyph + '</span></span><span class="label"><span class="name">' + F.esc(w.name) + '</span><span class="sub">' + F.esc(w.sub) + '</span></span>');
+    b.type = 'button'; b.style.setProperty('--h', w.hue); b.style.setProperty('--n', n); b.style.setProperty('--x', POS[id][0] + '%'); b.style.setProperty('--y', POS[id][1] + '%');
+    b.querySelector('.ball').style.setProperty('--p', worldPct(w));
+    b.setAttribute('aria-label', w.name + ', ' + w.sub);
+    b.onclick = function () { openWorld(w, b); };
+    b.onmouseenter = function () { stage.classList.add('dim'); }; b.onmouseleave = function () { stage.classList.remove('dim'); };
+    stage.appendChild(b); orbs[id] = b;
+  });
+
+  /* ----- constellation lines, measured from wherever the orbs landed ----- */
+  function drawLines(animate) {
+    var s = stage.getBoundingClientRect(), d = '', pts = ORDER.map(function (id) { var r = orbs[id].querySelector('.ball').getBoundingClientRect(); return [r.left + r.width / 2 - s.left, r.top + r.height / 2 - s.top]; });
+    pts.forEach(function (p, i) {
+      if (!i) { d += 'M' + p[0] + ' ' + p[1]; return; }
+      var q = pts[i - 1], mx = (p[0] + q[0]) / 2 + (p[1] - q[1]) * .12, my = (p[1] + q[1]) / 2 - (p[0] - q[0]) * .12;
+      d += ' Q' + mx + ' ' + my + ' ' + p[0] + ' ' + p[1];
+    });
+    lines.innerHTML = '<path d="' + d + '"/>';
+    if (animate && !F.calm()) { var path = lines.firstChild, len = path.getTotalLength(); path.style.setProperty('--len', len); path.classList.add('draw'); setTimeout(function () { path.classList.remove('draw'); }, 3600); }
+  }
+  setTimeout(function () { drawLines(true); }, 80);
+  var rt = 0; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(drawLines, 150); });
+
+  /* ----- pointer parallax (desktop only) ----- */
+  if (matchMedia('(hover: hover) and (min-width: 881px)').matches && !F.calm()) {
+    var raf = 0; addEventListener('pointermove', function (e) {
+      if (raf) return; raf = requestAnimationFrame(function () {
+        raf = 0; var dx = e.clientX / innerWidth - .5, dy = e.clientY / innerHeight - .5;
+        ORDER.forEach(function (id, i) { var k = 10 + (i % 3) * 9; orbs[id].style.translate = (-dx * k) + 'px ' + (-dy * k) + 'px'; });
+        lines.style.translate = (-dx * 12) + 'px ' + (-dy * 12) + 'px';
+      });
+    });
+  }
+
+  /* ----- a world opens from its orb ----- */
+  var lastOrb = null;
+  function openWorld(w, orb) {
+    lastOrb = orb; var r = orb.querySelector('.ball').getBoundingClientRect();
+    worldEl.style.setProperty('--cx', (r.left + r.width / 2) + 'px'); worldEl.style.setProperty('--cy', (r.top + r.height / 2) + 'px'); worldEl.style.setProperty('--h', w.hue);
+    $('wGlyph').innerHTML = w.glyph; $('wSub').textContent = w.sub; $('wName').textContent = w.name; $('wHook').textContent = w.hook;
+    var box = $('wDoors'); box.innerHTML = ''; var many = w.doors.length > 4;
+    w.doors.forEach(function (d, i) {
+      var p = prog(d.k), pc = pct(d.k), tag = d.tool ? 'Open' : (p && p.done ? '✦ Finished' : pc ? 'Scene ' + (p.last + 1) + ' of ' + p.n : 'New');
+      var a = F.el('a', 'door' + (many ? ' minor' : ''), '<span class="no">' + (i + 1) + '</span><b>' + F.esc(d.t) + '</b><span class="desc">' + F.esc(d.b) + '</span><em class="' + (p && p.done ? 'done' : pc ? 'going' : '') + '">' + tag + '</em>' +
+        (pc && !d.tool ? '<div class="meter" style="--p:' + pc + '"><u></u></div>' : ''));
+      a.href = d.k; a.style.setProperty('--n', i); a.style.setProperty('--h', w.hue); box.appendChild(a);
+    });
+    worldEl.classList.remove('shut'); worldEl.classList.add('open'); worldEl.scrollTop = 0; D.body.style.overflow = 'hidden';
+    F.FX.burst(r.left + r.width / 2, r.top + r.height / 2, 40, w.hue, 1.3);
+    setTimeout(function () { var f = box.querySelector('a'); if (f) f.focus({ preventScroll: true }); }, 500);
+  }
+  function closeWorld() {
+    if (!worldEl.classList.contains('open')) return;
+    worldEl.classList.add('shut'); worldEl.classList.remove('open'); D.body.style.overflow = '';
+    setTimeout(function () { worldEl.classList.remove('shut'); }, 460); if (lastOrb) lastOrb.focus({ preventScroll: true });
+  }
+  $('wClose').onclick = closeWorld;
+  D.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeWorld(); });
+  addEventListener('pageshow', function (e) { if (e.persisted) { worldEl.classList.remove('open'); D.body.style.overflow = ''; } });
+
+  /* ----- continue ----- */
+  var lastKey = F.store.get('last', null), lp = lastKey ? prog(lastKey) : null, resume = $('resume');
+  if (lp && lp.title) {
+    resume.href = lastKey;
+    $('resumeK').textContent = lp.done ? 'Finished last time · read it again' : 'Continue · scene ' + (lp.last + 1) + ' of ' + lp.n;
+    $('resumeT').textContent = lp.title;
+  } else {
+    resume.addEventListener('click', function (e) { e.preventDefault(); roll(); });
+  }
+
+  /* ----- let the sky choose ----- */
+  var rolling = false;
+  function roll() {
+    if (rolling) return; rolling = true; stage.classList.add('dim');
+    var pool = F.worlds.filter(function (w) { return w.id !== 'calm' && worldPct(w) < 100; }); if (!pool.length) pool = F.worlds;
+    var target = F.pick(pool), ti = ORDER.indexOf(target.id), steps = ORDER.length * 2 + ti, i = 0, cur = null;
+    if (innerWidth <= 880) orbs[target.id].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (F.calm()) { finish(); return; }
+    (function hop() {
+      if (cur) cur.classList.remove('pick'); cur = orbs[ORDER[i % ORDER.length]]; cur.classList.add('pick');
+      if (i++ < steps) setTimeout(hop, 70 + Math.pow(i / steps, 3) * 330); else setTimeout(finish, 520);
+    })();
+    function finish() { rolling = false; stage.classList.remove('dim'); if (cur) cur.classList.remove('pick'); openWorld(target, orbs[target.id]); }
+  }
+  $('dice').onclick = roll;
+})();
+</script>
+</body>
+</html>

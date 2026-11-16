@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="music" data-fb-mode="glide" data-fb-key="piano/learn/index.html" data-fb-root="../../" data-fb-title="Music: the story">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music: the story · a syllabus from first sound to deep theory · Fable</title>
+  <meta name="description" content="Music theory from first principles, Western and Indian (Carnatic and Hindustani) side by side: sound, notes and sargam, rhythm and tala, scales, ragas, melakartas, harmony and form, with playable lessons.">
+  <script>try{localStorage.setItem("fable-theme","dark");localStorage.setItem("fable-calm-theme","dark")}catch(e){}document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="learn.css">
+  <link rel="stylesheet" href="../../core/fable.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="../">← <span>Piano Studio</span></a>
+    <a class="logo" href="./">Music<span>: the story</span></a>
+    <span class="grow"></span>
+    <button class="pill" id="themebtn" type="button">☀️ Light</button>
+  </div>
+</header>
+
+<main class="wide">
+  <section class="syl-hero">
+    <span class="eyebrow">Syllabus · first sound → deep theory · two traditions, one keyboard</span>
+    <h1>Two traditions, thousands of kilometres apart,<br>both named one note <em>"the fifth"</em>.</h1>
+    <p class="lede" style="max-width:820px">Western music calls it the <i>fifth</i>. Indian music calls it <i>Pa</i>, short for <i>Panchama</i>: "the fifth". That's no coincidence. It's physics, and both traditions found it. This course follows that kind of thread from the very first vibration to melakarta maths, harmony and form. Every idea is shown on a keyboard you can play, heard both ways: Western <b>and</b> Indian, Carnatic <b>and</b> Hindustani.</p>
+    <div class="legend"><span class="lw">Western theory</span><span class="le">Indian (Carnatic &amp; Hindustani)</span><span class="lb">Where they meet</span></div>
+    <div class="overall"><span id="ovText">0 of 0 lessons complete</span><span class="track"><span class="fill" id="ovFill"></span></span></div>
+    <p class="dim" style="font-size:15px;max-width:780px">How each lesson works: a story to hook you, the idea built from first principles, something to play, "pause and answer" checks to pull it out of your memory, then a short ear test. Lessons marked <b>Next</b> are planned and will appear here as they're written.</p>
+  </section>
+
+  <div id="levels"></div>
+</main>
+
+<footer class="foot">Music: the story · part of Piano Studio · Field Notes</footer>
+
+<script>
+(function () {
+  // tag: w = Western, e = Indian, b = both side-by-side
+  var LEVELS = [
+    { lv: 'LEVEL 1', title: 'Sound, notes & time', blurb: 'What a note physically is, how both traditions name notes, and how both count time.', lessons: [
+      { id: '1-1', href: '1-1-sound.html', t: 'What is a note?', d: 'Vibration, frequency, the octave, and why the piano has exactly 12 keys before it repeats. Pythagoras and Bharata’s two veenas.', tags: 'b' },
+      { id: '1-2', href: '1-2-names.html', t: 'C D E meets Sa Re Ga', d: 'Keyboard map, letter names vs sargam, movable Sa, komal/tivra, Carnatic swarasthanas, registers (saptak).', tags: 'b' },
+      { id: '1-3', href: '1-3-rhythm.html', t: 'Beat, tala & time signature', d: 'Tempo and laya, 4/4 and 3/4, Teental, Adi, Rupak and more on a live tala player. Clap-along timing test.', tags: 'b' }
+    ]},
+    { lv: 'LEVEL 2', title: 'Steps, scales & the first ragas', blurb: 'How seven notes are chosen from twelve, and why the same scale has three names.', lessons: [
+      { id: '2-1', href: '2-1-major.html', t: 'The major scale = Bilawal = Shankarabharanam', d: 'Half and whole steps, the W-W-H-W-W-W-H pattern, tetrachords (purvang/uttarang), scale degrees, transposing a tune.', tags: 'b' },
+      { id: '2-2', t: 'Reading music: staff vs sargam notation', d: 'Treble and bass clef, note values on paper; Bhatkhande and Carnatic swara notation side by side.', tags: 'b' },
+      { id: '2-3', t: 'Five-note magic: Mohanam / Bhupali', d: 'The major pentatonic, why it sounds "folk" everywhere on Earth, and the black-key trick.', tags: 'b' },
+      { id: '2-4', t: 'Minor: Natabhairavi / Asavari', d: 'Natural, harmonic and melodic minor, and their Indian cousins. Why minor sounds sad (and when it doesn’t).', tags: 'b' }
+    ]},
+    { lv: 'LEVEL 3', title: 'Intervals: the distances that carry feeling', blurb: 'From ratios to emotion, and why a drone changes everything.', lessons: [
+      { id: '3-1', t: 'Intervals by ear', d: 'Unison to octave, consonance and dissonance from simple ratios. Ear gym for every interval.', tags: 'w' },
+      { id: '3-2', t: 'Samvaad: Sa–Pa and Sa–Ma', d: 'Why the tanpura is tuned the way it is, and how every swara gets its colour against the drone.', tags: 'e' },
+      { id: '3-3', t: 'Tuning: 22 shrutis vs equal temperament', d: 'Just intonation, the comma, why a harmonium is "slightly wrong", and what singers do instead.', tags: 'b' }
+    ]},
+    { lv: 'LEVEL 4', title: 'Rhythm, deeper', blurb: 'Counting becomes architecture.', lessons: [
+      { id: '4-1', t: 'Note values & syllables', d: 'Whole, half, quarter, dotted, tied; solkattu (ta-ka-di-mi) and tabla bols as a rhythm language.', tags: 'b' },
+      { id: '4-2', t: 'The tala systems', d: 'Carnatic: 7 suladi talas × 5 jatis = 35. Hindustani: Teental, Ektaal, Jhaptaal, Rupak, Dhamar.', tags: 'e' },
+      { id: '4-3', t: 'Tihai & korvai: the maths of landing on sam', d: 'Repeat a phrase three times so it ends exactly on beat one. Build your own.', tags: 'e' },
+      { id: '4-4', t: 'Syncopation, swing & polyrhythm', d: '3 against 2, off-beats, and Carnatic nadai/gati changes.', tags: 'b' }
+    ]},
+    { lv: 'LEVEL 5', title: 'Modes, thaats & melakartas', blurb: 'One scale, rotated, becomes many. Then a machine that generates 72.', lessons: [
+      { id: '5-1', t: 'Seven modes from one scale', d: 'Ionian to Locrian, and the Indian twin idea: murchana / graha bhedam (moving Sa).', tags: 'b' },
+      { id: '5-2', t: 'The 10 thaats', d: 'Bhatkhande’s map of Hindustani ragas: Bilawal, Kalyan, Khamaj, Kafi, Asavari, Bhairavi, Bhairav, Poorvi, Marwa, Todi.', tags: 'e' },
+      { id: '5-3', t: 'The 72 melakartas: a combinatorial machine', d: 'Why 6 × 6 × 2 = 72, how the name tells you the number (katapayadi), and building any mela.', tags: 'e' },
+      { id: '5-4', t: 'Rosetta stone: modes ↔ thaats ↔ melas', d: 'Dorian = Kafi = Kharaharapriya, and the full mapping.', tags: 'b' }
+    ]},
+    { lv: 'LEVEL 6', title: 'A raga is more than a scale', blurb: 'Grammar, personality and the notes between the notes.', lessons: [
+      { id: '6-1', t: 'Arohana, avarohana & vakra ragas', d: 'Ascent and descent rules, varjya (omitted) notes, janya (derived) ragas.', tags: 'e' },
+      { id: '6-2', t: 'Vadi, samvadi, pakad, nyasa', d: 'Why Yaman and Bilawal with the same notes still sound different.', tags: 'e' },
+      { id: '6-3', t: 'Gamaka & meend', d: 'Oscillations and slides: the ornaments that make Carnatic and Hindustani music breathe.', tags: 'e' },
+      { id: '6-4', t: 'Time, season & rasa', d: 'Bhairav at dawn, Yaman at dusk: the theory behind the clock, and what science says.', tags: 'e' }
+    ]},
+    { lv: 'LEVEL 7', title: 'Harmony', blurb: 'Stacking notes vertically, the Western superpower, and how Indian music answers with the drone.', lessons: [
+      { id: '7-1', t: 'Triads', d: 'Major, minor, diminished, augmented, built from intervals.', tags: 'w' },
+      { id: '7-2', t: 'Chords in a key', d: 'I ii iii IV V vi vii°, Roman numerals, function (home, away, tension).', tags: 'w' },
+      { id: '7-3', t: 'Progressions & cadences', d: 'Why I–V–vi–IV is everywhere; authentic, plagal and deceptive cadences.', tags: 'w' },
+      { id: '7-4', t: 'Inversions, 7ths & voice leading', d: 'Smooth chord changes, dominant pull, extensions and the ii–V–I.', tags: 'w' },
+      { id: '7-5', t: 'Harmonising an Indian melody', d: 'What happens when you put chords under a raga, and why classical music protects the drone.', tags: 'b' }
+    ]},
+    { lv: 'LEVEL 8', title: 'Keys & journeys', blurb: 'Moving home.', lessons: [
+      { id: '8-1', t: 'Circle of fifths & key signatures', d: 'The map of all 12 keys, and why sharps appear in that order.', tags: 'w' },
+      { id: '8-2', t: 'Modulation vs shruti bhedam', d: 'Changing key in Western music vs shifting Sa to reveal a new raga.', tags: 'b' },
+      { id: '8-3', t: 'Film music: chords under a raga', d: 'How Indian film songs blend raga melody with Western harmony and orchestration.', tags: 'b' }
+    ]},
+    { lv: 'LEVEL 9', title: 'Form & composition', blurb: 'How whole pieces are built, then build one.', lessons: [
+      { id: '9-1', t: 'Indian forms', d: 'Varnam, kriti, tillana; alap, bandish, khayal, dhrupad: what each part does.', tags: 'e' },
+      { id: '9-2', t: 'Western forms', d: 'Verse–chorus, rondo, theme and variations, sonata, fugue.', tags: 'w' },
+      { id: '9-3', t: 'Capstone: compose your own', d: 'Write a melody in a raga, set it to a tala, add chords, and record it in the studio.', tags: 'b' }
+    ]}
+  ];
+
+  var prog = {}; try { prog = JSON.parse(localStorage.getItem('music-progress') || '{}') || {}; } catch (e) { }
+  var total = 0, done = 0, live = 0, html = '';
+  LEVELS.forEach(function (L) {
+    html += '<section class="level"><div class="level-head"><span class="lv">' + L.lv + '</span><h2>' + L.title + '</h2><p>' + L.blurb + '</p></div><div class="lessons">';
+    L.lessons.forEach(function (x) {
+      total++; if (x.href) live++;
+      var isDone = prog[x.id] && prog[x.id].done; if (isDone) done++;
+      var tags = { w: '<i class="tw">WEST</i>', e: '<i class="te">INDIAN</i>', b: '<i class="tw">WEST</i><i class="te">INDIAN</i>' }[x.tags];
+      var st = isDone ? '<span class="st done">✓ Done</span>' : x.href ? '<span class="st live">Open</span>' : '<span class="st soon">Next</span>';
+      var inner = st + '<div class="no">' + x.id.replace('-', '.') + '</div><h3>' + x.t + '</h3><p>' + x.d + '</p><div class="tags">' + tags + '</div>';
+      html += x.href ? '<a class="lesson" href="' + x.href + '">' + inner + '</a>' : '<div class="lesson soon">' + inner + '</div>';
+    });
+    html += '</div></section>';
+  });
+  document.getElementById('levels').innerHTML = html;
+  document.getElementById('ovText').textContent = done + ' of ' + total + ' lessons complete · ' + live + ' open now';
+  document.getElementById('ovFill').style.width = (done / total * 100) + '%';
+
+  var b = document.getElementById('themebtn');
+  function light() { return document.documentElement.getAttribute('data-theme') === 'light'; }
+  function paint() { b.textContent = light() ? '🌙 Dark' : '☀️ Light'; }
+  b.addEventListener('click', function () { var t = light() ? 'dark' : 'light'; document.documentElement.setAttribute('data-theme', t); try { localStorage.setItem('fable-theme', t); } catch (e) { } paint(); });
+  paint();
+})();
+</script>
+<script src="../../core/fable.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="music" data-fb-mode="journey" data-fb-key="piano/learn/1-3-rhythm.html" data-fb-root="../../" data-fb-title="Beat, tala and time signature" data-fb-split="main.wrap">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.3 Beat, tala &amp; time signature · Music: the story · Fable</title>
+  <meta name="description" content="Tempo and laya, Western time signatures, Hindustani and Carnatic talas on a live tala player, kalam (speeds) with Sarali Varisai, and a clap-along timing test.">
+  <script>try{localStorage.setItem("fable-theme","dark");localStorage.setItem("fable-calm-theme","dark")}catch(e){}document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="learn.css">
+  <style>
+    .tala-pick { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tala-pick button { border: 1px solid var(--line2); background: var(--card2); color: var(--ink); border-radius: 999px; padding: 5px 11px; font: 600 13.5px var(--font-body); cursor: pointer; }
+    .tala-pick button.on { background: var(--gold); color: #1a1206; border-color: var(--gold); }
+    .tala-pick .sys { font: 700 11px var(--font-mono); letter-spacing: .1em; text-transform: uppercase; align-self: center; margin: 0 2px 0 8px; }
+    .beats { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 6px; }
+    .vib { display: flex; gap: 4px; padding: 6px; border-radius: 12px; background: var(--card2); border: 1px solid var(--line2); }
+    .bt { width: 56px; min-height: 74px; border-radius: 9px; background: var(--card); border: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 5px 2px; transition: transform .06s, background .06s; }
+    .bt .n { font: 600 11px var(--font-mono); color: var(--dim); }
+    .bt .mk { font: 700 17px var(--font-display); color: var(--ink); min-height: 22px; }
+    .bt .bol { font: 600 12.5px var(--font-body); color: var(--soft); text-align: center; line-height: 1.1; }
+    .bt.sam .mk { color: var(--gold); }
+    .bt.khali .mk { color: var(--west); }
+    .bt.now { background: var(--gold); transform: translateY(-3px); }
+    .bt.now .mk, .bt.now .bol, .bt.now .n { color: #1a1206; }
+    @media (max-width: 520px) { .bt { width: 44px; min-height: 66px; } .bt .bol { font-size: 11px; } }
+    .tala-info { font-size: 15px; color: var(--soft); min-height: 3em; }
+    .tapzone { margin-top: 12px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .tapbtn { width: 120px; height: 72px; border-radius: 16px; border: 2px solid var(--gold); background: transparent; color: var(--gold); font: 700 20px var(--font-body); cursor: pointer; touch-action: manipulation; }
+    .tapbtn:active, .tapbtn.hit { background: var(--gold); color: #1a1206; }
+    .meter { position: relative; width: 240px; height: 26px; border-radius: 99px; background: var(--card2); border: 1px solid var(--line2); }
+    .meter .mid { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--gold); }
+    .meter .pip { position: absolute; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: var(--east); transform: translateX(-50%); left: 50%; transition: left .15s; }
+    .meter span { position: absolute; top: 28px; font: 600 11px var(--font-mono); color: var(--dim); }
+  </style>
+  <link rel="stylesheet" href="../../core/fable.css">
+</head>
+<body data-lesson="1-3">
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="./">← <span class="hide-sm">Syllabus</span></a>
+    <a class="logo" href="./">Music<span>: the story</span></a>
+    <span class="grow"></span>
+    <select class="pill" id="instrPick" aria-label="Instrument for examples">
+      <option value="piano">🎹 Piano</option><option value="harmonium">🪗 Harmonium</option><option value="epiano">✨ E-piano</option><option value="strings">🎻 Strings</option>
+    </select>
+    <button class="pill" id="themebtn" type="button">☀️ Light</button>
+  </div>
+  <div class="readbar"></div>
+</header>
+
+<main class="wrap">
+  <section class="l-hero">
+    <span class="eyebrow">Level 1 · Lesson 3 · Time</span>
+    <h1>Beat, <em>tala</em> &amp; time signature</h1>
+    <p class="lede">Pitch is <i>how often</i> the air is pushed. Rhythm is the same idea, slowed down until you can count it. Here's how both traditions turn a steady pulse into a cycle you can feel in your body.</p>
+    <div class="goals"><h4>By the end you'll be able to</h4><ul>
+      <li>Explain beat, tempo (BPM) and laya, and the Carnatic "speeds" (kalam).</li>
+      <li>Count 4/4, 3/4 and 6/8, and keep Teental, Adi and Rupak with your hands.</li>
+      <li>Explain sam, tali and khali, and why a tala is a <i>cycle</i> rather than a ruler.</li>
+      <li>Measure how accurately you clap on the beat.</li>
+    </ul></div>
+  </section>
+
+  <div class="story">
+    <p><b>Walk into a Carnatic concert</b> and watch the audience, not the stage. Hundreds of people are quietly keeping time on their thighs: a clap, three finger taps, clap, wave, clap, wave. Nobody's conducting them. When the singer and the mridangam player land a long, tricky phrase exactly on beat one of the cycle, the whole hall exhales, and sometimes applauds.</p>
+    <p>In a Western orchestra, one person does that job for everyone: the <b>conductor</b>, whose baton traces the same shapes (down, left, right, up for 4 beats) that the audience in Chennai traces with their hands. Two traditions, one instinct: <b>time is something you show with your body</b>.</p>
+  </div>
+
+  <h2>1 · The beat and its speed</h2>
+  <p>A <b>beat</b> is the steady pulse you'd tap your foot to. <b>Tempo</b> is how fast it goes, measured in <b>beats per minute (BPM)</b>. A resting heart is about 60–80 BPM, and so is a calm song.</p>
+  <div class="duo">
+    <div class="w"><h4>Western</h4><p>Tempo words in Italian: <b>largo</b> (very slow), <b>adagio</b> (slow), <b>andante</b> (walking), <b>moderato</b>, <b>allegro</b> (fast), <b>presto</b> (very fast). Or simply a number: ♩ = 96.</p></div>
+    <div class="e"><h4>Indian</h4><p><b>Laya</b> is tempo. Hindustani: <b>vilambit</b> (slow), <b>madhya</b> (medium), <b>drut</b> (fast). A khayal often starts in vilambit and speeds up. Carnatic adds <b>kalam</b> (speeds): the same melody sung at 1, 2 and 4 notes per beat, while the tala's beat stays put.</p></div>
+  </div>
+
+  <h2>2 · Grouping beats: meter and tala</h2>
+  <p>Beats on their own are like an endless row of fence posts. Music groups them. The <b>first beat</b> of each group feels heavier, and that weight is what makes a waltz feel different from a march.</p>
+  <div class="duo">
+    <div class="w"><h4>Western: the time signature</h4><p>Written like a fraction at the start of the music. <b>4/4</b> = four beats per bar (strong, weak, medium, weak). <b>3/4</b> = three (strong, weak, weak: the waltz). <b>6/8</b> = six quick beats felt as two groups of three. Bars repeat like identical boxes.</p></div>
+    <div class="e"><h4>Indian: the tala</h4><p>A <b>tala</b> is a <b>cycle</b> (avartan / avartanam) that comes back round, divided into sections (<b>vibhag</b> in Hindustani, <b>anga</b> in Carnatic). Its first beat is <b>sam</b>, the "home" of time, where phrases resolve. Hindustani marks some sections with a clap (<b>tali</b>) and one with a wave (<b>khali</b>, "empty").</p></div>
+  </div>
+
+  <div class="widget" id="talaWidget">
+    <h4>🥁 Tala player</h4>
+    <div class="tala-pick" id="talaPick"></div>
+    <div class="beats" id="beats"></div>
+    <p class="tala-info" id="talaInfo"></p>
+    <div class="row">
+      <button type="button" class="btn" id="tPlay">▶ Start</button>
+      <label style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--soft)">Tempo <input type="range" id="tBpm" min="40" max="180" value="80"> <b class="readout" id="tBpmR">80</b> BPM</label>
+      <span class="seg" id="tSound"><button type="button" data-s="bols" class="on">Bols / syllables</button><button type="button" data-s="clicks">Clicks only</button></span>
+    </div>
+    <p class="cap">Legend: <b class="both">X</b> = sam (beat one) · numbers = claps (tali) · <b class="west">0</b> = wave (khali) · ✋ clap · 👋 wave · ☝ finger count.</p>
+  </div>
+
+  <details class="recall"><summary>Teental has 16 beats in four groups of 4. Which beat is sam, and which group is khali?</summary><div><b>Beat 1</b> is sam (X). The <b>third group (beats 9–12)</b> is khali (0), played with open, lighter strokes: "Ta Tin Tin Ta" instead of "Dha Dhin Dhin Dha". That "empty" section tells listeners where they are in the cycle, so they can feel sam coming.</div></details>
+
+  <h3>Rupak's puzzle</h3>
+  <p>Play <b>Rupak</b> above and look at beat 1. In every other Hindustani tala, sam is a clap. In Rupak, <b>sam falls on the khali</b>, the "empty" wave. So the most important beat is marked by the lightest gesture. Musicians argue about why. It's a good reminder that a tala isn't just counting: it's a <i>shape</i> with a character.</p>
+
+  <h2>3 · Carnatic hands: Adi tala</h2>
+  <p>Adi ("first") tala is the most common Carnatic tala: 8 beats, built from three <b>angas</b>:</p>
+  <ul>
+    <li><b>Laghu</b> (4 beats): a clap, then count with the little, ring and middle fingers.</li>
+    <li><b>Drutam</b> (2 beats): clap, wave.</li>
+    <li><b>Drutam</b> (2 beats): clap, wave.</li>
+  </ul>
+  <p>Now let's do what every Carnatic student does in week one: <b>Sarali Varisai</b>, the first exercise attributed to <b>Purandara Dasa</b> (16th century), who organised how Carnatic music is taught. It's sung in raga <b>Mayamalavagowla</b> (S R1 G3 M1 P D1 N3), over Adi tala, first at 1 note per beat, then 2, then 4: the <b>three kalams</b>.</p>
+  <div class="widget">
+    <h4>🎼 Sarali Varisai 1 in three speeds</h4>
+    <div class="row">
+      <span class="seg" id="kalam"><button type="button" data-k="1" class="on">1st speed (1 note/beat)</button><button type="button" data-k="2">2nd (2/beat)</button><button type="button" data-k="4">3rd (4/beat)</button></span>
+      <button type="button" class="btn" id="varPlay">▶ Play with Adi tala</button>
+    </div>
+    <div class="kbd" id="varKbd" data-from="C4" data-to="C5" data-labels="bothc" data-sa="C4" data-mark="C4 C#4 E4 F4 G4 G#4 B4 C5"></div>
+    <p class="cap">Notes: <span class="mono">S R G M | P D | N Ṡ ‖ Ṡ N D P | M G | R S</span>. Watch the tala strip above. At 2nd speed the whole exercise fits in one cycle, and at 3rd speed it repeats twice per cycle. <b>The beat never changes. Only the density does.</b></p>
+  </div>
+
+  <div class="meet"><h4>Where they meet</h4><p>Carnatic "speeds" are the same idea as Western <b>note values</b>: quarter notes (1 per beat), eighth notes (2 per beat), sixteenth notes (4 per beat). A Western drummer would call 3rd speed "sixteenths". Same maths, different words. You'll write it both ways in Lesson 4.1.</p></div>
+
+  <h2>4 · Clap-along test</h2>
+  <p>Start the tala player (any tala, any tempo), then tap the button, or press <b>Space</b>, on every beat. You'll see whether you rush (early) or drag (late), in milliseconds. Musicians usually land within about ±30 ms. Most beginners rush.</p>
+  <div class="tapzone">
+    <button type="button" class="tapbtn" id="tapBtn">TAP</button>
+    <div>
+      <div class="meter"><div class="mid"></div><div class="pip" id="pip"></div><span style="left:0">early</span><span style="right:0">late</span></div>
+      <p class="readout" id="tapRead" style="margin-top:22px">Start the tala, then tap.</p>
+    </div>
+  </div>
+
+  <h2>5 · Check yourself</h2>
+  <div class="quiz" data-key="q1">
+    <p class="q">In Hindustani music, "khali" means…</p>
+    <div class="opts"><button class="opt" data-correct>The "empty" section of the tala, shown with a wave instead of a clap</button><button class="opt">The last beat of the cycle</button><button class="opt">A fast tempo</button><button class="opt">A rest where nobody plays</button></div>
+    <p class="why">Khali is still played, just with lighter, open strokes (no bass drum). It's a landmark that helps everyone find sam.</p>
+  </div>
+  <div class="quiz" data-key="q2">
+    <p class="q">A singer goes from 1st speed to 3rd speed in Adi tala. What happens?</p>
+    <div class="opts"><button class="opt" data-correct>The beat stays the same, but 4 notes fit in each beat instead of 1</button><button class="opt">The tempo becomes 3× faster</button><button class="opt">The tala changes to one with more beats</button><button class="opt">Each note is held 3 times longer</button></div>
+    <p class="why">Kalam doubles the density each step: 1 → 2 → 4 notes per beat. The tala (and the audience's hands) don't change at all.</p>
+  </div>
+  <div class="quiz" data-key="q3">
+    <p class="q">Which pair describes the same idea in the two traditions?</p>
+    <div class="opts"><button class="opt" data-correct>Bar / measure ↔ one cycle (avartan) of a tala, with beat one ↔ sam</button><button class="opt">Tempo ↔ tala</button><button class="opt">Time signature ↔ raga</button><button class="opt">Conductor ↔ tanpura</button></div>
+    <p class="why">Both group beats with a strong first beat. The difference is emphasis: a Western bar is a box that repeats, while a tala is a cycle whose "return home" to sam is a big musical event.</p>
+  </div>
+  <div class="quiz" data-key="q4">
+    <p class="q">Adi tala, counted by hand, goes:</p>
+    <div class="opts"><button class="opt" data-correct>Clap, 3 finger counts, clap, wave, clap, wave</button><button class="opt">Clap, clap, wave, clap (×4)</button><button class="opt">Four claps, four waves</button><button class="opt">Wave, clap, clap</button></div>
+    <p class="why">Laghu (clap + little, ring, middle finger) + drutam (clap, wave) + drutam (clap, wave) = 4 + 2 + 2 = 8 beats.</p>
+  </div>
+
+  <h2>6 · Ear test: how long is the cycle?</h2>
+  <p>You'll hear a pulse with an accent on beat one, repeated three times. Count the beats from one accent to the next.</p>
+  <div id="earCycle"></div>
+
+  <div class="takeaways">
+    <h3>Takeaways</h3>
+    <ul>
+      <li><b>Beat</b> = steady pulse. <b>Tempo/laya</b> = its speed (BPM; vilambit · madhya · drut).</li>
+      <li><b>Meter</b> groups beats into identical bars (4/4, 3/4, 6/8). A <b>tala</b> is a cycle (avartan) with sections (vibhag/anga) and a home beat, <b>sam</b>.</li>
+      <li>Hindustani: tali (clap) and khali (wave). Teental 16 = 4+4+4+4 with khali on 9. Rupak puts sam on khali.</li>
+      <li>Want to <i>play</i> these on tambourine, dholak or tabla? Practise in the <a href="../percussion/">Bhajan Rhythm Studio</a>, where the tutor scores your timing.</li>
+      <li>Carnatic: Adi tala = laghu (4) + drutam (2) + drutam (2). <b>Kalam</b> = 1, 2, 4 notes per beat, the same idea as quarter, eighth and sixteenth notes.</li>
+    </ul>
+  </div>
+
+  <div class="l-end">
+    <a class="nav-next" href="1-2-names.html">← 1.2 C D E meets Sa Re Ga</a>
+    <button class="done-btn" data-lesson="1-3">Mark this lesson complete</button>
+    <a class="nav-next" href="2-1-major.html">Next: The major scale →</a>
+  </div>
+</main>
+
+<script src="../engine.js"></script>
+<script src="learn.js"></script>
+<script>
+(function () {
+  var LK = window.LK, PS = window.PS;
+
+  // a: action per beat (✋ clap, 👋 wave, ☝ finger, '' none). acc: 3 sam, 2 clap, 1 wave/khali, 0 plain
+  var TALAS = [
+    { sys: 'Western', id: '44', name: '4/4', groups: [4], marks: ['1', '2', '3', '4'], acc: [3, 0, 2, 0], bols: ['ONE', 'two', 'three', 'four'],
+      info: '<b>4/4 (common time)</b>: strong, weak, medium, weak. Most pop, rock and film songs.' },
+    { sys: 'Western', id: '34', name: '3/4', groups: [3], marks: ['1', '2', '3'], acc: [3, 0, 0], bols: ['ONE', 'two', 'three'],
+      info: '<b>3/4</b>: the waltz. One strong beat and two light ones.' },
+    { sys: 'Western', id: '68', name: '6/8', groups: [3, 3], marks: ['1', '2', '3', '4', '5', '6'], acc: [3, 0, 0, 2, 0, 0], bols: ['ONE', 'and', 'a', 'TWO', 'and', 'a'],
+      info: '<b>6/8</b>: six quick beats felt as two big swings of three. Compare Dadra (also 6 = 3+3).' },
+    { sys: 'Hindustani', id: 'teen', name: 'Teental · 16', groups: [4, 4, 4, 4], marks: ['X', '', '', '', '2', '', '', '', '0', '', '', '', '3', '', '', ''], acc: [3, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0],
+      bols: ['Dha', 'Dhin', 'Dhin', 'Dha', 'Dha', 'Dhin', 'Dhin', 'Dha', 'Dha', 'Tin', 'Tin', 'Ta', 'Ta', 'Dhin', 'Dhin', 'Dha'],
+      info: '<b>Teental</b> (Tintal): 16 beats = 4+4+4+4. Claps on 1 (sam), 5, 13, and a wave on 9 (khali). The most common Hindustani tala.' },
+    { sys: 'Hindustani', id: 'ek', name: 'Ektaal · 12', groups: [2, 2, 2, 2, 2, 2], marks: ['X', '', '0', '', '2', '', '0', '', '3', '', '4', ''], acc: [3, 0, 1, 0, 2, 0, 1, 0, 2, 0, 2, 0],
+      bols: ['Dhin', 'Dhin', 'DhaGe', 'TiRaKiTa', 'Tu', 'Na', 'Kat', 'Ta', 'DhaGe', 'TiRaKiTa', 'Dhi', 'Na'],
+      info: '<b>Ektaal</b>: 12 beats = six sections of 2, with two khalis. Common for slow (vilambit) khayal.' },
+    { sys: 'Hindustani', id: 'jhap', name: 'Jhaptaal · 10', groups: [2, 3, 2, 3], marks: ['X', '', '2', '', '', '0', '', '3', '', ''], acc: [3, 0, 2, 0, 0, 1, 0, 2, 0, 0],
+      bols: ['Dhi', 'Na', 'Dhi', 'Dhi', 'Na', 'Ti', 'Na', 'Dhi', 'Dhi', 'Na'],
+      info: '<b>Jhaptaal</b>: 10 beats = 2+3+2+3. A lopsided limp that feels wonderful once your body gets it.' },
+    { sys: 'Hindustani', id: 'rupak', name: 'Rupak · 7', groups: [3, 2, 2], marks: ['X/0', '', '', '1', '', '2', ''], acc: [3, 0, 0, 2, 0, 2, 0],
+      bols: ['Tin', 'Tin', 'Na', 'Dhi', 'Na', 'Dhi', 'Na'],
+      info: '<b>Rupak</b>: 7 = 3+2+2. Sam (beat 1) is also the <i>khali</i>, a wave. Unique among common talas.' },
+    { sys: 'Hindustani', id: 'dadra', name: 'Dadra · 6', groups: [3, 3], marks: ['X', '', '', '0', '', ''], acc: [3, 0, 0, 1, 0, 0],
+      bols: ['Dha', 'Dhi', 'Na', 'Dha', 'Ti', 'Na'],
+      info: '<b>Dadra</b>: 6 = 3+3. Light classical, ghazals and bhajans. Feels like Western 6/8.' },
+    { sys: 'Hindustani', id: 'keh', name: 'Keharwa · 8', groups: [4, 4], marks: ['X', '', '', '', '0', '', '', ''], acc: [3, 0, 0, 0, 1, 0, 0, 0],
+      bols: ['Dha', 'Ge', 'Na', 'Ti', 'Na', 'Ka', 'Dhi', 'Na'],
+      info: '<b>Keharwa</b>: 8 = 4+4. The groove of countless bhajans and film songs. Feels like 4/4.' },
+    { sys: 'Carnatic', id: 'adi', name: 'Adi · 8', groups: [4, 2, 2], marks: ['✋', '☝', '☝', '☝', '✋', '👋', '✋', '👋'], acc: [3, 0, 0, 0, 2, 1, 2, 1],
+      bols: ['Ta', 'Ka', 'Di', 'Mi', 'Ta', 'Ka', 'Di', 'Mi'],
+      info: '<b>Adi tala</b>: laghu (clap + little, ring, middle finger) + drutam (clap, wave) + drutam (clap, wave). Most kritis and varnams use it.' },
+    { sys: 'Carnatic', id: 'misra', name: 'Misra Chapu · 7', groups: [3, 2, 2], marks: ['✋', '', '', '✋', '', '✋', ''], acc: [3, 0, 0, 2, 0, 2, 0],
+      bols: ['Ta', 'Ki', 'Ta', 'Ta', 'Ka', 'Di', 'Mi'],
+      info: '<b>Misra Chapu</b>: 7 = 3+2+2 ("ta-ki-ta ta-ka di-mi"), the Carnatic cousin of Rupak. How the beats are shown by hand varies between schools. Here a clap marks each group.' },
+    { sys: 'Carnatic', id: 'khanda', name: 'Khanda Chapu · 5', groups: [2, 3], marks: ['✋', '', '✋', '', ''], acc: [3, 0, 2, 0, 0],
+      bols: ['Ta', 'Ka', 'Ta', 'Ki', 'Ta'],
+      info: '<b>Khanda Chapu</b>: 5 = 2+3 ("ta-ka ta-ki-ta"). Quick and bouncy. Hand conventions vary. Here a clap marks each group.' }
+  ];
+  var cur = TALAS[3], playing = false, bpm = 80, soundMode = 'bols';
+
+  /* ---- drum voices (very simple tabla-ish synthesis) ---- */
+  function drum(kind, t, vel) {
+    var ac = PS.ctx, out = ac.createGain(); out.connect(PS.master); out.gain.value = vel;
+    function tone(f0, f1, dec, type, g) {
+      var o = ac.createOscillator(), gg = ac.createGain(); o.type = type || 'sine';
+      o.frequency.setValueAtTime(f0, t); if (f1) o.frequency.exponentialRampToValueAtTime(f1, t + dec * 0.8);
+      gg.gain.setValueAtTime(0, t); gg.gain.linearRampToValueAtTime(g, t + 0.003); gg.gain.setTargetAtTime(0, t + 0.004, dec / 4);
+      o.connect(gg); gg.connect(out); o.start(t); o.stop(t + dec * 2 + 0.1);
+    }
+    var bass = function (g) { tone(95, 70, 0.55, 'sine', g); };       // bayan (left drum)
+    var ring = function (g) { tone(520, 0, 0.5, 'sine', g); tone(1040, 0, 0.25, 'sine', g * 0.25); }; // dayan, open ring
+    var tap = function (g) { tone(700, 500, 0.06, 'triangle', g); };  // closed stroke
+    var k = kind.toLowerCase();
+    if (k === 'dha' || k === 'dhin' || k === 'dhi' || k === 'dhage') { bass(0.45); ring(0.3); } // both drums
+    else if (k === 'ge') bass(0.4);                                                         // left drum only
+    else if (k === 'na' || k === 'tin' || k === 'tu' || k === 'ta') ring(0.3);             // open right-hand stroke
+    else tap(0.35);                                                                         // closed strokes: ti, tirakita, kat, ka
+  }
+  function tick(t, acc) {
+    var f = acc === 3 ? 1500 : acc === 2 ? 1000 : acc === 1 ? 520 : 760, v = acc === 3 ? 1 : acc === 0 ? 0.45 : 0.7;
+    PS.voiceHz('click', f, v, t);
+  }
+
+  /* ---- render ---- */
+  function renderPick() {
+    var h = '', last = '';
+    TALAS.forEach(function (x, i) {
+      if (x.sys !== last) { h += '<span class="sys ' + (x.sys === 'Western' ? 'west' : 'east') + '">' + x.sys + '</span>'; last = x.sys; }
+      h += '<button type="button" data-i="' + i + '"' + (x === cur ? ' class="on"' : '') + '>' + x.name + '</button>';
+    });
+    document.getElementById('talaPick').innerHTML = h;
+    LK.$$('#talaPick button').forEach(function (b) { b.addEventListener('click', function () { cur = TALAS[+b.dataset.i]; beatIdx = 0; renderPick(); renderBeats(); }); });
+  }
+  function renderBeats() {
+    var h = '', n = 0;
+    cur.groups.forEach(function (g) {
+      h += '<div class="vib">';
+      for (var j = 0; j < g; j++, n++) {
+        var cls = 'bt' + (n === 0 ? ' sam' : '') + (cur.acc[n] === 1 ? ' khali' : '');
+        h += '<div class="' + cls + '" data-b="' + n + '"><span class="n">' + (n + 1) + '</span><span class="mk">' + (cur.marks[n] || '') + '</span><span class="bol">' + cur.bols[n] + '</span></div>';
+      }
+      h += '</div>';
+    });
+    document.getElementById('beats').innerHTML = h;
+    document.getElementById('talaInfo').innerHTML = cur.info;
+  }
+
+  /* ---- scheduler (look-ahead, sample-accurate) ---- */
+  var beatIdx = 0, nextT = 0, timer = null, beatTimes = [], melody = null;
+  function schedule() {
+    var ac = PS.ctx;
+    while (nextT < ac.currentTime + 0.12) {
+      var n = beatIdx % cur.bols.length, acc = cur.acc[n];
+      if (soundMode === 'bols' && cur.sys === 'Hindustani') drum(cur.bols[n], nextT, acc === 3 ? 1 : 0.8);
+      else tick(nextT, acc);
+      if (melody) melody(nextT, 60 / bpm, beatIdx);
+      beatTimes.push(nextT); if (beatTimes.length > 64) beatTimes.shift();
+      (function (n, t) { setTimeout(function () { light(n); }, Math.max(0, (t - ac.currentTime) * 1000)); })(n, nextT);
+      beatIdx++; nextT += 60 / bpm;
+    }
+  }
+  function light(n) {
+    LK.$$('#beats .bt.now').forEach(function (e) { e.classList.remove('now'); });
+    var e = document.querySelector('#beats .bt[data-b="' + n + '"]'); if (e && playing) e.classList.add('now');
+  }
+  function start() {
+    LK.ensureAudio(); playing = true; beatIdx = 0; nextT = PS.ctx.currentTime + 0.1; beatTimes = [];
+    timer = setInterval(schedule, 25); schedule();
+    document.getElementById('tPlay').textContent = '■ Stop';
+  }
+  function stop() {
+    playing = false; clearInterval(timer); melody = null; light(-1);
+    document.getElementById('tPlay').textContent = '▶ Start';
+    document.getElementById('varPlay').textContent = '▶ Play with Adi tala';
+  }
+  document.getElementById('tPlay').addEventListener('click', function () { playing ? stop() : start(); });
+  var bpmEl = document.getElementById('tBpm');
+  bpmEl.addEventListener('input', function () { bpm = +this.value; document.getElementById('tBpmR').textContent = bpm; });
+  LK.$$('#tSound button').forEach(function (b) { b.addEventListener('click', function () { LK.$$('#tSound button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); soundMode = b.dataset.s; }); });
+  renderPick(); renderBeats();
+
+  /* ---- Sarali varisai over Adi ---- */
+  var VAR = ['C4', 'C#4', 'E4', 'F4', 'G4', 'G#4', 'B4', 'C5', 'C5', 'B4', 'G#4', 'G4', 'F4', 'E4', 'C#4', 'C4'].map(LK.parseNote);
+  var kalam = 1, vk = LK.kbd('varKbd');
+  LK.$$('#kalam button').forEach(function (b) { b.addEventListener('click', function () { LK.$$('#kalam button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); kalam = +b.dataset.k; }); });
+  document.getElementById('varPlay').addEventListener('click', function () {
+    if (playing && melody) { stop(); return; }
+    if (playing) stop();
+    cur = TALAS.filter(function (x) { return x.id === 'adi'; })[0]; renderPick(); renderBeats();
+    var idx = 0;
+    melody = function (t, spb, bi) {
+      for (var j = 0; j < kalam; j++) {
+        var m = VAR[idx % VAR.length], at = t + j * spb / kalam; idx++;
+        var v = PS.voice(LK.instr, m, 0.7, at); if (v) v.release(at + spb / kalam * 0.9);
+        (function (m, at) { setTimeout(function () { vk.flash(m, 200); }, Math.max(0, (at - PS.ctx.currentTime) * 1000)); })(m, at);
+      }
+    };
+    start();
+    document.getElementById('varPlay').textContent = '■ Stop';
+    document.getElementById('talaWidget').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  /* ---- tap test ---- */
+  var offs = [];
+  function tap() {
+    var b = document.getElementById('tapBtn'); b.classList.add('hit'); setTimeout(function () { b.classList.remove('hit'); }, 90);
+    if (!playing || !beatTimes.length) { document.getElementById('tapRead').textContent = 'Start the tala player first, then tap along.'; return; }
+    var ac = PS.ctx, lat = (ac.outputLatency || 0) + (ac.baseLatency || 0);
+    var t = ac.currentTime - lat, best = null;
+    beatTimes.forEach(function (bt) { var d = t - bt; if (best === null || Math.abs(d) < Math.abs(best)) best = d; });
+    var spb = 60 / bpm; if (Math.abs(best) > spb / 2) return;
+    var ms = Math.round(best * 1000); offs.push(ms); if (offs.length > 8) offs.shift();
+    var avg = Math.round(offs.reduce(function (a, b) { return a + b; }, 0) / offs.length);
+    var spread = Math.round(Math.sqrt(offs.reduce(function (a, b) { return a + (b - avg) * (b - avg); }, 0) / offs.length));
+    document.getElementById('pip').style.left = Math.max(4, Math.min(96, 50 + avg / 3)) + '%';
+    document.getElementById('tapRead').innerHTML = 'Last tap ' + (ms > 0 ? '+' : '') + ms + ' ms · average <b>' + (avg > 0 ? '+' : '') + avg + ' ms</b> (' + (Math.abs(avg) <= 30 ? 'right in the pocket 🎯' : avg < 0 ? 'rushing' : 'dragging') + ') · steadiness ±' + spread + ' ms';
+  }
+  document.getElementById('tapBtn').addEventListener('pointerdown', function (e) { e.preventDefault(); tap(); });
+  window.addEventListener('keydown', function (e) { if (e.code === 'Space' && e.target === document.body) { e.preventDefault(); if (!e.repeat) tap(); } });
+
+  /* ---- ear test: cycle length ---- */
+  LK.game(document.getElementById('earCycle'), {
+    title: 'How many beats per cycle?', rounds: 6, intro: 'Six rounds. Accented click = beat one.',
+    make: function () {
+      var n = LK.pick([3, 4, 5, 6, 7, 8]);
+      return {
+        prompt: 'Count from one accent to the next:',
+        play: function () {
+          LK.ensureAudio(); var t = PS.ctx.currentTime + 0.1, spb = 0.36;
+          for (var i = 0; i < n * 3 + 1; i++) tick(t + i * spb, i % n === 0 ? 3 : 0);
+        },
+        options: [3, 4, 5, 6, 7, 8].map(function (x) { return { label: x + ' beats', value: x }; }),
+        answer: n,
+        explain: n + ' beats: ' + ({ 3: 'like 3/4', 4: 'like 4/4 or a vibhag of Teental', 5: 'like Khanda Chapu', 6: 'like Dadra or 6/8', 7: 'like Rupak or Misra Chapu', 8: 'like Adi or Keharwa' })[n] + '.'
+      };
+    }
+  });
+})();
+</script>
+<script src="../../core/fable.js" defer></script>
+</body>
+</html>

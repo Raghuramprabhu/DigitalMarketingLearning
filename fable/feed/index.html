@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="calm" data-fb-mode="calm" data-fb-key="feed/index.html" data-fb-root="../" data-fb-title="Calm Feed">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Calm Feed · Fable</title>
+  <meta name="description" content="A personal, calm, curated feed. No rage, no noise.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#07060f">
+  <script>try{localStorage.setItem("fable-theme","dark");localStorage.setItem("fable-calm-theme","dark")}catch(e){}document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="feed.css">
+  <link rel="stylesheet" href="../core/fable.css">
+</head>
+<body>
+
+  <header class="bar">
+    <div class="bar-inner">
+      <div class="brand"><span class="dot"></span>Calm Feed</div>
+      <div class="bar-actions">
+        <button class="icon-btn" id="savedToggle" type="button" title="Saved" aria-pressed="false">☆</button>
+        <button class="icon-btn" id="themeToggle" type="button" title="Theme">◐</button>
+      </div>
+    </div>
+    <nav class="chips" id="chips" aria-label="Topics"></nav>
+  </header>
+
+  <main class="feed">
+    <div class="edition-note" id="editionNote"></div>
+    <div id="cards"></div>
+    <div id="sentinel" class="sentinel"><span class="spinner"></span></div>
+    <div id="endNote" class="end-note" hidden>
+      <p>That's everything for now.</p>
+      <p class="muted">Fresh items arrive around 7:40 am and 10:40 pm.</p>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="feed.js"></script>
+<script src="../core/fable.js" defer></script>
+</body>
+</html>

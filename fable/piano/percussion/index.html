@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="music" data-fb-mode="tool" data-fb-key="piano/percussion/index.html" data-fb-root="../../" data-fb-title="Bhajan Rhythm Studio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhajan Rhythm Studio · tambourine, dholak, dholki, tabla · Fable</title>
+  <meta name="description" content="Play the bhajan tambourine, dholak, dholki and tabla in your browser, and learn Keherwa, Bhajani, Dadra, Rupak, Deepchandi and Teental with a tala tutor that listens and scores your timing.">
+  <script>try{localStorage.setItem("fable-theme","dark");localStorage.setItem("fable-calm-theme","dark")}catch(e){}document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../learn/learn.css">
+  <style>
+    .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tabs button { border: 1px solid var(--line2); background: var(--card2); color: var(--ink); border-radius: 999px; padding: 7px 14px; font: 700 14px var(--font-body); cursor: pointer; }
+    .tabs button.on { background: var(--gold); color: #1a1206; border-color: var(--gold); }
+    .tabs.small button { padding: 5px 11px; font-size: 13px; font-weight: 600; }
+    .play-area { display: grid; grid-template-columns: minmax(200px, 300px) 1fr; gap: 18px; align-items: center; margin-top: 14px; }
+    @media (max-width: 720px) { .play-area { grid-template-columns: 1fr; } #instPic { max-width: 170px; margin: 0 auto; } }
+    .inst-svg { width: 100%; height: auto; display: block; }
+    .inst-svg .z { transition: filter .08s, opacity .08s; }
+    .inst-svg .z.lit { filter: brightness(1.35) drop-shadow(0 0 8px var(--gold)); }
+    #pads { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    @media (max-width: 520px) { #pads { grid-template-columns: repeat(2, 1fr); } }
+    .pad { position: relative; min-height: 78px; border-radius: 14px; border: 1px solid var(--line2); background: linear-gradient(var(--card2), var(--card)); color: var(--ink); cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; touch-action: manipulation; user-select: none; -webkit-user-select: none; transition: transform .05s, background .05s; }
+    .pad b { font: 700 18px var(--font-display); }
+    .pad small { font-size: 12px; color: var(--dim); }
+    .pad kbd { position: absolute; top: 6px; right: 8px; font: 700 11px var(--font-mono); color: var(--dim); border: 1px solid var(--line2); border-radius: 5px; padding: 0 5px; }
+    .pad.lit, .pad:active { background: var(--gold); transform: scale(.97); }
+    .pad.lit b, .pad.lit small, .pad:active b { color: #1a1206; }
+    .inst-help { font-size: 15px; color: var(--soft); margin-top: 12px; }
+    .inst-help ul { margin: 6px 0 0; padding-left: 18px; }
+    .inst-help li { margin: 3px 0; }
+    #grid { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 6px; }
+    .vib { display: flex; gap: 4px; padding: 6px; border-radius: 12px; background: var(--card2); border: 1px solid var(--line2); }
+    .bt { min-width: 62px; min-height: 80px; border-radius: 9px; background: var(--card); border: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 5px 4px; transition: transform .06s, background .06s; }
+    .bt .n { font: 600 11px var(--font-mono); color: var(--dim); }
+    .bt .mk { font: 700 16px var(--font-display); min-height: 20px; color: var(--ink); }
+    .bt.sam .mk { color: var(--gold); } .bt.khali .mk { color: var(--west); }
+    .bt .bols { display: flex; gap: 3px; }
+    .bt .bols i { font: 700 13px var(--font-body); font-style: normal; color: var(--soft); padding: 1px 3px; border-radius: 5px; border: 1px solid transparent; }
+    .bt .bols i.rest { color: var(--dim); }
+    .bt .bols i.hitnow { background: var(--east); color: #1a0f08; }
+    .bt .bols i.ok { border-color: var(--green); background: color-mix(in srgb, var(--green) 25%, transparent); }
+    .bt .bols i.part { border-color: var(--gold); background: color-mix(in srgb, var(--gold) 25%, transparent); }
+    .bt .bols i.wrong, .bt .bols i.miss { border-color: var(--red); }
+    .bt.now { background: color-mix(in srgb, var(--gold) 22%, var(--card)); transform: translateY(-3px); border-color: var(--gold); }
+    @media (max-width: 520px) { .bt { min-width: 46px; min-height: 70px; } .bt .bols i { font-size: 11.5px; } #grid { gap: 6px; } }
+    .ctl { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-top: 10px; }
+    .ctl label { display: flex; align-items: center; gap: 7px; font-size: 14.5px; color: var(--soft); }
+    #go { min-width: 110px; justify-content: center; }
+    #go.on { background: var(--red); color: #fff; }
+    #score { font: 600 14.5px var(--font-body); color: var(--soft); min-height: 1.5em; margin: 10px 0 0; }
+    #score .good { color: var(--green); } #score .bad { color: var(--red); }
+    #modeHelp { font-size: 14.5px; color: var(--soft); margin: 8px 0 0; }
+    .tut { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px; margin: 14px 0; }
+    .tut h3 { margin: 0 0 4px; }
+    .tut .meta { font: 600 12.5px var(--font-mono); color: var(--gold); margin-bottom: 8px; }
+    .tut p { font-size: 15.5px; color: var(--soft); }
+    .steps { counter-reset: s; display: grid; gap: 6px; margin-top: 8px; }
+    .steps button { counter-increment: s; text-align: left; display: flex; gap: 10px; align-items: center; border: 1px solid var(--line2); background: var(--card2); color: var(--ink); border-radius: 10px; padding: 8px 12px; font: 600 14.5px var(--font-body); cursor: pointer; }
+    .steps button::before { content: counter(s); flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--gold); color: #1a1206; display: grid; place-items: center; font: 700 12px var(--font-mono); }
+    .steps button:hover { border-color: var(--gold); }
+    .steps button span { color: var(--dim); font-weight: 500; }
+  </style>
+  <link rel="stylesheet" href="../../core/fable.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="../">← <span class="hide-sm">Piano Studio</span></a>
+    <a class="logo" href="./">Bhajan<span> Rhythm Studio</span></a>
+    <span class="grow"></span>
+    <a class="pill" href="../learn/">🎓<span class="hide-sm"> Learn music</span></a>
+    <button class="pill" id="themebtn" type="button">☀️ Light</button>
+  </div>
+</header>
+
+<main class="wide">
+  <section class="l-hero" style="max-width:860px">
+    <span class="eyebrow">Tambourine · dholak · dholki · tabla · tala tutor</span>
+    <h1>The bhajan's <em>heartbeat</em>, in your hands.</h1>
+    <p class="lede">Play four bhajan instruments on your screen or keyboard, then learn the six talas that carry most bhajans. The tutor plays the pattern, lights up each stroke, then <b>listens to you</b> and scores every hit, early or late, to the millisecond.</p>
+    <p class="dim" style="font-size:15px">A thought to start: when the Sai bhajan movement began, the singing had no instruments at all. Rhythm lived in the voice and the clapping hands. Everything below grows from that: <b>first the clap, then the drum</b>.</p>
+  </section>
+
+  <!-- ================= STUDIO ================= -->
+  <section class="widget" id="studio">
+    <h4>🥁 Play</h4>
+    <div class="tabs" id="instTabs"></div>
+    <div class="play-area">
+      <div id="instPic"></div>
+      <div>
+        <div id="pads"></div>
+        <div class="ctl" id="saRow">
+          <label>Tabla tuned to Sa <select id="saSel" class="pill"></select></label>
+          <span class="dim" style="font-size:13px">numbers = Carnatic kattai / Sai bhajan pitch (1 = C, 5 = G…)</span>
+        </div>
+        <div class="ctl">
+          <button type="button" class="btn small ghost" id="droneBtn">🪔 Tanpura drone on Sa</button>
+          <span class="dim" style="font-size:13px">Tip: on a computer, use the letter keys shown on each pad. Drums: <b>A</b> + <b>J</b> together = Dha.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="inst-help" data-inst="tambourine"><b>Tambourine (jingle tambourine).</b> Hold the frame in your left hand, jingles free.
+      <ul><li><b>Hit</b>: strike the centre into your right palm. The loud crash, saved for the strong beats.</li>
+      <li><b>Tap</b>: fingertips near the rim. A light jingle for the in-between beats.</li>
+      <li><b>Shake</b>: a quick wrist twist. The sizzle that fills the gaps.</li>
+      <li><b>Roll</b>: run a damp thumb around the edge. A shimmer for endings.</li></ul></div>
+    <div class="inst-help" data-inst="dholak" hidden><b>Dholak.</b> A barrel drum held across the lap. The two heads are tuned a fourth or fifth apart.
+      <ul><li><b>Left hand, bass head</b> (coated inside, so it booms): <b>Ge</b> = fingers bounce off, open boom. Press with the heel of your hand afterwards to bend the pitch up. <b>Ka</b> = flat-palm slap that stays on the skin.</li>
+      <li><b>Right hand, treble head</b>: <b>Na/Ta</b> = fingertips near the edge, a bright crack. <b>Tin</b> = fingers further in, softer. <b>Te</b> = fingers stay down, dry. <b>Tu</b> = open centre.</li>
+      <li><b>Dha</b> = Na + Ge together. <b>Dhin</b> = Tin + Ge.</li></ul></div>
+    <div class="inst-help" data-inst="dholki" hidden><b>Dholki (naal).</b> Longer and narrower than a dholak, with tighter heads: higher, sharper, more "crack". It's the drum of Marathi lavani and bhajani. Same bol language as the dholak: Ge and Ka on the bass head, Na, Tin, Te and Tu on the treble head, Dha and Dhin together.</div>
+    <div class="inst-help" data-inst="tabla" hidden><b>Tabla.</b> The right drum (<b>dayan</b>) is tuned to your Sa (pick it above). The left drum (<b>bayan</b>) is the bass.
+      <ul><li><b>Na/Ta</b>: index finger strikes the rim while the ring finger rests lightly at the edge of the black patch (syahi). Bright, ringing.</li>
+      <li><b>Tin</b>: index finger on the open band between rim and syahi. Softer ring.</li>
+      <li><b>Tu</b>: index finger strikes the syahi centre and bounces off. Deep, open.</li>
+      <li><b>Ti/Te</b>: middle fingers strike the syahi and stay. Closed, dry.</li>
+      <li><b>Ge</b>: left fingers bounce on the bayan, wrist resting. Slide the wrist to bend the pitch. <b>Ka</b>: flat left palm, stays down.</li>
+      <li><b>Dha</b> = Na + Ge. <b>Dhin</b> = Tin + Ge.</li></ul></div>
+  </section>
+
+  <!-- ================= TUTOR ================= -->
+  <section class="widget" id="tutor">
+    <h4>🎯 Tala tutor</h4>
+    <div class="tabs small" id="talaTabs"></div>
+    <div class="ctl"><span class="dim" style="font-size:13px">Pattern:</span><div class="tabs small" id="variant"></div></div>
+    <div id="grid"></div>
+    <p class="cap" id="thekaLine"></p>
+    <div class="ctl">
+      <button type="button" class="btn" id="go">▶ Start</button>
+      <span class="seg" id="modeSeg"><button type="button" data-m="listen" class="on">👂 Listen</button><button type="button" data-m="along">🤝 Play along</button><button type="button" data-m="turn">🎯 Your turn</button></span>
+      <label>Tempo <input type="range" id="bpm" min="40" max="200" value="90"> <b class="readout" id="bpmR">90</b></label>
+      <label><input type="checkbox" id="claps" checked> Clap the tala</label>
+      <label><input type="checkbox" id="speedUp"> Speed up like a bhajan</label>
+      <span class="readout" id="cycleR" style="font-size:13px"></span>
+    </div>
+    <p id="modeHelp"></p>
+    <p id="score"></p>
+    <p class="cap">Legend: <b class="both">X</b> sam (beat one) · numbers = claps · <b class="west">0</b> = wave (khali) · <b>–</b> silence. Space bar = start/stop.</p>
+  </section>
+
+  <!-- ================= TUTORIALS ================= -->
+  <div class="wrap" style="padding:0">
+    <h2>Tutorials: one tala at a time</h2>
+    <p>Each tala has the same ladder: <b>hear it, clap it, then play it</b>, first on tambourine and then on the drums. Every step button sets up the tutor and starts it for you. Do a step until the score says 🎯, then climb.</p>
+    <div id="tuts"></div>
+
+    <h2>Why the tabla <i>sings</i> and the dholak <i>thumps</i></h2>
+    <p>Hit a plain drum skin and it vibrates in several shapes at once. For a round skin, those shapes vibrate at frequencies of about <b>1, 1.59, 2.14, 2.30 and 2.65</b> times the lowest one. Those numbers aren't whole-number multiples, so the ear hears a "thud" with no clear note. That's the dholak and dholki.</p>
+    <p>The tabla's black <b>syahi</b> changes the physics. It's a carefully built-up, heavier patch that loads the skin, so the shapes line up at <b>1, 2, 3, 4, 5</b> times the lowest frequency, exactly like a string. Whole-number overtones = a definite pitch. That's why a tabla is <b>tuned to Sa</b>, and why the mridangam is too. <b>C. V. Raman</b> studied this in Indian drums in the 1920s, years before his Nobel Prize for light.</p>
+    <div class="row">
+      <button type="button" class="btn small ghost" data-demo="tabla:na">▶ Tabla Na (harmonic)</button>
+      <button type="button" class="btn small ghost" data-demo="dholak:na">▶ Dholak Na (plain skin)</button>
+      <button type="button" class="btn small ghost" data-demo="tabla:tu">▶ Tabla Tu</button>
+      <button type="button" class="btn small ghost" data-demo="dholki:na">▶ Dholki Na (tight, sharp)</button>
+      <button type="button" class="btn small ghost" data-demo="tambourine:hit">▶ Tambourine hit</button>
+    </div>
+    <div class="meet"><h4>Connect it</h4><p>This is the same "ratio" story as Lesson 1.1 in <a href="../learn/1-1-sound.html">Music: the story</a>. Whole-number ratios = a clear pitch and consonance. Messy ratios = noise and thud. A drum maker who builds up a syahi in layers is doing physics by ear.</p></div>
+
+    <h2>Playing in a bhajan group</h2>
+    <ul>
+      <li><b>Come in after the singer and the drum.</b> The lead singer starts, then harmonium, then tabla or dholak, and the tambourine and bells come in last. Same again each time the bhajan speeds up.</li>
+      <li><b>Follow the drum, not the other way round.</b> The tambourine is loud: if you rush, everyone hears it.</li>
+      <li><b>Simple beats busy.</b> Level 1 (steady) played rock-solid is worth more than Level 3 played shakily. If you lose the beat, stop cleanly and come back in on sam.</li>
+      <li><b>Bhajans speed up</b>, usually in steps. Practise with "Speed up like a bhajan" switched on so the jump doesn't throw you.</li>
+      <li><b>Play soft.</b> The rhythm is a vessel for the singing, not a performance of its own.</li>
+    </ul>
+
+    <h2>Check yourself</h2>
+    <div class="quiz" data-key="p1">
+      <p class="q">In Keherwa, where do you clap and where do you wave?</p>
+      <div class="opts"><button class="opt" data-correct>Clap on 1 (sam), wave on 5 (khali)</button><button class="opt">Clap on 1 and 5</button><button class="opt">Clap on every beat</button><button class="opt">Wave on 1, clap on 5</button></div>
+      <p class="why">8 beats = 4 + 4. The first half opens with the clap (sam, X) and the second half opens with the wave (khali, 0). The theka changes there too: "Na Ka Dhi Na" has fewer bass strokes.</p>
+    </div>
+    <div class="quiz" data-key="p2">
+      <p class="q">On a tabla, Dha is…</p>
+      <div class="opts"><button class="opt" data-correct>Na on the right drum and Ge on the left drum, together</button><button class="opt">A loud Na</button><button class="opt">A bass stroke alone</button><button class="opt">A slap on both drums</button></div>
+      <p class="why">Most "dh-" bols are combinations: Dha = Na + Ge, Dhin = Tin + Ge. Bols with an "h" usually mean the bass drum is involved.</p>
+    </div>
+    <div class="quiz" data-key="p3">
+      <p class="q">Why can you tune a tabla to Sa but not really a dholak?</p>
+      <div class="opts"><button class="opt" data-correct>The tabla's syahi makes its overtones whole-number multiples (harmonic), so it has a clear pitch</button><button class="opt">The tabla is smaller</button><button class="opt">The dholak has two heads</button><button class="opt">Tabla skins are thinner</button></div>
+      <p class="why">Plain skins ring at inharmonic ratios (1, 1.59, 2.14…). The loaded syahi pulls them into 1, 2, 3, 4, 5, the same pattern a string makes, so the ear hears a definite note.</p>
+    </div>
+
+    <div class="l-end">
+      <a class="nav-next" href="../">← Piano Studio</a>
+      <a class="nav-next" href="../learn/1-3-rhythm.html">Theory: Lesson 1.3 Beat, tala &amp; time signature →</a>
+    </div>
+  </div>
+</main>
+<footer class="foot">Bhajan Rhythm Studio · part of Piano Studio · Field Notes</footer>
+
+<script>
+// Tutorial cards: same ladder for every tala, with tala-specific notes.
+(function () {
+  var T = [
+    { id: 'keherwa', t: '8 beat · Keherwa', meta: 'The workhorse · clap 1 · wave 5', bpm: 84,
+      p: 'Most bhajans you’ll sing are in 8 beats. Sai bhajan listings label it <b>"8 Beat / Keherwa / Adi"</b>, because Carnatic <i>Adi</i> tala is also 8 beats, so singers from both traditions meet here. Count <b>1</b>(clap) 2 3 4 | <b>5</b>(wave) 6 7 8. Say it: "<i>Dha ge na ti · na ka dhi na</i>".' },
+    { id: 'bhajani', t: '8 beat · Bhajani', meta: 'Keherwa’s devotional cousin', bpm: 66,
+      p: 'Same 8 beats and the same clap and wave as Keherwa, but softer, with strokes tucked between the beats ("na-<b>dhin</b>", "–<b>dhin</b>"). Those off-beat strokes give it a rocking lilt. Play it slow and gentle.' },
+    { id: 'dadra', t: '6 beat · Dadra', meta: 'Two swings of three · clap 1 · wave 4', bpm: 96,
+      p: 'Six beats felt as two sways: "<i>Dha dhin na · dha tin na</i>". Clap on 1, wave on 4. It’s the swaying feel of Western 6/8, common in lighter, sung-from-the-heart bhajans.' },
+    { id: 'rupak', t: '7 beat · Rupak', meta: '3 + 2 + 2 · sam is a wave', bpm: 88,
+      p: 'Seven beats in a limping 3 + 2 + 2: "<i>Tin tin na · dhi na · dhi na</i>". The puzzle: <b>beat one is a wave</b> (khali), with claps on 4 and 6. Count it: <b>1</b>(wave) 2 3 | <b>4</b>(clap) 5 | <b>6</b>(clap) 7. Carnatic Misra Chapu has the same 3 + 2 + 2 shape.' },
+    { id: 'deepchandi', t: '14 beat · Deepchandi', meta: '3 + 4 + 3 + 4 · claps 1, 4, 11 · wave 8', bpm: 70,
+      p: 'Fourteen beats with built-in silences (–) that make it sway: "<i>Dha dhin – · dha dha tin – · ta tin – · dha dha dhin –</i>". The gaps are part of the rhythm, so don’t fill them. Used for slower, thumri-flavoured devotional songs.' },
+    { id: 'teental', t: '16 beat · Teental', meta: '4 × 4 · claps 1, 5, 13 · wave 9', bpm: 76,
+      p: 'The great classical cycle. Bhajans with a classical flavour sometimes use it. Notice beats 9–12: the khali section swaps the bass-heavy "Dhin" for open "Tin". If you can hear that change, you’ll always know where you are.' }
+  ];
+  var h = '';
+  T.forEach(function (x) {
+    function s(o) { return "data-setup='" + JSON.stringify(o) + "'"; }
+    h += '<div class="tut"><h3>' + x.t + '</h3><div class="meta">' + x.meta + '</div><p>' + x.p + '</p><div class="steps">' +
+      '<button type="button" ' + s({ tala: x.id, inst: 'tabla', variant: 'theka', mode: 'listen', claps: true, bpm: x.bpm }) + '>Hear the theka on tabla, and say the bols aloud <span>· listen</span></button>' +
+      '<button type="button" ' + s({ tala: x.id, inst: 'tambourine', variant: 't1', mode: 'turn', claps: true, bpm: x.bpm }) + '>Clap it with your hands, then play Level 1 tambourine (steady) <span>· your turn</span></button>' +
+      '<button type="button" ' + s({ tala: x.id, inst: 'tambourine', variant: 't2', mode: 'along', claps: false, bpm: x.bpm }) + '>Tambourine Level 2: hit-shake <span>· play along</span></button>' +
+      '<button type="button" ' + s({ tala: x.id, inst: 'tambourine', variant: 't3', mode: 'along', claps: false, bpm: x.bpm }) + '>Tambourine Level 3: follow the drum <span>· play along</span></button>' +
+      '<button type="button" ' + s({ tala: x.id, inst: 'dholak', variant: 'theka', mode: 'along', claps: false, bpm: Math.round(x.bpm * 0.85) }) + '>Dholak theka, slow <span>· play along</span></button>' +
+      '<button type="button" ' + s({ tala: x.id, inst: 'dholak', variant: 'dugun', mode: 'listen', claps: true, bpm: Math.round(x.bpm * 0.7) }) + '>Hear the double-time (dugun) chorus groove <span>· listen</span></button>' +
+      '<button type="button" ' + s({ tala: x.id, inst: 'tabla', variant: 'theka', mode: 'turn', claps: true, bpm: Math.round(x.bpm * 0.8) }) + '>Tabla theka from memory <span>· your turn</span></button>' +
+      '</div></div>';
+  });
+  document.getElementById('tuts').innerHTML = h;
+})();
+</script>
+<script src="../engine.js"></script>
+<script src="../learn/learn.js"></script>
+<script src="drums.js"></script>
+<script src="rhythm.js"></script>
+<script src="../../core/fable.js" defer></script>
+</body>
+</html>

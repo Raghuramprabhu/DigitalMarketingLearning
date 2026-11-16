@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="math" data-fb-mode="journey" data-fb-key="math/algebra.html" data-fb-root="../" data-fb-title="Algebra: the story" data-fb-scenes="section.hero, section.act">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algebra: the story · One month, five unknowns · Fable</title>
+  <meta name="description" content="Algebra from first principles, told through one ordinary month: a late-night auto, a day of errands, two receipts, a garden and a home loan. Live playgrounds for each idea.">
+  <script>try{localStorage.setItem("fable-theme","dark");localStorage.setItem("fable-calm-theme","dark")}catch(e){}document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="math.css">
+  <link rel="stylesheet" href="../core/fable.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="./">← <span>Math</span></a>
+    <span class="logo">alg<i>e</i>bra</span>
+    <div class="progress" id="progress"><div class="rail"></div><div class="fill"></div></div>
+    <a class="theme-btn" href="algebra-history.html" style="text-decoration:none" title="The people and dates, kept separate">📜 <span class="hide-sm">History</span></a>
+    <button class="theme-btn" id="themebtn" type="button" aria-label="Toggle light or dark mode">☀️ Light</button>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="top">
+  <canvas id="sky"></canvas>
+  <div class="hero-in">
+    <div>
+      <span class="eyebrow">Algebra · one month · beginner → advanced</span>
+      <h1>The art of finding<br>what's <em>missing.</em></h1>
+      <p class="lede">Algebra is just this: finding a number that nobody will tell you. How far can I go on ₹150? Which option is cheaper? What did the samosa cost? How much of my EMI is interest?</p>
+      <p class="lede" style="font-size:17px">Follow <b>Kavya</b> through one ordinary month. Every act is a day in her life, with one problem, one idea built from scratch, and a <b>playground</b> where you solve it yourself. Each act is one level harder than the last.</p>
+      <div class="ctas">
+        <a class="btn" href="#act1">Begin the story ↓</a>
+        <a class="btn ghost" href="#arena">Skip to the arena ⚡</a>
+      </div>
+      <p style="font-size:14px;color:var(--dim);margin-top:16px">Curious who invented all this? The people, places and dates live separately in the <a href="algebra-history.html">📜 History corner</a>. You don't need it to follow the story.</p>
+    </div>
+    <div class="board" aria-label="A chalkboard solving everyday problems with algebra">
+      <div class="title">today's unknowns</div>
+      <div id="board-lines"></div>
+      <div class="chalk-dust">chalk · everyday maths</div>
+    </div>
+  </div>
+  <div class="scroll-cue">scroll ⌄</div>
+</section>
+
+<section class="wide" style="padding-top:20px">
+  <div class="toc" id="toc">
+    <a href="#act1"><span class="lvl"><i class="on"></i><i></i><i></i><i></i><i></i></span><span class="n">ACT I · WEEK 1</span><b>The Balance</b><small>A late-night auto and ₹150 in the wallet.</small></a>
+    <a href="#act2"><span class="lvl"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span><span class="n">ACT II · WEEK 1</span><b>The Line</b><small>A Saturday of errands. Cab or scooter?</small></a>
+    <a href="#act3"><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="n">ACT III · WEEK 2</span><b>Two Unknowns</b><small>The canteen menu vanished. Two receipts remain.</small></a>
+    <a href="#act4"><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="n">ACT IV · WEEK 3</span><b>The Square</b><small>Dad's garden, a tiler's puzzle, a tiffin price.</small></a>
+    <a href="#act5"><span class="lvl"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="n">ACT V · WEEK 4</span><b>Growth</b><small>Grandpa's chessboard, and a home-loan letter.</small></a>
+    <a href="#quest"><span class="n">FINALE</span><b>The Quest</b><small>Five playgrounds. Solve step by step.</small></a>
+    <a href="#arena"><span class="n">PRACTICE</span><b>The Arena</b><small>Fresh real-life problems, every time.</small></a>
+  </div>
+</section>
+
+<!-- ============================ ACT I ============================ -->
+<section class="act" id="act1" data-act="0">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT I <span class="level">LEVEL 1</span></div>
+      <h2>The Balance</h2>
+      <p>How do you find a number that nobody will tell you?</p>
+    </div>
+
+    <div class="scene reveal">
+      <div class="when">🌙 Monday · 9:40 PM · the auto stand</div>
+      <p>Kavya's office cab has left without her. Her phone is at 3% and UPI won't load. In her wallet: <b>₹150</b>, cash.</p>
+      <p>The auto driver points at his meter card: <b>₹30</b> to get in, then <b>₹15 per km</b>. Home is 9 km away.</p>
+      <p>She doesn't want to ride 7 km and then argue at the gate. So before she gets in, she asks one question: <i>how many kilometres does ₹150 buy?</i> She calls the unknown distance <span class="vx">x</span>:</p>
+      <span class="eqn">15<span class="vx">x</span> + 30 = 150</span>
+      <p style="margin:0;color:var(--soft)">Hold that thought. To solve it, we need to understand what that little <span class="veq">=</span> really promises.</p>
+    </div>
+
+    <div class="callout fp reveal">
+      <div class="emo">🧱</div>
+      <div><span class="lbl">First principles</span>
+        <p>The <span class="veq">=</span> sign is a <b>promise</b>: "these two piles weigh exactly the same." Do the same thing to both piles and the promise stays true. That is the <b>one rule</b> of algebra. There are only two moves that use it:</p>
+        <p><b>⚖️ Balance:</b> if the same thing sits on both sides, remove it from both.<br>
+           <b>🦴 Restore:</b> if something was taken away, add it back to both sides.</p>
+        <p>Kavya's problem: remove 30 from both sides → <b>15<span class="vx">x</span> = 120</b>. Split both sides into 15 equal groups → <b><span class="vx">x</span> = 8 km</b>. She's 1 km short. She rides 8, walks the last one, and keeps her dignity at the gate.</p>
+      </div>
+    </div>
+
+    <div class="sub reveal">
+      <div class="kicker">Playground · the mystery-box scale</div>
+      <h3>Weigh the unknown</h3>
+      <p>Every <span class="vx">x</span> box holds the <b>same secret number</b>. Every <span class="vn">1</span> tile weighs one. Use Balance and Restore to get a single box alone on a pan. Try cheating once (change only one side) and watch what happens.</p>
+    </div>
+    <div class="panel reveal" id="scale">
+      <div class="panel-title"><span>Balance scale</span>
+        <span class="seg" id="scale-mode"><button class="on" data-m="1">ax + b = c</button><button data-m="2">x on both sides</button></span>
+      </div>
+      <div class="big-eq" id="scale-eq"></div>
+      <svg id="scale-svg" viewBox="0 40 640 285" aria-label="balance scale"></svg>
+      <div class="row ops" id="scale-ops"></div>
+      <div class="msg" id="scale-msg"></div>
+    </div>
+
+    <div class="twist pz reveal">
+      <div class="q">At school you were told: "move +30 to the other side and it becomes −30." What's really happening?</div>
+      <div class="tap">🔍 See it step by step</div>
+      <ol class="psrc"><li><span class="e">15<span class="vx">x</span> + 30 = 150</span>Start with Kavya's balance.</li><li><span class="e">15<span class="vx">x</span> + 30 <span class="veq">− 30</span> = 150 <span class="veq">− 30</span></span>Subtract 30 from <b>both</b> sides. Nothing moves: both pans simply lose 30.</li><li><span class="e">15<span class="vx">x</span> = 120</span>On the left, +30 − 30 cancels to nothing. On the right, 150 − 30 = 120. The "−30" on the right is the 30 you removed from that side too.</li></ol><div class="psrc pans"><b>Nothing ever "moves across".</b> "Move it and flip the sign" is just a shortcut for "do the same thing to both sides". When you get confused, go back to the scale.</div>
+    </div>
+
+    <div class="sub reveal">
+      <div class="kicker">Kavya's week, in unknowns</div>
+      <h3>You already do this. Now do it on purpose.</h3>
+      <p>Tap each card. Try the equation in your head before you look.</p>
+    </div>
+    <div class="cases reveal">
+      <div class="case pz" data-answer="1200" data-unit="₹"><div class="ic">🏷️</div><h4>Tuesday: the sale tag</h4><p>"20% off!" Kavya paid ₹960 for a kurta. What was the original price?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">original price = <span class="vx">x</span></span>Name the unknown. Call the original price x.</li><li><span class="e"><span class="vx">x</span> − 0.2<span class="vx">x</span> = 960</span>20% off means she paid x minus 20% of x.</li><li><span class="e">0.8<span class="vx">x</span> = 960</span>x − 0.2x is 0.8x (one whole minus 0.2).</li><li><span class="e"><span class="vx">x</span> = 960 ÷ 0.8 = 1,200</span>Divide both sides by 0.8.</li></ol><div class="psrc pans"><b>₹1,200.</b> The trap: adding 20% to ₹960 gives ₹1,152, which is wrong, because the 20% was taken off the <i>bigger</i> original price.</div></div>
+      <div class="case pz" data-answer="1600" data-unit="₹"><div class="ic">🍽️</div><h4>Wednesday: the dinner split</h4><p>Five friends split the bill equally. Kavya also left a ₹100 tip herself, and paid ₹420 in all. What was the bill?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">each share = <span class="vx">x</span>/5</span>Call the bill x. Each of the 5 friends pays x/5.</li><li><span class="e"><span class="vx">x</span>/5 + 100 = 420</span>Kavya paid her share plus the ₹100 tip.</li><li><span class="e"><span class="vx">x</span>/5 = 320</span>Balance: remove 100 from both sides.</li><li><span class="e"><span class="vx">x</span> = 320 × 5 = 1,600</span>Multiply both sides by 5.</li></ol><div class="psrc pans"><b>₹1,600.</b> Check: 1,600 ÷ 5 = 320, plus 100 = 420 ✓</div></div>
+      <div class="case pz" data-answer="38.9" data-unit="°C" data-tol="0.15"><div class="ic">🌡️</div><h4>Thursday: the fever</h4><p>Her thermometer says 102 °F. The doctor asks in Celsius. (F = 1.8 C + 32)</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">102 = 1.8<span class="vx">C</span> + 32</span>Put F = 102 into the formula.</li><li><span class="e">70 = 1.8<span class="vx">C</span></span>Balance: remove 32 from both sides.</li><li><span class="e"><span class="vx">C</span> = 70 ÷ 1.8 ≈ 38.9</span>Divide both sides by 1.8.</li></ol><div class="psrc pans"><b>≈ 38.9 °C</b>, a real fever (normal is about 37 °C).</div></div>
+    </div>
+
+    <div class="recall-h">🧠 Recall before you scroll on</div>
+    <div class="recall">
+      <div class="flip"><div class="flip-in"><div class="fc front">What does the "=" sign promise?</div><div class="fc back">That both sides weigh exactly the same. Keep the promise by changing both sides together.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">Name algebra's two moves.</div><div class="fc back">Balance: remove the same thing from both sides. Restore: add back what was taken, on both sides.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">₹30 + ₹15/km, ₹150 in hand. How far?</div><div class="fc back">15x + 30 = 150 → 15x = 120 → x = 8 km.</div></div></div>
+    </div>
+
+    <a class="histlink reveal" href="algebra-history.html#h-balance">📜 Who first wrote down these two moves, and where does the word "algebra" come from? <b>History corner →</b></a>
+
+    <p class="openloop reveal">One unknown is one number hiding in a box. But on Saturday Kavya's question is bigger: not "what is x?" but "as the kilometres pile up, which option gets cheaper?" For that, an equation has to become a picture.</p>
+  </div>
+</section>
+
+<!-- ============================ ACT II ============================ -->
+<section class="act" id="act2" data-act="1">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT II <span class="level">LEVEL 2</span></div>
+      <h2>The Line</h2>
+      <p>What if you could <i>see</i> an equation, and every point on the picture were an answer?</p>
+    </div>
+
+    <div class="scene reveal">
+      <div class="when">☀️ Saturday · 8:30 AM · planning the day</div>
+      <p>Kavya has a long list: the bank, her aunt's place across town, a friend's housewarming, a hardware shop. She'll zig-zag all over the city.</p>
+      <p>The cab app says <b>₹50 + ₹18 per km</b>. The rental shop down the road offers a scooter: <b>₹250 for the day</b>, plus about <b>₹3 per km</b> in fuel.</p>
+      <p>Her colleague swears the scooter is <i>always</i> cheaper. Her mother swears cabs are. Kavya suspects they're both right, sometimes. But <i>when</i>?</p>
+    </div>
+
+    <div class="callout fp reveal">
+      <div class="emo">📏</div>
+      <div><span class="lbl">First principles</span>
+        <p>Anything that changes at a <b>steady rate</b> draws a straight line when you plot it: <span class="eqn"><span class="vx">y</span> = <span class="vn">m</span>·<span class="vx">x</span> + <span class="vn">c</span></span>
+        <span class="vn">c</span> is what you pay just for showing up (the base fee). <span class="vn">m</span> is how much more each extra step costs (₹ per km). Two options = two lines. Where they <b>cross</b>, both cost the same: the <b>break-even</b>. Before it, one wins; after it, the other.</p>
+      </div>
+    </div>
+
+    <div class="sub reveal">
+      <div class="kicker">Playground · the break-even</div>
+      <h3>Cab, or rent a scooter for the day?</h3>
+      <p>Guess first, then let the lines settle it. Drag the trip marker, or change the prices to match your own city.</p>
+    </div>
+    <div class="panel reveal" id="be">
+      <div class="predict" id="be-predict">🎯 Gut feeling first: the scooter starts winning after about <input type="number" id="be-guess" min="0" max="60" placeholder="?"> km <button class="btn small" id="be-lock">Lock it in</button></div>
+      <svg class="graph" id="be-svg" viewBox="0 0 640 330"></svg>
+      <div class="two" style="margin-top:8px">
+        <div>
+          <div class="sl"><label>🚕 Cab base ₹</label><input type="range" id="be-cb" min="0" max="200" step="10" value="50"><output id="be-cbo"></output></div>
+          <div class="sl"><label>🚕 Cab ₹/km</label><input type="range" id="be-cr" min="5" max="30" step="1" value="18"><output id="be-cro"></output></div>
+        </div>
+        <div>
+          <div class="sl"><label>🛵 Scooter base ₹</label><input type="range" id="be-sb" min="0" max="600" step="10" value="250"><output id="be-sbo"></output></div>
+          <div class="sl"><label>🛵 Scooter ₹/km</label><input type="range" id="be-sr" min="1" max="15" step="1" value="3"><output id="be-sro"></output></div>
+        </div>
+      </div>
+      <div class="sl"><label>📍 Today's trip km</label><input type="range" id="be-km" min="0" max="40" step="0.5" value="8"><output id="be-kmo"></output></div>
+      <div class="eqn" id="be-eq"></div>
+      <div class="msg" id="be-msg"></div>
+    </div>
+
+    <div class="scene reveal">
+      <div class="when">🛵 Saturday · evening</div>
+      <p>Her zig-zag day comes to 26 km. Cab: ₹518. Scooter: ₹328. She saved ₹190, and now she knows the rule: <b>under ~13 km, cab; over it, scooter.</b> Her colleague and her mother were each right, on different days.</p>
+    </div>
+
+    <div class="twist pz reveal" data-answer="-40" data-unit="°">
+      <div class="q">Celsius and Fahrenheit are both lines. Is there a temperature where they show the same number?</div>
+      <div class="tap">🔍 Solve it step by step</div>
+      <ol class="psrc"><li><span class="e">F = <span class="vx">x</span> and C = <span class="vx">x</span></span>"Same number on both" means F = C. Call that number x.</li><li><span class="e"><span class="vx">x</span> = 1.8<span class="vx">x</span> + 32</span>Put x in for both F and C in F = 1.8C + 32.</li><li><span class="e"><span class="vx">x</span> − 1.8<span class="vx">x</span> = 32</span>Balance: remove 1.8x from both sides.</li><li><span class="e">−0.8<span class="vx">x</span> = 32</span>x − 1.8x = −0.8x.</li><li><span class="e"><span class="vx">x</span> = 32 ÷ (−0.8) = −40</span>Divide both sides by −0.8.</li></ol><div class="psrc pans"><b>−40°.</b> Check: 1.8 × (−40) + 32 = −72 + 32 = −40 ✓. Two lines, one crossing point: the same idea as the cab and the scooter.</div>
+    </div>
+
+    <div class="callout reveal">
+      <div class="emo">💳</div>
+      <div><p><b>Sunday's decision:</b> a credit card with a ₹500 yearly fee gives 1.5% cashback. A free card gives 0.5%. Let <span class="vx">s</span> = what Kavya spends in a year. Break-even: <span class="eqn">0.015<span class="vx">s</span> − 500 = 0.005<span class="vx">s</span> → 0.01<span class="vx">s</span> = 500 → <span class="vx">s</span> = ₹50,000</span> Spend more than ₹50,000 a year and the fee card pays for itself. Less, and you're paying for the privilege. Same reasoning settles buy-vs-rent, monthly gym vs pay-per-visit, prepaid vs postpaid.</p></div>
+    </div>
+
+    <div class="recall-h">🧠 Recall before you scroll on</div>
+    <div class="recall">
+      <div class="flip"><div class="flip-in"><div class="fc front">In y = mx + c, what do m and c mean in real life?</div><div class="fc back">m = the rate (₹ per km, the slope). c = the starting amount at x = 0 (the base fee).</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">What does the crossing point of two lines tell you?</div><div class="fc back">The x where both options are equal: the break-even. Left of it one wins, right of it the other.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">Where do Celsius and Fahrenheit agree?</div><div class="fc back">At −40°. Found by setting the two lines equal.</div></div></div>
+    </div>
+
+    <a class="histlink reveal" href="algebra-history.html#h-line">📜 Who first turned equations into pictures, and why is the unknown called "x"? <b>History corner →</b></a>
+
+    <p class="openloop reveal">That crossing point answered two things at once: the kilometres <i>and</i> the cost. Two unknowns, cracked together. On Monday, Kavya will need exactly that trick, at the office canteen.</p>
+  </div>
+</section>
+
+<!-- ============================ ACT III ============================ -->
+<section class="act" id="act3" data-act="2">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT III <span class="level">LEVEL 3</span></div>
+      <h2>Two Unknowns</h2>
+      <p>Two mysteries. Two clues. Neither clue alone is enough. Together, they crack both.</p>
+    </div>
+
+    <div class="scene reveal">
+      <div class="when">🫖 Week 2 · Monday · 4:15 PM · the office canteen</div>
+      <p>The canteen's price board fell during cleaning, and the new cashier doesn't know the rates. Kavya's team wants to settle a month of shared snacks fairly.</p>
+      <p>She digs in her bag and finds two crumpled receipts. <b>Monday: 2 teas + 3 samosas = ₹130.</b> <b>Tuesday: 3 teas + 1 samosa = ₹90.</b></p>
+      <p>"There's no way to know the prices," says a colleague. Kavya smiles. Two clues, two unknowns. That's enough.</p>
+    </div>
+
+    <div class="callout fp reveal">
+      <div class="emo">✖️</div>
+      <div><span class="lbl">First principles</span>
+        <p>One receipt alone ("2 teas + 3 samosas = ₹130") has <b>endless</b> answers: cheap tea and pricey samosas, or the reverse. On a graph it's a whole <b>line</b> of possibilities. The second receipt is a second line. The only prices that fit <i>both</i> receipts sit exactly where the lines <b>cross</b>.</p>
+        <p>To find it without a graph: make one item appear the same number of times on both receipts, then subtract one receipt from the other. That item cancels out (the <b>Balance</b> move from Act I). One unknown left, and you already know how to beat that.</p>
+      </div>
+    </div>
+
+    <div class="sub reveal">
+      <div class="kicker">Playground · the tea-shop detective</div>
+      <h3>Crack the prices</h3>
+      <p>Edit any number on the receipts; the detective re-solves instantly. Then try to <b>break it</b>: make the second receipt exactly double the first, or keep the items in the same ratio but change the total.</p>
+    </div>
+    <div class="panel reveal" id="rc">
+      <div class="receipts">
+        <div class="receipt"><h5>MONDAY</h5>
+          <div class="it"><span>☕ tea ×</span><input type="number" id="rc-a1" value="2" min="0" max="20"></div>
+          <div class="it"><span>🥟 samosa ×</span><input type="number" id="rc-b1" value="3" min="0" max="20"></div>
+          <div class="it tot"><span>TOTAL ₹</span><input type="number" id="rc-c1" value="130" min="0" max="5000"></div>
+        </div>
+        <div class="receipt"><h5>TUESDAY</h5>
+          <div class="it"><span>☕ tea ×</span><input type="number" id="rc-a2" value="3" min="0" max="20"></div>
+          <div class="it"><span>🥟 samosa ×</span><input type="number" id="rc-b2" value="1" min="0" max="20"></div>
+          <div class="it tot"><span>TOTAL ₹</span><input type="number" id="rc-c2" value="90" min="0" max="5000"></div>
+        </div>
+      </div>
+      <svg class="graph" id="rc-svg" viewBox="0 0 640 300" style="margin-top:22px"></svg>
+      <div class="row" style="justify-content:center;margin-top:8px">
+        <button class="btn small" id="rc-step">▶ Solve step by step</button>
+        <button class="btn small ghost" id="rc-reset">↺ Original receipts</button>
+      </div>
+      <div class="steps-box" id="rc-steps"></div>
+      <div class="msg" id="rc-msg"></div>
+    </div>
+
+    <div class="scene reveal">
+      <div class="when">🫖 Week 2 · Monday · 4:30 PM</div>
+      <p>Tea ₹20, samosa ₹30. The cashier checks with the owner on the phone: correct. The team settles up in five minutes, and Kavya becomes the person everyone brings their billing confusion to. (Not entirely a reward.)</p>
+    </div>
+
+    <div class="callout reveal">
+      <div class="emo">🔎</div>
+      <div><p>The same trick, run on thousands of equations at once, is how your phone's GPS pins your location from several satellites, how weather forecasts are computed, and how a spreadsheet's solver works. Two receipts are the smallest version of something huge.</p></div>
+    </div>
+
+    <div class="recall-h">🧠 Recall before you scroll on</div>
+    <div class="recall">
+      <div class="flip"><div class="flip-in"><div class="fc front">One equation, two unknowns. How many answers?</div><div class="fc back">Infinitely many: a whole line of them. You need a second clue.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">What does "elimination" actually do?</div><div class="fc back">Scale the clues so one unknown matches, subtract, and it cancels, leaving one unknown.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">Two receipts give parallel lines. What does it mean?</div><div class="fc back">The clues contradict each other: no prices fit both. (Same line = the second clue added nothing.)</div></div></div>
+    </div>
+
+    <a class="histlink reveal" href="algebra-history.html#h-two">📜 A 2,000-year-old version of this trick, and a poet's riddle about bees. <b>History corner →</b></a>
+
+    <p class="openloop reveal">So far every unknown has stood alone: <i>x</i>, never <i>x</i> times <i>x</i>. But next week Kavya's dad asks for help with his garden, and the moment area enters the story, <i>x</i> multiplies itself and the straight lines bend into curves.</p>
+  </div>
+</section>
+
+<!-- ============================ ACT IV ============================ -->
+<section class="act" id="act4" data-act="3">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT IV <span class="level">LEVEL 4</span></div>
+      <h2>The Square</h2>
+      <p>When <span class="vx">x</span> meets itself, lines become curves, and curves have a <b>best point</b>.</p>
+    </div>
+
+    <div class="scene reveal">
+      <div class="when">🧱 Week 3 · Saturday · at her parents' house</div>
+      <p>Two things are happening at once. A tiler is redoing the small square prayer room and the verandah beside it. And Kavya's dad, newly retired, has bought a roll of fencing for a vegetable patch.</p>
+      <p>The tiler is puzzled. "I laid exactly <b>39 m²</b> of tiles. The verandah is <b>10 m long</b> and as wide as the room. But I forgot to write down the room's size. How big is the room?"</p>
+      <p>Room: a square of side <span class="vx">x</span>, area <span class="vx">x</span>². Verandah: 10 × <span class="vx">x</span>. Together: <span class="eqn"><span class="vx">x</span>² + 10<span class="vx">x</span> = 39</span> This time the Balance move alone won't work: <span class="vx">x</span> and <span class="vx">x</span>² can't be cancelled against each other. We need a new trick, and it's one you can do with scissors.</p>
+    </div>
+
+    <div class="sub reveal">
+      <div class="kicker">Animation · completing the square</div>
+      <h3>Solve x² + 10x = 39 by rearranging tiles</h3>
+    </div>
+    <div class="panel reveal" id="cs">
+      <div class="big-eq" id="cs-eq"></div>
+      <svg id="cs-svg" viewBox="0 0 420 340" aria-label="completing the square"></svg>
+      <div class="msg" id="cs-msg" style="min-height:52px"></div>
+      <div class="row" style="justify-content:center">
+        <button class="btn small ghost" id="cs-prev">← Back</button>
+        <button class="btn small" id="cs-next">Next step →</button>
+      </div>
+    </div>
+
+    <div class="callout fp reveal">
+      <div class="emo">🌀</div>
+      <div><span class="lbl">First principles</span>
+        <p>A problem turns <b>quadratic</b> (has an <span class="vx">x</span>²) whenever a quantity gets multiplied by something that depends on itself: width × (a length that shrinks as width grows); price × (sales that fall as price rises); speed × speed. Those trade-offs make a hill-shaped curve, a <b>parabola</b>, and the top of the hill is the best possible answer.</p>
+      </div>
+    </div>
+
+    <div class="sub reveal">
+      <div class="kicker">Playground · Dad's kitchen garden</div>
+      <h3>40 metres of fencing. One wall for free. Biggest garden?</h3>
+      <p>The compound wall forms one side, so Dad only fences three sides. He wants to make it square "because squares are biggest." Too thin and it's a corridor; too wide and it's a shallow strip. Drag to find the best width, and see if Dad is right.</p>
+    </div>
+    <div class="panel reveal" id="fence">
+      <div class="two">
+        <svg class="graph" id="fence-plot" viewBox="0 0 300 260" aria-label="garden plot"></svg>
+        <svg class="graph" id="fence-graph" viewBox="0 0 300 260" aria-label="area curve"></svg>
+      </div>
+      <div class="sl"><label>Width <span class="vx">w</span> (m)</label><input type="range" id="fence-w" min="0.5" max="19.5" step="0.5" value="4"><output id="fence-wo"></output></div>
+      <div class="eqn" id="fence-eq"></div>
+      <div class="msg" id="fence-msg"></div>
+    </div>
+
+    <div class="twist pz reveal">
+      <div class="q">Why is a negative times a negative a positive?</div>
+      <div class="tap">🔍 See it step by step</div>
+      <ol class="psrc"><li><span class="e">3 × (−500) = −1,500</span>Kavya carries three ₹500 late fees. Each is a debt: −500. Three of them: −1,500.</li><li><span class="e">(−3) × (−500)</span>The office <b>cancels</b> them. "× negative" means <i>taking away</i>: remove three copies of the debt.</li><li><span class="e">(−3) × (−500) = +1,500</span>Taking away ₹1,500 of debt leaves her ₹1,500 better off.</li></ol><div class="psrc pans"><b>Negative × negative = positive</b>: removing a bad thing is a good thing.</div>
+    </div>
+
+    <div class="cases reveal">
+      <div class="case pz" data-answer="90" data-unit="₹"><div class="ic">🍱</div><h4>Mum's tiffin business</h4><p>At ₹80 she sells 50 tiffins a day. Every ₹1 she adds loses half a customer. Best price?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">price = 80 + <span class="vx">p</span></span>Raise the price by p rupees.</li><li><span class="e">sales = 50 − 0.5<span class="vx">p</span></span>Every ₹1 loses half a customer.</li><li><span class="e">R = (80 + <span class="vx">p</span>)(50 − 0.5<span class="vx">p</span>)</span>Revenue = price × sales: x meets itself, so it's a parabola.</li><li><span class="e">zeros: <span class="vx">p</span> = −80 and <span class="vx">p</span> = 100</span>Revenue is zero if tiffins are free (p = −80) or if nobody buys (p = 100).</li><li><span class="e"><span class="vx">p</span> = (−80 + 100) ÷ 2 = 10</span>A parabola peaks exactly halfway between its zeros.</li><li><span class="e">R = 90 × 45 = ₹4,050</span>Price ₹90, sales 45. (Today: 80 × 50 = ₹4,000.)</li></ol><div class="psrc pans"><b>₹90.</b> More money, and five fewer tiffins to cook.</div></div>
+      <div class="case pz" data-answer="4" data-unit="×"><div class="ic">🚗</div><h4>Braking distance</h4><p>Kavya's brother doubles his speed from 40 to 80 km/h. How many times longer to stop?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">d grows like v²</span>Braking distance grows with the <b>square</b> of speed (the energy to get rid of is ½mv²).</li><li><span class="e">(2v)² = 4v²</span>Double the speed: (2v)² = 4 × v².</li><li><span class="e">d → 4 × d</span>So the braking distance becomes four times as long.</li></ol><div class="psrc pans"><b>4×.</b> If a car needs 10 m to brake at 40 km/h, it needs about 40 m at 80. That's x² on the road.</div></div>
+      <div class="case pz"><div class="ic">🧮</div><h4>The formula, finally</h4><p>Do the tile trick once, for <i>every</i> equation of the form ax² + bx + c = 0.</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">a<span class="vx">x</span>² + b<span class="vx">x</span> + c = 0</span>Start with the general equation.</li><li><span class="e"><span class="vx">x</span>² + (b/a)<span class="vx">x</span> = −c/a</span>Divide both sides by a; remove c from both sides.</li><li><span class="e"><span class="vx">x</span>² + (b/a)<span class="vx">x</span> <span class="veq">+ (b/2a)²</span> = (b/2a)² − c/a</span>Restore: add the missing corner (half of b/a, squared) to both sides.</li><li><span class="e">(<span class="vx">x</span> + b/2a)² = (b² − 4ac) / 4a²</span>The left side is now a perfect square. Tidy the right side.</li><li><span class="e"><span class="vx">x</span> = (−b ± √(b² − 4ac)) / 2a</span>Square-root both sides (± because a square has two roots) and subtract b/2a.</li></ol><div class="psrc pans"><b>The quadratic formula</b> is just the tile trick done once, in general.</div></div>
+    </div>
+
+    <div class="recall-h">🧠 Recall before you scroll on</div>
+    <div class="recall">
+      <div class="flip"><div class="flip-in"><div class="fc front">What does "completing the square" literally mean?</div><div class="fc back">Adding the missing corner piece, (b/2)², so the L-shape becomes a perfect square whose side you can read off.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">When does a real problem become quadratic?</div><div class="fc back">When the unknown multiplies something that depends on itself: area, price × sales, speed².</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">40 m fence, one wall free: best width and area?</div><div class="fc back">Width 10 m, length 20 m, area 200 m². Twice as long as wide, because the wall is free.</div></div></div>
+    </div>
+
+    <a class="histlink reveal" href="algebra-history.html#h-square">📜 The 1,200-year-old origin of the tile trick, and who first gave negative numbers rules. <b>History corner →</b></a>
+
+    <p class="openloop reveal"><i>x</i>² is <i>x</i> multiplied by itself <i>once</i>. What happens when something multiplies itself again, and again, every month, for twenty years? Next week, two things arrive for Kavya: a story from her grandfather, and a letter from a bank.</p>
+  </div>
+</section>
+
+<!-- ============================ ACT V ============================ -->
+<section class="act" id="act5" data-act="4">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">ACT V <span class="level">LEVEL 5</span></div>
+      <h2>Growth</h2>
+      <p>The force that quietly decides your savings, your loans, and every "viral" thing on the internet.</p>
+    </div>
+
+    <div class="scene reveal">
+      <div class="when">♟️ Week 4 · Sunday · Grandpa's chess afternoon</div>
+      <p>Between games, Grandpa tells an old Indian legend. The man who invented chess showed it to the king. Delighted, the king offered any reward. The inventor asked only for rice: <b>one grain</b> on the first square, <b>two</b> on the second, <b>four</b> on the third, doubling on every square to the 64th.</p>
+      <p>The king laughed and ordered a small bag of rice. "Fill the board," says Grandpa, sliding it across, "and tell me why the king's treasurers stopped laughing."</p>
+    </div>
+
+    <div class="panel reveal" id="rice">
+      <div class="rice-wrap">
+        <div class="rice" id="rice-board" aria-label="chessboard of rice"></div>
+        <div>
+          <div class="counter" id="rice-count">0<small>grains on the board</small></div>
+          <p id="rice-say" style="margin:12px 0;min-height:78px;color:var(--soft)">Tap "next square", or tap any square on the board to jump there.</p>
+          <div class="row">
+            <button class="btn small" id="rice-next">+1 square</button>
+            <button class="btn small ghost" id="rice-all">Fill all 64</button>
+            <button class="btn small ghost" id="rice-reset">↺</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout fp reveal">
+      <div class="emo">📈</div>
+      <div><span class="lbl">First principles</span>
+        <p><b>Linear</b> growth <i>adds</i> the same amount each step (Act II: ₹18 more per km). <b>Exponential</b> growth <i>multiplies</i> by the same factor each step, so the bigger it gets, the faster it grows. Interest on a balance, a rumour, a virus, compounding returns: anything that grows <b>in proportion to what it already is</b>.</p>
+        <span class="eqn">amount = start × (1 + <span class="vn">r</span>)<sup><span class="vx">n</span></sup></span>
+        <p style="margin:0">And when the unknown is <i>up in the exponent</i> ("how many years until it doubles?"), you need the reverse tool: a <b>logarithm</b>. A logarithm answers one question: <b>"how many times do I multiply?"</b> 2 multiplied by itself how many times makes 1,024? Ten. So log₂(1,024) = 10.</p>
+      </div>
+    </div>
+
+    <div class="cases reveal">
+      <div class="case pz"><div class="ic">⏳</div><h4>The rule of 72</h4><p>Why does "72 ÷ rate" tell you how many years money takes to double?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">(1 + r)<sup><span class="vx">n</span></sup> = 2</span>Doubling means start × (1 + r)ⁿ = 2 × start.</li><li><span class="e"><span class="vx">n</span> = log 2 ÷ log(1 + r)</span>The unknown is in the exponent, so take logarithms.</li><li><span class="e"><span class="vx">n</span> ≈ 0.69 ÷ r</span>For small rates, log(1 + r) ≈ r, and log 2 ≈ 0.693 (natural logs).</li><li><span class="e"><span class="vx">n</span> ≈ 69 ÷ (rate in %) → use 72</span>72 is easier: it divides by 2, 3, 4, 6, 8, 9, 12, and it is more accurate for typical rates.</li></ol><div class="psrc pans"><b>Years to double ≈ 72 ÷ rate%.</b> FD at 7% → ~10 years. At 12% → ~6 years.</div></div>
+      <div class="case pz" data-answer="12" data-unit="years" data-tol="0.6"><div class="ic">🛒</div><h4>Inflation, the silent thief</h4><p>At 6% inflation, in how many years does ₹1 lakh buy only half of what it buys today?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">(1.06)<sup><span class="vx">n</span></sup> = 2</span>Prices grow 6% a year. Your money buys half as much once prices double.</li><li><span class="e"><span class="vx">n</span> ≈ 72 ÷ 6 = 12</span>Rule of 72.</li><li><span class="e">exact: log 2 ÷ log 1.06 ≈ 11.9</span>The exact answer agrees.</li></ol><div class="psrc pans"><b>~12 years.</b> Money sitting idle isn't safe; it's shrinking on a schedule.</div></div>
+      <div class="case pz" data-answer="1.95" data-unit="years" data-tol="0.35"><div class="ic">💳</div><h4>Credit-card debt</h4><p>An unpaid card balance grows ~3% a month. In about how many years does it double?</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">(1.03)<sup>12</sup> ≈ 1.426</span>3% a month compounds 12 times a year: debt × 1.426 every year, i.e. 42.6% a year.</li><li><span class="e">72 ÷ 42.6 ≈ 1.7 years</span>Rule of 72 estimate (it runs a little low at high rates).</li><li><span class="e">exact: log 2 ÷ log 1.03 ≈ 23.4 months</span>The exact answer: about 1.95 years.</li></ol><div class="psrc pans"><b>Under 2 years.</b> Exponential growth works against you just as hard as it works for you.</div></div>
+    </div>
+
+    <div class="scene reveal">
+      <div class="when">✉️ Week 4 · Monday · a letter from the bank</div>
+      <p>"Congratulations! You are pre-approved for a home loan of <b>₹30 lakh</b> at <b>9%</b> for <b>20 years</b>. EMI: <b>₹26,992</b>."</p>
+      <p>Kavya does a quick multiplication: ₹26,992 × 240 months ≈ <b>₹64.8 lakh</b>. For a ₹30 lakh loan? Where does the other ₹34.8 lakh go? And how did the bank get ₹26,992 in the first place? She decides to build the formula herself.</p>
+    </div>
+
+    <div class="sub reveal">
+      <div class="kicker">The summit · derive the EMI formula</div>
+      <h3>Every bank uses one equation. You can build it in four steps.</h3>
+      <p>Borrow <span class="vn">P</span> at monthly rate <span class="vn">r</span> for <span class="vn">n</span> months. Find the fixed monthly payment <span class="vx">E</span> that brings the balance to exactly zero. Tap each step.</p>
+    </div>
+    <div class="cases reveal" id="emi-derive" style="grid-template-columns:1fr">
+      <div class="case pz"><div class="ic">🏦</div><h4>Build the EMI formula</h4><p>Borrow P at monthly rate r for n months. Find the EMI E that brings the balance to exactly zero.</p><div class="tap">🔍 Solve it step by step</div>
+        <ol class="psrc"><li><span class="e">B<sub>next</sub> = B × (1 + r) − <span class="vx">E</span></span><b>Each month:</b> the balance grows by interest, then the EMI is subtracted.</li><li><span class="e">P(1+r)<sup>n</sup> = <span class="vx">E</span> [ (1+r)<sup>n−1</sup> + … + (1+r) + 1 ]</span><b>Unroll n months.</b> For the loan to hit zero, the loan grown for n months must equal every EMI grown to the end.</li><li><span class="e">S = 1 + q + … + q<sup>n−1</sup>   and   qS = q + … + q<sup>n</sup></span><b>The cancel-the-middle trick.</b> Call the bracket S, with q = 1 + r. Multiply it by q.</li><li><span class="e">qS − S = q<sup>n</sup> − 1  →  S = (q<sup>n</sup> − 1) / r</span>Subtract: every middle term cancels (the Balance move again!).</li><li><span class="e"><span class="vx">E</span> = P · r · (1+r)<sup>n</sup> / ((1+r)<sup>n</sup> − 1)</span><b>Solve for E</b>: divide both sides by S.</li><li><span class="e">P = 30,00,000 · r = 0.0075 · n = 240 → E ≈ ₹26,992</span>Kavya's numbers.</li></ol><div class="psrc pans"><b>E = P·r·(1+r)ⁿ / ((1+r)ⁿ − 1)</b>: the formula behind every home, car and personal loan. ₹26,992: the bank was honest.</div></div>
+    </div>
+
+    <div class="sub reveal">
+      <div class="kicker">Playground · the EMI x-ray</div>
+      <h3>Where does the EMI actually go?</h3>
+    </div>
+    <div class="panel reveal" id="emi">
+      <div class="sl"><label>Loan ₹ (lakh)</label><input type="range" id="emi-p" min="1" max="100" step="1" value="30"><output id="emi-po"></output></div>
+      <div class="sl"><label>Interest % / yr</label><input type="range" id="emi-r" min="6" max="18" step="0.25" value="9"><output id="emi-ro"></output></div>
+      <div class="sl"><label>Tenure (years)</label><input type="range" id="emi-n" min="1" max="30" step="1" value="20"><output id="emi-no"></output></div>
+      <div class="sl"><label>Extra / month ₹</label><input type="range" id="emi-x" min="0" max="20000" step="500" value="0"><output id="emi-xo"></output></div>
+      <div class="kpis">
+        <div class="kpi"><small>Monthly EMI</small><b id="emi-e" style="color:var(--x)"></b></div>
+        <div class="kpi"><small>Total interest</small><b id="emi-i" style="color:var(--red)"></b></div>
+        <div class="kpi"><small>Finishes in</small><b id="emi-t" style="color:var(--eq)"></b></div>
+      </div>
+      <div style="font-size:13px;color:var(--soft);margin-bottom:6px"><span class="swatch" style="background:var(--red)"></span>interest paid that year <span class="swatch" style="background:var(--eq);margin-left:10px"></span>principal paid that year</div>
+      <svg id="emi-svg" viewBox="0 0 640 240"></svg>
+      <div class="msg" id="emi-msg"></div>
+    </div>
+
+    <div class="twist pz reveal">
+      <div class="q">Why do early EMIs barely dent the loan, and why does prepaying early help so much?</div>
+      <div class="tap">🔍 See it step by step</div>
+      <ol class="psrc"><li><span class="e">interest = balance × r</span>Interest is charged on the <b>remaining balance</b>.</li><li><span class="e">30,00,000 × 0.0075 = ₹22,500</span>Month 1 on Kavya's loan: ₹22,500 of interest.</li><li><span class="e">26,992 − 22,500 = ₹4,492</span>So only ₹4,492 of the first EMI actually reduces the loan.</li><li><span class="e">small cut → balance stays big → interest stays big</span>The balance falls slowly, so interest stays high for years. That's the red in the chart.</li><li><span class="e">prepay ₹1 now → no interest on it, every remaining month</span>A rupee prepaid early stops earning interest for the bank in <i>every</i> remaining month. Compounding now works for you.</li></ol><div class="psrc pans"><b>Interest is front-loaded</b>, so early prepayment has the biggest effect. Slide "extra / month" above and watch the years vanish.</div>
+    </div>
+
+    <div class="scene reveal">
+      <div class="when">✉️ Week 4 · Monday night</div>
+      <p>Kavya sets the slider to ₹5,000 extra a month. The loan finishes more than six years early and saves about ₹12.8 lakh in interest. She writes one line in her notebook: <i>"The bank uses the same maths as Grandpa's rice. So can I."</i></p>
+    </div>
+
+    <div class="recall-h">🧠 Recall before you scroll on</div>
+    <div class="recall">
+      <div class="flip"><div class="flip-in"><div class="fc front">Linear vs exponential, in one line each?</div><div class="fc back">Linear adds the same amount each step. Exponential multiplies by the same factor each step.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">What question does a logarithm answer?</div><div class="fc back">"How many times do I multiply?" e.g. how many doublings, how many years.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">The rule of 72?</div><div class="fc back">Years to double ≈ 72 ÷ yearly % rate. 6% → 12 years.</div></div></div>
+      <div class="flip"><div class="flip-in"><div class="fc front">The trick behind the EMI formula?</div><div class="fc back">Multiply the sum by q and subtract: the middle terms cancel. S = (qⁿ − 1)/(q − 1).</div></div></div>
+    </div>
+
+    <a class="histlink reveal" href="algebra-history.html#h-growth">📜 Who invented logarithms, and why astronomers loved him. <b>History corner →</b></a>
+
+    <p class="openloop reveal">Balance, line, crossing, square, growth. One month, five ideas, one rule underneath all of them. Time to see if they're yours now.</p>
+  </div>
+</section>
+
+<!-- ============================ QUEST ============================ -->
+<section class="act" id="quest" data-act="5">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">FINALE · THE QUEST</div>
+      <h2>Five stations. Your moves.</h2>
+      <p>Each station is a playground. You solve a fresh problem one step at a time by choosing your next move. Wrong choices aren't failures: each one shows <i>why</i> it doesn't work. Finish with no slips for ⭐⭐⭐.</p>
+    </div>
+    <div class="qmap reveal" id="qmap"></div>
+    <div class="stage reveal" id="stage"></div>
+    <div class="cert" id="cert"></div>
+  </div>
+</section>
+
+<!-- ============================ ARENA ============================ -->
+<section class="act" id="arena" data-act="6">
+  <div class="wrap">
+    <div class="act-head reveal">
+      <div class="num">FREE PRACTICE</div>
+      <h2>The Arena</h2>
+      <p>Finished the Quest? Here's endless practice: fresh real-life problems, generated every time, so you can't memorise them. Type your answer, then open the step-by-step solution to compare.</p>
+    </div>
+    <div class="arena-card reveal" id="ar">
+      <div class="arena-top">
+        <span class="seg lvlpick" id="ar-lvl"><button data-l="0" class="on">Mixed</button><button data-l="1">1</button><button data-l="2">2</button><button data-l="3">3</button><button data-l="4">4</button><button data-l="5">5</button></span>
+        <span class="score">streak <b id="ar-streak">0</b> · best <b id="ar-best">0</b> · solved <b id="ar-solved">0</b></span>
+      </div>
+      <div class="prob-ctx" id="ar-ctx"></div>
+      <div class="prob-text" id="ar-text"></div>
+      <div class="ans-row">
+        <input type="text" inputmode="decimal" id="ar-in" placeholder="your answer" autocomplete="off">
+        <span class="unit" id="ar-unit"></span>
+        <button class="btn small" id="ar-check">Check</button>
+        <button class="btn small ghost" id="ar-hint">💡 Hint</button>
+        <button class="btn small ghost" id="ar-show">🔍 Step-by-step solution</button>
+        <button class="btn small teal" id="ar-new">New problem →</button>
+      </div>
+      <div class="hint" id="ar-hintbox"></div>
+      <div class="msg" id="ar-msg" style="text-align:left"></div>
+      <div class="solution" id="ar-sol"></div>
+    </div>
+
+    <a class="histlink reveal" href="algebra-history.html" style="margin-top:40px">📜 Finished the story? Meet the seven people who figured all this out, across 2,000 years. <b>History corner →</b></a>
+
+    <div class="callout reveal">
+      <div class="emo">🧭</div>
+      <div><p><b>What's next in this series?</b> Probability ("Is the extended warranty worth it?"), statistics ("Is that 4.8★ rating real?"), geometry and trigonometry ("How tall is that tower, from where I stand?"), and calculus ("What does 'rate of change' actually mean?"). <a href="./">See the roadmap →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>Built one prompt at a time · <a href="../">Field Notes</a> · <a href="./">Math</a> · <a href="algebra-history.html">History corner</a></footer>
+
+<script src="algebra.js"></script>
+<script src="../core/fable.js" defer></script>
+</body>
+</html>

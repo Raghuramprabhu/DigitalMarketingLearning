@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="music" data-fb-mode="journey" data-fb-key="piano/learn/1-2-names.html" data-fb-root="../../" data-fb-title="C D E meets Sa Re Ga" data-fb-split="main.wrap">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.2 C D E meets Sa Re Ga · Music: the story · Fable</title>
+  <meta name="description" content="Keyboard geography, letter names vs sargam, movable Sa, komal and tivra, the Carnatic swarasthanas and registers, with playable keyboards and drills.">
+  <script>try{localStorage.setItem("fable-theme","dark");localStorage.setItem("fable-calm-theme","dark")}catch(e){}document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="learn.css">
+  <style>
+    .sa-pick { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; }
+    .sa-pick button { padding: 6px 0; border-radius: 8px; border: 1px solid var(--line2); background: var(--card2); color: var(--ink); font: 700 13px var(--font-body); cursor: pointer; }
+    .sa-pick button.on { background: var(--east); border-color: var(--east); color: #1a0f08; }
+    @media (max-width: 560px) { .sa-pick { grid-template-columns: repeat(6, 1fr); } }
+    .found { font: 700 14px var(--font-mono); color: var(--gold); }
+  </style>
+  <link rel="stylesheet" href="../../core/fable.css">
+</head>
+<body data-lesson="1-2">
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="./">← <span class="hide-sm">Syllabus</span></a>
+    <a class="logo" href="./">Music<span>: the story</span></a>
+    <span class="grow"></span>
+    <select class="pill" id="instrPick" aria-label="Instrument for examples">
+      <option value="piano">🎹 Piano</option><option value="harmonium">🪗 Harmonium</option><option value="epiano">✨ E-piano</option><option value="strings">🎻 Strings</option>
+    </select>
+    <button class="pill" id="themebtn" type="button">☀️ Light</button>
+  </div>
+  <div class="readbar"></div>
+</header>
+
+<main class="wrap">
+  <section class="l-hero">
+    <span class="eyebrow">Level 1 · Lesson 2 · Names</span>
+    <h1>C D E meets <em>Sa Re Ga</em></h1>
+    <p class="lede">Two naming systems for the same twelve keys. One gives every key a fixed address. The other names notes by their <i>relationship to home</i>. Once you see why both exist, you'll never confuse them again.</p>
+    <div class="goals"><h4>By the end you'll be able to</h4><ul>
+      <li>Find any note on a keyboard instantly, using only the black-key groups.</li>
+      <li>Explain fixed names (C D E) vs movable names (Sa Re Ga), and set Sa on any key.</li>
+      <li>Name all 12 positions in Western, Hindustani and Carnatic terms.</li>
+      <li>Write and read the three registers (mandra, madhya, taar).</li>
+    </ul></div>
+  </section>
+
+  <div class="story">
+    <p><b>Around the year 1025</b>, an Italian monk called <b>Guido of Arezzo</b> had a problem: choirboys took years to learn chants by ear. His trick was a hymn whose lines each started one step higher. He took the first syllable of each line, <i>Ut, Re, Mi, Fa, Sol, La</i>, and suddenly the steps had names you could sing. <i>Ut</i> later became <b>Do</b>, and <b>Ti</b> was added. That's where "Do-Re-Mi" comes from.</p>
+    <p>India had already done this, much earlier. The seven <b>swaras</b> each have a Sanskrit name: <b>Sa</b>dja, <b>Ri</b>shabha, <b>Ga</b>ndhara, <b>Ma</b>dhyama, <b>Pa</b>nchama, <b>Dha</b>ivata, <b>Ni</b>shada. Sing just their first syllables and you get <b>sa-re-ga-ma</b>: the word <i>sargam</i> literally comes from the first four notes. Tradition even links each swara to an animal call. Pa is the <i>koel</i> (cuckoo), and Sa is the peacock.</p>
+    <p>Notice the twist: <b>both</b> civilisations ended up singing a syllable per step, and both have a note called <b>"Re"</b>.</p>
+  </div>
+
+  <h2>1 · The keyboard is a map with landmarks</h2>
+  <p>Ignore the white keys for a second and look at the black ones. They come in a repeating pattern: <b>a group of 2, then a group of 3</b>. Those groups are your landmarks.</p>
+  <ul>
+    <li><b>C</b> is the white key just <b>left of every group of 2</b>.</li>
+    <li><b>F</b> is the white key just <b>left of every group of 3</b>.</li>
+  </ul>
+  <div class="widget">
+    <h4>🎯 Find every C</h4>
+    <p class="cap" style="margin-top:0">No labels. Click every C on this keyboard. <span class="found" id="cFound">0 / 4 found</span></p>
+    <div class="kbd" id="findC" data-from="C3" data-to="C6" data-labels="none"></div>
+    <p class="cap" id="cMsg">Hint: find a pair of black keys first.</p>
+  </div>
+
+  <h2>2 · Fixed names: letters</h2>
+  <p>Western music gives every white key a <b>letter</b>, A to G, repeating. They're <b>fixed addresses</b>: C is always C, no matter what song you play. Middle C is <b>C4</b> (about 261.6 Hz), the next C up is C5, and so on.</p>
+  <p>The black keys borrow names from their neighbours. The key between C and D is <b>C♯</b> ("C sharp", a step up from C) <i>or</i> <b>D♭</b> ("D flat", a step down from D). Same key, two names, depending on context. Those are <b>enharmonic</b> spellings.</p>
+
+  <h2>3 · Movable names: sargam</h2>
+  <p>Sargam does something cleverer. <b>Sa is not a key. Sa is "home"</b>, wherever the singer decides home is. Everything else is named by its distance from Sa. If Sa is C, then Re is D. If Sa is D, then Re is E.</p>
+  <div class="widget">
+    <h4>🏠 Choose where Sa lives</h4>
+    <div class="sa-pick" id="saPick"></div>
+    <div class="kbd tall" id="saKbd" data-from="F3" data-to="F5" data-labels="both" data-sa="C4"></div>
+    <div class="row">
+      <button type="button" class="play" data-kbd="saKbd" data-relsa="C4" data-seq="C4 D4 E4 F4 G4 A4 B4 C5:2" data-bpm="110">▶ Sa Re Ga Ma Pa Dha Ni Ṡa</button>
+      <button type="button" class="play" data-kbd="saKbd" data-relsa="C4" data-seq="C5 B4 A4 G4 F4 E4 D4 C4:2" data-bpm="110">▶ Down again</button>
+      <button type="button" class="drone" id="saDrone" data-sa="C4">🪔 Drone on Sa</button>
+    </div>
+    <p class="cap" id="saCap"></p>
+  </div>
+  <p>Try Sa on C, then on G. The <b>tune sounds the same</b>, just higher or lower. That's the point: singers pick a Sa that suits their voice, and the music moves with them. Hindustani and Carnatic musicians name the pitch of their Sa in two different ways:</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>Sa on</th><th>C</th><th>C♯</th><th>D</th><th>D♯</th><th>E</th><th>F</th><th>F♯</th><th>G</th><th>G♯</th><th>A</th><th>A♯</th><th>B</th></tr>
+    <tr><td class="east"><b>Carnatic "kattai"</b></td><td>1</td><td>1½</td><td>2</td><td>2½</td><td>3</td><td>4</td><td>4½</td><td>5</td><td>5½</td><td>6</td><td>6½</td><td>7</td></tr>
+    <tr><td class="east"><b>Hindustani</b></td><td>Safed 1</td><td>Kali 1</td><td>Safed 2</td><td>Kali 2</td><td>Safed 3</td><td>Safed 4</td><td>Kali 3</td><td>Safed 5</td><td>Kali 4</td><td>Safed 6</td><td>Kali 5</td><td>Safed 7</td></tr>
+  </table></div>
+  <p class="dim" style="font-size:14.5px">"Safed" means white key and "Kali" means black key, counted from C. So a singer who says "my Sa is Kali 1" or "1½ kattai" means C♯.</p>
+
+  <div class="meet"><h4>Where they meet</h4><p>The West has a movable system too: <b>movable-do solfège</b> (Do Re Mi), where Do is whatever key you're in. That's sargam's idea exactly. Western musicians mostly <i>think</i> in fixed letters. Indian musicians mostly <i>think</i> in movable swaras. That single difference explains a lot: Indian music is about <b>relationships to Sa</b>, and Western music is about <b>which key you're in</b>.</p></div>
+
+  <details class="recall"><summary>Sa is set to G. Which letter is Pa? Which letter is Ma?</summary><div>Pa is a fifth above Sa: G → <b>D</b>. Ma is a fourth above Sa: G → <b>C</b>. (Count the steps on the keyboard above with Sa on G to check.)</div></details>
+
+  <h2>4 · All twelve positions</h2>
+  <p>Sargam has seven names, but there are twelve keys. The extra five are <b>altered</b> versions of the movable swaras. (Sa and Pa never change: they're <i>achala</i>, immovable, as you saw in Lesson 1.1.)</p>
+  <div class="duo">
+    <div class="e"><h4>Hindustani</h4><ul>
+      <li><b>Shuddha</b> = natural. The seven swaras of the major scale.</li>
+      <li><b>Komal</b> = soft (flattened): Re, Ga, Dha, Ni can each be komal. Written in lowercase here: <b>r g d n</b>.</li>
+      <li><b>Tivra</b> = sharp: only Ma. Written <b>M</b> (or Ma′).</li>
+    </ul></div>
+    <div class="e"><h4>Carnatic</h4><ul>
+      <li>Each movable swara has numbered versions: <b>R1 R2 R3, G1 G2 G3, M1 M2, D1 D2 D3, N1 N2 N3</b>.</li>
+      <li>That's 16 names for 12 keys, because some share a key: <b>R2 = G1</b>, <b>R3 = G2</b>, <b>D2 = N1</b>, <b>D3 = N2</b>.</li>
+      <li>Why bother? It keeps the rule "Re comes before Ga" true in every scale. You'll see the payoff in the 72 melakartas (Lesson 5.3).</li>
+    </ul></div>
+  </div>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>Key (Sa = C)</th><th>Western</th><th>Hindustani</th><th>Carnatic</th></tr>
+    <tr><td>C</td><td>C</td><td>Sa</td><td>Shadjam (S)</td></tr>
+    <tr><td>C♯ / D♭</td><td>minor 2nd</td><td>komal Re (r)</td><td>Shuddha Rishabham (R1)</td></tr>
+    <tr><td>D</td><td>major 2nd</td><td>Re (R)</td><td>Chatusruti Rishabham (R2) = Shuddha Gandharam (G1)</td></tr>
+    <tr><td>D♯ / E♭</td><td>minor 3rd</td><td>komal Ga (g)</td><td>Sadharana Gandharam (G2) = Shatsruti Rishabham (R3)</td></tr>
+    <tr><td>E</td><td>major 3rd</td><td>Ga (G)</td><td>Antara Gandharam (G3)</td></tr>
+    <tr><td>F</td><td>perfect 4th</td><td>Ma (m)</td><td>Shuddha Madhyamam (M1)</td></tr>
+    <tr><td>F♯</td><td>tritone</td><td>tivra Ma (M)</td><td>Prati Madhyamam (M2)</td></tr>
+    <tr><td>G</td><td>perfect 5th</td><td>Pa</td><td>Panchamam (P)</td></tr>
+    <tr><td>G♯ / A♭</td><td>minor 6th</td><td>komal Dha (d)</td><td>Shuddha Dhaivatam (D1)</td></tr>
+    <tr><td>A</td><td>major 6th</td><td>Dha (D)</td><td>Chatusruti Dhaivatam (D2) = Shuddha Nishadam (N1)</td></tr>
+    <tr><td>A♯ / B♭</td><td>minor 7th</td><td>komal Ni (n)</td><td>Kaisiki Nishadam (N2) = Shatsruti Dhaivatam (D3)</td></tr>
+    <tr><td>B</td><td>major 7th</td><td>Ni (N)</td><td>Kakali Nishadam (N3)</td></tr>
+  </table></div>
+  <p class="aside">Careful with one trap: Hindustani <b>"shuddha"</b> Re is the natural Re (D when Sa = C), but Carnatic <b>"Shuddha Rishabham"</b> (R1) is the <i>lowest</i> Re (C♯). Same word, different meaning. That's why we'll use the short codes (R vs R1) from now on.</p>
+  <div class="widget">
+    <h4>👂 Hear all twelve, both ways</h4>
+    <div class="seg" id="lblSeg"><button type="button" data-l="both" class="on">Letters + Hindustani</button><button type="button" data-l="bothc">Letters + Carnatic</button></div>
+    <div class="kbd tall" id="all12" data-from="C4" data-to="C5" data-labels="both" data-sa="C4"></div>
+    <div class="row"><button type="button" class="play" data-kbd="all12" data-seq="C4 C#4 D4 D#4 E4 F4 F#4 G4 G#4 A4 A#4 B4 C5:2" data-bpm="130">▶ All 12, one by one</button></div>
+  </div>
+
+  <details class="recall"><summary>With Sa = C, what's the Hindustani name and the Carnatic code for E♭? And for F♯?</summary><div>E♭ = <b>komal Ga (g)</b> = Carnatic <b>G2</b> (Sadharana Gandharam). F♯ = <b>tivra Ma (M)</b> = Carnatic <b>M2</b> (Prati Madhyamam).</div></details>
+
+  <h2>5 · Registers: the three saptaks</h2>
+  <p>Letters handle octaves with numbers (C3, C4, C5). Sargam uses <b>dots</b>: a dot <b>below</b> a swara means the lower register (<b>mandra</b>), no dot means the middle register (<b>madhya</b>), and a dot <b>above</b> means the upper register (<b>taar</b>, or Carnatic <i>tara</i>). Both Hindustani and Carnatic notation use these dots.</p>
+  <div class="widget">
+    <h4>⬆⬇ Three registers around Sa = C4</h4>
+    <div class="kbd tall" id="reg" data-from="F3" data-to="G5" data-labels="both" data-sa="C4"></div>
+    <div class="row">
+      <button type="button" class="play" data-kbd="reg" data-seq="G3 A3 B3 C4 D4 E4 F4 G4 A4 B4 C5 D5 E5 G5:2" data-bpm="140">▶ Mandra Pa → taar Pa</button>
+    </div>
+    <p class="cap">Look for the dots under the low notes (mandra P D N) and over the high ones (taar Ṡ Ṙ Ġ).</p>
+  </div>
+
+  <h2>6 · Check yourself</h2>
+  <div class="quiz" data-key="q1">
+    <p class="q">You see a group of three black keys. The white key just to the left of it is…</p>
+    <div class="opts"><button class="opt" data-correct>F</button><button class="opt">C</button><button class="opt">G</button><button class="opt">B</button></div>
+    <p class="why">C sits left of the 2-group, F left of the 3-group. Everything else follows alphabetically.</p>
+  </div>
+  <div class="quiz" data-key="q2">
+    <p class="q">A singer sets Sa on D. Which key is komal Ga?</p>
+    <div class="opts"><button class="opt" data-correct>F</button><button class="opt">E♭</button><button class="opt">F♯</button><button class="opt">E</button></div>
+    <p class="why">Komal Ga is 3 semitones above Sa. D → D♯ → E → <b>F</b>. (With Sa on C it would be E♭: movable names move!)</p>
+  </div>
+  <div class="quiz" data-key="q3">
+    <p class="q">Why does Carnatic music have 16 swara names for only 12 keys?</p>
+    <div class="opts">
+      <button class="opt" data-correct>Some keys get two names (like R2 = G1) so every scale can keep its notes in order: a Re, then a Ga, then Ma…</button>
+      <button class="opt">Because Carnatic music uses 16 different pitches.</button>
+      <button class="opt">Because the black keys are counted twice.</button>
+      <button class="opt">It's a historical mistake that was never fixed.</button>
+    </div>
+    <p class="why">It's spelling, like C♯ vs D♭ in the West. The name depends on the note's job in the scale, not just on its pitch.</p>
+  </div>
+  <div class="quiz" data-key="q4">
+    <p class="q">A Carnatic singer says "my shruti is 5 kattai". Where is their Sa?</p>
+    <div class="opts"><button class="opt" data-correct>G</button><button class="opt">E</button><button class="opt">F</button><button class="opt">A</button></div>
+    <p class="why">Kattai counts white keys from C: 1 = C, 2 = D, 3 = E, 4 = F, <b>5 = G</b>. Half-steps are written ½.</p>
+  </div>
+
+  <h2>7 · Drills</h2>
+  <p><b>Eyes:</b> a key lights up. Name it.</p>
+  <div class="kbd" id="drillKbd" data-from="C4" data-to="B4" data-labels="none" data-silent></div>
+  <div id="drillName"></div>
+  <p style="margin-top:26px"><b>Ears:</b> the drone plays Sa, then you hear one swara. Which one? (Shuddha swaras only, Sa = C.)</p>
+  <div id="drillEar"></div>
+
+  <div class="takeaways">
+    <h3>Takeaways</h3>
+    <ul>
+      <li><b>Landmarks:</b> C is left of each 2-group of black keys, and F is left of each 3-group.</li>
+      <li><b>Letters are fixed addresses.</b> Sargam names are <b>relationships to Sa</b>, and Sa can sit on any key (kattai / safed-kali tells you which).</li>
+      <li>12 positions: 7 shuddha + komal r g d n + tivra M. Carnatic codes R1–3, G1–3, M1–2, D1–3, N1–3 (16 names, because some keys get two).</li>
+      <li>Registers: mandra (dot below) · madhya · taar (dot above), versus C3 · C4 · C5.</li>
+    </ul>
+  </div>
+
+  <div class="l-end">
+    <a class="nav-next" href="1-1-sound.html">← 1.1 What is a note?</a>
+    <button class="done-btn" data-lesson="1-2">Mark this lesson complete</button>
+    <a class="nav-next" href="1-3-rhythm.html">Next: Beat, tala &amp; time signature →</a>
+  </div>
+</main>
+
+<script src="../engine.js"></script>
+<script src="learn.js"></script>
+<script>
+(function () {
+  var LK = window.LK, PS = window.PS;
+
+  /* find every C */
+  var found = {}, fc = LK.kbd('findC');
+  fc.on(function (m) {
+    if (m % 12 === 0) {
+      if (!found[m]) { found[m] = 1; fc.mark(Object.keys(found).map(Number)); }
+      var n = Object.keys(found).length;
+      document.getElementById('cFound').textContent = n + ' / 4 found';
+      document.getElementById('cMsg').textContent = n === 4 ? '🎉 All four. Notice they all sound like "the same note" at different heights: octaves, from Lesson 1.1.' : 'Yes, that’s a C (' + LK.noteName(m) + ').';
+    } else {
+      document.getElementById('cMsg').textContent = 'That’s ' + LK.noteName(m).replace(/\d/, '') + '. Look for the white key just left of a pair of black keys.';
+    }
+  });
+
+  /* movable Sa */
+  var KATTAI = ['1', '1½', '2', '2½', '3', '4', '4½', '5', '5½', '6', '6½', '7'];
+  var SK = ['Safed 1', 'Kali 1', 'Safed 2', 'Kali 2', 'Safed 3', 'Safed 4', 'Kali 3', 'Safed 5', 'Kali 4', 'Safed 6', 'Kali 5', 'Safed 7'];
+  var pick = document.getElementById('saPick'), sk = LK.kbd('saKbd');
+  LK.SHARPS.forEach(function (n, i) {
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = n; if (i === 0) b.className = 'on';
+    b.addEventListener('click', function () {
+      LK.$$('#saPick button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on');
+      var sa = 60 + i; if (sa > 66) sa -= 12; // keep Sa near the middle of the keyboard
+      sk.setSa(sa);
+      document.getElementById('saDrone').dataset.sa = LK.noteName(sa).replace('♯', '#').replace('♭', 'b');
+      if (LK.droneState.on) LK.drone(true, sa); // drone follows the new Sa from its next cycle
+      LK.note(sa, 0.8);
+      cap(i);
+    });
+    pick.appendChild(b);
+  });
+  function cap(i) { document.getElementById('saCap').innerHTML = 'Sa = <b>' + LK.SHARPS[i] + '</b> · Carnatic: <b>' + KATTAI[i] + ' kattai</b> · Hindustani: <b>' + SK[i] + '</b>. The swara labels moved, but the letters stayed put.'; }
+  cap(0);
+
+  /* label switch */
+  LK.$$('#lblSeg button').forEach(function (b) {
+    b.addEventListener('click', function () { LK.$$('#lblSeg button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); LK.kbd('all12').setLabels(b.dataset.l); });
+  });
+
+  /* drill: name the key */
+  var dk = LK.kbd('drillKbd');
+  LK.game(document.getElementById('drillName'), {
+    title: 'Name that key', rounds: 8, intro: 'Eight keys. Each answer gives the letter and the swara (Sa = C).',
+    make: function () {
+      var m = 60 + Math.floor(Math.random() * 12);
+      dk.mark([m]);
+      var opts = LK.shuffle([m].concat(LK.shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].filter(function (x) { return x !== m - 60; })).slice(0, 3).map(function (x) { return 60 + x; })));
+      return {
+        prompt: 'Which note is lit up?',
+        options: opts.map(function (o) { return { label: LK.SHARPS[o % 12] + ' · ' + LK.HIND_LONG[o % 12], value: o }; }),
+        answer: m,
+        explain: LK.SHARPS[m % 12] + ' = ' + LK.HIND_LONG[m % 12] + ' = ' + LK.CARN[m % 12] + '.',
+        play: function () { LK.note(m, 0.7); }
+      };
+    }
+  });
+
+  /* drill: hear the swara against Sa */
+  var SH = [0, 2, 4, 5, 7, 9, 11];
+  LK.game(document.getElementById('drillEar'), {
+    title: 'Which swara?', rounds: 8, intro: 'Each round: Sa, then a mystery swara. Sing "Sa Re Ga…" up from Sa in your head until you hit it.',
+    make: function () {
+      var s = LK.pick(SH.slice(1));
+      return {
+        prompt: 'Sa … then?',
+        play: function () { LK.note(60, 0.7); LK.note(60 + s, 0.9, { delay: 0.85 }); },
+        options: SH.slice(1).map(function (x) { return { label: LK.HIND_LONG[x], value: x }; }),
+        answer: s,
+        explain: 'It was ' + LK.HIND_LONG[s] + ' (' + LK.SHARPS[s] + ').'
+      };
+    }
+  });
+})();
+</script>
+<script src="../../core/fable.js" defer></script>
+</body>
+</html>

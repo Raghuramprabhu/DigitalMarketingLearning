@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="chess" data-fb-mode="journey" data-fb-key="chess/middlegame.html" data-fb-root="../" data-fb-title="Strategy" data-fb-scenes="section.hero, section.block, section.lesson">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategy: the story · seven middlegame principles · Fable</title>
+  <meta name="description" content="Seven chess middlegame principles (pawn skeleton, outposts, pieces that fit the pawns, open files, the worst piece, prophylaxis and two weaknesses) told through famous games, with case files and a choose-the-plan arena.">
+  <script>try{localStorage.setItem("fable-theme","dark");localStorage.setItem("fable-calm-theme","dark")}catch(e){}document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chess.css">
+  <link rel="stylesheet" href="../core/fable.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="../">← <span>Fable</span></a>
+    <span class="logo">Strategy<span>: the story</span></span>
+    <span class="grow"></span>
+    <a class="pill" href="./" title="Tactics page">⚔️<span class="hide-sm"> Tactics</span></a>
+    <a class="pill" href="london.html" title="London System page">♙<span class="hide-sm"> London</span></a>
+    <a class="pill score-pill" id="scorePill" href="#arena-sec" title="Arena puzzles solved">♞ 0</a>
+    <button class="pill" id="themebtn" type="button" aria-label="Toggle light or dark mode">☀️ Light</button>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wide hero-in">
+    <div>
+      <span class="eyebrow">Chess · middlegame strategy · seven principles · choose-the-plan arena</span>
+      <h1>Tactics decide <em>what</em> happens.<br>Strategy decides <em>where</em>.</h1>
+      <p class="lede">A world champion who lost because of one pawn move he couldn't take back. A knight that sat on a single square for eighteen moves while the world title hung on it. A bishop buried alive on a7, on purpose, by the best positional player of his generation.</p>
+      <p class="lede" style="font-size:17px">On the <a href="./">tactics page</a>, every piece had a job. This page is about who <b>hands out</b> the jobs: the pawns, the squares and the plan.</p>
+      <div class="ctas">
+        <a class="btn" href="#principle">Start with the idea ↓</a>
+        <a class="btn ghost" href="#cases-sec">Case files 🗂</a>
+        <a class="btn ghost" href="#arena-sec">Arena ⚔️</a>
+      </div>
+    </div>
+    <div class="hero-board">
+      <div id="heroBoard" data-loop="h-files"></div>
+      <div class="hero-cap">Alekhine's gun loads up, move by move · loops forever</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FIRST PRINCIPLE ============================ -->
+<section class="block" id="principle">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">THE FIRST PRINCIPLE</div>
+      <h2>How does a general win before the first shot?</h2>
+    </div>
+    <p>Before a battle, a good general doesn't count bullets. He studies three things.</p>
+    <p>The <b class="c-guard">terrain</b>: rivers, hills, bridges. They don't move, and they decide where armies can go. The <b class="c-line">army</b>: troops are strong where the terrain suits them and useless where it doesn't, so cavalry on a mountain is wasted. And the <b class="c-clock">mind</b> of the enemy: what is he trying to do, and how long will it take him?</p>
+    <p>A chess middlegame is the same three layers. Over two hundred years ago François-André Philidor wrote that <i>pawns are the soul of chess</i>. He meant this: pawns are the terrain. They can never move backwards, so every pawn move permanently redraws the map. The pieces are the army, and the plan is the mind.</p>
+    <div class="trio">
+      <div class="t" style="--c:var(--guard)"><div class="ic">🗺️</div><h4>Read the terrain</h4><p>Pawns are permanent. They decide where to play and which squares are weak forever.</p><div class="pats">Pawn skeleton · Outposts</div></div>
+      <div class="t" style="--c:var(--linec)"><div class="ic">🛡️</div><h4>Fit the army to it</h4><p>A piece is only as good as the squares the pawns give it.</p><div class="pats">Pieces fit pawns · Open files · Worst piece</div></div>
+      <div class="t" style="--c:var(--clock)"><div class="ic">🧠</div><h4>Out-think the plan</h4><p>Stop his plan first, then stretch his defence until it breaks.</p><div class="pats">Prophylaxis · Two weaknesses</div></div>
+    </div>
+    <div class="callout gold"><div class="emo">🧭</div><p><b>The question that finds plans:</b> "What is <i>permanent</i> in this position?" A loose piece can be fixed in one move. A hole, a bad bishop or a pawn majority lasts all game. <b>Play on the permanent things.</b></p></div>
+    <p>Every principle below comes with a real game you can step through. Several games return later as "part II": a strategy takes many moves to unfold, and you'll see it from start to finish.</p>
+  </div>
+  <div class="wide" style="margin-top:26px">
+    <div class="toc">
+      <a href="#skeleton" style="--c:var(--guard)"><span class="n">01 · TERRAIN</span><b>Pawn skeleton</b><small>The moves you can't take back.</small></a>
+      <a href="#outpost" style="--c:var(--guard)"><span class="n">02 · TERRAIN</span><b>Outposts</b><small>Squares no pawn can ever attack.</small></a>
+      <a href="#fit" style="--c:var(--linec)"><span class="n">03 · ARMY</span><b>Pieces fit pawns</b><small>Good bishop, bad bishop.</small></a>
+      <a href="#files" style="--c:var(--linec)"><span class="n">04 · ARMY</span><b>Open files & 7th</b><small>Rooks need roads.</small></a>
+      <a href="#worst" style="--c:var(--linec)"><span class="n">05 · ARMY</span><b>Worst piece</b><small>The team is only as good as its weakest player.</small></a>
+      <a href="#proph" style="--c:var(--clock)"><span class="n">06 · MIND</span><b>Prophylaxis</b><small>First stop his plan.</small></a>
+      <a href="#two" style="--c:var(--clock)"><span class="n">07 · MIND</span><b>Two weaknesses</b><small>One fire can be fought. Two can't.</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 1 ============================ -->
+<section class="lesson" id="skeleton" style="--c:var(--guard)">
+  <div class="wrap">
+    <div class="kick">Principle 01 · read the terrain</div>
+    <h3>The pawn skeleton</h3>
+    <div class="metaphor">You can move the furniture any time. You can't move the walls.</div>
+    <div class="story">
+      <p>Renovating a house, you can shuffle sofas and tables all day. But the load-bearing walls were decided when the house was built, and they decide where every room can be.</p>
+      <p>Pieces are furniture: a knight can go back to where it came from. Pawns are walls: a pawn move is <b>forever</b>. That's why the pawn structure, more than anything else, tells you where your pieces belong and which side of the board to play on.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Pawns can't retreat, so the pawn structure is the only <b>permanent</b> thing in the middlegame. Play on the side where you have more pawns (a majority) or where your pawn chains point. And treat every pawn move as a decision you'll live with for the rest of the game.</p></div>
+    <div class="tells">
+      <div>A pawn majority on one side: that's where you can create a passed pawn.</div>
+      <div>Pawn chains point at the side you should attack.</div>
+      <div>Releasing central tension hands your opponent a free centre.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="h-skeleton"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Why is a pawn move the most dangerous kind of move in chess?</div><div class="tap">tap to reveal</div>
+      <div class="a">It's the only move that can never be undone (apart from a capture). And every pawn advance leaves behind squares that pawn can never guard again. Each one creates a weakness. Strong players move pawns rarely, and only with a purpose.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 2 ============================ -->
+<section class="lesson" id="outpost" style="--c:var(--guard)">
+  <div class="wrap">
+    <div class="kick">Principle 02 · read the terrain</div>
+    <h3>Outposts</h3>
+    <div class="metaphor">An embassy on enemy soil. It can't be evicted.</div>
+    <div class="story">
+      <p>An embassy sits in a foreign capital, and the host country's police can't walk in. It watches everything around it, and the only way to get rid of it is a full diplomatic trade.</p>
+      <p>An outpost is a square in the enemy's half that no enemy <b>pawn</b> can ever attack. A piece standing there (usually a knight) can only be removed by trading a piece for it. Until then it stares into the enemy camp, all game long.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Pawns capture only diagonally forward. Once the enemy pawns on the neighbouring files are gone, or have advanced past a square, that square is <b>weak forever</b>. Holes are the price of pawn moves, and your pieces should collect that price.</p></div>
+    <div class="tells">
+      <div>A square in front of an enemy pawn whose neighbouring pawns are gone or advanced.</div>
+      <div>A knight route to that square (knights love the 5th and 6th ranks).</div>
+      <div>The enemy piece that could trade off your outpost piece. Remove that one first.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="h-outpost"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Why are outposts mostly for knights, not bishops or rooks?</div><div class="tap">tap to reveal</div>
+      <div class="a">A knight is short-range: it must stand close to the action to matter, and it needs a stable square because it can be chased easily. Bishops and rooks work from far away along lines, so they don't need to stand in the enemy's half. A knight on a protected 6th-rank square hits eight squares in the enemy camp.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 3 ============================ -->
+<section class="lesson" id="fit" style="--c:var(--linec)">
+  <div class="wrap">
+    <div class="kick">Principle 03 · fit the army</div>
+    <h3>Pieces must fit the pawns</h3>
+    <div class="metaphor">A sports car on a mountain trail is a bad car.</div>
+    <div class="story">
+      <p>A Ferrari is a wonderful car on a highway. On a rocky mountain path, a rusty jeep beats it. The car didn't change. The road did.</p>
+      <p>Bishops and knights are "worth three pawns" only on paper. A bishop whose own pawns stand on its colour is a Ferrari stuck behind a wall: a <b>bad bishop</b>. A knight with no outposts and pawns on both wings is a jeep on a racetrack. Their real value is set by the pawns around them.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>A piece's strength is the number of useful squares it controls, and the pawns decide those squares. Put your pawns on the <b>opposite colour</b> from your bishop. Keep the minor piece that fits the structure (bishops for open boards with pawns on both wings, knights for closed boards with outposts), even if it means giving up the prettier one.</p></div>
+    <div class="tells">
+      <div>Count your pawns on your bishop's colour. Many pawns there means it's a bad bishop.</div>
+      <div>Pawns on both wings and an open board favour the bishop.</div>
+      <div>A locked centre with holes favours the knight.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="h-fit"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Your only bishop moves on light squares. Where should your pawns stand?</div><div class="tap">tap to reveal</div>
+      <div class="a">On <b>dark</b> squares. Then they don't block your bishop, and between them the pawns and the bishop control both colours. Pawns on the bishop's colour do the bishop's job twice and leave the other colour full of holes.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 4 ============================ -->
+<section class="lesson" id="files" style="--c:var(--linec)">
+  <div class="wrap">
+    <div class="kick">Principle 04 · fit the army</div>
+    <h3>Open files and the 7th rank</h3>
+    <div class="metaphor">Heavy artillery needs roads.</div>
+    <div class="story">
+      <p>Artillery is the strongest unit in an army, and it's useless in a forest. It needs roads to reach the front.</p>
+      <p>Rooks are the artillery of chess: powerful, long-range, unable to jump. Behind closed pawns they are spectators. An <b>open file</b> (no pawns on it) is a road into the enemy camp, and the destination is the <b>7th rank</b>, where the enemy pawns started. There they can't protect each other, and the king is trapped behind them.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>A rook's power is the length of its open lines. Take the open file first, double on it so the opponent can't contest it, then use it as a road to the 7th rank. Two rooks on the 7th ("pigs on the seventh") usually decide the game.</p></div>
+    <div class="tells">
+      <div>A file with no pawns, or with only an enemy pawn on it (a half-open file).</div>
+      <div>An entry square on the file that the enemy can't cover.</div>
+      <div>Enemy pawns still sitting on their starting rank.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="h-files"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Why is the 7th rank so special?</div><div class="tap">tap to reveal</div>
+      <div class="a">The enemy pawns that haven't moved are on it, and a rook attacks them from the <b>side</b>, where no pawn can defend another. And the enemy king on the back rank is cut off: it can't step forward. One rook there attacks pawns and imprisons the king at the same time.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 5 ============================ -->
+<section class="lesson" id="worst" style="--c:var(--linec)">
+  <div class="wrap">
+    <div class="kick">Principle 05 · fit the army</div>
+    <h3>Improve your worst piece</h3>
+    <div class="metaphor">A team plays as well as its weakest player.</div>
+    <div class="story">
+      <p>A football team with ten brilliant players and one who stands in the wrong place loses the ball through that one player, every time. A smart coach doesn't add another star. He fixes the weak link.</p>
+      <p>When there's nothing to calculate (no threats, no tactics), most players drift. Strong players ask one question: <b>which of my pieces is doing the least?</b> Then they give it a job, even if getting there takes four moves.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Your position is a chain, and it breaks at its weakest link. In quiet positions, time is cheap. The opponent can't punish slow moves through a locked centre, so spend that time on long manoeuvres that bring a sleeping piece into the game. The king counts too, especially once the queens are gone.</p></div>
+    <div class="tells">
+      <div>A piece with no targets and no good squares.</div>
+      <div>A piece blocked behind its own pawns.</div>
+      <div>A king still hiding when the queens are off the board.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="h-worst"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Which piece is often the worst in the middlegame and the best in the endgame?</div><div class="tap">tap to reveal</div>
+      <div class="a">The <b>king</b>. While queens are on the board it must hide. Once they're gone it becomes a strong fighting piece that can walk to the centre. Fischer's king walk against Petrosian is in the case files.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 6 ============================ -->
+<section class="lesson" id="proph" style="--c:var(--clock)">
+  <div class="wrap">
+    <div class="kick">Principle 06 · out-think the plan</div>
+    <h3>Prophylaxis</h3>
+    <div class="metaphor">The best goalkeeper never has to dive.</div>
+    <div class="story">
+      <p>Average goalkeepers make spectacular saves. Great goalkeepers are standing in the right spot before the shot, so the striker doesn't even shoot. Their saves look boring because they happened earlier.</p>
+      <p><i>Prophylaxis</i> means "preventive medicine". Before you pursue your own plan, ask what your opponent wants to do next, and quietly make it impossible. An opponent without a plan slowly runs out of good moves.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Every move changes what's possible for <b>both</b> players, so a move that kills the opponent's best idea is often worth more than one that improves your own. Nimzowitsch taught a sequence: <b>restrain</b> the enemy pawn break, <b>blockade</b> it, then <b>destroy</b>.</p></div>
+    <div class="tells">
+      <div>The opponent has one freeing pawn break. Clamp it.</div>
+      <div>There's an enemy piece manoeuvre you can see coming. Take its target square.</div>
+      <div>Your plan would win easily if only his counterplay didn't exist.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="h-proph"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">What's the one question to ask before every move in a quiet position?</div><div class="tap">tap to reveal</div>
+      <div class="a"><b>"If it were his move, what would he play?"</b> If the answer is strong, deal with it first. If it's harmless, go ahead with your own plan. It takes five seconds and it's the habit that separates strong players from tactical ones.</div></div>
+  </div>
+</section>
+
+<!-- ============================ 7 ============================ -->
+<section class="lesson" id="two" style="--c:var(--clock)">
+  <div class="wrap">
+    <div class="kick">Principle 07 · out-think the plan</div>
+    <h3>The principle of two weaknesses</h3>
+    <div class="metaphor">One fire can be fought. Fires on two floors can't.</div>
+    <div class="story">
+      <p>A fire crew can put out a fire on the ground floor. But when a second fire starts on the tenth floor, the crew has to choose, and the stairs between the floors take time.</p>
+      <p>A single weakness in chess can almost always be defended: the defender just parks pieces next to it. So the attacker <b>creates a second weakness far away</b>. The defender's pieces have to run back and forth across the board, and at some point they don't arrive in time.</p>
+    </div>
+    <div class="principle"><div class="lbl">First principle</div><p>Defence is about <b>moving defenders</b>, and moving takes time. Fix the first weakness so it ties down enemy pieces, then open a second front on the other wing. Soviet coaches attached a companion rule: <i>don't hurry</i>. Improve everything before you open the second front, because a tied-down opponent can't punish you for being slow.</p></div>
+    <div class="tells">
+      <div>Enemy pieces glued to defending one target.</div>
+      <div>A pawn break available on the <b>other</b> wing.</div>
+      <div>A locked centre that slows the defender's pieces when they try to switch sides.</div>
+    </div>
+  </div>
+  <div class="wide"><div data-hero="h-two"></div></div>
+  <div class="wrap">
+    <div class="twist"><div class="q">Why should the second weakness be far away from the first?</div><div class="tap">tap to reveal</div>
+      <div class="a">Because the defender's problem is <b>distance</b>. Two weaknesses next to each other can be guarded by the same pieces. Two weaknesses on opposite wings force the defender to split his army or keep running, and a locked centre makes the run even longer.</div></div>
+    <p class="openloop">You now know all seven. Positional chess is about seeing them without anyone pointing.</p>
+  </div>
+</section>
+
+<!-- ============================ CASE FILES ============================ -->
+<section class="block" id="cases-sec" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">CASE FILES · HOW THE STORIES END</div>
+      <h2>Name the principle, then watch it pay off.</h2>
+      <p>Shuffled and unlabelled. Several of these are the endings of the games above. Guess the principle first, then step through.</p>
+    </div>
+  </div>
+  <div class="wide" id="cases">
+    <div class="toolbar"><button class="btn small ghost" id="caseShuffle" type="button">🔀 Shuffle cases</button><button class="btn small" id="caseNext" type="button">Next case ▶</button></div>
+    <div class="deck" id="caseDeck"></div>
+    <div id="caseViewer"></div>
+  </div>
+</section>
+
+<!-- ============================ ARENA ============================ -->
+<section class="block" id="arena-sec" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">THE ARENA · CHOOSE THE PLAN</div>
+      <h2>Three candidates. One follows the principle.</h2>
+      <p>In positional chess the best move rarely wins on the spot, so here you choose. For every puzzle, Stockfish confirmed that the principled move beats the other two by a clear margin. Wrong picks tell you why they're wrong.</p>
+    </div>
+  </div>
+  <div class="wide">
+    <div class="scoreline" id="arenaScore"></div>
+    <div class="toolbar"><button class="btn small ghost" id="arenaShuffle" type="button">🔀 Shuffle</button><button class="btn small ghost" id="arenaReset" type="button">Reset progress</button></div>
+    <div class="deck" id="arenaDeck"></div>
+    <div class="viewer" id="arena">
+      <div><div class="vb" id="arenaBoard"></div></div>
+      <div class="vt">
+        <div class="title" id="arenaTitle"></div>
+        <div class="src" id="arenaSrc"></div>
+        <div class="task" id="arenaTask"></div>
+        <div class="choices" id="arenaChoices"></div>
+        <div class="status" id="arenaStatus"></div>
+        <div class="ctrls">
+          <button id="arenaHint" type="button">💡 Hint</button>
+          <button id="arenaSolve" type="button">Show solution</button>
+          <button id="arenaRetry" type="button">↺ Retry</button>
+          <button id="arenaNext" class="main" type="button">Next puzzle ▶</button>
+        </div>
+        <div class="narr" id="arenaLog" style="min-height:0"></div>
+        <div class="why" id="arenaWhy"><div class="lbl">Why it worked</div><div id="arenaWhyT"></div></div>
+        <div id="arenaName"></div>
+      </div>
+    </div>
+    <div class="pagenav"><a class="btn ghost" href="london.html">♙ The London: the story</a><a class="btn ghost" href="./">⚔️ Tactics: the story</a><a class="btn ghost" href="../">← Field Notes</a></div>
+  </div>
+</section>
+
+<footer>
+  Every game is replayed move by move through a rules engine, and every arena choice was checked with Stockfish 16 (evaluations are approximate).<br>
+  Pieces: "cburnett" set by Colin M.L. Burnett, CC BY-SA 3.0, via lichess.org. · <a href="./">Tactics page</a> · <a href="../">Field Notes</a>
+</footer>
+
+<script src="board.js"></script>
+<script src="mg-data.js"></script>
+<script src="app.js"></script>
+<script src="../core/fable.js" defer></script>
+</body>
+</html>

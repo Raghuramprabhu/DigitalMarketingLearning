@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" data-fb-world="music" data-fb-mode="journey" data-fb-key="piano/learn/2-1-major.html" data-fb-root="../../" data-fb-title="One scale, three names" data-fb-split="main.wrap">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.1 The major scale = Bilawal = Shankarabharanam · Music: the story · Fable</title>
+  <meta name="description" content="Half and whole steps, the major-scale pattern, tetrachords (purvang and uttarang), scale degrees in solfège, sargam and Carnatic codes, transposition, and a build-it-yourself drill.">
+  <script>try{localStorage.setItem("fable-theme","dark");localStorage.setItem("fable-calm-theme","dark")}catch(e){}document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("fb-boot");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="learn.css">
+  <style>
+    .sa-pick { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; }
+    .sa-pick button { padding: 6px 0; border-radius: 8px; border: 1px solid var(--line2); background: var(--card2); color: var(--ink); font: 700 13px var(--font-body); cursor: pointer; }
+    .sa-pick button.on { background: var(--east); border-color: var(--east); color: #1a0f08; }
+    @media (max-width: 560px) { .sa-pick { grid-template-columns: repeat(6, 1fr); } }
+    .pattern { font: 700 clamp(18px, 3.4vw, 26px) var(--font-mono); letter-spacing: .12em; }
+    .pattern .h { color: var(--east); } .pattern .wv { color: var(--west); }
+    .k.ok.w, .k.ok.b { background: linear-gradient(hsl(130,55%,70%), hsl(130,50%,58%)) !important; }
+    .k.bad { animation: shake .3s; }
+    @keyframes shake { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+  </style>
+  <link rel="stylesheet" href="../../core/fable.css">
+</head>
+<body data-lesson="2-1">
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="./">← <span class="hide-sm">Syllabus</span></a>
+    <a class="logo" href="./">Music<span>: the story</span></a>
+    <span class="grow"></span>
+    <select class="pill" id="instrPick" aria-label="Instrument for examples">
+      <option value="piano">🎹 Piano</option><option value="harmonium">🪗 Harmonium</option><option value="epiano">✨ E-piano</option><option value="strings">🎻 Strings</option>
+    </select>
+    <button class="pill" id="themebtn" type="button">☀️ Light</button>
+  </div>
+  <div class="readbar"></div>
+</header>
+
+<main class="wrap">
+  <section class="l-hero">
+    <span class="eyebrow">Level 2 · Lesson 1 · The first scale</span>
+    <h1>One scale, three names:<br><em>major · Bilawal · Shankarabharanam</em></h1>
+    <p class="lede">The most-used scale on Earth is a <i>recipe</i>: a pattern of big and small steps. Learn the pattern and you can build it from any key, in any tradition.</p>
+    <div class="goals"><h4>By the end you'll be able to</h4><ul>
+      <li>Tell a half step from a whole step on the keyboard and by ear.</li>
+      <li>Build the major scale from any starting note using W-W-H-W-W-W-H.</li>
+      <li>Name its notes as scale degrees, in solfège, Hindustani sargam and Carnatic codes.</li>
+      <li>Explain why the same tune can start on any key (transposition), and why sargam makes that effortless.</li>
+    </ul></div>
+  </section>
+
+  <div class="story">
+    <p>Play only the white keys from C to C. You've just played the <b>major scale</b>. In Hindustani music it's <b>Bilawal</b>, and when <b>Vishnu Narayan Bhatkhande</b> organised Hindustani ragas into ten families (<i>thaats</i>) in the early 1900s, he made Bilawal the reference: its notes are the <b>shuddha</b> ("pure") swaras. In Carnatic music it's the 29th melakarta, <b>Dheerasankarabharanam</b>, usually just called <b>Shankarabharanam</b>, "the ornament of Shiva".</p>
+    <p>Here's the twist: the white keys are only "natural" because the piano was <i>designed around</i> this scale. Start on D and play only white keys, and you get a different scale. So the scale isn't really "the white keys". It's the <b>pattern of gaps</b> between them.</p>
+  </div>
+
+  <h2>1 · The two sizes of step</h2>
+  <p>On a keyboard, the smallest step is from one key to the very next key, black or white: a <b>half step</b> (semitone). Two half steps make a <b>whole step</b> (tone). Look at the white keys: most have a black key between them (whole steps), but <b>E–F</b> and <b>B–C</b> touch directly (half steps).</p>
+  <div class="widget">
+    <h4>📏 Measure any step</h4>
+    <p class="cap" style="margin-top:0">Click one key, then another. <span class="readout" id="stepRead">Click a first key…</span></p>
+    <div class="kbd" id="stepKbd" data-from="C4" data-to="C5" data-labels="letters"></div>
+  </div>
+
+  <h2>2 · The recipe: W W H W W W H</h2>
+  <p>Walk from C to C on the white keys and write down each gap: <b>whole, whole, half, whole, whole, whole, half</b>. That's the major scale. Any start note + this pattern = a major scale.</p>
+  <p class="pattern"><span class="wv">W W</span> <span class="h">H</span> <span class="wv">W W W</span> <span class="h">H</span></p>
+  <div class="widget">
+    <h4>🏗 Build it from any key</h4>
+    <div class="sa-pick" id="buildPick"></div>
+    <div class="kbd tall tagged" id="buildKbd" data-from="C4" data-to="C6" data-labels="both" data-sa="C4"></div>
+    <div class="row">
+      <button type="button" class="btn" id="buildGo">▶ Build &amp; play the major scale</button>
+      <button type="button" class="btn ghost" id="whiteGo">▶ White keys only from here</button>
+    </div>
+    <p class="cap" id="buildCap">Choose a start note above. Try D or G, then compare "white keys only". Hear how wrong it sounds when the pattern breaks?</p>
+  </div>
+
+  <details class="recall"><summary>Build the major scale on G in your head, using W W H W W W H. Which note needs a black key?</summary><div>G A B C D E <b>F♯</b> G. The 7th step must be a whole step above E, so F becomes F♯. That's why the key of G major has one sharp. (Check it with the builder above.)</div></details>
+
+  <h2>3 · Two matching halves</h2>
+  <p>Split the scale in the middle and something neat appears: <b>S R G M</b> and <b>P D N Ṡ</b> have the <b>same shape</b>, W-W-H, joined by one whole step (M → P).</p>
+  <div class="duo">
+    <div class="w"><h4>Western</h4><p>Each 4-note half is a <b>tetrachord</b> (from Greek, "four strings"). The major scale = two identical major tetrachords, a whole step apart.</p></div>
+    <div class="e"><h4>Hindustani</h4><p>The lower half (Sa to Ma/Pa) is the <b>purvang</b>, and the upper half (Pa to taar Sa) is the <b>uttarang</b>. Ragas are often described as "purvang-pradhan" or "uttarang-pradhan", depending on which half they live in.</p></div>
+  </div>
+  <div class="row">
+    <button type="button" class="play" data-kbd="tetraKbd" data-seq="C4 D4 E4 F4:2" data-bpm="120">▶ Lower half S R G M</button>
+    <button type="button" class="play" data-kbd="tetraKbd" data-seq="G4 A4 B4 C5:2" data-bpm="120">▶ Upper half P D N Ṡ</button>
+  </div>
+  <div class="kbd" id="tetraKbd" data-from="C4" data-to="C5" data-labels="both" data-sa="C4" data-mark="C4 D4 E4 F4 G4 A4 B4 C5"></div>
+
+  <h2>4 · Seven jobs, many names</h2>
+  <p>Each note of the scale has a <b>job</b>, and each tradition has names for those jobs:</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>#</th><th>Western degree</th><th>Solfège</th><th>Hindustani</th><th>Carnatic (Shankarabharanam)</th><th>In C</th></tr>
+    <tr><td>1</td><td>Tonic: home</td><td>Do</td><td>Sa</td><td>S</td><td>C</td></tr>
+    <tr><td>2</td><td>Supertonic</td><td>Re</td><td>Re</td><td>R2</td><td>D</td></tr>
+    <tr><td>3</td><td>Mediant</td><td>Mi</td><td>Ga</td><td>G3</td><td>E</td></tr>
+    <tr><td>4</td><td>Subdominant</td><td>Fa</td><td>Ma</td><td>M1</td><td>F</td></tr>
+    <tr><td>5</td><td>Dominant: the pillar</td><td>Sol</td><td>Pa</td><td>P</td><td>G</td></tr>
+    <tr><td>6</td><td>Submediant</td><td>La</td><td>Dha</td><td>D2</td><td>A</td></tr>
+    <tr><td>7</td><td>Leading tone: leans home</td><td>Ti</td><td>Ni</td><td>N3</td><td>B</td></tr>
+  </table></div>
+  <p>Notice "leading tone": Ni sits a half step under Ṡa and <i>pulls</i> toward it. Play the scale and stop on Ni: you'll feel the itch to finish.</p>
+  <div class="row"><button type="button" class="play" data-kbd="tetraKbd" data-seq="C4 D4 E4 F4 G4 A4 B4:3" data-bpm="120">▶ Stop on Ni… (feel the itch?)</button>
+  <button type="button" class="play" data-kbd="tetraKbd" data-seq="C4 D4 E4 F4 G4 A4 B4 C5:3" data-bpm="120">▶ …and resolve</button></div>
+
+  <div class="meet"><h4>A surprise in the history</h4><p>Bilawal hasn't always been India's "pure" scale. In older Indian theory, the basic scale (the <i>shadja grama</i>) was closer to what we'd now call <b>Kafi</b> (Kharaharapriya: komal Ga and komal Ni). Bhatkhande's choice of Bilawal as the modern reference brought Hindustani terminology closer to the Western major scale. Carnatic teaching, meanwhile, starts beginners on <b>Mayamalavagowla</b> (as you heard in Lesson 1.3), not Shankarabharanam.</p></div>
+
+  <h2>5 · Same tune, any Sa</h2>
+  <p>Here's a tune everyone knows (the French melody behind "Twinkle Twinkle", from 1761): <span class="mono">S S P P D D P – | M M G G R R S –</span>. Because it's written in sargam, it doesn't say which key to play. Pick a Sa and it just works. That's <b>transposition</b>: moving a whole tune up or down while keeping its shape.</p>
+  <div class="widget">
+    <h4>🔁 Transpose it</h4>
+    <div class="sa-pick" id="twPick"></div>
+    <div class="kbd" id="twKbd" data-from="F3" data-to="F5" data-labels="both" data-sa="C4"></div>
+    <div class="row"><button type="button" class="play" data-kbd="twKbd" data-relsa="C4" data-seq="C4 C4 G4 G4 A4 A4 G4:2 F4 F4 E4 E4 D4 D4 C4:2" data-bpm="132">▶ Play from this Sa</button></div>
+    <p class="cap" id="twCap">Letters change with every Sa. The sargam stays S S P P D D P. That's why Indian musicians learn songs in sargam.</p>
+  </div>
+
+  <h2>6 · Check yourself</h2>
+  <div class="quiz" data-key="q1">
+    <p class="q">Which pairs of white keys are only a half step apart?</p>
+    <div class="opts"><button class="opt" data-correct>E–F and B–C</button><button class="opt">C–D and F–G</button><button class="opt">A–B and D–E</button><button class="opt">None: all white keys are a whole step apart</button></div>
+    <p class="why">There's no black key between E and F, or between B and C. Those two half steps are exactly where the scale's "H"s fall when you start on C.</p>
+  </div>
+  <div class="quiz" data-key="q2">
+    <p class="q">The major scale on D is…</p>
+    <div class="opts"><button class="opt" data-correct>D E F♯ G A B C♯ D</button><button class="opt">D E F G A B C D</button><button class="opt">D E F♯ G A B C D</button><button class="opt">D E♭ F G A B♭ C D</button></div>
+    <p class="why">W W H W W W H from D: D→E (W) →F♯ (W) →G (H) →A (W) →B (W) →C♯ (W) →D (H). The white-keys-only version (D E F G A B C D) is a different scale: Dorian, i.e. Kafi / Kharaharapriya. You'll meet it in Level 5.</p>
+  </div>
+  <div class="quiz" data-key="q3">
+    <p class="q">In Carnatic codes, Shankarabharanam is:</p>
+    <div class="opts"><button class="opt" data-correct>S R2 G3 M1 P D2 N3</button><button class="opt">S R1 G3 M1 P D1 N3</button><button class="opt">S R2 G2 M1 P D2 N2</button><button class="opt">S R2 G3 M2 P D2 N3</button></div>
+    <p class="why">R1 G3 … D1 N3 is Mayamalavagowla. G2 and N2 give Kharaharapriya. M2 (tivra Ma) gives Mechakalyani (Kalyani), the Lydian mode, Hindustani Kalyan/Yaman.</p>
+  </div>
+  <div class="quiz" data-key="q4">
+    <p class="q">Why does the scale's 7th note (Ni / Ti) feel like it wants to move?</p>
+    <div class="opts"><button class="opt" data-correct>It's only a half step below the upper Sa, so the ear expects it to resolve upward to home</button><button class="opt">Because it's the loudest note</button><button class="opt">Because it's a black key</button><button class="opt">Because it's a fifth above Sa</button></div>
+    <p class="why">A half step is the smallest, most "magnetic" move. That pull is why Western theory calls it the <i>leading</i> tone. Ragas that use komal Ni lose that pull, which is part of their different mood.</p>
+  </div>
+
+  <h2>7 · Build it yourself</h2>
+  <p>Three rounds. Each gives you a starting note. Click the 8 notes of its major scale, in order, on the keyboard.</p>
+  <div class="widget">
+    <h4>🧩 Scale builder challenge</h4>
+    <p class="readout" id="chPrompt">Press Start.</p>
+    <div class="kbd" id="chKbd" data-from="C4" data-to="B5" data-labels="letters"></div>
+    <div class="row"><button type="button" class="btn" id="chStart">▶ Start</button><span class="dim" id="chFb" style="font-size:15px"></span></div>
+  </div>
+
+  <h2>8 · Ear test: is it major?</h2>
+  <p>You'll hear a scale going up. Either it's a clean major scale, or <b>one note has been bent</b> (made komal or tivra). Trust the itch.</p>
+  <div id="earMaj"></div>
+
+  <div class="takeaways">
+    <h3>Takeaways</h3>
+    <ul>
+      <li><b>Half step</b> = next key. <b>Whole step</b> = two half steps.</li>
+      <li><b>Major scale = W W H W W W H</b> from any note. = <b>Bilawal</b> (all shuddha swaras) = <b>Shankarabharanam</b> (S R2 G3 M1 P D2 N3, mela 29).</li>
+      <li>Two identical halves (tetrachords / purvang + uttarang), each W-W-H, joined by a whole step.</li>
+      <li>Degrees: tonic · supertonic · mediant · subdominant · dominant · submediant · leading tone = Sa Re Ga Ma Pa Dha Ni = Do Re Mi Fa Sol La Ti.</li>
+      <li>Sargam is built for <b>transposition</b>: the names describe relationships, so a tune is the same on any Sa.</li>
+    </ul>
+  </div>
+
+  <div class="l-end">
+    <a class="nav-next" href="1-3-rhythm.html">← 1.3 Beat, tala &amp; time signature</a>
+    <button class="done-btn" data-lesson="2-1">Mark this lesson complete</button>
+    <a class="nav-next" href="./">Back to the syllabus →</a>
+  </div>
+</main>
+
+<script src="../engine.js"></script>
+<script src="learn.js"></script>
+<script>
+(function () {
+  var LK = window.LK, PS = window.PS;
+  var MAJOR = [0, 2, 4, 5, 7, 9, 11, 12];
+
+  /* step measurer */
+  var first = null, sk = LK.kbd('stepKbd');
+  sk.on(function (m) {
+    if (first === null) { first = m; sk.mark([m]); document.getElementById('stepRead').textContent = LK.noteName(m) + '… now another key'; return; }
+    var d = Math.abs(m - first), word = d === 0 ? 'same key' : d === 1 ? 'a HALF step (semitone)' : d === 2 ? 'a WHOLE step (tone)' : d + ' half steps (= ' + (d / 2) + ' whole steps)';
+    document.getElementById('stepRead').textContent = LK.noteName(first) + ' → ' + LK.noteName(m) + ': ' + word;
+    sk.mark([first, m]); first = null;
+  });
+
+  /* pickers */
+  function picker(id, onPick) {
+    var el = document.getElementById(id);
+    LK.SHARPS.forEach(function (n, i) {
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = n; if (i === 0) b.className = 'on';
+      b.addEventListener('click', function () { LK.$$('#' + id + ' button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); onPick(i); });
+      el.appendChild(b);
+    });
+  }
+
+  /* builder */
+  var bk = LK.kbd('buildKbd'), bStart = 60;
+  picker('buildPick', function (i) { bStart = 60 + i; bk.setSa(bStart); bk.mark([]); LK.note(bStart, 0.6); });
+  function showScale(notes, steps) {
+    bk.setSa(bStart); bk.mark(notes); bk.clearTags();
+    for (var i = 1; i < notes.length; i++) { var d = notes[i] - notes[i - 1]; bk.tag(notes[i], d === 1 ? 'H' : d === 2 ? 'W' : d + '½'); }
+    LK.playSeq(notes.map(function (m) { return [m, 1]; }), { bpm: 130, kbd: bk });
+  }
+  document.getElementById('buildGo').addEventListener('click', function () {
+    var notes = MAJOR.map(function (x) { return bStart + x; });
+    showScale(notes);
+    document.getElementById('buildCap').innerHTML = '<b>' + LK.SHARPS[bStart % 12] + ' major</b>: ' + notes.map(function (m) { return LK.NAMES[m % 12]; }).join(' ') + '. The sargam row reads S R G M P D N Ṡ every time.';
+  });
+  document.getElementById('whiteGo').addEventListener('click', function () {
+    var notes = [], m = bStart; while (LK.IS_BLACK[m % 12]) m++;
+    var start = m; notes.push(m);
+    while (notes.length < 8) { m++; if (!LK.IS_BLACK[m % 12]) notes.push(m); }
+    bStart = start; showScale(notes);
+    var pat = []; for (var i = 1; i < 8; i++) pat.push(notes[i] - notes[i - 1] === 1 ? 'H' : 'W');
+    var ok = pat.join('') === 'WWHWWWH';
+    document.getElementById('buildCap').innerHTML = 'White keys from <b>' + LK.SHARPS[start % 12] + '</b>: pattern <b class="mono">' + pat.join(' ') + '</b>. ' + (ok ? 'That’s the major pattern, because you started on C.' : 'Not the major pattern, so it sounds different. This is one of the <b>modes</b> (Level 5).');
+  });
+
+  /* transposer */
+  var tk = LK.kbd('twKbd');
+  picker('twPick', function (i) {
+    var sa = 60 + i; if (sa > 66) sa -= 12; tk.setSa(sa);
+    var tune = [0, 0, 7, 7, 9, 9, 7, 5, 5, 4, 4, 2, 2, 0].map(function (x) { return LK.NAMES[(sa + x) % 12]; });
+    document.getElementById('twCap').innerHTML = 'Sa = <b>' + LK.SHARPS[i] + '</b>. In letters: <span class="mono">' + tune.slice(0, 7).join(' ') + ' | ' + tune.slice(7).join(' ') + '</span>. In sargam it’s still <span class="mono">S S P P D D P | M M G G R R S</span>.';
+  });
+
+  /* build challenge */
+  var ck = LK.kbd('chKbd'), round = 0, target = [], pos = 0, mistakes = 0;
+  function newRound() {
+    round++;
+    var start = 60 + LK.pick([0, 2, 4, 5, 7, 9, 1, 3, 6, 8, 10, 11]);
+    if (round === 1) start = 67; // G first: one sharp
+    target = MAJOR.map(function (x) { return start + x; }); pos = 0;
+    ck.mark([]); LK.$$('#chKbd .k.ok').forEach(function (k) { k.classList.remove('ok'); });
+    document.getElementById('chPrompt').innerHTML = 'Round ' + round + '/3: build <b>' + LK.SHARPS[start % 12] + ' major</b>, starting on ' + LK.noteName(start) + '.';
+    document.getElementById('chFb').textContent = 'Click ' + LK.noteName(start) + ' to begin.';
+  }
+  ck.on(function (m) {
+    if (!target.length) return;
+    if (m === target[pos]) {
+      var k = ck.keys[m]; if (k) k.classList.add('ok');
+      pos++;
+      if (pos === 8) {
+        LK.playSeq(target.map(function (x) { return [x, 1]; }), { bpm: 150 });
+        if (round >= 3) { document.getElementById('chFb').textContent = '🎉 All three built' + (mistakes ? ' (' + mistakes + ' slips along the way)' : ', no slips') + '.'; target = []; document.getElementById('chStart').textContent = '↻ Again'; }
+        else { document.getElementById('chFb').textContent = '✓ Perfect. Next one in a moment…'; setTimeout(newRound, 1600); }
+      } else document.getElementById('chFb').textContent = 'Good. Next is a ' + (target[pos] - target[pos - 1] === 1 ? 'half' : 'whole') + ' step… or work it out yourself.';
+    } else {
+      mistakes++;
+      var kk = ck.keys[m]; if (kk) { kk.classList.add('bad'); setTimeout(function () { kk.classList.remove('bad'); }, 300); }
+      var need = target[pos] - (pos ? target[pos - 1] : target[0]);
+      document.getElementById('chFb').textContent = pos === 0 ? 'Start on ' + LK.noteName(target[0]) + '.' : 'Not that one. Step ' + pos + ' of W W H W W W H is ' + (need === 1 ? 'a half step (H)' : 'a whole step (W)') + '.';
+    }
+  });
+  document.getElementById('chStart').addEventListener('click', function () { LK.ensureAudio(); round = 0; mistakes = 0; newRound(); });
+
+  /* ear test */
+  LK.game(document.getElementById('earMaj'), {
+    title: 'Major or bent?', rounds: 8, intro: 'Eight scales. About half have one note bent.',
+    make: function () {
+      var sa = 55 + Math.floor(Math.random() * 10), bent = Math.random() < 0.55, notes = MAJOR.slice(), which = '';
+      if (bent) {
+        var opt = LK.pick([[2, -1, 'komal Ga (G2)'], [6, -1, 'komal Ni (N2)'], [3, 1, 'tivra Ma (M2)'], [5, -1, 'komal Dha (D1)'], [1, -1, 'komal Re (R1)']]);
+        notes[opt[0]] += opt[1]; which = opt[2];
+      }
+      var seq = notes.map(function (x) { return [sa + x, 1]; });
+      return {
+        prompt: 'Up the scale:',
+        play: function () { LK.playSeq(seq, { bpm: 150 }); },
+        options: [{ label: '✓ Clean major scale', value: false }, { label: '✗ One note is bent', value: true }],
+        answer: bent,
+        explain: bent ? 'The bent note was <b>' + which + '</b>.' : 'All shuddha: Bilawal / Shankarabharanam.'
+      };
+    }
+  });
+})();
+</script>
+<script src="../../core/fable.js" defer></script>
+</body>
+</html>
