@@ -1,6 +1,349 @@
 {
- "updated": "2026-11-15T17:21:19+00:00",
+ "updated": "2026-11-16T02:20:16+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try answering before you peek. Pulling an answer out of memory strengthens it more than re-reading does.",
+   "q": "1) Which Tamil word gave English 'catamaran'? 2) What did Apollo 12's crew bring back from Surveyor 3? 3) What does Math.clamp throw on?",
+   "a": "1) Kattumaram, 'tied wood'. 2) Parts including its TV camera. 3) When min is greater than max.",
+   "edition": "2026-11-16-am",
+   "order": 29,
+   "id": "2026-11-16-am-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Leonid night",
+   "body": "Somewhere above the neem tree\ndust from an old comet is arriving,\nfine as rangoli powder,\nlighting itself once and gone.\nYou don't have to catch them all.\nOne is plenty.\nMake a small wish, the kind\nthat fits in a pocket.",
+   "edition": "2026-11-16-am",
+   "order": 28,
+   "id": "2026-11-16-am-028"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask the agent where it's unsure",
+   "body": "At the end of a task, add one line to your prompt: 'List anything you assumed or weren't sure about.' Agents often make reasonable guesses silently. Getting them written down turns hidden guesses into a short checklist you can review in a minute.",
+   "hook": "Wonder: which of your own assumptions today would you want written down?",
+   "edition": "2026-11-16-am",
+   "order": 27,
+   "id": "2026-11-16-am-027"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Venus is the planets' only goddess",
+   "body": "Of the eight planets, Venus is the only one named after a female figure from mythology, the Roman goddess of love. Mercury, Mars, Jupiter, Saturn, Uranus and Neptune are named for male gods, and Earth's name comes from old English and Germanic words for the ground. Venus's surface features make up for it: almost all are named after women.",
+   "hook": "Wonder: if you could name a crater on Venus, who would it honour?",
+   "edition": "2026-11-16-am",
+   "order": 26,
+   "id": "2026-11-16-am-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Whoever says it",
+   "body": "Whatever is said, and whoever says it, wisdom looks past the speaker to the truth of the words.",
+   "who": "Thirukkural 423 (own rendering)",
+   "edition": "2026-11-16-am",
+   "order": 25,
+   "id": "2026-11-16-am-025"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Outposts: a home your knight can keep",
+   "body": "An outpost is a square in your opponent's half that no enemy pawn can ever attack, ideally backed by one of your own pawns. A knight planted there is very hard to remove; it can only be traded off by a minor piece. When you look at a position, ask: which squares can the opponent's pawns no longer guard?",
+   "q": "What makes a square an outpost?",
+   "a": "No enemy pawn can attack it, and ideally your own pawn supports it.",
+   "edition": "2026-11-16-am",
+   "order": 24,
+   "id": "2026-11-16-am-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "India's first digital computer arrived in Kolkata",
+   "body": "In 1956 the Indian Statistical Institute in Kolkata installed an HEC-2M, a British-made machine, usually counted as the first digital computer in India. The ISI, founded by P. C. Mahalanobis, needed it for heavy statistical work, and it became a training ground for some of India's earliest programmers.",
+   "hook": "Wonder: what problem would you have queued up for India's only computer in 1956?",
+   "edition": "2026-11-16-am",
+   "order": 23,
+   "id": "2026-11-16-am-023"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Mahamaham, the festival on Jupiter's clock",
+   "body": "At Kumbakonam, the Mahamaham festival is held about once every twelve years, when Jupiter enters the sign of Leo (Simha). Pilgrims gather to bathe in the Mahamaham tank, surrounded by small shrines. Because Jupiter takes close to twelve years to circle the Sun, an ancient festival calendar is quietly keeping time with a planet. The last one was in 2016.",
+   "q": "Roughly how often is the Mahamaham festival held, and why?",
+   "a": "About every 12 years, when Jupiter enters Leo (Simha).",
+   "edition": "2026-11-16-am",
+   "order": 22,
+   "id": "2026-11-16-am-022"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let an object carry the feeling",
+   "body": "Instead of telling us a character is lonely, show what they do with an object: setting two cups out by habit, then putting one back. Readers trust what they notice more than what they're told. Pick one small thing in the scene and let it quietly hold the emotion.",
+   "hook": "Wonder: what object in your room would tell a stranger how your week is going?",
+   "edition": "2026-11-16-am",
+   "order": 21,
+   "id": "2026-11-16-am-021"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Apollo 12 landed next to an old friend",
+   "body": "Apollo 12 launched on 14 November 1969 and touched down five days later in the Ocean of Storms, close enough to the robotic Surveyor 3 lander (there since 1967) for Pete Conrad and Alan Bean to walk over to it. They brought pieces of Surveyor home, including its TV camera, so engineers could study how materials had fared after two and a half years on the Moon. It was a showcase of pinpoint landing.",
+   "q": "Which earlier spacecraft did Apollo 12's astronauts visit on the Moon?",
+   "a": "Surveyor 3, which had landed in 1967.",
+   "source": {
+    "name": "NASA APOD, 14 Nov 2026",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-14-apollo-12-and-surveyor-3/"
+   },
+   "edition": "2026-11-16-am",
+   "order": 20,
+   "id": "2026-11-16-am-020"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Building agents in Java with Bedrock and Spring AI",
+   "body": "A new AWS blog post walks Java developers through building autonomous agents with Amazon Bedrock and Spring AI. It covers the parts that matter in production: tool calling, memory, resilience and coordinating several agents together. Handy if you'd like to try agents without leaving the Spring world.",
+   "q": "Which Java framework does the AWS guide pair with Bedrock?",
+   "a": "Spring AI.",
+   "source": {
+    "name": "AI Agents Directory, News Brief 12 Nov 2026",
+    "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-12-2026"
+   },
+   "edition": "2026-11-16-am",
+   "order": 19,
+   "id": "2026-11-16-am-019"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Make Monday's first task tiny",
+   "body": "The start of a week can feel like a cliff. Choose a first task so small it's almost silly: open the document, reply to one message, fill one water bottle. Finishing something in the first ten minutes sets the tone, and momentum is easier to keep than to find.",
+   "hook": "Wonder: what's the smallest real thing you could finish in the next ten minutes?",
+   "edition": "2026-11-16-am",
+   "order": 18,
+   "id": "2026-11-16-am-018"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Incubation: step away from the puzzle",
+   "body": "Stuck on a problem? A break can help. A 2009 meta-analysis by Ut Na Sio and Thomas Ormerod found an 'incubation effect': setting a problem aside often improved later solutions, especially for creative problems and when the break was filled with a light, undemanding activity. Work on it properly first, then walk away and let it sit.",
+   "q": "According to the incubation research, what kind of break helps most?",
+   "a": "One filled with a light, undemanding activity, after real work on the problem first.",
+   "edition": "2026-11-16-am",
+   "order": 17,
+   "id": "2026-11-16-am-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Cheetahs purr, but can't roar",
+   "body": "Big cats split roughly into roarers and purrers. Lions, tigers, leopards and jaguars can roar; cheetahs can't, but they purr steadily, much like a house cat, and also make high bird-like chirps to call to each other.",
+   "q": "What sound do cheetahs make instead of roaring?",
+   "a": "They purr, and they chirp.",
+   "edition": "2026-11-16-am",
+   "order": 16,
+   "id": "2026-11-16-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Read-your-writes consistency",
+   "body": "You update your profile photo, refresh, and see the old one. Infuriating, even if the system is 'eventually consistent'. Read-your-writes is the small promise that fixes it: a user always sees their own latest changes. Common ways to keep it: route that user's reads to the leader for a short while after a write, or attach the write's version to their session and only read from replicas that have caught up to it.",
+   "hook": "Wonder: where in your system could a user be surprised by their own old data?",
+   "edition": "2026-11-16-am",
+   "order": 15,
+   "id": "2026-11-16-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Pavithra R V is a world amateur champion",
+   "body": "The FIDE World Amateur Championships finished in Klang, Malaysia, with six titles across rating bands. India's Pavithra R V won the Women's Under-2300 section unbeaten, on 7.5 out of 9. The highest score of the event belonged to Mongolia's Javkhlan Bayarjargal, who won the Open Under-1700 with 8.5/9.",
+   "q": "Which section did Pavithra R V win in Klang?",
+   "a": "Women's Under-2300, unbeaten on 7.5/9.",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/six-world-amateur-chess-champions-crowned-in-klang-malaysia/"
+   },
+   "edition": "2026-11-16-am",
+   "order": 14,
+   "id": "2026-11-16-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The key cutter's spare",
+   "body": "The key cutter under the banyan tree made two copies for every customer and gave back only one. People assumed he forgot. When old Mrs. Iyer locked herself out on a rainy night, he walked over with an umbrella, found her key on the board behind his stool, and opened her door without a word. 'Everyone loses one key in their life,' he said, handing it over. 'I just keep it until then.'",
+   "edition": "2026-11-16-am",
+   "order": 13,
+   "id": "2026-11-16-am-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Euclid shares its first big data release",
+   "body": "ESA's Euclid space telescope has released its first large batch of survey data. Euclid is building a 3D map of the Universe, using a 600-megapixel visible-light camera alongside an infrared instrument, to learn how dark matter and dark energy have shaped the cosmos. This release is an early stepping stone toward that full map.",
+   "hook": "Wonder: how do you map the third dimension of the sky, when every galaxy looks flat?",
+   "source": {
+    "name": "Universe Today",
+    "url": "https://www.universetoday.com/articles/euclids-first-data-release-a-stepping-stone-to-its-3d-map-of-the-sky"
+   },
+   "edition": "2026-11-16-am",
+   "order": 12,
+   "id": "2026-11-16-am-012"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Salesforce opens up a speech-to-text model",
+   "body": "Salesforce has released SOV-Transcribe-1 with open weights under the Apache 2.0 licence. It's a non-streaming transcription model covering seven languages, and you can steer it with plain-language instructions, for example formatting preferences or hints about unusual vocabulary. Organisations can run it on their own machines. The benchmark figures so far are Salesforce's own.",
+   "q": "Under what licence is SOV-Transcribe-1 released?",
+   "a": "Apache 2.0, with open weights.",
+   "source": {
+    "name": "Sam on AI, AI Brief, 14 Nov 2026",
+    "url": "https://samonai.substack.com/p/ai-brief-november-14-2026"
+   },
+   "edition": "2026-11-16-am",
+   "order": 11,
+   "id": "2026-11-16-am-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "By degrees",
+   "body": "How poor are they that have not patience! What wound did ever heal but by degrees?",
+   "who": "William Shakespeare, Othello",
+   "edition": "2026-11-16-am",
+   "order": 10,
+   "id": "2026-11-16-am-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Zuse's Z3, built from relays",
+   "body": "In 1941 in Berlin, Konrad Zuse completed the Z3, widely regarded as the first working programmable, fully automatic digital computer. It used about 2,600 telephone relays, worked in binary and even used floating-point numbers. Programs were read from punched film. A faithful reconstruction can be seen today at the Deutsches Museum in Munich.",
+   "q": "What switching parts did the Z3 use?",
+   "a": "Electromechanical telephone relays, about 2,600 of them.",
+   "edition": "2026-11-16-am",
+   "order": 9,
+   "id": "2026-11-16-am-009"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Curiosity opens the memory door",
+   "body": "In a 2014 study by Matthias Gruber, Bernard Gelman and Charan Ranganath, people rated how curious they were about trivia questions. They remembered answers to the questions they were curious about better, and even remembered unrelated faces shown while they waited for those answers. A good question before a lesson isn't decoration; it prepares the ground.",
+   "hook": "Wonder: what question could you ask yourself before you start today's reading?",
+   "edition": "2026-11-16-am",
+   "order": 8,
+   "id": "2026-11-16-am-008"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Catamaran' is a Tamil word",
+   "body": "The English word 'catamaran' comes from the Tamil kattumaram, roughly 'tied wood': a raft of logs lashed together, still used by fishers along the Coromandel coast. English borrowed it in the 1600s, and today it also names sleek twin-hulled sailing boats.",
+   "hook": "Wonder: what other everyday English words started in Tamil?",
+   "edition": "2026-11-16-am",
+   "order": 7,
+   "id": "2026-11-16-am-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Thambiran Vanakkam, 1578",
+   "body": "Thambiran Vanakkam, a short Tamil Christian prayer book printed in Kollam (Quilon) in 1578, is generally counted as the first book printed in an Indian language. Its Tamil letters were cut as metal type by Portuguese Jesuits, with Henrique Henriques among those behind it. A small book, and the start of a long story for Tamil in print.",
+   "q": "In which script was the first book printed in an Indian language set?",
+   "a": "Tamil, in Thambiran Vanakkam (Kollam, 1578).",
+   "edition": "2026-11-16-am",
+   "order": 6,
+   "id": "2026-11-16-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 21: Math.clamp",
+   "body": "Keeping a number inside a range used to mean Math.max(min, Math.min(max, value)), which is easy to get backwards. Since Java 21 you can write Math.clamp(value, 0, 100). There are overloads for int, long, float and double, and it throws if min is greater than max, so a swapped range gets caught instead of quietly misbehaving.",
+   "q": "What does Math.clamp(150, 0, 100) return?",
+   "a": "100. Values above the range are pulled down to max.",
+   "edition": "2026-11-16-am",
+   "order": 5,
+   "id": "2026-11-16-am-005"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Guess, then time it",
+   "body": "Before a small task, write your guess for how long it'll take. Then time it. No judging, just two numbers side by side. After a week you'll know your personal multiplier (many people find their guesses run short), and planning gets kinder because it's built on what actually happens.",
+   "hook": "Wonder: which everyday task do you most often underestimate?",
+   "edition": "2026-11-16-am",
+   "order": 4,
+   "id": "2026-11-16-am-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Total Chess: the final four are set",
+   "body": "The group stage of the Total Chess World Championship Tour pilot in Budapest has finished. The group winners are Alireza Firouzja, Fabiano Caruana, Anish Giri and Maxime Vachier-Lagrave. The semifinals pair Vachier-Lagrave with Giri and Caruana with Firouzja. In Group D, Vaishali Rameshbabu's last-round win over Arjun Erigaisi helped settle first place for MVL. The knockout stage begins on Tuesday, 17 November.",
+   "q": "Who are the four Total Chess semifinalists?",
+   "a": "Firouzja, Caruana, Giri and Vachier-Lagrave.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/2026-total-chess-world-championship-tour-pilot-day-6"
+   },
+   "edition": "2026-11-16-am",
+   "order": 3,
+   "id": "2026-11-16-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Monday, the gate latch",
+   "body": "The gate latch clicks the week open.\nA neighbour's broom says good morning to the road,\nthe milk van hums its one tune,\nand the sky, not yet decided,\nkeeps a little grey for later.\nNo hurry. The day has only just\nput its shoes on.",
+   "edition": "2026-11-16-am",
+   "order": 2,
+   "id": "2026-11-16-am-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "LOFAR's deepest look at the low-frequency radio sky",
+   "body": "An international team led by Leiden University has used the Low Frequency Array (LOFAR), a network of radio antennas spread across Europe, to make what it describes as the sharpest and most sensitive image yet of the sky at low radio frequencies. At these long wavelengths, the sky shows things visible light can't: the radio glow of distant galaxies and the jets streaming from their black holes.",
+   "q": "Which radio telescope network made the new deepest low-frequency sky image?",
+   "a": "LOFAR, the Low Frequency Array, in a Leiden-led study.",
+   "source": {
+    "name": "Universe Today",
+    "url": "https://www.universetoday.com/articles/lofar-takes-the-deepest-image-of-the-low-frequency-radio-sky-to-date"
+   },
+   "edition": "2026-11-16-am",
+   "order": 1,
+   "id": "2026-11-16-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Folio: agent summaries that keep a way back to the evidence",
+   "body": "A new preprint describes Folio, a way for long-running agents to shrink old history without losing the trail. Alongside short model-written notes, it keeps a manifest of runtime events and the captured source records, each with a stable handle, so the agent can reopen the exact detail later. On 75 LOCA-bench tasks it reported 66 successes, against 54 for plain model-written compaction on the same setup. The authors' test used one model and one benchmark, so it's an early result.",
+   "hook": "Wonder: when you summarise your own notes, do you keep a pointer back to the original?",
+   "source": {
+    "name": "Sam on AI, AI Brief, 14 Nov 2026",
+    "url": "https://samonai.substack.com/p/ai-brief-november-14-2026"
+   },
+   "edition": "2026-11-16-am",
+   "order": 0,
+   "id": "2026-11-16-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
