@@ -182,7 +182,9 @@
     // Stacked keyboard rows (the phone page uses 2 in portrait). Pages without data-rows stay at 1 row.
     rows: cv.dataset.rows ? store.get('rows', cv.dataset.rows) : '1',
     // Key-size zoom (phone page): white keys per row, remembered separately upright and sideways. 'auto' = use octaves.
-    zoom: { up: store.get('zoom-up', 'auto'), side: store.get('zoom-side', 'auto') }
+    zoom: { up: store.get('zoom-up', 'auto'), side: store.get('zoom-side', 'auto') },
+    // Black-key guard (on by default on the phone page): see hit() below
+    guard: store.get('guard', cv.dataset.guard || '0') === '1'
   };
   var ZOOM = !!cv.dataset.zoom, MIN_ZOOM = 5, MIN_KEY_PX = 22, START_KEY = ZOOM ? 'mstart' : 'startC';
   var LOWEST = 21, HIGHEST = 108; // A0 and C8, the ends of a real 88-key piano
@@ -513,12 +515,37 @@
     else { u = e.clientX - r.left; v = e.clientY - r.top; }
     return { x: u * L.W / w, y: v * L.H / h };
   }
+  // Touch hit-testing with the black-key guard. In the upper part of the keyboard (the height of the black keys):
+  //  - a touch just beside a black key counts as that black key (fingers are wider than the drawn key);
+  //  - a touch on a thin white strip right next to a black key plays nothing (it was almost surely aimed at a black key);
+  //  - whites still play in their lower part, and up top where no black key is near (the E–F and B–C seams).
+  var GUARD = { guard: true };
+  var NEAR_BLACK = 0.12, GUARD_ZONE = 0.36; // in white-key widths
+  function hit(x, y) {
+    var k = keyAt(x, y);
+    if (!view.guard || !L.rows.length) return k;
+    var ri = -1, R = null;
+    for (var i = 0; i < L.rows.length; i++) { if (y >= L.rows[i].kbTop && y < L.rows[i].bottom) { ri = i; R = L.rows[i]; break; } }
+    if (!R) return k;
+    if (y >= R.kbTop + R.kbH * 0.62) return k; // below the black keys: whites only
+    if (k && k.black) return k;
+    var best = null, bd = Infinity;
+    L.keys.forEach(function (b) {
+      if (!b.black || b.row !== ri) return;
+      var d = x < b.x ? b.x - x : x > b.x + b.w ? x - (b.x + b.w) : 0;
+      if (d < bd) { bd = d; best = b; }
+    });
+    if (best && bd <= R.ww * NEAR_BLACK) return best;
+    if (best && bd <= R.ww * GUARD_ZONE) return GUARD;
+    return k;
+  }
   function velFrom(k, y) { var f = Math.max(0, Math.min(1, (y - k.y) / k.h)); return 0.45 + f * 0.55; }
 
   cv.addEventListener('pointerdown', function (e) {
     e.preventDefault(); initAudio();
     try { cv.setPointerCapture(e.pointerId); } catch (x) { }
-    var p = pt(e), k = keyAt(p.x, p.y);
+    var p = pt(e), k = hit(p.x, p.y);
+    if (k === GUARD) return; // guarded strip: play nothing
     if (!k) { // the dark area above the keys: drag sideways to slide the keyboard (phone page)
       if (ZOOM && view.keyLayout !== 'full') drags.set(e.pointerId, { x0: p.x, start: view.startC, ww: L.ww });
       return;
@@ -535,7 +562,11 @@
       return;
     }
     if (!pointers.has(e.pointerId)) return;
-    var p = pt(e), k = keyAt(p.x, p.y), cur = pointers.get(e.pointerId);
+    var p = pt(e), k = hit(p.x, p.y), cur = pointers.get(e.pointerId);
+    if (k === GUARD) { // passing between black keys: never start a white here, and don't cut a note already sounding
+      if (cur !== null && L.byMidi[cur] && L.byMidi[cur].black) { noteOff(cur, 'p' + e.pointerId); pointers.set(e.pointerId, null); }
+      return;
+    }
     var nm = k ? k.m : null; if (nm === cur) return;
     if (cur !== null) noteOff(cur, 'p' + e.pointerId);
     pointers.set(e.pointerId, nm);
@@ -702,6 +733,11 @@
   sel.labels.addEventListener('change', function () { view.labels = this.value; store.set('labels', this.value); this.blur(); buildLayers(); });
   sel.volume.addEventListener('input', function () { settings.volume = parseFloat(this.value); store.set('volume', this.value); if (master) master.gain.setTargetAtTime(settings.volume, ac.currentTime, 0.02); });
   sel.reverb.addEventListener('change', function () { settings.reverb = this.checked; store.set('reverb', this.checked ? '1' : '0'); if (wet) wet.gain.setTargetAtTime(this.checked ? 0.28 : 0, ac.currentTime, 0.05); });
+  var guardBox = $('#blackGuard'); // only on pages that offer it
+  if (guardBox) {
+    guardBox.checked = view.guard;
+    guardBox.addEventListener('change', function () { view.guard = this.checked; store.set('guard', this.checked ? '1' : '0'); });
+  }
   var rowsSel = $('#rows'); // only on pages that offer stacked rows
   if (rowsSel) {
     rowsSel.value = view.rows;

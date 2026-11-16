@@ -54,7 +54,7 @@
 <!-- ===== the stage: this canvas is exactly what gets recorded ===== -->
 <main class="m-stage" id="studio">
   <div class="stage-wrap" id="stageWrap">
-    <canvas id="stage" data-rows="auto" data-kb-frac="0.62" data-spans="1,1.6,2,2.6" data-min-white="34" data-zoom="1" aria-label="Piano keyboard. Touch the keys to play; several fingers at once work."></canvas>
+    <canvas id="stage" data-rows="auto" data-kb-frac="0.62" data-spans="1,1.6,2,2.6" data-min-white="34" data-zoom="1" data-guard="1" aria-label="Piano keyboard. Touch the keys to play; several fingers at once work."></canvas>
     <div class="tap-to-start" id="tapToStart">Tap a key to wake the sound 🔊</div>
     <div class="m-recflag" aria-hidden="true"><i></i><span id="recFlagTime">REC</span></div>
     <div class="m-zoomflag" id="zoomFlag" aria-live="polite"></div>
@@ -114,6 +114,8 @@
           <option value="4">4</option>
           <option value="5">5</option>
         </select></label>
+      <label class="m-row m-check"><span>Black-key guard</span><input type="checkbox" id="blackGuard"></label>
+      <p class="m-note">Stops wrong white notes when playing fast between black keys. At black-key height, a touch just beside a black key plays that black key. A touch on the thin white strip squeezed between black keys plays nothing. Whites still play below the black keys, and at the top where E meets F and B meets C.</p>
       <label class="m-row"><span>Key names</span>
         <select id="labels">
           <option value="letters">C D E</option>
