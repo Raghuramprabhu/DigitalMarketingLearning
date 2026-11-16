@@ -150,3 +150,14 @@ body.m.land { grid-template-rows: auto auto minmax(0, 1fr); grid-template-areas:
 .m-map.off { opacity: .35; pointer-events: none; }
 .m .stops { gap: 7px; }
 .m .stop span { padding: 8px 13px; font-size: 14px; }
+
+/* ---------- Home Screen app: install hint + steps ---------- */
+.m-nudge { position: absolute; z-index: 5; left: 10px; right: 10px; top: 8px; max-width: 520px; margin: 0 auto; display: flex; align-items: center; gap: 8px;
+  background: var(--card); color: var(--ink); border: 1px solid var(--gold); border-radius: 14px; padding: 8px 8px 8px 12px; font-size: 14px; line-height: 1.35; box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+.m-nudge span { flex: 1; }
+.m-nudge .btn { padding: 7px 12px; font-size: 14px; }
+.m-x { background: none; border: 0; color: var(--dim); font-size: 16px; padding: 6px; cursor: pointer; }
+.m-steps { list-style: none; padding: 0; margin: 6px 0 4px; counter-reset: st; }
+.m-steps li { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.45; }
+.m-key { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; background: var(--card2); border: 1px solid var(--line2); font-size: 18px; color: var(--gold); }
+#installGroup .m-row .btn { flex: none; }

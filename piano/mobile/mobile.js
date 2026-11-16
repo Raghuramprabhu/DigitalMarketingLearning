@@ -24,11 +24,12 @@
   var settings = $('#settingsSheet'), takesSheet = $('#takesSheet');
   $('#openSettings').addEventListener('click', function () { openSheet(settings); });
   $('#openTakes').addEventListener('click', function () { openSheet(takesSheet); });
+  var installSheetEl = $('#installSheet');
   document.querySelectorAll('[data-close]').forEach(function (b) {
     b.addEventListener('click', function () { closeSheet(b.closest('.m-sheet')); });
   });
   window.addEventListener('keydown', function (e) {
-    if (e.code === 'Escape') { closeSheet(settings); closeSheet(takesSheet); }
+    if (e.code === 'Escape') { closeSheet(settings); closeSheet(takesSheet); closeSheet(installSheetEl); }
   });
   // the "hear it" demos play on the stage, so get the sheet out of the way
   document.querySelectorAll('[data-demo]').forEach(function (b) {
@@ -189,6 +190,44 @@
   /* ---------- no pinch-zoom while playing (double-tap zoom is off via touch-action in the CSS) ---------- */
   ['gesturestart', 'gesturechange'].forEach(function (t) { document.addEventListener(t, function (e) { e.preventDefault(); }); });
 
-  /* ---------- already installed to the Home Screen? hide the tip ---------- */
-  if (navigator.standalone || (window.matchMedia && matchMedia('(display-mode: standalone)').matches)) $('#a2hs').hidden = true;
+  /* ---------- Home Screen app ---------- */
+  // offline copy + updates (needs https, so not when opened as a local file)
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    navigator.serviceWorker.register('sw.js').catch(function () { });
+  }
+  var installed = navigator.standalone === true || (window.matchMedia && (matchMedia('(display-mode: standalone)').matches || matchMedia('(display-mode: fullscreen)').matches));
+  var ua = navigator.userAgent, isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var deferredPrompt = null, installSheet = $('#installSheet'), installBtn = $('#installBtn'), installState = $('#installState');
+  var nudge = $('#installNudge');
+  function syncInstall() {
+    if (installed) { installState.textContent = '✓ Running as a Home Screen app'; installBtn.hidden = true; nudge.hidden = true; return; }
+    installState.textContent = 'Not installed yet';
+    installBtn.textContent = deferredPrompt ? '📲 Install' : '📲 How to add';
+  }
+  function showSteps() {
+    $('#stepsIos').hidden = !isIOS && !!/Android/.test(ua);
+    $('#stepsAndroid').hidden = !$('#stepsIos').hidden;
+    closeSheet(settings); openSheet(installSheet);
+  }
+  function install() {
+    if (deferredPrompt) { // Android / desktop Chrome: the browser's own install dialog
+      var p = deferredPrompt; deferredPrompt = null;
+      p.prompt(); p.userChoice.then(syncInstall, syncInstall);
+    } else showSteps();
+  }
+  window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); deferredPrompt = e; syncInstall(); });
+  window.addEventListener('appinstalled', function () { installed = true; syncInstall(); });
+  installBtn.addEventListener('click', install);
+  syncInstall();
+  // a gentle, one-line hint on phones: shown on the first three visits, never again once dismissed or installed
+  (function () {
+    var coarse = window.matchMedia && matchMedia('(pointer: coarse)').matches, seen = 0, off = false;
+    try { seen = +(localStorage.getItem('piano-nudge-seen') || 0); off = localStorage.getItem('piano-nudge-off') === '1'; } catch (e) { }
+    if (installed || off || !coarse || seen >= 3) return;
+    try { localStorage.setItem('piano-nudge-seen', seen + 1); } catch (e) { }
+    setTimeout(function () { if (!installed) nudge.hidden = false; }, 3500);
+    setTimeout(function () { nudge.hidden = true; }, 17000);
+  })();
+  $('#nudgeHow').addEventListener('click', function () { nudge.hidden = true; install(); });
+  $('#nudgeX').addEventListener('click', function () { nudge.hidden = true; try { localStorage.setItem('piano-nudge-off', '1'); } catch (e) { } });
 })();

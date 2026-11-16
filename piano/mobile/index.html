@@ -13,6 +13,10 @@
   <meta name="format-detection" content="telephone=no">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <!-- launch screens shown while the Home Screen app opens (iPhone 16e and other 390×844 iPhones) -->
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="icons/launch-16e-portrait.png">
+  <link rel="apple-touch-startup-image" media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="icons/launch-16e-landscape.png">
   <script>(function(){var t=null;try{t=localStorage.getItem("dml-theme");}catch(e){}if(t!=="light"&&t!=="dark")t=(window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark";document.documentElement.setAttribute("data-theme",t);})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,6 +61,11 @@
     <div class="m-armflag" aria-hidden="true">Play a note to start recording</div>
   </div>
   <p class="rec-msg m-toast" id="recMsg" hidden></p>
+  <div class="m-nudge" id="installNudge" hidden>
+    <span>📲 Add <b>Piano</b> to your Home Screen for full-screen keys, offline too.</span>
+    <button type="button" class="btn small" id="nudgeHow">How</button>
+    <button type="button" class="m-x" id="nudgeX" aria-label="Don't show again">✕</button>
+  </div>
 </main>
 
 <!-- ===== dock: octave, pedal, record, takes ===== -->
@@ -187,8 +196,34 @@
         <a class="btn small ghost" href="../percussion/">🥁 Rhythm</a>
         <a class="btn small ghost" href="../">🖥 Full studio</a>
       </div>
-      <p class="m-note" id="a2hs">Tip: in Safari tap <b>Share → Add to Home Screen</b>. It then opens full-screen, without the address bar, so you get bigger keys.</p>
     </div>
+
+    <div class="m-group" id="installGroup">
+      <h4>Home Screen app</h4>
+      <div class="m-row"><span id="installState">Not installed yet</span><button type="button" class="btn small" id="installBtn">📲 Add to Home Screen</button></div>
+      <p class="m-note">As an app, Piano opens full-screen without the address bar (bigger keys), keeps your settings, and works with no internet.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ===== how to add to the Home Screen ===== -->
+<div class="m-sheet" id="installSheet" role="dialog" aria-modal="true" aria-labelledby="instTitle" hidden>
+  <div class="m-scrim" data-close></div>
+  <section class="m-panel">
+    <div class="m-grab"></div>
+    <header class="m-head"><h3 id="instTitle">Add Piano to your Home Screen</h3><button type="button" class="m-icon" data-close aria-label="Close">✕</button></header>
+    <ol class="m-steps" id="stepsIos">
+      <li><span class="m-key">⬆︎</span><div><b>Tap Share</b>, the square with an arrow pointing up. In Safari it is at the right end of the address bar, or under <b>•••</b> in the bottom bar.</div></li>
+      <li><span class="m-key">＋</span><div>Scroll down the list and tap <b>Add to Home Screen</b>. Not there? Tap <b>Edit Actions…</b> at the bottom and add it.</div></li>
+      <li><span class="m-key">✓</span><div>Keep <b>Open as Web App</b> switched on (newer iPhones show this), then tap <b>Add</b>.</div></li>
+      <li><span class="m-key">🎹</span><div>Open <b>Piano</b> from your Home Screen. It starts full-screen and works offline.</div></li>
+    </ol>
+    <ol class="m-steps" id="stepsAndroid" hidden>
+      <li><span class="m-key">⋮</span><div>Open the browser menu (<b>⋮</b> in Chrome).</div></li>
+      <li><span class="m-key">＋</span><div>Tap <b>Install app</b> or <b>Add to Home screen</b>, then <b>Install</b>.</div></li>
+      <li><span class="m-key">🎹</span><div>Open <b>Piano</b> from your Home Screen or app drawer.</div></li>
+    </ol>
+    <p class="m-note">Your takes (recordings) stay on the page you made them in. Share or save each one before closing the app.</p>
   </section>
 </div>
 
