@@ -183,8 +183,8 @@
     rows: cv.dataset.rows ? store.get('rows', cv.dataset.rows) : '1',
     // Key-size zoom (phone page): white keys per row, remembered separately upright and sideways. 'auto' = use octaves.
     zoom: { up: store.get('zoom-up', 'auto'), side: store.get('zoom-side', 'auto') },
-    // Black-key guard (on by default on the phone page): see hit() below
-    guard: store.get('guard', cv.dataset.guard || '0') === '1'
+    // Black-key guard: '0' off, '1' only the strips between black keys, '2' the whole top band (phone default). See hit().
+    guard: store.get('guard', cv.dataset.guard || '0')
   };
   var ZOOM = !!cv.dataset.zoom, MIN_ZOOM = 5, MIN_KEY_PX = 22, START_KEY = ZOOM ? 'mstart' : 'startC';
   var LOWEST = 21, HIGHEST = 108; // A0 and C8, the ends of a real 88-key piano
@@ -517,13 +517,15 @@
   }
   // Touch hit-testing with the black-key guard. In the upper part of the keyboard (the height of the black keys):
   //  - a touch just beside a black key counts as that black key (fingers are wider than the drawn key);
-  //  - a touch on a thin white strip right next to a black key plays nothing (it was almost surely aimed at a black key);
-  //  - whites still play in their lower part, and up top where no black key is near (the E–F and B–C seams).
+  //  - guard '1': a touch on a thin white strip right next to a black key plays nothing;
+  //    whites still start up top where no black key is near (the E–F and B–C seams);
+  //  - guard '2': no white key starts anywhere in the top band, seams included; whites start only from their lower part.
+  //  A white note already sounding is never cut when the finger drifts up (see pointermove).
   var GUARD = { guard: true };
   var NEAR_BLACK = 0.12, GUARD_ZONE = 0.36; // in white-key widths
   function hit(x, y) {
     var k = keyAt(x, y);
-    if (!view.guard || !L.rows.length) return k;
+    if (view.guard !== '1' && view.guard !== '2' || !L.rows.length) return k;
     var ri = -1, R = null;
     for (var i = 0; i < L.rows.length; i++) { if (y >= L.rows[i].kbTop && y < L.rows[i].bottom) { ri = i; R = L.rows[i]; break; } }
     if (!R) return k;
@@ -536,7 +538,7 @@
       if (d < bd) { bd = d; best = b; }
     });
     if (best && bd <= R.ww * NEAR_BLACK) return best;
-    if (best && bd <= R.ww * GUARD_ZONE) return GUARD;
+    if (view.guard === '2' || (best && bd <= R.ww * GUARD_ZONE)) return GUARD;
     return k;
   }
   function velFrom(k, y) { var f = Math.max(0, Math.min(1, (y - k.y) / k.h)); return 0.45 + f * 0.55; }
@@ -735,8 +737,9 @@
   sel.reverb.addEventListener('change', function () { settings.reverb = this.checked; store.set('reverb', this.checked ? '1' : '0'); if (wet) wet.gain.setTargetAtTime(this.checked ? 0.28 : 0, ac.currentTime, 0.05); });
   var guardBox = $('#blackGuard'); // only on pages that offer it
   if (guardBox) {
-    guardBox.checked = view.guard;
-    guardBox.addEventListener('change', function () { view.guard = this.checked; store.set('guard', this.checked ? '1' : '0'); });
+    guardBox.value = view.guard;
+    if (guardBox.value !== view.guard) { view.guard = guardBox.value = '2'; } // unknown saved value -> the phone default
+    guardBox.addEventListener('change', function () { view.guard = this.value; store.set('guard', this.value); this.blur(); });
   }
   var rowsSel = $('#rows'); // only on pages that offer stacked rows
   if (rowsSel) {
