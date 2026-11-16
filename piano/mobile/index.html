@@ -44,9 +44,10 @@
 <!-- ===== the stage: this canvas is exactly what gets recorded ===== -->
 <main class="m-stage" id="studio">
   <div class="stage-wrap" id="stageWrap">
-    <canvas id="stage" data-rows="auto" data-kb-frac="0.62" data-spans="1,1.6,2,2.6" data-min-white="34" aria-label="Piano keyboard. Touch the keys to play; several fingers at once work."></canvas>
+    <canvas id="stage" data-rows="auto" data-kb-frac="0.62" data-spans="1,1.6,2,2.6" data-min-white="34" data-zoom="1" aria-label="Piano keyboard. Touch the keys to play; several fingers at once work."></canvas>
     <div class="tap-to-start" id="tapToStart">Tap a key to wake the sound 🔊</div>
-    <div class="m-recflag" aria-hidden="true"><i></i><span>REC</span></div>
+    <div class="m-recflag" aria-hidden="true"><i></i><span id="recFlagTime">REC</span></div>
+    <div class="m-zoomflag" id="zoomFlag" aria-live="polite"></div>
     <div class="m-armflag" aria-hidden="true">Play a note to start recording</div>
   </div>
   <p class="rec-msg m-toast" id="recMsg" hidden></p>
@@ -58,6 +59,11 @@
     <button type="button" id="octDown" aria-label="Octave down">−</button>
     <b id="octLabel">C4</b>
     <button type="button" id="octUp" aria-label="Octave up">+</button>
+  </div>
+  <div class="seg m-zoom" role="group" aria-label="Key size">
+    <button type="button" id="zoomOut" aria-label="More keys, narrower">−</button>
+    <svg class="m-zico" viewBox="0 0 20 14" aria-hidden="true"><rect x="1" y="1" width="18" height="12" rx="2"/><path d="M7 1v12M13 1v12"/><rect x="5.5" y="1" width="3" height="7" class="b"/><rect x="11.5" y="1" width="3" height="7" class="b"/></svg>
+    <button type="button" id="zoomIn" aria-label="Fewer keys, wider">+</button>
   </div>
   <button type="button" class="pedal m-pedal" id="sustainBtn" aria-pressed="false" title="Tap to hold every note (sustain pedal)">🦶<span class="m-txt"> Sustain</span></button>
   <span class="m-grow"></span>
@@ -99,7 +105,8 @@
           <option value="sargam">Sa Re Ga</option>
           <option value="off">Off</option>
         </select></label>
-      <p class="m-note">Upright, the top row is one octave above the bottom row. Sideways, Auto gives one long keyboard of <b>2.6 octaves</b> (C to G, 19 white keys). Stacked rows use whole octaves. Press nearer the bottom of a key to play louder.</p>
+      <p class="m-note">Upright, the top row is one octave above the bottom row. Sideways, Auto gives one long keyboard of <b>2.6 octaves</b> (C to G, 19 white keys). Stacked rows use whole octaves.</p>
+      <p class="m-note"><b>Key size:</b> the <b>− ⌸ +</b> buttons in the dock. <b>+</b> gives fewer, wider keys; <b>−</b> gives more, narrower ones, one white key per tap. Upright and sideways each remember their own size. Picking an octave count above resets it. Press nearer the bottom of a key to play louder.</p>
       <p class="m-note">Rotation lock on? Tap <b>⟳</b> at the top to turn the page sideways anyway. Tap again to flip it the other way, and a third time to go back upright.</p>
     </div>
 

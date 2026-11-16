@@ -61,6 +61,21 @@
   new MutationObserver(syncRec).observe(recBtn, { attributes: true, attributeFilter: ['class'] });
   syncRec();
 
+  // running time inside the REC flag (the dock has no room for it)
+  var recTime = $('#recTime'), flagTime = $('#recFlagTime');
+  new MutationObserver(function () { flagTime.textContent = 'REC ' + recTime.textContent; })
+    .observe(recTime, { childList: true, characterData: true, subtree: true });
+
+  /* ---------- key size: show the new size for a moment ---------- */
+  var zf = $('#zoomFlag'), zfT;
+  $('#stage').addEventListener('keysize', function (e) {
+    var d = e.detail;
+    zf.innerHTML = d.fixed ? 'Key size is fixed in the<br>61-key typing layout'
+      : '<b>' + d.whites + ' white keys' + (d.rows > 1 ? ' × ' + d.rows + ' rows' : '') + '</b>' + d.from + ' – ' + d.to + ' · each ' + d.keyPx + ' px wide';
+    zf.classList.add('show'); clearTimeout(zfT);
+    zfT = setTimeout(function () { zf.classList.remove('show'); }, 1400);
+  });
+
   /* ---------- messages: tap to dismiss, fade on their own ---------- */
   var msg = $('#recMsg'), msgT;
   msg.addEventListener('click', function () { msg.hidden = true; });

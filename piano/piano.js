@@ -178,8 +178,11 @@
     keyLayout: store.get('keyLayout', 'rows'),
     hints: store.get('hints', (window.matchMedia && matchMedia('(pointer: coarse)').matches) ? '0' : '1') === '1',
     // Stacked keyboard rows (the phone page uses 2 in portrait). Pages without data-rows stay at 1 row.
-    rows: cv.dataset.rows ? store.get('rows', cv.dataset.rows) : '1'
+    rows: cv.dataset.rows ? store.get('rows', cv.dataset.rows) : '1',
+    // Key-size zoom (phone page): white keys per row, remembered separately upright and sideways. 'auto' = use octaves.
+    zoom: { up: store.get('zoom-up', 'auto'), side: store.get('zoom-side', 'auto') }
   };
+  var ZOOM = !!cv.dataset.zoom, MIN_ZOOM = 5, MIN_KEY_PX = 22;
   var KB_FRAC = parseFloat(cv.dataset.kbFrac) || 0.46; // share of each row's height given to the keys
   // Optional (phone page): spans that "Auto" may pick for a single row, e.g. 2.6 = C up to the G 2 octaves higher,
   // and the narrowest white key (CSS px) Auto will accept.
@@ -188,6 +191,7 @@
   function spanSemis(per) { var n = Math.round(per * 12); while (IS_BLACK[n % 12]) n++; return n; } // always end on a white key
   function whitesFor(per) { var n = spanSemis(per), w = 0; for (var i = 0; i <= n; i++) if (!IS_BLACK[i % 12]) w++; return w; }
   // The phone page can turn the whole page 90° (for iPhones with rotation lock on). The canvas then sits on its side.
+  function whiteAfter(m, k) { while (k > 0) { m++; if (!IS_BLACK[m % 12]) k--; } return m; } // k-th white key from white key m
   function rot() { return +(document.body.getAttribute('data-rot') || 0); }
   var L = { W: 0, H: 0, dpr: 1, keys: [], byMidi: {}, kbTop: 0, kbH: 0, ww: 0, lo: 48, hi: 84, rows: [] };
 
@@ -221,16 +225,38 @@
       W = Math.round(r.width * dpr / 2) * 2; H = Math.round(r.height * dpr / 2) * 2; // even dims for video encoders
       cv.width = W; cv.height = H;
     }
-    var nRows = rowsFor(r), per = octavesFor(r.width, nRows), oct = per * nRows;
-    var semis = nRows === 1 ? spanSemis(per) : 12 * oct;
-    view.startC = Math.max(12, Math.min(Math.floor((108 - semis) / 12) * 12, view.startC));
-    var lo = view.startC;
-    // One row: C up to a white key (C..C for whole octaves, C..G for x.6). Several rows: each row is C..B,
-    // and row 0 (the top one) holds the highest notes.
-    var hi = nRows === 1 ? lo + semis : lo + 12 * oct - 1;
+    var nRows = rowsFor(r), orient = r.width > r.height ? 'side' : 'up';
+    var zmax = Math.max(MIN_ZOOM, Math.min(Math.floor(r.width / MIN_KEY_PX), Math.floor(52 / nRows)));
+    var zw = ZOOM && view.keyLayout !== 'full' ? parseInt(view.zoom[orient], 10) : NaN;
+    var ranges = [], lo, hi; // [first midi, last midi] per row, top row first
+    if (zw > 0) {
+      // Zoomed: every row shows exactly zw white keys, and each row starts on the white key after the row below it.
+      zw = Math.max(MIN_ZOOM, Math.min(zmax, zw));
+      view.startC = Math.max(12, view.startC);
+      while (view.startC > 12 && whiteAfter(view.startC, zw * nRows - 1) > 108) view.startC -= 12;
+      lo = view.startC;
+      for (var b = 0; b < nRows; b++) {
+        var e = whiteAfter(lo, (b + 1) * zw - 1);
+        if (IS_BLACK[(e + 1) % 12]) e++; // the black key just past the right edge stays playable (half shown)
+        ranges.unshift([whiteAfter(lo, b * zw), e]);
+      }
+      hi = ranges[0][1];
+    } else {
+      var per = octavesFor(r.width, nRows), oct = per * nRows;
+      var semis = nRows === 1 ? spanSemis(per) : 12 * oct;
+      view.startC = Math.max(12, Math.min(Math.floor((108 - semis) / 12) * 12, view.startC));
+      lo = view.startC;
+      // One row: C up to a white key (C..C for whole octaves, C..G for x.6). Several rows: each row is C..B,
+      // and row 0 (the top one) holds the highest notes.
+      hi = nRows === 1 ? lo + semis : lo + 12 * oct - 1;
+      for (var q = 0; q < nRows; q++) {
+        var qlo = lo + 12 * per * (nRows - 1 - q);
+        ranges.push([qlo, nRows === 1 ? hi : qlo + 12 * per - 1]);
+      }
+    }
     var keys = [], byMidi = {}, rows = [];
     for (var ri = 0; ri < nRows; ri++) {
-      var rlo = lo + 12 * per * (nRows - 1 - ri), rhi = nRows === 1 ? hi : rlo + 12 * per - 1;
+      var rlo = ranges[ri][0], rhi = ranges[ri][1];
       var top = Math.round(H * ri / nRows), bottom = ri === nRows - 1 ? H : Math.round(H * (ri + 1) / nRows);
       var whites = 0, m; for (m = rlo; m <= rhi; m++) if (!IS_BLACK[m % 12]) whites++;
       var ww = W / whites;
@@ -245,11 +271,33 @@
         }
         k.y = kbTop; keys.push(k); byMidi[m] = k;
       }
-      rows.push({ top: top, bottom: bottom, kbTop: kbTop, kbH: kbH, ww: ww });
+      rows.push({ top: top, bottom: bottom, kbTop: kbTop, kbH: kbH, ww: ww, whites: whites });
     }
-    L = { W: W, H: H, dpr: dpr, keys: keys, byMidi: byMidi, kbTop: rows[0].kbTop, kbH: rows[0].kbH, ww: rows[0].ww, lo: lo, hi: hi, rows: rows };
+    L = { W: W, H: H, dpr: dpr, keys: keys, byMidi: byMidi, kbTop: rows[0].kbTop, kbH: rows[0].kbH, ww: rows[0].ww, lo: lo, hi: hi, rows: rows,
+      orient: orient, perRow: rows[nRows - 1].whites, zmax: zmax };
     $('#octLabel').textContent = noteName(lo);
+    syncZoomBtns();
     buildLayers();
+  }
+
+  /* --- key size (+ = fewer, wider keys; − = more, narrower keys) --- */
+  function syncZoomBtns() {
+    var zi = $('#zoomIn'), zo = $('#zoomOut'); if (!zi || !zo) return;
+    var fixed = view.keyLayout === 'full';
+    zi.disabled = fixed || L.perRow <= MIN_ZOOM;
+    zo.disabled = fixed || L.perRow >= L.zmax;
+  }
+  function zoomBy(d) {
+    if (!ZOOM || !L.W) return;
+    if (view.keyLayout !== 'full') {
+      var next = Math.max(MIN_ZOOM, Math.min(L.zmax, L.perRow + d));
+      view.zoom[L.orient] = String(next); store.set('zoom-' + L.orient, next);
+      layout(recorder.isLive()); rebuildKeyMap();
+    }
+    var lastWhite = L.hi; while (IS_BLACK[lastWhite % 12]) lastWhite--;
+    cv.dispatchEvent(new CustomEvent('keysize', { detail: {
+      whites: L.perRow, rows: L.rows.length, keyPx: Math.round(L.ww / L.dpr), from: noteName(L.lo), to: noteName(lastWhite), fixed: view.keyLayout === 'full'
+    } }));
   }
 
   function keyAt(x, y) {
@@ -542,6 +590,10 @@
     store.set('startC', view.startC); rebuildKeyMap();
   }
   $('#octDown').addEventListener('click', function () { shiftOct(-1); });
+  if ($('#zoomIn')) {
+    $('#zoomIn').addEventListener('click', function () { zoomBy(-1); });
+    $('#zoomOut').addEventListener('click', function () { zoomBy(1); });
+  }
   $('#octUp').addEventListener('click', function () { shiftOct(1); });
 
   var sel = {
@@ -570,6 +622,7 @@
   sel.instrument.addEventListener('change', function () { settings.instrument = this.value; store.set('instrument', this.value); this.blur(); });
   sel.octaves.addEventListener('change', function () {
     view.octSetting = this.value; store.set('octaves', this.value); this.blur();
+    if (ZOOM) { view.zoom = { up: 'auto', side: 'auto' }; store.set('zoom-up', 'auto'); store.set('zoom-side', 'auto'); } // octaves win
     layout(recorder.isLive()); rebuildKeyMap();
   });
   sel.labels.addEventListener('change', function () { view.labels = this.value; store.set('labels', this.value); this.blur(); buildLayers(); });
