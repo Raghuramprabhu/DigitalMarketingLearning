@@ -70,7 +70,8 @@
   var zf = $('#zoomFlag'), zfT;
   $('#stage').addEventListener('keysize', function (e) {
     var d = e.detail;
-    zf.innerHTML = d.fixed ? 'Key size is fixed in the<br>61-key typing layout'
+    zf.innerHTML = d.fixed ? 'Fixed in the 61-key<br>typing layout (⚙︎ → Bluetooth keyboard)'
+      : d.kind === 'pan' ? '<b>' + d.from + ' – ' + d.to + '</b>' + d.whites + ' white keys' + (d.rows > 1 ? ' × ' + d.rows + ' rows' : '')
       : '<b>' + d.whites + ' white keys' + (d.rows > 1 ? ' × ' + d.rows + ' rows' : '') + '</b>' + d.from + ' – ' + d.to + ' · each ' + d.keyPx + ' px wide';
     zf.classList.add('show'); clearTimeout(zfT);
     zfT = setTimeout(function () { zf.classList.remove('show'); }, 1400);

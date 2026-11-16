@@ -173,7 +173,8 @@
   var g2 = cv.getContext('2d', { alpha: false, desynchronized: true }) || cv.getContext('2d');
   var view = {
     octSetting: store.get('octaves', 'auto'),
-    startC: parseInt(store.get('startC', '48'), 10), // MIDI number of the leftmost C
+    // MIDI number of the leftmost key: always a C on the desktop page; any white key on the phone page (◀ ▶ slide it)
+    startC: parseInt(store.get(cv.dataset.zoom ? 'mstart' : 'startC', '48'), 10),
     labels: store.get('labels', 'letters'),
     keyLayout: store.get('keyLayout', 'rows'),
     hints: store.get('hints', (window.matchMedia && matchMedia('(pointer: coarse)').matches) ? '0' : '1') === '1',
@@ -182,7 +183,8 @@
     // Key-size zoom (phone page): white keys per row, remembered separately upright and sideways. 'auto' = use octaves.
     zoom: { up: store.get('zoom-up', 'auto'), side: store.get('zoom-side', 'auto') }
   };
-  var ZOOM = !!cv.dataset.zoom, MIN_ZOOM = 5, MIN_KEY_PX = 22;
+  var ZOOM = !!cv.dataset.zoom, MIN_ZOOM = 5, MIN_KEY_PX = 22, START_KEY = ZOOM ? 'mstart' : 'startC';
+  var LOWEST = 21, HIGHEST = 108; // A0 and C8, the ends of a real 88-key piano
   var KB_FRAC = parseFloat(cv.dataset.kbFrac) || 0.46; // share of each row's height given to the keys
   // Optional (phone page): spans that "Auto" may pick for a single row, e.g. 2.6 = C up to the G 2 octaves higher,
   // and the narrowest white key (CSS px) Auto will accept.
@@ -192,6 +194,7 @@
   function whitesFor(per) { var n = spanSemis(per), w = 0; for (var i = 0; i <= n; i++) if (!IS_BLACK[i % 12]) w++; return w; }
   // The phone page can turn the whole page 90° (for iPhones with rotation lock on). The canvas then sits on its side.
   function whiteAfter(m, k) { while (k > 0) { m++; if (!IS_BLACK[m % 12]) k--; } return m; } // k-th white key from white key m
+  function whiteBefore(m) { do { m--; } while (IS_BLACK[m % 12]); return m; }
   function rot() { return +(document.body.getAttribute('data-rot') || 0); }
   var L = { W: 0, H: 0, dpr: 1, keys: [], byMidi: {}, kbTop: 0, kbH: 0, ww: 0, lo: 48, hi: 84, rows: [] };
 
@@ -232,8 +235,9 @@
     if (zw > 0) {
       // Zoomed: every row shows exactly zw white keys, and each row starts on the white key after the row below it.
       zw = Math.max(MIN_ZOOM, Math.min(zmax, zw));
-      view.startC = Math.max(12, view.startC);
-      while (view.startC > 12 && whiteAfter(view.startC, zw * nRows - 1) > 108) view.startC -= 12;
+      if (IS_BLACK[view.startC % 12]) view.startC--;
+      view.startC = Math.max(LOWEST, view.startC);
+      while (view.startC > LOWEST && whiteAfter(view.startC, zw * nRows - 1) > HIGHEST) view.startC = whiteBefore(view.startC);
       lo = view.startC;
       for (var b = 0; b < nRows; b++) {
         var e = whiteAfter(lo, (b + 1) * zw - 1);
@@ -242,6 +246,7 @@
       }
       hi = ranges[0][1];
     } else {
+      view.startC = Math.floor(view.startC / 12) * 12; // octave views start on a C (no-op on the desktop page)
       var per = octavesFor(r.width, nRows), oct = per * nRows;
       var semis = nRows === 1 ? spanSemis(per) : 12 * oct;
       view.startC = Math.max(12, Math.min(Math.floor((108 - semis) / 12) * 12, view.startC));
@@ -286,6 +291,37 @@
     var fixed = view.keyLayout === 'full';
     zi.disabled = fixed || L.perRow <= MIN_ZOOM;
     zo.disabled = fixed || L.perRow >= L.zmax;
+    var pl = $('#panLeft'), pr = $('#panRight');
+    if (pl && pr) { pl.disabled = fixed || L.lo <= LOWEST; pr.disabled = fixed || lastWhiteKey() >= HIGHEST; }
+  }
+  function lastWhiteKey() { var m = L.hi; while (IS_BLACK[m % 12]) m--; return m; }
+  function announce(kind) {
+    cv.dispatchEvent(new CustomEvent('keysize', { detail: {
+      kind: kind, whites: L.perRow, rows: L.rows.length, keyPx: Math.round(L.ww / L.dpr), from: noteName(L.lo), to: noteName(lastWhiteKey()), fixed: view.keyLayout === 'full'
+    } }));
+  }
+  // ◀ ▶ : slide the keyboard one white key, keeping the key width
+  function panBy(d) {
+    if (!ZOOM || !L.W || view.keyLayout === 'full') { announce('pan'); return false; }
+    if (!(parseInt(view.zoom[L.orient], 10) > 0)) { view.zoom[L.orient] = String(L.perRow); store.set('zoom-' + L.orient, L.perRow); } // freeze today's width
+    var before = view.startC;
+    if (d > 0 && lastWhiteKey() < HIGHEST) view.startC = whiteAfter(view.startC, 1);
+    if (d < 0 && view.startC > LOWEST) view.startC = whiteBefore(view.startC);
+    if (view.startC === before) return false;
+    store.set(START_KEY, view.startC);
+    layout(recorder.isLive()); rebuildKeyMap(); announce('pan');
+    return true;
+  }
+  // tap = one key; hold = keep sliding, faster the longer you hold
+  function holdRepeat(btn, d) {
+    if (!btn) return;
+    var t = null, n = 0;
+    function stop() { clearTimeout(t); t = null; }
+    function step() { if (!panBy(d)) return stop(); n++; t = setTimeout(step, n < 4 ? 160 : n < 10 ? 100 : 60); }
+    btn.addEventListener('pointerdown', function (e) { e.preventDefault(); n = 0; panBy(d); t = setTimeout(step, 380); });
+    ['pointerup', 'pointerleave', 'pointercancel', 'lostpointercapture'].forEach(function (ev) { btn.addEventListener(ev, stop); });
+    btn.addEventListener('click', function (e) { if (e.detail === 0) panBy(d); }); // keyboard / screen reader activation
+    btn.addEventListener('contextmenu', function (e) { e.preventDefault(); });
   }
   function zoomBy(d) {
     if (!ZOOM || !L.W) return;
@@ -294,10 +330,7 @@
       view.zoom[L.orient] = String(next); store.set('zoom-' + L.orient, next);
       layout(recorder.isLive()); rebuildKeyMap();
     }
-    var lastWhite = L.hi; while (IS_BLACK[lastWhite % 12]) lastWhite--;
-    cv.dispatchEvent(new CustomEvent('keysize', { detail: {
-      whites: L.perRow, rows: L.rows.length, keyPx: Math.round(L.ww / L.dpr), from: noteName(L.lo), to: noteName(lastWhite), fixed: view.keyLayout === 'full'
-    } }));
+    announce('size');
   }
 
   function keyAt(x, y) {
@@ -527,9 +560,10 @@
       return;
     }
     var oct = (L.hi - L.lo) / 12;
-    var lowerBase = L.lo, upperBase = L.lo + 12;
-    if (oct >= 3) { lowerBase = L.lo + 12; upperBase = L.lo + 24; } // keep the two rows centred on wide keyboards
-    if (oct <= 1) { lowerBase = L.lo - 12; upperBase = L.lo; }        // 1-octave view: upper row = what you see
+    var c0 = Math.floor(L.lo / 12) * 12; // computer-key rows are piano-shaped, so anchor them on a C (= L.lo on the desktop page)
+    var lowerBase = c0, upperBase = c0 + 12;
+    if (oct >= 3) { lowerBase = c0 + 12; upperBase = c0 + 24; } // keep the two rows centred on wide keyboards
+    if (oct <= 1) { lowerBase = c0 - 12; upperBase = c0; }        // 1-octave view: upper row = what you see
     function add(list, base) {
       list.forEach(function (p) {
         var m = base + p[1]; codeMap[p[0]] = m;
@@ -587,14 +621,15 @@
   function shiftOct(dir) {
     view.startC += 12 * dir;
     layout(recorder.isLive());
-    store.set('startC', view.startC); rebuildKeyMap();
+    store.set(START_KEY, view.startC); rebuildKeyMap();
   }
-  $('#octDown').addEventListener('click', function () { shiftOct(-1); });
+  if ($('#octDown')) $('#octDown').addEventListener('click', function () { shiftOct(-1); });
+  holdRepeat($('#panLeft'), -1); holdRepeat($('#panRight'), 1);
   if ($('#zoomIn')) {
     $('#zoomIn').addEventListener('click', function () { zoomBy(-1); });
     $('#zoomOut').addEventListener('click', function () { zoomBy(1); });
   }
-  $('#octUp').addEventListener('click', function () { shiftOct(1); });
+  if ($('#octUp')) $('#octUp').addEventListener('click', function () { shiftOct(1); });
 
   var sel = {
     instrument: $('#instrument'), octaves: $('#octaves'), labels: $('#labels'),
@@ -615,7 +650,7 @@
     view.keyLayout = this.value; store.set('keyLayout', this.value); this.blur();
     if (this.value === 'full') view.startC = 36; // C2..C7, the standard 61-key range
     else view.startC = 48;
-    store.set('startC', view.startC);
+    store.set(START_KEY, view.startC);
     layout(recorder.isLive()); rebuildKeyMap(); showKeymapHelp();
   });
 

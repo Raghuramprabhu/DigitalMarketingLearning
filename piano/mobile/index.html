@@ -55,10 +55,10 @@
 
 <!-- ===== dock: octave, pedal, record, takes ===== -->
 <nav class="m-dock">
-  <div class="seg m-oct">
-    <button type="button" id="octDown" aria-label="Octave down">−</button>
+  <div class="seg m-oct" role="group" aria-label="Slide the keyboard">
+    <button type="button" id="panLeft" aria-label="Slide to lower notes (hold to keep sliding)">◀</button>
     <b id="octLabel">C4</b>
-    <button type="button" id="octUp" aria-label="Octave up">+</button>
+    <button type="button" id="panRight" aria-label="Slide to higher notes (hold to keep sliding)">▶</button>
   </div>
   <div class="seg m-zoom" role="group" aria-label="Key size">
     <button type="button" id="zoomOut" aria-label="More keys, narrower">−</button>
@@ -106,6 +106,7 @@
           <option value="off">Off</option>
         </select></label>
       <p class="m-note">Upright, the top row is one octave above the bottom row. Sideways, Auto gives one long keyboard of <b>2.6 octaves</b> (C to G, 19 white keys). Stacked rows use whole octaves.</p>
+      <p class="m-note"><b>Slide:</b> <b>◀ ▶</b> in the dock move the keyboard one white key lower or higher, keeping the key size; hold to keep sliding. The middle shows the leftmost key, e.g. <b>G3</b> for a song in Safed 5. A Bluetooth keyboard's ← → still jump a whole octave.</p>
       <p class="m-note"><b>Key size:</b> the <b>− ⌸ +</b> buttons in the dock. <b>+</b> gives fewer, wider keys; <b>−</b> gives more, narrower ones, one white key per tap. Upright and sideways each remember their own size. Picking an octave count above resets it. Press nearer the bottom of a key to play louder.</p>
       <p class="m-note">Rotation lock on? Tap <b>⟳</b> at the top to turn the page sideways anyway. Tap again to flip it the other way, and a third time to go back upright.</p>
     </div>
