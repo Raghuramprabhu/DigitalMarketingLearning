@@ -85,6 +85,38 @@
     else if (wantLock) grabLock();
   });
 
+  /* ---------- sideways: real rotation, or the ⟳ page turn when rotation lock is on ---------- */
+  var mq = window.matchMedia('(orientation: landscape) and (max-height: 520px)');
+  var turn = 0; try { turn = +(localStorage.getItem('piano-mturn') || 0); } catch (e) { }
+  var rotBtn = $('#rotBtn'), msgEl = $('#recMsg');
+  function sizeVars() {
+    document.documentElement.style.setProperty('--vw', window.innerWidth + 'px');
+    document.documentElement.style.setProperty('--vh', window.innerHeight + 'px');
+  }
+  function syncLand() {
+    var real = mq.matches, t = real ? 0 : turn; // phone really turned: no need to fake it
+    sizeVars();
+    if (t) body.setAttribute('data-rot', t); else body.removeAttribute('data-rot');
+    body.classList.toggle('rot90', t === 90);
+    body.classList.toggle('rot-90', t === -90);
+    body.classList.toggle('land', real || !!t);
+    body.classList.toggle('real-land', real);
+    rotBtn.setAttribute('aria-pressed', t ? 'true' : 'false');
+    window.dispatchEvent(new Event('resize')); // piano.js re-lays the keys
+  }
+  rotBtn.addEventListener('click', function () {
+    if (body.classList.contains('rec-live')) { msgEl.textContent = 'Stop the recording first, then turn the page.'; msgEl.hidden = false; return; }
+    turn = turn === 0 ? 90 : turn === 90 ? -90 : 0;
+    try { localStorage.setItem('piano-mturn', turn); } catch (e) { }
+    syncLand();
+    msgEl.textContent = turn === 90 ? 'Sideways: hold the phone with the notch on the left. Tap ⟳ again to flip.'
+      : turn === -90 ? 'Flipped: notch on the right. Tap ⟳ once more to go back upright.' : 'Back upright.';
+    msgEl.hidden = false;
+  });
+  if (mq.addEventListener) mq.addEventListener('change', syncLand); else if (mq.addListener) mq.addListener(syncLand);
+  window.addEventListener('resize', function (e) { if (e.isTrusted) sizeVars(); });
+  syncLand();
+
   /* ---------- rotation: iOS reports the new size a beat late ---------- */
   window.addEventListener('orientationchange', function () {
     setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 350);

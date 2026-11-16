@@ -181,6 +181,14 @@
     rows: cv.dataset.rows ? store.get('rows', cv.dataset.rows) : '1'
   };
   var KB_FRAC = parseFloat(cv.dataset.kbFrac) || 0.46; // share of each row's height given to the keys
+  // Optional (phone page): spans that "Auto" may pick for a single row, e.g. 2.6 = C up to the G 2 octaves higher,
+  // and the narrowest white key (CSS px) Auto will accept.
+  var SPANS = cv.dataset.spans ? cv.dataset.spans.split(',').map(parseFloat) : null;
+  var MIN_WHITE = parseFloat(cv.dataset.minWhite) || 50;
+  function spanSemis(per) { var n = Math.round(per * 12); while (IS_BLACK[n % 12]) n++; return n; } // always end on a white key
+  function whitesFor(per) { var n = spanSemis(per), w = 0; for (var i = 0; i <= n; i++) if (!IS_BLACK[i % 12]) w++; return w; }
+  // The phone page can turn the whole page 90° (for iPhones with rotation lock on). The canvas then sits on its side.
+  function rot() { return +(document.body.getAttribute('data-rot') || 0); }
   var L = { W: 0, H: 0, dpr: 1, keys: [], byMidi: {}, kbTop: 0, kbH: 0, ww: 0, lo: 48, hi: 84, rows: [] };
 
   function rowsFor(r) {
@@ -188,10 +196,15 @@
     if (view.rows === 'auto') return r.height > r.width ? 2 : 1;
     return view.rows === '2' ? 2 : 1;
   }
-  // octaves PER ROW
-  function octavesFor(cssW) {
-    if (view.octSetting !== 'auto') return parseInt(view.octSetting, 10);
+  // octaves PER ROW (stacked rows always use whole octaves)
+  function octavesFor(cssW, nRows) {
+    if (view.octSetting !== 'auto') { var v = parseFloat(view.octSetting) || 2; return nRows > 1 ? Math.max(1, Math.floor(v)) : v; }
     if (view.keyLayout === 'full') return 5; // all 61 keys the layout can reach
+    if (SPANS && nRows === 1) {
+      var best = SPANS[0];
+      SPANS.forEach(function (sp) { if (sp > best && cssW / whitesFor(sp) >= MIN_WHITE) best = sp; });
+      return best;
+    }
     return Math.max(1, Math.min(4, Math.floor(cssW / 50 / 7)));
   }
 
@@ -199,19 +212,22 @@
   // recording in progress never changes resolution.
   function layout(keepSize) {
     if (recorder.isLive() && !keepSize) return;
-    var r = cv.getBoundingClientRect();
-    if (!r.width) return;
+    var br = cv.getBoundingClientRect();
+    if (!br.width) return;
+    var r = rot() ? { width: br.height, height: br.width } : { width: br.width, height: br.height }; // size before any page turn
     var dpr = Math.min(2, window.devicePixelRatio || 1), W, H;
     if (keepSize && cv.width) { W = cv.width; H = cv.height; dpr = W / r.width; }
     else {
       W = Math.round(r.width * dpr / 2) * 2; H = Math.round(r.height * dpr / 2) * 2; // even dims for video encoders
       cv.width = W; cv.height = H;
     }
-    var nRows = rowsFor(r), per = octavesFor(r.width), oct = per * nRows;
-    view.startC = Math.max(12, Math.min(108 - 12 * oct, view.startC));
+    var nRows = rowsFor(r), per = octavesFor(r.width, nRows), oct = per * nRows;
+    var semis = nRows === 1 ? spanSemis(per) : 12 * oct;
+    view.startC = Math.max(12, Math.min(Math.floor((108 - semis) / 12) * 12, view.startC));
     var lo = view.startC;
-    // One row: C..C inclusive, as before. Several rows: each row is C..B, and row 0 (the top one) holds the highest notes.
-    var hi = nRows === 1 ? lo + 12 * per : lo + 12 * oct - 1;
+    // One row: C up to a white key (C..C for whole octaves, C..G for x.6). Several rows: each row is C..B,
+    // and row 0 (the top one) holds the highest notes.
+    var hi = nRows === 1 ? lo + semis : lo + 12 * oct - 1;
     var keys = [], byMidi = {}, rows = [];
     for (var ri = 0; ri < nRows; ri++) {
       var rlo = lo + 12 * per * (nRows - 1 - ri), rhi = nRows === 1 ? hi : rlo + 12 * per - 1;
@@ -398,7 +414,13 @@
 
   /* ---------------- 5a. pointer / touch ---------------- */
   var pointers = new Map(); // pointerId -> midi currently under it
-  function pt(e) { var r = cv.getBoundingClientRect(); return { x: (e.clientX - r.left) * L.W / r.width, y: (e.clientY - r.top) * L.H / r.height }; }
+  function pt(e) {
+    var r = cv.getBoundingClientRect(), a = rot(), u, v, w = r.width, h = r.height;
+    if (a === 90) { u = e.clientY - r.top; v = r.right - e.clientX; w = r.height; h = r.width; }        // page turned clockwise
+    else if (a === -90) { u = r.bottom - e.clientY; v = e.clientX - r.left; w = r.height; h = r.width; } // anticlockwise
+    else { u = e.clientX - r.left; v = e.clientY - r.top; }
+    return { x: u * L.W / w, y: v * L.H / h };
+  }
   function velFrom(k, y) { var f = Math.max(0, Math.min(1, (y - k.y) / k.h)); return 0.45 + f * 0.55; }
 
   cv.addEventListener('pointerdown', function (e) {
@@ -456,7 +478,7 @@
       buildLayers();
       return;
     }
-    var oct = Math.round((L.hi - L.lo) / 12);
+    var oct = (L.hi - L.lo) / 12;
     var lowerBase = L.lo, upperBase = L.lo + 12;
     if (oct >= 3) { lowerBase = L.lo + 12; upperBase = L.lo + 24; } // keep the two rows centred on wide keyboards
     if (oct <= 1) { lowerBase = L.lo - 12; upperBase = L.lo; }        // 1-octave view: upper row = what you see

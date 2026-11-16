@@ -37,13 +37,14 @@
       <option value="musicbox">🔔 Music box</option>
     </select>
   </label>
+  <button type="button" class="m-icon m-rot" id="rotBtn" aria-label="Turn the page sideways">⟳</button>
   <button type="button" class="m-icon" id="openSettings" aria-label="Settings">⚙︎</button>
 </header>
 
 <!-- ===== the stage: this canvas is exactly what gets recorded ===== -->
 <main class="m-stage" id="studio">
   <div class="stage-wrap" id="stageWrap">
-    <canvas id="stage" data-rows="auto" data-kb-frac="0.62" aria-label="Piano keyboard. Touch the keys to play; several fingers at once work."></canvas>
+    <canvas id="stage" data-rows="auto" data-kb-frac="0.62" data-spans="1,1.6,2,2.6" data-min-white="34" aria-label="Piano keyboard. Touch the keys to play; several fingers at once work."></canvas>
     <div class="tap-to-start" id="tapToStart">Tap a key to wake the sound 🔊</div>
     <div class="m-recflag" aria-hidden="true"><i></i><span>REC</span></div>
     <div class="m-armflag" aria-hidden="true">Play a note to start recording</div>
@@ -84,8 +85,11 @@
         <select id="octaves">
           <option value="auto">Auto</option>
           <option value="1">1</option>
+          <option value="1.6">1.6 (C–G)</option>
           <option value="2">2</option>
+          <option value="2.6">2.6 (C–G)</option>
           <option value="3">3</option>
+          <option value="3.6">3.6 (C–G)</option>
           <option value="4">4</option>
           <option value="5">5</option>
         </select></label>
@@ -95,7 +99,8 @@
           <option value="sargam">Sa Re Ga</option>
           <option value="off">Off</option>
         </select></label>
-      <p class="m-note">Upright, the top row is one octave above the bottom row. Turn the phone sideways for one long keyboard. Press nearer the bottom of a key to play louder.</p>
+      <p class="m-note">Upright, the top row is one octave above the bottom row. Sideways, Auto gives one long keyboard of <b>2.6 octaves</b> (C to G, 19 white keys). Stacked rows use whole octaves. Press nearer the bottom of a key to play louder.</p>
+      <p class="m-note">Rotation lock on? Tap <b>⟳</b> at the top to turn the page sideways anyway. Tap again to flip it the other way, and a third time to go back upright.</p>
     </div>
 
     <div class="m-group">
