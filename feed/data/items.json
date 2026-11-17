@@ -1,6 +1,347 @@
 {
- "updated": "2026-11-17T02:13:37+00:00",
+ "updated": "2026-11-17T17:20:41+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try answering before you peek. Pulling an answer out of memory strengthens it more than re-reading does.",
+   "q": "1) Which numbers did Lovelace's Note G compute? 2) How many years old was Aryabhata when he wrote the Aryabhatiya? 3) In the Lucena position, what do you build?",
+   "a": "1) Bernoulli numbers. 2) 23. 3) A bridge: the rook goes to the fourth rank to block checks.",
+   "edition": "2026-11-17-pm",
+   "order": 30,
+   "id": "2026-11-17-pm-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the neem tree",
+   "body": "The neem keeps a few leaves awake\nto talk to the streetlight.\nThe rest have folded into the dark,\nthe way a house goes quiet room by room.\nI leave the window open a hand's width:\nenough for the tree,\nenough for me.",
+   "edition": "2026-11-17-pm",
+   "order": 29,
+   "id": "2026-11-17-pm-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The panda's extra 'thumb'",
+   "body": "A giant panda can grip bamboo with what looks like a sixth finger. It isn't a true thumb: it's an enlarged wrist bone, the radial sesamoid, which acts like a thumb pad the panda presses bamboo against.",
+   "q": "What is a giant panda's 'thumb' really?",
+   "a": "An enlarged wrist bone, the radial sesamoid.",
+   "edition": "2026-11-17-pm",
+   "order": 28,
+   "id": "2026-11-17-pm-028"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "Learn thoroughly what is worth learning; and having learned it, live by it.",
+   "who": "Thirukkural 391 (own rendering)",
+   "hook": "Wonder: what did you learn this year that you're now living by?",
+   "edition": "2026-11-17-pm",
+   "order": 27,
+   "id": "2026-11-17-pm-027"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Tell the agent what 'done' looks like",
+   "body": "Agents stop either too early or never. Before you hand over a task, write two or three checks that mean it's finished: 'the tests pass', 'the page loads with no console errors', 'the summary is under 200 words'. The agent can then test its own work against them, and you can check the same list in a minute.",
+   "hook": "Wonder: what's the one check that would tell you a task is really done?",
+   "edition": "2026-11-17-pm",
+   "order": 26,
+   "id": "2026-11-17-pm-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "The Lewis chessmen",
+   "body": "In 1831, on the Isle of Lewis in Scotland's Outer Hebrides, a hoard of carved chess pieces turned up, most of them made from walrus ivory in the 12th century, probably in Norway. The rooks are warriors biting their shields, the queens rest their cheeks on their hands. Most are now in the British Museum, the rest in the National Museum of Scotland.",
+   "hook": "Wonder: what would your own carved chess set look like?",
+   "edition": "2026-11-17-pm",
+   "order": 25,
+   "id": "2026-11-17-pm-025"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Grace Hopper's nanoseconds",
+   "body": "Rear Admiral Grace Hopper liked to hand out pieces of wire about 30 cm (11.8 inches) long. Each was the distance light travels in a nanosecond, a billionth of a second. She used them to show why signals take time and why smaller, closer components make computers faster.",
+   "q": "Roughly how far does light travel in one nanosecond?",
+   "a": "About 30 cm (just under a foot).",
+   "edition": "2026-11-17-pm",
+   "order": 24,
+   "id": "2026-11-17-pm-024"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Request coalescing: one trip for many askers",
+   "body": "When a popular cache entry expires, hundreds of requests may miss at the same moment and all hit the database for the same row. Request coalescing (Go calls it 'singleflight') lets the first request do the fetch while the others wait for its result. In Java, a ConcurrentHashMap of in-flight CompletableFutures does the job: the first caller puts the future, the rest join it.",
+   "q": "What problem does request coalescing solve?",
+   "a": "Many simultaneous cache misses for the same key all hitting the backend; only one fetch is made and shared.",
+   "edition": "2026-11-17-pm",
+   "order": 23,
+   "id": "2026-11-17-pm-023"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Blue sunsets on Mars",
+   "body": "On Mars, the daytime sky is butterscotch, but sunsets glow blue around the Sun. Fine Martian dust scatters blue light forward, close to the direction of the light source, so the blue gathers around the setting Sun. NASA's Curiosity rover photographed one in 2015.",
+   "q": "What colour is the glow around the Sun at a Martian sunset?",
+   "a": "Blue.",
+   "edition": "2026-11-17-pm",
+   "order": 22,
+   "id": "2026-11-17-pm-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Stop where it's easy to start",
+   "body": "End a work session just before a clear, easy next step, not at a natural finish. Leave a sentence half-written or the next function named but empty, with a note: 'next: fill this in'. Tomorrow's start is then a small, obvious action instead of a blank page, and getting going is often the hardest part.",
+   "hook": "Wonder: where could you leave today's work slightly unfinished, on purpose?",
+   "edition": "2026-11-17-pm",
+   "order": 21,
+   "id": "2026-11-17-pm-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Aryabhata's book at twenty-three",
+   "body": "The astronomer Aryabhata wrote the Aryabhatiya in 499 CE, saying he was 23 years old. In compact Sanskrit verse it covers arithmetic, algebra, trigonometry and astronomy, gives pi as about 3.1416, and suggests that the stars' daily motion comes from Earth turning on its axis. India's first satellite, launched in 1975, was named after him.",
+   "q": "What did Aryabhata say causes the stars' daily motion?",
+   "a": "Earth spinning on its axis.",
+   "edition": "2026-11-17-pm",
+   "order": 20,
+   "id": "2026-11-17-pm-020"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Guess before you learn",
+   "body": "Trying to answer a question before you've studied the material, even getting it wrong, tends to help you remember the right answer once you see it. Researchers call this the pretesting effect (Richland, Kornell and Kao, 2009). The guess prepares a slot in memory for the answer to land in.",
+   "q": "What's the pretesting effect?",
+   "a": "Attempting questions before studying improves later memory of the answers, even if your guesses were wrong.",
+   "edition": "2026-11-17-pm",
+   "order": 19,
+   "id": "2026-11-17-pm-019"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Name the specific thing",
+   "body": "'Flowers' is a fog; 'jasmine, wilting on the gatepost' is a place. Specific nouns do the describing for you, so you need fewer adjectives. When a sentence feels flat, look for the general word and ask: which one, exactly? A kind of tree, a brand of biscuit, the name of the street.",
+   "hook": "Wonder: which general word in your last message could become a specific one?",
+   "edition": "2026-11-17-pm",
+   "order": 18,
+   "id": "2026-11-17-pm-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Bland previews a voice model that listens while it talks",
+   "body": "Bland AI has opened a research preview of Tofu-1, a full-duplex speech-to-speech model: it can listen and speak at the same time, with no text transcript in between. Because the audio isn't flattened into words, tone and background sound stay available to the model, which Bland pitches for calls over noisy or weak lines.",
+   "hook": "Wonder: what do we lose when speech becomes a transcript?",
+   "source": {
+    "name": "AI Weekly",
+    "url": "https://aiweekly.co/ai-news-today/edition/2026-11-16"
+   },
+   "edition": "2026-11-17-pm",
+   "order": 17,
+   "id": "2026-11-17-pm-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A teaspoon of neutron star",
+   "body": "A neutron star packs more than the Sun's mass into a ball about 20 km wide. Its matter is so dense that a teaspoonful would weigh billions of tonnes on Earth, more than every car on the planet put together.",
+   "hook": "Wonder: how big would Earth be squeezed to that density?",
+   "edition": "2026-11-17-pm",
+   "order": 16,
+   "id": "2026-11-17-pm-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 21: virtual threads",
+   "body": "Since Java 21 (JEP 444), Thread.ofVirtual() and Executors.newVirtualThreadPerTaskExecutor() give you threads that cost little more than an object. When a virtual thread blocks on I/O, the JVM parks it and frees the underlying carrier thread for others. So plain blocking code can handle many thousands of concurrent requests. Don't pool them; make a new one per task.",
+   "q": "Should you put virtual threads in a pool?",
+   "a": "No. They're cheap; create one per task.",
+   "edition": "2026-11-17-pm",
+   "order": 15,
+   "id": "2026-11-17-pm-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Lucena: build a bridge",
+   "body": "Rook and pawn against rook, with your pawn on the seventh and your king in front of it, often looks stuck: step out and the enemy rook checks you forever. The fix is the 'bridge'. Bring your rook to the fourth rank, step the king out, and when the checks come, block with your rook. The pawn then promotes. The position carries Lucena's name from a 1497 book, though it actually appears first in Salvio's 1634 work.",
+   "q": "In the Lucena position, which rank does the rook go to for the bridge?",
+   "a": "The fourth rank (from the attacker's side), so it can block checks later.",
+   "edition": "2026-11-17-pm",
+   "order": 14,
+   "id": "2026-11-17-pm-014"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "Men are disturbed not by the things which happen, but by the opinions about the things.",
+   "who": "Epictetus, Enchiridion 5 (tr. George Long)",
+   "hook": "Wonder: what's today's 'thing', and what's the opinion wrapped around it?",
+   "edition": "2026-11-17-pm",
+   "order": 13,
+   "id": "2026-11-17-pm-013"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Pluto's heart",
+   "body": "When New Horizons flew past Pluto in July 2015, it photographed a huge pale heart shape now called Tombaugh Regio, after Clyde Tombaugh, who found Pluto in 1930. The heart's left lobe, Sputnik Planitia, is a smooth basin of frozen nitrogen, slowly churning in cells a few tens of kilometres across, like a very cold, very slow lava lamp.",
+   "hook": "Wonder: what does a nitrogen glacier sound like, if anything?",
+   "edition": "2026-11-17-pm",
+   "order": 12,
+   "id": "2026-11-17-pm-012"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Ada Lovelace's Note G",
+   "body": "In 1843 Ada Lovelace translated an Italian article by Luigi Menabrea about Charles Babbage's Analytical Engine and added her own notes, longer than the article itself. Note G sets out, step by step, how the Engine could calculate Bernoulli numbers. It's often called the first published computer program. She also suggested the Engine might work with symbols, such as musical notes, not just numbers.",
+   "q": "What did Lovelace's Note G show the Analytical Engine computing?",
+   "a": "Bernoulli numbers.",
+   "edition": "2026-11-17-pm",
+   "order": 11,
+   "id": "2026-11-17-pm-011"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The cobbler's radio",
+   "body": "The cobbler keeps his radio tuned between two stations, so it plays a little of each and neither wins. A boy asked him once why he didn't fix it. 'Then I'd have to choose,' the cobbler said, and went back to the sole he was stitching, humming a tune that belonged to both.",
+   "edition": "2026-11-17-pm",
+   "order": 10,
+   "id": "2026-11-17-pm-010"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Mix it up: interleaving",
+   "body": "Practising one type of problem in a block feels smooth, but mixing types often teaches more. In a 2007 study by Doug Rohrer and Kelli Taylor, students who practised mixed maths problems did markedly better on a later test than those who practised in blocks. The mix forces you to choose the method, not just apply it, and choosing is the skill the real test asks for.",
+   "q": "Why does interleaving help even though it feels harder?",
+   "a": "It makes you decide which method fits each problem, the skill a real test needs.",
+   "edition": "2026-11-17-pm",
+   "order": 9,
+   "id": "2026-11-17-pm-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "macOS gives users clearer controls over agents",
+   "body": "Apple has described new Mac permission controls coming with macOS 27.3, aimed at apps and AI agents that operate other apps. Permissions are reorganised into clearer groups, there's one consistent way to grant access by picking an app from a list, apps ask per request, and a visible indicator shows when one app is controlling another. Developers get guidance and entitlements for backup and assistive-technology apps.",
+   "hook": "Wonder: which of your apps would you let another app drive?",
+   "source": {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/16/apple-reveals-new-mac-security-controls-as-ai-agents-raise-privacy-risks/"
+   },
+   "edition": "2026-11-17-pm",
+   "order": 8,
+   "id": "2026-11-17-pm-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Keeladi, a town on the Vaigai",
+   "body": "At Keeladi, near Madurai in Sivaganga district, excavations since 2015 have uncovered an ancient urban settlement: brick structures, drains, ring wells, dice, spindle whorls and many potsherds inscribed in Tamil-Brahmi script. The Tamil Nadu archaeology department's reported dates push some layers centuries earlier than once assumed; scholars are still refining the timeline. A site museum at Keeladi now displays the finds.",
+   "q": "Which river does the Keeladi site lie near?",
+   "a": "The Vaigai, near Madurai.",
+   "edition": "2026-11-17-pm",
+   "order": 7,
+   "id": "2026-11-17-pm-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Body doubling: work beside someone",
+   "body": "Many people with ADHD find it easier to start and stay on a task when someone else is simply present and also working: a friend at the same table, a colleague on a quiet video call, or an online co-working room. The other person doesn't help with the task. Their presence just makes the room feel like a place where work happens. Research is still early, but it's cheap to try.",
+   "hook": "Wonder: who could you sit quietly beside for 25 minutes this week?",
+   "edition": "2026-11-17-pm",
+   "order": 6,
+   "id": "2026-11-17-pm-006"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "JP Morgan Chase wins the corporate chess league",
+   "body": "JP Morgan Chase won Season 14 of the North American Corporate Chess League, its first title, beating PwC 3–2 in the final. The top-seeded team also won 3–2 against NVIDIA in the quarterfinal and Susquehanna in the semifinal. FM Maggie Feng clinched the final by winning a tricky endgame. The team was IM Edward Song, FMs Alex Bian and Maggie Feng, NM Asuka Nakamura and Calvin Yang.",
+   "hook": "Wonder: what would your office team's board order be?",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/jp-morgan-chase-wins-north-american-corporate-chess-league-season-14"
+   },
+   "edition": "2026-11-17-pm",
+   "order": 5,
+   "id": "2026-11-17-pm-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Backpressure: let the slow part set the pace",
+   "body": "When a producer makes work faster than a consumer can handle it, something has to give. Without a plan, queues grow until memory runs out. Backpressure means the consumer signals 'slow down': a bounded queue that blocks or rejects when full, a reactive stream that only sends what was requested, or TCP's window shrinking. The system then runs at the speed of its slowest stage, which is the honest speed anyway.",
+   "q": "What's the simplest way to add backpressure between two threads in Java?",
+   "a": "Use a bounded BlockingQueue (e.g. ArrayBlockingQueue): put() waits when it's full.",
+   "edition": "2026-11-17-pm",
+   "order": 4,
+   "id": "2026-11-17-pm-004"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Hera flies in rectangles around Didymos",
+   "body": "ESA's Hera spacecraft has settled in beside the asteroid pair Didymos and Dimorphos, about 25–30 km away, at roughly 196 million km from Earth. Gravity there is so weak that Hera drifts at about 12 cm per second, firing its thrusters every three or four days and turning 90 degrees each time, so its path traces a rectangle. It's set up so that a missed burn makes it drift away, not closer. Next comes a nearer look at about 20 km, and two shoebox-sized CubeSats, Juventas and Milani, will later fly closer still.",
+   "hook": "Wonder: how slowly would you have to walk to match 12 cm per second?",
+   "source": {
+    "name": "ScienceDaily / ESA",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261115085545.htm"
+   },
+   "edition": "2026-11-17-pm",
+   "order": 3,
+   "id": "2026-11-17-pm-003"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A strawberry isn't a berry",
+   "body": "Botanically, a berry grows from a single flower's ovary with seeds inside, which is why bananas, tomatoes and grapes count. A strawberry doesn't: its red flesh is a swollen flower base, and each little 'seed' on the outside is really a tiny fruit of its own, called an achene, with a seed inside.",
+   "q": "What are the little 'seeds' on a strawberry's surface, botanically?",
+   "a": "Achenes: each one is a tiny fruit containing a seed.",
+   "edition": "2026-11-17-pm",
+   "order": 2,
+   "id": "2026-11-17-pm-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Cognition's Devin Bots manage a team of coding agents",
+   "body": "Cognition has introduced Devin Bots, a longer-lived layer that manages groups of its Devin coding agents over days or weeks. A Bot can split a project, such as building an Android version of an iPhone app, into pieces, hand them out, and keep the result in step as the original changes. It joins a team's Slack as a member, remembers context across weeks, and pings people when it needs a decision. Each Bot runs on its own cloud machine with admin-set access to repos and tools, and can have its own budget.",
+   "hook": "Wonder: what would you want a manager-agent to ask you before it starts?",
+   "source": {
+    "name": "Fortune",
+    "url": "https://fortune.com/2026/11/17/exclusive-cognition-bets-on-devin-bots-coding-agents-in-challenge-to-anthropics-duet-and-openais-dots/"
+   },
+   "edition": "2026-11-17-pm",
+   "order": 1,
+   "id": "2026-11-17-pm-001"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Tuesday, the stairwell light",
+   "body": "Press the switch and the stairwell wakes,\nkeeps its small promise of a minute.\nI climb past the shoes outside each door,\nthe smell of someone's tadka, a radio low.\nOn the fourth floor the light gives up,\nkindly, right as I find my key.",
+   "edition": "2026-11-17-pm",
+   "order": 0,
+   "id": "2026-11-17-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9664,349 +10005,6 @@
    "edition": "2026-11-03-am",
    "order": 14,
    "id": "2026-11-03-am-014"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Chess.com Crazyhouse Championship starts 5 November",
-   "body": "In crazyhouse, a piece you capture changes sides and can be dropped back onto the board as your own. Chess.com's 2026 Crazyhouse Championship begins with 3+0 qualifying arenas on 5 November. Each arena winner goes through to an eight-player double-elimination final on 6 November. The prize fund is $2,500.",
-   "hook": "Wonder: how would your openings change if captured pieces came back to fight for you?",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/announcing-chesscom-crazyhouse-chess-championship-2026"
-   },
-   "edition": "2026-11-03-am",
-   "order": 13,
-   "id": "2026-11-03-am-013"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Saturn's rings are astonishingly thin",
-   "body": "Saturn's main rings are about 280,000 km across, yet in most places they're only tens of metres thick. If you shrank them to the width of a football field, they'd be much thinner than a sheet of paper. When Earth lines up edge-on with them, they nearly vanish from view.",
-   "q": "Roughly how thick are Saturn's main rings in most places?",
-   "a": "Only about tens of metres, even though they span about 280,000 km.",
-   "edition": "2026-11-03-am",
-   "order": 12,
-   "id": "2026-11-03-am-012"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Seneca, Letters to Lucilius 1",
-   "body": "While we are postponing, life speeds by.",
-   "edition": "2026-11-03-am",
-   "order": 11,
-   "id": "2026-11-03-am-011"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Karpathy builds a calm video library in one morning",
-   "body": "Andrej Karpathy used AI coding help to turn about 20 years of Hacker News video recommendations into a browsable site called HackerTube, and reportedly did it in a single morning. The finished site is just a quiet curated directory with no chatbot in it. The AI did the building and then stepped out of the way.",
-   "hook": "Wonder: what old pile of bookmarks of yours could become a little library?",
-   "source": {
-    "name": "The Neuron (Nov 2)",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-2-2026/"
-   },
-   "edition": "2026-11-03-am",
-   "order": 10,
-   "id": "2026-11-03-am-010"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The first website is still online",
-   "body": "Tim Berners-Lee published the first website at CERN in 1991. It explained what the World Wide Web was and how to use it. CERN later put a restored copy back up at its original address, info.cern.ch, so you can still read it.",
-   "q": "At which lab was the first website published?",
-   "a": "CERN, in 1991.",
-   "edition": "2026-11-03-am",
-   "order": 9,
-   "id": "2026-11-03-am-009"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Keep a 'done list' next to the to-do list",
-   "body": "At the end of the day, write down three things you actually finished, small ones included. A to-do list only ever shows what's missing. A done list gives you proof that you moved, and that makes tomorrow's start easier.",
-   "edition": "2026-11-03-am",
-   "order": 8,
-   "id": "2026-11-03-am-008"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Keezhadi: a Sangam-age town by the Vaigai",
-   "body": "Near Madurai, excavations at Keezhadi have turned up an ancient urban settlement: brick buildings, drains, wells, beads, dice and pottery. Some of the pots carry Tamil-Brahmi letters. Taken together, the finds suggest literacy was quite widespread in early Tamil country.",
-   "q": "What script appears on pottery at Keezhadi?",
-   "a": "Tamil-Brahmi.",
-   "edition": "2026-11-03-am",
-   "order": 7,
-   "id": "2026-11-03-am-007"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Scotland's national animal is a unicorn",
-   "body": "The unicorn has been a Scottish heraldic symbol since at least the 15th century. You can see it on the royal coat of arms used in Scotland. It stood for purity and strength, and in legend it could only be tamed by someone pure of heart.",
-   "hook": "Wonder: what animal would you pick to stand for your own household?",
-   "edition": "2026-11-03-am",
-   "order": 6,
-   "id": "2026-11-03-am-006"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Circuit breakers: stop knocking on a closed door",
-   "body": "Once calls to a dependency start failing over and over, a circuit breaker 'opens' and fails fast for a while instead of piling up waiting requests. After a cool-down it goes 'half-open' and lets one trial call through. A success closes it again. A failure keeps it open. The point is that the struggling service gets room to recover.",
-   "q": "What are the three states of a circuit breaker?",
-   "a": "Closed (normal), open (fail fast) and half-open (let a trial call through).",
-   "edition": "2026-11-03-am",
-   "order": 5,
-   "id": "2026-11-03-am-005"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The spacing effect: let it fade a little",
-   "body": "Reviewing something just as it starts to slip makes the memory stronger than reviewing it while it still feels fresh. A small struggle to recall tells the brain the thing is worth keeping. A workable rhythm: look again after a day, then three days, then a week.",
-   "q": "Why does spaced review beat cramming?",
-   "a": "Recalling something as it begins to fade strengthens the memory more than re-reading it while it's still fresh.",
-   "edition": "2026-11-03-am",
-   "order": 4,
-   "id": "2026-11-03-am-004"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Sindarov comes back to win Clutch Chess in Saint Louis",
-   "body": "Javokhir Sindarov won the 2026 Clutch Chess: Champions Showdown with 20.5 points, after starting the final day 2½ points behind. Praggnanandhaa took second place, 1½ points back. Nakamura and Caruana made up the four-player field. The event ran from 27 to 29 October.",
-   "q": "Who came second at the 2026 Clutch Chess Champions Showdown?",
-   "a": "Praggnanandhaa, 1½ points behind Sindarov.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/sindarov-wins-2026-clutch-chess-champions-showdown"
-   },
-   "edition": "2026-11-03-am",
-   "order": 3,
-   "id": "2026-11-03-am-003"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "First light",
-   "body": "The milk van hums its single note,\nthe neem tree shakes the dark off slowly.\nNo one has asked anything of you yet.\nSit inside that for a minute.\nIt is the softest room in the house.",
-   "edition": "2026-11-03-am",
-   "order": 2,
-   "id": "2026-11-03-am-002"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Webb finds the interstellar comet's ice is unusual",
-   "body": "JWST looked at the interstellar comet 3I/ATLAS three times, starting in August 2025 and ending after its closest pass by the Sun. One water-ice signal stayed strong while two others hardly showed. The team's reading is that the ice comes as very fine, dusty grains, more like some distant objects beyond Neptune than like familiar comets. The study appeared in The Astrophysical Journal Letters.",
-   "q": "Which part of our solar system did 3I/ATLAS's ice most resemble?",
-   "a": "Some trans-Neptunian objects, the small icy bodies beyond Neptune.",
-   "source": {
-    "name": "Space.com",
-    "url": "https://space.com/astronomy/asteroids/james-webb-space-telescope-uncovers-new-clues-about-the-origins-of-interstellar-invader-comet-3i-atlas"
-   },
-   "edition": "2026-11-03-am",
-   "order": 1,
-   "id": "2026-11-03-am-001"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "DeepSeek shares a prototype coding agent that doesn't wait to be asked",
-   "body": "DeepSeek has shown a 'Super-Agent' for coding that offers fixes on its own initiative instead of waiting for a prompt. The code is up on GitHub as an open-source research prototype. DeepSeek says plainly that it isn't a finished product yet.",
-   "hook": "Wonder: when should a helper speak up, and when should it stay quiet?",
-   "source": {
-    "name": "AI Agents Directory news brief (Nov 1)",
-    "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-3"
-   },
-   "edition": "2026-11-03-am",
-   "order": 0,
-   "id": "2026-11-03-am-000"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Late tram",
-   "body": "Half the seats are sleeping,\nthe other half are me.\nThe city passes softly,\nlit like a slow sea.\n\nI do not need to be anywhere\nfaster than this light.\nThe stops say their own names aloud\nand hand me to the night.",
-   "edition": "2026-11-02-pm",
-   "order": 27,
-   "id": "2026-11-02-pm-027"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Consistent hashing in one breath",
-   "body": "With plain hash(key) mod N, adding one server reshuffles almost every key. Consistent hashing places both servers and keys on a ring and assigns each key to the next server clockwise. Add or remove a server and only about 1/N of the keys move. Virtual nodes (many points per server) smooth out the load.",
-   "q": "Roughly what fraction of keys move when you add a server under consistent hashing?",
-   "a": "About 1/N, versus nearly all keys with plain mod-N hashing.",
-   "edition": "2026-11-02-pm",
-   "order": 26,
-   "id": "2026-11-02-pm-026"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Total Chess pilot opens in Budapest on 10 November",
-   "body": "Norway Chess's FIDE-approved Total Chess event runs from 10 to 20 November at the Anantara New York Palace in Budapest. It combines three time controls: Fast Classic (45 minutes + 30 seconds), rapid and blitz. Twenty-four players, including Carlsen, Caruana, Praggnanandhaa, Arjun Erigaisi and Vaishali Rameshbabu, start with a blitz Swiss, then groups and knockouts. It pilots a full tour starting in March 2027.",
-   "source": {
-    "name": "World Chess",
-    "url": "https://worldchess.com/news/total-chess-2026-everything-you-need-to-know"
-   },
-   "edition": "2026-11-02-pm",
-   "order": 25,
-   "id": "2026-11-02-pm-025"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Enter late, leave early",
-   "body": "A screenwriting rule that works for any story: start a scene as late as possible and leave as soon as its point has landed. Skip the hellos and the walking in; open on the moment something shifts. Readers fill in the rest, and they enjoy doing it.",
-   "hook": "Wonder: which sentence in your last piece is the real first sentence?",
-   "edition": "2026-11-02-pm",
-   "order": 24,
-   "id": "2026-11-02-pm-024"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Olympus Mons, the gentle giant",
-   "body": "Olympus Mons on Mars is the tallest volcano known in the solar system, rising about 22 km above its surroundings, roughly two and a half times Everest's height above sea level. Its slopes are so gentle that someone standing on it would barely notice the climb, and the summit would sit beyond the horizon.",
-   "q": "Roughly how tall is Olympus Mons?",
-   "a": "About 22 km, around 2.5 times Everest's height above sea level.",
-   "edition": "2026-11-02-pm",
-   "order": 23,
-   "id": "2026-11-02-pm-023"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "body": "To speak harsh words when sweet ones are at hand is like plucking unripe fruit when the ripe is there for the taking.",
-   "who": "Thirukkural 100 (own rendering)",
-   "edition": "2026-11-02-pm",
-   "order": 22,
-   "id": "2026-11-02-pm-022"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The Mother of All Demos",
-   "body": "On 9 December 1968 in San Francisco, Douglas Engelbart and his team showed the world a computer mouse, hypertext links, windowed views, collaborative real-time editing and video conferencing, all in one 90-minute presentation. Much of modern computing was previewed in that single afternoon.",
-   "q": "Who gave the 1968 'Mother of All Demos' that introduced the mouse?",
-   "a": "Douglas Engelbart.",
-   "edition": "2026-11-02-pm",
-   "order": 21,
-   "id": "2026-11-02-pm-021"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Make the first step embarrassingly small",
-   "body": "If a task won't start, shrink the first step until it feels almost silly: open the file; put on one shoe; write a single sentence. Starting is the bottleneck, and momentum usually does the rest. If it doesn't, that's fine too: you still moved, and that counts.",
-   "edition": "2026-11-02-pm",
-   "order": 20,
-   "id": "2026-11-02-pm-020"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Wombats make cube-shaped droppings",
-   "body": "Wombats are the only animals known to produce cube-shaped poo. A 2018 study found that the final stretch of their intestine has walls with varying stiffness that shape the droppings into cubes. Wombats stack them on rocks and logs as territorial markers, and the flat sides help them stay put.",
-   "hook": "Wonder: what other shapes could nature 'manufacture' without any moulds?",
-   "edition": "2026-11-02-pm",
-   "order": 19,
-   "id": "2026-11-02-pm-019"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Context compaction, the agent's tidy desk",
-   "body": "Long-running agents fill their context window with old tool outputs and chatter. Compaction replaces older turns with a short summary while keeping recent turns verbatim. It's a trade: you keep the thread of the work and free space, but anything the summary leaves out is gone. Good compaction keeps decisions, open questions and file paths; it drops raw logs.",
-   "hook": "Wonder: if you summarised your own workday in five lines, what would you be sure to keep?",
-   "edition": "2026-11-02-pm",
-   "order": 18,
-   "id": "2026-11-02-pm-018"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Nalanda, the great monastery-university",
-   "body": "Nalanda in present-day Bihar grew into a famous centre of learning from about the 5th century CE, under Gupta patronage. Students came from across Asia; the Chinese pilgrim-scholar Xuanzang studied there in the 7th century and wrote about its scholars and libraries. Its ruins are now a UNESCO World Heritage Site.",
-   "q": "Which Chinese scholar studied at Nalanda in the 7th century?",
-   "a": "Xuanzang.",
-   "edition": "2026-11-02-pm",
-   "order": 17,
-   "id": "2026-11-02-pm-017"
-  },
-  {
-   "topic": "mind",
-   "kind": "fact",
-   "title": "The generation effect",
-   "body": "You remember information better when you produce it yourself than when you simply read it. Slamecka and Graf described this in 1978: completing 'hot: c___' (cold) sticks better than reading 'hot: cold'. A cheap way to use it: before re-reading notes, try to write the key point from memory first.",
-   "hook": "Wonder: what could you try to recall right now, before looking it up?",
-   "edition": "2026-11-02-pm",
-   "order": 16,
-   "id": "2026-11-02-pm-016"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java records: data, said plainly",
-   "body": "Records, final since Java 16 (JEP 395), are a compact way to declare a class that is just data: record Point(int x, int y) {}. The compiler supplies the constructor, accessors x() and y(), equals, hashCode and toString. Fields are final, so records are shallowly immutable, which makes them ideal for DTOs, map keys and values passed between threads.",
-   "q": "Which methods does the compiler generate for a Java record?",
-   "a": "A canonical constructor, accessor methods, equals, hashCode and toString.",
-   "edition": "2026-11-02-pm",
-   "order": 15,
-   "id": "2026-11-02-pm-015"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "The opposition, in one picture",
-   "body": "In king-and-pawn endings, two kings standing on the same file with one empty square between them are 'in opposition'. Whoever is NOT to move holds the opposition, because the other king must step aside and give ground. Many 'drawn or won?' pawn endings come down to this tiny standoff.",
-   "q": "With kings facing each other one square apart, who has the opposition?",
-   "a": "The side that is not to move.",
-   "edition": "2026-11-02-pm",
-   "order": 14,
-   "id": "2026-11-02-pm-014"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The lending library of umbrellas",
-   "body": "The bus stop had a bucket of umbrellas and a sign: Take one. Bring one back. Nobody knew who started it. Mira took a yellow one in June and forgot it for months. In October she returned it with a second umbrella, blue, that she'd bought on purpose. The next morning both were gone, and someone had left a third: green, with a note tied to the handle that said only, 'Your turn was lovely.'",
-   "edition": "2026-11-02-pm",
-   "order": 13,
-   "id": "2026-11-02-pm-013"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Agents get their own identities in HashiCorp Vault",
-   "body": "At IBM TechXchange on 27 October, IBM made HashiCorp Vault 2.2 with Agent Identity generally available, and previewed a new Secure Hub. The idea: each AI agent gets its own managed identity and short-lived credentials, rather than borrowing a human's keys. Integrations named include watsonx Orchestrate, Amazon Bedrock, Microsoft Foundry and Google Gemini.",
-   "source": {
-    "name": "IBM Newsroom",
-    "url": "https://newsroom.ibm.com/2026-10-27-ibm-introduces-identity-and-control-for-ai-agents,-securing-frontier-intelligence-for-the-enterprise"
-   },
-   "edition": "2026-11-02-pm",
-   "order": 12,
-   "id": "2026-11-02-pm-012"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Sharks are older than trees",
-   "body": "Sharks appear in the fossil record around 450 million years ago. The earliest true trees came later, roughly 385 to 390 million years ago. So sharks were already swimming the seas before there were any forests on land.",
-   "q": "Which came first, sharks or trees?",
-   "a": "Sharks, by roughly 60 million years.",
-   "edition": "2026-11-02-pm",
-   "order": 11,
-   "id": "2026-11-02-pm-011"
   }
  ]
 }
