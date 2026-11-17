@@ -1,6 +1,349 @@
 {
- "updated": "2026-11-16T17:15:43+00:00",
+ "updated": "2026-11-17T02:13:37+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try answering before you peek. Pulling an answer out of memory strengthens it more than re-reading does.",
+   "q": "1) Which comet feeds the Leonids? 2) What does an idempotency key let a server do? 3) Which dam on the Kaveri is credited to Karikala Chola?",
+   "a": "1) 55P/Tempel–Tuttle. 2) Return the saved result of a repeated request instead of redoing it. 3) The Kallanai (Grand Anicut).",
+   "edition": "2026-11-17-am",
+   "order": 30,
+   "id": "2026-11-17-am-030"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Elephants can't jump",
+   "body": "Adult elephants can't get all four feet off the ground at once, even when they move fast. Their 'running' is more of a speedy walk, keeping at least one foot down. With bones built for carrying great weight, they simply don't need to leap.",
+   "hook": "Wonder: which other big animals keep one foot on the ground?",
+   "edition": "2026-11-17-am",
+   "order": 29,
+   "id": "2026-11-17-am-029"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Key squares: where the king must reach",
+   "body": "In king-and-pawn endings, the attacking king doesn't need to escort the pawn step by step; it needs to reach a key square. For a pawn on e4, the key squares are d6, e6 and f6: two ranks ahead. If the king gets to any of them, the pawn promotes whatever the defender does. (Rook pawns are the exception.) Think of the key squares as the doorway; the king just has to get through it.",
+   "q": "For a white pawn on e4, what are the key squares?",
+   "a": "d6, e6 and f6.",
+   "edition": "2026-11-17-am",
+   "order": 28,
+   "id": "2026-11-17-am-028"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Give the agent a notes file",
+   "body": "Long tasks overflow an agent's context. A simple fix: ask it to keep a plain notes file in the workspace, recording decisions, what's done and what's next, and to reread it before each step. It costs a few lines, survives restarts, and gives you something readable when you check in.",
+   "hook": "Wonder: what's the one line you'd want the agent to write before it stops for the day?",
+   "edition": "2026-11-17-am",
+   "order": 27,
+   "id": "2026-11-17-am-027"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Leonids, late",
+   "body": "I set the alarm for three\nand went out with a blanket and no plan.\nFor a long time, nothing.\nThen one thin silver stitch,\nthe sky mending something I couldn't see,\nand gone before I could point.\nI stayed another hour\njust in case it needed a witness.",
+   "edition": "2026-11-17-am",
+   "order": 26,
+   "id": "2026-11-17-am-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The tongue's burn",
+   "body": "A burn from fire heals in time; a wound made by the tongue does not.",
+   "who": "Thirukkural 129 (own rendering)",
+   "edition": "2026-11-17-am",
+   "order": 25,
+   "id": "2026-11-17-am-025"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "ENIAC's first programmers",
+   "body": "ENIAC, finished in 1945, had no stored programs; it was 'programmed' by wiring cables and setting switches. The six people who worked out how were Kay McNulty, Betty Jennings, Betty Snyder, Marlyn Wescoff, Fran Bilas and Ruth Lichterman. They learned the machine from its wiring diagrams, and their work was largely overlooked for decades.",
+   "q": "How was ENIAC programmed at first?",
+   "a": "By plugging cables and setting switches, not by stored software.",
+   "edition": "2026-11-17-am",
+   "order": 24,
+   "id": "2026-11-17-am-024"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "The Pleiades are high on November evenings",
+   "body": "Look east after dark this month for a tiny, misty dipper of stars: the Pleiades, known in Tamil as Karthigai. The cluster is about 440 light-years away and young by star standards, around 100 million years old. Most eyes see six or seven stars; binoculars show dozens, and there are more than a thousand members.",
+   "hook": "Wonder: how many Pleiades can you count before you reach for binoculars?",
+   "edition": "2026-11-17-am",
+   "order": 23,
+   "id": "2026-11-17-am-023"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Trace IDs: one thread through many services",
+   "body": "When a request passes through ten services, logs alone can't tell you which lines belong together. Distributed tracing gives the request a trace ID at the edge and passes it along in headers; each hop records a span with its own ID, its parent and its timing. Stitch spans together and you see the whole journey, including which hop was slow. The W3C 'traceparent' header is the common standard.",
+   "hook": "Wonder: in your system, which hop would you guess is slowest, and how sure are you?",
+   "edition": "2026-11-17-am",
+   "order": 22,
+   "id": "2026-11-17-am-022"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "An octopus has three hearts",
+   "body": "Two small hearts push blood through the gills; a third pumps it round the body. Their blood is blue, because it carries oxygen on copper-based haemocyanin rather than iron-based haemoglobin. Curiously, the main heart pauses while the octopus swims, one reason they prefer crawling.",
+   "q": "Why is octopus blood blue?",
+   "a": "It carries oxygen with copper-based haemocyanin.",
+   "edition": "2026-11-17-am",
+   "order": 21,
+   "id": "2026-11-17-am-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Tell the reader where to stand",
+   "body": "Early in a scene, give one concrete detail that places the reader: the smell of the bus depot, the slope of the floor, the light from one window. Readers relax once they know where they are, and then they can pay attention to who is there and what they want.",
+   "hook": "Wonder: what's the single detail that would tell a stranger where you're sitting right now?",
+   "edition": "2026-11-17-am",
+   "order": 20,
+   "id": "2026-11-17-am-020"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Hampi's stone chariot",
+   "body": "In the courtyard of the Vittala temple at Hampi stands a shrine carved as a chariot, built in the 16th century under the Vijayanagara kings. It houses Garuda, the eagle who carries Vishnu. Its stone wheels were once carved to look as if they could turn, and the chariot now appears on India's ₹50 note.",
+   "q": "Which Indian banknote shows Hampi's stone chariot?",
+   "a": "The ₹50 note.",
+   "edition": "2026-11-17-am",
+   "order": 19,
+   "id": "2026-11-17-am-019"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The Zeigarnik effect, with an honest footnote",
+   "body": "In the 1920s Bluma Zeigarnik reported that people remembered interrupted tasks better than finished ones. Later studies have been mixed, so it's not a law of the mind. What does hold up is the practical cousin: unfinished tasks tug at attention, and writing down a concrete next step tends to quiet that tug.",
+   "hook": "Wonder: which open loop is tugging at you right now, and what's its next step?",
+   "edition": "2026-11-17-am",
+   "order": 18,
+   "id": "2026-11-17-am-018"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Mayank Chakraborty wins in Misamis Occidental",
+   "body": "Seventeen-year-old Indian GM Mayank Chakraborty won the Misamis Occidental International Chess Tournament in the Philippines. He led by a full point going into the last round and drew with Vietnam's GM Nguyen Duc Hoa to finish on 7 points from 9, ahead of a 78-player field. Daniel Quizon and Michael Concio Jr shared next place on 6.5.",
+   "q": "How did Mayank secure first place in the final round?",
+   "a": "He drew with GM Nguyen Duc Hoa, keeping his lead to finish on 7/9.",
+   "source": {
+    "name": "The Manila Times, 16 Nov 2026",
+    "url": "https://www.manilatimes.net/2026/11/16/sports/indian-teen-rules-misamis-occidental-international-chess-tournament/2470832"
+   },
+   "edition": "2026-11-17-am",
+   "order": 17,
+   "id": "2026-11-17-am-017"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "OpenAI starts a blog about science done with AI",
+   "body": "OpenAI has launched a dedicated science blog to share research results and first-hand accounts from scientists using AI. It plans to cover methods and limitations too, with the aim of making AI-assisted science easier to inspect and reproduce.",
+   "hook": "Wonder: what would make you trust a discovery that an AI helped make?",
+   "source": {
+    "name": "The Neuron, 16 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-16-2026/"
+   },
+   "edition": "2026-11-17-am",
+   "order": 16,
+   "id": "2026-11-17-am-016"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Build a launch pad by the door",
+   "body": "Pick one spot near the door, a tray or a hook, where everything for tomorrow lives: keys, badge, charger, the letter to post. Load it the night before, while you still remember. In the morning you aren't searching; you're just picking up.",
+   "hook": "Wonder: what's the one thing you most often walk back inside for?",
+   "edition": "2026-11-17-am",
+   "order": 15,
+   "id": "2026-11-17-am-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 12: Collectors.teeing",
+   "body": "Collectors.teeing runs two collectors over one stream and merges their results. For example: stream.collect(Collectors.teeing(Collectors.counting(), Collectors.summingInt(Order::qty), (n, total) -> new Summary(n, total))). One pass, two answers, no second loop.",
+   "q": "How many collectors does Collectors.teeing combine?",
+   "a": "Two, plus a function that merges their results.",
+   "edition": "2026-11-17-am",
+   "order": 14,
+   "id": "2026-11-17-am-014"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "NASA's $1 million Moon Base Challenge for students",
+   "body": "NASA has opened the Moon Base Challenge, a $1 million competition for U.S. high-school and college teams to design pieces of a future lunar base. Teams can work on power, habitats, life support, transport, communications or keeping astronauts protected. Registration runs through NASA's STEM Gateway until 25 January 2027.",
+   "hook": "Wonder: which part of a Moon base would you most want to design?",
+   "source": {
+    "name": "ScienceDaily, 16 Nov 2026",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261115085542.htm"
+   },
+   "edition": "2026-11-17-am",
+   "order": 13,
+   "id": "2026-11-17-am-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The cobbler's spare lace",
+   "body": "The cobbler at the corner kept one black lace hanging from a nail, never for sale. Schoolboys with flapping shoes, a groom ten minutes late, an old man who had tied the same knot for sixty years until it gave: each got the lace, and each came back days later with a new one, sometimes brown, once bright green. He hung whatever came back on the nail. In twenty years he never bought a lace for it. The nail was always full.",
+   "edition": "2026-11-17-am",
+   "order": 12,
+   "id": "2026-11-17-am-012"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The fruit came before the colour",
+   "body": "In English, 'orange' named the fruit first. The word arrived via French from Sanskrit 'nāraṅga' through Persian and Arabic. Before oranges were common in England, the colour was often just called 'yellow-red'; 'orange' as a colour name only caught on in the 1500s.",
+   "hook": "Wonder: what other colours are named after things?",
+   "edition": "2026-11-17-am",
+   "order": 11,
+   "id": "2026-11-17-am-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The bug that was really a moth",
+   "body": "On 9 September 1947, operators of the Harvard Mark II found a moth trapped in a relay and taped it into the logbook with the note 'First actual case of bug being found.' The joke works because engineers had already been calling glitches 'bugs' for decades; Edison used the word in the 1870s. Grace Hopper loved telling the story, and the logbook page now sits in the Smithsonian.",
+   "q": "Where was the famous 1947 moth found?",
+   "a": "In a relay of the Harvard Mark II computer.",
+   "edition": "2026-11-17-am",
+   "order": 10,
+   "id": "2026-11-17-am-010"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Be the promontory",
+   "body": "Be like the promontory against which the waves continually break, but it stands firm and tames the fury of the water around it.",
+   "who": "Marcus Aurelius, Meditations 4.49 (tr. George Long)",
+   "edition": "2026-11-17-am",
+   "order": 9,
+   "id": "2026-11-17-am-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "A 145-billion-parameter model for your own computer",
+   "body": "Edge0 has released Edge0-145B, an open-source model built to run on capable personal computers, aimed at coding and harder reasoning. The company says it runs above 80 tokens a second locally with about 29 GB peak memory. A smaller Edge0-120B and local inference tools came alongside. These are the company's own numbers, so expect independent tests to follow.",
+   "hook": "Wonder: what would you ask a strong model if you knew nothing ever left your machine?",
+   "source": {
+    "name": "The Neuron, 16 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-16-2026/"
+   },
+   "edition": "2026-11-17-am",
+   "order": 8,
+   "id": "2026-11-17-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Kallanai, a dam nearly two thousand years old",
+   "body": "The Kallanai, or Grand Anicut, on the Kaveri near Thanjavur is traditionally credited to the Chola king Karikalan, around the 2nd century CE. Built from unhewn stone laid across the riverbed, it diverts water into the delta's canals, and in a rebuilt and strengthened form it still does that job today, which makes it one of the oldest water-regulating works in the world still in use.",
+   "q": "Which river does the Kallanai span?",
+   "a": "The Kaveri (Cauvery).",
+   "edition": "2026-11-17-am",
+   "order": 7,
+   "id": "2026-11-17-am-007"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The zone of proximal development",
+   "body": "Psychologist Lev Vygotsky described a sweet spot for learning: the things you can't yet do alone, but can do with a little help. Too easy and nothing grows; too hard and help can't reach you. Good teachers, and good tutorials, aim for that middle band, then quietly remove the support as you stop needing it.",
+   "q": "What is Vygotsky's 'zone of proximal development'?",
+   "a": "What a learner can't yet do alone but can do with guidance.",
+   "edition": "2026-11-17-am",
+   "order": 6,
+   "id": "2026-11-17-am-006"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Nakamura holds off a 15-year-old to reach London",
+   "body": "In the Round of 16 of Speed Chess Championship XI, Hikaru Nakamura beat 15-year-old GM Yagiz Erdogmus 12–8 and booked his place at the live finals in London. Erdogmus made it interesting by winning the bullet segment, the fastest part of the match.",
+   "hook": "Wonder: why might the youngest players shine brightest at the fastest time controls?",
+   "source": {
+    "name": "Chess.com, 16 Nov 2026",
+    "url": "https://www.chess.com/news/view/2026-speed-chess-championship-r16-nakamura-erdogmus"
+   },
+   "edition": "2026-11-17-am",
+   "order": 5,
+   "id": "2026-11-17-am-005"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Tuesday, the milk packet",
+   "body": "Six-ten. The packet on the step\nis cold the way only mornings are.\nI carry it in like a small moon,\nsnip the corner, pour,\nand the pan begins its slow white thinking.\nNothing is decided yet.\nThe whole day is still on low flame.",
+   "edition": "2026-11-17-am",
+   "order": 4,
+   "id": "2026-11-17-am-004"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Idempotency keys: 'I already did that'",
+   "body": "When a client retries a payment or an order because the network hiccuped, the server can't tell a retry from a fresh request. So the client sends a unique idempotency key with each logical request. The server stores the key with the result; if the same key arrives again, it returns the saved result instead of doing the work twice. Keep keys for a sensible window, and store key and outcome in the same transaction.",
+   "q": "What does the server return when it sees an idempotency key it has already processed?",
+   "a": "The stored result of the first request, without repeating the work.",
+   "edition": "2026-11-17-am",
+   "order": 3,
+   "id": "2026-11-17-am-003"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Make time visible",
+   "body": "Time that you can't see tends to vanish. A visual timer, the kind with a coloured wedge that shrinks, turns 'twenty minutes' into a shape you can glance at without doing sums. Put it in your line of sight, not on your phone, so checking it doesn't open a door to everything else.",
+   "hook": "Wonder: which of your tasks always takes longer than it feels like it does?",
+   "edition": "2026-11-17-am",
+   "order": 2,
+   "id": "2026-11-17-am-002"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Leonids, after midnight",
+   "body": "The Leonid meteor shower peaks around 17–18 November. The Moon is near first quarter, so it sets around midnight, leaving the hours before dawn dark, which is also when Leo, the shower's radiant, climbs high. Expect a gentle 10 to 15 meteors an hour from a dark site. The grit comes from Comet 55P/Tempel–Tuttle, and it meets Earth head-on at about 71 km per second, among the fastest of any shower.",
+   "q": "Which comet leaves the dust behind the Leonids?",
+   "a": "55P/Tempel–Tuttle, which returns roughly every 33 years.",
+   "edition": "2026-11-17-am",
+   "order": 1,
+   "id": "2026-11-17-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Sierra's Poppy: a polite sign on the shop door for agents",
+   "body": "Sierra has released Poppy 1.0, a protocol that lets a business say which actions personal AI agents are allowed to take on its behalf. Shopify has switched it on across its stores, Meta's Muse looks for it automatically, and more than 100 companies are taking part. Think of it as robots.txt for doing things, not just reading things.",
+   "hook": "Wonder: what would you want your own front door to tell a visiting agent?",
+   "source": {
+    "name": "The Neuron, 16 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-16-2026/"
+   },
+   "edition": "2026-11-17-am",
+   "order": 0,
+   "id": "2026-11-17-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9664,338 +10007,6 @@
    "edition": "2026-11-02-pm",
    "order": 11,
    "id": "2026-11-02-pm-011"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Hubble and Webb read the solar system's oldest postcards",
-   "body": "Astronomers used Hubble and Webb together to study 27 small, distant objects beyond Neptune. These icy bodies have changed little since the solar system formed, so their surfaces act like a preserved record of the material the planets were built from.",
-   "hook": "Wonder: what would a 4.5-billion-year-old snowball tell you about the day it formed?",
-   "source": {
-    "name": "ScienceDaily",
-    "url": "https://www.sciencedaily.com/releases/2026/10/261031221209.htm"
-   },
-   "edition": "2026-11-02-pm",
-   "order": 10,
-   "id": "2026-11-02-pm-010"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Grace Hopper's nanosecond",
-   "body": "To explain why satellite signals and fast computers were limited by distance, Grace Hopper handed out pieces of wire about 30 cm (11.8 inches) long: the distance light travels in one billionth of a second. She'd sometimes contrast it with a coil of wire representing a microsecond, nearly 300 metres long.",
-   "hook": "Wonder: how far does light travel in the time your laptop finishes one clock cycle?",
-   "edition": "2026-11-02-pm",
-   "order": 9,
-   "id": "2026-11-02-pm-009"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Interleaving: mix the practice",
-   "body": "Practising one problem type in a block feels smooth, but mixing types (A, C, B, A, B, C) tends to produce better long-term results. Studies on maths learning, such as Rohrer and Taylor's, found that interleaved practice helps you learn to tell which method a problem needs, not just how to run the method. It feels harder while you do it, which is part of why it works.",
-   "q": "Why does interleaved practice often beat blocked practice?",
-   "a": "It trains you to recognise which strategy a problem needs, not just to execute one strategy repeatedly.",
-   "edition": "2026-11-02-pm",
-   "order": 8,
-   "id": "2026-11-02-pm-008"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "body": "Nothing, Lucilius, is ours, except time.",
-   "who": "Seneca, Letters to Lucilius, Letter I (tr. Gummere)",
-   "edition": "2026-11-02-pm",
-   "order": 7,
-   "id": "2026-11-02-pm-007"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Leave a breadcrumb before you stop",
-   "body": "Before you step away from a task, write one line: the very next physical action. Not 'finish the report', but 'open the draft and rewrite the second heading'. Restarting is often the hardest part with ADHD; a breadcrumb means future-you doesn't have to rebuild the whole mental map before taking the first step.",
-   "edition": "2026-11-02-pm",
-   "order": 6,
-   "id": "2026-11-02-pm-006"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "1,330 couplets, built like a grid",
-   "body": "Thiruvalluvar's Thirukkural is precisely structured: 133 chapters of 10 couplets each, 1,330 kurals in all. It is divided into three books: Aram (virtue), Porul (wealth and statecraft) and Inbam (love). Each kural is a two-line venba of seven metrical feet, four in the first line and three in the second.",
-   "q": "How many chapters and couplets does the Thirukkural have?",
-   "a": "133 chapters of 10 couplets: 1,330 kurals, in three books (Aram, Porul, Inbam).",
-   "edition": "2026-11-02-pm",
-   "order": 5,
-   "id": "2026-11-02-pm-005"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Backpressure: letting the slow part say 'not yet'",
-   "body": "When a producer is faster than a consumer, something has to give. Without backpressure, queues grow until memory runs out. With it, the consumer signals how much it can take, and the producer slows down. Bounded queues that block, TCP's flow-control window, and Reactive Streams' request(n) are all the same idea: demand flows upstream, data flows downstream.",
-   "hook": "Wonder: where in your system is an unbounded queue quietly waiting to become a memory problem?",
-   "edition": "2026-11-02-pm",
-   "order": 4,
-   "id": "2026-11-02-pm-004"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Kettle",
-   "body": "The kettle hums its one long vowel,\nthe window fogs, then clears.\nNothing in this kitchen asks\nfor more than what is here.\n\nSteam climbs and quietly forgets\nthe water it once was.\nI pour, and let the evening be\nexactly what it does.",
-   "edition": "2026-11-02-pm",
-   "order": 3,
-   "id": "2026-11-02-pm-003"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Nihal Sarin enters the world top 20",
-   "body": "The November FIDE list has Nihal Sarin at 2720, up 11 points and climbing from #30 to #19, a career-best ranking. It follows a 5/6 score and a board-two gold medal at the European Club Cup in Budva. At the top, Magnus Carlsen is on 2823, and Javokhir Sindarov sits at #4 with 2782.",
-   "q": "What is Nihal Sarin's world ranking on the November 2026 FIDE list?",
-   "a": "#19, rated 2720: his career best.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/november-2026-fide-rating-list"
-   },
-   "edition": "2026-11-02-pm",
-   "order": 2,
-   "id": "2026-11-02-pm-002"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Southern Taurids peak this Thursday",
-   "body": "The Southern Taurid meteor shower peaks in the early hours of 5 November. Expect a gentle 5 to 10 meteors an hour, but Taurids are slow and sometimes bright: the occasional fireball is their signature. The debris comes from Comet Encke. The Northern Taurids follow, peaking closer to 12 November, just after the 9 November new Moon gives a dark sky.",
-   "q": "Which comet feeds the Taurid meteor showers?",
-   "a": "Comet 2P/Encke.",
-   "source": {
-    "name": "Space.com night sky, November 2026",
-    "url": "https://www.space.com/stargazing/what-to-look-for-in-night-sky-november-2026"
-   },
-   "edition": "2026-11-02-pm",
-   "order": 1,
-   "id": "2026-11-02-pm-001"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "OpenAI ships GPT-6.1 Terra for workflow agents",
-   "body": "OpenAI rolled out GPT-6.1 Terra on 26 October, a mid-tier model aimed at computer use and workflow automation. It is available in ChatGPT Work, Codex and the API, and is priced at half of the GPT-5.6 Terra model it replaces. On OpenAI's own internal stress test, its error rate fell from 53.6% to 16.7% at low reasoning effort, and to 4.3% at maximum effort.",
-   "hook": "Wonder: for your own agent tasks, would you rather pay for more 'thinking' per step, or for more steps?",
-   "source": {
-    "name": "The Autonomous Edge #13 (DEV)",
-    "url": "https://dev.to/theautonomousedge/the-autonomous-edge-issue-13-cheaper-agents-harder-governance-week-of-november-2-2026-e9"
-   },
-   "edition": "2026-11-02-pm",
-   "order": 0,
-   "id": "2026-11-02-pm-000"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Close your eyes for 30 seconds and recall three things from today's feed without scrolling back. Then check.\n\nPulling memories out, rather than re-reading them, is how they stick.",
-   "q": "Little's Law in one line?",
-   "a": "Items in the system = arrival rate × time in system (L = λW).",
-   "edition": "2026-11-02-am",
-   "order": 49,
-   "id": "2026-11-02-am-049"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "body": "There is nothing either good or bad, but thinking makes it so.",
-   "who": "Shakespeare, Hamlet II.ii",
-   "edition": "2026-11-02-am",
-   "order": 48,
-   "id": "2026-11-02-am-048"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Older than the Aztecs",
-   "body": "Teaching was happening at Oxford by 1096. The Aztec capital Tenochtitlan was founded in 1325, more than two centuries later.",
-   "hook": "Which institutions around you will still exist in 900 years?",
-   "edition": "2026-11-02-am",
-   "order": 47,
-   "id": "2026-11-02-am-047"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The first published program",
-   "body": "In 1843 Ada Lovelace translated an article about Babbage's Analytical Engine and added notes three times longer than the original. Note G laid out step by step how the engine could compute Bernoulli numbers. It's often called the first published computer program, written for a machine that was never built.",
-   "hook": "What would it feel like to write code for a machine that doesn't exist yet?",
-   "edition": "2026-11-02-am",
-   "order": 46,
-   "id": "2026-11-02-am-046"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Park downhill",
-   "body": "Hemingway liked to stop writing while he still knew what came next, so the next morning's start was easy.\n\nFor ADHD this is gold. End every work block by writing one sentence: \"Next, I will…\". Starting is the hardest part; leave yourself a downhill start.",
-   "hook": "What's the one-line 'next' for the task you'll open after this?",
-   "edition": "2026-11-02-am",
-   "order": 45,
-   "id": "2026-11-02-am-045"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "Two lamps",
-   "body": "Two lamps hung in a temple corridor. One burned bright and needed refilling twice a night. The other burned low and lasted till dawn.\n\nThe priest never compared them. He knew some hours need brightness and some need endurance, and a corridor needs both.",
-   "who": "original micro-story",
-   "edition": "2026-11-02-am",
-   "order": 44,
-   "id": "2026-11-02-am-044"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "CAP, said properly",
-   "body": "CAP is often summarised as 'pick two of three.' More precisely: when a network partition happens, a distributed system must choose between consistency (refuse or delay answers) and availability (answer, possibly with stale data). When there's no partition, you can have both.\n\nBrewer stated it in 2000; Gilbert and Lynch proved it in 2002.",
-   "q": "When is CAP's trade-off forced?",
-   "a": "Only during a network partition. Then you choose consistency or availability.",
-   "edition": "2026-11-02-am",
-   "order": 43,
-   "id": "2026-11-02-am-043"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "body": "Learn thoroughly what is worth learning, then stand by it in how you live.",
-   "who": "Thirukkural 391 (own rendering)",
-   "edition": "2026-11-02-am",
-   "order": 42,
-   "id": "2026-11-02-am-042"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Aryabhata's spinning Earth",
-   "body": "In 499 CE, at just 23, Aryabhata wrote the Aryabhatiya. He proposed that the stars' daily motion comes from Earth rotating on its axis, and gave a value of π accurate to four decimal places (3.1416). India's first satellite was named after him in 1975.",
-   "q": "What did Aryabhata say explains the stars' daily motion?",
-   "a": "Earth's rotation on its own axis.",
-   "edition": "2026-11-02-am",
-   "order": 41,
-   "id": "2026-11-02-am-041"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Context isn't memory",
-   "body": "A model's context window is like a desk: whatever is on it right now, it can use. Memory is the filing cabinet: what you choose to pull back onto the desk later.\n\nRAG (retrieval-augmented generation) is just a librarian who fetches the right files before each question. Most 'the AI forgot' problems are really retrieval problems.",
-   "hook": "In your own systems, where is the right information sitting in a cabinet nobody opens?",
-   "edition": "2026-11-02-am",
-   "order": 40,
-   "id": "2026-11-02-am-040"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Bananas are berries; strawberries aren't",
-   "body": "Botanically, a berry develops from a single flower's ovary with seeds inside the flesh, so bananas, tomatoes and even brinjal qualify. A strawberry's 'seeds' are actually tiny fruits on the outside of a swollen stem base, so it isn't a true berry at all.",
-   "edition": "2026-11-02-am",
-   "order": 39,
-   "id": "2026-11-02-am-039"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The Y2038 problem",
-   "body": "Unix counts time as seconds since 1 January 1970. In a signed 32-bit integer, that counter overflows at 03:14:07 UTC on 19 January 2038 and wraps around to 1901. Most modern systems use 64 bits now, but old embedded devices and file formats may still break.",
-   "hook": "What 32-bit assumptions are lurking in systems you've worked on?",
-   "edition": "2026-11-02-am",
-   "order": 38,
-   "id": "2026-11-02-am-038"
-  },
-  {
-   "topic": "chess",
-   "kind": "puzzle",
-   "title": "Building a bridge (the Lucena position)",
-   "body": "Rook and pawn vs rook, your pawn on the 7th, your king on the queening square, enemy rook cutting your king off from the side. How do you get out and promote?\n\nThe classic method: bring your rook to the 4th rank, walk the king out, and when checks come, block with the rook. That's 'building a bridge.'",
-   "q": "In the Lucena position, which rank does the rook go to, and why?",
-   "a": "The 4th rank, counting from your side. That way it can step in front of your king to block the checks once the king leaves the pawn.",
-   "edition": "2026-11-02-am",
-   "order": 37,
-   "id": "2026-11-02-am-037"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The inverted U",
-   "body": "In 1908 Yerkes and Dodson found that performance rises with arousal, but only up to a point. Then it falls. The peak sits lower for complex tasks than simple ones.\n\nTranslation: a little pressure sharpens you for routine work; for deep, tricky work (debugging, writing), calm wins.",
-   "hook": "Is the stress you feel today helping simple tasks or hurting complex ones?",
-   "edition": "2026-11-02-am",
-   "order": 36,
-   "id": "2026-11-02-am-036"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Late-November sky diary",
-   "body": "Mark these: Nov 16, Mars passes close to Jupiter. Nov 24, the full Moon is a supermoon. Nov 25, Uranus reaches opposition, its closest and brightest of the year (still needs binoculars and a dark sky).",
-   "source": {
-    "name": "Star Walk · Astronomy calendar 2026",
-    "url": "https://starwalk.space/en/news/astronomy-calendar-2026"
-   },
-   "edition": "2026-11-02-am",
-   "order": 35,
-   "id": "2026-11-02-am-035"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "What the river knows",
-   "body": "It never argues with the stone.\nIt simply goes around,\nand in a thousand years\nthe stone is sand,\nand the river\nis still a river.",
-   "who": "original for this feed",
-   "edition": "2026-11-02-am",
-   "order": 34,
-   "id": "2026-11-02-am-034"
-  },
-  {
-   "topic": "craft",
-   "kind": "tip",
-   "title": "Java 21 virtual threads, in one breath",
-   "body": "Platform threads map one-to-one onto OS threads and are expensive, so you pool them. Virtual threads (final in Java 21) are cheap threads managed by the JVM. When one blocks on I/O, the JVM parks it and frees the carrier thread.\n\nResult: you can write simple blocking code and still handle a million concurrent requests.",
-   "q": "What happens to a virtual thread when it blocks on I/O?",
-   "a": "The JVM unmounts it from its carrier OS thread, which is freed to run another virtual thread.",
-   "edition": "2026-11-02-am",
-   "order": 33,
-   "id": "2026-11-02-am-033"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Zero gets its rules",
-   "body": "In 628 CE the mathematician Brahmagupta, in his Brahmasphutasiddhanta, wrote the first known rules for doing arithmetic with zero as a number in its own right: a number minus itself is zero, anything times zero is zero. He also wrestled with division by zero, a problem that still trips up our code.",
-   "q": "Who first wrote down arithmetic rules for zero, and when?",
-   "a": "Brahmagupta, in 628 CE.",
-   "edition": "2026-11-02-am",
-   "order": 32,
-   "id": "2026-11-02-am-032"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "body": "Men are disturbed not by things, but by the principles and notions which they form concerning things.",
-   "who": "Epictetus, Enchiridion 5 (tr. Carter, 1758)",
-   "edition": "2026-11-02-am",
-   "order": 31,
-   "id": "2026-11-02-am-031"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Body doubling",
-   "body": "Some tasks get done simply because someone else is in the room. That's body doubling. The other person doesn't help; their presence just anchors your attention.\n\nWorks remotely too: a silent video call with a friend, or a 'focus room' online. Even saying \"I'm starting X now\" to someone counts.",
-   "hook": "Who could be your silent co-worker for one hour this week?",
-   "edition": "2026-11-02-am",
-   "order": 30,
-   "id": "2026-11-02-am-030"
   }
  ]
 }
