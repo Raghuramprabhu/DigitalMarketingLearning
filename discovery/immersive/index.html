@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080d16">
+<meta name="description" content="A cinematic, playable learning world. Step into a Chennai restaurant and uncover the 229 missing customers.">
+<title>THE 229 — Discovery: Immersive Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./world.css">
+<script src="./world.js" defer></script>
+</head>
+<body data-scene="intro">
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#071327"/><stop offset=".66" stop-color="#18354a"/><stop offset="1" stop-color="#1b303b"/></linearGradient>
+ <linearGradient id="asphalt" x1="0" x2=".1" y1="0" y2="1"><stop stop-color="#131d29"/><stop offset="1" stop-color="#080f1c"/></linearGradient>
+ <linearGradient id="warmwall" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#473b35"/><stop offset=".5" stop-color="#6b4833"/><stop offset="1" stop-color="#261e25"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#80e2eb" stop-opacity=".26"/><stop offset="1" stop-color="#0b2a42" stop-opacity=".45"/></linearGradient>
+ <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe2a9"/><stop offset=".55" stop-color="#fca76a"/><stop offset="1" stop-color="#ac6074"/></linearGradient>
+ <radialGradient id="lamp"><stop stop-color="#ffcb79" stop-opacity=".65"/><stop offset="1" stop-color="#ffcb79" stop-opacity="0"/></radialGradient>
+ <pattern id="buildingWindows" width="34" height="38" patternUnits="userSpaceOnUse"><rect x="10" y="10" width="12" height="17" rx="1" fill="#e9cf9b" opacity=".34"/><rect x="10" y="10" width="12" height="17" rx="1" fill="#79bace" opacity=".1"/></pattern>
+ <pattern id="gridlines" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#46baca" stroke-width="1" opacity=".14"/></pattern>
+ <filter id="softglow"><feGaussianBlur stdDeviation="18"/></filter>
+ <filter id="neonglow"><feGaussianBlur stdDeviation="5"/></filter>
+</defs></svg>
+<div id="app">
+ <header class="hud">
+  <div class="identity"><span class="logo">D<span>✳</span></span><span class="identity-text">DISCOVERY <small>WORLD 002 / THE 229</small></span></div>
+  <div class="chapter-status"><span id="chapter-label">PROLOGUE</span><div class="dots" id="progress-dots" aria-label="Story progress"></div></div>
+  <div class="hud-actions">
+   <button type="button" class="iconbtn" id="audio-btn" aria-pressed="false" title="Turn ambient sound on or off">♫ <span>Sound off</span></button>
+   <button type="button" class="iconbtn" id="voice-btn" aria-pressed="false" title="Turn spoken narration on or off">◉ <span>Voice off</span></button>
+   <button type="button" class="iconbtn" id="motion-btn" aria-pressed="false" title="Reduce motion">✧ <span>Motion</span></button>
+  </div>
+ </header>
+ <main class="stage" id="stage">
+  <div class="city-art" aria-hidden="true">
+   <svg class="world-svg" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice">
+    <rect width="1440" height="820" fill="url(#sky)"/>
+    <circle cx="1203" cy="118" r="65" fill="#b8d8d0" opacity=".21" filter="url(#softglow)"/>
+    <circle cx="1203" cy="118" r="36" fill="#e0eee5" opacity=".69"/>
+    <g opacity=".55"><path d="M0 245H1440V575H0Z" fill="#112638"/><path d="M0 416V250H104V179H253V315H325V210H474V374H510V270H605V431H740V186H895V305H992V210H1100V283H1213V173H1377V340H1440V570Z" fill="#172839"/><path d="M0 416V250H104V179H253V315H325V210H474V374H510V270H605V431H740V186H895V305H992V210H1100V283H1213V173H1377V340H1440V570Z" fill="url(#buildingWindows)"/></g>
+    <path d="M0 570L1440 570V820H0Z" fill="#101924"/>
+    <path d="M0 650L1440 630V820H0Z" fill="url(#asphalt)"/>
+    <path d="M720 630L30 820M720 630L1300 820" stroke="#d2a36d" stroke-width="3" opacity=".16"/>
+    <g opacity=".33" stroke="#5cb9c1" stroke-width="3"><path d="M35 765h230M710 742h330M1080 785h200"/></g>
+    <g class="street-shop">
+     <rect x="383" y="292" width="670" height="316" rx="6" fill="#352d2e"/>
+     <rect x="389" y="325" width="656" height="270" fill="#614432"/>
+     <rect x="426" y="386" width="240" height="207" fill="#af7654"/>
+     <rect x="433" y="393" width="226" height="195" fill="#eeb679" opacity=".27"/>
+     <rect x="687" y="383" width="310" height="208" fill="#141e2b"/>
+     <rect x="702" y="399" width="280" height="190" fill="url(#glass)"/>
+     <g fill="#2c252b"><path d="M468 588v-81h36v81zm91 0v-95h43v95zm183 0V480h48v108zm126 0V488h47v100z"/></g>
+     <rect x="388" y="267" width="660" height="89" rx="9" fill="#261c28" stroke="#c88361" stroke-width="3"/>
+     <text x="718" y="327" text-anchor="middle" font-family="Georgia,serif" font-size="58" letter-spacing="7" fill="#ffc991">MEENA'S</text>
+     <text x="718" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" letter-spacing="7" fill="#e6c3a0">DOSA  ·  COFFEE  ·  CHENNAI</text>
+     <g class="awning"><rect x="367" y="355" width="696" height="27" rx="2" fill="#b96551"/><path d="M390 355h55l-12 27h-54zm107 0h55l-12 27h-54zm107 0h55l-12 27h-54zm107 0h55l-12 27h-54zm107 0h55l-12 27h-54zm107 0h55l-12 27h-54z" fill="#f6c29a"/></g>
+     <path d="M676 383v208M390 594h658" stroke="#a87853" stroke-width="7"/>
+     <ellipse cx="720" cy="612" rx="336" ry="17" fill="#ed9c60" opacity=".15" filter="url(#softglow)"/>
+    </g>
+    <g class="auto-rickshaw" transform="translate(1035 612)"><path d="M0 0h130l45 50H-35z" fill="#101b1d"/><path d="M10 0h105l33 41H-17z" fill="#d7ae43"/><path d="M15 6h85l25 27H-1z" fill="#152e2e"/><circle cx="2" cy="51" r="21" fill="#121a1c" stroke="#577379" stroke-width="4"/><circle cx="136" cy="51" r="21" fill="#121a1c" stroke="#577379" stroke-width="4"/><circle cx="-24" cy="36" r="8" fill="#f7d9aa"/></g>
+    <g class="human" transform="translate(266 562)"><circle cy="0" cx="0" r="13" fill="#0d1520"/><path d="M-17 15q17-12 34 0l8 72h-52z" fill="#111c29"/><path d="M-9 87l-7 47m25-47l10 47" stroke="#111c29" stroke-width="13" stroke-linecap="round"/></g>
+    <g opacity=".3" fill="#e8bd90"><ellipse cx="620" cy="695" rx="183" ry="10"/><ellipse cx="1136" cy="756" rx="180" ry="7"/></g>
+   </svg>
+  </div>
+  <canvas id="weather" class="weather" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="letterbox top" aria-hidden="true"></div><div class="letterbox bottom" aria-hidden="true"></div>
+  <section class="scene active intro-scene" data-scene="intro" aria-label="Prologue">
+   <div class="intro-title"><div class="micro">CHENNAI, INDIA <span class="flicker">●</span> 9:47 PM</div><p class="super">THE CASE OF</p><h1>THE <em>229</em></h1><p class="subhead">They clicked. Then they vanished.</p><button class="big-cta" data-go="street">STEP INTO THE NIGHT <span>↗</span></button><p class="hint">A playable investigation · Headphones optional · 10–20 minutes</p></div>
+  </section>
+  <section class="scene street-scene" data-scene="street" aria-label="Street outside Meena's">
+   <div class="locator top-locator">✦ EAST CHENNAI <span>·</span> 9:47 PM <span>·</span> DRIZZLE</div>
+   <div class="cinematic-label"><div class="eyebrow">LOCATION 01</div><h2>Meena's<br><em>after hours.</em></h2><p>One shop. One failed campaign.<br>229 unanswered questions.</p></div>
+   <button type="button" class="world-hotspot enter-shop" data-go="shop"><span class="pulse"></span><span class="hotspot-icon">↗</span><span class="hotspot-text">ENTER THE SHOP</span></button>
+   <div class="scene-prompt">MOVE CLOSER <span>↗</span> TO THE LIGHT</div>
+  </section>
+  <section class="scene shop-scene" data-scene="shop" aria-label="Meena's restaurant interior">
+   <svg class="world-svg" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1440" height="820" fill="url(#warmwall)"/><rect y="550" width="1440" height="270" fill="#292129"/>
+    <path d="M0 600L1440 600M0 700L1440 700M360 550L100 820M760 550L790 820M1110 550L1380 820" stroke="#b28e65" stroke-width="3" opacity=".24"/>
+    <rect x="94" y="140" width="428" height="343" rx="11" fill="#191d25" stroke="#9a785e" stroke-width="13"/>
+    <rect x="112" y="156" width="392" height="307" fill="#15293a"/><rect x="112" y="156" width="392" height="307" fill="url(#glass)"/>
+    <path d="M300 158V467M112 320H503" stroke="#977c68" stroke-width="12"/>
+    <path d="M115 422L285 320L423 420" fill="none" stroke="#7394a2" stroke-width="9" opacity=".3"/>
+    <rect x="595" y="144" width="339" height="248" rx="8" fill="#292b2a" stroke="#ad7851" stroke-width="15"/><text x="765" y="205" text-anchor="middle" fill="#f3ddaf" font-family="Georgia" font-size="33">MEENA'S</text><text x="765" y="253" text-anchor="middle" fill="#d2c7b7" font-size="19" font-family="Arial">DOSA OF THE DAY</text><text x="765" y="292" text-anchor="middle" fill="#eab780" font-size="21" font-family="Arial">GHEE ROAST</text><path d="M650 324H876" stroke="#eab780" opacity=".6"/><text x="765" y="354" text-anchor="middle" fill="#eee2c7" font-size="16" font-family="Arial">ORDER · ENJOY · REPEAT</text>
+    <path d="M0 65h1440" stroke="#231922" stroke-width="15"/>
+    <g class="pendulum"><path d="M310 0v147" stroke="#251c1f" stroke-width="5"/><path d="M260 147h100l-24 36h-52z" fill="#1f1a20"/><ellipse cx="310" cy="191" rx="116" ry="120" fill="url(#lamp)"/></g>
+    <g class="pendulum delay2"><path d="M1030 0v112" stroke="#251c1f" stroke-width="5"/><path d="M976 112h110l-29 40h-54z" fill="#1f1a20"/><ellipse cx="1030" cy="160" rx="120" ry="140" fill="url(#lamp)"/></g>
+    <g><rect x="995" y="215" width="390" height="300" rx="6" fill="#161b22" stroke="#916e51" stroke-width="12"/><rect x="1009" y="229" width="362" height="266" fill="#2c3338"/><rect x="1032" y="250" width="318" height="200" fill="#382f2c"/>
+    <g class="steam" stroke="#f3e6ca" opacity=".52" fill="none" stroke-width="7" stroke-linecap="round"><path d="M1110 363q-18-20 0-40t0-40"/><path d="M1170 349q-18-20 0-40t0-40"/><path d="M1233 352q-18-20 0-40t0-40"/></g>
+    <ellipse cx="1175" cy="420" rx="110" ry="15" fill="#c3c0ae"/><ellipse cx="1175" cy="419" rx="88" ry="9" fill="#ddad68"/></g>
+    <rect x="0" y="517" width="1440" height="59" fill="#8d5738"/><rect x="0" y="557" width="1440" height="125" fill="#43302b"/><path d="M0 561H1440" stroke="#e4b37a" stroke-width="4" opacity=".45"/>
+    <g class="tablet"><rect x="247" y="475" width="188" height="120" rx="13" fill="#121b25" stroke="#748e94" stroke-width="5"/><rect x="262" y="488" width="158" height="90" rx="4" fill="#214b56"/><path d="M278 548h46l30-36 41 12" fill="none" stroke="#8cf0d3" stroke-width="7"/><circle cx="357" cy="524" r="7" fill="#ffcb80"/></g>
+    <g class="phone-art"><rect x="778" y="470" width="85" height="138" rx="15" fill="#131820" stroke="#d8c6a2" stroke-width="4"/><rect x="786" y="487" width="69" height="99" rx="4" fill="#306b64"/><path d="M804 505h31m-31 14h40m-40 14h30" stroke="#bdece0" stroke-width="4"/><circle cx="822" cy="598" r="4" fill="#f2d8b5"/></g>
+    <g class="order-chit"><rect x="1120" y="467" width="155" height="133" fill="#f8eac8" transform="rotate(-6 1120 467)"/><path d="M1140 498h97m-97 20h76m-76 20h85m-85 20h55" stroke="#a4a28b" stroke-width="5"/></g>
+    <g transform="translate(660 357)"><ellipse cx="0" cy="22" rx="53" ry="52" fill="#1e2025"/><circle cx="0" cy="-4" r="34" fill="#a66f51"/><path d="M-35 -15q35-72 72 0" fill="#202229"/><path d="M-68 105q5-83 68-83t68 83z" fill="#d2ad85"/><path d="M-25 51v85M25 51v85" stroke="#f2d4b4" stroke-width="7" opacity=".6"/></g>
+   </svg>
+   <div class="locator">INSIDE MEENA'S <span>·</span> EVIDENCE ROOM</div>
+   <div class="scene-task" id="shop-task">LOOK AROUND · TOUCH THE GLOWING OBJECTS</div>
+   <button class="object-hotspot shop-tablet" data-clue="ad" aria-label="Inspect advertisement dashboard"><span>01</span><b>THE AD</b></button>
+   <button class="object-hotspot shop-phone" data-clue="phone" aria-label="Inspect phone orders"><span>02</span><b>THE PHONE</b></button>
+   <button class="object-hotspot shop-ticket" data-clue="tickets" aria-label="Inspect order tickets"><span>03</span><b>THE ORDERS</b></button>
+   <div class="shop-score" id="shop-score">0 / 3 CLUES</div>
+   <button type="button" class="bottom-cta" id="follow-customers" data-go="routes" hidden>FOLLOW THE MISSING CLICKS <span>→</span></button>
+  </section>
+  <section class="scene routes-scene" data-scene="routes" aria-label="Find the missing customers">
+   <svg class="world-svg" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1440" height="820" fill="url(#sky)"/><circle cx="1150" cy="120" r="59" fill="#a2c9d5" opacity=".45"/>
+    <path d="M0 290L200 260 250 350 425 210 575 330 720 175 880 270 1050 190 1220 270 1440 180V820H0Z" fill="#13283a"/>
+    <rect x="65" y="210" width="372" height="480" fill="#253b4f"/><rect x="83" y="245" width="330" height="384" fill="#416471" opacity=".7"/><path d="M83 330h330M83 460h330M83 590h330M190 245v385M300 245v385" stroke="#b2cccf" stroke-width="10" opacity=".28"/>
+    <rect x="535" y="155" width="370" height="540" fill="#203248"/><rect x="566" y="223" width="313" height="404" fill="#2b4c5f"/><path d="M566 361h313M566 491h313M684 223v404" stroke="#a1bbc4" stroke-width="9" opacity=".28"/>
+    <rect x="996" y="249" width="363" height="445" fill="#292d40"/><rect x="1013" y="294" width="329" height="307" fill="#5f5152"/><path d="M1013 405h329M1013 525h329M1134 294v307" stroke="#e2ba9f" stroke-width="9" opacity=".33"/>
+    <rect y="688" width="1440" height="132" fill="#081521"/>
+    <path d="M0 695h1440" stroke="#4cc8b1" stroke-width="2" opacity=".2"/>
+   </svg>
+   <div class="locator">THE CITY <span>·</span> 3 UNFINISHED STORIES</div>
+   <div class="world-heading"><span>FOLLOW THE SIGNALS</span><h2>Three people.<br><em>Three different worlds.</em></h2></div>
+   <div class="portal-grid">
+    <button class="portal" data-go="priya"><span class="portal-number">01 / TIMELINE</span><span class="portal-symbol">☼</span><strong>PRIYA</strong><small>2:00 PM · Office</small><span class="portal-state" id="priya-state">ENTER →</span></button>
+    <button class="portal" data-go="arjun"><span class="portal-number">02 / TIMELINE</span><span class="portal-symbol">◷</span><strong>ARJUN</strong><small>8:30 PM · Home</small><span class="portal-state" id="arjun-state">ENTER →</span></button>
+    <button class="portal" data-go="kavya"><span class="portal-number">03 / TIMELINE</span><span class="portal-symbol">✦</span><strong>KAVYA</strong><small>9:00 AM · Reviews</small><span class="portal-state" id="kavya-state">ENTER →</span></button>
+   </div>
+   <button class="bottom-cta" id="control-room-entry" data-go="lab" hidden>UNLOCK THE CONTROL ROOM <span>↗</span></button>
+  </section>
+  <section class="scene person-scene priya-scene" data-scene="priya" aria-label="Priya's story: timing">
+   <svg class="world-svg" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1440" height="820" fill="#273449"/><rect x="62" y="46" width="1272" height="550" fill="#a3bac3" opacity=".28" stroke="#b3c2cb" stroke-width="18"/>
+    <rect x="82" y="65" width="1233" height="511" fill="#7893aa" class="window-sky"/><path d="M82 382L225 320 350 385 499 286 690 392 860 320 1018 385 1190 298 1315 352V576H82Z" fill="#3b6378" opacity=".75"/>
+    <g fill="#4c6374"><path d="M120 329h105v244H120zm176-73h120v317H296zm222 116h95v201h-95zm206-101h155v302H724zm244 43h146v259H968zm194-98h125v357h-125z"/></g>
+    <path d="M500 66v512M905 66v512" stroke="#d2d9d8" stroke-width="20"/>
+    <rect y="577" width="1440" height="243" fill="#252530"/>
+    <rect x="150" y="554" width="1080" height="50" rx="8" fill="#bd9a77"/><rect x="200" y="604" width="46" height="216" fill="#5e5152"/><rect x="1100" y="604" width="46" height="216" fill="#5e5152"/>
+    <g class="laptop"><path d="M410 543L385 323h400l30 220z" fill="#252936" stroke="#8b9fad" stroke-width="8"/><circle cx="597" cy="427" r="26" fill="#b1d4d8" opacity=".35"/><rect x="350" y="545" width="500" height="18" rx="9" fill="#9cb0b9"/></g>
+    <ellipse cx="997" cy="556" rx="105" ry="22" fill="#f7deb2"/><path d="M925 552q70-68 138 0z" fill="#d4a568"/>
+    <g transform="translate(1048 287)"><circle r="58" fill="#bb8063"/><path d="M-57-12q-26-96 60-105 80 25 50 111l-25-61-54 0z" fill="#1d222d"/><path d="M-107 200q-8-137 107-137t107 137z" fill="#637ba2"/><path d="M-40 75l26 70 35-70" fill="none" stroke="#b9ad9c" stroke-width="10"/></g>
+   </svg>
+   <div class="locator">WITNESS 01 <span>·</span> PRIYA</div>
+   <div class="scene-sidebar"><div class="eyebrow">THE EXPERIMENT</div><h2>Same ad.<br>Different moment.</h2><p>Touch the time buttons.<br>Watch what changes.</p></div>
+   <div class="time-trial">
+    <div class="time-display"><span>LOCAL TIME</span><strong id="priya-time">2:00 <small>PM</small></strong></div>
+    <div class="toggle-duo"><button id="priya-day" class="active" data-priya="day">☼ 2 PM</button><button id="priya-night" data-priya="night">☾ 7 PM</button></div>
+    <div class="reaction" id="priya-reaction"><span>💭</span><strong>“I've already eaten.”</strong><small>Scrolls past the ad.</small></div>
+    <button class="trial-complete" id="priya-solve" hidden data-solve="priya">I SEE THE PATTERN ↗</button>
+   </div>
+  </section>
+  <section class="scene person-scene arjun-scene" data-scene="arjun" aria-label="Arjun's story: friction">
+   <svg class="world-svg" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1440" height="820" fill="#253145"/><rect x="80" y="62" width="530" height="490" rx="10" fill="#141f30" stroke="#796d71" stroke-width="16"/>
+    <rect x="103" y="85" width="484" height="445" fill="#10263d"/><g fill="#c6b4a0" opacity=".5"><rect x="144" y="248" width="102" height="281"/><rect x="273" y="174" width="133" height="355"/><rect x="435" y="282" width="101" height="247"/></g>
+    <path d="M345 85V529M103 330H588" stroke="#859ba7" stroke-width="13" opacity=".6"/>
+    <rect y="566" width="1440" height="254" fill="#302936"/><rect x="12" y="530" width="1300" height="72" rx="25" fill="#755863"/><rect x="70" y="584" width="1190" height="210" rx="12" fill="#483c4a"/>
+    <g transform="translate(940 253)"><circle r="61" fill="#b87e61"/><path d="M-60-12q-19-96 48-105 109 7 74 111l-29-64-62 3z" fill="#171d27"/><path d="M-142 250q0-167 142-167t142 167z" fill="#384d65"/><path d="M-56 90q12 75 55 85 44-9 56-85" stroke="#b27e63" stroke-width="12" fill="none"/></g>
+    <g transform="translate(1015 552) rotate(-12)"><rect width="118" height="188" rx="20" fill="#151921" stroke="#e3cbad" stroke-width="6"/><rect x="10" y="18" width="98" height="145" rx="8" fill="#204b50"/><path d="M25 53h65M25 79h52M25 105h64" stroke="#d0e8d9" stroke-width="6"/><circle cx="60" cy="175" r="7" fill="#ddc8ad"/></g>
+    <circle cx="349" cy="157" r="40" fill="#d2e5df" opacity=".4"/>
+   </svg>
+   <div class="locator">WITNESS 02 <span>·</span> ARJUN</div>
+   <div class="scene-sidebar"><div class="eyebrow">THE EXPERIMENT</div><h2>Hungry.<br>Ready.<br><em>Waiting.</em></h2><p>Drag the reply time.<br>Watch the order.</p></div>
+   <div class="time-trial">
+    <div class="time-display"><span>RESPONSE DELAY</span><strong id="wait-time">45 <small>MIN</small></strong></div>
+    <input type="range" id="wait-slider" min="1" max="60" value="45" step="1" aria-label="Response delay in minutes">
+    <div class="range-ends"><span>1 MIN</span><span>60 MIN</span></div>
+    <div class="patience"><div id="patience-fill"></div></div>
+    <div class="reaction" id="arjun-reaction"><span>💬</span><strong>“I'll order somewhere else.”</strong><small>Customer left.</small></div>
+    <button class="trial-complete" id="arjun-solve" hidden data-solve="arjun">I SEE THE PATTERN ↗</button>
+    <p class="tiny-note">Illustrative behavior, not a measured abandonment model.</p>
+   </div>
+  </section>
+  <section class="scene person-scene kavya-scene" data-scene="kavya" aria-label="Kavya's story: trust">
+   <svg class="world-svg" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1440" height="820" fill="#473b4d"/>
+    <circle cx="194" cy="170" r="300" fill="#eeab7d" opacity=".24" filter="url(#softglow)"/>
+    <rect x="25" y="70" width="610" height="460" rx="18" fill="#614c50"/><rect x="50" y="90" width="560" height="416" fill="#b8886d"/>
+    <path d="M50 340l200-170 180 135 180-156v357H50Z" fill="#d4a486" opacity=".7"/><path d="M335 90v415" stroke="#e8bd9b" stroke-width="15"/>
+    <rect y="560" width="1440" height="260" fill="#2e2b39"/>
+    <ellipse cx="1032" cy="625" rx="350" ry="68" fill="#7d5d57"/><ellipse cx="1032" cy="613" rx="350" ry="63" fill="#a0786c"/>
+    <g transform="translate(425 298)"><circle r="72" fill="#bf8d70"/><path d="M-70-20q-35-130 70-134 91 19 73 144L35-86l-79 2z" fill="#2c2430"/><path d="M-155 280q-5-174 155-174t155 174z" fill="#977e9e"/></g>
+    <g transform="translate(900 240) rotate(9)"><rect width="248" height="416" rx="35" fill="#171923" stroke="#dfbb96" stroke-width="11"/><rect x="17" y="24" width="214" height="354" rx="18" fill="#24374b"/><rect x="71" y="13" width="105" height="12" rx="6" fill="#12121a"/><text x="124" y="100" fill="#f4dbb7" font-size="28" text-anchor="middle">MEENA'S</text><text x="124" y="140" fill="#f3b76c" font-size="30" text-anchor="middle">★ ★ ★ ☆ ☆</text><path d="M39 176H210M39 209H179M39 242H200" stroke="#8c9fad" stroke-width="8" opacity=".6"/><rect x="40" y="292" width="164" height="42" rx="12" fill="#b36f57"/><text x="122" y="319" fill="#f5e4ca" font-size="21" text-anchor="middle">ORDER?</text></g>
+   </svg>
+   <div class="locator">WITNESS 03 <span>·</span> KAVYA</div>
+   <div class="scene-sidebar"><div class="eyebrow">THE EXPERIMENT</div><h2>She likes<br>the food.<br><em>But hesitates.</em></h2><p>Tap honest evidence.<br>Does confidence change?</p></div>
+   <div class="time-trial">
+    <div class="time-display"><span>WHAT DOES KAVYA SEE?</span><strong id="trust-number">?</strong></div>
+    <div class="proofs">
+     <button class="proof-option" data-proof="kitchen">✧ <span>Real kitchen photos</span><b>+</b></button>
+     <button class="proof-option" data-proof="reviews">✧ <span>Verified customer reviews</span><b>+</b></button>
+     <button class="proof-option" data-proof="delivery">✧ <span>Clear delivery details</span><b>+</b></button>
+    </div>
+    <div class="reaction" id="kavya-reaction"><span>🤔</span><strong>“Can I trust this place?”</strong><small>Looking for evidence.</small></div>
+    <button class="trial-complete" id="kavya-solve" hidden data-solve="kavya">I SEE THE PATTERN ↗</button>
+    <p class="tiny-note">Show genuine evidence. Never fabricate reviews or guarantees.</p>
+   </div>
+  </section>
+  <section class="scene lab-scene" data-scene="lab" aria-label="Control room marketing simulator">
+   <div class="lab-background" aria-hidden="true"><div class="holo-sun"></div><div class="holo-floor"></div><div class="lab-ring ring-a"></div><div class="lab-ring ring-b"></div><div class="lab-ring ring-c"></div></div>
+   <div class="locator">CONTROL ROOM <span>·</span> SIMULATION ACTIVE</div>
+   <div class="lab-layout">
+    <div class="lab-header"><div class="eyebrow">THE SYSTEM IS YOURS</div><h2>CHANGE THE<br><em>OUTCOME.</em></h2><p>Same 8,400 people. Can you get 60 orders without buying more attention?</p><div class="mission"><span class="mission-led" id="mission-led"></span><span id="mission-text">MISSION · REACH 60 ORDERS</span></div></div>
+    <div class="lab-panel">
+     <div class="control-title">LIVE CAMPAIGN <span>MODEL / 001</span></div>
+     <div class="machine-surface"><div class="machine-radar" id="radar"><div class="radar-inner"><span>EXPECTED ORDERS</span><strong id="orders-live">31</strong><small id="orders-gain">BASELINE</small></div></div><div class="mini-flow"><div class="flow-row"><span>SEEN</span><i><b style="width:100%"></b></i><strong>8,400</strong></div><div class="flow-row"><span>CLICKED</span><i><b id="clicked-bar"></b></i><strong id="clicks-live">260</strong></div><div class="flow-row"><span>ORDERED</span><i><b id="ordered-bar"></b></i><strong id="orders-small">31</strong></div></div></div>
+     <div class="control"><label for="click-control"><span>CLICK RATE</span><strong id="click-rate">3.1%</strong></label><input id="click-control" type="range" min="1" max="8" step=".1" value="3.1"></div>
+     <div class="control"><label for="convert-control"><span>ORDER RATE AFTER CLICK</span><strong id="convert-rate">12%</strong></label><input id="convert-control" type="range" min="2" max="35" step="1" value="12"></div>
+     <div class="lab-actions"><button class="ghost" id="reset-lab">↺ RESET</button><button class="trial-complete" id="lab-solve" hidden data-go="challenge">MISSION COMPLETE · NEXT ↗</button></div>
+     <div class="tiny-note">Illustrative mathematics, not a forecast. In reality rates and audience quality can change together.</div>
+    </div>
+   </div>
+  </section>
+  <section class="scene challenge-scene" data-scene="challenge" aria-label="Final transfer challenge">
+   <svg class="world-svg" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="1440" height="820" fill="#0b172b"/>
+    <g opacity=".7"><rect x="80" y="90" width="310" height="620" rx="10" fill="#182a3d" stroke="#4b6d81" stroke-width="9"/><rect x="422" y="90" width="310" height="620" rx="10" fill="#182a3d" stroke="#4b6d81" stroke-width="9"/><rect x="764" y="90" width="310" height="620" rx="10" fill="#182a3d" stroke="#4b6d81" stroke-width="9"/><rect x="1106" y="90" width="250" height="620" rx="10" fill="#182a3d" stroke="#4b6d81" stroke-width="9"/></g>
+    <g fill="#08121d" stroke="#5c8190" stroke-width="3"><rect x="100" y="140" width="270" height="90" rx="4"/><rect x="100" y="258" width="270" height="90" rx="4"/><rect x="100" y="376" width="270" height="90" rx="4"/><rect x="100" y="494" width="270" height="90" rx="4"/><rect x="442" y="140" width="270" height="90" rx="4"/><rect x="442" y="258" width="270" height="90" rx="4"/><rect x="442" y="376" width="270" height="90" rx="4"/><rect x="442" y="494" width="270" height="90" rx="4"/><rect x="784" y="140" width="270" height="90" rx="4"/><rect x="784" y="258" width="270" height="90" rx="4"/><rect x="784" y="376" width="270" height="90" rx="4"/><rect x="784" y="494" width="270" height="90" rx="4"/><rect x="1126" y="140" width="210" height="90" rx="4"/><rect x="1126" y="258" width="210" height="90" rx="4"/><rect x="1126" y="376" width="210" height="90" rx="4"/></g>
+    <g fill="#60e0c6" class="rack-lights"><circle cx="126" cy="184" r="7"/><circle cx="467" cy="184" r="7"/><circle cx="812" cy="184" r="7"/><circle cx="1150" cy="184" r="7"/><circle cx="126" cy="300" r="7"/><circle cx="467" cy="300" r="7"/><circle cx="812" cy="300" r="7"/><circle cx="1150" cy="300" r="7"/></g><circle cx="814" cy="419" r="7" fill="#f18b81"/>
+    <rect y="700" width="1440" height="120" fill="#09101b"/>
+   </svg>
+   <div class="locator">NEW WORLD <span>·</span> INCIDENT #427</div>
+   <div class="challenge-content">
+    <div class="eyebrow">TRANSFER TEST</div><h2>DIFFERENT WORLD.<br><em>SAME PATTERN?</em></h2>
+    <div class="incident"><div class="incident-title"><span class="red-pulse"></span> CHECKOUT ALERT · ACTIVE</div><div class="metrics"><div><small>TRAFFIC</small><strong>UNCHANGED</strong></div><div><small>ORDERS</small><strong class="red">−40%</strong></div><div><small>PAYMENT SUCCESS</small><strong class="red">FALLING</strong></div></div><p>The team wants to add servers. What would you inspect first?</p></div>
+    <div class="diagnosis-options"><button data-diagnose="traffic">↑<span>BUY MORE TRAFFIC</span></button><button data-diagnose="servers">▣<span>ADD SERVERS</span></button><button data-diagnose="payments">⌕<span>TRACE PAYMENT FAILURES</span></button></div>
+    <div id="diagnosis-feedback" class="diagnosis-feedback" role="status"></div><button id="finish-episode" class="big-cta" data-go="ending" hidden>SEE WHAT YOU DISCOVERED ↗</button>
+   </div>
+  </section>
+  <section class="scene ending-scene" data-scene="ending" aria-label="Episode ending">
+   <div class="ending-glow" aria-hidden="true"></div>
+   <div class="ending-content"><div class="micro">CASE RESOLVED <span class="flicker">●</span> DISCOVERY 002</div><div class="emblem">✳</div><h2>YOU DIDN'T<br>CHASE THE NUMBERS.<br><em>YOU FOUND THE CAUSE.</em></h2><div class="insight-bridge"><span>MARKETING</span><b>↔</b><span>SOFTWARE</span><b>↔</b><span>EVERY SYSTEM</span></div><p>Similar symptoms can hide different causes. Observe. Test. Then act.</p><div class="ending-actions"><button class="big-cta" id="restart">PLAY AGAIN ↺</button><a class="text-link" href="../">READ THE ORIGINAL VERSION ↗</a></div><div class="tiny-note">You have completed the story. Explore any scene from the chapter menu.</div></div>
+  </section>
+  <div class="subtitle" id="subtitle" role="status" aria-live="polite"><span class="subtitle-speaker" id="subtitle-speaker">NARRATOR</span><span id="subtitle-line">A light is still on. Someone is waiting for answers.</span><button class="replay" type="button" id="replay" title="Replay narration">↺</button></div>
+  <div class="wipe" id="wipe" aria-hidden="true"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+ </main>
+ <nav class="dock" aria-label="World navigation"><button id="back-btn" type="button">← <span>BACK</span></button><span class="dock-title" id="dock-title">THE 229 <span class="glow-dot">◆</span> WORLD 002</span><button id="menu-btn" type="button" aria-expanded="false" aria-controls="chapter-menu">MAP <span>☰</span></button></nav>
+ <div class="chapter-menu" id="chapter-menu" hidden><div class="menu-head"><span>SCENE SELECT</span><button id="close-menu" aria-label="Close chapter menu">×</button></div><button data-go="street">01 · THE STREET</button><button data-go="shop">02 · THE SHOP</button><button data-go="routes">03 · THE WITNESSES</button><button data-go="lab" class="gated">04 · CONTROL ROOM <span>AFTER 3 WITNESSES</span></button><button data-go="challenge" class="gated">05 · THE FINAL TEST <span>AFTER THE LAB</span></button><a href="../">← ORIGINAL EDITION</a><div class="menu-foot">Progress is stored only in this browser. No account, tracking or external AI API.</div></div>
+</div>
+</body></html>
