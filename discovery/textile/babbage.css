@@ -173,8 +173,8 @@
 .bb-source-links a{color:#8aeacb;font-size:10px;text-decoration:none;letter-spacing:.07em;border-bottom:1px solid #8aeacb;padding-bottom:4px}
 .bb-finale-cta{display:flex;gap:10px;flex-wrap:wrap}
 .bb-legal{color:#9eb9b7;font-size:10px;line-height:1.5}
-@keyframes bbClockwise{to{transform:rotate(360deg)}}
-@keyframes bbAnti{to{transform:rotate(-360deg)}}
+@keyframes bbClockwise{to{rotate:360deg}}
+@keyframes bbAnti{to{rotate:-360deg}}
 @keyframes bbNeedle{to{transform:translateX(-15px)}}
 @keyframes bbPulse{50%{opacity:.4;box-shadow:0 0 25px #89ffdf}}
 @keyframes bbSignal{50%{filter:brightness(2);transform:scale(1.035)}}
