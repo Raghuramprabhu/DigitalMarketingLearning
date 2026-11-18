@@ -1,6 +1,347 @@
 {
- "updated": "2026-11-17T17:20:41+00:00",
+ "updated": "2026-11-18T02:13:23+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these from memory before scrolling back: What can a Bloom filter never give? Which moon would a new lander visit? Why is the Thiruvalluvar statue 133 feet tall? What does the Philidor defender do once the pawn reaches the third rank?",
+   "q": "Which of these four could you answer without looking?",
+   "a": "Bloom filter: no false negatives. Callisto. The Kural's 133 chapters. Swing the rook back and check from behind.",
+   "edition": "2026-11-18-am",
+   "order": 29,
+   "id": "2026-11-18-am-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Late tea",
+   "body": "Steam lifts and leans toward the window,\nas if it, too, wants to see the street.\nNo hurry in the cup.\nThe spoon rests where I left it,\nand the evening sits down beside me\nlike an old friend who doesn't need to talk.",
+   "edition": "2026-11-18-am",
+   "order": 28,
+   "id": "2026-11-18-am-028"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "A knight on the rim is dim",
+   "body": "A knight in the centre can reach up to eight squares; on the edge, four at most; in a corner, just two. That's why players try to bring knights toward the middle early, and why a knight stranded on the a- or h-file often needs two moves to get back into the game.",
+   "q": "How many squares can a knight in the corner reach?",
+   "a": "Two.",
+   "edition": "2026-11-18-am",
+   "order": 27,
+   "id": "2026-11-18-am-027"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Bananas are a tiny bit radioactive",
+   "body": "Bananas contain potassium, and a small fraction of all natural potassium is the radioactive isotope potassium-40. The dose is minuscule, far less than what you get from the natural background around you each day. Your own body carries potassium-40 too.",
+   "q": "Which isotope makes bananas slightly radioactive?",
+   "a": "Potassium-40.",
+   "edition": "2026-11-18-am",
+   "order": 26,
+   "id": "2026-11-18-am-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The lotus and the water",
+   "body": "As high as the water rises, so rises the lotus stem; as high as a person's inner drive, so rises their greatness.",
+   "who": "Thirukkural 595 (own rendering)",
+   "edition": "2026-11-18-am",
+   "order": 25,
+   "id": "2026-11-18-am-025"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Circuit breakers: stop knocking on a closed door",
+   "body": "When a downstream service keeps failing, a circuit breaker stops calling it for a while. Closed: calls pass through, failures are counted. Open: calls fail fast, without waiting. Half-open: after a pause, a few trial calls go through; if they succeed, the breaker closes again. The struggling service gets room to recover, and your threads aren't tied up waiting.",
+   "q": "What happens in the half-open state of a circuit breaker?",
+   "a": "A few trial calls are let through; success closes the breaker, failure reopens it.",
+   "edition": "2026-11-18-am",
+   "order": 24,
+   "id": "2026-11-18-am-024"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Name tasks by their first move",
+   "body": "'Taxes' sits on a list for weeks. 'Find last year's Form 16 in the blue folder' gets done. Rename a stuck task as the first physical action, starting with a verb, and it stops being a cloud and becomes a step.",
+   "hook": "Wonder: what's the very first physical move of the task you've been avoiding?",
+   "edition": "2026-11-18-am",
+   "order": 23,
+   "id": "2026-11-18-am-023"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Finding your way round the Moon with shadows",
+   "body": "A new preprint by Ian Down, James McElreath and Manoranjan Majji suggests a spacecraft orbiting the Moon could work out where it is from its own solar-panel power readings: the exact moments it slips into and out of the Moon's shadow reveal its position. The idea could ease demand on NASA's busy Deep Space Network.",
+   "q": "What everyday onboard measurement does the proposed lunar-navigation trick use?",
+   "a": "The solar arrays' power output as the craft enters and leaves eclipse.",
+   "source": {
+    "name": "Universe Today",
+    "url": "https://www.universetoday.com/articles/navigating-lunar-orbit-using-nothing-but-shadows-and-a-power-meter"
+   },
+   "edition": "2026-11-18-am",
+   "order": 22,
+   "id": "2026-11-18-am-022"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first mouse was made of wood",
+   "body": "The first computer mouse, built in the 1960s by Douglas Engelbart and Bill English at SRI, was a wooden block with two metal wheels set at right angles and a single button. Engelbart showed it to the world in his 1968 demonstration, along with hypertext and shared-screen editing.",
+   "hook": "Wonder: why two wheels at right angles?",
+   "edition": "2026-11-18-am",
+   "order": 21,
+   "id": "2026-11-18-am-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "133 feet for 133 chapters",
+   "body": "The Thiruvalluvar statue at Kanyakumari, unveiled on 1 January 2000, is 133 feet tall: a 95-foot figure standing on a 38-foot pedestal. The height honours the 133 chapters (adhikarams) of the Thirukkural, and the pedestal's 38 feet echo the 38 chapters of its first book, on virtue (aram).",
+   "q": "Why is the Thiruvalluvar statue 133 feet tall?",
+   "a": "To match the 133 chapters of the Thirukkural.",
+   "edition": "2026-11-18-am",
+   "order": 20,
+   "id": "2026-11-18-am-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let a room tell you who lives there",
+   "body": "Before you describe a character, describe one corner of their room. A shelf of library books three weeks overdue, a mug washed and turned upside down, a calendar still on last month. Readers will build the person themselves, and they'll trust that person more because they did the work.",
+   "q": "What's a quick way to reveal a character without describing them?",
+   "a": "Show a few specific objects in their space and let the reader infer.",
+   "edition": "2026-11-18-am",
+   "order": 19,
+   "id": "2026-11-18-am-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Google Maps can plan a multi-day trip",
+   "body": "Google Maps' Ask Maps feature can now build multi-day itineraries with live details about each stop, and you can adjust the plan mid-trip. Agent features can also look for appointments and contact local businesses on your behalf.",
+   "hook": "Wonder: which small errand would you happily hand to an agent first?",
+   "source": {
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/2026/11/16/google-maps-can-now-build-trip-itineraries-with-real-time-details-about-each-stop/"
+   },
+   "edition": "2026-11-18-am",
+   "order": 18,
+   "id": "2026-11-18-am-018"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "Spread it out: the spacing effect",
+   "body": "Studying the same material in several shorter sessions with gaps between them beats one long session, even with the same total time. The gaps let you forget a little, and the effort of recalling it again is what strengthens memory. Try: today, in two days, then next week.",
+   "hook": "Wonder: what did you learn last week that you could gently recall right now?",
+   "edition": "2026-11-18-am",
+   "order": 17,
+   "id": "2026-11-18-am-017"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Philidor: the third-rank defence",
+   "body": "In a rook-and-pawn versus rook ending, the defending king sits in front of the pawn. Put your rook on your third rank (the sixth from the attacker's side) to keep the enemy king out. The moment the pawn steps onto that rank, swing your rook to the back and check from behind: the king has no shelter left.",
+   "q": "In the Philidor defence, what do you do once the pawn advances to your third rank?",
+   "a": "Move the rook to the far end and give checks from behind.",
+   "edition": "2026-11-18-am",
+   "order": 16,
+   "id": "2026-11-18-am-016"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A flamboyance of flamingos",
+   "body": "A group of flamingos is called a flamboyance. Their pink comes from pigments called carotenoids in the algae and brine shrimp they eat; chicks hatch grey and turn pink over a couple of years.",
+   "q": "Where does a flamingo's pink colour come from?",
+   "a": "Carotenoid pigments in its food, such as algae and brine shrimp.",
+   "edition": "2026-11-18-am",
+   "order": 15,
+   "id": "2026-11-18-am-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 14: switch as an expression",
+   "body": "Since Java 14 (JEP 361), switch can return a value, and arrow labels don't fall through:\n\nint days = switch (month) {\n  case FEB -> 28;\n  case APR, JUN, SEP, NOV -> 30;\n  default -> 31;\n};\n\nNo break statements, and over an enum the compiler checks that every case is covered when you leave out default.",
+   "q": "Do arrow-style case labels fall through to the next case?",
+   "a": "No. Each arrow case runs only its own expression or block.",
+   "edition": "2026-11-18-am",
+   "order": 14,
+   "id": "2026-11-18-am-014"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A fresh supernova, close enough to photograph",
+   "body": "A new Type Ia supernova, the explosion of a white dwarf star, has appeared in a spiral galaxy about 50 million light-years away. That is near by cosmic standards, so professionals have already begun detailed follow-up, and it is bright enough for skilled amateur astrophotographers to capture too.",
+   "hook": "Wonder: what was Earth like when that light set out?",
+   "source": {
+    "name": "Universe Today",
+    "url": "https://www.universetoday.com/articles/this-supernova-is-50-million-light-years-away-but-thats-close-enough-for-astronomers"
+   },
+   "edition": "2026-11-18-am",
+   "order": 13,
+   "id": "2026-11-18-am-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The umbrella mender's map",
+   "body": "The umbrella mender kept a map of the town with tiny pencil dots: one for every umbrella he had fixed. After forty years the dots made a cloud over the old market, thinning toward the hills. A girl asked what it showed. 'Where people kept walking,' he said, 'even when it rained.'",
+   "edition": "2026-11-18-am",
+   "order": 12,
+   "id": "2026-11-18-am-012"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Tencent releases Hy4 flash, a fast multimodal model",
+   "body": "Tencent has launched Hy4 flash, a multimodal model with 224 billion total parameters, of which only about 12 billion are active for any one request. It accepts up to a million tokens of context and is priced for high-volume, everyday workflows.",
+   "q": "Why can a 224-billion-parameter model be cheap to run?",
+   "a": "Only about 12 billion parameters are active per request (a mixture-of-experts style design).",
+   "source": {
+    "name": "Tencent",
+    "url": "https://www.tencent.com/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/"
+   },
+   "edition": "2026-11-18-am",
+   "order": 11,
+   "id": "2026-11-18-am-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Very little is needed",
+   "body": "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
+   "who": "Marcus Aurelius, Meditations 7.67",
+   "edition": "2026-11-18-am",
+   "order": 10,
+   "id": "2026-11-18-am-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Hedy Lamarr's frequency-hopping patent",
+   "body": "In 1942 the actress Hedy Lamarr and the composer George Antheil received a US patent for 'frequency hopping': switching a radio signal among many channels in a pattern known only to sender and receiver. Antheil's idea for syncing it came from player-piano rolls. The patent wasn't put to use at the time, but frequency hopping is now part of everyday radio technology such as Bluetooth.",
+   "hook": "Wonder: what other inventions began with someone borrowing an idea from music?",
+   "edition": "2026-11-18-am",
+   "order": 9,
+   "id": "2026-11-18-am-009"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The Shore Temple at Mamallapuram",
+   "body": "The Shore Temple at Mamallapuram stands right at the edge of the Bay of Bengal. It was built in granite blocks in the early 8th century under the Pallava king Narasimhavarman II, also called Rajasimha. It is among the earliest structural stone temples in South India, and part of a UNESCO World Heritage Site since 1984.",
+   "q": "Which dynasty built the Shore Temple at Mamallapuram?",
+   "a": "The Pallavas, under Narasimhavarman II (Rajasimha).",
+   "edition": "2026-11-18-am",
+   "order": 8,
+   "id": "2026-11-18-am-008"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The generation effect",
+   "body": "Information you produce yourself sticks better than information you just read. In classic experiments (Slamecka and Graf, 1978), people remembered words better when they completed them from a clue (hot: c_ _ _) than when they read the full pair. So before checking an answer, try to produce it, even roughly.",
+   "q": "What is the generation effect?",
+   "a": "We remember information better when we generate it ourselves than when we simply read it.",
+   "edition": "2026-11-18-am",
+   "order": 7,
+   "id": "2026-11-18-am-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Keep a parking lot for stray thoughts",
+   "body": "While you focus, keep a scrap of paper or a note titled 'Parking lot'. When a thought pops up (reply to Ravi, buy batteries, look up that song), write three words and go back. The thought is safe, so your brain can let go of it. Clear the lot at your next break.",
+   "hook": "Wonder: how many of today's 'urgent' thoughts will still feel urgent at your break?",
+   "edition": "2026-11-18-am",
+   "order": 6,
+   "id": "2026-11-18-am-006"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Giri and Firouzja take first-day leads in Budapest",
+   "body": "The Total Chess semifinals began on 17 November. Anish Giri beat Maxime Vachier-Lagrave 14.5-5.5 on the day, winning the long Fast Classic game with White. Alireza Firouzja swept all four blitz games against Fabiano Caruana and won the day 12-8. Each semifinal runs two days, and the final is set for 19-20 November.",
+   "hook": "Wonder: how would you pace yourself in a match that mixes blitz, rapid and classical games?",
+   "source": {
+    "name": "Total Chess",
+    "url": "https://www.totalchess.com/news/giri-and-firouzja-take-first-day-leads-in-total-chess-semifinals"
+   },
+   "edition": "2026-11-18-am",
+   "order": 5,
+   "id": "2026-11-18-am-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Bloom filters: 'definitely not' or 'maybe'",
+   "body": "A Bloom filter is a small bit array plus a few hash functions. To add an item, set the bits its hashes point to. To check an item, look at those bits: if any is 0, the item was definitely never added; if all are 1, it was probably added. No false negatives, a tunable rate of false positives. Databases use them to skip disk reads for keys that aren't there.",
+   "q": "Can a Bloom filter ever say 'not present' for an item that was added?",
+   "a": "No. It can give false positives, never false negatives.",
+   "edition": "2026-11-18-am",
+   "order": 4,
+   "id": "2026-11-18-am-004"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Wombats make cube-shaped droppings",
+   "body": "Wombats are the only animals known to produce cube-shaped droppings. A 2021 study found it comes from the last part of the intestine, where walls of different stiffness press the waste into corners as it dries. Wombats stack them on rocks and logs as scent markers, and cubes don't roll away.",
+   "q": "Why might cube-shaped droppings be handy for a wombat?",
+   "a": "They stay put on rocks and logs, where wombats use them as scent markers.",
+   "edition": "2026-11-18-am",
+   "order": 3,
+   "id": "2026-11-18-am-003"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A lander for Callisto, Jupiter's quiet moon",
+   "body": "China has outlined plans for a small lander on Callisto, the outermost of Jupiter's four big Galilean moons, carrying two proposed instruments. It would be only the second landing on a Solar System body beyond Mars (the first was Huygens on Titan in 2005). Callisto's ancient surface is among the most heavily cratered in the Solar System, a record of billions of years of gentle bombardment.",
+   "q": "Which of Jupiter's four Galilean moons orbits farthest out?",
+   "a": "Callisto.",
+   "source": {
+    "name": "Universe Today",
+    "url": "https://www.universetoday.com/articles/china-signals-its-intention-to-land-on-jupiters-moon-callisto"
+   },
+   "edition": "2026-11-18-am",
+   "order": 2,
+   "id": "2026-11-18-am-002"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Wednesday, the first bus",
+   "body": "The first bus sighs at the corner,\nempty, lit like a lantern on wheels.\nThe driver nods to no one in particular.\nI nod back. That counts.\nThe whole day is still folded,\nlike a letter nobody has opened yet.",
+   "edition": "2026-11-18-am",
+   "order": 1,
+   "id": "2026-11-18-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Hugging Face now routes model calls through OpenRouter",
+   "body": "Hugging Face has teamed up with OpenRouter: language-model requests made through Hugging Face can now be routed via OpenRouter, which picks a provider by price, speed and reliability. Developers keep the same Hugging Face token and API, so nothing in their code has to change.",
+   "hook": "Wonder: what would you build if switching model providers cost nothing?",
+   "source": {
+    "name": "Hugging Face blog",
+    "url": "https://huggingface.co/blog/openrouter"
+   },
+   "edition": "2026-11-18-am",
+   "order": 0,
+   "id": "2026-11-18-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9683,328 +10024,6 @@
    "edition": "2026-11-03-pm",
    "order": 14,
    "id": "2026-11-03-pm-014"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The repair shop's waiting chair",
-   "body": "Mr. Iyer fixed radios that nobody needed anymore. People brought them anyway, and while he worked they sat in the single wooden chair by the door. He never hurried. One afternoon a girl asked why. He turned the dial until a station bloomed out of the hiss. 'Because,' he said, 'the waiting is part of what I'm giving back.'",
-   "edition": "2026-11-03-pm",
-   "order": 13,
-   "id": "2026-11-03-pm-013"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Perseverance becomes the farthest-driving vehicle on another world",
-   "body": "NASA's Perseverance rover has now driven 45.22 km (28.10 miles) on Mars, more than any vehicle has ever driven beyond Earth. It reached the mark on 11 October 2026, and Guinness presented a plaque to its engineering twin back on Earth. The rover can now also work out its position on its own by matching what it sees to orbital maps.",
-   "q": "How far has Perseverance driven on Mars?",
-   "a": "45.22 km (28.10 miles), a record for any vehicle on another world.",
-   "source": {
-    "name": "ScienceDaily (NASA)",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261101010536.htm"
-   },
-   "edition": "2026-11-03-pm",
-   "order": 12,
-   "id": "2026-11-03-pm-012"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "No longer talk about it",
-   "body": "No longer talk at all about the kind of man that a good man ought to be, but be such.",
-   "who": "Marcus Aurelius, Meditations 10.16 (George Long translation)",
-   "edition": "2026-11-03-pm",
-   "order": 11,
-   "id": "2026-11-03-pm-011"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Copilot gets 'connect once' tools",
-   "body": "GitHub has added connectors in preview that let Copilot reach about 26 services, including Slack, Figma, Notion and Linear. You sign in once and the connection works across the command line, the editor, mobile and the cloud. Less setup, more of the agent's time spent on the actual work.",
-   "source": {
-    "name": "AI Agent Store weekly news",
-    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
-   },
-   "edition": "2026-11-03-pm",
-   "order": 10,
-   "id": "2026-11-03-pm-010"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Sea otters hold hands while they sleep",
-   "body": "Sea otters often sleep floating on their backs, and some hold paws or wrap themselves in kelp so they don't drift apart from each other. A floating group of resting otters is called a raft.",
-   "q": "What is a floating group of sea otters called?",
-   "a": "A raft.",
-   "edition": "2026-11-03-pm",
-   "order": 9,
-   "id": "2026-11-03-pm-009"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The first mouse wore wood",
-   "body": "The first computer mouse, built in 1964 by Bill English from Douglas Engelbart's design, was a small wooden block with two metal wheels underneath and a single button on top. One wheel tracked left-right, the other up-down.",
-   "hook": "Wonder: why did it get called a 'mouse'? (The cord looked like a tail.)",
-   "edition": "2026-11-03-pm",
-   "order": 8,
-   "id": "2026-11-03-pm-008"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Bundle the dull with the delightful",
-   "body": "Save something you enjoy, like a favourite podcast or audiobook, only for a task you tend to avoid: laundry, dishes, expense reports. A 2014 study found people went to the gym more when their gripping audiobooks were only available there. The boring task becomes the doorway to the good thing.",
-   "q": "What is 'temptation bundling'?",
-   "a": "Pairing a treat you want with a task you avoid, and allowing the treat only during that task.",
-   "edition": "2026-11-03-pm",
-   "order": 7,
-   "id": "2026-11-03-pm-007"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "The man who taught us to read Ashoka again",
-   "body": "For centuries, nobody could read the Brahmi script on Ashoka's pillars and rocks. In 1837, James Prinsep, working in Calcutta, cracked it, helped by short donor inscriptions at Sanchi that repeated the same word endings. Suddenly an emperor's messages from the 3rd century BCE could speak again.",
-   "hook": "Wonder: which script used in India today descends from Brahmi? (Nearly all of them do, Tamil included.)",
-   "edition": "2026-11-03-pm",
-   "order": 6,
-   "id": "2026-11-03-pm-006"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Bloom filters: a polite 'probably'",
-   "body": "A Bloom filter is a tiny bit array plus a few hash functions. To add an item, you set the bits its hashes point to. To check an item, you look at those bits: if any is 0, the item is definitely not there; if all are 1, it is probably there. Databases use them to skip disk reads for keys that can't exist.",
-   "q": "Can a Bloom filter give a false negative?",
-   "a": "No. It can give false positives ('probably there') but never false negatives.",
-   "edition": "2026-11-03-pm",
-   "order": 5,
-   "id": "2026-11-03-pm-005"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Guess first, learn better",
-   "body": "Trying to answer a question before you've learned the material, even when you get it wrong, tends to improve how well you remember the right answer afterwards. Researchers call this the pretesting effect. The guess seems to open a slot in your mind that the real answer then fills.",
-   "q": "What is the pretesting effect?",
-   "a": "Attempting to answer before learning, even wrongly, improves later memory of the correct answer.",
-   "edition": "2026-11-03-pm",
-   "order": 4,
-   "id": "2026-11-03-pm-004"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Firouzja wins the Bullet Brawl",
-   "body": "Alireza Firouzja won Chess.com's Bullet Brawl arena on 31 October with 170 points, just ahead of Hikaru Nakamura on 166. Nakamura led into the final stretch, but Firouzja scored 13.5 out of 15 in the last quarter of the two-hour, one-minute-per-side event. The next Brawl is on 7 November.",
-   "hook": "Wonder: what does a strong player still see in a one-minute game that the rest of us miss?",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/alireza-firouzja-wins-bullet-brawl-oct-31-2026"
-   },
-   "edition": "2026-11-03-pm",
-   "order": 3,
-   "id": "2026-11-03-pm-003"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Night shift of the stars",
-   "body": "The city switches off its windows\none by one, like someone\nputting books back on a shelf.\n\nUp there, nobody clocks in.\nThe stars were already working\nlong before we needed light.",
-   "edition": "2026-11-03-pm",
-   "order": 2,
-   "id": "2026-11-03-pm-002"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Rubin may have found a new dwarf planet beyond Pluto",
-   "body": "The Vera Rubin Observatory has spotted a large icy world, provisionally called 2026 ED138, about 46 times farther from the Sun than Earth is. It is estimated at 600 to 1,500 km across and had been hiding against the crowded starfields of the Milky Way. If its size is confirmed, it could join Pluto, Ceres, Eris, Haumea and Makemake as a recognised dwarf planet.",
-   "q": "Roughly how far from the Sun is 2026 ED138, in AU?",
-   "a": "About 46 AU, beyond Pluto's average distance of about 40 AU.",
-   "source": {
-    "name": "Sci.News",
-    "url": "https://www.sci.news/astronomy/vera-rubin-observatory-possible-new-dwarf-planet-15166.html"
-   },
-   "edition": "2026-11-03-pm",
-   "order": 1,
-   "id": "2026-11-03-pm-001"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Android Studio lets you bring your own coding agent",
-   "body": "Android Studio's latest build lets developers pick from more than 40 coding agents and switch between them. They plug in through the open Agent Client Protocol, so an agent can see the project, run builds, and read the emulator's logs. The nice idea: the IDE becomes a shared workbench, and the agent is a swappable tool on it.",
-   "hook": "Wonder: what would you want any coding agent to be able to see in your project, and what should stay off-limits?",
-   "source": {
-    "name": "AI Agent Store weekly news",
-    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
-   },
-   "edition": "2026-11-03-pm",
-   "order": 0,
-   "id": "2026-11-03-pm-000"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Marcus Aurelius, Meditations 7.67",
-   "body": "Very little indeed is needed for living a happy life.",
-   "edition": "2026-11-03-am",
-   "order": 29,
-   "id": "2026-11-03-am-029"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Honeybees dance directions",
-   "body": "A forager bee that finds good flowers does a 'waggle dance' back in the hive. The angle of her waggle run, measured against straight up, matches the angle between the food and the Sun. How long she waggles tells the others how far away it is. Karl von Frisch shared a Nobel Prize in 1973 for working this out.",
-   "q": "What does the length of a bee's waggle run communicate?",
-   "a": "How far away the food source is.",
-   "edition": "2026-11-03-am",
-   "order": 28,
-   "id": "2026-11-03-am-028"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Sleep files the day's learning",
-   "body": "While you sleep, the brain replays and consolidates what you practised that day. That's why a skill can feel smoother the next morning even though you didn't practise overnight. A short review before bed, followed by a real night's sleep, is a quietly effective way to study.",
-   "edition": "2026-11-03-am",
-   "order": 27,
-   "id": "2026-11-03-am-027"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java sealed interfaces: a closed list of shapes",
-   "body": "A sealed interface names exactly which classes may implement it, for example: sealed interface Shape permits Circle, Square. Combine that with records and pattern-matching switch, and the compiler can confirm you've handled every case. Leave one out and the code won't compile.",
-   "q": "What does the 'permits' clause on a sealed interface do?",
-   "a": "It lists the only classes allowed to implement it, which lets switches over it be checked for exhaustiveness.",
-   "edition": "2026-11-03-am",
-   "order": 26,
-   "id": "2026-11-03-am-026"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Thirukkural 396 (own rendering)",
-   "body": "Dig a well in sand and water rises; learn, and wisdom rises the same way, the deeper you go.",
-   "edition": "2026-11-03-am",
-   "order": 25,
-   "id": "2026-11-03-am-025"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Sunlight is about eight minutes old",
-   "body": "On average, light from the Sun takes about 8 minutes and 20 seconds to reach Earth. Light from the Moon takes a little over a second. When you watch a sunrise, you're seeing the Sun as it was eight minutes earlier.",
-   "q": "How long does sunlight take to reach Earth, on average?",
-   "a": "About 8 minutes 20 seconds.",
-   "edition": "2026-11-03-am",
-   "order": 24,
-   "id": "2026-11-03-am-024"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Specific beats general",
-   "body": "'She brought food' slides right past the reader. 'She brought rasam in a steel tiffin, still warm' lands, because one concrete detail does the work of a paragraph of explaining. When a sentence feels flat, ask what someone would actually see, smell or hold.",
-   "edition": "2026-11-03-am",
-   "order": 23,
-   "id": "2026-11-03-am-023"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "C was made to rewrite an operating system",
-   "body": "Around 1972 at Bell Labs, Dennis Ritchie created the C language, growing it out of an earlier language called B. In 1973 most of Unix was rewritten in C. That made it much easier to move the system to new hardware, and many operating systems and languages since then descend from that choice.",
-   "q": "Which operating system was largely rewritten in C in 1973?",
-   "a": "Unix.",
-   "edition": "2026-11-03-am",
-   "order": 22,
-   "id": "2026-11-03-am-022"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Name the next action as a verb",
-   "body": "'Taxes' is a cloud. 'Open the bank app and download the October statement' is a step you can take. When a task feels heavy, rewrite it until it starts with a physical verb you could do in five minutes.",
-   "edition": "2026-11-03-am",
-   "order": 21,
-   "id": "2026-11-03-am-021"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Triangulation: losing a move on purpose",
-   "body": "In some king-and-pawn endings, the side to move is the one in trouble. A king can walk around a small triangle of three squares and come back to where it started, using up one tempo. The opponent's king, short on room, can't copy the manoeuvre. Now it's their move, and the position works in your favour.",
-   "q": "What does triangulation achieve in an endgame?",
-   "a": "It passes the obligation to move to the opponent by losing a tempo with the king.",
-   "edition": "2026-11-03-am",
-   "order": 20,
-   "id": "2026-11-03-am-020"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "A flamboyance of flamingos",
-   "body": "A group of flamingos is called a flamboyance. Their pink colour comes from pigments called carotenoids in the algae and small shrimp they eat. A flamingo chick hatches grey-white and turns pink gradually as it grows.",
-   "hook": "Wonder: what would your own collective noun be?",
-   "edition": "2026-11-03-am",
-   "order": 19,
-   "id": "2026-11-03-am-019"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "A tool description is a prompt",
-   "body": "When an agent picks a tool, mostly what it has to go on is the tool's name and its short description. A vague description gets used in vague ways. Write each one like a note to a smart new colleague: what the tool does, when to use it, when not to, and what it returns.",
-   "edition": "2026-11-03-am",
-   "order": 18,
-   "id": "2026-11-03-am-018"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "The Shore Temple at Mamallapuram",
-   "body": "The Shore Temple has stood beside the Bay of Bengal for about 1,300 years. It was built under the Pallava king Narasimhavarman II, also called Rajasimha, around the early 8th century. It's one of the earliest structural stone temples in South India, built from cut blocks of granite rather than carved out of a single rock.",
-   "q": "Which dynasty built the Shore Temple at Mamallapuram?",
-   "a": "The Pallavas, under Narasimhavarman II (Rajasimha).",
-   "edition": "2026-11-03-am",
-   "order": 17,
-   "id": "2026-11-03-am-017"
-  },
-  {
-   "topic": "mind",
-   "kind": "tip",
-   "title": "Explain it to an empty chair",
-   "body": "Say a new idea out loud, as if you're teaching it to someone who isn't there. The places where you stumble are exactly the gaps in your understanding. This is the self-explanation effect, and it's one of the cheaper study habits that has been well studied.",
-   "edition": "2026-11-03-am",
-   "order": 16,
-   "id": "2026-11-03-am-016"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Write-ahead logs: write down the plan, then act",
-   "body": "Before a database changes its data files, it first appends a description of the change to a sequential log and makes sure that log is safely on disk. If the machine crashes partway through, replaying the log on restart brings everything back to a consistent state. Appending to a log is fast, and it turns 'what was I doing?' into a solved problem.",
-   "q": "Why does a database write to its WAL before the data files?",
-   "a": "So that after a crash it can replay the log and reach a consistent state.",
-   "edition": "2026-11-03-am",
-   "order": 15,
-   "id": "2026-11-03-am-015"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The bookbinder's spare thread",
-   "body": "Every evening the old bookbinder cut one extra length of thread and left it on the windowsill. 'For the book I haven't been given yet,' she would say. Years later, a girl brought her a notebook falling apart, full of a grandmother's recipes. The thread was waiting. It was exactly long enough.",
-   "edition": "2026-11-03-am",
-   "order": 14,
-   "id": "2026-11-03-am-014"
   }
  ]
 }
