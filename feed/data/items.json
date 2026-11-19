@@ -1,6 +1,347 @@
 {
- "updated": "2026-11-19T02:14:22+00:00",
+ "updated": "2026-11-19T17:14:01+00:00",
  "items": [
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "GitHub Copilot Fusion adds models and more places to run",
+   "body": "GitHub updated Copilot Fusion, which routes work across several models. It now includes Claude Sonnet 5.5, GPT-6.1 Terra and Microsoft's MAI-Code-2 at different tiers, and is available in the web app, Visual Studio, and a mobile beta. GitHub reports a 71.2% score on the public Terminal-Bench 4.1 leaderboard.",
+   "q": "What does Copilot Fusion do with multiple models?",
+   "a": "It routes tasks across them at different tiers.",
+   "source": {
+    "name": "GitHub Changelog",
+    "url": "https://github.blog/changelog/2026-11-17-github-copilot-fusion-updates-more-availability-benchmarks-and-models/"
+   },
+   "edition": "2026-11-19-pm",
+   "order": 29,
+   "id": "2026-11-19-pm-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the kettle cooling",
+   "body": "The kettle ticks as it cools,\na small clock running down.\n\nThe last cup is drunk.\nThe spoon rests on its saucer like an oar.\n\nNothing left to boil,\nnothing left to fix —\nthe house breathes out.",
+   "edition": "2026-11-19-pm",
+   "order": 28,
+   "id": "2026-11-19-pm-028"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Leases: a lock that expires",
+   "body": "In a distributed system, a node holding a lock might crash and never release it. A lease fixes this: the lock is granted for, say, ten seconds, and the holder must renew it to keep it. If the holder goes quiet, the lease simply runs out and someone else can take over. Pair it with a fencing token so a slow old holder can't overwrite the new one.",
+   "hook": "Wonder: which of your 'forever' locks would be safer with an expiry date?",
+   "edition": "2026-11-19-pm",
+   "order": 27,
+   "id": "2026-11-19-pm-027"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Spacewar!, 1962",
+   "body": "In 1962, Steve Russell and friends at MIT wrote Spacewar! for the PDP-1: two spaceships duelling around a star whose gravity pulled them in. It was one of the first video games, and copies spread to other labs on paper tape — a playful early sign that computers could be for fun too.",
+   "q": "Which computer was Spacewar! written for?",
+   "a": "The DEC PDP-1.",
+   "edition": "2026-11-19-pm",
+   "order": 26,
+   "id": "2026-11-19-pm-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Ripe fruit at hand",
+   "body": "To speak harsh words when kind ones are at hand is like reaching for unripe fruit while the ripe hangs within reach.",
+   "who": "Thirukkural 100 (own rendering)",
+   "edition": "2026-11-19-pm",
+   "order": 25,
+   "id": "2026-11-19-pm-025"
+  },
+  {
+   "topic": "space",
+   "kind": "idea",
+   "title": "The gegenschein, the counter-glow",
+   "body": "On a very dark night, the point in the sky directly opposite the Sun can show a faint, oval patch of light: the gegenschein (German for 'counter-shine'). It's sunlight bouncing straight back off dust in the plane of the planets, just as a field looks brightest when the Sun is behind you.",
+   "q": "Where in the sky is the gegenschein?",
+   "a": "Directly opposite the Sun.",
+   "edition": "2026-11-19-pm",
+   "order": 24,
+   "id": "2026-11-19-pm-024"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The pre-mortem",
+   "body": "Before starting a project, imagine it's six months later and it went badly. Now list the reasons why. Psychologist Gary Klein proposed this 'pre-mortem': because the failure is presented as already happened, people find it easier to name risks they'd otherwise keep quiet about. It's planning with hindsight you borrowed early.",
+   "q": "What's the key twist of a pre-mortem?",
+   "a": "You imagine the failure has already happened, then explain why.",
+   "edition": "2026-11-19-pm",
+   "order": 23,
+   "id": "2026-11-19-pm-023"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "World Junior Championship opens in Caracas",
+   "body": "The World Junior U20 Championship began in Caracas, Venezuela, with 136 players from 32 countries in Open and Girls sections. Each section is an 11-round Swiss with classical time controls, running until 27 November — a long, thoughtful event for the game's rising players.",
+   "hook": "Wonder: how does a nine-day classical event feel different from a single blitz evening?",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/world-junior-u20-chess-championship-2026-begins-in-caracas-venezuela/"
+   },
+   "edition": "2026-11-19-pm",
+   "order": 22,
+   "id": "2026-11-19-pm-022"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Koalas have fingerprints",
+   "body": "Koalas have fingerprints with loops and whorls so similar to ours that they're hard to tell apart even under a microscope. It's a lovely case of convergent evolution: both species grip things with their hands, and ridged skin helps.",
+   "q": "Which marsupial has fingerprints that closely resemble human ones?",
+   "a": "The koala.",
+   "edition": "2026-11-19-pm",
+   "order": 21,
+   "id": "2026-11-19-pm-021"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Give the agent a budget",
+   "body": "An agent with no limits can wander. Give it a clear allowance — say, twenty tool calls or ten minutes — and ask it to report what it found when the budget runs out. A budget turns an open-ended hunt into a scoped task, and the summary at the end is often the most useful part.",
+   "hook": "Wonder: what budget would you give yourself for the same task?",
+   "edition": "2026-11-19-pm",
+   "order": 20,
+   "id": "2026-11-19-pm-020"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Kailasanathar, Kanchipuram's sandstone temple",
+   "body": "The Kailasanathar temple at Kanchipuram was built around 700 CE under the Pallava king Narasimhavarman II, also called Rajasimha. It is among the earliest structural (built, not rock-cut) temples in South India, and its small shrines around the courtyard still carry traces of old paintings.",
+   "q": "Which dynasty built the Kailasanathar temple at Kanchipuram?",
+   "a": "The Pallavas (under Narasimhavarman II, Rajasimha).",
+   "edition": "2026-11-19-pm",
+   "order": 19,
+   "id": "2026-11-19-pm-019"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The tailor's chalk",
+   "body": "The tailor kept a stub of chalk no longer than a fingernail. Customers offered to buy him a new box. He only smiled.\n\nOne evening his apprentice asked why. The tailor drew a single line across blue cloth, thin and sure. 'A new piece is bold,' he said. 'It wants to be seen. This one has learned to say only what is needed.'\n\nThe apprentice pocketed the next worn stub before it could be thrown away.",
+   "edition": "2026-11-19-pm",
+   "order": 18,
+   "id": "2026-11-19-pm-018"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Bundle the dull with the pleasant",
+   "body": "Pair a task you avoid with something you enjoy that you only allow during it — a favourite podcast only while folding laundry, a special tea only while doing paperwork. Researcher Katy Milkman calls this 'temptation bundling', and in her gym study it nudged people to show up more often.",
+   "q": "What is temptation bundling?",
+   "a": "Allowing yourself a treat only while doing a task you tend to avoid.",
+   "edition": "2026-11-19-pm",
+   "order": 17,
+   "id": "2026-11-19-pm-017"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 17: sealed classes",
+   "body": "A sealed class names exactly which classes may extend it: `sealed interface Shape permits Circle, Square {}`. The compiler then knows the full family, so a switch over Shape can be checked for completeness without a default branch. It turns 'I hope nobody adds a subclass' into a rule.",
+   "hook": "Wonder: which of your interfaces really has a fixed, known set of implementations?",
+   "edition": "2026-11-19-pm",
+   "order": 16,
+   "id": "2026-11-19-pm-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Opposite-coloured bishops: the drawish pair",
+   "body": "When each side has one bishop and they run on different colours, the defender can often build a blockade on squares the attacker's bishop can never touch. Even a pawn or two down, many such endings are drawn. But add queens or rooks and the same imbalance helps the attacker, because the defender's bishop can't guard what the attacker's bishop hits.",
+   "q": "Why are pure opposite-coloured bishop endings often drawn?",
+   "a": "The defender blockades on squares the enemy bishop can't control.",
+   "edition": "2026-11-19-pm",
+   "order": 15,
+   "id": "2026-11-19-pm-015"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Linux began as 'just a hobby'",
+   "body": "On 25 August 1991, a Finnish student named Linus Torvalds posted to a Usenet group that he was writing a free operating system for 386 PCs — a hobby, he said, nothing big or professional. That modest note grew into the kernel that now runs most servers, Android phones and supercomputers.",
+   "q": "In what year did Torvalds announce the project that became Linux?",
+   "a": "1991.",
+   "edition": "2026-11-19-pm",
+   "order": 14,
+   "id": "2026-11-19-pm-014"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Mars helicopter blades go supersonic",
+   "body": "NASA engineers spun test rotor blades for future Mars helicopters past the speed of sound. Mars's air is so thin that lift is hard to come by; faster-tipped blades could give roughly 30% more lift, opening the door to bigger, more capable flying explorers on the Red Planet.",
+   "q": "Why is flying on Mars hard?",
+   "a": "Its atmosphere is very thin — about 1% as dense as Earth's — so blades get little lift.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261117033920.htm"
+   },
+   "edition": "2026-11-19-pm",
+   "order": 13,
+   "id": "2026-11-19-pm-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let them talk around it",
+   "body": "People rarely say the important thing directly. Two siblings arguing about who should keep a teapot may really be talking about their mother. Let the dialogue circle the subject while the reader quietly notices the centre. What's left unsaid often carries the scene.",
+   "hook": "Wonder: what is your character avoiding saying in their last line?",
+   "edition": "2026-11-19-pm",
+   "order": 12,
+   "id": "2026-11-19-pm-012"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The doorway effect",
+   "body": "Walked into a room and forgotten why? Experiments by Gabriel Radvansky and colleagues found that passing through a doorway makes people slightly worse at recalling what they were carrying in mind — the brain seems to treat the doorway as an 'event boundary' and file the previous scene away. Saying the purpose aloud before you go helps it travel with you.",
+   "hook": "Wonder: what other 'doorways' — a new tab, a new app — might close a mental scene?",
+   "edition": "2026-11-19-pm",
+   "order": 11,
+   "id": "2026-11-19-pm-011"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Mistral's Vibe coding agent gets a desktop app",
+   "body": "Mistral released a desktop app for Vibe, its coding agent, on macOS and Windows, with Linux planned. It can run the agent locally or in a cloud sandbox, uses Git worktrees so several tasks can proceed side by side, and plugs into VS Code, JetBrains and Zed.",
+   "q": "What Git feature lets Vibe run parallel tasks without them colliding?",
+   "a": "Git worktrees.",
+   "source": {
+    "name": "Mistral AI",
+    "url": "https://mistral.ai/products/vibe/"
+   },
+   "edition": "2026-11-19-pm",
+   "order": 10,
+   "id": "2026-11-19-pm-010"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "What our thoughts make it",
+   "body": "The universe is change; our life is what our thoughts make it.",
+   "who": "Marcus Aurelius, Meditations 4.3 (tr. George Long)",
+   "edition": "2026-11-19-pm",
+   "order": 9,
+   "id": "2026-11-19-pm-009"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A day on Venus outlasts its year",
+   "body": "Venus spins very slowly — and backwards compared with most planets. One full turn takes about 243 Earth days, while one trip around the Sun takes about 225. So a Venusian day (one rotation) is longer than its year.",
+   "q": "Which is longer on Venus: one rotation or one orbit?",
+   "a": "One rotation (~243 Earth days vs ~225 for the orbit).",
+   "edition": "2026-11-19-pm",
+   "order": 8,
+   "id": "2026-11-19-pm-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Gangaikonda Cholapuram, a capital named for a river",
+   "body": "Around 1025 CE the Chola king Rajendra I founded a new capital and called it Gangaikonda Cholapuram — roughly, 'the town of the Chola who reached the Ganga'. Its great Shiva temple echoes his father's temple at Thanjavur but with gentler, curving lines. It is part of the UNESCO 'Great Living Chola Temples' listing.",
+   "q": "Which Chola king founded Gangaikonda Cholapuram?",
+   "a": "Rajendra Chola I.",
+   "edition": "2026-11-19-pm",
+   "order": 7,
+   "id": "2026-11-19-pm-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Measure the task in songs",
+   "body": "Minutes are abstract; songs are not. Put on a short playlist and decide the task lasts 'three songs'. You can hear time passing, you know roughly where you are, and the end has a natural signal. Reusing the same playlist can also become a cue that it's work time.",
+   "hook": "Wonder: which task on your list is really only two songs long?",
+   "edition": "2026-11-19-pm",
+   "order": 6,
+   "id": "2026-11-19-pm-006"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Vallejo wins the Salamanca Masters",
+   "body": "Paco Vallejo finished the Salamanca Masters with 8.5 out of 10, a point and a half clear of José Martínez. He opened with six straight wins, lost once in round seven, and steadied himself to the end. Loek van Wely took third, and 11-year-old Bodhana Sivanandan gained valuable experience in a strong field.",
+   "hook": "Wonder: what does a player do the morning after a loss that keeps the next game calm?",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/salamanca-festival-2026-final"
+   },
+   "edition": "2026-11-19-pm",
+   "order": 5,
+   "id": "2026-11-19-pm-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Little's law: queues in one line",
+   "body": "For any steady system, the average number of items inside (L) equals the arrival rate (λ) times the average time each one stays (W). If 200 requests arrive per second and each takes 50 ms, about 10 are in flight at any moment. It needs no assumptions about the shape of traffic, which is why it works for thread pools, checkout lines and kanban boards alike.",
+   "q": "200 requests/second, 50 ms each — how many in flight on average?",
+   "a": "About 10 (200 × 0.05).",
+   "edition": "2026-11-19-pm",
+   "order": 4,
+   "id": "2026-11-19-pm-004"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Webb watches two stars become one in Andromeda",
+   "body": "Astronomers followed a star in the Andromeda galaxy as it swelled into a bloated giant and merged with its smaller companion. Webb's infrared view let them piece together the before, during and after. The single star left behind, nicknamed Bao, may have been given a fresh lease of life by the merger.",
+   "q": "Which neighbouring galaxy hosted this star merger?",
+   "a": "Andromeda.",
+   "source": {
+    "name": "Sci.News",
+    "url": "https://www.sci.news/astronomy/webb-star-merger-andromeda-galaxy-15207.html"
+   },
+   "edition": "2026-11-19-pm",
+   "order": 3,
+   "id": "2026-11-19-pm-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Thursday, the night bus",
+   "body": "The bus hums the same note at every stop,\nas if it has one song and likes it.\n\nA man asleep holds his lunch box like a book.\nThe conductor counts coins without looking.\n\nOutside, the shuttered shops\nkeep their names lit for no one —\njust in case.",
+   "edition": "2026-11-19-pm",
+   "order": 2,
+   "id": "2026-11-19-pm-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Coding agents now finish more of OpenAI's research chores",
+   "body": "OpenAI published a look at how well coding agents handle its own internal research tasks. On jobs that take a person two to four hours, agents now finish about 46% unaided, up from 23% in March. The progress is uneven — strong on monitoring training runs, weaker on serving code — which OpenAI calls a 'jagged frontier'.",
+   "hook": "Wonder: which parts of your own work are the smooth edge, and which are the jagged one?",
+   "source": {
+    "name": "OpenAI",
+    "url": "https://openai.com/index/research-acceleration-jagged-frontier/"
+   },
+   "edition": "2026-11-19-pm",
+   "order": 1,
+   "id": "2026-11-19-pm-001"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these from memory before scrolling back: What does Little's law connect? Why do opposite-coloured bishops often draw? Which Chola king built Gangaikonda Cholapuram? Why is a day on Venus longer than its year?",
+   "q": "In Little's law L = λW, what is W?",
+   "a": "The average time each item spends in the system.",
+   "edition": "2026-11-19-pm",
+   "order": 0,
+   "id": "2026-11-19-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9692,344 +10033,6 @@
    "edition": "2026-11-05-am",
    "order": 14,
    "id": "2026-11-05-am-014"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Where the word 'bit' came from",
-   "body": "The word 'bit', short for 'binary digit', was coined by statistician John Tukey. Claude Shannon used it in his landmark 1948 paper on information theory and credited Tukey for the word, and it has been the smallest unit of information ever since.",
-   "q": "Who coined the word 'bit'?",
-   "a": "John Tukey; Claude Shannon popularised it in 1948.",
-   "edition": "2026-11-05-am",
-   "order": 13,
-   "id": "2026-11-05-am-013"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Vary the length of your sentences",
-   "body": "A paragraph of same-length sentences reads like a metronome. Mix them. Let one sentence run long, gathering detail, letting the reader settle into its current. Then stop. The short one lands because the long one came first.",
-   "edition": "2026-11-05-am",
-   "order": 12,
-   "id": "2026-11-05-am-012"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Betelgeuse's hidden companion leaves a wake",
-   "body": "Astronomers say they have new evidence that a small, hidden companion star, named Siwarha, is moving through the outer atmosphere of the red supergiant Betelgeuse and stirring it up. That may explain some of the star's long-puzzling ripples and changes.",
-   "q": "What is the name given to Betelgeuse's hidden companion star?",
-   "a": "Siwarha.",
-   "source": {
-    "name": "ScienceDaily",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261103003149.htm"
-   },
-   "edition": "2026-11-05-am",
-   "order": 11,
-   "id": "2026-11-05-am-011"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Marcus Aurelius, Meditations 5.16 (tr. George Long)",
-   "body": "Such as are thy habitual thoughts, such also will be the character of thy mind; for the soul is dyed by the thoughts.",
-   "edition": "2026-11-05-am",
-   "order": 10,
-   "id": "2026-11-05-am-010"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Speech recognition that doesn't transcribe itself",
-   "body": "Soniox has launched STT v6, a speech-to-text model covering more than 60 languages. For voice agents, it can take the agent's own spoken text as context and filter that audio out of the incoming stream, so the assistant doesn't end up transcribing its own voice. Real-time and batch versions are available.",
-   "hook": "Wonder: how do you teach a machine to tell its own voice from yours?",
-   "source": {
-    "name": "Soniox",
-    "url": "https://soniox.com/blog/soniox-stt-v6"
-   },
-   "edition": "2026-11-05-am",
-   "order": 9,
-   "id": "2026-11-05-am-009"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Choose a stopping point before you start",
-   "body": "Hyperfocus is easy to enter and hard to leave. Before you begin, decide where you'll stop: 'after this function', 'when the timer rings', 'at the end of this chapter'. Write it on a sticky note. A pre-chosen exit makes stopping feel like finishing, not like being interrupted.",
-   "edition": "2026-11-05-am",
-   "order": 8,
-   "id": "2026-11-05-am-008"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Arikamedu, a Roman trading port near Puducherry",
-   "body": "Around two thousand years ago, Arikamedu on the coast near present-day Puducherry was a busy trading town. Excavations, including Mortimer Wheeler's in 1945, found pieces of Roman wine jars and fine Mediterranean pottery alongside local beads, signs of a long sea trade between Tamil coasts and the Roman world.",
-   "hook": "Wonder: what did a Roman sailor think of his first plate of Tamil food?",
-   "edition": "2026-11-05-am",
-   "order": 7,
-   "id": "2026-11-05-am-007"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java streams are lazy on purpose",
-   "body": "In a Java Stream, filter and map don't do anything when you call them; they only describe the work. Nothing runs until a terminal operation such as collect, count or findFirst. That's why stream.filter(...).findFirst() can stop after the first match instead of scanning the whole list.",
-   "q": "When does a Java stream's filter actually run?",
-   "a": "Only when a terminal operation (collect, count, findFirst…) is called.",
-   "edition": "2026-11-05-am",
-   "order": 6,
-   "id": "2026-11-05-am-006"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "A cloud can weigh as much as a hundred elephants",
-   "body": "The US Geological Survey estimates that a fluffy, ordinary cumulus cloud holds roughly 500 tonnes of water, about the weight of a hundred elephants. It floats because that water is spread out as countless tiny droplets in a huge volume of slightly warmer, rising air.",
-   "q": "Roughly how much water does a typical cumulus cloud hold?",
-   "a": "About 500 tonnes, roughly a hundred elephants' worth.",
-   "edition": "2026-11-05-am",
-   "order": 5,
-   "id": "2026-11-05-am-005"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Firouzja wins Titled Tuesday on 10/11",
-   "body": "Alireza Firouzja won the 3 November Titled Tuesday outright and unbeaten with 10/11, with Hikaru Nakamura second on 9.5/11. Eight players, including Nakamura, Firouzja and Wesley So, have now qualified for the Speed Chess Championship through their Titled Tuesday results.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/firouzja-wins-titled-tuesday-november-3-2026"
-   },
-   "edition": "2026-11-05-am",
-   "order": 4,
-   "id": "2026-11-05-am-004"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Words plus pictures",
-   "body": "Dual coding is the idea that we remember better when an idea arrives both as words and as an image. Sketch a quick box-and-arrow diagram next to your notes, and you give your memory two doors into the same room instead of one. The drawing doesn't need to be good, only yours.",
-   "hook": "Wonder: what would today's hardest idea look like as three boxes and two arrows?",
-   "edition": "2026-11-05-am",
-   "order": 3,
-   "id": "2026-11-05-am-003"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Pressure cooker, 7 am",
-   "body": "Three whistles from the kitchen,\neach one a little louder,\nlike someone counting\nslowly to wake the house.\n\nBy the third,\nthe dal is soft,\nthe window fogged,\nand everyone is up.",
-   "edition": "2026-11-05-am",
-   "order": 2,
-   "id": "2026-11-05-am-002"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "StateBench: remembering a fact vs. keeping track",
-   "body": "Ai2 has released StateBench, a benchmark that separates looking up a fixed fact from following a value as it changes step by step. Its matched tasks climb through four levels, and Ai2 reports frontier models drop to 13% accuracy or lower on the longest, hardest ones. Code and data are open.",
-   "q": "What skill does StateBench separate from simple fact retrieval?",
-   "a": "State tracking: following values as they are updated step by step.",
-   "source": {
-    "name": "Ai2 on Hugging Face",
-    "url": "https://huggingface.co/blog/allenai/statebench"
-   },
-   "edition": "2026-11-05-am",
-   "order": 1,
-   "id": "2026-11-05-am-001"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Rubin spots two more of the Milky Way's quiet companions",
-   "body": "The Vera C. Rubin Observatory has picked out two more faint satellites of our galaxy: one an ultra-faint dwarf galaxy, the other a globular cluster. Each is a small leftover from the Milky Way's long history of gathering up smaller neighbours.",
-   "q": "What two kinds of object did Rubin newly find around the Milky Way?",
-   "a": "An ultra-faint dwarf galaxy and a globular cluster.",
-   "source": {
-    "name": "Universe Today",
-    "url": "https://www.universetoday.com/articles/the-vera-rubin-has-found-two-more-of-the-milky-ways-dim-satellites"
-   },
-   "edition": "2026-11-05-am",
-   "order": 0,
-   "id": "2026-11-05-am-000"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Earth is closest to the Sun in January",
-   "body": "Earth's orbit is slightly elliptical, and it reaches perihelion, its closest point to the Sun, in early January. Seasons come from the tilt of Earth's axis, not from distance, which is why January is winter in the north and summer in the south.",
-   "q": "Do seasons come from Earth's distance to the Sun?",
-   "a": "No. They come from the tilt of Earth's axis; Earth is actually closest to the Sun in early January.",
-   "edition": "2026-11-04-pm",
-   "order": 30,
-   "id": "2026-11-04-pm-030"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Thirukkural 423 (own rendering)",
-   "body": "Whatever you hear, and from whomever you hear it, wisdom is seeing the truth within it.",
-   "edition": "2026-11-04-pm",
-   "order": 29,
-   "id": "2026-11-04-pm-029"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Bus stop, after rain",
-   "body": "The puddle holds\na whole streetlight,\nquietly,\nlike a coin it found.\n\nThe bus comes.\nThe light shivers,\nsettles,\nkeeps it anyway.",
-   "edition": "2026-11-04-pm",
-   "order": 28,
-   "id": "2026-11-04-pm-028"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Desirable difficulties",
-   "body": "Robert and Elizabeth Bjork coined 'desirable difficulties' for learning conditions that feel harder in the moment but improve long-term memory: spacing practice out, mixing problem types, testing yourself instead of rereading. The struggle is not a sign it isn't working; often it is the work.",
-   "edition": "2026-11-04-pm",
-   "order": 27,
-   "id": "2026-11-04-pm-027"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Linux began as a hobby",
-   "body": "On 25 August 1991, a Finnish student named Linus Torvalds posted to a Usenet newsgroup that he was writing a free operating system for 386 PCs, just as a hobby, and asked what features people would like. That modest post grew into the kernel that now runs most of the world's servers and every Android phone.",
-   "hook": "Wonder: which of today's small hobby projects will quietly become infrastructure?",
-   "edition": "2026-11-04-pm",
-   "order": 26,
-   "id": "2026-11-04-pm-026"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "equals and hashCode travel together",
-   "body": "In Java, if two objects are equal by equals(), they must return the same hashCode(). Override one without the other and a HashMap or HashSet may file equal objects in different buckets, so lookups quietly fail. Records generate both for you, consistently.",
-   "q": "If a.equals(b) is true, what must be true of their hash codes?",
-   "a": "a.hashCode() must equal b.hashCode().",
-   "edition": "2026-11-04-pm",
-   "order": 25,
-   "id": "2026-11-04-pm-025"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The farthest point from Earth's centre",
-   "body": "Everest is the highest peak above sea level, but the summit of Chimborazo in Ecuador is the point on Earth's surface farthest from the planet's centre. Earth bulges at the equator, and Chimborazo sits almost on it.",
-   "hook": "Wonder: what else changes when you measure from the centre instead of the surface?",
-   "edition": "2026-11-04-pm",
-   "order": 24,
-   "id": "2026-11-04-pm-024"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "OpenAI builds its own Git backend",
-   "body": "OpenAI says it built Pando, a Git-compatible backend, to keep up with the volume of code changes from engineers and coding agents. It now hosts the company's main repository, cut median push latency by almost 80 per cent, and serves close to a petabyte of repository data each day.",
-   "q": "What is Pando?",
-   "a": "A Git-compatible backend OpenAI built to handle code changes from engineers and coding agents.",
-   "source": {
-    "name": "OpenAI",
-    "url": "https://openai.com/index/scaling-git-at-openai/"
-   },
-   "edition": "2026-11-04-pm",
-   "order": 23,
-   "id": "2026-11-04-pm-023"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Let the character want something small",
-   "body": "A character doesn't need to want to save the world. A seat by the window, the last mango, one more minute before the alarm. A small, clear want on the first page gives readers something to lean toward, and it reveals personality in how the character goes after it.",
-   "edition": "2026-11-04-pm",
-   "order": 22,
-   "id": "2026-11-04-pm-022"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "A chess problem-solving final comes to Fujairah",
-   "body": "The Grand Final of the WFCC Fujairah Grand Prix will be held in Fujairah, UAE, from 27 to 30 November. Solvers race through six rounds of composed problems and studies, and a composing contest runs alongside, with the solvers voting for their favourite original creations.",
-   "hook": "Wonder: is solving a composed puzzle closer to playing chess or to reading poetry?",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/wfcc-grand-prix-final-fujairah-announcement"
-   },
-   "edition": "2026-11-04-pm",
-   "order": 21,
-   "id": "2026-11-04-pm-021"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Kailasanathar Temple, Kanchipuram",
-   "body": "The Kailasanathar Temple in Kanchipuram was built around 700 CE under the Pallava king Narasimhavarman II, also called Rajasimha. It is one of the earliest structural stone temples in Tamil Nadu, built of sandstone rather than cut into rock, and its walls are lined with small shrines and carvings.",
-   "q": "Which Pallava king built the Kailasanathar Temple in Kanchipuram?",
-   "a": "Narasimhavarman II (Rajasimha), around 700 CE.",
-   "edition": "2026-11-04-pm",
-   "order": 20,
-   "id": "2026-11-04-pm-020"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "One place, one kind of work",
-   "body": "Brains link places with habits. If you can, give each kind of task its own spot: deep study at the desk, email on the sofa, reading by the window. Over time, simply sitting down in the study chair starts to switch the right mode on, with less willpower needed.",
-   "edition": "2026-11-04-pm",
-   "order": 19,
-   "id": "2026-11-04-pm-019"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A model Earth with no life on it",
-   "body": "Researchers have built a computer model of a lifeless Earth that links the atmosphere to the planet's interior. It can reproduce today's habitable-looking conditions without any life at all, a useful reminder for future exoplanet hunters that 'habitable' and 'inhabited' are different words.",
-   "hook": "Wonder: what signal would truly convince you a distant world is alive?",
-   "source": {
-    "name": "Universe Today",
-    "url": "https://www.universetoday.com/articles/a-virtual-lifeless-earth-will-help-scientists-find-life-on-exoplanets"
-   },
-   "edition": "2026-11-04-pm",
-   "order": 18,
-   "id": "2026-11-04-pm-018"
-  },
-  {
-   "topic": "mind",
-   "kind": "tip",
-   "title": "If-then plans",
-   "body": "Psychologist Peter Gollwitzer studied 'implementation intentions': plans phrased as 'If situation X, then I will do Y'. For example, 'If I sit down after dinner, then I open the Java notes first.' Linking an action to a cue makes it more likely to happen, because the cue does the remembering for you.",
-   "q": "What is the format of an implementation intention?",
-   "a": "'If situation X, then I will do Y.'",
-   "edition": "2026-11-04-pm",
-   "order": 17,
-   "id": "2026-11-04-pm-017"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Cache-aside, the polite cache",
-   "body": "In the cache-aside pattern, the application checks the cache first. On a miss it reads the database, stores the result in the cache with a time-to-live, and returns it. On writes it updates the database and deletes the cached entry, rather than trying to update it, so the next read refills it fresh. Simple, common, and easy to reason about.",
-   "hook": "Wonder: why is deleting a cache entry on write usually safer than updating it?",
-   "edition": "2026-11-04-pm",
-   "order": 16,
-   "id": "2026-11-04-pm-016"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "AI agents help run a radio telescope",
-   "body": "At SETI's Allen Telescope Array, AI agents now assist with telescope operations and signal analysis. Researchers say some jobs dropped from weeks to hours, and the system detected a pulsar in the Crab Nebula in real time, a familiar natural lighthouse rather than anything alien.",
-   "q": "What did the agent-assisted Allen Telescope Array detect in real time?",
-   "a": "A pulsar in the Crab Nebula.",
-   "source": {
-    "name": "The Decoder",
-    "url": "https://the-decoder.com/ai-agents-take-over-at-setis-allen-telescope-array-scanning-for-extraterrestrial-intelligence/"
-   },
-   "edition": "2026-11-04-pm",
-   "order": 15,
-   "id": "2026-11-04-pm-015"
   }
  ]
 }
