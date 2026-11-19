@@ -1,6 +1,355 @@
 {
- "updated": "2026-11-18T17:14:32+00:00",
+ "updated": "2026-11-19T02:14:22+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these from memory before scrolling back: What limits the biggest burst in a token bucket? What does triangulation change? Where is the Roman telescope going? Why is every Chola bronze unique?",
+   "q": "Which method casts the Chola bronzes?",
+   "a": "Lost-wax casting.",
+   "edition": "2026-11-19-am",
+   "order": 30,
+   "id": "2026-11-19-am-030"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Let the agent wait for you",
+   "body": "Not every step should be done in one sitting. Google's Agent Development Kit can pause an agent, hand back a receipt, and resume hours later when a person approves or replies. Designing agents that can wait patiently — rather than guessing to keep moving — keeps people in charge of the decisions that matter.",
+   "hook": "Wonder: which step in your work would you want an agent to pause before?",
+   "source": {
+    "name": "Towards Data Science",
+    "url": "https://towardsdatascience.com/google-adk-agents-that-pause-resume-and-wait-hours-for-a-human"
+   },
+   "edition": "2026-11-19-am",
+   "order": 29,
+   "id": "2026-11-19-am-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the last light switch",
+   "body": "One by one the rooms go dark\nlike pages being turned.\n\nThe fan slows into its own sound.\nThe clock admits it has been talking all day.\n\nI leave the window open a hand's width —\nenough for the night\nto come in and sit down.",
+   "edition": "2026-11-19-am",
+   "order": 28,
+   "id": "2026-11-19-am-028"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The Eiffel Tower grows in summer",
+   "body": "Iron expands when it warms. On hot days the Eiffel Tower stands several centimetres taller than in winter, and its top leans very slightly away from the sun as one side heats faster than the other.",
+   "q": "Why is the Eiffel Tower taller in summer?",
+   "a": "Thermal expansion — the iron lengthens as it warms.",
+   "edition": "2026-11-19-am",
+   "order": 27,
+   "id": "2026-11-19-am-027"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Gather like the bees",
+   "who": "Seneca, Letters to Lucilius 84 (own rendering)",
+   "body": "We should imitate the bees: they wander from flower to flower, choose what suits honey, and then sort and arrange in their combs whatever they have gathered.",
+   "edition": "2026-11-19-am",
+   "order": 26,
+   "id": "2026-11-19-am-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java: CopyOnWriteArrayList for read-mostly lists",
+   "body": "A plain ArrayList shared between threads needs locking. CopyOnWriteArrayList takes a different deal: every write copies the whole array, and every reader iterates over a snapshot that never changes underneath it — so no ConcurrentModificationException. Great for listener lists that are read constantly and changed rarely; poor for lists that change often.",
+   "q": "Why can't iterating a CopyOnWriteArrayList throw ConcurrentModificationException?",
+   "a": "The iterator walks a snapshot; writes create a new array instead of changing the old one.",
+   "edition": "2026-11-19-am",
+   "order": 25,
+   "id": "2026-11-19-am-025"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Triangulation: losing a move on purpose",
+   "body": "Sometimes the side to move is the one in trouble. A king can 'waste' a move by walking a small triangle — reaching in three moves a square it could reach in two. The position looks the same, but now it's the opponent's turn, and they must give way. It's one of the purest ideas in king-and-pawn endings.",
+   "q": "What does triangulation change in a position?",
+   "a": "Only whose turn it is — passing the move to the opponent.",
+   "edition": "2026-11-19-am",
+   "order": 24,
+   "id": "2026-11-19-am-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first website is still there",
+   "body": "Tim Berners-Lee's first website, at info.cern.ch, explained what the World Wide Web was and how to use it. It went public in 1991. In 2013 CERN restored it at its original address, so you can still visit the web's first page today.",
+   "hook": "Wonder: what would the first page of your own 'web' have said?",
+   "edition": "2026-11-19-am",
+   "order": 23,
+   "id": "2026-11-19-am-023"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Review the slip like a scientist",
+   "body": "When something slips — a missed call, a late form — skip the verdict on yourself and ask three curious questions: what was I doing when it slipped, what would have reminded me, and what's the smallest change for next time? You get a fix instead of a bad mood, and fixes add up.",
+   "edition": "2026-11-19-am",
+   "order": 22,
+   "id": "2026-11-19-am-022"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Dansborg, a Danish fort on the Tamil coast",
+   "body": "At Tharangambadi (Tranquebar) on the Coromandel coast stands Dansborg, a fort built by the Danes in 1620 after an agreement with the Thanjavur Nayak ruler. For over two centuries the town was a Danish trading post. Today the fort is a museum looking out over a calm stretch of sea.",
+   "q": "Which European country built Dansborg at Tharangambadi?",
+   "a": "Denmark, in 1620.",
+   "edition": "2026-11-19-am",
+   "order": 21,
+   "id": "2026-11-19-am-021"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The conductor's spare coin",
+   "body": "Every evening the conductor on the 21G kept one rupee in his shirt pocket that he never used for change. Students short by a coin would find their ticket punched anyway, the rupee moved quietly from pocket to bag. In twenty years he lost count of the rupees. On his last day, the bag rattled when he handed it in: someone had been slipping coins back in, a few at a time, for years.",
+   "edition": "2026-11-19-am",
+   "order": 20,
+   "id": "2026-11-19-am-020"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Webb sees jets carving a star nursery",
+   "body": "A Webb near-infrared image of NGC 7129 shows a cloud where stars are being born. Older young stars sit in golden gas on one side; younger ones hide in red, threadlike gas on the other, likely shaped by jets and winds streaming from the newborn stars. Distant galaxies peek through in the background.",
+   "q": "Why does Webb look in infrared to see star birth?",
+   "a": "Infrared light passes through dust that blocks visible light, revealing the young stars inside.",
+   "source": {
+    "name": "NASA APOD",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-16-ngc-7129-star-formation-with-jets-from-webb/"
+   },
+   "edition": "2026-11-19-am",
+   "order": 19,
+   "id": "2026-11-19-am-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Thinking longer, choosing no better",
+   "body": "A new preprint tested ten frontier models on shopping-style decisions and found that asking them to reason longer made them more confident but not more often right. It's a useful reminder: extra deliberation helps when there's something to work out, not always when the choice depends on missing information.",
+   "hook": "Wonder: when has 'sleeping on it' helped you — and when did you just need one more fact?",
+   "source": {
+    "name": "arXiv",
+    "url": "https://arxiv.org/abs/2611.22033"
+   },
+   "edition": "2026-11-19-am",
+   "order": 18,
+   "id": "2026-11-19-am-018"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Sleep files the day away",
+   "body": "Studies of learning and sleep suggest the brain replays and strengthens new memories while we sleep, especially things we practised that day. A good night after studying often helps recall more than an extra late hour of cramming. Learning in the evening and reviewing briefly the next morning is a gentle way to use this.",
+   "edition": "2026-11-19-am",
+   "order": 17,
+   "id": "2026-11-19-am-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A pumpkin is a berry",
+   "body": "Botanically, a berry is a fleshy fruit grown from a single flower's ovary, with seeds inside. By that definition pumpkins, cucumbers and watermelons all count — they're a kind of berry called a pepo, with a tough rind.",
+   "hook": "Wonder: which other 'vegetables' in your kitchen are secretly fruit?",
+   "edition": "2026-11-19-am",
+   "order": 16,
+   "id": "2026-11-19-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java: try-with-resources",
+   "body": "Since Java 7, anything that implements AutoCloseable can go in the brackets of try (...). Java closes it for you when the block ends — even if an exception is thrown — and closes several resources in reverse order of opening. If closing also fails, that second exception is attached as 'suppressed' instead of hiding the first.\n\ntry (var in = Files.newBufferedReader(path)) {\n    return in.readLine();\n}",
+   "q": "In what order are multiple resources closed?",
+   "a": "Reverse order of declaration — last opened, first closed.",
+   "edition": "2026-11-19-am",
+   "order": 15,
+   "id": "2026-11-19-am-015"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Enter late, leave early",
+   "body": "Start a scene as close to its turning point as you can, and leave as soon as it has turned. Skip the hellos, the parking, the 'how was your day'. Readers fill in the edges easily; what they want is the moment something shifts. If a scene feels slow, try deleting its first and last few lines.",
+   "edition": "2026-11-19-am",
+   "order": 14,
+   "id": "2026-11-19-am-014"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The rule of the square",
+   "body": "Can a lone king catch a runaway pawn? Imagine a square whose side runs from the pawn to its promotion square. If the defending king can step inside that square on its move, it catches the pawn; if not, the pawn queens. (Count from the pawn's starting rank carefully if it can still move two squares.)",
+   "q": "What decides whether a king can catch a passed pawn in a pure race?",
+   "a": "Whether the king can step into the pawn's 'square' on its move.",
+   "edition": "2026-11-19-am",
+   "order": 13,
+   "id": "2026-11-19-am-013"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The right time and place",
+   "who": "Thirukkural 484 (own rendering)",
+   "body": "Even the whole world can be won, if you act at the right time and in the right place.",
+   "edition": "2026-11-19-am",
+   "order": 12,
+   "id": "2026-11-19-am-012"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The Milky Way and an aurora, side by side",
+   "body": "This week's Astronomy Picture of the Day shows two glowing arches over Kvaløya in northern Norway. On the left is the band of our galaxy, light that set out thousands of years ago. On the right is an aurora, hours old, glowing about a hundred kilometres up. The Big Dipper and the Andromeda galaxy are tucked into the same frame.",
+   "hook": "Wonder: how can two arches that look the same size be so different in distance?",
+   "source": {
+    "name": "NASA APOD",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-17-milky-way-versus-aurora/"
+   },
+   "edition": "2026-11-19-am",
+   "order": 11,
+   "id": "2026-11-19-am-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Unix began on a spare PDP-7",
+   "body": "In 1969 Ken Thompson at Bell Labs found a little-used DEC PDP-7 and began writing a small operating system on it, joined soon by Dennis Ritchie. One early motivation was to keep running a game he'd written called Space Travel. That modest system grew into Unix, whose ideas live on in Linux, macOS and Android.",
+   "q": "Which machine did Unix first run on?",
+   "a": "A DEC PDP-7 at Bell Labs, in 1969.",
+   "edition": "2026-11-19-am",
+   "order": 10,
+   "id": "2026-11-19-am-010"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "LangChain lets agents wake up on a schedule",
+   "body": "LangChain added a Schedules SDK to its managed Deep Agents, so an agent can run on a timetable instead of only when someone types to it. The idea is 'proactive' agents — for example, tidying a memory store or triaging a queue every morning before you look.",
+   "hook": "Wonder: what's one small job you'd like done before you wake up?",
+   "source": {
+    "name": "LangChain blog",
+    "url": "https://www.langchain.com/blog/proactive-agents"
+   },
+   "edition": "2026-11-19-am",
+   "order": 9,
+   "id": "2026-11-19-am-009"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Chola bronzes, made with wax",
+   "body": "The famous Chola bronzes, like the dancing Nataraja, were cast by the lost-wax method. The artist first sculpts the figure in beeswax, covers it in clay, then heats it so the wax melts away and leaves a hollow mould for the molten metal. Because the mould is broken to free the figure, each piece is one of a kind. Artisans in Swamimalai, near Kumbakonam, still work this way.",
+   "q": "Why is every lost-wax bronze unique?",
+   "a": "The wax model melts away and the clay mould is broken to release the casting, so neither can be reused.",
+   "edition": "2026-11-19-am",
+   "order": 8,
+   "id": "2026-11-19-am-008"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Keep a 'done' list",
+   "body": "A to-do list only shows what's left. Next to it, jot each thing you finish — even 'replied to Ravi' or 'found the charger'. By evening you have proof the day moved, which makes tomorrow's start easier. Many people with ADHD underestimate what they got done; the list quietly corrects that.",
+   "edition": "2026-11-19-am",
+   "order": 7,
+   "id": "2026-11-19-am-007"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Butterflies taste with their feet",
+   "body": "Butterflies have taste sensors on their feet. When a female lands on a leaf, she can 'taste' whether it's the right plant for her caterpillars before laying eggs.",
+   "hook": "Wonder: what would breakfast be like if you tasted it by standing on it?",
+   "edition": "2026-11-19-am",
+   "order": 6,
+   "id": "2026-11-19-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Token bucket: allow bursts, keep the average",
+   "body": "Picture a bucket that holds up to N tokens and refills at a steady rate r. Each request takes one token; if the bucket is empty, the request waits or is refused. A quiet client saves up tokens and can burst up to N at once, but over time nobody gets more than r per second. It's a simple, memory-light way to be fair without being rigid.",
+   "q": "In a token bucket, what limits the largest burst?",
+   "a": "The bucket's capacity, N.",
+   "edition": "2026-11-19-am",
+   "order": 5,
+   "id": "2026-11-19-am-005"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Chunking: how masters see the board",
+   "body": "In the 1970s William Chase and Herbert Simon showed chess masters a real position for a few seconds; they rebuilt it far better than beginners. With pieces placed at random, the masters' advantage mostly vanished. Experts don't have bigger memories — they store familiar patterns as single 'chunks'. The same is true in code, music and language: learning the common patterns frees your mind for the new part.",
+   "q": "What happened to the masters' memory edge when pieces were placed randomly?",
+   "a": "It largely disappeared — their skill was pattern knowledge, not raw memory.",
+   "edition": "2026-11-19-am",
+   "order": 4,
+   "id": "2026-11-19-am-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Giri and Firouzja reach the Total Chess final",
+   "body": "Anish Giri and Alireza Firouzja will meet in the final of the Total Chess World Championship Tour Pilot in Budapest on 19–20 November. Giri beat Maxime Vachier-Lagrave on both semifinal days without losing a game. Firouzja and Fabiano Caruana split the two days, so it went to a single Armageddon game, which Firouzja won when Caruana's clock ran out.",
+   "q": "In Armageddon, what does Black win with a draw?",
+   "a": "The game — a draw counts as a win for Black, who plays with less time on the clock.",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/anish-giri-and-alireza-firouzja-reach-total-chess-final/"
+   },
+   "edition": "2026-11-19-am",
+   "order": 3,
+   "id": "2026-11-19-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Thursday, the first tap",
+   "body": "The tap coughs once,\nthen remembers it is a river.\n\nI hold the steel pot under it\nand wait the way the pot waits —\nwithout a plan, only a shape.\n\nOutside, a crow tries one word\nover and over\nuntil the morning agrees.",
+   "edition": "2026-11-19-am",
+   "order": 2,
+   "id": "2026-11-19-am-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Roman's first pictures arrive on 7 December",
+   "body": "NASA will show the first images from the Nancy Grace Roman Space Telescope on Monday, 7 December, streamed live from the AGU meeting in San Francisco at 3:30 p.m. Eastern (2 a.m. on 8 December in India). Roman launched on 30 August on a Falcon Heavy and is heading for a quiet spot beyond the Moon called L2. NASA is also inviting people to 'adopt' a pixel of that first image.",
+   "q": "Where is the Roman telescope heading to do its work?",
+   "a": "Sun–Earth L2, a stable point about 1.5 million km from Earth on the side away from the Sun.",
+   "source": {
+    "name": "NASA",
+    "url": "https://www.nasa.gov/news-release/nasa-invites-media-public-to-view-roman-telescopes-first-images/"
+   },
+   "edition": "2026-11-19-am",
+   "order": 1,
+   "id": "2026-11-19-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "KPMG tries an audit with 100 AI agents on the team",
+   "body": "KPMG UK ran an experiment it calls Project Exponential: more than 100 AI agents worked alongside a human audit team on the accounts of a FTSE 250 company over about four months. The firm says the agents sometimes dug into issues more deeply than people did. It wasn't the official audit, and KPMG plans to try the approach on up to 20 larger audits next.",
+   "hook": "Wonder: is a good auditor mostly someone who asks one more question?",
+   "source": {
+    "name": "European Business Magazine",
+    "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/"
+   },
+   "edition": "2026-11-19-am",
+   "order": 0,
+   "id": "2026-11-19-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9681,353 +10030,6 @@
    "edition": "2026-11-04-pm",
    "order": 15,
    "id": "2026-11-04-pm-015"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The tailor's measuring tape",
-   "body": "For forty years the tailor wrote every customer's measurements in a ledger. When his granddaughter took over the shop, she found the margins full of tiny notes: 'stands straighter on Fridays', 'laughs with his whole chest, add room'. She bought a new ledger, kept the old one on the shelf, and on the first page of the new one she drew a wide, empty margin.",
-   "edition": "2026-11-04-pm",
-   "order": 14,
-   "id": "2026-11-04-pm-014"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Young players gather in Al Ain",
-   "body": "The fourth FIDE World Junior Rapid & Blitz Championships are under way in Al Ain, UAE, from 1 to 7 November, with 150 players from 40 countries. The nine-round rapid section finishes first, and blitz follows on 5–6 November. After three rounds, five players shared the Open lead on a perfect score.",
-   "source": {
-    "name": "FIDE",
-    "url": "https://www.fide.com/continental-chess-presidents-inaugurate-world-junior-rapid-blitz-championships-in-al-ain/"
-   },
-   "edition": "2026-11-04-pm",
-   "order": 13,
-   "id": "2026-11-04-pm-013"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Hummingbirds can fly backwards",
-   "body": "Hummingbirds rotate their wings in a figure-eight pattern, producing lift on both the forward and back strokes. That lets them hover in place and even fly backwards, something almost no other bird can do.",
-   "q": "What wing motion lets hummingbirds hover and fly backwards?",
-   "a": "A figure-eight stroke that makes lift on both forward and back strokes.",
-   "edition": "2026-11-04-pm",
-   "order": 12,
-   "id": "2026-11-04-pm-012"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Marcus Aurelius, Meditations 10.16",
-   "body": "Waste no more time arguing about what a good man should be. Be one.",
-   "edition": "2026-11-04-pm",
-   "order": 11,
-   "id": "2026-11-04-pm-011"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The internet's first word was 'LO'",
-   "body": "On 29 October 1969, a student at UCLA tried to log in to a computer at the Stanford Research Institute over the young ARPANET. He typed L, then O, and the system crashed before the G. So the first message ever sent across the network that grew into the internet was, fittingly, 'LO'. A full login worked about an hour later.",
-   "q": "What were the first two letters sent over ARPANET?",
-   "a": "L and O; the system crashed before 'LOGIN' was finished.",
-   "edition": "2026-11-04-pm",
-   "order": 10,
-   "id": "2026-11-04-pm-010"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "The sky Van Gogh actually saw",
-   "body": "A study in Scientific Reports argues that the sky in The Starry Night matches the pre-dawn view over Saint-Rémy around 22 July 1889, when a waning crescent Moon, Venus and the Hyades star cluster sat close together. The painting may be more of a sky diary than we assumed.",
-   "hook": "Wonder: which of your own skies would you want someone to identify 137 years later?",
-   "source": {
-    "name": "Universe Today",
-    "url": "https://www.universetoday.com/articles/new-research-resolves-the-mystery-behind-van-goghs-the-starry-night"
-   },
-   "edition": "2026-11-04-pm",
-   "order": 9,
-   "id": "2026-11-04-pm-009"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Attention residue",
-   "body": "When you switch from task A to task B, part of your mind stays behind on A, especially if A was left unfinished. Researcher Sophie Leroy named this 'attention residue' in 2009. A small fix: before switching, jot where you stopped and what comes next. It gives A a resting place so B gets more of you.",
-   "q": "What did Sophie Leroy call the leftover focus that lingers on a previous task?",
-   "a": "Attention residue.",
-   "edition": "2026-11-04-pm",
-   "order": 8,
-   "id": "2026-11-04-pm-008"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "FlashProve: proof of which model answered",
-   "body": "Anthropic, with collaborators from EPFL and MIT, has published FlashProve, an experimental system that attaches a cryptographic proof to a model's output showing it came from a specific, committed set of weights, without revealing the weights. It is released as research and code; no production deployment has been announced.",
-   "hook": "Wonder: could a model's answer one day come with a receipt, like a signed letter?",
-   "source": {
-    "name": "Anthropic",
-    "url": "https://www.anthropic.com/research/provable-inference"
-   },
-   "edition": "2026-11-04-pm",
-   "order": 7,
-   "id": "2026-11-04-pm-007"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Akam and puram: the two rooms of Sangam poetry",
-   "body": "Classical Sangam poems in Tamil are sorted into two great modes. Akam ('inner') poems explore love and private feeling, usually without naming the people involved. Puram ('outer') poems speak of public life: kings, generosity, valour and ethics. Landscapes such as hills, seashore and farmland carry the mood of akam poems.",
-   "q": "In Sangam poetry, which mode deals with love and inner feeling?",
-   "a": "Akam ('inner').",
-   "edition": "2026-11-04-pm",
-   "order": 6,
-   "id": "2026-11-04-pm-006"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Give stray thoughts a parking spot",
-   "body": "Keep one notepad (or one notes file) beside you while you work. When a 'must remember to…' thought arrives, write five words and go back. The brain lets go more easily once it trusts the thought is caught somewhere safe. Review the pad when the session ends, not during it.",
-   "edition": "2026-11-04-pm",
-   "order": 5,
-   "id": "2026-11-04-pm-005"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java Strings never change, and that's the gift",
-   "body": "A Java String is immutable: methods like toUpperCase() return a new String and leave the old one untouched. That makes Strings safe to share between threads, safe to use as HashMap keys, and lets the JVM pool identical literals. The cost: building text in a loop with + creates many throwaway objects, which is why StringBuilder exists.",
-   "q": "Why use StringBuilder instead of + inside a long loop?",
-   "a": "Strings are immutable, so each + creates a new object; StringBuilder appends into one mutable buffer.",
-   "edition": "2026-11-04-pm",
-   "order": 4,
-   "id": "2026-11-04-pm-004"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "World Senior Championship opens in Serbia",
-   "body": "The FIDE World Senior Championship has begun in Vrnjačka Banja, Serbia, with 385 players from 65 federations, including 44 grandmasters. Four nine-round Swiss sections run in parallel: Open and Women, each for players over 50 and over 65, all at a classical time control.",
-   "hook": "Wonder: what does a game look like after fifty years of pattern-building?",
-   "source": {
-    "name": "FIDE",
-    "url": "https://www.fide.com/fide-world-senior-chess-championship-2026-begins-in-vrnjacka-banja-serbia/"
-   },
-   "edition": "2026-11-04-pm",
-   "order": 3,
-   "id": "2026-11-04-pm-003"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Rangoli at dusk",
-   "body": "She bends to the threshold\nwith a pinch of white,\nand the dots wait patiently\nto be joined into light.\n\nBy morning the feet\nwill have blurred every line.\nShe knows. She draws anyway.\nThat is the design.",
-   "edition": "2026-11-04-pm",
-   "order": 2,
-   "id": "2026-11-04-pm-002"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Apple opens Siri to app developers",
-   "body": "Apple has started a developer preview that lets apps plug their content and actions into Siri through App Intents, in the iOS 27.3 and sibling betas. Apps can offer multi-step 'Skills', such as checking an order and then arranging its delivery. Wider availability is planned later.",
-   "q": "Which Apple framework lets apps expose actions to Siri?",
-   "a": "App Intents.",
-   "source": {
-    "name": "Apple Developer",
-    "url": "https://developer.apple.com/news/?id=gdk2umrf"
-   },
-   "edition": "2026-11-04-pm",
-   "order": 1,
-   "id": "2026-11-04-pm-001"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "All five genetic letters found in asteroid Ryugu",
-   "body": "A Japanese team reports in Nature Astronomy that samples of asteroid Ryugu, brought home by JAXA's Hayabusa2 in 2020, contain all five nucleobases used in DNA and RNA: adenine, guanine, cytosine, thymine and uracil, in broadly similar amounts. It hints that these building blocks were common across the young Solar System.",
-   "hook": "Wonder: how many of life's ingredients were already drifting around before Earth existed?",
-   "source": {
-    "name": "ScienceDaily",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261102075903.htm"
-   },
-   "edition": "2026-11-04-pm",
-   "order": 0,
-   "id": "2026-11-04-pm-000"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Koalas have fingerprints",
-   "body": "Koalas have fingerprints with loops and whorls so similar to ours that they can be hard to tell apart even under a microscope. They evolved separately, probably to help grip branches and handle leaves.",
-   "edition": "2026-11-04-am",
-   "order": 30,
-   "id": "2026-11-04-am-030"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Give your agent a budget",
-   "body": "A good agent loop has limits: maximum steps, maximum tool calls, maximum time or tokens. When the budget runs out, it stops and reports what it has, instead of wandering. Budgets turn 'it went quiet for an hour' into 'here's where I got to'.",
-   "hook": "Wonder: what budget would you give yourself for today's hardest task?",
-   "edition": "2026-11-04-am",
-   "order": 29,
-   "id": "2026-11-04-am-029"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Leave the last step to the reader",
-   "body": "Don't write 'she was heartbroken'. Write that she set two cups on the table, then put one back. Readers love to complete the thought themselves; the feeling they work out lands deeper than the one you hand them.",
-   "edition": "2026-11-04-am",
-   "order": 28,
-   "id": "2026-11-04-am-028"
-  },
-  {
-   "topic": "mind",
-   "kind": "tip",
-   "title": "Ask 'why would that be true?'",
-   "body": "When you read a fact, pause and ask why it makes sense, and answer in a sentence. This 'elaborative interrogation' ties new information to what you already know, and studies find it helps facts stick better than rereading.",
-   "q": "What is elaborative interrogation?",
-   "a": "Asking yourself why a fact is true and explaining it, to link it to what you already know.",
-   "edition": "2026-11-04-am",
-   "order": 27,
-   "id": "2026-11-04-am-027"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Speed Chess Championship XI announced",
-   "body": "Chess.com announced the 11th Speed Chess Championship, its 10th-anniversary edition, with a $250,000 prize fund and live finals in London.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/announcing-speed-chess-championship-2026"
-   },
-   "edition": "2026-11-04-am",
-   "order": 26,
-   "id": "2026-11-04-am-026"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "The outbox pattern",
-   "body": "You need to save an order AND publish an 'order created' event. Doing both separately risks one succeeding and one failing. Instead, write the event into an 'outbox' table inside the same database transaction as the order. A separate relay reads the outbox and publishes. Either both are recorded, or neither.",
-   "q": "What problem does the outbox pattern solve?",
-   "a": "Keeping a database write and an event publish consistent without a distributed transaction.",
-   "edition": "2026-11-04-am",
-   "order": 25,
-   "id": "2026-11-04-am-025"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "As deep as the water",
-   "body": "The lotus stem rises as high as the water is deep;\na person rises as high as the depth within.",
-   "who": "Thirukkural 595 (rendering for this feed)",
-   "edition": "2026-11-04-am",
-   "order": 24,
-   "id": "2026-11-04-am-024"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Cut, copy, paste came from Xerox PARC",
-   "body": "Larry Tesler and Tim Mott built the Gypsy text editor at Xerox PARC in the mid-1970s, which popularised cut, copy and paste with a mouse. Tesler championed 'modeless' editing, where every key does the same thing no matter what mode you're in.",
-   "hook": "Wonder: how many times did you paste something today?",
-   "edition": "2026-11-04-am",
-   "order": 23,
-   "id": "2026-11-04-am-023"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The Moon is drifting away, slowly",
-   "body": "Laser beams bounced off mirrors left by Apollo astronauts show the Moon moving away from Earth by about 3.8 cm a year, roughly the speed your fingernails grow. Tides are the cause: they slowly pass Earth's spin energy to the Moon's orbit.",
-   "q": "How fast is the Moon receding from Earth?",
-   "a": "About 3.8 cm per year.",
-   "edition": "2026-11-04-am",
-   "order": 22,
-   "id": "2026-11-04-am-022"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Anthropic's Message Threads skip the resend",
-   "body": "A new public-beta API feature lets developers send a long conversation once, then only the new messages plus a thread ID. Anthropic says this cuts median time-to-first-token by about a third on very long requests.",
-   "source": {
-    "name": "AI Agent Store weekly news",
-    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
-   },
-   "edition": "2026-11-04-am",
-   "order": 21,
-   "id": "2026-11-04-am-021"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Uthiramerur's palm-leaf pot",
-   "body": "Inscriptions on a temple wall at Uthiramerur, near Kanchipuram, dated to the reign of Parantaka Chola I (around 920 CE), describe how a village chose its committee members: names written on palm leaves were dropped into a pot, and a child drew them out. The rules also listed who was eligible to stand.",
-   "q": "In the Uthiramerur system, who drew the palm-leaf names from the pot?",
-   "a": "A young child.",
-   "edition": "2026-11-04-am",
-   "order": 20,
-   "id": "2026-11-04-am-020"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Ceiling fan",
-   "body": "Slow circles above the bed,\nlike someone stirring the room\nuntil the day dissolves.",
-   "edition": "2026-11-04-am",
-   "order": 19,
-   "id": "2026-11-04-am-019"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Decide once, then stop deciding",
-   "body": "Small decisions quietly drain the tank. Pick defaults for the repeat ones: the same breakfast on weekdays, a go-to lunch order, a fixed 'laundry day'. A default isn't a rule; you can break it any time. It just means the easy path is already chosen.",
-   "edition": "2026-11-04-am",
-   "order": 18,
-   "id": "2026-11-04-am-018"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "IceCube catches very high-energy neutrinos",
-   "body": "The IceCube detector, a cubic kilometre of Antarctic ice laced with sensors, is recording neutrinos carrying roughly ten billion times the energy of those from the Sun, messengers from far-off cosmic engines.",
-   "q": "Where is the IceCube neutrino detector?",
-   "a": "Buried in the ice at the South Pole, Antarctica.",
-   "source": {
-    "name": "ScienceDaily",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261101010533.htm"
-   },
-   "edition": "2026-11-04-am",
-   "order": 17,
-   "id": "2026-11-04-am-017"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Walk, then brainstorm",
-   "body": "In Stanford experiments by Marily Oppezzo and Daniel Schwartz (2014), people came up with noticeably more creative uses for everyday objects while walking, even on a treadmill facing a blank wall, than while sitting. The boost lingered a little after they sat down.",
-   "hook": "Wonder: what problem could you take on a ten-minute walk today?",
-   "edition": "2026-11-04-am",
-   "order": 16,
-   "id": "2026-11-04-am-016"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java Optional: a return type, not a field",
-   "body": "Optional was designed to say 'this method might not have an answer'. Return it from finders; don't use it for fields, method parameters or collections (return an empty list instead). And prefer orElseGet(() -> expensive()) over orElse(expensive()) when the fallback is costly, because orElse always evaluates its argument.",
-   "q": "Why prefer orElseGet over orElse for an expensive fallback?",
-   "a": "orElse evaluates its argument every time; orElseGet only calls the supplier when the Optional is empty.",
-   "edition": "2026-11-04-am",
-   "order": 15,
-   "id": "2026-11-04-am-015"
   }
  ]
 }
