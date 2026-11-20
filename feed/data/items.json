@@ -1,6 +1,349 @@
 {
- "updated": "2026-11-20T02:20:12+00:00",
+ "updated": "2026-11-20T17:15:56+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the clothes on the line",
+   "body": "The shirts have stopped\ntheir afternoon waving.\nThey hang now like people\nwho've finished talking.\n\nI leave them out\none more hour.\nLet the night air\nhave a turn with them.",
+   "edition": "2026-11-20-pm",
+   "order": 30,
+   "id": "2026-11-20-pm-030"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Bamboo is a very fast grass",
+   "body": "Bamboo is a grass, and some species are among the fastest-growing plants on Earth: certain kinds have been measured growing close to 90 centimetres in a single day. On a quiet day, you could almost watch it.",
+   "hook": "Wonder: how does a plant grow that fast without collapsing?",
+   "edition": "2026-11-20-pm",
+   "order": 29,
+   "id": "2026-11-20-pm-029"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 9: Map.of is strict",
+   "body": "Map.of(\"a\", 1, \"b\", 2) gives a compact, unmodifiable map. It throws if you pass a null key or value, or the same key twice, and its iteration order is not guaranteed. It takes up to ten pairs; for more, use Map.ofEntries(Map.entry(k, v), ...).",
+   "q": "What happens if you pass a null value to Map.of?",
+   "a": "It throws a NullPointerException.",
+   "edition": "2026-11-20-pm",
+   "order": 28,
+   "id": "2026-11-20-pm-028"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Books in the running brooks",
+   "body": "And this our life, exempt from public haunt,\nFinds tongues in trees, books in the running brooks,\nSermons in stones, and good in every thing.",
+   "who": "Shakespeare, As You Like It, Act 2 Scene 1",
+   "edition": "2026-11-20-pm",
+   "order": 27,
+   "id": "2026-11-20-pm-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The bishop pair",
+   "body": "Two bishops working together cover both colours and sweep across open boards. In open positions they are usually a small but real edge; Larry Kaufman's study of master games valued the pair at about half a pawn. In closed positions with locked pawns, knights often catch up.",
+   "q": "In what kind of position does the bishop pair shine?",
+   "a": "Open positions with clear diagonals.",
+   "edition": "2026-11-20-pm",
+   "order": 26,
+   "id": "2026-11-20-pm-026"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask for the plan before the code",
+   "body": "Before a bigger change, ask the agent to write a short plan: which files it will touch, in what order, and how it will check the result. Reading a plan takes a minute; untangling a wrong turn takes much longer. Approve the plan, then let it work.",
+   "q": "What should an agent produce before a large change?",
+   "a": "A short plan: files, order and how it will verify the work.",
+   "edition": "2026-11-20-pm",
+   "order": 25,
+   "id": "2026-11-20-pm-025"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Logo and the turtle",
+   "body": "In 1967 Wally Feurzeig, Seymour Papert and Cynthia Solomon created Logo, a programming language meant for children. Its famous 'turtle' — first a small robot on the floor, later a cursor on screen — drew lines as kids typed commands like FORWARD 50 and RIGHT 90, turning geometry into something you could steer.",
+   "q": "What did children steer in Logo?",
+   "a": "A 'turtle' that drew lines as it moved.",
+   "edition": "2026-11-20-pm",
+   "order": 24,
+   "id": "2026-11-20-pm-024"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The spotlight effect",
+   "body": "In a 2000 study, Thomas Gilovich and colleagues had students walk into a room wearing an embarrassing T-shirt. The wearers guessed that about half the room noticed; in fact only about a quarter did. We tend to overestimate how much others watch us, which is a gentle reason to worry less about small slips.",
+   "hook": "Wonder: who noticed your last small mistake — besides you?",
+   "edition": "2026-11-20-pm",
+   "order": 23,
+   "id": "2026-11-20-pm-023"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Saturn is lighter than water",
+   "body": "Saturn's average density is about 0.69 grams per cubic centimetre, less than water's 1.0. So, the old joke goes, it would float in a big enough bathtub. In reality it's a ball of mostly hydrogen and helium with no surface to float on, but the number is real.",
+   "q": "Which planet's average density is less than water's?",
+   "a": "Saturn, at about 0.69 g/cm³.",
+   "edition": "2026-11-20-pm",
+   "order": 22,
+   "id": "2026-11-20-pm-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Let yourself move while you think",
+   "body": "A 2015 study of children with ADHD found that those who moved more during a working-memory task tended to do better on it. Movement isn't always a distraction; for some brains it helps. A fidget, a standing desk or pacing during a phone call can be a tool, not a fault.",
+   "edition": "2026-11-20-pm",
+   "order": 21,
+   "id": "2026-11-20-pm-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The cat in Arjuna's Penance",
+   "body": "At Mamallapuram, Pallava sculptors of the 7th century carved a vast relief across two giant boulders, with a natural cleft down the middle that may once have carried water like a river. Gods, people, elephants and a sage in penance fill the rock. Look closely and you'll find a cat standing on its hind legs, copying the sage, with mice gathered round it. Scholars still debate whether the scene shows Arjuna's penance or the descent of the Ganga.",
+   "hook": "Wonder: why would sculptors tuck a joke into a sacred scene?",
+   "edition": "2026-11-20-pm",
+   "order": 20,
+   "id": "2026-11-20-pm-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "tip",
+   "title": "Let the scene turn",
+   "body": "A useful check for any scene: is something different at the end than at the start? A hope rises or falls, a secret moves from one person to another, a door that was open closes. If nothing turns, the scene may be a pause rather than a scene — fine sometimes, but worth knowing.",
+   "q": "What's a quick test of whether a scene is working?",
+   "a": "Check that something has changed between its start and its end.",
+   "edition": "2026-11-20-pm",
+   "order": 19,
+   "id": "2026-11-20-pm-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "OpenAI uses its models to help design chips",
+   "body": "OpenAI says its models have been helping improve the design of its own chips. In one case, an AI-suggested redesign of a multiplier shrank its estimated area by about 15% and cut a calculation from two clock cycles to one. It is also working with Synopsys to bring this into chip-design software.",
+   "source": {
+    "name": "OpenAI",
+    "url": "https://openai.com/index/advancing-chip-design-with-our-models/"
+   },
+   "edition": "2026-11-20-pm",
+   "order": 18,
+   "id": "2026-11-20-pm-018"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Sagas: undo by moving forward",
+   "body": "When one business action spans several services, a saga runs it as a series of local transactions. If a later step fails, earlier steps aren't rolled back; instead each runs a compensating action — refund the payment, release the seat. The idea comes from a 1987 paper by Hector Garcia-Molina and Kenneth Salem.",
+   "q": "What does a saga use instead of a global rollback?",
+   "a": "Compensating actions that undo each earlier step.",
+   "edition": "2026-11-20-pm",
+   "order": 17,
+   "id": "2026-11-20-pm-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A shrimp's heart is in its head",
+   "body": "A shrimp's heart sits in its cephalothorax, the fused head-and-chest section at the front of its body. Most of its other vital organs are packed in there too, leaving the tail mostly muscle.",
+   "hook": "Wonder: why might an animal keep nearly everything important at the front?",
+   "edition": "2026-11-20-pm",
+   "order": 16,
+   "id": "2026-11-20-pm-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Pranav Venkatesh joins an esports team",
+   "body": "Grandmaster Pranav Venkatesh has signed with Revenant XSpark as the team's first chess player and will represent it at Google Play Arena in December. The 20-year-old recently won the World Junior Blitz title in Al Ain with 10.5 out of 13.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/pranav-venkatesh-signs-revenant-xspark"
+   },
+   "edition": "2026-11-20-pm",
+   "order": 15,
+   "id": "2026-11-20-pm-015"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Two stars may be feeding the Milky Way's central black hole",
+   "body": "Astronomers led by the Max Planck Institute for Extraterrestrial Physics traced a gas stream near Sagittarius A* back to IRS 16SW, a close pair of massive stars whose winds collide and throw off dense clumps. Roughly one Earth's worth of gas reaching the black hole every ten years would be enough to explain its gentle present-day glow.",
+   "hook": "Wonder: how much of the galaxy's centre is shaped by just a few stars?",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261119194605.htm"
+   },
+   "edition": "2026-11-20-pm",
+   "order": 14,
+   "id": "2026-11-20-pm-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The tuner's last note",
+   "body": "The piano tuner finished at six and played one scale to check his work. The girl of the house watched from the doorway, too shy to ask. So he played it again, slower, and then once more with only one finger, leaving the last note for her. She pressed it. It rang true. He packed his tools and said, 'Good. Now it's finished.'",
+   "edition": "2026-11-20-pm",
+   "order": 13,
+   "id": "2026-11-20-pm-013"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Simula 67, where classes began",
+   "body": "In Oslo in the 1960s, Ole-Johan Dahl and Kristen Nygaard built Simula to model things like queues and ships. Simula 67 introduced classes, objects and inheritance. Bjarne Stroustrup brought those ideas into C++, and through C++ they shaped Java's classes too.",
+   "q": "Which language first introduced classes and inheritance?",
+   "a": "Simula 67, by Dahl and Nygaard.",
+   "edition": "2026-11-20-pm",
+   "order": 12,
+   "id": "2026-11-20-pm-012"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Desirable difficulties",
+   "body": "Psychologist Robert Bjork coined 'desirable difficulties' for practice that feels harder but sticks better: spacing sessions out, testing yourself, mixing problem types. The struggle that makes study feel slow is often the very thing doing the work. If it feels a little effortful, that can be a good sign.",
+   "hook": "Wonder: which of your easiest study habits might be the least effective?",
+   "edition": "2026-11-20-pm",
+   "order": 11,
+   "id": "2026-11-20-pm-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Two kinds of things",
+   "body": "Some things are up to us and some are not. Up to us are our opinions, our aims, our wishes and our aversions — our own doings. Not up to us are our bodies, our possessions, our reputations — whatever is not our own doing.",
+   "who": "Epictetus, Enchiridion 1 (own rendering)",
+   "edition": "2026-11-20-pm",
+   "order": 10,
+   "id": "2026-11-20-pm-010"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Google Labs tries a product agent called Stitch Loop",
+   "body": "Stitch Loop is an experimental agent from Google Labs that connects to a product's codebase and its live usage metrics. The idea is that after launch it keeps looking for possible improvements and works toward goals you set. It's waitlist-only for now.",
+   "source": {
+    "name": "The Neuron (19 Nov digest)",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-november-19-2026/"
+   },
+   "edition": "2026-11-20-pm",
+   "order": 9,
+   "id": "2026-11-20-pm-009"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Uttiramerur's names in a pot",
+   "body": "On the walls of a temple in Uttiramerur, near Kanchipuram, inscriptions from the reign of Parantaka Chola I (around 920 CE) describe how the village assembly chose its committee members. Names were written on palm-leaf tickets, put in a pot — the kudavolai — and a young boy drew them out.",
+   "q": "What was the kudavolai?",
+   "a": "The pot of palm-leaf name tickets drawn by a young boy to pick committee members.",
+   "edition": "2026-11-20-pm",
+   "order": 8,
+   "id": "2026-11-20-pm-008"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Write it as 'if this, then that'",
+   "body": "Psychologist Peter Gollwitzer calls them implementation intentions: plans phrased as 'If it's 9 pm, then I put my keys on the hook.' Linking the action to a cue means you don't have to remember the plan; the cue does the remembering. Studies across many groups find these simple if-then plans help people follow through.",
+   "q": "What is an implementation intention?",
+   "a": "An if-then plan that ties an action to a specific cue.",
+   "edition": "2026-11-20-pm",
+   "order": 7,
+   "id": "2026-11-20-pm-007"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Moon dust printed into interlocking bricks",
+   "body": "University of Arkansas researchers used a laser to fuse simulated lunar soil into small, LEGO-like bricks that click together, with no binder added. The bricks are only a few centimetres across and still weaker and more porous than binder-based versions, but the idea is to build with what the Moon already has.",
+   "hook": "Wonder: what would you build first if every brick came from the ground under your feet?",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261119194525.htm"
+   },
+   "edition": "2026-11-20-pm",
+   "order": 6,
+   "id": "2026-11-20-pm-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 16: records for plain data",
+   "body": "record Point(int x, int y) {} gives you a final class with private final fields, a constructor, accessors x() and y(), and sensible equals, hashCode and toString — all from one line. Use records for values that are just data. You can still add a compact constructor to validate inputs.",
+   "q": "What accessor names does record Point(int x, int y) create?",
+   "a": "x() and y() — no 'get' prefix.",
+   "edition": "2026-11-20-pm",
+   "order": 5,
+   "id": "2026-11-20-pm-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "9z Globant wins a third straight Chess Club Showdown",
+   "body": "Team 9z Globant beat Team Liquid 72–28 in the Chess Club Showdown final, its third title in a row. GMs José Martínez and Faustino Oro led the way, while several of Liquid's stars were busy at the Total Chess event in Budapest.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/9z-wins-3rd-straight-chess-club-showdown"
+   },
+   "edition": "2026-11-20-pm",
+   "order": 4,
+   "id": "2026-11-20-pm-004"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The dictionary word that never existed",
+   "body": "The 1934 edition of Webster's New International Dictionary listed 'dord', meaning density. It wasn't a real word: a slip marked 'D or d' (an abbreviation for density) was misread as a single word. An editor noticed in 1939, and 'dord' was quietly removed from later printings.",
+   "q": "How did 'dord' get into the dictionary?",
+   "a": "A slip reading 'D or d' (for density) was misread as one word.",
+   "edition": "2026-11-20-pm",
+   "order": 3,
+   "id": "2026-11-20-pm-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Friday, the auto ride home",
+   "body": "The meter ticks in rupees\nand the driver hums\nsomething older than both of us.\n\nShop shutters coming down\nlike eyelids.\nA week folds itself\ninto the back seat beside me,\nand for once\nI let it ride.",
+   "edition": "2026-11-20-pm",
+   "order": 2,
+   "id": "2026-11-20-pm-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Genie 4 arrives in Project Genie",
+   "body": "Google DeepMind has opened Genie 4 to eligible AI Ultra subscribers through Project Genie. You describe a world in text, step into it, and can reshape the surroundings with new prompts while you explore. The update also adds an agent that builds worlds for you and a gallery for sharing them.",
+   "hook": "Wonder: what small, quiet place would you build first?",
+   "source": {
+    "name": "The Neuron (19 Nov digest)",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-november-19-2026/"
+   },
+   "edition": "2026-11-20-pm",
+   "order": 1,
+   "id": "2026-11-20-pm-001"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these from memory before scrolling back: What does a Java record write for you? What does a saga do instead of rolling back? How did Uttiramerur's assembly pick committee members? Why could Saturn, in theory, float?",
+   "q": "What was the ghost word 'dord' supposed to mean?",
+   "a": "Density — it came from a slip that read 'D or d'.",
+   "edition": "2026-11-20-pm",
+   "order": 0,
+   "id": "2026-11-20-pm-000"
+  },
   {
    "topic": "ai",
    "kind": "idea",
@@ -9688,341 +10031,6 @@
    "edition": "2026-11-06-am",
    "order": 16,
    "id": "2026-11-06-am-016"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Doubts",
-   "body": "Our doubts are traitors,\nAnd make us lose the good we oft might win\nBy fearing to attempt.",
-   "who": "William Shakespeare, Measure for Measure",
-   "edition": "2026-11-06-am",
-   "order": 15,
-   "id": "2026-11-06-am-015"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Rooks belong behind passed pawns",
-   "body": "Tarrasch's rule: put your rook behind a passed pawn, yours or the opponent's. Behind your own pawn, the rook gains scope with every step the pawn takes. Behind the enemy pawn, it pins the pawn down without getting in the way.",
-   "q": "Behind or in front: where should a rook go with a passed pawn?",
-   "a": "Behind it, whichever side the pawn belongs to.",
-   "edition": "2026-11-06-am",
-   "order": 14,
-   "id": "2026-11-06-am-014"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Dead-letter queues: a quiet shelf for stuck messages",
-   "body": "If a message keeps failing, retrying it forever blocks everything behind it. A dead-letter queue moves it aside after a set number of attempts. The main flow keeps moving, and someone can inspect the shelf later, fix the cause and replay the message.",
-   "hook": "Wonder: where is the dead-letter queue in your own week?",
-   "edition": "2026-11-06-am",
-   "order": 13,
-   "id": "2026-11-06-am-013"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The left-luggage counter",
-   "body": "The man at the station's left-luggage counter had kept the blue suitcase for eleven days. On the twelfth, a woman came with the ticket, out of breath. 'Sorry,' she said. 'I needed somewhere to put it while I decided.' He handed it over. 'And?' She smiled and lifted it easily. 'I'm keeping it.'",
-   "edition": "2026-11-06-am",
-   "order": 12,
-   "id": "2026-11-06-am-012"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The loom that read cards",
-   "body": "In 1804 Joseph Marie Jacquard's loom wove patterns from chains of punched cards: a hole let a hook through, no hole held it back. Charles Babbage borrowed the idea for his Analytical Engine, and Herman Hollerith's census machines later used punched cards too.",
-   "q": "What did Jacquard's punched cards originally control?",
-   "a": "The threads of a weaving loom.",
-   "edition": "2026-11-06-am",
-   "order": 11,
-   "id": "2026-11-06-am-011"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Venus and Spica share the dawn",
-   "body": "These mornings, look east before sunrise: brilliant Venus sits near Spica, the brightest star in Virgo. Spica is actually two hot blue stars orbiting each other in about four days, roughly 250 light-years away, while Venus is a few light-minutes from us.",
-   "hook": "Wonder: the light from the two dots left them about 250 years apart. What was happening when Spica's light set out?",
-   "edition": "2026-11-06-am",
-   "order": 10,
-   "id": "2026-11-06-am-010"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Name the alarm after the action",
-   "body": "An alarm that just says '4:00' asks your brain to remember why it rang. Label it with the next physical step instead: 'Open laptop, reply to Priya.' When it goes off, the decision is already made and you only have to move.",
-   "edition": "2026-11-06-am",
-   "order": 9,
-   "id": "2026-11-06-am-009"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "The sundial as tall as a building",
-   "body": "The Samrat Yantra at Jantar Mantar in Jaipur, built under Sawai Jai Singh II and completed in the 1730s, is a giant sundial whose triangular gnomon rises about 27 metres. Its shadow moves several centimetres a minute, so local solar time can be read to within a few seconds.",
-   "q": "Who built the Jaipur Jantar Mantar?",
-   "a": "Maharaja Sawai Jai Singh II.",
-   "edition": "2026-11-06-am",
-   "order": 8,
-   "id": "2026-11-06-am-008"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Sierra buys Anon to help agents use websites",
-   "body": "Customer-service AI company Sierra acquired Anon, whose browser-agent technology helps AI agents finish tasks on websites that don't offer an API. The idea: when there's no tidy back door, the agent can still walk through the front door like a person would.",
-   "source": {
-    "name": "Unite.AI",
-    "url": "https://www.unite.ai/sierra-acquires-anon-to-help-ai-agents-complete-web-workflows"
-   },
-   "edition": "2026-11-06-am",
-   "order": 7,
-   "id": "2026-11-06-am-007"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Water can boil and freeze at the same time",
-   "body": "At its triple point, about 0.01 °C and a pressure of around 0.6% of normal air pressure, water can exist as ice, liquid and vapour together in balance. In a vacuum chamber you can watch a dish of water bubble and frost over at once.",
-   "hook": "Wonder: what would a cup of tea do on the summit of Mars?",
-   "edition": "2026-11-06-am",
-   "order": 6,
-   "id": "2026-11-06-am-006"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java text blocks: strings that keep their shape",
-   "body": "Since Java 15, a text block starts with three double quotes and a newline. Inside, you can write JSON, SQL or HTML as it looks, without \\n and escaped quotes everywhere. Java strips the common leading indentation, so the block can sit neatly indented in your code.",
-   "q": "What opens a Java text block?",
-   "a": "Three double quotes (\"\"\") followed by a line break.",
-   "edition": "2026-11-06-am",
-   "order": 5,
-   "id": "2026-11-06-am-005"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Memory likes the room it was made in",
-   "body": "In a 1975 study, divers learned word lists either on a beach or underwater. They recalled more when tested in the same place they had learned. The lesson for study isn't to always use one desk; it's the opposite: practise in a few different places so the knowledge isn't tied to one setting.",
-   "hook": "Wonder: which of your skills only works at your own desk?",
-   "edition": "2026-11-06-am",
-   "order": 4,
-   "id": "2026-11-06-am-004"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "A 14-year-old earns a second GM norm",
-   "body": "At the KazChess Masters, which Denis Lazavik won unbeaten, 14-year-old International Master Mark Smirnov picked up his second grandmaster norm. Three norms plus a 2500 rating make a grandmaster, so he is now one good tournament away from the final norm.",
-   "q": "How many GM norms does a player usually need for the title?",
-   "a": "Three, plus a rating of at least 2500.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/lazavik-wins-kazchess-masters-smirnov-gm-norm"
-   },
-   "edition": "2026-11-06-am",
-   "order": 3,
-   "id": "2026-11-06-am-003"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Steel tumbler",
-   "body": "The tumbler sweats on the window sill,\nholding a small cold sea.\nOutside, the neem keeps still,\nas if it, too, were thirsty.\nI drink slowly. The afternoon\nmakes room.",
-   "edition": "2026-11-06-am",
-   "order": 2,
-   "id": "2026-11-06-am-002"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Could neutrinos warn us before the Blaze Star flares?",
-   "body": "T Coronae Borealis, the 'Blaze Star', is a recurrent nova: a white dwarf gathering gas from a companion star until a surface explosion makes it briefly bright enough to see without a telescope. It last did this in 1946. Astronomers are still waiting for the next outburst, and new research suggests a burst of neutrinos might arrive as an early heads-up.",
-   "q": "In what year did the Blaze Star last erupt?",
-   "a": "1946 (and before that, 1866).",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/space/blaze-star-nova-corona-borealis-how-to-see-it/"
-   },
-   "edition": "2026-11-06-am",
-   "order": 1,
-   "id": "2026-11-06-am-001"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Microsoft Clarity starts counting AI-agent visitors",
-   "body": "Microsoft's free website analytics tool, Clarity, added a view for visits made by AI agents rather than people. Site owners can see where an agent's automated journey through their pages went smoothly and where it got stuck or needed a check.",
-   "hook": "Wonder: if half your visitors were agents, what would you redesign first?",
-   "source": {
-    "name": "ContentGrip",
-    "url": "https://www.contentgrip.com/microsoft-clarity-agent-analytics"
-   },
-   "edition": "2026-11-06-am",
-   "order": 0,
-   "id": "2026-11-06-am-000"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Try answering before peeking: Who is Asia's first grandmaster? What does a heartbeat system listen for? What does WOOP stand for?",
-   "q": "Who became Asia's first grandmaster, in 1974?",
-   "a": "Eugenio Torre of the Philippines.",
-   "edition": "2026-11-05-pm",
-   "order": 29,
-   "id": "2026-11-05-pm-029"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "November, 6 pm",
-   "body": "The streetlights take their turns,\none, then the next, then all.\nA boy stops kicking his ball\nto watch the evening learn.",
-   "edition": "2026-11-05-pm",
-   "order": 28,
-   "id": "2026-11-05-pm-028"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Lightning is hotter than the Sun's surface",
-   "body": "A lightning bolt heats the air around it to roughly 30,000 °C for a split second, about five times the temperature of the Sun's visible surface. That sudden heating makes the air expand explosively, and the sound of it is thunder.",
-   "hook": "Wonder: what's the longest gap you've counted between a flash and its thunder?",
-   "edition": "2026-11-05-pm",
-   "order": 27,
-   "id": "2026-11-05-pm-027"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Philidor's third-rank defence",
-   "body": "In a rook ending where you defend against king, rook and pawn, keep your king in front of the pawn and your rook on your third rank (the sixth from the attacker's side). The enemy king can't advance without help. The moment the pawn steps forward, swing your rook to the back and check from behind; the attacker's king now has no shelter.",
-   "q": "In the Philidor defence, when does the defending rook go to the far side to check?",
-   "a": "As soon as the attacking pawn advances to the defender's third rank.",
-   "edition": "2026-11-05-pm",
-   "order": 26,
-   "id": "2026-11-05-pm-026"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Pick a shard key by how you read",
-   "body": "When data is split across machines, the shard key decides where each row lives. Choose it from your most common query: if most reads ask 'everything for this customer', shard by customer so one machine can answer. A key that spreads writes evenly but scatters every read across all shards is a quiet performance trap.",
-   "q": "What should mainly guide the choice of a shard key?",
-   "a": "Your most common access pattern, so typical queries hit a single shard.",
-   "edition": "2026-11-05-pm",
-   "order": 25,
-   "id": "2026-11-05-pm-025"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "body": "Seek not that the things which happen should happen as you wish; but wish the things which happen to be as they are, and you will have a tranquil flow of life.",
-   "who": "Epictetus, Enchiridion 8 (tr. George Long)",
-   "edition": "2026-11-05-pm",
-   "order": 24,
-   "id": "2026-11-05-pm-024"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Earth's shadow is in the sky tonight",
-   "body": "Just after sunset, look east, opposite the Sun. A soft blue-grey band sits on the horizon: that is Earth's own shadow cast on the atmosphere. Above it glows a pink strip called the Belt of Venus. The same pair appears in the west just before sunrise.",
-   "hook": "Wonder: when did you last look away from a sunset?",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/space/when-can-you-see-earths-shadow/"
-   },
-   "edition": "2026-11-05-pm",
-   "order": 23,
-   "id": "2026-11-05-pm-023"
-  },
-  {
-   "topic": "writing",
-   "kind": "tip",
-   "title": "Give the scene a sound",
-   "body": "Most drafts lean on sight. Before you finish a scene, ask what can be heard: a gate latch, rain on a tin roof, a pressure cooker's whistle two houses away. One true sound places the reader in the room faster than three sentences of description.",
-   "edition": "2026-11-05-pm",
-   "order": 22,
-   "id": "2026-11-05-pm-022"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Where 'hello, world' came from",
-   "body": "The tradition of a first program that prints 'hello, world' traces to Brian Kernighan. It appeared in his 1972 tutorial for the B language at Bell Labs and became famous through The C Programming Language (1978), which he wrote with Dennis Ritchie.",
-   "q": "Which book made 'hello, world' famous?",
-   "a": "The C Programming Language (1978) by Kernighan and Ritchie.",
-   "edition": "2026-11-05-pm",
-   "order": 21,
-   "id": "2026-11-05-pm-021"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Map your good hours",
-   "body": "For a week, jot a one-word energy note (high, okay, low) every couple of hours. Patterns appear quickly. Then put your hardest thinking in your high slots and save email, errands and tidying for the low ones. It's working with your brain instead of against it.",
-   "hook": "Wonder: when in the day does your mind feel clearest?",
-   "edition": "2026-11-05-pm",
-   "order": 20,
-   "id": "2026-11-05-pm-020"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Saturn is less dense than water",
-   "body": "Saturn's average density is about 0.69 grams per cubic centimetre, lower than water's 1. That's the source of the famous line that it would float in a big enough bathtub, though as a ball of gas it would hardly hold together in one.",
-   "q": "Which planet in our solar system has an average density lower than water?",
-   "a": "Saturn.",
-   "edition": "2026-11-05-pm",
-   "order": 19,
-   "id": "2026-11-05-pm-019"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Small tools beat one giant tool",
-   "body": "When giving an agent tools, many small, clearly named ones usually work better than one tool with twenty optional settings. A narrow tool is easier for the model to choose correctly and easier for you to test. If two tools are always called together, that's the moment to combine them, not before.",
-   "edition": "2026-11-05-pm",
-   "order": 18,
-   "id": "2026-11-05-pm-018"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Geometry with ropes: the Sulba Sutras",
-   "body": "The Sulba Sutras, ancient Indian manuals for laying out fire altars, gave rules using stretched cords. Baudhayana's text states that the diagonal of a rectangle produces as much area as its two sides do separately, the relationship now known as the Pythagorean theorem. It also gives a remarkably close approximation of the square root of 2.",
-   "hook": "Wonder: what could you build with only a rope and some pegs?",
-   "edition": "2026-11-05-pm",
-   "order": 17,
-   "id": "2026-11-05-pm-017"
-  },
-  {
-   "topic": "mind",
-   "kind": "tip",
-   "title": "Mental contrasting: picture the wish, then the snag",
-   "body": "Psychologist Gabriele Oettingen's research suggests pure positive daydreaming can sap drive. A better habit: imagine the outcome you want, then name the main inner obstacle, then plan what you'll do when it shows up. Her acronym is WOOP: Wish, Outcome, Obstacle, Plan.",
-   "q": "What does WOOP stand for?",
-   "a": "Wish, Outcome, Obstacle, Plan.",
-   "edition": "2026-11-05-pm",
-   "order": 16,
-   "id": "2026-11-05-pm-016"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "CompletableFuture: say what happens next",
-   "body": "In Java, a CompletableFuture lets you describe follow-up steps instead of waiting. thenApply transforms a result, thenCompose chains another async call, and thenCombine joins two independent results. Call join() only at the very edge of your program, so threads aren't parked waiting in the middle.",
-   "q": "When do you use thenCompose instead of thenApply?",
-   "a": "When the next step itself returns a CompletableFuture, so you get a flat future instead of a nested one.",
-   "edition": "2026-11-05-pm",
-   "order": 15,
-   "id": "2026-11-05-pm-015"
   }
  ]
 }
