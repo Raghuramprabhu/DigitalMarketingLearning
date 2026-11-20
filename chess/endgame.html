@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endgame: the story · four levels, from first mate to the composers' magic</title>
+  <meta name="description" content="Chess endgame mastery told as a story in four levels: basic mates, opposition, breakthroughs, Philidor and Lucena, wrong bishops, Réti, trébuchet, Saavedra and the bishop-and-knight mate. Every lesson ends with a challenge you play against Stockfish.">
+  <script>(function(){var t=null;try{t=localStorage.getItem("dml-theme");}catch(e){}if(t!=="light"&&t!=="dark")t="light";document.documentElement.setAttribute("data-theme",t);})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chess.css">
+  <link rel="stylesheet" href="endgame.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="../">← <span>Field Notes</span></a>
+    <span class="logo">Endgame<span>: the story</span></span>
+    <span class="grow"></span>
+    <a class="pill" href="./" title="Tactics page">⚔️<span class="hide-sm"> Tactics</span></a>
+    <a class="pill" href="middlegame.html" title="Middlegame strategy page">🧭<span class="hide-sm"> Strategy</span></a>
+    <a class="pill score-pill" id="xpPill" href="#map" title="Your endgame XP">♚ 0 XP</a>
+    <button class="pill" id="themebtn" type="button" aria-label="Toggle light or dark mode">🌙 Dark</button>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wide hero-in">
+    <div>
+      <span class="eyebrow">Chess · endgames · 4 levels · 18 stories · 28 challenges vs Stockfish</span>
+      <h1>The last act<br><em>decides the play.</em></h1>
+      <p class="lede">A king that hid for thirty moves suddenly becomes a warrior. A pawn that turns into a rook because a queen would only draw. A lone king, hopelessly far from everything, that catches two pawns at once by walking on the diagonal.</p>
+      <p class="lede" style="font-size:17px">José Raúl Capablanca, maybe the most natural player who ever lived, told beginners to study the endings <b>first</b>. Here is why, told as stories, one level at a time. Every lesson ends with a position you play out yourself, against Stockfish.</p>
+      <div class="ctas">
+        <a class="btn" href="#principle">Start the story ↓</a>
+        <a class="btn ghost" href="#map">Level map 🗺️</a>
+        <a class="btn ghost" href="#gauntlet">Gauntlet ⚔️</a>
+      </div>
+    </div>
+    <div class="hero-board">
+      <div id="heroBoard"></div>
+      <div class="hero-cap">Réti, 1921: a king that is too late for both races · loops forever</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FIRST PRINCIPLE ============================ -->
+<section class="block" id="principle">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">THE FIRST PRINCIPLE</div>
+      <h2>Why does everything change when the queens leave?</h2>
+    </div>
+    <p>In the middlegame, the board is a battlefield full of danger. The king hides because one mistake means mate. Pieces are valued by how much damage they can do.</p>
+    <p>Take most of the pieces off and the danger goes away. Three things that were background noise become the whole game:</p>
+    <div class="trio">
+      <div class="t" style="--c:var(--guard)"><div class="ic">♚</div><h4>The king fights</h4><p>Mate threats vanish, so the king walks to the centre and becomes one of your strongest pieces.</p><div class="pats">Mates · opposition · outflanking</div></div>
+      <div class="t" style="--c:var(--linec)"><div class="ic">♙</div><h4>Pawns become queens</h4><p>Every pawn is a potential queen. Races, breakthroughs and passed pawns decide.</p><div class="pats">Square · breakthrough · Lucena</div></div>
+      <div class="t" style="--c:var(--clock)"><div class="ic">⏳</div><h4>Tempo is territory</h4><p>With few pieces, one move can be the difference between win and draw. Sometimes the best move is the one that gives your opponent the turn.</p><div class="pats">Zugzwang · mined squares · stalemate</div></div>
+    </div>
+    <div class="callout gold"><div class="emo">🧭</div><p><b>The question that solves endgames:</b> "Who needs to move, and how many moves does each side need?" Counting replaces guessing. And when counting fails, look for a geometry trick: a diagonal, a detour, a bridge.</p></div>
+    <div class="how">
+      <div><b>1 · Read</b><span>A story and the first principle behind each idea.</span></div>
+      <div><b>2 · Watch</b><span>Step through a demo. Every move is engine-checked.</span></div>
+      <div><b>3 · Play</b><span>A new position, against Stockfish. A coach warns you if a move throws the result away.</span></div>
+      <div><b>4 · Level up</b><span>Clear challenges to unlock the next level.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LEVEL MAP ============================ -->
+<section class="block" id="map" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">THE MAP</div>
+      <h2>Four levels. One climb.</h2>
+      <p>Each level unlocks when you clear enough challenges in the one before. Already know the basics? You can open any level early.</p>
+    </div>
+  </div>
+  <div class="wide"><div class="lvmap" id="lvmap"></div></div>
+</section>
+
+<div id="levels"></div>
+
+<!-- ============================ GAUNTLET ============================ -->
+<section class="block" id="gauntlet" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">THE GAUNTLET · NEW POSITIONS, NO LABELS</div>
+      <h2>Can you spot the idea on your own?</h2>
+      <p>Ten positions you haven't seen, from all four levels, shuffled. No lesson tells you which idea to use. Play them against Stockfish.</p>
+    </div>
+  </div>
+  <div class="wide">
+    <div class="toolbar"><button class="btn small ghost" id="gShuffle" type="button">🔀 Shuffle</button><button class="btn small ghost" id="gReveal" type="button">🏷️ Show the idea</button></div>
+    <div class="deck" id="gDeck"></div>
+    <div id="gPlay"></div>
+    <div class="pagenav"><a class="btn ghost" href="./">⚔️ Tactics: the story</a><a class="btn ghost" href="middlegame.html">🧭 Strategy: the story</a><a class="btn ghost" href="london.html">♙ The London</a><a class="btn ghost" href="../">← Field Notes</a></div>
+  </div>
+</section>
+
+<footer>
+  Every demo is replayed move by move with python-chess and checked with Stockfish 18. Challenges run live: the defender is <a href="https://github.com/nmrugg/stockfish.js">Stockfish.js 18 lite</a> (GPLv3) in your browser, rules by <a href="https://github.com/jhlywa/chess.js">chess.js</a> (BSD-2). When you're online, positions with 7 pieces or fewer are judged by the <a href="https://lichess.org/api#tag/Tablebase">lichess tablebase</a> for perfect play.<br>
+  Pieces: "cburnett" set by Colin M.L. Burnett, CC BY-SA 3.0, via lichess.org. · <a href="./">Tactics page</a> · <a href="../">Field Notes</a>
+</footer>
+
+<script src="board.js"></script>
+<script src="endgame-data.js"></script>
+<script type="module" src="endgame.js"></script>
+</body>
+</html>
