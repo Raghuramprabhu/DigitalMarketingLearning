@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f0d0b">
+  <title>FLOW · Learning, rebuilt for flow state</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="flow.css">
+</head>
+<body>
+  <header class="fbar">
+    <a class="brand" href="../">← <b>HOME</b></a>
+    <div></div><div></div>
+  </header>
+  <main class="hub">
+    <div class="kicker">FLOW</div>
+    <h1>School breaks every condition for flow. This doesn't.</h1>
+    <p class="sub">Clear goals every few seconds. Instant feedback. A challenge that adapts to stay just beyond your skill. One idea per screen, questions that ambush you, and as many layers down as you want to go.</p>
+
+    <div class="pillars">
+      <div class="pillar"><b>Calm</b><span>One idea per screen. No menus mid-flow. Nothing competes for your eyes.</span></div>
+      <div class="pillar"><b>Spark</b><span>Sudden questions, a dripping hourglass, predictions before reveals.</span></div>
+      <div class="pillar"><b>Stick</b><span>Confidence ratings, 3-layer deep dives, misses that come back later.</span></div>
+    </div>
+
+    <section class="track">
+      <h3>Track · Java &amp; the JVM</h3>
+      <a class="chap" href="java/01.html" data-key="flow-java-01">
+        <div class="n">1</div>
+        <div><div class="t">The Toaster Problem</div><div class="d">Why the JVM exists, and everything that happens between typing <code>java Hello</code> and your CPU running it.</div></div>
+        <span class="badge">Start</span>
+      </a>
+      <div class="chap locked">
+        <div class="n">2</div>
+        <div><div class="t">Where Objects Live</div><div class="d">Heap, stack, and the garbage collector that silently eats what you forget.</div></div>
+        <span class="badge">Soon</span>
+      </div>
+      <div class="chap locked">
+        <div class="n">3</div>
+        <div><div class="t">Threads &amp; the Memory Model</div><div class="d">Why two threads can see two different realities, and how Java decides which one is true.</div></div>
+        <span class="badge">Soon</span>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.querySelectorAll(".chap[data-key]").forEach(function (a) {
+      try {
+        var k = a.dataset.key, b = a.querySelector(".badge");
+        if (localStorage.getItem(k + "-done")) { b.textContent = "✓ Done"; b.classList.add("done"); }
+        else { var s = JSON.parse(localStorage.getItem(k) || "null"); if (s && s.i > 0) b.textContent = "Resume"; }
+      } catch (e) {}
+    });
+  </script>
+</body>
+</html>

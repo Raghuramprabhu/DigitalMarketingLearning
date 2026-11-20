@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f0d0b">
+  <title>FLOW · Java 1 · The Toaster Problem</title>
+  <meta name="description" content="Why the JVM exists and what happens when you run java Hello, told as a story, with sudden timed questions and layered deep-dives.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../flow.css">
+</head>
+<body>
+  <header class="fbar">
+    <a class="brand" href="../">FLOW · <b>JAVA 1</b></a>
+    <div class="act" id="act"></div>
+    <div class="right">
+      <span class="chip streak" id="streak" title="Streak">🔥 <span class="n">0</span></span>
+      <button class="chip btn" id="sound" type="button" aria-label="Toggle sound">🔊</button>
+    </div>
+  </header>
+
+  <div class="rail" id="rail" aria-hidden="true"></div>
+
+  <main class="stage" id="stage" aria-live="polite"></main>
+
+  <nav class="dock">
+    <button class="back" id="back" type="button" aria-label="Previous scene">←</button>
+    <button class="go" id="go" type="button">Begin</button>
+    <span class="keyhint">Space · 1–4 to answer</span>
+  </nav>
+
+  <script src="ch01-data.js"></script>
+  <script src="../engine.js"></script>
+</body>
+</html>
