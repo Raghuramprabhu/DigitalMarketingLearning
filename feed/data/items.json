@@ -1,6 +1,345 @@
 {
- "updated": "2026-11-19T17:14:01+00:00",
+ "updated": "2026-11-20T02:20:12+00:00",
  "items": [
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask the agent to point to its evidence",
+   "body": "When an agent summarises a codebase or a document, ask it to name where each claim came from: a file and line, a page, a link. You won't check every one, but spot-checking two or three tells you quickly whether the summary rests on something real, and the habit nudges the agent to read rather than guess.",
+   "q": "What's a quick way to test an agent's summary?",
+   "a": "Ask it to cite sources, then spot-check a few.",
+   "edition": "2026-11-20-am",
+   "order": 30,
+   "id": "2026-11-20-am-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Morning, the rice measured out",
+   "body": "Two cups, levelled\nwith the back of a finger.\nWashed until the water\nruns almost clear.\n\nNo one taught me this\nin words. I watched,\nand now my hands remember\nwhat the morning needs.",
+   "edition": "2026-11-20-am",
+   "order": 29,
+   "id": "2026-11-20-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A clue was once a ball of thread",
+   "body": "'Clue' comes from 'clew', an old word for a ball of thread or yarn. In the Greek story, Theseus finds his way out of the labyrinth by following Ariadne's thread, so a clew came to mean anything that guides you through a puzzle — and the spelling later shifted to 'clue'.",
+   "q": "What did the old word 'clew' mean?",
+   "a": "A ball of thread or yarn.",
+   "edition": "2026-11-20-am",
+   "order": 28,
+   "id": "2026-11-20-am-028"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Two connected pawns on the sixth",
+   "body": "Two connected passed pawns that both reach the sixth rank are usually stronger than a lone rook, as long as the rook's king is too far away to help. Whichever pawn the rook attacks, the other steps forward, and one of them promotes. It's a neat case of teamwork beating raw power.",
+   "q": "What usually beats a lone rook if its king is far away?",
+   "a": "Two connected passed pawns on the sixth rank.",
+   "edition": "2026-11-20-am",
+   "order": 27,
+   "id": "2026-11-20-am-027"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The well in the sand",
+   "body": "Dig a well in sand and the deeper you go, the more water rises. So it is with learning: the more you learn, the more understanding flows.",
+   "who": "Thirukkural 396 (own rendering)",
+   "edition": "2026-11-20-am",
+   "order": 26,
+   "id": "2026-11-20-am-026"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Attention residue",
+   "body": "Researcher Sophie Leroy found that when people switch away from an unfinished task, part of their attention stays behind with it — 'attention residue' — and the next task suffers a little. A small fix: before switching, jot one line on where you stopped and what comes next. It lets the old task rest.",
+   "hook": "Wonder: what unfinished thing is quietly holding some of your attention right now?",
+   "edition": "2026-11-20-am",
+   "order": 25,
+   "id": "2026-11-20-am-025"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Where the word 'bit' came from",
+   "body": "In his 1948 paper 'A Mathematical Theory of Communication', Claude Shannon used the word 'bit', short for 'binary digit', as the unit of information — and credited the statistician John Tukey with suggesting it. A single yes-or-no answer carries one bit.",
+   "q": "Who did Shannon credit with coining 'bit'?",
+   "a": "John Tukey.",
+   "edition": "2026-11-20-am",
+   "order": 24,
+   "id": "2026-11-20-am-024"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "86,400: the number for quick estimates",
+   "body": "A day has 86,400 seconds; call it roughly 100,000 for mental maths. So a million requests a day averages about 10–12 per second, and a billion a day is around 12,000 per second. Then remember traffic is uneven: peak hours often run several times the average, so size for the peak, not the mean.",
+   "q": "About how many requests per second is one million per day?",
+   "a": "Roughly 12 on average.",
+   "edition": "2026-11-20-am",
+   "order": 23,
+   "id": "2026-11-20-am-023"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Earth is closest to the Sun in January",
+   "body": "Earth's orbit is slightly oval, and we pass closest to the Sun in early January (perihelion) and farthest in early July. So the northern winter happens when we're nearest the Sun. Seasons come from Earth's tilt, which changes how high the Sun climbs and how long the days last, not from distance.",
+   "q": "When is Earth closest to the Sun?",
+   "a": "In early January.",
+   "edition": "2026-11-20-am",
+   "order": 22,
+   "id": "2026-11-20-am-022"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "End on an image, not an explanation",
+   "body": "When a scene or story is nearly done, resist the urge to explain what it meant. Close on something the reader can see — a lantern lit, a cup set down, a door left open — and let them do the last step themselves. The meaning lands more softly, and stays longer, when the reader finishes it.",
+   "hook": "Wonder: what image would close your current piece of writing?",
+   "edition": "2026-11-20-am",
+   "order": 21,
+   "id": "2026-11-20-am-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Delhi's iron pillar that hardly rusts",
+   "body": "In the Qutb complex in Delhi stands an iron pillar about seven metres tall and some six tonnes in weight, made in the Gupta period around 1,600 years ago. It has stood in the open ever since with remarkably little rust. Metallurgists found that its iron is rich in phosphorus, which helps a thin, protective film form on the surface.",
+   "q": "What helps the Delhi iron pillar resist rust?",
+   "a": "Phosphorus-rich iron that forms a thin protective surface film.",
+   "edition": "2026-11-20-am",
+   "order": 20,
+   "id": "2026-11-20-am-020"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Let the agent run the tests",
+   "body": "An agent that can only write code is guessing. One that can also run the tests sees its own mistakes and fixes them in the next step. Before a coding task, make sure the agent knows the one command that checks the work, and ask it to run that command before it says it's done.",
+   "q": "What one thing should a coding agent know before it starts?",
+   "a": "The command that checks its work, such as the test suite.",
+   "edition": "2026-11-20-am",
+   "order": 19,
+   "id": "2026-11-20-am-019"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Apples are roses' cousins",
+   "body": "Apples belong to the rose family, Rosaceae. So do pears, plums, cherries, apricots, almonds and strawberries. Look closely at an apple blossom and you'll see the family likeness: five petals, like a wild rose.",
+   "q": "Which plant family includes apples, almonds and cherries?",
+   "a": "The rose family, Rosaceae.",
+   "edition": "2026-11-20-am",
+   "order": 18,
+   "id": "2026-11-20-am-018"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Let the phone live in another room",
+   "body": "Even a silent phone on the desk can tug at attention, because part of you keeps checking whether to check it. For a focused block, put it in another room or a drawer, and set a timer on something else. Research on how much this helps is mixed, so treat it as an experiment: try one block with the phone away and notice how it feels.",
+   "edition": "2026-11-20-am",
+   "order": 17,
+   "id": "2026-11-20-am-017"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "FIDE opens a decade of its data to explore",
+   "body": "FIDE and Salesforce launched 'Chess by the Numbers', a site for browsing more than ten years of FIDE tournament, rating and player data. It has ranking charts, a tab on the share of women in chess, a World Championship history section and a head-to-head view of Gukesh and Sindarov ahead of their title match. One example it highlights: the 1984 Kasparov–Karpov match ran 48 games and was stopped without a result.",
+   "hook": "Wonder: what pattern would you look for first in ten years of ratings?",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/chess-by-the-numbers-explore-a-decade-of-fide-data-powered-by-salesforce-agentforce/"
+   },
+   "edition": "2026-11-20-am",
+   "order": 16,
+   "id": "2026-11-20-am-016"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Your judgement of it",
+   "body": "If something outside you troubles you, it is not the thing itself that disturbs you but your judgement of it — and that judgement is yours to set aside, now.",
+   "who": "Marcus Aurelius, Meditations 8.47 (own rendering)",
+   "edition": "2026-11-20-am",
+   "order": 15,
+   "id": "2026-11-20-am-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "The outbox: save the change and the message together",
+   "body": "A service often needs to update its database and publish an event. Doing them separately risks one succeeding without the other. The transactional outbox pattern writes the event into an 'outbox' table in the same database transaction as the change. A separate relay then reads the outbox and publishes. Consumers should be idempotent, because the relay may deliver a message more than once.",
+   "q": "Why put the event in the same transaction as the data change?",
+   "a": "So both are saved together or neither is.",
+   "edition": "2026-11-20-am",
+   "order": 14,
+   "id": "2026-11-20-am-014"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "FORTRAN, 1957",
+   "body": "In April 1957, IBM shipped the first FORTRAN compiler, built by a team led by John Backus. The name means FORmula TRANslation: scientists could write maths almost as they would on paper, and the compiler turned it into fast machine code. It became the first widely used high-level language, and descendants of it still run weather and physics models today.",
+   "q": "What does FORTRAN stand for?",
+   "a": "FORmula TRANslation.",
+   "edition": "2026-11-20-am",
+   "order": 13,
+   "id": "2026-11-20-am-013"
+  },
+  {
+   "topic": "space",
+   "kind": "idea",
+   "title": "Why stars twinkle and planets mostly don't",
+   "body": "Stars are so far away that each is a single point of light. Moving pockets of air bend that thin beam this way and that, so the star seems to flicker. A planet shows a tiny disc instead, made of many points, and their wobbles average out — which is why planets usually shine with a steadier light.",
+   "q": "Why does a planet's light twinkle less than a star's?",
+   "a": "It shows a small disc, so the air's wobbles average out.",
+   "edition": "2026-11-20-am",
+   "order": 12,
+   "id": "2026-11-20-am-012"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Dual coding: words plus a picture",
+   "body": "Psychologist Allan Paivio proposed that we store ideas in two linked forms, verbal and visual. Pairing a definition with a simple sketch, diagram or timeline gives memory two routes back to the same idea. The picture doesn't need to be pretty; a box-and-arrow drawing you made yourself works well.",
+   "hook": "Wonder: which idea from this week could you redraw as a tiny diagram?",
+   "edition": "2026-11-20-am",
+   "order": 11,
+   "id": "2026-11-20-am-011"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The ferryman's lantern",
+   "body": "Every evening the ferryman lit his lantern before the last crossing, though the river was short and he knew it blind. A boy once asked why.\n\n'It isn't for me,' he said. 'It's for whoever is waiting on the far bank. They see the light leave, and they know to put their shoes on.'\n\nThe boy grew up and moved to the city. Years later, in an office far from any river, he started sending a short message before each meeting: On my way.",
+   "edition": "2026-11-20-am",
+   "order": 10,
+   "id": "2026-11-20-am-010"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Hummingbirds can fly backwards",
+   "body": "Hummingbirds can hover in place and even fly backwards. Their wings swivel at the shoulder and trace a sideways figure-of-eight, producing lift on both the forward and the back stroke — closer to how an insect flies than most birds.",
+   "q": "What lets hummingbirds hover and fly backwards?",
+   "a": "Wings that swivel at the shoulder and make lift on both strokes.",
+   "edition": "2026-11-20-am",
+   "order": 9,
+   "id": "2026-11-20-am-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Checkpoint before you let the agent loose",
+   "body": "Before a coding agent starts editing, make a checkpoint: commit your work or copy the folder. Then every change it makes is a clean diff against something you trust, and if it wanders off you can roll back in one step instead of untangling edits by hand. A safe 'undo' makes it easier to let the agent try bolder ideas.",
+   "hook": "Wonder: what would you let an agent attempt if undo were free?",
+   "edition": "2026-11-20-am",
+   "order": 8,
+   "id": "2026-11-20-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Arikamedu, Rome's trading post near Puducherry",
+   "body": "Just south of Puducherry, on the Ariyankuppam river, lies Arikamedu, a port that traded with the Roman world around two thousand years ago. Excavations, including Mortimer Wheeler's in 1945, turned up Roman wine jars (amphorae) and fine red Arretine pottery from Italy, alongside local bead-making. It's a quiet riverside spot that once linked Tamil country to the Mediterranean.",
+   "q": "What Roman goods were found at Arikamedu?",
+   "a": "Amphorae (wine jars) and Arretine pottery.",
+   "edition": "2026-11-20-am",
+   "order": 7,
+   "id": "2026-11-20-am-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Give the task a time, not just a place on the list",
+   "body": "A to-do list says what; a calendar says when. Pick one task and put it in your calendar as a real appointment — '10:30–11:00, draft the email' — with a start time you'll actually see. When the slot arrives, the decision is already made, and you only have to begin. If it slips, just drag it to the next free slot; no penalty.",
+   "edition": "2026-11-20-am",
+   "order": 6,
+   "id": "2026-11-20-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: orElse vs orElseGet",
+   "body": "optional.orElse(makeDefault()) always calls makeDefault(), even when the Optional has a value — Java evaluates arguments before the call. optional.orElseGet(this::makeDefault) only runs it when the Optional is empty. For a constant, orElse is fine; for anything costly or with side effects, use orElseGet.",
+   "q": "When does orElse evaluate its argument?",
+   "a": "Always, even if the Optional holds a value.",
+   "edition": "2026-11-20-am",
+   "order": 5,
+   "id": "2026-11-20-am-005"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Checking a tiny twist in the oldest light",
+   "body": "Some measurements hint that the polarisation of the cosmic microwave background, the universe's oldest light, may be rotated by a small angle, roughly a third of a degree. If real, that could point to new physics. A UC San Diego team (Lonappan, Keating and Arnold) has a new way to check: compare maps made by different groups of detectors in Planck data, so a misaligned instrument can't fake the signal. The work doesn't confirm the twist; it makes the test sharper.",
+   "q": "Why compare maps from different detector groups?",
+   "a": "To rule out an instrument misalignment that could mimic the rotation.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261116023348.htm"
+   },
+   "edition": "2026-11-20-am",
+   "order": 4,
+   "id": "2026-11-20-am-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Giri takes the lead in the Total Chess final",
+   "body": "In Budapest, Anish Giri won the first day of the Total Chess final against Alireza Firouzja, 11–9. They shared the rapid games and drew the fast classical game, so blitz decided the day. A win or a draw on Friday would give Giri the title without a tiebreak. In the third-place match, Fabiano Caruana leads Maxime Vachier-Lagrave 11–9.",
+   "hook": "Wonder: in a mixed-format match, which speed of chess shows a player's real strength?",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/giri-takes-the-lead-in-total-chess-final/"
+   },
+   "edition": "2026-11-20-am",
+   "order": 3,
+   "id": "2026-11-20-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Friday, the first light on the stairs",
+   "body": "Light comes up the stairs\nbefore anyone does,\none step at a time,\nas if it, too, were careful not to wake us.\n\nBy the landing it has warmed\nthe banister.\nBy the top it is morning,\nand the week is nearly done.",
+   "edition": "2026-11-20-am",
+   "order": 2,
+   "id": "2026-11-20-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Google releases Gemini 4 Neon",
+   "body": "Google released Gemini 4 Neon on 18 November. It takes up to a million tokens of context and is priced at $3 per million input tokens and $15 per million output tokens, available through Google's API and to eligible Gemini subscribers.",
+   "q": "How large is Gemini 4 Neon's context window?",
+   "a": "About one million tokens.",
+   "source": {
+    "name": "AI Weekly",
+    "url": "https://aiweekly.co/ai-news-today/edition/2026-11-19"
+   },
+   "edition": "2026-11-20-am",
+   "order": 1,
+   "id": "2026-11-20-am-001"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these from memory before scrolling back: What does orElse do that orElseGet doesn't? Why do stars twinkle while planets mostly shine steadily? Which port near Puducherry traded with Rome? What does attention residue mean?",
+   "q": "Roughly how many seconds are in a day?",
+   "a": "86,400 — handy for turning daily counts into per-second rates.",
+   "edition": "2026-11-20-am",
+   "order": 0,
+   "id": "2026-11-20-am-000"
+  },
   {
    "topic": "ai",
    "kind": "news",
@@ -9684,355 +10023,6 @@
    "edition": "2026-11-05-pm",
    "order": 15,
    "id": "2026-11-05-pm-015"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "A 15-year-old shares the lead at Tegernsee",
-   "body": "After five rounds of the Bavarian Championship in Gmund am Tegernsee, six players share first place on 4½ points, among them three Indian grandmasters. One of the leaders is 15-year-old German IM Hussain Besou, who beat former world junior champion Peter Acs in round five.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/tegernsee-open-2026-r5"
-   },
-   "edition": "2026-11-05-pm",
-   "order": 14,
-   "id": "2026-11-05-pm-014"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The piano tuner's last house",
-   "body": "Every Thursday the tuner saved the old teacher's upright for last. It never really needed him; she kept it beautifully. But she made cardamom tea, and he played one slow piece before leaving, and she said each time that it sounded better than before. He let her think it was his doing. It was the tea.",
-   "edition": "2026-11-05-pm",
-   "order": 13,
-   "id": "2026-11-05-pm-013"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Peanuts aren't nuts",
-   "body": "Peanuts are legumes, cousins of peas and beans. The plant flowers above ground, then pushes its developing pods down into the soil, where the 'nuts' ripen.",
-   "q": "What plant family do peanuts belong to?",
-   "a": "The legumes (pea and bean family).",
-   "edition": "2026-11-05-pm",
-   "order": 12,
-   "id": "2026-11-05-pm-012"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A year inside a pretend Mars",
-   "body": "Four volunteers, Ross Elder, Ellen Ellis, Matthew Montgomery and James Spicer, stepped out of NASA's 3D-printed Mars habitat at Johnson Space Center in Houston on 31 October after more than a year inside. Messages to the outside world had built-in delays of 26 to 44 minutes, just like real Earth–Mars calls. It was the second of three planned CHAPEA missions.",
-   "hook": "Wonder: what would you most miss after a year in a quiet Martian home?",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/human-world/nasa-mars-habitat-on-earth-yearlong-simulation/"
-   },
-   "edition": "2026-11-05-pm",
-   "order": 11,
-   "id": "2026-11-05-pm-011"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "body": "It is not the man who has too little, but the man who craves more, that is poor.",
-   "who": "Seneca, Letters to Lucilius 2 (tr. Gummere)",
-   "edition": "2026-11-05-pm",
-   "order": 10,
-   "id": "2026-11-05-pm-010"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "ASCII: 128 characters to agree on",
-   "body": "Before 1963, different machines used different codes for letters, so text didn't travel well. ASCII, first published in 1963, fixed a shared table using 7 bits, giving 128 slots for letters, digits, punctuation and control signals like 'carriage return'. Its first 128 characters still sit unchanged at the start of Unicode today.",
-   "q": "How many characters does 7-bit ASCII define?",
-   "a": "128 (2 to the 7th power).",
-   "edition": "2026-11-05-pm",
-   "order": 9,
-   "id": "2026-11-05-pm-009"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Agents that remember between runs",
-   "body": "MongoDB has released an integration with Google's Agent Development Kit that stores an agent's sessions and memory in a database. The point is durability: an agent can pick up where it left off instead of starting every run from a blank slate.",
-   "hook": "Wonder: what should an assistant remember about yesterday, and what should it let go?",
-   "source": {
-    "name": "daily.dev",
-    "url": "https://daily.dev/posts/introducing-the-mongodb-google-adk-integration-durable-memory-for-agent-state-uacsoeofh"
-   },
-   "edition": "2026-11-05-pm",
-   "order": 8,
-   "id": "2026-11-05-pm-008"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Worked examples first, then fade them",
-   "body": "When you're new to a skill, studying a fully solved example teaches more than struggling alone, because your working memory isn't swamped. As you improve, the benefit flips: experts learn more from solving problems themselves (the 'expertise reversal' effect). A gentle path is to start with complete examples, then gradually hide more of each step.",
-   "q": "What is the expertise reversal effect?",
-   "a": "Supports that help beginners, like worked examples, help less (or even hinder) as learners gain expertise.",
-   "edition": "2026-11-05-pm",
-   "order": 7,
-   "id": "2026-11-05-pm-007"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Madras began with a land grant in 1639",
-   "body": "In August 1639 the East India Company's Francis Day obtained a strip of coastal land where Fort St George was then built; the town that grew around it became Madras, today's Chennai. The city now marks Madras Day every year on 22 August.",
-   "q": "Which fort was the seed of the city of Chennai?",
-   "a": "Fort St George, begun after the 1639 land grant.",
-   "edition": "2026-11-05-pm",
-   "order": 6,
-   "id": "2026-11-05-pm-006"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Let your body move while your mind works",
-   "body": "Fidgeting isn't always a distraction. A 2015 study of children with ADHD found more movement went along with better working-memory performance during the task. Try a standing desk, a stress ball, or pacing while you think through a problem, and notice what actually helps you focus.",
-   "hook": "Wonder: which small movement helps you think best?",
-   "edition": "2026-11-05-pm",
-   "order": 5,
-   "id": "2026-11-05-pm-005"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Heartbeats: how a cluster notices silence",
-   "body": "A node can't announce its own crash, so systems listen for the absence of a signal instead. Each node sends a small 'I'm alive' message every second or so; if several in a row go missing, others suspect it is down. The tuning is a trade: short timeouts detect failure fast but mistake a slow network for a dead node, long ones are calm but slow to react.",
-   "q": "Why do heartbeat systems usually wait for several missed beats, not one?",
-   "a": "A single missed beat is often just a slow or dropped message; waiting for several cuts false alarms.",
-   "edition": "2026-11-05-pm",
-   "order": 4,
-   "id": "2026-11-05-pm-004"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Pressing flowers",
-   "body": "Between two pages of an atlas\na marigold went flat and gold.\nYears later, looking up a river,\nI found the morning it was sold.",
-   "hook": "Wonder: what's tucked inside the books on your shelf?",
-   "edition": "2026-11-05-pm",
-   "order": 3,
-   "id": "2026-11-05-pm-003"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Eugenio Torre, Asia's first grandmaster, turns 75",
-   "body": "Born on 4 November 1951 in Iloilo City in the Philippines, Torre became the first Asian player to earn the grandmaster title in 1974. He holds the record for Chess Olympiad appearances, with 23. He was inducted into the World Chess Hall of Fame in 2021 and has a small personal chess museum near his home in Marikina City.",
-   "q": "How many Chess Olympiads has Eugenio Torre played, a record?",
-   "a": "23.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/eugenio-torre-75-years-birthday"
-   },
-   "edition": "2026-11-05-pm",
-   "order": 2,
-   "id": "2026-11-05-pm-002"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Netflix tries picking shows by mood",
-   "body": "Netflix has started testing 'AI Discover' on supported TVs in the US. Instead of typing a title, you choose a mood or situation, then narrow the suggestions with a few follow-up choices. Netflix calls it an experiment and will decide later what to expand.",
-   "hook": "Wonder: would you rather describe a feeling or a genre when choosing what to watch?",
-   "source": {
-    "name": "TechCrunch",
-    "url": "https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/"
-   },
-   "edition": "2026-11-05-pm",
-   "order": 1,
-   "id": "2026-11-05-pm-001"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Earth has a tiny new mini-moon: 2026 QQ8",
-   "body": "A rock only about a metre across has been quietly circling Earth since around April. It was first spotted on 20 August by Krisztián Sárneczky, and follow-up telescope looks confirmed it is natural, most likely a small asteroid rather than old rocket hardware. It should stay with us through December, then drift off on its own path in 2027.",
-   "hook": "Wonder: how many small 'moons' come and go without anyone noticing?",
-   "q": "About how big is the mini-moon 2026 QQ8?",
-   "a": "Roughly 1 metre (about 3 feet) across.",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/space/mini-moon-for-earth-2026-qq8/"
-   },
-   "edition": "2026-11-05-pm",
-   "order": 0,
-   "id": "2026-11-05-pm-000"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Ask the agent for its plan first",
-   "body": "For any agent task that changes things, have it write out its plan before it acts: the steps, the files or systems it will touch, and how it will know it's done. Reading a plan takes a minute; untangling a confident wrong turn takes an afternoon.",
-   "hook": "Wonder: which of your own tasks would go better if you wrote the plan first, too?",
-   "edition": "2026-11-05-am",
-   "order": 29,
-   "id": "2026-11-05-am-029"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "A knight on the rim",
-   "body": "The old saying 'a knight on the rim is dim' has geometry behind it. In the centre a knight can reach eight squares; on an edge, at most four; in a corner, only two. It isn't a law, just a gentle nudge to ask, before you move a knight sideways, where it can go next.",
-   "q": "How many squares can a knight reach from a corner?",
-   "a": "Two.",
-   "edition": "2026-11-05-am",
-   "order": 28,
-   "id": "2026-11-05-am-028"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Sagas: undo in small steps",
-   "body": "When one business action spans several services, a single database transaction can't cover it all. A saga splits it into local steps, each with a matching 'compensating' step: book the room, then charge the card; if charging fails, cancel the room. You trade instant all-or-nothing for a clear, reliable path back.",
-   "q": "In a saga, what replaces a rollback?",
-   "a": "Compensating actions that undo each completed step.",
-   "edition": "2026-11-05-am",
-   "order": 27,
-   "id": "2026-11-05-am-027"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Library, closing time",
-   "body": "The lights go off\none aisle at a time,\nlike someone saying\ngoodnight to each shelf.\n\nThe last reader\nmarks her page with a bus ticket\nand leaves the story\nwaiting, mid-sentence, for her.",
-   "edition": "2026-11-05-am",
-   "order": 26,
-   "id": "2026-11-05-am-026"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Bamboo you could almost watch grow",
-   "body": "Some bamboo species can grow close to 90 centimetres in a single day, among the fastest-growing plants on Earth. Bamboo is a grass, so it's a very ambitious cousin of your lawn.",
-   "hook": "Wonder: if you sat beside it all day, could you see it move?",
-   "edition": "2026-11-05-am",
-   "order": 25,
-   "id": "2026-11-05-am-025"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The internet's flag day",
-   "body": "On 1 January 1983, the ARPANET switched over to the TCP/IP protocols in one planned changeover, often called 'flag day'. Machines that hadn't made the switch could no longer talk on the network. The protocols adopted that day still carry most internet traffic.",
-   "q": "On what date did the ARPANET switch to TCP/IP?",
-   "a": "1 January 1983.",
-   "edition": "2026-11-05-am",
-   "order": 24,
-   "id": "2026-11-05-am-024"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Epictetus, Enchiridion 1",
-   "body": "Some things are in our control and others not.",
-   "edition": "2026-11-05-am",
-   "order": 23,
-   "id": "2026-11-05-am-023"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "ESCAPADE twins swing past Earth on the way to Mars",
-   "body": "NASA's two ESCAPADE spacecraft, built to study how Mars loses its upper atmosphere, are each due to make a powered flyby of Earth, firing their engines during the close pass to pick up speed toward Mars. NASA says this kind of manoeuvre is a first for its spacecraft.",
-   "q": "What will the ESCAPADE twins study at Mars?",
-   "a": "How Mars' upper atmosphere is stripped away into space.",
-   "source": {
-    "name": "NASA",
-    "url": "https://science.nasa.gov/blogs/escapade/2026/11/02/nasas-twin-escapade-spacecraft-to-slingshot-past-earth-on-way-to-mars/"
-   },
-   "edition": "2026-11-05-am",
-   "order": 22,
-   "id": "2026-11-05-am-022"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Put the task where you'll trip over it",
-   "body": "Out of sight really can mean out of mind. Leave the parcel to post by the front door, the library book on your shoes, the form on top of your laptop. Let your surroundings do the remembering, so your head doesn't have to.",
-   "edition": "2026-11-05-am",
-   "order": 21,
-   "id": "2026-11-05-am-021"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Panini's grammar in about 4,000 rules",
-   "body": "The Sanskrit grammarian Panini, usually dated to around the 4th century BCE (scholars still debate the exact time), described the whole language in the Ashtadhyayi, nearly 4,000 compact rules. Its rules call one another and build words step by step, which is why linguists and computer scientists still admire it as an early formal system.",
-   "hook": "Wonder: was the Ashtadhyayi, in a way, one of the world's first programs?",
-   "edition": "2026-11-05-am",
-   "order": 20,
-   "id": "2026-11-05-am-020"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Meta ships ML features 3.6× faster",
-   "body": "Meta's engineering team describes F3 Lightning, a system in its ads infrastructure where each machine-learning feature compiles, validates, deploys and rolls back on its own. Meta reports comparable features now reach production about 3.6 times faster, with no increase in compute cost.",
-   "source": {
-    "name": "Engineering at Meta",
-    "url": "https://engineering.fb.com/2026/11/03/ml-applications/f3-lightning-how-meta-accelerates-ads-ml-features-to-production/"
-   },
-   "edition": "2026-11-05-am",
-   "order": 19,
-   "id": "2026-11-05-am-019"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Leases: a lock that expires",
-   "body": "In a distributed system, a plain lock is dangerous: if its holder crashes, nobody can get it back. A lease is a lock with an expiry time. The holder must keep renewing it; if it goes quiet, the lease lapses and someone else can take over. Pair it with an increasing 'fencing token' so a slow old holder can't overwrite the new one's work.",
-   "q": "Why use a lease instead of a plain lock?",
-   "a": "It expires if the holder stops renewing it, so a crashed holder can't block everyone forever.",
-   "edition": "2026-11-05-am",
-   "order": 18,
-   "id": "2026-11-05-am-018"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The umbrella that came back",
-   "body": "Every monsoon the corner tea stall kept a bucket of forgotten umbrellas. Anyone could borrow one. Most never came back, and the old man never minded. One July a girl returned a faded green umbrella he'd lent her six years earlier. 'I'm a teacher now,' she said. 'My school has a bucket too.' He put the green one back in his own, right at the front.",
-   "edition": "2026-11-05-am",
-   "order": 17,
-   "id": "2026-11-05-am-017"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Familiar isn't the same as learned",
-   "body": "Rereading notes makes them feel familiar, and familiarity feels like knowing. Psychologists call this a fluency illusion. A gentler test: close the page and try to explain it in your own words. Whatever you can't recall is exactly what to look at again, and that's useful, not a failure.",
-   "q": "What is the 'fluency illusion'?",
-   "a": "Mistaking the easy familiarity of rereading for actually having learned something.",
-   "edition": "2026-11-05-am",
-   "order": 16,
-   "id": "2026-11-05-am-016"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Polar bears have black skin",
-   "body": "Under that white coat, a polar bear's skin is black. The fur hairs themselves aren't white either; they're translucent, and they look white because they scatter light, much the way snow does.",
-   "hook": "Wonder: what other 'colours' in nature are really just scattered light?",
-   "edition": "2026-11-05-am",
-   "order": 15,
-   "id": "2026-11-05-am-015"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "The wrong-coloured bishop",
-   "body": "King, bishop and a rook's pawn (an a- or h-pawn) against a lone king can be a draw. If the bishop can't control the pawn's promotion square, and the defending king reaches that corner, it simply cannot be driven out. An extra bishop and pawn, and still no win: endgames love a quiet surprise.",
-   "q": "When is king + bishop + rook's pawn vs king a draw?",
-   "a": "When the bishop doesn't control the promotion square and the defending king reaches that corner.",
-   "edition": "2026-11-05-am",
-   "order": 14,
-   "id": "2026-11-05-am-014"
   }
  ]
 }
