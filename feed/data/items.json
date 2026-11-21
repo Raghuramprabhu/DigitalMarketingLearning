@@ -1,6 +1,357 @@
 {
- "updated": "2026-11-20T17:15:56+00:00",
+ "updated": "2026-11-21T02:20:04+00:00",
  "items": [
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask the agent to restate the task",
+   "body": "Before an agent starts a bigger job, ask it to say back, in two or three lines, what it thinks you want and what it won't touch. Misunderstandings show up in the restatement, where they cost seconds to fix, instead of in the finished work.",
+   "q": "Why have an agent restate the task first?",
+   "a": "Misunderstandings surface early, when they're cheap to fix.",
+   "edition": "2026-11-21-am",
+   "order": 30,
+   "id": "2026-11-21-am-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Morning, the coconut grater",
+   "body": "The grater's teeth\nmake their small rain\ninto the steel plate,\nwhite and sweet-smelling.\n\nSomeone in the kitchen\nis humming half a song.\nI don't ask the rest.\nThe half is enough.",
+   "edition": "2026-11-21-am",
+   "order": 29,
+   "id": "2026-11-21-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A fortnight is fourteen nights",
+   "body": "'Fortnight' comes from Old English feowertyne niht, 'fourteen nights'. Early Germanic peoples often counted time in nights rather than days, and the word has kept that habit for over a thousand years. 'Sennight', for a week, once existed too.",
+   "q": "What did 'sennight' mean?",
+   "a": "A week: seven nights.",
+   "edition": "2026-11-21-am",
+   "order": 28,
+   "id": "2026-11-21-am-028"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Sharding: by range or by hash?",
+   "body": "Range sharding keeps keys in order (A–F here, G–M there), which makes range scans cheap but can pile new writes onto one shard, such as the latest timestamps. Hash sharding scatters keys evenly but turns a range query into a visit to every shard. Many systems pick based on the most common query.",
+   "q": "What's the main trade-off of hash sharding?",
+   "a": "Even load, but range queries must hit every shard.",
+   "edition": "2026-11-21-am",
+   "order": 27,
+   "id": "2026-11-21-am-027"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "The Moon is drifting away, slowly",
+   "body": "Lasers fired at mirrors left on the Moon by Apollo astronauts and Soviet Lunokhod rovers show it moving away from Earth by about 3.8 centimetres a year, roughly the speed your fingernails grow. Tides are the reason: Earth's spin slowly hands energy to the Moon's orbit.",
+   "hook": "Wonder: what did eclipses look like when the Moon was closer?",
+   "edition": "2026-11-21-am",
+   "order": 26,
+   "id": "2026-11-21-am-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "A docuseries on India's Candidates story begins",
+   "body": "'Candidates: India's Chess Story', a free six-part series on YouTube, follows Praggnanandhaa, Gukesh, Arjun Erigaisi, Vaishali and Vidit at the 2024 Candidates Tournament. Filmed over more than two years in nine countries, its first episode premieres on 22 November at 7 pm IST.",
+   "hook": "Wonder: what does a great player do in the quiet hours between rounds?",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/candidates-indias-chess-story-documentary"
+   },
+   "edition": "2026-11-21-am",
+   "order": 25,
+   "id": "2026-11-21-am-025"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Gemini can now use your Mac",
+   "body": "Google has given Gemini the ability to work on a Mac: organising local files, filling in forms and operating apps while you carry on with something else. It launched in English in the US for Google AI Plus, Pro and Ultra subscribers.",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-20-2026/"
+   },
+   "edition": "2026-11-21-am",
+   "order": 24,
+   "id": "2026-11-21-am-024"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "WOOP: wish, outcome, obstacle, plan",
+   "body": "Psychologist Gabriele Oettingen's research found that daydreaming about a goal alone can sap the drive to pursue it. Her method, WOOP, adds a step: name your Wish, picture the best Outcome, then honestly name the inner Obstacle, and make a Plan for it. Pairing the dream with the obstacle tends to work better than either alone.",
+   "q": "What does WOOP stand for?",
+   "a": "Wish, Outcome, Obstacle, Plan.",
+   "edition": "2026-11-21-am",
+   "order": 23,
+   "id": "2026-11-21-am-023"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Who is really poor",
+   "body": "It is not the man who has too little, but the man who craves more, that is poor.",
+   "who": "Seneca, Letters to Lucilius 2",
+   "edition": "2026-11-21-am",
+   "order": 22,
+   "id": "2026-11-21-am-022"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The internet's first word was 'LO'",
+   "body": "On 29 October 1969, student programmer Charley Kline at UCLA, in Leonard Kleinrock's lab, tried to log in to a computer at the Stanford Research Institute over ARPANET. He typed L, then O, and the system crashed before the G. So the first message ever sent over the network was 'LO'. They got the full login working about an hour later.",
+   "q": "Why was the first ARPANET message just 'LO'?",
+   "a": "The system crashed while 'LOGIN' was being typed.",
+   "edition": "2026-11-21-am",
+   "order": 21,
+   "id": "2026-11-21-am-021"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Find your best hours",
+   "body": "Attention and energy often rise and fall in a pattern through the day. For one week, jot down a quick 1-to-5 focus score every couple of hours. Then guard your best window for the task that needs the most thought, and move email and errands into the dips.",
+   "hook": "Wonder: when in the day does your mind feel the clearest?",
+   "edition": "2026-11-21-am",
+   "order": 20,
+   "id": "2026-11-21-am-020"
+  },
+  {
+   "topic": "history",
+   "kind": "idea",
+   "title": "Five landscapes of Sangam love poetry",
+   "body": "Old Tamil love poems set every mood in a landscape, or tinai, each named after a flower: kurinji for the mountains and lovers meeting, mullai for forests and patient waiting, marutam for farmland and lovers' quarrels, neytal for the seashore and longing, and palai for dry wasteland and separation. A single flower in a poem could tell listeners the whole emotional weather.",
+   "q": "Which tinai stands for patient waiting?",
+   "a": "Mullai, the forest landscape.",
+   "edition": "2026-11-21-am",
+   "order": 19,
+   "id": "2026-11-21-am-019"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The library's returned umbrella",
+   "body": "Every monsoon the small library collected forgotten umbrellas. The librarian hung them on a hook by the door with a card: Take one if it's raining. Bring one back when it isn't. Years later the hook still held about six, though not one was the original. Nobody kept count. The rain did.",
+   "edition": "2026-11-21-am",
+   "order": 18,
+   "id": "2026-11-21-am-018"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Lightning is hotter than the Sun's surface",
+   "body": "A lightning channel can heat the air to around 30,000 kelvin for a split second, about five times hotter than the visible surface of the Sun at roughly 5,800 kelvin. That sudden heating makes the air expand so fast it booms: thunder.",
+   "q": "What causes thunder?",
+   "a": "Air heated by lightning expanding violently.",
+   "edition": "2026-11-21-am",
+   "order": 17,
+   "id": "2026-11-21-am-017"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Heartbeats: slow or gone?",
+   "body": "In a distributed system, a missing heartbeat can't tell you whether a node has crashed or the network is just slow. A timeout is always a guess: too short and you fail over healthy nodes, too long and you notice real failures late. Some systems, like Cassandra, use a 'phi accrual' detector that reports a level of suspicion instead of a yes/no.",
+   "q": "Why is a failure-detection timeout always a guess?",
+   "a": "A crashed node and a slow network look the same from outside.",
+   "edition": "2026-11-21-am",
+   "order": 16,
+   "id": "2026-11-21-am-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Lazavik reaches the Speed Chess quarterfinals",
+   "body": "GM Denis Lazavik beat GM Dmitry Andreikin 12-8 in the Round of 16 of Chess.com's Speed Chess Championship. He won the 5+1 and 3+1 segments and narrowly lost the 1+1 bullet section, and next faces the winner of Wesley So versus Praggnanandhaa.",
+   "q": "Who will Lazavik face in the quarterfinals?",
+   "a": "The winner of So vs Praggnanandhaa.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/2026-speed-chess-championship-r16-lazavik-andreikin"
+   },
+   "edition": "2026-11-21-am",
+   "order": 15,
+   "id": "2026-11-21-am-015"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Olympus Mons, the gentle giant",
+   "body": "Olympus Mons on Mars is the tallest known volcano in the Solar System, about 22 kilometres high, roughly two and a half times Everest's height above sea level. It's a shield volcano with gentle slopes, around 600 kilometres wide, so if you stood on its flanks the summit would be lost beyond the horizon.",
+   "hook": "Wonder: why can volcanoes grow so much taller on Mars than on Earth?",
+   "edition": "2026-11-21-am",
+   "order": 14,
+   "id": "2026-11-21-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "tip",
+   "title": "Let sentence length set the pace",
+   "body": "Long sentences slow the reader down; they wander, they gather detail, they let a moment breathe. Short ones land. Use a run of long sentences for calm or wonder, then a short one when something changes. Read the paragraph aloud and you'll hear where it wants to speed up.",
+   "q": "What does a short sentence after several long ones usually signal?",
+   "a": "A change, a landing, or a moment of emphasis.",
+   "edition": "2026-11-21-am",
+   "order": 13,
+   "id": "2026-11-21-am-013"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Google builds a practice internet for browsing agents",
+   "body": "Google has built a large simulated internet, called Mirror Dimension, where its Chrome browsing agents can practise on realistic websites. Experiments happen in the copy, so an agent learning to fill forms or shop never touches real accounts.",
+   "hook": "Wonder: what else could you safely learn in a perfect copy of the world?",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-20-2026/"
+   },
+   "edition": "2026-11-21-am",
+   "order": 12,
+   "id": "2026-11-21-am-012"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Ask 'why would that be true?'",
+   "body": "Elaborative interrogation is a simple study habit: for each fact, ask why it makes sense and answer in your own words. Linking the new fact to what you already know gives it more hooks in memory. A 2013 review by John Dunlosky and colleagues rated it a moderately useful technique, especially when you already know a bit about the topic.",
+   "q": "What question powers elaborative interrogation?",
+   "a": "'Why would this be true?'",
+   "edition": "2026-11-21-am",
+   "order": 11,
+   "id": "2026-11-21-am-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first hard drive weighed about a ton",
+   "body": "IBM's 350 disk unit, shipped with the RAMAC computer in 1956, was the first commercial hard drive. It stacked fifty platters, each 24 inches across, held about five million characters and weighed roughly a ton. Today a fingernail-sized memory card holds millions of times more.",
+   "q": "What computer came with the first commercial hard drive?",
+   "a": "IBM's RAMAC, in 1956.",
+   "edition": "2026-11-21-am",
+   "order": 10,
+   "id": "2026-11-21-am-010"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "A lamp where no wind blows",
+   "body": "As a lamp in a windless place does not flicker, so is the steady mind of one who has learned to be still.",
+   "who": "Bhagavad Gita 6.19 (own rendering)",
+   "edition": "2026-11-21-am",
+   "order": 9,
+   "id": "2026-11-21-am-009"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Jaipur's giant sundial",
+   "body": "Maharaja Sawai Jai Singh II built the Jantar Mantar observatory in Jaipur in the early 18th century. Its largest instrument, the Samrat Yantra, is a sundial about 27 metres tall, and it can tell local time to within about two seconds. The site is now a UNESCO World Heritage Site.",
+   "q": "Who built the Jantar Mantar at Jaipur?",
+   "a": "Maharaja Sawai Jai Singh II.",
+   "edition": "2026-11-21-am",
+   "order": 8,
+   "id": "2026-11-21-am-008"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Set a stopping cue before you dive in",
+   "body": "Deep focus is a gift until it swallows lunch. Before starting something absorbing, decide how it will end: an alarm placed across the room, a song playlist of known length, or a friend's message at a set time. The cue does the remembering, so you can stay fully in the task.",
+   "edition": "2026-11-21-am",
+   "order": 7,
+   "id": "2026-11-21-am-007"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Peanuts plant themselves",
+   "body": "Peanuts aren't nuts; they're legumes, cousins of peas and beans. After a peanut flower is pollinated, a stalk called a peg grows down and pushes into the soil, and the pod ripens underground. Botanists call fruiting below ground 'geocarpy'.",
+   "hook": "Wonder: why would a plant bury its own fruit?",
+   "edition": "2026-11-21-am",
+   "order": 6,
+   "id": "2026-11-21-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 11: Files.readString",
+   "body": "Since Java 11, reading a small text file is one line: String text = Files.readString(Path.of(\"notes.txt\")); and writing is Files.writeString(path, text). Both use UTF-8 by default. For big files, stream lines with Files.lines instead of loading everything at once.",
+   "q": "What charset do Files.readString and writeString use by default?",
+   "a": "UTF-8.",
+   "edition": "2026-11-21-am",
+   "order": 5,
+   "id": "2026-11-21-am-005"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A hidden white dwarf, 27.6 light-years away",
+   "body": "A team led by Étienne Artigau of the Université de Montréal was hunting for planets with the SPIRou spectrograph when a nearby red dwarf showed a slow wobble. Imaging with Gemini North found the cause: a faint white dwarf circling it every 9.8 years. A second white dwarf orbits much farther out, making a three-star family nicknamed Welopō'ai.",
+   "hook": "Wonder: how many quiet companions are still hiding next to stars we think we know?",
+   "source": {
+    "name": "Sci.News",
+    "url": "https://www.sci.news/astronomy/welopoai-hierarchical-triple-system-15210.html"
+   },
+   "edition": "2026-11-21-am",
+   "order": 4,
+   "id": "2026-11-21-am-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Sklokin-Bagiyan, 13, wins Freestyle Friday",
+   "body": "Thirteen-year-old IM Sergey Sklokin-Bagiyan won Chess.com's 20 November Freestyle Friday with 9.5 points, half a point ahead of GM Jeffery Xiong. After a sixth-round loss to GM Alexey Sarana, he won his last five games in a row.",
+   "q": "How did Sklokin-Bagiyan respond to his round-six loss?",
+   "a": "He won his remaining five games.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/sklokin-bagiyan-wins-freestyle-friday-november-20-2026"
+   },
+   "edition": "2026-11-21-am",
+   "order": 3,
+   "id": "2026-11-21-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Saturday, nobody's alarm",
+   "body": "No alarm today.\nThe house wakes the old way:\nthe milk van, a crow,\nthe neighbour's tap running.\n\nI lie still and let\nthe light decide.\nThere is nowhere\nthe morning has to be.",
+   "hook": "Wonder: which sound tells you it's the weekend before you open your eyes?",
+   "edition": "2026-11-21-am",
+   "order": 2,
+   "id": "2026-11-21-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "OpenAI lets coding agents chase down slowdowns",
+   "body": "OpenAI described a 'Performance Factory' in which Codex agents look into ChatGPT slowdowns, suggest fixes and then check that things recovered after a fix ships. It reports more than 1,700 automated investigations and over 600 root causes found in about three months.",
+   "q": "What do the agents in OpenAI's Performance Factory investigate?",
+   "a": "Slowdowns in ChatGPT, from cause to verified fix.",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-20-2026/"
+   },
+   "edition": "2026-11-21-am",
+   "order": 1,
+   "id": "2026-11-21-am-001"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these from memory before scrolling back: What were the five landscapes of Sangam love poetry? Why can't a node tell a crashed peer from a slow one? What did the first ARPANET message say? What does WOOP stand for?",
+   "q": "Roughly how far does the Moon drift from Earth each year?",
+   "a": "About 3.8 centimetres, measured by bouncing lasers off mirrors on the Moon.",
+   "edition": "2026-11-21-am",
+   "order": 0,
+   "id": "2026-11-21-am-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
@@ -9699,338 +10050,6 @@
    "edition": "2026-11-06-pm",
    "order": 17,
    "id": "2026-11-06-pm-017"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Timelines: fan out on write or on read?",
-   "body": "For a feed, you can push each new post into every follower's list when it's written (fast reads, heavy writes) or assemble the feed when someone opens it (light writes, slower reads). Many systems mix both: push for most people, pull for accounts with millions of followers.",
-   "q": "What is the main cost of fan-out-on-write for a social feed?",
-   "a": "Every post must be written into every follower's timeline, which is heavy for very popular accounts.",
-   "edition": "2026-11-06-pm",
-   "order": 16,
-   "id": "2026-11-06-pm-016"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Feedback you can use today",
-   "body": "Feedback helps learning most when it says what to do next, not just whether you were right. 'Wrong' teaches little; 'your second step dropped a sign' teaches a lot. When you check your own work, look for the step, not the score.",
-   "edition": "2026-11-06-pm",
-   "order": 15,
-   "id": "2026-11-06-pm-015"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "The outside passed pawn is a decoy",
-   "body": "In king-and-pawn endings, a passed pawn far from the other pawns is a quiet weapon. You push it, the enemy king must chase it, and while it's away your king walks in and eats the pawns it left behind.",
-   "q": "Why is an outside passed pawn strong in king-and-pawn endings?",
-   "a": "It drags the enemy king away, letting your king attack the pawns on the other side.",
-   "edition": "2026-11-06-pm",
-   "order": 14,
-   "id": "2026-11-06-pm-014"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The key-cutter's extra",
-   "body": "Every time he cut a key, the old man at the market cut a second one and hung it on a nail behind him. 'Whose are those?' a boy asked. 'Everyone forgets once,' he said, and went back to the grinding wheel. Years later the boy came back, locked out in the rain. The key was still there, a little dusty, waiting.",
-   "edition": "2026-11-06-pm",
-   "order": 13,
-   "id": "2026-11-06-pm-013"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "The Great Square borrows a star",
-   "body": "Pegasus, the winged horse, is high in the evening sky now, marked by four stars in a big square. One corner, Alpheratz, officially belongs to the neighbouring constellation Andromeda—the horse shares a star with the princess.",
-   "q": "Which constellation does Alpheratz, a corner of the Great Square, belong to?",
-   "a": "Andromeda.",
-   "edition": "2026-11-06-pm",
-   "order": 12,
-   "id": "2026-11-06-pm-012"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Small diffs keep you in the loop",
-   "body": "Ask a coding agent for one small change at a time rather than a sweeping rewrite. A 30-line diff you can actually read is worth more than 600 lines you skim and hope about. Review speed, not generation speed, is usually the real limit.",
-   "hook": "Wonder: how big a change can you review carefully in five minutes?",
-   "edition": "2026-11-06-pm",
-   "order": 11,
-   "id": "2026-11-06-pm-011"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Marcus Aurelius, Meditations 7.59 (tr. George Long)",
-   "body": "Look within. Within is the fountain of good, and it will ever bubble up, if thou wilt ever dig.",
-   "edition": "2026-11-06-pm",
-   "order": 10,
-   "id": "2026-11-06-pm-010"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "VisiCalc, the first PC spreadsheet",
-   "body": "In 1979 Dan Bricklin and Bob Frankston released VisiCalc for the Apple II. Change one number and every dependent cell updated—on a personal computer. Many businesses bought an Apple II just to run it.",
-   "q": "Which computer did VisiCalc first run on?",
-   "a": "The Apple II (1979).",
-   "edition": "2026-11-06-pm",
-   "order": 9,
-   "id": "2026-11-06-pm-009"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Tamil written on cave beds",
-   "body": "Some of the oldest Tamil writing sits on rock beds in caves near Madurai, such as at Mangulam. Carved in Tamil-Brahmi script around the 2nd century BCE, the lines record gifts of shelters to Jain monks.",
-   "q": "What script was used for the earliest Tamil cave inscriptions?",
-   "a": "Tamil-Brahmi.",
-   "edition": "2026-11-06-pm",
-   "order": 8,
-   "id": "2026-11-06-pm-008"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Think out loud",
-   "body": "When a task won't hold still in your head, narrate it: 'Okay, first I open the file, then I find the date column…'. Saying steps aloud moves them out of working memory and into the room, where they're easier to follow. Quietly mumbling counts.",
-   "edition": "2026-11-06-pm",
-   "order": 7,
-   "id": "2026-11-06-pm-007"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The frog that freezes for winter",
-   "body": "North American wood frogs can freeze almost solid in winter. Their hearts stop, much of their body water turns to ice, and sugar floods their cells to protect them. In spring they thaw and hop off.",
-   "q": "What does a wood frog load its cells with to survive freezing?",
-   "a": "Glucose (sugar), which acts like an antifreeze.",
-   "edition": "2026-11-06-pm",
-   "order": 6,
-   "id": "2026-11-06-pm-006"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "ConcurrentHashMap.computeIfAbsent, gently",
-   "body": "map.computeIfAbsent(key, k -> build(k)) on a ConcurrentHashMap runs atomically per key: two threads asking for the same missing key won't both build it. Keep the function short, and never let it modify the same map—other threads may be waiting on that key.",
-   "q": "Why keep the function passed to ConcurrentHashMap.computeIfAbsent short?",
-   "a": "It runs while that key's entry is locked; other threads updating it wait, and it must not modify the map itself.",
-   "edition": "2026-11-06-pm",
-   "order": 5,
-   "id": "2026-11-06-pm-005"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "College chess heads to the playoffs",
-   "body": "In the Collegiate Chess League, Saint Louis University and UT Dallas are locked in a close race for first place as the regular season winds down and the playoffs approach. University teams across the world play these matches online through the season.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/ccl-week-6-2026"
-   },
-   "edition": "2026-11-06-pm",
-   "order": 4,
-   "id": "2026-11-06-pm-004"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Practise at the edge, not the middle",
-   "body": "Deliberate practice means working just beyond what you can already do, with quick feedback, on one specific weakness. Playing through things you already handle well feels productive but teaches little. Pick the bar you keep fumbling, not the song you love.",
-   "hook": "Wonder: which part of your skill do you quietly avoid practising?",
-   "edition": "2026-11-06-pm",
-   "order": 3,
-   "id": "2026-11-06-pm-003"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Box builds a context layer for agents with Nvidia models",
-   "body": "Box says it is using Nvidia's AI models to build a 'context layer' for enterprise agents: a way to hand an agent the right documents and background before it decides or acts. It's another sign that the hard part of agents is less the model and more what you feed it.",
-   "q": "In agent design, what is a 'context layer' for?",
-   "a": "Gathering the right information (documents, history, permissions) to give the agent before it acts.",
-   "source": {
-    "name": "AI Agents Directory brief (via SiliconANGLE)",
-    "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-5-2026"
-   },
-   "edition": "2026-11-06-pm",
-   "order": 2,
-   "id": "2026-11-06-pm-002"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "The Sun is settling down",
-   "body": "NOAA's sunspot count for October shows another sharp drop in Solar Cycle 25. After the busy peak of the last couple of years, our star is easing into the quieter half of its roughly 11-year rhythm.",
-   "hook": "Wonder: what flips inside the Sun every 11 years or so? (Its magnetic poles.)",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/sun/sun-news-activity-solar-flare-cme-aurora-updates/"
-   },
-   "edition": "2026-11-06-pm",
-   "order": 1,
-   "id": "2026-11-06-pm-001"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "After the guests leave",
-   "body": "The last diya on the step\nkeeps talking to the dark\nin a voice the size of a seed.\n\nNo one is listening now.\nIt does not seem to mind.\nIt was never burning for applause—\nonly for the next small circle of floor.",
-   "edition": "2026-11-06-pm",
-   "order": 0,
-   "id": "2026-11-06-pm-000"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Evening, terrace",
-   "body": "Clothes on the line\nlift their sleeves to the breeze.\nA kite, very far, is someone's.\nThe first star says nothing,\nwhich is enough.",
-   "edition": "2026-11-06-am",
-   "order": 29,
-   "id": "2026-11-06-am-029"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Tardigrades survived open space",
-   "body": "In 2007, tiny tardigrades rode outside a capsule in low Earth orbit, exposed to vacuum and cosmic radiation. Back on Earth, many of them revived and some even laid eggs. They survive by drying out and pausing their metabolism.",
-   "hook": "Wonder: what does it feel like to pause, if you're a water bear?",
-   "edition": "2026-11-06-am",
-   "order": 28,
-   "id": "2026-11-06-am-028"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Pause before the step you can't undo",
-   "body": "A good agent design sorts actions into two piles: ones you can undo (drafting, reading, searching) and ones you can't (sending, paying, deleting). Let the agent run freely through the first pile and ask a person before anything in the second.",
-   "q": "Which agent actions deserve a human check?",
-   "a": "The irreversible ones: sending, paying, deleting.",
-   "edition": "2026-11-06-am",
-   "order": 27,
-   "id": "2026-11-06-am-027"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Effort pays its wage",
-   "body": "Even when fate will not allow a thing, honest effort still pays the wage of the work it took.",
-   "who": "Thirukkural 619 (own rendering)",
-   "edition": "2026-11-06-am",
-   "order": 26,
-   "id": "2026-11-06-am-026"
-  },
-  {
-   "topic": "chess",
-   "kind": "fact",
-   "title": "Chess began as chaturanga",
-   "body": "The earliest known ancestor of chess, chaturanga, was played in India by around the 6th century CE. Its pieces stood for the four divisions of an army: infantry, cavalry, elephants and chariots. Those became pawns, knights, bishops and rooks.",
-   "hook": "Wonder: which modern piece was once an elephant?",
-   "edition": "2026-11-06-am",
-   "order": 25,
-   "id": "2026-11-06-am-025"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Retry with jitter",
-   "body": "When a service hiccups, a thousand clients that all retry after exactly one second will knock it over again together. Exponential backoff waits longer after each failure, and jitter adds a little randomness so the retries spread out instead of arriving as one wave.",
-   "q": "What does jitter add to retries?",
-   "a": "Randomness in the wait, so clients don't retry in lockstep.",
-   "edition": "2026-11-06-am",
-   "order": 24,
-   "id": "2026-11-06-am-024"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A two-day gathering for dark skies",
-   "body": "DarkSky International holds 'Under One Sky', a free-to-join virtual conference on 6 and 7 November, about protecting night skies from light pollution. Shielded, warm-coloured outdoor lights that point down are one of the easiest fixes anyone can make.",
-   "hook": "Wonder: when did you last see the Milky Way?",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/human-world/dark-sky-conference-under-one-sky-november-6-7-2026/"
-   },
-   "edition": "2026-11-06-am",
-   "order": 23,
-   "id": "2026-11-06-am-023"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The first computer password",
-   "body": "MIT's Compatible Time-Sharing System, started around 1961 under Fernando Corbató, let many people share one computer. Each user got private files, so each needed a password. It's widely credited as the first computer password system.",
-   "q": "Why did CTSS need passwords?",
-   "a": "Many users shared one machine and each had private files.",
-   "edition": "2026-11-06-am",
-   "order": 22,
-   "id": "2026-11-06-am-022"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Call it a restart",
-   "body": "Dropping a habit for a few days is normal for any brain, and common for ADHD brains. Instead of 'I failed again', try 'restart day'. Pick the smallest version of the habit, do it once today, and count that as the streak beginning again.",
-   "edition": "2026-11-06-am",
-   "order": 21,
-   "id": "2026-11-06-am-021"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Rajaraja Chola measured the land",
-   "body": "Around the start of the 11th century, the Chola king Rajaraja I ordered a detailed survey of farmland across his kingdom so that revenue could be assessed fairly. One of his titles, Ulagalanda, is often read as 'he who measured the world'.",
-   "hook": "Wonder: how would you measure a kingdom with ropes and rods?",
-   "edition": "2026-11-06-am",
-   "order": 20,
-   "id": "2026-11-06-am-020"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Cut your first paragraph",
-   "body": "Many drafts warm up before they begin. Try deleting the opening paragraph and see if the piece starts better at the second. Often the first paragraph was for you, to find your way in; the reader can skip the stretching.",
-   "edition": "2026-11-06-am",
-   "order": 19,
-   "id": "2026-11-06-am-019"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The Sahara used to be green",
-   "body": "Between about 11,000 and 5,000 years ago, a wobble in Earth's orbit strengthened the African monsoon. The Sahara had lakes, grasslands, hippos and fishing villages. Rock art in the desert still shows cattle and swimmers.",
-   "q": "What turned the Sahara green for thousands of years?",
-   "a": "Small changes in Earth's orbit that strengthened the monsoon.",
-   "edition": "2026-11-06-am",
-   "order": 18,
-   "id": "2026-11-06-am-018"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Meta picks up Conductor, a tool for running many coding agents",
-   "body": "Meta acquired Conductor, a startup whose software lets a developer run several AI coding agents side by side, each on its own task. Terms weren't shared. It's another sign that the workflow is moving from one assistant to a small team of them.",
-   "source": {
-    "name": "MLQ.ai",
-    "url": "https://mlq.ai/news/meta-acquires-ai-coding-startup-conductor-for-undisclosed-sum"
-   },
-   "edition": "2026-11-06-am",
-   "order": 17,
-   "id": "2026-11-06-am-017"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "When gut feelings can be trusted",
-   "body": "Psychologists Daniel Kahneman and Gary Klein found common ground in 2009: intuition is reliable when the setting is regular enough to have patterns and you get quick, clear feedback on your guesses. A chess player's hunch qualifies; a guess about next year's stock prices doesn't.",
-   "hook": "Wonder: where in your work do you get fast, honest feedback?",
-   "edition": "2026-11-06-am",
-   "order": 16,
-   "id": "2026-11-06-am-016"
   }
  ]
 }
