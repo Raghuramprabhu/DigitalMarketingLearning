@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Fingers & a Window</title>
+  <meta name="description" content="Two pointers, sliding window and the caterpillar hybrid, told as stories, with step-by-step Java playgrounds, a fence-post puzzle and a pattern-spotting quiz.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="dsa.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap-wide topbar-inner">
+      <a class="brand" href="../"><span class="brand-dot"></span>Two Fingers &amp; a Window</a>
+    </div>
+    <div class="progress-bar"></div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" style="padding-bottom:10px">
+      <span class="eyebrow">DSA on arrays · story first</span>
+      <h1>Two fingers &amp; a window</h1>
+      <p class="lede">Three patterns solve a huge share of array interview problems. You've already met them on a terrace walk: a <strong>gift voucher</strong>, a <strong>train window</strong> and a <strong>caterpillar</strong>. Here they are again, with every line of Java running in front of you.</p>
+    </section>
+
+    <nav class="dsa-nav" aria-label="Sections">
+      <a href="#why">Why</a><a href="#tp">👉👈 Two pointers</a><a href="#fence">🌧️ Fence posts</a><a href="#sw">🪟 Sliding window</a><a href="#cat">🐛 Caterpillar</a><a href="#spot">🔎 Spotting guide</a><a href="#quiz">🎯 Quiz</a>
+    </nav>
+
+    <!-- ================= WHY ================= -->
+    <section class="part" id="why">
+      <div class="part-head"><span class="part-badge ink">?</span><h2>Why bother?<small>The lazy way vs the clever way</small></h2></div>
+      <p>The lazy way to find a pair, or the best stretch, is to try <b>everything against everything</b>. That feels fine with 10 items. Drag the slider and watch what happens as the list grows.</p>
+      <div class="why-box">
+        <div style="display:flex;justify-content:space-between;font-weight:700"><span>List size</span><span id="why-label"></span></div>
+        <input type="range" id="why-n" min="1" max="7" step="0.1" value="3" aria-label="List size">
+        <div class="why-row">
+          <div class="why-stat slow">Every pair<span id="why-slow"></span></div>
+          <div class="why-stat fast">One pass<span id="why-fast"></span></div>
+        </div>
+      </div>
+      <p style="margin-top:14px">All three patterns below are tricks for turning the red number into the green one. The secret ingredient is always the same: <b>some order in the data tells you which way to move</b>, so you never waste a step.</p>
+    </section>
+
+    <!-- ================= TWO POINTERS ================= -->
+    <section class="part" id="tp">
+      <div class="part-head"><span class="part-badge">👉</span><h2>Two pointers<small>Two fingers on one row</small></h2></div>
+      <div class="analogy"><span class="emo">🎁</span><p>₹1,000 voucher, a shelf sorted cheapest to dearest. You stand at the cheap end, your friend at the dear end. <b>Too much? Your friend steps in. Too little? You step in.</b> The sorted shelf decides every move.</p></div>
+      <p>Two fingers come in two shapes:</p>
+      <div class="shapes">
+        <div class="shape">
+          <h4>Closing in</h4>
+          <div class="mini"><span class="l">L</span><span></span><span></span><span></span><span></span><span class="r">R</span></div>
+          <p>Start at both ends and walk towards each other. For <b>pairs</b>, <b>symmetry</b> and <b>sorted</b> rows.</p>
+        </div>
+        <div class="shape">
+          <h4>Slow &amp; fast</h4>
+          <div class="mini"><span class="l">S</span><span></span><span class="r">F</span><span></span><span></span><span></span></div>
+          <p>Both walk the same way. Fast <b>scouts</b>, slow marks <b>where the next keeper goes</b>. For tidying a row in place.</p>
+        </div>
+      </div>
+      <p><b>How to use the playgrounds:</b> tap <b>Step ▶</b> to move one line at a time, or <b>Auto-run</b> to watch. The highlighted Java line is the one running; the panel beside it shows every variable, and the one that just changed turns orange.</p>
+
+      <article class="example">
+        <div class="ex-head"><span class="level easy">Easy 1</span><span class="tag new">closing in</span></div>
+        <h3>STRESSED → ?</h3>
+        <p class="story-line">Reverse a word in place, with no second array. Swap the two ends, step both fingers in, repeat until they meet. (Guess the answer before you press Step.)</p>
+        <div data-pg="reverse"></div>
+      </article>
+
+      <article class="example">
+        <div class="ex-head"><span class="level easy">Easy 2</span><span class="tag new">closing in</span></div>
+        <h3>The gift voucher</h3>
+        <p class="story-line">Prices sorted low to high. Is there a pair that uses exactly ₹1,000?</p>
+        <div data-pg="voucher"></div>
+      </article>
+
+      <article class="example">
+        <div class="ex-head"><span class="level easy">Easy 3</span><span class="tag new">slow &amp; fast</span></div>
+        <h3>Books to the left</h3>
+        <p class="story-line">Zeros are gaps on a shelf. Push every book (non-zero) left, keep their order, and leave the gaps at the end.</p>
+        <div data-pg="zeros"></div>
+      </article>
+
+      <article class="example">
+        <div class="ex-head"><span class="level medium">Medium</span><span class="tag new">three pointers</span></div>
+        <h3>Sort the tricolour in one pass</h3>
+        <p class="story-line">In 1976 Edsger Dijkstra posed the "Dutch national flag" problem: a row of red, white and blue pebbles, sort them in a single pass. Here it is with our own flag. <b>low</b> grows the saffron zone from the left, <b>high</b> grows the green zone from the right, and <b>mid</b> walks through the unknown middle.</p>
+        <div class="task"><b>S</b> = saffron (0), <b>W</b> = white (1), <b>G</b> = green (2). The purple cells are the zone still unexplored.</div>
+        <div data-pg="flag"></div>
+      </article>
+    </section>
+
+    <!-- ================= FENCE POSTS ================= -->
+    <section class="part" id="fence">
+      <div class="part-head"><span class="part-badge teal">🌧️</span><h2>Your turn: the fence posts<small>Medium · guess first, then reveal</small></h2></div>
+      <p>Posts of different heights stand in a row, 1 metre apart. Stretch a tarpaulin between <b>any two</b> to catch rain. Water only rises as high as the <b>shorter</b> of the two, and a wider gap holds more.</p>
+      <p class="story-line" style="color:var(--ink-soft)">Water = <b>shorter post's height × distance between them</b>. The posts are <b>not</b> sorted, and you can't rearrange them.</p>
+
+      <div class="fence">
+        <div id="fence-svg"></div>
+        <div class="readout" id="fence-read"></div>
+      </div>
+
+      <div id="fence-mcq">
+        <div class="mcq">
+          <div class="q">Q1. The fingers start on post #1 (1m) and post #9 (7m). Which finger should step inward first?</div>
+          <button class="opt" type="button" data-right>The left finger, on the shorter post</button>
+          <button class="opt" type="button">The right finger, on the taller post</button>
+          <button class="opt" type="button">Both fingers together</button>
+          <button class="opt" type="button">Whichever finger is closer to the tallest post</button>
+          <div class="reveal-box">The shorter post sets the water level. Moving the taller one can only shrink the width while the short post still caps the level, so it can only get worse. Moving the short one is the only move that <i>might</i> find a taller post.</div>
+        </div>
+        <div class="mcq">
+          <div class="q">Q2. Why is it safe to throw the shorter post away for good?</div>
+          <button class="opt" type="button">Short posts can never be part of the best answer</button>
+          <button class="opt" type="button" data-right>It has already been measured at the widest gap it will ever get; every other pair using it is narrower and still capped by it</button>
+          <button class="opt" type="button">Because the posts are sorted by height</button>
+          <button class="opt" type="button">Because the left finger always moves first</button>
+          <div class="reveal-box">This is the bit that felt slippery on the walk. You never search for the shortest post in the whole row; you only compare the <b>two posts under your fingers</b>. The shorter one has just had its best possible chance, so nothing is lost by dropping it.</div>
+        </div>
+        <div class="mcq">
+          <div class="q">Q3. Which pair holds the most water?</div>
+          <button class="opt" type="button">Posts #2 and #7, the two tallest</button>
+          <button class="opt" type="button">Posts #1 and #9, the widest pair</button>
+          <button class="opt" type="button" data-right>Posts #2 and #9</button>
+          <button class="opt" type="button">Posts #3 and #9</button>
+          <div class="reveal-box">#2 (8m) and #9 (7m): level 7 × width 7 = <b>49</b>. The two tallest (#2 &amp; #7) only manage 8 × 5 = 40, and the widest pair is stuck at 1 × 8 = 8. The winner balances height <i>and</i> width. Run the playground below to watch the two fingers find it in 8 steps.</div>
+        </div>
+        <button class="btn" type="button" id="fence-reveal">Reveal answers</button>
+      </div>
+
+      <article class="example" style="display:none">
+        <div class="ex-head"><span class="level medium">Medium</span><span class="tag new">closing in</span></div>
+        <h3>Watch the fingers solve it</h3>
+        <p class="story-line">Measure, keep the record, drop the shorter post. Repeat until the fingers meet.</p>
+        <div data-pg="fence"></div>
+      </article>
+    </section>
+
+    <!-- ================= SLIDING WINDOW ================= -->
+    <section class="part" id="sw">
+      <div class="part-head"><span class="part-badge plum">🪟</span><h2>Sliding window<small>A frame of fixed size, gliding along</small></h2></div>
+      <div class="analogy"><span class="emo">🚆</span><p>From a train window you see exactly three trees. As the train moves, <b>one tree slides in</b> on the right and <b>one slides out</b> on the left. The trees in the middle don't change, so you never re-count them.</p></div>
+      <div class="shapes">
+        <div class="shape">
+          <h4>The lazy way</h4>
+          <div class="mini"><span class="w">+</span><span class="w">+</span><span class="w">+</span><span></span><span></span><span></span></div>
+          <p>Re-add all k items for every window: a loop inside a loop.</p>
+        </div>
+        <div class="shape">
+          <h4>The window way</h4>
+          <div class="mini"><span class="r">−</span><span class="w"></span><span class="w"></span><span class="l">+</span><span></span><span></span></div>
+          <p>Carry the total forward: <b>add the newcomer, subtract the leaver</b>. One pass.</p>
+        </div>
+      </div>
+      <p>The clue in a problem: the stretch is <b>consecutive</b> and its <b>size is given</b> (3 hours, 7 days, a 3-letter word).</p>
+
+      <article class="example">
+        <div class="ex-head"><span class="level easy">Easy 1</span><span class="tag new">fixed window · sum</span></div>
+        <h3>Best hours for a meteor shower</h3>
+        <p class="story-line">You've counted meteors each hour. Pick the best 3-hour watch.</p>
+        <div data-pg="meteors"></div>
+      </article>
+
+      <article class="example">
+        <div class="ex-head"><span class="level easy">Easy 2</span><span class="tag new">fixed window · set</span></div>
+        <h3>No raga twice within 2 songs</h3>
+        <p class="story-line">The window doesn't have to hold a sum. Here it holds <b>a set of the last 2 songs</b>, and the question is whether the new song is already in it.</p>
+        <div data-pg="repeat"></div>
+      </article>
+
+      <article class="example">
+        <div class="ex-head"><span class="level easy">Easy 3</span><span class="tag new">fixed window · count</span></div>
+        <h3>Good walking stretches</h3>
+        <p class="story-line">Count every 3-day stretch whose average was at least 5 km. One loop does both jobs: slide, then judge.</p>
+        <div data-pg="walk"></div>
+      </article>
+
+      <article class="example">
+        <div class="ex-head"><span class="level medium">Medium</span><span class="tag new">fixed window · tallies</span></div>
+        <h3>Find TEA, shuffled</h3>
+        <p class="story-line">Comparing words letter by letter at every spot would be slow. Instead the window keeps a <b>tally of its letters</b>; a shuffle of TEA is any window whose tally is exactly A:1 E:1 T:1.</p>
+        <div data-pg="anagram"></div>
+      </article>
+    </section>
+
+    <!-- ================= CATERPILLAR ================= -->
+    <section class="part" id="cat">
+      <div class="part-head"><span class="part-badge teal">🐛</span><h2>The caterpillar<small>Two pointers + a window: the hybrid</small></h2></div>
+      <div class="analogy"><span class="emo">🐛</span><p>Now let the window <b>breathe</b>. A caterpillar's head (<b>right</b>) keeps reaching forward. When a rule breaks, its tail (<b>left</b>) catches up until the rule heals. Two pointers, both walking the same way, with the window between them as the answer.</p></div>
+      <p>The clue: the stretch is <b>consecutive</b>, but its <b>size is what you're hunting</b> ("longest…", "shortest…", "how many stretches…").</p>
+      <div class="callout teal"><strong>The caterpillar's one condition</strong>Shrinking from the back must always help the rule heal. With costs that are never negative, dropping a day always lowers the total. If some numbers are negative, that promise breaks, and so does the caterpillar.</div>
+      <p>Why is it still one pass when there's a <code>while</code> inside the <code>for</code>? Because neither end ever moves backwards. Each item enters the window once and leaves at most once.</p>
+
+      <article class="example">
+        <div class="ex-head"><span class="level easy">Easy 1</span><span class="tag new">tail jumps</span></div>
+        <h3>The longest held note</h3>
+        <p class="story-line">Sargam letters: S R G M P. When the note changes, the tail jumps straight to the head.</p>
+        <div data-pg="run"></div>
+      </article>
+
+      <article class="example">
+        <div class="ex-head"><span class="level easy">Easy 2</span><span class="tag new">grow · shrink</span></div>
+        <h3>The longest trip on a budget</h3>
+        <p class="story-line">The one from the walk. Watch for the expensive day: the caterpillar has to shed a lot to get past it.</p>
+        <div data-pg="budget"></div>
+      </article>
+
+      <article class="example">
+        <div class="ex-head"><span class="level easy">Easy 3</span><span class="tag new">grow · shrink</span></div>
+        <h3>A forgiving streak</h3>
+        <p class="story-line">The rule isn't always a sum. Here it's "at most one missed day inside the window".</p>
+        <div data-pg="streak"></div>
+      </article>
+
+      <article class="example">
+        <div class="ex-head"><span class="level medium">Medium</span><span class="tag new">grow · shrink · set</span></div>
+        <h3>The longest playlist with no repeat</h3>
+        <p class="story-line">The one you spotted yourself. The window carries a set of the ragas inside it; a repeat makes the tail shed songs until the old copy is gone.</p>
+        <div data-pg="norepeat"></div>
+      </article>
+    </section>
+
+    <!-- ================= SPOTTING GUIDE ================= -->
+    <section class="part" id="spot">
+      <div class="part-head"><span class="part-badge ink">🔎</span><h2>Spotting guide<small>Ask these before you code</small></h2></div>
+      <div class="guide">
+        <div class="g"><span class="ico">👉👈</span><p><b>Two pointers</b> if you're working with <b>two items at a time</b> (pairs, swaps, copies), usually from both ends of a sorted or symmetric row, or with a slow finger writing while a fast one reads. What lies between the fingers isn't the answer.</p></div>
+        <div class="g"><span class="ico">🪟</span><p><b>Sliding window</b> if the answer is a <b>consecutive stretch of a size you're told</b>. Add one in, drop one out.</p></div>
+        <div class="g"><span class="ico">🐛</span><p><b>Caterpillar</b> if the answer is a <b>consecutive stretch whose size you're hunting</b>, and shrinking from the back always heals the rule.</p></div>
+        <div class="g"><span class="ico">🤔</span><p><b>Something else</b> if order doesn't matter, the data isn't a row, or none of the above quite fits. Don't force it. Not every problem is a nail.</p></div>
+      </div>
+    </section>
+
+    <!-- ================= QUIZ ================= -->
+    <section class="part" id="quiz">
+      <div class="part-head"><span class="part-badge">🎯</span><h2>Pattern spotter<small>21 problems · no code, just the shape</small></h2></div>
+      <div class="quiz-rules">
+        <b>The rules.</b> For each problem, tap the pattern that fits. It starts easy, gets disguised, then mixes everything up.<br>
+        <b>Some problems fit none of the three.</b> There's no "none" button: if you're sure, just <b>leave it blank</b>. A blank on a problem that fits none counts as correct; a blank on one that does fit counts as wrong. Tap a choice again to clear it.<br>
+        Lock in each level to see the answers.
+      </div>
+      <div id="quiz-host"></div>
+      <div class="final-score" id="final-score"></div>
+      <p style="text-align:center"><button class="btn ghost" type="button" id="quiz-reset">↺ Start the quiz again</button></p>
+    </section>
+
+    <p class="foot-note">Next chapter: prefix sums and hashing, the two tricks the traps were pointing at.</p>
+  </main>
+
+  <script src="dsa.js"></script>
+</body>
+</html>
