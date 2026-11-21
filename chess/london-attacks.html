@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>London attacks: three real games, three real battles</title>
+  <meta name="description" content="Three real grandmaster London System attacks (Kamsky, Carlsen, Ding), told as stories next to the military operations that won the same way: Operation Focus, Austerlitz and the Tangail airdrop.">
+  <script>(function(){var t=null;try{t=localStorage.getItem("dml-theme");}catch(e){}if(t!=="light"&&t!=="dark")t="light";document.documentElement.setAttribute("data-theme",t);})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chess.css">
+  <style>
+    .gtabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 26px 0 0; }
+    .gtab { text-align: left; cursor: pointer; background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--c); border-radius: 14px; padding: 14px 15px 12px; color: var(--ink); font: inherit; transition: transform .15s, box-shadow .15s; }
+    .gtab:hover { transform: translateY(-3px); }
+    .gtab.on { box-shadow: 0 0 0 2px var(--c); }
+    .gtab .n { font: 700 11px var(--font-mono); letter-spacing: .12em; color: var(--c); text-transform: uppercase; }
+    .gtab b { display: block; font: 700 20px/1.2 var(--font-display); margin: 4px 0 2px; }
+    .gtab small { display: block; color: var(--soft); font-size: 13px; line-height: 1.35; }
+    .gtab .war { margin-top: 8px; font: 600 12px var(--font-mono); color: var(--dim); }
+    .gtab .done { float: right; font-size: 13px; color: var(--green); }
+    @media (max-width: 760px) { .gtabs { grid-template-columns: 1fr; } .gtab b { font-size: 18px; } }
+
+    .brief { position: relative; background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--c); border-radius: 16px; padding: 22px 22px 8px; margin: 26px 0; }
+    .brief .stamp { font: 700 11px var(--font-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--c); }
+    .brief h3 { margin: 6px 0 12px; padding-right: 70px; }
+    .brief p { font-size: 17px; }
+    .brief .mini, .mini { font-size: 14.5px; color: var(--soft); font-style: italic; border-top: 1px dashed var(--line2); padding-top: 10px; }
+    .brief.folded .body { display: none; }
+    .brief .fold { position: absolute; top: 14px; right: 14px; }
+
+    .game-head { text-align: center; margin: 40px 0 6px; }
+    .game-head .kick { font: 700 12px var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--c); }
+    .game-head h2 { margin: 6px 0 4px; }
+    .game-head .src { color: var(--soft); font-size: 15px; }
+
+    .movelist .m.key::after { content: ""; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--c); margin-left: 3px; vertical-align: middle; }
+    .beat-t { font: 700 12px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--c); margin-bottom: 6px; }
+    .narr.stale { opacity: .55; }
+    .narr .since { font: 600 12px var(--font-mono); color: var(--dim); margin-bottom: 4px; }
+    .nowmove { font: 700 13px var(--font-mono); color: var(--dim); margin: 0 0 8px; min-height: 18px; }
+
+    .quizbox { display: none; margin: 10px 0 4px; padding: 14px; border-radius: 14px; border: 2px solid var(--c); background: var(--card2); animation: fadeUp .35s; }
+    .quizbox.show { display: block; }
+    .quizbox .who { font: 700 11px var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--c); }
+    .quizbox .q { font-size: 16.5px; margin: 6px 0 4px; }
+    .quizbox .choices .cand { font-size: 16px; }
+    .quizbox .why { display: block; }
+    .quizbox .why:empty { display: none; }
+    .quizbox .qctrls { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    .quizbox .qctrls button { border: 1px solid var(--line2); background: var(--card); color: var(--ink); border-radius: 10px; padding: 8px 12px; font: 600 14px var(--font-body); cursor: pointer; }
+    .pause { display: inline-block; font: 700 11px var(--font-mono); letter-spacing: .12em; background: var(--c); color: #fff; border-radius: 6px; padding: 2px 7px; margin-bottom: 6px; }
+
+    .debrief { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0 10px; }
+    .debrief .d { background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--c); border-radius: 14px; padding: 14px 15px; }
+    .debrief .d .k { font: 700 11px var(--font-mono); color: var(--c); letter-spacing: .12em; }
+    .debrief .d b { display: block; font: 700 18px/1.25 var(--font-display); margin: 4px 0 6px; color: var(--ink); }
+    .debrief .d p { margin: 0; color: var(--soft); font-size: 15px; }
+    @media (max-width: 760px) { .debrief { grid-template-columns: 1fr; } }
+    .linkline { text-align: center; font: italic 600 19px/1.45 var(--font-display); color: var(--ink); max-width: 680px; margin: 18px auto 0; }
+    .nextgame { text-align: center; margin: 18px 0 0; }
+
+    .thread { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+    .thread .t { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; border-left: 5px solid var(--c); }
+    .thread .t .k { font: 700 11px var(--font-mono); color: var(--c); letter-spacing: .12em; text-transform: uppercase; }
+    .thread .t b { display: block; font: 700 19px/1.25 var(--font-display); margin: 4px 0 6px; }
+    .thread .t p { margin: 0; color: var(--soft); font-size: 15px; }
+    @media (max-width: 760px) { .thread { grid-template-columns: 1fr; } }
+    .drill { background: var(--card); border: 2px dashed var(--gold); border-radius: 16px; padding: 18px 20px; margin: 18px 0; }
+    .drill .k { font: 700 11px var(--font-mono); letter-spacing: .14em; color: var(--gold); text-transform: uppercase; }
+    .drill ol { margin: 8px 0 0; padding-left: 22px; }
+    .drill li { margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="home" href="../">← <span>Field Notes</span></a>
+    <span class="logo">London attacks<span>: the war room</span></span>
+    <span class="grow"></span>
+    <a class="pill" href="london.html" title="London System page">🏠<span class="hide-sm"> London</span></a>
+    <a class="pill" href="./" title="Tactics page">⚔️<span class="hide-sm"> Tactics</span></a>
+    <a class="pill" href="middlegame.html" title="Strategy page">🗺️<span class="hide-sm"> Strategy</span></a>
+    <span class="pill score-pill" id="scorePill" title="Pause-and-predict questions solved on the first try">🎯 0/9</span>
+    <button class="pill" id="themebtn" type="button" aria-label="Toggle light or dark mode">🌙 Dark</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow">Chess · London System · three real grandmaster attacks</span>
+    <h1>Three attacks.<br><em>Three battles.</em></h1>
+    <p class="lede">People call the London "the boring opening". These three grandmaster games show what happens when its quiet setup suddenly turns into an attack on the king.</p>
+    <p class="lede" style="font-size:17px">Each game is paired with a <b>real military operation that won the same way</b>. First read the briefing, then replay the game. When the board says <b>PAUSE</b>, it's your move.</p>
+    <div class="gtabs" id="gtabs"></div>
+  </div>
+</section>
+
+<section class="block" id="game">
+  <div class="wide">
+    <div class="game-head">
+      <div class="kick" id="gKick"></div>
+      <h2 id="gTitle"></h2>
+      <div class="src" id="gSrc"></div>
+    </div>
+
+    <div class="wrap" style="padding:0">
+      <div class="brief" id="brief">
+        <button class="btn small ghost fold" id="foldBtn" type="button">Hide</button>
+        <div class="stamp">🎖️ Briefing</div>
+        <div class="body">
+          <h3 id="bWar"></h3>
+          <div id="bText"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="viewer" id="viewer">
+      <div class="vb">
+        <div id="board"></div>
+        <div class="who"><span id="whoW"></span><span class="turn" id="turn"></span></div>
+      </div>
+      <div class="vt">
+        <div class="nowmove" id="nowMove"></div>
+        <div class="quizbox" id="quiz">
+          <span class="pause">⏸ PAUSE · YOUR MOVE</span>
+          <div class="who" id="qWho"></div>
+          <div class="q" id="qText"></div>
+          <div class="choices" id="qOpts"></div>
+          <div class="status" id="qStatus" style="display:none"></div>
+          <div class="why" id="qWhy"></div>
+          <div class="qctrls"><button id="qReveal" type="button">Show the answer</button></div>
+        </div>
+        <div class="narr" id="narr"></div>
+        <div class="ctrls">
+          <button id="bStart" type="button" aria-label="Start">⏮</button>
+          <button id="bPrev" type="button" aria-label="Back">◀</button>
+          <button id="bNext" class="main" type="button">Next ▶</button>
+          <button id="bPlay" type="button" aria-label="Autoplay">⏵ Play</button>
+          <button id="bEnd" type="button" aria-label="End">⏭</button>
+          <span class="stepno" id="stepNo"></span>
+        </div>
+        <div class="movelist" id="moves"></div>
+      </div>
+    </div>
+
+    <div class="wrap" style="padding:0">
+      <div class="sec-head" style="margin:40px 0 0"><div class="num">DEBRIEF</div><h3 style="margin-top:6px">Take these into your next 10-minute game</h3></div>
+      <div class="debrief" id="debrief"></div>
+      <p class="linkline" id="linkline"></p>
+      <div class="nextgame"><button class="btn" id="nextGame" type="button">Next battle ▶</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="thread" style="border-top:1px solid var(--line); padding-top:50px">
+  <div class="wrap">
+    <div class="sec-head"><div class="num">THE COMMON THREAD</div><h2>Three ways to break a defence</h2>
+      <p>Different players and different centuries, but in every case the attacker read the defender before striking.</p></div>
+    <div class="thread">
+      <div class="t" style="--c:var(--gold)"><div class="k">Kamsky · Focus</div><b>Strike at the routine moment</b><p>The defender is weakest during the move he plays without thinking.</p></div>
+      <div class="t" style="--c:var(--teal)"><div class="k">Carlsen · Austerlitz</div><b>Hit the ground they just left</b><p>Every advance leaves something behind. Look there first.</p></div>
+      <div class="t" style="--c:var(--violet)"><div class="k">Ding · Tangail</div><b>Close the roads, then strike</b><p>Take away counterplay and escape squares. The win then arrives by itself.</p></div>
+    </div>
+    <div class="callout gold"><div class="emo">🎯</div><div><p><b>Same front sight, every time.</b> All three losers played a natural move without asking what it allowed: <span class="mono">...Bxd7 / ...Qxc5</span>, <span class="mono">...g5</span>, <span class="mono">...e5</span>. All three winners asked one question before striking: <i>what did that move leave behind?</i></p></div></div>
+    <div class="drill">
+      <div class="k">Your drill for the next 10 rapid games</div>
+      <ol>
+        <li>After <b>every</b> opponent move, ask: <i>what did that piece or pawn just stop guarding?</i></li>
+        <li>Before <b>your</b> "obvious" recaptures, spend 5 seconds on: <i>what does this allow?</i> (Shankland's lesson.)</li>
+        <li>When your knight is on e5 and their f6 knight leaves, check <b>Bxh7+</b>.</li>
+      </ol>
+    </div>
+    <div class="pagenav"><a class="btn ghost" href="london.html">🏠 The London: the story</a><a class="btn ghost" href="./">⚔️ Tactics: the story</a><a class="btn ghost" href="../">← Field Notes</a></div>
+  </div>
+</section>
+
+<footer>
+  Game scores: Kamsky–Shankland (Eastern Class Championship 2014, as annotated by Shankland for US Chess), Carlsen–Tomashevsky (Tata Steel 2016, ChessBase), Ding–Nepomniachtchi (World Championship 2023 game 6, lichess broadcast). Every game is replayed move by move with python-chess; every pause-and-predict answer was checked with Stockfish 16.<br>
+  History sources: Operation Focus (IAF accounts, Wikipedia), Battle of Austerlitz (World History Encyclopedia, Wikipedia), Tangail airdrop and Dhaka 1971 (USI of India, The Tribune, Wikipedia).<br>
+  Pieces: "cburnett" set by Colin M.L. Burnett, CC BY-SA 3.0, via lichess.org.
+</footer>
+
+<script src="board.js"></script>
+<script src="attacks-data.js"></script>
+<script src="attacks.js"></script>
+</body>
+</html>
