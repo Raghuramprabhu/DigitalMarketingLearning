@@ -1,6 +1,344 @@
 {
- "updated": "2026-11-21T02:20:04+00:00",
+ "updated": "2026-11-21T17:20:16+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try to answer from memory before scrolling back up.",
+   "q": "Three quick ones: why do rooks go behind passed pawns, what does jitter add to retries, and what did Jacquard's loom read?",
+   "a": "The rook gains scope as the pawn advances; random waiting so clients don't retry in sync; punched cards.",
+   "edition": "2026-11-21-pm",
+   "order": 30,
+   "id": "2026-11-21-pm-030"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Your nose remembers more than your eyes expect",
+   "body": "Smells are processed by brain regions closely linked with memory and emotion: the olfactory bulb connects to the amygdala and hippocampus without the relay step other senses take. That's one reason a scent, like jasmine or wet earth after rain, can bring back a moment from years ago in an instant.",
+   "hook": "Wonder: which smell carries you back the furthest?",
+   "edition": "2026-11-21-pm",
+   "order": 29,
+   "id": "2026-11-21-pm-029"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The habit that gentles a day",
+   "body": "Each night, before sleep, look back over the day: what you did well, what you might do better. Then let it go and rest. A mind that reviews itself kindly sleeps better than one that never looks.",
+   "who": "After Seneca, On Anger 3.36 (own rendering)",
+   "edition": "2026-11-21-pm",
+   "order": 28,
+   "id": "2026-11-21-pm-028"
+  },
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "Chaturanga, the four-part army",
+   "body": "Chess's oldest known ancestor is chaturanga, played in India by around the 6th century CE. Its name means 'four limbs', the four divisions of an ancient army: infantry, cavalry, elephants and chariots, which became the pawn, knight, bishop and rook. The game travelled to Persia as shatranj and from there across the world.",
+   "q": "Which four army divisions gave chaturanga its name?",
+   "a": "Infantry, cavalry, elephants and chariots.",
+   "edition": "2026-11-21-pm",
+   "order": 27,
+   "id": "2026-11-21-pm-027"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Keep the agent's changes small",
+   "body": "Ask a coding agent for one small, reviewable change at a time: one function, one bug, one file. A twenty-line diff you can read in a minute is easier to trust than a five-hundred-line one you skim. If each step is small and checked, a long task stays a series of easy decisions.",
+   "edition": "2026-11-21-pm",
+   "order": 26,
+   "id": "2026-11-21-pm-026"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "'Computer' was once a job title",
+   "body": "For centuries, a 'computer' was a person who did calculations by hand, working out tables of logarithms, tides or star positions. Teams of human computers, many of them women, worked at observatories and later at NASA's predecessor. When electronic machines took over the arithmetic in the mid-20th century, they inherited the name.",
+   "q": "Before machines, who was a 'computer'?",
+   "a": "A person employed to do calculations by hand.",
+   "edition": "2026-11-21-pm",
+   "order": 25,
+   "id": "2026-11-21-pm-025"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the mended chappal",
+   "body": "The cobbler's thread\nis thicker than the strap it holds.\n\nI walk home slower,\nlistening for the new stitch\nto learn my step.",
+   "edition": "2026-11-21-pm",
+   "order": 24,
+   "id": "2026-11-21-pm-024"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Neptune's first lap since we found it",
+   "body": "Neptune was discovered in 1846, its position predicted with mathematics before anyone looked. It takes about 165 Earth years to orbit the Sun, so it only completed its first full orbit since discovery in 2011. Everyone who has ever known about Neptune has seen it go round just once.",
+   "hook": "Wonder: where will Neptune be when its second lap ends, in the 2170s?",
+   "edition": "2026-11-21-pm",
+   "order": 23,
+   "id": "2026-11-21-pm-023"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Backoff with jitter",
+   "body": "When a service fails, clients should wait longer between each retry: 1 second, 2, 4, 8 (exponential backoff). But if a thousand clients failed at the same moment, they'll all retry at the same moments too, and knock the service over again. Adding jitter, a random amount of waiting, spreads the retries out so the service can recover.",
+   "q": "What problem does jitter solve in retry backoff?",
+   "a": "It stops many clients from retrying in sync and overloading the service again.",
+   "edition": "2026-11-21-pm",
+   "order": 22,
+   "id": "2026-11-21-pm-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Shrink the first step until it's silly",
+   "body": "If a task won't start, make the first step smaller than feels respectable: open the document. Put on one shoe. Write the email's subject line only. Your brain resists the whole task; it rarely argues with a step that takes ten seconds. Often momentum carries you further, and if it doesn't, you still did the step.",
+   "edition": "2026-11-21-pm",
+   "order": 21,
+   "id": "2026-11-21-pm-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Qutub Minar, built in stages",
+   "body": "The Qutub Minar in Delhi was begun around 1199 by Qutb-ud-din Aibak, who finished only the first storey. His successor Iltutmish added more, and later repairs and additions came under Firuz Shah Tughlaq. Its fluted red-sandstone tower, about 73 metres tall, is carved with bands of calligraphy, and the site is a UNESCO World Heritage Site.",
+   "hook": "Wonder: can you spot where one builder's work ends and the next begins?",
+   "edition": "2026-11-21-pm",
+   "order": 20,
+   "id": "2026-11-21-pm-020"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A cloud can weigh hundreds of tonnes",
+   "body": "A fluffy cumulus cloud about a kilometre wide, tall and deep holds roughly half a gram of water droplets per cubic metre. Across a billion cubic metres, that adds up to about 500 tonnes of water. It floats because the droplets are tiny and spread out, and the rising, slightly warmer air around them holds them up.",
+   "q": "Roughly how much water is in a one-kilometre cumulus cloud?",
+   "a": "About 500 tonnes.",
+   "edition": "2026-11-21-pm",
+   "order": 19,
+   "id": "2026-11-21-pm-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Canva adds an AI off switch",
+   "body": "Canva now lets people switch off its AI tools, such as Magic Write and Magic Expand, with a single setting. It's a small, thoughtful choice: people who want a quieter, hands-on workspace can have one, and the tools stay a click away for anyone who wants them.",
+   "source": {
+    "name": "The Neuron, 20 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-20-2026/"
+   },
+   "edition": "2026-11-21-pm",
+   "order": 18,
+   "id": "2026-11-21-pm-018"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Try cutting your first paragraph",
+   "body": "Many drafts begin with the writer warming up: weather, background, a running start. Read your piece from the second paragraph. If nothing important is lost, the story really starts there. Keep any single detail from the cut paragraph that you'll miss, and drop it in later.",
+   "edition": "2026-11-21-pm",
+   "order": 17,
+   "id": "2026-11-21-pm-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Cold water and the Mpemba puzzle",
+   "body": "For centuries people have reported that hot water sometimes freezes faster than cold, now called the Mpemba effect after Erasto Mpemba, a Tanzanian student who asked about it in the 1960s. Careful experiments disagree: some see it under particular conditions, others find it disappears when the setup is controlled. It's a nice lesson in how a vivid story can outrun the evidence, and how science keeps the question open instead of guessing.",
+   "hook": "Wonder: what small detail of a freezer could make the hot cup win?",
+   "edition": "2026-11-21-pm",
+   "order": 16,
+   "id": "2026-11-21-pm-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Rooks belong behind passed pawns",
+   "body": "Tarrasch's old rule: put rooks behind passed pawns, yours or your opponent's. Behind your own pawn, the rook's reach grows with every step the pawn takes. Behind the enemy pawn, the rook keeps watch and gains scope as the pawn advances. A rook in front of a pawn gets more cramped the further the pawn goes.",
+   "q": "Why does a rook behind its own passed pawn get stronger as the pawn advances?",
+   "a": "Each step the pawn takes opens more squares for the rook to control.",
+   "edition": "2026-11-21-pm",
+   "order": 15,
+   "id": "2026-11-21-pm-015"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Dead-letter queues: a quiet shelf for stuck messages",
+   "body": "Sometimes a message in a queue can't be processed no matter how often you retry: bad data, a missing record. Instead of retrying forever and blocking the line, move it after a few attempts to a separate dead-letter queue. The main flow keeps moving, and someone can inspect the shelf later, fix the cause and replay the messages.",
+   "hook": "Wonder: how many retries should a message get before it's set aside?",
+   "edition": "2026-11-21-pm",
+   "order": 14,
+   "id": "2026-11-21-pm-014"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The Horsehead, shot from 2,000 km away",
+   "body": "Thursday's Astronomy Picture of the Day shows the Horsehead Nebula, a dark cloud of dust about five light-years tall and roughly 1,500 light-years away, outlined against red glowing hydrogen. Beside it glows the orange Flame Nebula, and the bright star near the centre is Alnitak, the eastern end of Orion's Belt. Mark E. Killion gathered nearly six hours of data with a telescope in Utah while running it from Illinois, more than 2,000 km away.",
+   "q": "Which bright star sits near the Horsehead and Flame nebulas?",
+   "a": "Alnitak, the easternmost star of Orion's Belt.",
+   "source": {
+    "name": "NASA APOD, 19 Nov 2026",
+    "url": "https://science.nasa.gov/image-article/apod-2026-november-19-the-horsehead-and-flame-nebulas/"
+   },
+   "edition": "2026-11-21-pm",
+   "order": 13,
+   "id": "2026-11-21-pm-013"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Wish for what happens",
+   "body": "Seek not that the things which happen should happen as you wish; but wish the things which happen to be as they are, and you will have a tranquil flow of life.",
+   "who": "Epictetus, Enchiridion 8 (tr. George Long)",
+   "edition": "2026-11-21-pm",
+   "order": 12,
+   "id": "2026-11-21-pm-012"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "A loom that read punched cards",
+   "body": "In 1804 Joseph-Marie Jacquard showed a loom in France that wove patterns from a chain of punched cards: a hole let a hook lift a thread, no hole kept it down. Change the cards and the same loom wove a new design. Charles Babbage later planned to feed his Analytical Engine with cards borrowed from this idea.",
+   "q": "What did the holes in Jacquard's cards control?",
+   "a": "Which threads were lifted, and so the woven pattern.",
+   "edition": "2026-11-21-pm",
+   "order": 11,
+   "id": "2026-11-21-pm-011"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The garland seller's last string",
+   "body": "At closing time she always had one jasmine string left, too short to sell. She'd tie it to the temple gate's iron bar and walk home. Nobody knew who took it each night. Years later a schoolteacher stopped at her stall and said, 'My mother wore it in her hair on the way back from the late shift. She said the gate smelled like someone was expecting her.' The seller measured out the next string a little shorter, on purpose.",
+   "edition": "2026-11-21-pm",
+   "order": 10,
+   "id": "2026-11-21-pm-010"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Open AI models in Wolof",
+   "body": "Orange has released five language models for Wolof, a language spoken by millions in Senegal and neighbouring countries. They're built on Alibaba's open Qwen3 models and are free for non-commercial use on Hugging Face. Small, focused releases like this help AI tools work in languages the big models often handle poorly.",
+   "hook": "Wonder: what does it take to teach a model a language with little text online?",
+   "source": {
+    "name": "The Neuron, 20 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-20-2026/"
+   },
+   "edition": "2026-11-21-pm",
+   "order": 9,
+   "id": "2026-11-21-pm-009"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Stop where it's easy to start again",
+   "body": "When you pause a task, don't stop at a clean finish. Stop in the middle of something obvious: half a sentence, a test you know how to fix, a form with the next field in view. Write one line saying what comes next. Tomorrow, the first step is already warm, and starting stops being the hard part.",
+   "edition": "2026-11-21-pm",
+   "order": 8,
+   "id": "2026-11-21-pm-008"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Oxford is older than the Aztec capital",
+   "body": "Teaching was already happening at Oxford by 1096. Tenochtitlan, the island city that became the Aztec capital, was founded around 1325, more than two centuries later. Our mental timelines often put 'ancient America' far behind 'medieval Europe', but they overlapped.",
+   "q": "Which came first: teaching at Oxford or the founding of Tenochtitlan?",
+   "a": "Oxford, by over two centuries (by 1096 vs about 1325).",
+   "edition": "2026-11-21-pm",
+   "order": 7,
+   "id": "2026-11-21-pm-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Thirumalai Nayak's palace in Madurai",
+   "body": "Thirumalai Nayak, the best-known ruler of the Madurai Nayak dynasty, built his palace around 1636. Its giant round pillars and arches blend South Indian temple tradition with Islamic architectural ideas. What visitors walk through today is only a part of the original complex; the great courtyard and the dance hall remain, and in the evenings the halls host a sound-and-light show.",
+   "hook": "Wonder: how large was the palace when all of it still stood?",
+   "edition": "2026-11-21-pm",
+   "order": 6,
+   "id": "2026-11-21-pm-006"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The Feynman check",
+   "body": "To test whether you understand something, explain it in plain words as if to a curious twelve-year-old, on paper. Where you reach for jargon or wave your hands, that's the gap. Go back to the source for just that piece, then explain it again. It's named after physicist Richard Feynman, who was famous for clear explanations.",
+   "q": "In the Feynman check, what signals a gap in your understanding?",
+   "a": "The spot where you fall back on jargon or vague hand-waving.",
+   "edition": "2026-11-21-pm",
+   "order": 5,
+   "id": "2026-11-21-pm-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Firouzja wins the Total Chess pilot in Budapest",
+   "body": "Alireza Firouzja won the Total Chess World Championship Tour Pilot in Budapest, which ran from 10 to 20 November. His final against Anish Giri went all the way to an Armageddon game, which Firouzja drew with Black to take the title. Giri finished second, Fabiano Caruana third and Maxime Vachier-Lagrave fourth. The event was a trial run for a 2027 tour that will crown the first FIDE World Combined Champion, mixing blitz, rapid and a faster classical game.",
+   "hook": "Wonder: how do you prepare for a match where the time control keeps changing?",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/alireza-firouzja-wins-total-chess-budapest-pilot/"
+   },
+   "edition": "2026-11-21-pm",
+   "order": 4,
+   "id": "2026-11-21-pm-004"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: computeIfAbsent for grouping",
+   "body": "Grouping words by first letter used to take an if-null-then-put dance. With Map.computeIfAbsent it's one line:\n\nmap.computeIfAbsent(word.charAt(0), k -> new ArrayList<>()).add(word);\n\nIf the key is missing, the lambda creates the list and stores it; either way you get the list back to add to. One caution: don't modify the same map from inside that lambda.",
+   "q": "What does computeIfAbsent return?",
+   "a": "The existing value, or the newly created one it just stored.",
+   "edition": "2026-11-21-pm",
+   "order": 3,
+   "id": "2026-11-21-pm-003"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A supernova at its brightest this week",
+   "body": "SN 2026ahvu, a Type Ia supernova found by the ATLAS survey on 2 November, sits in the barred spiral galaxy NGC 1433, about 50 million light-years away in the southern constellation Horologium. It was expected to peak between 18 and 23 November at roughly magnitude 10.5 to 12, within reach of a small or medium telescope from the southern sky. Because Type Ia explosions have a well-known true brightness, how bright this one looks helps astronomers measure distance and how fast the universe is expanding.",
+   "q": "Why are Type Ia supernovae useful for measuring cosmic distances?",
+   "a": "Their true brightness is well known, so how bright they look tells you how far away they are.",
+   "source": {
+    "name": "BBC Sky at Night Magazine",
+    "url": "https://www.skyatnightmagazine.com/news/supernova-sn-2026ahvu"
+   },
+   "edition": "2026-11-21-pm",
+   "order": 2,
+   "id": "2026-11-21-pm-002"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Saturday, the last bus stop",
+   "body": "The shutters come down one by one,\nthe tea stall rinses its last glass.\nA dog decides the bench is his.\n\nThe bus arrives half-empty, kind,\nits lit windows a row of small rooms\ncarrying the week home.",
+   "edition": "2026-11-21-pm",
+   "order": 1,
+   "id": "2026-11-21-pm-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "ChatGPT shows your words as you speak them",
+   "body": "OpenAI has started rolling out Live Dictation in ChatGPT. As you talk, the transcript appears on screen, and you can fix a word before you send it rather than after. The update also drops the old ten-minute cap on a single recording, so a long, rambling thought can now be captured in one go.",
+   "hook": "Wonder: do you think differently when you can see your words appear?",
+   "source": {
+    "name": "The Neuron, 20 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-20-2026/"
+   },
+   "edition": "2026-11-21-pm",
+   "order": 0,
+   "id": "2026-11-21-pm-000"
+  },
   {
    "topic": "ai",
    "kind": "idea",
@@ -9711,345 +10049,6 @@
    "edition": "2026-11-07-am",
    "order": 19,
    "id": "2026-11-07-am-019"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Ask a decade of satellite photos a question",
-   "body": "Planet introduced an AI app that lets people search around ten years of its satellite imagery in plain language, rather than by coordinates and dates alone. Think 'new solar farms near this river' instead of hunting through tiles by hand.",
-   "hook": "Wonder: what slow change near your own town would you want to watch from above?",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
-   },
-   "edition": "2026-11-07-am",
-   "order": 18,
-   "id": "2026-11-07-am-018"
-  },
-  {
-   "topic": "mind",
-   "kind": "tip",
-   "title": "Learn an idea through three examples",
-   "body": "An abstract idea sticks better when you see it in several different concrete cases, then notice what they share. One example teaches the example; three varied ones teach the idea. When you learn something new today, hunt for two more places it shows up.",
-   "edition": "2026-11-07-am",
-   "order": 17,
-   "id": "2026-11-07-am-017"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Crows remember faces",
-   "body": "Researchers at the University of Washington wore a particular mask while briefly catching and banding crows. For years afterwards, crows on campus scolded anyone wearing that mask, and even crows that never saw the original catching joined in. They seem to learn faces, and pass the lesson along.",
-   "q": "What did the University of Washington mask study show about crows?",
-   "a": "They recognise individual human faces for years and can learn from other crows which faces to watch.",
-   "edition": "2026-11-07-am",
-   "order": 16,
-   "id": "2026-11-07-am-016"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Nakamura opens with eight straight wins",
-   "body": "In Thursday's three 3+0 blitz events on Chess.com, Hikaru Nakamura won the first tournament with 10/11 after winning his first eight games. Parham Maghsoodloo took the second, and Sina Movahed won the third for his first title since March.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://chess.com/news/view/nakamura-maghsoodloo-movahed-3-0-thursday-11-5-2026"
-   },
-   "edition": "2026-11-07-am",
-   "order": 15,
-   "id": "2026-11-07-am-015"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java 21: switch that understands shapes",
-   "body": "With pattern matching for switch (final in Java 21), you can switch on a type and bind it in one step: case Circle c -> Math.PI * c.r() * c.r(); case Square s -> s.side() * s.side();. Pair it with a sealed interface and the compiler can tell you when you've forgotten a case.",
-   "hook": "Wonder: what bug disappears when the compiler checks that every case is covered?",
-   "edition": "2026-11-07-am",
-   "order": 14,
-   "id": "2026-11-07-am-014"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Let dialogue sidestep",
-   "body": "Real people rarely answer the question they were asked. 'Did you get the job?' 'Want some tea?' The dodge tells the reader more than a straight answer could. Try letting one character in your next scene answer a different question than the one asked.",
-   "edition": "2026-11-07-am",
-   "order": 13,
-   "id": "2026-11-07-am-013"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "White dwarfs that may stretch a famous limit",
-   "body": "A white dwarf normally can't be heavier than about 1.4 Suns, the Chandrasekhar limit, or it can no longer hold itself up. New simulations suggest that very strong magnetic fields might help some white dwarfs carry a little more mass than that. It's a model result for now, waiting for observations to test it.",
-   "q": "Roughly what is the Chandrasekhar limit for a white dwarf?",
-   "a": "About 1.4 times the Sun's mass.",
-   "source": {
-    "name": "ScienceDaily",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261102202835.htm"
-   },
-   "edition": "2026-11-07-am",
-   "order": 12,
-   "id": "2026-11-07-am-012"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Seneca, Letters to Lucilius 2 (tr. Gummere)",
-   "body": "Everywhere means nowhere.",
-   "edition": "2026-11-07-am",
-   "order": 11,
-   "id": "2026-11-07-am-011"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Spacewar! (1962)",
-   "body": "At MIT in 1962, Steve Russell and friends wrote Spacewar! on a PDP-1: two little ships circling a star whose gravity pulled on them. It's one of the earliest video games, and because its code was shared freely, copies spread to computer labs across the country.",
-   "q": "On what computer was Spacewar! first written?",
-   "a": "The DEC PDP-1, at MIT.",
-   "edition": "2026-11-07-am",
-   "order": 10,
-   "id": "2026-11-07-am-010"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Perplexity introduces always-on 'Teammates'",
-   "body": "Perplexity launched Teammates, agents meant to keep working in the background on ongoing work tasks instead of answering one question and stopping. They start with Max subscribers on the web. The interesting shift: agents designed as colleagues with standing jobs, not one-off chats.",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
-   },
-   "edition": "2026-11-07-am",
-   "order": 9,
-   "id": "2026-11-07-am-009"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Thanjavur's palace library",
-   "body": "The Saraswati Mahal Library in Thanjavur grew from a royal collection of the Nayak kings and was greatly expanded by the Maratha ruler Serfoji II in the early 1800s. It holds thousands of palm-leaf and paper manuscripts in Tamil, Sanskrit, Marathi and other languages, and is counted among the oldest libraries in Asia.",
-   "q": "Which ruler greatly expanded Thanjavur's Saraswati Mahal Library in the early 1800s?",
-   "a": "Serfoji II.",
-   "edition": "2026-11-07-am",
-   "order": 8,
-   "id": "2026-11-07-am-008"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Start in the middle",
-   "body": "If the beginning of a task is the wall, skip it. Write the second paragraph first, fix the easy bug before the hard one, clean the one shelf you can see. Momentum built anywhere tends to carry you back to the start.",
-   "edition": "2026-11-07-am",
-   "order": 7,
-   "id": "2026-11-07-am-007"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "You can't see the Great Wall from orbit",
-   "body": "A popular myth says the Great Wall of China is visible to the naked eye from space. It's very long but only a few metres wide and close in colour to the land around it. Astronauts in low Earth orbit, including China's first, Yang Liwei, have said they couldn't pick it out unaided.",
-   "hook": "Wonder: what human-made things can astronauts see? (Hint: city lights at night.)",
-   "edition": "2026-11-07-am",
-   "order": 6,
-   "id": "2026-11-07-am-006"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Quorums: R + W > N",
-   "body": "Store each item on N replicas. Wait for W of them to confirm a write, and ask R of them on a read. If R + W > N, every read group overlaps every write group in at least one replica, so a read always touches someone who saw the latest write. N=3, W=2, R=2 is the classic, gentle choice.",
-   "q": "With N=3 replicas, why do W=2 and R=2 give you fresh reads?",
-   "a": "Because 2 + 2 > 3, any read set overlaps any write set in at least one replica that has the latest value.",
-   "edition": "2026-11-07-am",
-   "order": 5,
-   "id": "2026-11-07-am-005"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The curse of knowledge",
-   "body": "In a 1990 Stanford study, people tapped out the rhythm of well-known songs and guessed listeners would name about half. Listeners got roughly 1 in 40. The tappers could hear the melody in their heads; the listeners heard only knocks. Once you know something, it's hard to remember what not knowing felt like, so explain one step slower than feels necessary.",
-   "q": "What is the 'curse of knowledge'?",
-   "a": "Once you know something, it becomes hard to imagine not knowing it, so you overestimate how clear your explanation is.",
-   "edition": "2026-11-07-am",
-   "order": 4,
-   "id": "2026-11-07-am-004"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Chess returns to the Esports World Cup in 2027",
-   "body": "Chess.com confirmed chess will be back at the Esports World Cup next summer in Riyadh, where Magnus Carlsen will try for a third title after winning in 2025 and 2026. Qualification runs through the revamped Champions Chess Tour, with places also handed out via a points leaderboard built from Titled Tuesday, the Speed Chess Championship and the Chess.com Open.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/chess-returns-esports-world-cup-2027"
-   },
-   "edition": "2026-11-07-am",
-   "order": 3,
-   "id": "2026-11-07-am-003"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Ironing",
-   "body": "Sunday, and the iron sighs\nacross a cotton shirt.\nEach crease I press away\nis a small week ending:\nthe bus, the rain, the long meeting,\nall folded flat and warm,\nhung on the door\nlike a promise to try again.",
-   "edition": "2026-11-07-am",
-   "order": 2,
-   "id": "2026-11-07-am-002"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Airbnb plans a travel agent for 2027",
-   "body": "Airbnb's Brian Chesky says the company plans to launch an AI travel agent in the first half of 2027. The idea is a helper that can sort out bookings and smooth over small problems during a stay, rather than just a search box with a chat window.",
-   "q": "When does Airbnb plan to launch its AI travel agent?",
-   "a": "In the first half of 2027.",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
-   },
-   "edition": "2026-11-07-am",
-   "order": 1,
-   "id": "2026-11-07-am-001"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A spacewalk with Earth as the backdrop",
-   "body": "On 29 October, Canadian astronaut Joshua Kutryk paused mid-spacewalk for a photo with the blue Earth behind him, about 430 km above the South Atlantic. It was Canada's first spacewalk since 2019; he and NASA's Anil Menon were fitting one of the station's new roll-out solar arrays. Once all eight new arrays are in, NASA expects the station to have roughly 30% more power.",
-   "hook": "Wonder: how do you roll out a solar panel like a yoga mat in zero gravity?",
-   "source": {
-    "name": "Space.com",
-    "url": "https://www.space.com/space-exploration/human-spaceflight/earth-photobombs-spacewalking-canadian-astronaut-space-photo-of-the-day-for-nov-5-2026"
-   },
-   "edition": "2026-11-07-am",
-   "order": 0,
-   "id": "2026-11-07-am-000"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "A parliament of owls",
-   "body": "A group of owls is often called a parliament—a name that comes from old English writing that pictured owls as wise. In real life most owls live alone or in pairs, so you rarely see a full parliament.",
-   "edition": "2026-11-06-pm",
-   "order": 28,
-   "id": "2026-11-06-pm-028"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Thirukkural 151 (own rendering)",
-   "body": "The earth holds up even those who dig into it. Bear with those who scorn you in the same way.",
-   "edition": "2026-11-06-pm",
-   "order": 27,
-   "id": "2026-11-06-pm-027"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Close your eyes and try: Who designed the first emoji set? What does a wood frog fill its cells with? Which constellation owns Alpheratz? Answers are on the cards above—check after you guess.",
-   "edition": "2026-11-06-pm",
-   "order": 26,
-   "id": "2026-11-06-pm-026"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Bookmark",
-   "body": "I left the story on page ninety\nwith a bus ticket as a hand to hold.\nThe people inside kept still all week,\nmid-sentence, mid-step,\npolite as guests,\nwaiting for me\nto come back and let them breathe.",
-   "edition": "2026-11-06-pm",
-   "order": 25,
-   "id": "2026-11-06-pm-025"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java's var is still static typing",
-   "body": "Since Java 10, var lets the compiler infer a local variable's type: var names = new ArrayList<String>(); The type is fixed at compile time, exactly as if you'd written it out. Use it where the right side already says the type; spell it out where it doesn't.",
-   "q": "Does `var` in Java make a variable dynamically typed?",
-   "a": "No. The type is inferred once at compile time and stays fixed.",
-   "edition": "2026-11-06-pm",
-   "order": 24,
-   "id": "2026-11-06-pm-024"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "An epic named after an anklet",
-   "body": "Silappatikaram, attributed to Ilango Adigal, is one of the great epics of Tamil literature. Its story turns on a single anklet, and it moves through three kingdoms—Chola, Pandya and Chera—giving a vivid picture of early Tamil city life, music and trade.",
-   "hook": "Wonder: why might a poet tie a whole epic to one small object?",
-   "edition": "2026-11-06-pm",
-   "order": 23,
-   "id": "2026-11-06-pm-023"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Give each task a start sound",
-   "body": "Pick one song or playlist that only plays when you start a certain kind of work. After a few days, pressing play becomes the cue, and your brain starts sliding into the task before you've argued with it.",
-   "edition": "2026-11-06-pm",
-   "order": 22,
-   "id": "2026-11-06-pm-022"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The first emoji were 12 by 12 pixels",
-   "body": "In 1999 Shigetaka Kurita designed a set of 176 tiny pictures for NTT Docomo's i-mode phones in Japan. Each fit in a 12×12 grid. The set is now in the collection of the Museum of Modern Art in New York.",
-   "q": "How many emoji were in Shigetaka Kurita's 1999 set?",
-   "a": "176.",
-   "edition": "2026-11-06-pm",
-   "order": 21,
-   "id": "2026-11-06-pm-021"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "The Moon hid Jupiter for a while",
-   "body": "On 3 November the Moon slid in front of Jupiter as seen from parts of Earth, an occultation that skywatchers photographed as the bright planet vanished behind the lunar edge and reappeared. The two meet again in the sky near the end of the month.",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/todays-image/moon-and-jupiter-hide-and-seek-occultation-nov-2026/"
-   },
-   "edition": "2026-11-06-pm",
-   "order": 20,
-   "id": "2026-11-06-pm-020"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Give the scene a clock",
-   "body": "A deadline makes ordinary moments lean forward: the train leaves at 6:40, the milk is about to boil over, the shop shutter is coming down. You don't need danger—just a small clock the reader can hear ticking.",
-   "edition": "2026-11-06-pm",
-   "order": 19,
-   "id": "2026-11-06-pm-019"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "METR: Anthropic models improving about twice as fast",
-   "body": "The evaluation nonprofit METR published an estimate that the pace at which Anthropic's models gain the ability to complete certain long tasks is roughly double what it was a year ago. It's a measurement of specific tasks, not a claim that everything got twice as good.",
-   "source": {
-    "name": "note.com AI news roundup (citing AP)",
-    "url": "https://note.com/tt_ap/n/n460166727834?hl=en"
-   },
-   "edition": "2026-11-06-pm",
-   "order": 18,
-   "id": "2026-11-06-pm-018"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Days used to be shorter",
-   "body": "Earth's spin is very slowly braking, mostly because of tides raised by the Moon. Hundreds of millions of years ago a day was only around 21–22 hours long, so a year had more than 400 sunrises.",
-   "hook": "Wonder: how do fossil corals record the number of days in an ancient year?",
-   "edition": "2026-11-06-pm",
-   "order": 17,
-   "id": "2026-11-06-pm-017"
   }
  ]
 }
