@@ -1,6 +1,343 @@
 {
- "updated": "2026-11-22T02:13:23+00:00",
+ "updated": "2026-11-22T17:14:23+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these before scrolling back up.",
+   "q": "1) Walking helped which kind of thinking in the Stanford study? 2) Which Java method makes an unmodifiable snapshot of a list? 3) What's a zwischenzug?",
+   "a": "1) Creative idea generation (not single-answer reasoning). 2) List.copyOf. 3) An in-between move, often a check or threat, played before an expected recapture.",
+   "edition": "2026-11-22-pm",
+   "order": 30,
+   "id": "2026-11-22-pm-030"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Alphabet: alpha, then beta",
+   "body": "The word 'alphabet' comes, via Latin, from the first two letters of the Greek alphabet, alpha and beta. Those Greek letters themselves descend from Phoenician letters, aleph and beth.",
+   "hook": "Wonder: what would we call it if it were named after the Tamil letters a and ā?",
+   "edition": "2026-11-22-pm",
+   "order": 29,
+   "id": "2026-11-22-pm-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the street sweeper's broom",
+   "body": "Long strokes under the streetlight,\nthe day's leaves gathered\ninto one soft hill.\n\nNo one thanks the broom.\nIt doesn't mind.\nMorning will walk\non what it smoothed.",
+   "edition": "2026-11-22-pm",
+   "order": 28,
+   "id": "2026-11-22-pm-028"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "Even when fate will not grant the goal, effort still pays its wages for the labour of the body.",
+   "who": "Thirukkural 619 (own rendering)",
+   "edition": "2026-11-22-pm",
+   "order": 27,
+   "id": "2026-11-22-pm-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 21: record patterns in switch",
+   "body": "Java 21 lets a switch take a record apart as it matches: case Circle(double r) -> Math.PI * r * r; case Rect(double w, double h) -> w * h. Combined with a sealed interface, the compiler checks every case is covered, so no default is needed — add a new shape and the switch won't compile until you handle it.",
+   "q": "Why can a switch over a sealed interface of records skip the default branch?",
+   "a": "The compiler knows every permitted subtype, so it can check the switch is exhaustive.",
+   "edition": "2026-11-22-pm",
+   "order": 26,
+   "id": "2026-11-22-pm-026"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Azure Monitor traces agents end to end",
+   "body": "Microsoft previewed unified agent observability in Azure Monitor this week: Application Insights can follow one request across multiple agents, models and tools. It builds on OpenTelemetry trace context and the OpenTelemetry semantic conventions for generative AI, so the traces aren't tied to one vendor's framework.",
+   "source": {
+    "name": "AI Agent Store weekly news",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-22-pm",
+   "order": 25,
+   "id": "2026-11-22-pm-025"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Footprints that could last ages",
+   "body": "The Moon has no wind or rain, so the Apollo astronauts' bootprints have barely changed since they were made. They do wear down very slowly, as micrometeorites and solar wind gradually churn the top layer of dust, but they should stay recognisable for a very long time — likely millions of years.",
+   "q": "Why do footprints last so long on the Moon?",
+   "a": "No wind or water to erode them; only slow churning by micrometeorites.",
+   "edition": "2026-11-22-pm",
+   "order": 24,
+   "id": "2026-11-22-pm-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Unicode 1.0, 1991",
+   "body": "Before Unicode, computers used hundreds of incompatible character sets, and text in Tamil or Japanese could turn to gibberish when moved between systems. Unicode 1.0 was published in 1991 with the aim of giving every character in every script one number. Today it covers well over a hundred scripts, Tamil among them.",
+   "hook": "Wonder: how did people email in Tamil before there was one agreed number for each letter?",
+   "edition": "2026-11-22-pm",
+   "order": 23,
+   "id": "2026-11-22-pm-023"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Zwischenzug: the in-between move",
+   "body": "A zwischenzug ('intermediate move') is a move inserted where your opponent expects an automatic recapture. Before taking back, you play a check or a bigger threat they must answer first — then you recapture on better terms. Before any 'forced' recapture, ask: is there something even more forcing first?",
+   "q": "What is a zwischenzug?",
+   "a": "An unexpected in-between move, usually a check or threat, played before an expected recapture.",
+   "edition": "2026-11-22-pm",
+   "order": 22,
+   "id": "2026-11-22-pm-022"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Sea stars run on seawater",
+   "body": "Sea stars have no blood in the way we do. Instead they pump filtered seawater through a network of canals called the water vascular system, which also works the hundreds of tiny tube feet they walk and grip with.",
+   "q": "What fluid moves through a sea star's water vascular system?",
+   "a": "Filtered seawater.",
+   "edition": "2026-11-22-pm",
+   "order": 21,
+   "id": "2026-11-22-pm-021"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "One inbox for loose notes",
+   "body": "Scattered capture — three notebooks, two apps, the backs of receipts — means the note exists but can't be found. Pick one place where every stray thought lands first, and sort it once a day. The rule is only 'capture here'; it doesn't have to be tidy.",
+   "q": "What's the one rule of a single capture inbox?",
+   "a": "Everything lands there first; sorting can wait until a set time.",
+   "edition": "2026-11-22-pm",
+   "order": 20,
+   "id": "2026-11-22-pm-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Tell it from the quieter character",
+   "body": "If a scene feels flat, try retelling it through the person who says least. The talker explains; the quiet one notices — the hand that hesitates, the cup left full. Their restraint gives the reader room to feel things for themselves.",
+   "edition": "2026-11-22-pm",
+   "order": 19,
+   "id": "2026-11-22-pm-019"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "A dancing Shiva at CERN",
+   "body": "Outside a building at CERN, the particle-physics lab near Geneva, stands a two-metre statue of Nataraja, Shiva as the cosmic dancer. India gifted it in 2004 to mark its long association with the lab. A nearby plaque connects the dance of creation and dissolution with the dance of subatomic particles that physicists study.",
+   "hook": "Wonder: why might physicists feel at home with an image of endless creation and dissolution?",
+   "edition": "2026-11-22-pm",
+   "order": 18,
+   "id": "2026-11-22-pm-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask for the test that would have caught it",
+   "body": "After an agent fixes a bug, ask it for one more thing: a small test that fails on the old code and passes on the new. It proves the fix is real, guards against the bug returning, and quietly checks that the agent understood the cause rather than the symptom.",
+   "edition": "2026-11-22-pm",
+   "order": 17,
+   "id": "2026-11-22-pm-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Abstract ideas need a concrete hook",
+   "body": "Learning research consistently finds that concrete examples help abstract ideas stick — and that two or three varied examples beat one, because they show what the examples have in common and what's just incidental. When you learn a principle, pause and write your own example from your own world.",
+   "hook": "Wonder: what's a concrete example of 'backpressure' from your kitchen or your commute?",
+   "edition": "2026-11-22-pm",
+   "order": 16,
+   "id": "2026-11-22-pm-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Competing consumers vs fan-out",
+   "body": "Two queue shapes look alike but do opposite jobs. Competing consumers: many workers read from one queue and each message goes to exactly one of them — good for spreading work. Fan-out (publish/subscribe): each subscriber gets its own copy of every message — good when several services must react to the same event. Ask: should this message be handled once, or seen by everyone?",
+   "q": "You want an 'order placed' event to reach billing, email and analytics. Competing consumers or fan-out?",
+   "a": "Fan-out: each service needs its own copy. Within each service, several workers can then compete on that service's queue.",
+   "edition": "2026-11-22-pm",
+   "order": 15,
+   "id": "2026-11-22-pm-015"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "body": "How far that little candle throws his beams!\nSo shines a good deed in a naughty world.",
+   "who": "William Shakespeare, The Merchant of Venice (V.i)",
+   "edition": "2026-11-22-pm",
+   "order": 14,
+   "id": "2026-11-22-pm-014"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Bekbol and Borisova take the Asian Amateur blitz titles",
+   "body": "The Asian Amateur Championships opened in Bangkok with blitz. Kazakhstan's Ibrahim Bekbol won the open blitz with 8/9, half a point ahead of Rolly Parondo of the Philippines and India's R Sham. In the women's event FM Ekaterina Borisova scored a perfect 9/9. Rapid starts on 22 November and the classical event the day after.",
+   "source": {
+    "name": "FIDE",
+    "url": "https://www.fide.com/asian-amateur-chess-championships-2026-bekbol-and-borisova-claim-blitz-titles-in-bangkok/"
+   },
+   "edition": "2026-11-22-pm",
+   "order": 13,
+   "id": "2026-11-22-pm-013"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Where 'hello, world' came from",
+   "body": "The phrase 'hello, world' as a first program appears in Brian Kernighan's 1972 'A Tutorial Introduction to the Language B' at Bell Labs. It became famous through The C Programming Language (1978) by Kernighan and Dennis Ritchie, and has been the traditional first program in countless languages ever since.",
+   "q": "In which language's tutorial did 'hello, world' first appear?",
+   "a": "B, in Brian Kernighan's 1972 tutorial at Bell Labs.",
+   "edition": "2026-11-22-pm",
+   "order": 12,
+   "id": "2026-11-22-pm-012"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "The Sun is almost everything",
+   "body": "The Sun holds about 99.8% of all the mass in the solar system. Jupiter takes most of what's left; Earth, the Moon, the other planets, the asteroids and comets together share crumbs. Yet the planets carry most of the solar system's angular momentum — the Sun's spin accounts for only a few percent of it.",
+   "hook": "Wonder: why would the heaviest thing spin so lazily compared with what orbits it?",
+   "edition": "2026-11-22-pm",
+   "order": 11,
+   "id": "2026-11-22-pm-011"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The flower-market scale",
+   "body": "Every morning Selvi weighed the marigolds on a brass scale older than her stall. Customers trusted it more than the digital one next door, though it was slower. When her nephew offered to replace it, she let him try weighing a single flower. The needle didn't move. 'It doesn't bother with one,' she said. 'Neither do I. A garland is a hundred small things agreeing.' He left the scale where it was.",
+   "edition": "2026-11-22-pm",
+   "order": 10,
+   "id": "2026-11-22-pm-010"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "The Great Wall isn't visible from the Moon",
+   "body": "A popular myth says the Great Wall of China is the only human-made thing visible from the Moon. It isn't — from the Moon, about 384,000 km away, no individual structure can be seen with the naked eye. Even from low Earth orbit the wall is very hard to pick out, because it is narrow and close in colour to the land around it.",
+   "q": "Can you see the Great Wall of China from the Moon with the naked eye?",
+   "a": "No. No single human structure is visible from that distance.",
+   "edition": "2026-11-22-pm",
+   "order": 9,
+   "id": "2026-11-22-pm-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "OpenAI tests 'Dots', agents that keep going between chats",
+   "body": "OpenAI has begun a limited test of Dots: persistent agents that keep running between conversations and can connect to apps. According to this weekly roundup, a small group of ChatGPT Plus users has access, with eligible Business workspaces also getting it.",
+   "hook": "Wonder: what's one small chore you'd trust a patient, always-on helper with first?",
+   "source": {
+    "name": "AI Agent Store weekly news",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-22-pm",
+   "order": 8,
+   "id": "2026-11-22-pm-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Gingee, a fort on three hills",
+   "body": "Gingee (Senji) Fort in Tamil Nadu's Villupuram district spreads across three hills — Rajagiri, Krishnagiri and Chandrayandurg — joined by walls into one large stronghold. Much of what stands today was built up under the Gingee Nayaks in the 16th century. Climbing Rajagiri still means passing through a series of gateways stacked up the rock.",
+   "q": "Name the three hills that make up Gingee Fort.",
+   "a": "Rajagiri, Krishnagiri and Chandrayandurg.",
+   "edition": "2026-11-22-pm",
+   "order": 7,
+   "id": "2026-11-22-pm-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Leave yourself a breadcrumb",
+   "body": "When something interrupts you mid-task, take ten seconds to write one line before you switch: what you were doing and the very next step ('checking row 40 — next: fix the date format'). Coming back then costs a glance instead of a fresh climb. A sticky note on the laptop lid works fine.",
+   "edition": "2026-11-22-pm",
+   "order": 6,
+   "id": "2026-11-22-pm-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 10: List.copyOf for a safe snapshot",
+   "body": "List.copyOf(list) returns an unmodifiable copy. If the input is already an unmodifiable list from List.of or copyOf, it may return the same object instead of copying. Unlike Collections.unmodifiableList, later changes to the original won't show through, and null elements are rejected with a NullPointerException. Handy when a record or constructor stores a list it was handed.",
+   "q": "How does List.copyOf differ from Collections.unmodifiableList?",
+   "a": "copyOf makes a real snapshot (changes to the original don't show through) and rejects nulls; unmodifiableList is just a read-only view of the original.",
+   "edition": "2026-11-22-pm",
+   "order": 5,
+   "id": "2026-11-22-pm-005"
+  },
+  {
+   "topic": "mind",
+   "kind": "fact",
+   "title": "A walk loosens ideas",
+   "body": "In 2014 Stanford researchers Marily Oppezzo and Daniel Schwartz found that people came up with more creative uses for everyday objects while walking — even on a treadmill facing a blank wall — than while sitting. The boost lingered a little after they sat down again. It helped idea generation, not careful single-answer reasoning, so walk to brainstorm, then sit to decide.",
+   "hook": "Wonder: which stuck problem would you take for a ten-minute walk today?",
+   "edition": "2026-11-22-pm",
+   "order": 4,
+   "id": "2026-11-22-pm-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Sunday, the late temple bell",
+   "body": "The bell rings once\nafter the lamps are lit,\nlate, as if it had\nsomething small to add.\n\nThe street pauses\nthe way a sentence does\nat a comma —\nthen goes on, gentler.",
+   "edition": "2026-11-22-pm",
+   "order": 3,
+   "id": "2026-11-22-pm-003"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Nakamura's 75th Bullet Brawl",
+   "body": "Hikaru Nakamura won Chess.com's Bullet Brawl on Saturday, 21 November, with 183 points — his 75th title in the series. Arjun Erigaisi was second on 168, IM Yoseph Taher third and Jeffery Xiong fourth.",
+   "q": "Who finished second behind Nakamura in the 21 November Bullet Brawl?",
+   "a": "Arjun Erigaisi, with 168 points.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/hikaru-nakamura-wins-bullet-brawl-nov-21-2026"
+   },
+   "edition": "2026-11-22-pm",
+   "order": 2,
+   "id": "2026-11-22-pm-002"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "BepiColombo's slow arrival at Mercury",
+   "body": "After eight years and nine planetary flybys (one of Earth, two of Venus, six of Mercury), the European-Japanese BepiColombo stack was set to slip into Mercury orbit on 21 November. Arrival is a season, not a moment: the Japanese orbiter Mio is due to separate around 9 December, a sunshield is dropped on 16 December, Europe's orbiter reaches its final polar orbit in March, and science begins in April 2027.",
+   "q": "When is BepiColombo's science phase scheduled to begin?",
+   "a": "April 2027, after months of separations and orbit-shaping manoeuvres.",
+   "source": {
+    "name": "Space.com",
+    "url": "https://www.space.com/space-exploration/missions/a-new-mission-starting-today-8-years-after-launch-bepicolombo-begins-mercury-arrival"
+   },
+   "edition": "2026-11-22-pm",
+   "order": 1,
+   "id": "2026-11-22-pm-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "LangSmith's Tool Gateway: one front door for an agent's tools",
+   "body": "LangChain put a Tool Gateway into public beta on 19 November. Instead of every agent holding its own keys, tool calls go through one managed layer that handles credentials, who the agent is acting as (the user or itself), deny and approval rules, and a trace of each call. It ships with built-in connectors such as Google, Microsoft, Salesforce, GitHub and Linear, and you can add any MCP server by URL.",
+   "hook": "Wonder: if every tool call passes one gate, what becomes easy to answer that used to be hard?",
+   "source": {
+    "name": "LangChain blog",
+    "url": "https://langchain.com/blog/langsmith-tool-gateway"
+   },
+   "edition": "2026-11-22-pm",
+   "order": 0,
+   "id": "2026-11-22-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9703,356 +10040,6 @@
    "edition": "2026-11-08-am",
    "order": 19,
    "id": "2026-11-08-am-019"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "A statue measured in couplets",
-   "body": "The Thiruvalluvar statue at Kanyakumari, unveiled on 1 January 2000, is 133 feet tall, one foot for each of the 133 chapters of the Thirukkural. It stands on a 38-foot pedestal that represents the 38 chapters on virtue.",
-   "q": "Why is the Thiruvalluvar statue 133 feet tall?",
-   "a": "One foot for each of the Thirukkural's 133 chapters.",
-   "edition": "2026-11-08-am",
-   "order": 18,
-   "id": "2026-11-08-am-018"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "How researchers use Claude",
-   "body": "Anthropic studied 207,049 research sessions with Claude and Claude Code. Use was heaviest in computer science, mathematics and statistics, mostly for analysing data and writing. The company suggests research output in some fields could grow considerably as these tools spread.",
-   "source": {
-    "name": "Anthropic",
-    "url": "https://www.anthropic.com/research/how-researchers-use-claude"
-   },
-   "edition": "2026-11-08-am",
-   "order": 17,
-   "id": "2026-11-08-am-017"
-  },
-  {
-   "topic": "mind",
-   "kind": "tip",
-   "title": "Practise the way you'll perform",
-   "body": "Memory works best when practice resembles the moment you'll need it, an idea researchers call transfer-appropriate processing. If you'll need to explain a design aloud, rehearse by explaining it aloud, not just by re-reading notes.",
-   "hook": "Wonder: does your practice look like your real test?",
-   "edition": "2026-11-08-am",
-   "order": 16,
-   "id": "2026-11-08-am-016"
-  },
-  {
-   "topic": "craft",
-   "kind": "tip",
-   "title": "Java: HashMap makes no promise about order",
-   "body": "Iterating a HashMap can return keys in any order, and that order can change as the map grows. If you need insertion order, use LinkedHashMap; if you need sorted keys, use TreeMap. Tests that pass 'by luck' on HashMap order are a classic slow-burning bug.",
-   "q": "Which Java map keeps keys in insertion order?",
-   "a": "LinkedHashMap.",
-   "edition": "2026-11-08-am",
-   "order": 15,
-   "id": "2026-11-08-am-015"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Pin or skewer?",
-   "body": "Both are attacks along a line. In a pin, the piece in front is the less valuable one, and it can't move without exposing something bigger behind it. In a skewer, the valuable piece is in front; it has to step aside, and the piece behind it falls.",
-   "q": "In a skewer, is the more valuable piece in front or behind?",
-   "a": "In front: it must move, exposing the piece behind it.",
-   "edition": "2026-11-08-am",
-   "order": 14,
-   "id": "2026-11-08-am-014"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The last seat on the ferry",
-   "body": "She took the last seat on the ferry, next to a man holding a potted lemon tree. Halfway across, the wind turned and the boat rocked. Without a word, they each put a hand on the pot. On the far side he nodded, she nodded, and they walked off in different directions. She smelled lemon leaves on her fingers all afternoon.",
-   "edition": "2026-11-08-am",
-   "order": 13,
-   "id": "2026-11-08-am-013"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A gas that hints Mars may not be fully asleep",
-   "body": "Scientists report traces of hydrogen chloride in the Martian air, a gas that on Earth often comes from volcanoes. It could hint at recent volcanic activity on Mars, though the researchers are careful to call it a maybe.",
-   "hook": "Wonder: how do you take the pulse of a planet from orbit?",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/space/active-volcanoes-on-mars-hydrogen-chloride-trace-gas-orbiter/"
-   },
-   "edition": "2026-11-08-am",
-   "order": 12,
-   "id": "2026-11-08-am-012"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Grapes take their time",
-   "who": "Epictetus, Discourses",
-   "body": "No great thing is created suddenly, any more than a bunch of grapes or a fig.",
-   "edition": "2026-11-08-am",
-   "order": 11,
-   "id": "2026-11-08-am-011"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Sea otters have pockets",
-   "body": "Sea otters have a loose pouch of skin under each foreleg. They use it to carry food up from the sea floor, and often a favourite rock they use to crack open shells.",
-   "hook": "Wonder: what would you keep in your own built-in pocket?",
-   "edition": "2026-11-08-am",
-   "order": 10,
-   "id": "2026-11-08-am-010"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The first .com",
-   "body": "The first .com domain name ever registered was symbolics.com, on 15 March 1985, by Symbolics, a company that made computers for running the Lisp language. For a while, registering a domain was a quiet, almost clerical act.",
-   "q": "What was the first .com domain registered?",
-   "a": "symbolics.com, in March 1985.",
-   "edition": "2026-11-08-am",
-   "order": 9,
-   "id": "2026-11-08-am-009"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Ai2 teaches robot arms with toy blocks",
-   "body": "The Allen Institute for AI released ToyBlocks, an open robot-arm simulator with 85,336 automatically generated demonstrations, about 1,600 hours of practice. Policies trained only in simulation did well on simple skills, though moving blocks to new places still trips them up. The training code and weights are open.",
-   "q": "Roughly how many hours of demonstrations come with Ai2's ToyBlocks?",
-   "a": "About 1,600 hours (85,336 demonstrations).",
-   "source": {
-    "name": "The Spokesman-Review",
-    "url": "https://www.spokesman.com/stories/2026/nov/06/why-a-seattle-ai-lab-is-making-robots-play-with-to/"
-   },
-   "edition": "2026-11-08-am",
-   "order": 8,
-   "id": "2026-11-08-am-008"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Ellora's Kailasa: a temple carved from the top down",
-   "body": "Cave 16 at Ellora, the Kailasa temple, was cut out of a single basalt hillside in the 8th century, traditionally credited to the Rashtrakuta king Krishna I. The builders worked downward from the top of the rock, removing stone to reveal courtyards, shrines and towers, so there was no room for a misplaced cut.",
-   "hook": "Wonder: how do you plan a building you can only subtract from?",
-   "edition": "2026-11-08-am",
-   "order": 7,
-   "id": "2026-11-08-am-007"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Snowflake IDs: unique and roughly in time order",
-   "body": "Twitter's Snowflake scheme builds a 64-bit ID from three parts: a millisecond timestamp (41 bits), a machine number (10 bits) and a per-millisecond counter (12 bits). Each machine can mint IDs without asking anyone, and sorting the IDs sorts them roughly by creation time.",
-   "q": "What are the three parts of a Snowflake ID?",
-   "a": "A timestamp, a machine ID and a sequence counter.",
-   "edition": "2026-11-08-am",
-   "order": 6,
-   "id": "2026-11-08-am-006"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The peak-end rule",
-   "body": "Research led by Daniel Kahneman found that people tend to remember an experience mostly by its most intense moment and by how it ended, rather than by its total length. A practical use: end a study or work session on something you can do well, so the memory of the session, and your wish to return, stays warm.",
-   "q": "According to the peak-end rule, which two moments shape how we remember an experience?",
-   "a": "The most intense moment (the peak) and the ending.",
-   "edition": "2026-11-08-am",
-   "order": 5,
-   "id": "2026-11-08-am-005"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Set the 'good enough' line first",
-   "body": "Before you start, write one sentence describing what 'done enough' looks like for this task. When you reach it, stop and call it finished. Perfectionism often hides inside tasks with no clear edge; a written edge makes stopping feel allowed.",
-   "hook": "Wonder: how much of a task is the last 10% of polish?",
-   "edition": "2026-11-08-am",
-   "order": 4,
-   "id": "2026-11-08-am-004"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Sunday, before anyone wakes",
-   "body": "The milk packet waits by the door,\ncold and patient.\nA crow says one word\nand decides that is enough.\nI do the same.",
-   "edition": "2026-11-08-am",
-   "order": 3,
-   "id": "2026-11-08-am-003"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "G.N. Gopal leads in Bavaria",
-   "body": "Indian GM G.N. Gopal is sole leader of the Bavarian Championship at Tegernsee with 5½ out of 6, after beating 15-year-old German IM Hussain Besou in round six. Twelve players sit half a point behind, so the final rounds should be lively.",
-   "q": "What was G.N. Gopal's score after six rounds at Tegernsee?",
-   "a": "5½ out of 6.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/tegernsee-open-2026-r6"
-   },
-   "edition": "2026-11-08-am",
-   "order": 2,
-   "id": "2026-11-08-am-002"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A dead star with two rings of debris",
-   "body": "Astronomers have found a white dwarf, the cooled core of a Sun-like star, circled by two separate rings of planetary debris with a gap between them. It offers a possible glimpse of what our own Solar System might look like billions of years from now, once the Sun has settled into a white dwarf.",
-   "q": "What kind of star is circled by the newly found double ring?",
-   "a": "A white dwarf, the leftover core of a Sun-like star.",
-   "source": {
-    "name": "ScienceDaily",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261104012250.htm"
-   },
-   "edition": "2026-11-08-am",
-   "order": 1,
-   "id": "2026-11-08-am-001"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Anthropic sketches how agents could remember",
-   "body": "In a research post, Anthropic split agent memory into three layers: notes the agent writes while it works, a stronger model that decides which of those notes are worth keeping, and a tidying-up pass during idle time that the team calls \"dreaming\". The idea is that memory improves when it is reviewed, not just stored.",
-   "hook": "Wonder: what would you keep if you reviewed today's notes before bed?",
-   "source": {
-    "name": "Anthropic",
-    "url": "https://www.anthropic.com/research/components-of-agent-memory"
-   },
-   "edition": "2026-11-08-am",
-   "order": 0,
-   "id": "2026-11-08-am-000"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Night auto",
-   "body": "The meter ticks in rupees and in stars.\nThe driver hums an old film tune, off-key,\nand the city, for once, does not argue.\nAt my gate he says, 'Slowly, sir,'\nas if the last three steps\nwere the hard part.",
-   "edition": "2026-11-07-pm",
-   "order": 30,
-   "id": "2026-11-07-pm-030"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Try to answer from memory before peeking: How many chunks can working memory hold for most adults? What was hiding in Webb's images of 51 Eridani? Which company ran LEO I?",
-   "q": "Three answers?",
-   "a": "About four chunks; the gas giant 51 Eridani b; J. Lyons & Co., the tea-shop company.",
-   "edition": "2026-11-07-pm",
-   "order": 29,
-   "id": "2026-11-07-pm-029"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Ask the agent to point at the line",
-   "body": "When an agent tells you what a document or codebase says, ask it to quote the exact line and say where it came from. It costs a few words and turns 'trust me' into 'see for yourself'. If it can't find the line, that's useful to know too.",
-   "edition": "2026-11-07-pm",
-   "order": 28,
-   "id": "2026-11-07-pm-028"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The biggest desert is cold",
-   "body": "A desert is defined by how little precipitation it gets, not by heat. By that measure Antarctica, at about 14 million square kilometres, is the largest desert on Earth, larger than the Sahara.",
-   "hook": "Wonder: what other words do we picture wrongly because of one famous example?",
-   "edition": "2026-11-07-pm",
-   "order": 27,
-   "id": "2026-11-07-pm-027"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Luft: give your king air",
-   "body": "After castling, a king boxed in by its own pawns can be mated by a single rook or queen on the back rank. Players often push a pawn one square, like h3 or g3, to give the king a 'luft' (German for air): a breathing square to step into. Do it at a calm moment, not when you're under attack.",
-   "q": "What does 'luft' mean, and why make it?",
-   "a": "German for 'air'; a pawn move that gives the king an escape square against back-rank mates.",
-   "edition": "2026-11-07-pm",
-   "order": 26,
-   "id": "2026-11-07-pm-026"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Two-phase commit, gently",
-   "body": "When several databases must all commit or all cancel, two-phase commit uses a coordinator. Phase one: it asks everyone 'can you commit?' and each participant prepares and votes. Phase two: if all vote yes, it says 'commit'; otherwise 'abort'. The catch: if the coordinator goes quiet after the votes, prepared participants have to wait, which is why many systems prefer sagas for long workflows.",
-   "hook": "Wonder: what's the everyday version of 'everyone say yes before we book the tickets'?",
-   "edition": "2026-11-07-pm",
-   "order": 25,
-   "id": "2026-11-07-pm-025"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Saying and doing",
-   "body": "Saying is easy for anyone. Doing what you said, that is the rare thing.",
-   "who": "Thirukkural 664 (own rendering)",
-   "edition": "2026-11-07-pm",
-   "order": 24,
-   "id": "2026-11-07-pm-024"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "A tea shop built a business computer",
-   "body": "In 1951 J. Lyons & Co., a British chain of tea shops and bakeries, ran what is often called the world's first routine business job on its own computer, LEO I. The early tasks included valuing the bakeries' output. A company that sold cakes and tea helped invent business computing.",
-   "q": "What kind of company built LEO I?",
-   "a": "J. Lyons & Co., a British tea-shop and bakery company.",
-   "edition": "2026-11-07-pm",
-   "order": 23,
-   "id": "2026-11-07-pm-023"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Let the place push back",
-   "body": "A setting is more than a backdrop. Let it make things a little harder: a power cut during the important call, rain that won't let the letter dry, a lift that only goes to the third floor. Small resistance from the world gives your character something to do, and reveals who they are when they do it.",
-   "edition": "2026-11-07-pm",
-   "order": 22,
-   "id": "2026-11-07-pm-022"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "That bright 'star' at dawn is Venus",
-   "body": "If you're up before sunrise, look low in the east: the brilliant point of light is Venus, now back in the morning sky. It keeps brightening through November toward its peak. Its glow comes from thick, reflective clouds that bounce back most of the sunlight that hits them.",
-   "q": "Why does Venus shine so brightly?",
-   "a": "Its thick clouds reflect most of the sunlight that reaches it.",
-   "source": {
-    "name": "Space.com",
-    "url": "https://www.space.com/stargazing/whats-that-bright-star-in-the-early-morning-sky-its-not-a-star-at-all"
-   },
-   "edition": "2026-11-07-pm",
-   "order": 21,
-   "id": "2026-11-07-pm-021"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Cursor's agent can now ship a small web app",
-   "body": "Cursor's cloud agent can now build a web app from plain-language instructions, set up a database and sign-in, and deploy it to a shareable link. Security checks run before anything goes live, and you have to approve the deployment yourself. It's available on paid plans with cloud agents turned on.",
-   "hook": "Wonder: what tiny app have you wanted for years but never had an afternoon for?",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
-   },
-   "edition": "2026-11-07-pm",
-   "order": 20,
-   "id": "2026-11-07-pm-020"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Tolkappiyam, the old grammar of Tamil",
-   "body": "The Tolkappiyam is the oldest surviving work of Tamil grammar. Beyond letters and words, its third book covers poetics: landscapes, themes and how poems express feeling. Scholars still debate its exact date, but it shaped how Tamil literature was read for centuries.",
-   "q": "Besides letters and words, what does the Tolkappiyam's third book cover?",
-   "a": "Poetics: subject matter, landscapes and how poems carry meaning.",
-   "edition": "2026-11-07-pm",
-   "order": 19,
-   "id": "2026-11-07-pm-019"
   }
  ]
 }
