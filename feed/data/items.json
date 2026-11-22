@@ -1,6 +1,350 @@
 {
- "updated": "2026-11-21T17:20:16+00:00",
+ "updated": "2026-11-22T02:13:23+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try to answer from memory before you scroll back.\n1. Roughly how far is Voyager 1 in light-time?\n2. In a quorum system, what inequality makes reads see the latest write?\n3. Who expanded the Saraswathi Mahal Library?\n4. Which program was the first spreadsheet?",
+   "q": "Answers?",
+   "a": "1. About one light-day. 2. R + W > N. 3. Serfoji II. 4. VisiCalc (1979).",
+   "edition": "2026-11-22-am",
+   "order": 30,
+   "id": "2026-11-22-am-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Evening, the kolam fades",
+   "body": "By dusk the white lines on the step\nhave walked away on many feet,\na loop here, half a petal there.\nTomorrow's hands will start again.\nNothing is lost. The pattern lives\nin the fingers, not the floor.",
+   "edition": "2026-11-22-am",
+   "order": 29,
+   "id": "2026-11-22-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Tardigrades survived open space",
+   "body": "In 2007, tiny tardigrades ('water bears') rode on the outside of a FOTON-M3 capsule, exposed to the vacuum of space. After returning to Earth, many of the dried-out animals revived and some went on to lay eggs that hatched.",
+   "hook": "Wonder: what is it like to wait out the cold, dried and patient?",
+   "edition": "2026-11-22-am",
+   "order": 28,
+   "id": "2026-11-22-am-028"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask the agent to reproduce the bug first",
+   "body": "Before letting an agent fix a bug, ask it to show the bug happening: a failing test, a command, a log line. A fix without a reproduction is a guess. With one, you also gain a check that tells you, and the agent, when the problem is truly gone.",
+   "q": "Why ask an agent to reproduce a bug before fixing it?",
+   "a": "A reproduction confirms the real cause and becomes a test that proves the fix worked.",
+   "edition": "2026-11-22-am",
+   "order": 27,
+   "id": "2026-11-22-am-027"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Our doubts are traitors",
+   "body": "Our doubts are traitors,\nAnd make us lose the good we oft might win\nBy fearing to attempt.",
+   "who": "William Shakespeare, Measure for Measure (Act I, Scene 4)",
+   "edition": "2026-11-22-am",
+   "order": 26,
+   "id": "2026-11-22-am-026"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The Dynabook, a tablet imagined in 1972",
+   "body": "In 1972, Alan Kay described the Dynabook: a book-sized personal computer for children of all ages, with a screen and a way to draw, write and program. The hardware of the day couldn't build it, but the idea helped shape Xerox PARC's work on windows, overlapping graphics and Smalltalk.",
+   "hook": "Wonder: which device in your bag was a dream in 1972?",
+   "edition": "2026-11-22-am",
+   "order": 25,
+   "id": "2026-11-22-am-025"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Deadlines that travel with the request",
+   "body": "Instead of each service having its own fixed timeout, pass a deadline along with the request: 'answer by 12:00:00.250'. Each hop checks how much time is left and gives up early if it can't finish. No service wastes effort on work whose caller has already stopped waiting. gRPC builds this in.",
+   "q": "What's the benefit of propagating a deadline instead of fixed per-service timeouts?",
+   "a": "Downstream services know how much time is really left and can stop early, avoiding wasted work after the caller has given up.",
+   "edition": "2026-11-22-am",
+   "order": 24,
+   "id": "2026-11-22-am-024"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "A film about Sindarov before the title match",
+   "body": "Chess.com has released the first part of a behind-the-scenes documentary on Javokhir Sindarov, the challenger in the 2026 FIDE World Championship against Gukesh. A slow, human look at how a top player prepares.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/sindarov-documentary-salesforce-2026-fide-world-championship"
+   },
+   "edition": "2026-11-22-am",
+   "order": 23,
+   "id": "2026-11-22-am-023"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The barber's radio",
+   "body": "Every Sunday the barber tuned his radio to the old film songs and never touched the dial again. Customers learned to arrive by song, not by clock: 'I'll come after the third one.' When the radio finally died, nobody knew what time it was. So he hummed the songs himself, a little off-key, and the queue kept its order.",
+   "edition": "2026-11-22-am",
+   "order": 22,
+   "id": "2026-11-22-am-022"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "A hexagon on Saturn",
+   "body": "Around Saturn's north pole, a jet stream runs in a near-perfect six-sided shape, each side wider than Earth. Voyager first glimpsed it in the 1980s and Cassini watched it for years. Lab experiments with spinning fluids can make similar polygons.",
+   "hook": "Wonder: how many other neat shapes does nature make simply by spinning?",
+   "edition": "2026-11-22-am",
+   "order": 21,
+   "id": "2026-11-22-am-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The Saraswathi Mahal Library, Thanjavur",
+   "body": "Begun under the Nayak rulers of Thanjavur and greatly enriched by the Maratha king Serfoji II in the early 1800s, the Saraswathi Mahal Library holds palm-leaf and paper manuscripts in Tamil, Sanskrit, Marathi and other languages. It is one of the oldest libraries in Asia still open to readers.",
+   "q": "Which Maratha king greatly expanded Thanjavur's Saraswathi Mahal Library?",
+   "a": "Serfoji II, in the early 19th century.",
+   "edition": "2026-11-22-am",
+   "order": 20,
+   "id": "2026-11-22-am-020"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Not too tense, not too slack",
+   "body": "The old Yerkes–Dodson idea says performance tends to rise with arousal up to a point, then fall. For simple tasks you can handle more pressure; for complex ones, a calmer state usually works better. It's a rough curve, not a precise law, but a useful nudge: before tricky work, lower the volume a little.",
+   "hook": "Wonder: is today's task one that wants more energy, or less?",
+   "edition": "2026-11-22-am",
+   "order": 19,
+   "id": "2026-11-22-am-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "An agent that designs robot grippers from a sentence",
+   "body": "At Formnext 2026, Siemens and AGIBOT showed an AI agent workflow that takes a text description of a gripper for a humanoid robot and produces a 3D-printable design. The agent uses the Model Context Protocol (MCP) to drive the engineering tools step by step.",
+   "source": {
+    "name": "3D Printing Industry",
+    "url": "https://3dprintingindustry.com/news/siemens-and-agibot-show-ai-agent-that-designs-3d-printed-humanoid-robot-grippers-from-a-text-prompt-256961/"
+   },
+   "edition": "2026-11-22-am",
+   "order": 18,
+   "id": "2026-11-22-am-018"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Crows remember faces",
+   "body": "Researchers at the University of Washington found that American crows can recognise individual human faces and remember them for years. They even pass on that knowledge: young crows learned to react to a particular face they had never met, by copying the adults.",
+   "q": "How did young crows learn to recognise a particular human face in the University of Washington studies?",
+   "a": "By copying the reactions of older crows, not from meeting the person themselves.",
+   "edition": "2026-11-22-am",
+   "order": 17,
+   "id": "2026-11-22-am-017"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Send a 'starting now' message",
+   "body": "Text a friend or colleague one line: 'Starting the report now, check in at 4?' A tiny bit of outside accountability can turn a vague intention into a moment that has begun. Agree beforehand that the check-in is friendly, not a test.",
+   "hook": "Wonder: who in your life would happily be your 'starting now' person?",
+   "edition": "2026-11-22-am",
+   "order": 16,
+   "id": "2026-11-22-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 10: var for local variables",
+   "body": "Since Java 10 you can write var list = new ArrayList<String>(); and the compiler infers the type. It's still statically typed; nothing changes at runtime. Use it where the type is obvious from the right-hand side, and spell the type out where it helps the reader. var works only for local variables, not fields or method parameters.",
+   "q": "Can you use var for a class field in Java?",
+   "a": "No. var is only for local variables (including in for-loops and try-with-resources), not fields or method parameters.",
+   "edition": "2026-11-22-am",
+   "order": 15,
+   "id": "2026-11-22-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Fianchetto: the bishop's balcony",
+   "body": "Play g3 and Bg2 (or ...g6 and ...Bg7) and your bishop sits on the long diagonal, looking all the way across the board. It also tucks in beside the castled king like a guard. The cost: if that bishop is traded off, the light squares around your king can become soft.",
+   "q": "What is a common weakness after a fianchettoed bishop is exchanged?",
+   "a": "The squares of that bishop's colour around the king (e.g. f3, h3 for White's g2 bishop) become weak.",
+   "edition": "2026-11-22-am",
+   "order": 14,
+   "id": "2026-11-22-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "tip",
+   "title": "Reach for smell first",
+   "body": "Most drafts lean on sight. Try opening a scene with smell instead: wet earth, frying mustard seeds, a new notebook. Smell is the sense readers rarely expect, so it lands with surprising force and often carries memory with it.",
+   "q": "Why can a smell detail make a scene feel vivid?",
+   "a": "Readers expect sight, so smell surprises them, and it tends to pull memory and feeling along with it.",
+   "edition": "2026-11-22-am",
+   "order": 13,
+   "id": "2026-11-22-am-013"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Be such",
+   "body": "No longer talk at all about the kind of man that a good man ought to be, but be such.",
+   "who": "Marcus Aurelius, Meditations X.16 (tr. George Long)",
+   "edition": "2026-11-22-am",
+   "order": 12,
+   "id": "2026-11-22-am-012"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "An X-ray eye wakes up on the way to Mercury",
+   "body": "An X-ray telescope riding with the BepiColombo mission to Mercury has made its first observations, and its team says it is performing better than expected after some eight years in space. Close to Mercury, X-rays can reveal what the planet's surface is made of.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261120075547.htm"
+   },
+   "edition": "2026-11-22-am",
+   "order": 11,
+   "id": "2026-11-22-am-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "VisiCalc, the first spreadsheet program",
+   "body": "In 1979, Dan Bricklin and Bob Frankston released VisiCalc for the Apple II. Bricklin had imagined it as a student, watching a professor erase and rewrite a grid of numbers on a blackboard. Change one cell and everything updated. Many people bought an Apple II just to run it.",
+   "hook": "Wonder: what tedious chore in your day is a VisiCalc waiting to be written?",
+   "edition": "2026-11-22-am",
+   "order": 10,
+   "id": "2026-11-22-am-010"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Claude's mobile app gets a new layout",
+   "body": "Anthropic has begun rolling out a redesigned Claude app on iOS and Android. A new tab bar along the bottom gives quick access to Chat, Projects, Code and Artifacts, so switching between conversations and the things you've made takes one tap.",
+   "source": {
+    "name": "Analytics Insight",
+    "url": "https://www.analyticsinsight.net/tech-news/claude-app-gets-major-mobile-redesign-with-new-features"
+   },
+   "edition": "2026-11-22-am",
+   "order": 9,
+   "id": "2026-11-22-am-009"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The short nap",
+   "body": "A nap of about 10–20 minutes can lift alertness for an hour or two without much grogginess afterwards, because you mostly stay in light sleep. Longer naps can dip into deep sleep, which is why waking from them can feel heavy for a while.",
+   "q": "Why do short naps tend to leave less grogginess than long ones?",
+   "a": "They mostly stay in light sleep; longer naps can reach deep sleep, and waking from deep sleep causes sleep inertia.",
+   "edition": "2026-11-22-am",
+   "order": 8,
+   "id": "2026-11-22-am-008"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A forest that is one tree",
+   "body": "In Utah, a grove of quaking aspen called Pando looks like a forest of some 47,000 trunks. Underground, they share a single root system: genetically, it is one individual. It is often counted among the heaviest living things on Earth.",
+   "q": "What is Pando?",
+   "a": "A clonal colony of quaking aspen in Utah: tens of thousands of trunks sharing one root system, genetically a single organism.",
+   "edition": "2026-11-22-am",
+   "order": 7,
+   "id": "2026-11-22-am-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Prinsep reads Ashoka's script",
+   "body": "For centuries, the Brahmi inscriptions on Ashoka's pillars and rocks could not be read. In 1837, James Prinsep, working in Calcutta, cracked the script, helped by short donor inscriptions at Sanchi that repeated the same words. Suddenly an emperor's voice from the 3rd century BCE could be heard again.",
+   "hook": "Wonder: how many messages are still waiting for someone to learn their alphabet?",
+   "edition": "2026-11-22-am",
+   "order": 6,
+   "id": "2026-11-22-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Quorums: R + W > N",
+   "body": "In a replicated store with N copies, you can ask a write to wait for W acknowledgements and a read to consult R replicas. If R + W > N, every read set overlaps every write set in at least one replica, so a read is guaranteed to see the latest acknowledged write (given versioning to pick the newest). With N = 3, the classic choice is W = 2, R = 2.",
+   "q": "With N = 3 replicas, why does W = 2, R = 2 give overlapping reads and writes?",
+   "a": "Because 2 + 2 = 4 > 3, any two-replica read must share at least one replica with any two-replica write.",
+   "edition": "2026-11-22-am",
+   "order": 5,
+   "id": "2026-11-22-am-005"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Move the stuck task to a new spot",
+   "body": "If a task has sat untouched at your desk for days, try doing just its first step somewhere else: the dining table, a café, the balcony. A new setting brings a small burst of novelty, and novelty is fuel for an ADHD brain. You don't have to finish it there. Just start it there.",
+   "q": "Why can a change of location help start a stuck task?",
+   "a": "The novelty of a new setting gives a small boost of interest and alertness, which makes starting easier.",
+   "edition": "2026-11-22-am",
+   "order": 4,
+   "id": "2026-11-22-am-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Sunday, the newspaper folded twice",
+   "body": "The crossword waits with three blanks left,\na pencil resting in the fold.\nNo one is hurrying the answer.\nThe tea goes warm, then cool, then cold,\nand somewhere near the bottom row\na word arrives the way birds do:\nnot when you call, but when you wait.",
+   "hook": "Wonder: which of your answers arrive only when you stop chasing them?",
+   "edition": "2026-11-22-am",
+   "order": 3,
+   "id": "2026-11-22-am-003"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Khuong Duy Dau's first 3|0 Thursday title",
+   "body": "Vietnamese IM Khuong Duy Dau won a 3|0 Thursday event on Chess.com for the first time this week, sharing the day's honours with Movahed and Fedoseev, who won the other sessions. Three-minute games, no increment: a fine test of quick, calm hands.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news/view/duy-dau-movahed-fedoseev-3-0-thursday-11-19-2026"
+   },
+   "edition": "2026-11-22-am",
+   "order": 2,
+   "id": "2026-11-22-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Thinking Machines releases Inkling 2 Mini",
+   "body": "Thinking Machines has released Inkling 2 Mini, an open-weights model with 26.4 billion parameters, of which only about 3.4 billion are active for each token. It reuses ('loops') some of its middle layers, runs through vLLM, Ollama and SGLang, and fits on a 32 GB MacBook Pro.",
+   "q": "In Inkling 2 Mini, roughly how many of its 26.4B parameters are active per token?",
+   "a": "About 3.4 billion.",
+   "source": {
+    "name": "Thinking Machines",
+    "url": "https://thinkingmachines.ai/news/inkling-2-mini/"
+   },
+   "edition": "2026-11-22-am",
+   "order": 1,
+   "id": "2026-11-22-am-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Voyager 1 is almost one light-day away",
+   "body": "Voyager 1, launched in 1977, is now about 16.1 billion miles from Earth. That is close to a full light-day: a message sent from home takes roughly a day to reach it, and its faint reply takes another day to come back. It is still quietly sending data from interstellar space.",
+   "hook": "Wonder: what would you say if every reply took two days?",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261120075554.htm"
+   },
+   "edition": "2026-11-22-am",
+   "order": 0,
+   "id": "2026-11-22-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9709,346 +10053,6 @@
    "edition": "2026-11-07-pm",
    "order": 19,
    "id": "2026-11-07-pm-019"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Try a sound backdrop",
-   "body": "Some people with ADHD focus better with steady background sound: brown noise, rain, or the hum of a café. The research is mixed and it doesn't suit everyone, so treat it as an experiment: try it for one work block, notice how it feels, and keep it only if it helps.",
-   "edition": "2026-11-07-pm",
-   "order": 18,
-   "id": "2026-11-07-pm-018"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Let a view of green restore you",
-   "body": "Attention Restoration Theory, from Rachel and Stephen Kaplan, suggests that natural scenes hold our attention gently, so the effortful, focused kind of attention gets to rest. Several studies find small improvements on attention tasks after time in nature. Even a few minutes by a window with trees is a reasonable, pleasant experiment.",
-   "edition": "2026-11-07-pm",
-   "order": 17,
-   "id": "2026-11-07-pm-017"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Sea stars run without a brain",
-   "body": "Starfish have no brain. A ring of nerves around the mouth links a nerve cord in each arm, and the arms coordinate well enough to choose a direction and crawl. They also see with a simple eye spot at the tip of each arm.",
-   "hook": "Wonder: who's in charge when every arm can vote?",
-   "edition": "2026-11-07-pm",
-   "order": 16,
-   "id": "2026-11-07-pm-016"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java: List.of vs Collections.unmodifiableList",
-   "body": "Collections.unmodifiableList(list) gives you a read-only view: you can't change it, but if someone changes the original list, the view changes too. List.of(...) (Java 9+) builds a truly immutable list that has no backing list, and it refuses null elements. Reach for List.of (or List.copyOf) when you want 'this will never change'.",
-   "q": "Does an unmodifiableList view change if the underlying list changes?",
-   "a": "Yes. It's only a read-only view; List.of/List.copyOf make a real immutable copy.",
-   "edition": "2026-11-07-pm",
-   "order": 15,
-   "id": "2026-11-07-pm-015"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "World Junior Rapid crowns its champions",
-   "body": "The FIDE World Junior Rapid Championship finished in Al Ain, UAE. Uzbekistan's GM Khumoyun Begmuratov won the open section unbeaten on 7.5/9, and Eline Roebers of the Netherlands won the girls' title with 7/9. The event drew 185 players from 40 countries.",
-   "q": "Who won the girls' title in Al Ain?",
-   "a": "Eline Roebers of the Netherlands, with 7/9.",
-   "source": {
-    "name": "FIDE",
-    "url": "https://www.fide.com/world-junior-rapid-championship-2026-khumoyun-begmuratov-and-eline-roebers-capture-titles/"
-   },
-   "edition": "2026-11-07-pm",
-   "order": 14,
-   "id": "2026-11-07-pm-014"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The sign painter's last letter",
-   "body": "Every shop on the street had his letters: the bakery's curly B, the chemist's steady capitals. When he retired, the shopkeepers asked him for one more sign, for his own door. He thought for a week and painted only one word, in his plainest hand: 'Open.' He never said which way he meant it. People still stop to chat there.",
-   "edition": "2026-11-07-pm",
-   "order": 13,
-   "id": "2026-11-07-pm-013"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Send your name to Titan",
-   "body": "NASA is inviting the public to send their names to Saturn's moon Titan aboard Dragonfly, the rotorcraft that will fly between spots on Titan's surface. If the schedule holds, it is planned to begin exploring Titan in 2034. Titan is the only moon with a thick atmosphere, which is what makes flying there possible.",
-   "hook": "Wonder: what does it feel like to know your name is resting on a moon with methane rain?",
-   "source": {
-    "name": "Space.com",
-    "url": "https://www.space.com/space-exploration/launches-spacecraft/send-your-name-to-saturns-moon-titan-with-nasas-upcoming-dragonfly-mission"
-   },
-   "edition": "2026-11-07-pm",
-   "order": 12,
-   "id": "2026-11-07-pm-012"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Thinking Machines releases Inkling 2 Small",
-   "body": "Thinking Machines Lab released Inkling 2 Small, a model aimed at coding, visual tasks and longer autonomous work. It has 594 billion parameters in total but uses only about 17 billion for each request, a mixture-of-experts design. Developers can try it through the Tinker platform now, with downloadable weights planned after more safety testing.",
-   "q": "Roughly how many of Inkling 2 Small's parameters are active per request?",
-   "a": "About 17 billion (of 594 billion total).",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
-   },
-   "edition": "2026-11-07-pm",
-   "order": 11,
-   "id": "2026-11-07-pm-011"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "The little candle",
-   "body": "How far that little candle throws his beams!\nSo shines a good deed in a naughty world.",
-   "who": "William Shakespeare, The Merchant of Venice",
-   "edition": "2026-11-07-pm",
-   "order": 10,
-   "id": "2026-11-07-pm-010"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "UTF-8 was sketched on a diner placemat",
-   "body": "In September 1992, Ken Thompson and Rob Pike worked out the design of UTF-8 over dinner at a New Jersey diner, by Pike's account on a placemat. Its clever trick: plain ASCII text is already valid UTF-8, so old files kept working while the world's scripts, including Tamil, got room to fit.",
-   "q": "Why could old ASCII files survive the move to UTF-8?",
-   "a": "Every ASCII byte is already valid UTF-8 with the same meaning.",
-   "edition": "2026-11-07-pm",
-   "order": 9,
-   "id": "2026-11-07-pm-009"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "About four things at once",
-   "body": "Working memory, the mental desk where you juggle ideas, holds far less than the old 'seven plus or minus two' suggests. Psychologist Nelson Cowan's work points to about four chunks for most adults. That's why writing a step down, or grouping items into bigger chunks, makes hard thinking feel lighter.",
-   "hook": "Wonder: which four things are on your mental desk right now?",
-   "edition": "2026-11-07-pm",
-   "order": 8,
-   "id": "2026-11-07-pm-008"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Everest's summit was once seabed",
-   "body": "The rock at the very top of Mount Everest is marine limestone, and it contains fossils of sea creatures such as trilobites and crinoids. It formed on an ancient ocean floor and was lifted more than eight kilometres as India pressed into Asia.",
-   "q": "What kind of rock is at Everest's summit?",
-   "a": "Marine limestone, with fossils of ancient sea life.",
-   "edition": "2026-11-07-pm",
-   "order": 7,
-   "id": "2026-11-07-pm-007"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Konark, a temple shaped like a chariot",
-   "body": "The Sun Temple at Konark in Odisha, built in the 13th century under the Eastern Ganga king Narasimhadeva I, was designed as the Sun god's chariot: 24 carved stone wheels along its base, drawn by seven stone horses. It is a UNESCO World Heritage Site, and its wheel appears on India's ₹10 note.",
-   "hook": "Wonder: how do you carve motion into something meant to stand still for centuries?",
-   "edition": "2026-11-07-pm",
-   "order": 6,
-   "id": "2026-11-07-pm-006"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Power of two choices",
-   "body": "A simple load-balancing trick: instead of sending a request to one random server, pick two at random and send it to the less busy one. That tiny comparison dramatically reduces how overloaded the worst server gets, compared with pure random choice, and it needs no global view of the whole cluster.",
-   "q": "In 'power of two choices', how many servers do you sample per request?",
-   "a": "Two, chosen at random; send to the less loaded one.",
-   "edition": "2026-11-07-pm",
-   "order": 5,
-   "id": "2026-11-07-pm-005"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "The one-box reset",
-   "body": "When a desk is too cluttered to start, don't tidy it. Sweep everything into one box, set it aside, and start working on the clear surface. Sort the box later, one item at a time, when you have spare energy. A clear surface now beats a perfect system someday.",
-   "hook": "Wonder: how much of 'I can't start' is really 'I can't see where to start'?",
-   "edition": "2026-11-07-pm",
-   "order": 4,
-   "id": "2026-11-07-pm-004"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Yakubboev takes Freestyle Friday",
-   "body": "GM Nodirbek Yakubboev won the November 6 Freestyle Friday with 9.5 points, half a point ahead of GM Ian Nepomniachtchi. It's his second Freestyle Friday title this year. In Freestyle (Chess960) the back-rank pieces are shuffled, so memorised openings help much less.",
-   "q": "Who finished half a point behind Yakubboev?",
-   "a": "Ian Nepomniachtchi, on 9 points.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/yakubboev-wins-freestyle-friday-november-6-2026"
-   },
-   "edition": "2026-11-07-pm",
-   "order": 3,
-   "id": "2026-11-07-pm-003"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Saturday, late",
-   "body": "The week folds itself\nlike a newspaper nobody finished.\nOn the sill, the tulsi\nkeeps its own small hours.\nI leave one light on —\nnot for anyone,\njust so the night\nhas somewhere to rest its eyes.",
-   "edition": "2026-11-07-pm",
-   "order": 2,
-   "id": "2026-11-07-pm-002"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Webb finds a planet that was hiding in plain sight",
-   "body": "51 Eridani b, a young gas giant about 11 times Jupiter's mass and roughly 97 light-years away, was spotted from the ground in 2015 but kept disappearing in Webb's images. A Northwestern team built a 'digital twin' of the telescope to subtract the star's glare precisely, and the planet stepped out of the dark. The method, called FLIP, was published in Nature this week.",
-   "q": "What did the team build to remove the starlight?",
-   "a": "A physics-based digital twin of the telescope (the FLIP method).",
-   "source": {
-    "name": "Space.com",
-    "url": "https://space.com/astronomy/exoplanets/giant-exoplanet-emerges-from-the-dark-when-the-james-webb-space-telescope-turns-out-the-starlight"
-   },
-   "edition": "2026-11-07-pm",
-   "order": 1,
-   "id": "2026-11-07-pm-001"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Gemini Omni 1.2 Flash makes longer video clips",
-   "body": "Google released Gemini Omni 1.2 Flash, its fast video model. Clips can now run up to 15 seconds instead of 10, you can refine a clip with follow-up prompts, and the price dropped about 30% to $0.07 per second of 720p video.",
-   "hook": "Wonder: what would you film if a 15-second clip cost less than a cup of tea?",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-6-2026/"
-   },
-   "edition": "2026-11-07-pm",
-   "order": 0,
-   "id": "2026-11-07-pm-000"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Window seat",
-   "body": "The train hums its one long note.\nFields go by in no hurry,\na boy waves from a bicycle,\na heron forgets us mid-step.\nI had a list in my pocket.\nSomewhere after the third bridge\nit became a bookmark,\nthen nothing at all.",
-   "edition": "2026-11-07-am",
-   "order": 30,
-   "id": "2026-11-07-am-030"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Old windows aren't melting",
-   "body": "You may have heard that old church windows are thicker at the bottom because glass slowly flows. It doesn't, not on any human timescale. Old panes were made by spinning molten glass into uneven discs, and glaziers often set the heavier edge downward. At room temperature, a visible sag would take far longer than the age of the universe.",
-   "hook": "Wonder: if glass isn't flowing, what makes it different from a crystal like quartz?",
-   "edition": "2026-11-07-am",
-   "order": 29,
-   "id": "2026-11-07-am-029"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Let the agent read before it writes",
-   "body": "Before asking a coding agent to change anything, ask it to read the relevant files and tell you in a few lines how they fit together. If its summary is wrong, you've caught the misunderstanding before it became a diff. Cheap reading saves expensive undoing.",
-   "edition": "2026-11-07-am",
-   "order": 28,
-   "id": "2026-11-07-am-028"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "who": "Thirukkural 666 (own rendering)",
-   "body": "Those who plan will gain what they planned, just as they planned it, if they stay firm in the doing.",
-   "edition": "2026-11-07-am",
-   "order": 27,
-   "id": "2026-11-07-am-027"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Lamport clocks: ordering without a wall clock",
-   "body": "Servers' clocks drift, so timestamps can lie. A Lamport clock is just a counter: bump it on every event, send it with every message, and when you receive one, set yours to max(yours, theirs) + 1. Now if A caused B, A's number is always smaller, no synchronised watches needed.",
-   "q": "On receiving a message, how does a node update its Lamport clock?",
-   "a": "Set it to max(own counter, message's counter) + 1.",
-   "edition": "2026-11-07-am",
-   "order": 26,
-   "id": "2026-11-07-am-026"
-  },
-  {
-   "topic": "mind",
-   "kind": "tip",
-   "title": "Take an awe walk",
-   "body": "In a 2020 study, older adults who took weekly 15-minute walks while deliberately noticing things that amazed them, like the size of trees or the colour of the sky, reported more positive feelings than those who simply walked. Their selfies also showed them taking up less of the frame, as if the world had grown bigger.",
-   "edition": "2026-11-07-am",
-   "order": 25,
-   "id": "2026-11-07-am-025"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Zwischenzug: the in-between move",
-   "body": "When your opponent expects an obvious recapture, look first for a stronger move in between, often a check or a threat that must be answered. Only then do you recapture, with a better position. The German word means 'intermediate move'. Before any 'automatic' move, ask: is there something more forcing first?",
-   "q": "What is a zwischenzug?",
-   "a": "An in-between move, often a check or threat, played instead of the expected reply before returning to it.",
-   "edition": "2026-11-07-am",
-   "order": 24,
-   "id": "2026-11-07-am-024"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Why email uses @",
-   "body": "In 1971 Ray Tomlinson sent the first networked email between two computers on ARPANET sitting side by side. He needed a symbol to separate a person's name from their machine and picked @, because it was on the keyboard and almost never appeared in names. User 'at' host.",
-   "hook": "Wonder: what do other languages call the @ sign? (Italian: chiocciola, the snail.)",
-   "edition": "2026-11-07-am",
-   "order": 23,
-   "id": "2026-11-07-am-023"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Mars overtakes Jupiter before dawn",
-   "body": "Look east in the hours before sunrise this month: Mars and Jupiter climb high near the Sickle of Leo. On 16 November Mars slides past Jupiter, and on 26 November it passes the star Regulus. Later in the month Mercury joins the dawn too, best seen around 16–26 November.",
-   "q": "On what date does Mars pass Jupiter in the November dawn sky?",
-   "a": "16 November.",
-   "source": {
-    "name": "Space.com",
-    "url": "https://www.space.com/stargazing/5-bright-planets-to-spot-in-november-when-and-where-to-see-them"
-   },
-   "edition": "2026-11-07-am",
-   "order": 22,
-   "id": "2026-11-07-am-022"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Three things, not thirty",
-   "body": "A long to-do list can feel like a wall of noise. Each morning, copy just three items onto a small card. Finish those and anything extra is a bonus. The full list still exists; it just doesn't get to shout at you all day.",
-   "edition": "2026-11-07-am",
-   "order": 21,
-   "id": "2026-11-07-am-021"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The neighbourhood map",
-   "body": "Meena drew a map of her street for a school project and, being thorough, marked everything: the dog that waits by gate 14, the bench where the old men argue about cricket, the mango tree that drops fruit on Tuesdays (it doesn't, but it felt like it). Her teacher gave it a B. The street gave it a frame. It hangs in the tea stall now, and strangers study it as if it were a country.",
-   "edition": "2026-11-07-am",
-   "order": 20,
-   "id": "2026-11-07-am-020"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Rani ki Vav, a stepwell like an upside-down temple",
-   "body": "In Patan, Gujarat, Rani ki Vav is an 11th-century stepwell associated with Queen Udayamati. Its terraces step down several storeys to the water, lined with hundreds of carved sculptures. It became a UNESCO World Heritage Site in 2014 and appears on the back of India's lavender ₹100 note.",
-   "q": "Which Indian banknote shows Rani ki Vav?",
-   "a": "The ₹100 note (the lavender series).",
-   "edition": "2026-11-07-am",
-   "order": 19,
-   "id": "2026-11-07-am-019"
   }
  ]
 }
