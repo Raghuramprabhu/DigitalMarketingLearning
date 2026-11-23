@@ -1,6 +1,321 @@
 {
- "updated": "2026-11-22T17:14:23+00:00",
+ "updated": "2026-11-23T02:14:02+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these before scrolling back up.",
+   "q": "1) What is 'luft' in chess? 2) How many bits of a Snowflake ID are the timestamp? 3) By the peak-end rule, which two moments shape a memory?",
+   "a": "1) An escape square for the king. 2) 41. 3) The most intense moment and the ending.",
+   "edition": "2026-11-23-am",
+   "order": 29,
+   "id": "2026-11-23-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A coconut isn't a true nut",
+   "body": "Botanically, a coconut is a drupe, the same kind of fruit as a mango or a peach: a fleshy or fibrous outer layer around a hard stone with the seed inside. The brown 'nut' we buy is that stone, with the husk removed.",
+   "hook": "Wonder: so mango and coconut are fruit cousins?",
+   "edition": "2026-11-23-am",
+   "order": 28,
+   "id": "2026-11-23-am-028"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Underpromotion: when a queen is too much",
+   "body": "A pawn reaching the last rank doesn't have to become a queen. Sometimes a knight gives a check a queen can't, or a rook or bishop avoids stalemating an opponent with no moves left. It's rare, which is exactly why it's fun to spot.",
+   "edition": "2026-11-23-am",
+   "order": 27,
+   "id": "2026-11-23-am-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 11: Predicate.not",
+   "body": "Filtering out blank strings used to need a lambda:\n\nlines.stream().filter(s -> !s.isBlank())\n\nSince Java 11 you can keep the method reference:\n\nlines.stream().filter(Predicate.not(String::isBlank))",
+   "q": "Which Java 11 method lets you negate a method reference in a filter?",
+   "a": "Predicate.not, e.g. filter(Predicate.not(String::isBlank)).",
+   "edition": "2026-11-23-am",
+   "order": 26,
+   "id": "2026-11-23-am-026"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Monday, the school bus at the corner",
+   "body": "Yellow at the corner,\nthe engine humming low.\n\nA small hand waves\nfrom the third window.\n\nThe mother waves back\nlong after it turns,\nthen walks home\nslower than she came.",
+   "edition": "2026-11-23-am",
+   "order": 25,
+   "id": "2026-11-23-am-025"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Easy to say",
+   "body": "Saying is easy for anyone. Doing as was said is the hard part.",
+   "who": "Thirukkural 664 (own rendering)",
+   "edition": "2026-11-23-am",
+   "order": 24,
+   "id": "2026-11-23-am-024"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Uranus rolls around the Sun",
+   "body": "Uranus is tipped over by about 98 degrees, so it spins almost on its side. Over its 84-year orbit each pole gets roughly 42 years of continuous sunlight followed by 42 years of darkness. A giant collision long ago is the leading explanation.",
+   "hook": "Wonder: what would a sunrise look like that lasts for years?",
+   "edition": "2026-11-23-am",
+   "order": 23,
+   "id": "2026-11-23-am-023"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Ask the agent what it won't touch",
+   "body": "Before a big change, ask the agent to list the files, tables or settings it will leave alone. A short 'out of scope' list catches misunderstandings early, and gives you an easy thing to check in the final diff.",
+   "edition": "2026-11-23-am",
+   "order": 22,
+   "id": "2026-11-23-am-022"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The peak-end rule",
+   "body": "In a 1993 study, people held a hand in cold water for 60 seconds, and in another trial for 60 seconds plus 30 more seconds of slightly less cold water. Most chose to repeat the longer trial, because it ended better. We remember experiences mostly by their best or worst moment and how they ended. So end a study session on something you can do well.",
+   "q": "What two moments shape how we remember an experience, by the peak-end rule?",
+   "a": "Its most intense moment (the peak) and how it ended.",
+   "edition": "2026-11-23-am",
+   "order": 21,
+   "id": "2026-11-23-am-021"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Mango' came from South India",
+   "body": "English got the word 'mango' from Portuguese 'manga', and the Portuguese picked it up on the Kerala coast from Malayalam 'māṅṅa' (close to Tamil 'māṅkāy'). It's one of many words that sailed from the Malabar coast into European languages.",
+   "hook": "Wonder: which other English words began on Indian shores?",
+   "edition": "2026-11-23-am",
+   "order": 20,
+   "id": "2026-11-23-am-020"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first computer passwords",
+   "body": "MIT's Compatible Time-Sharing System (CTSS), built in the early 1960s under Fernando Corbató, let many people use one computer at once. To keep each person's files and time separate, it asked users to log in with a password, one of the earliest uses of passwords on a computer.",
+   "q": "Why did CTSS need passwords?",
+   "a": "Because many users shared one computer, so each person's files and time had to be kept separate.",
+   "edition": "2026-11-23-am",
+   "order": 19,
+   "id": "2026-11-23-am-019"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Give the reader something to hold before the backstory",
+   "body": "Backstory lands better once the reader cares. Start with a present moment: a person, a place, a small want. Then slip in one piece of history at a time, when the scene needs it. If you open with a page of the past, the reader is holding a box with nothing to put in it.",
+   "edition": "2026-11-23-am",
+   "order": 18,
+   "id": "2026-11-23-am-018"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Krishna's Butter Ball at Mamallapuram",
+   "body": "On a slope in Mamallapuram sits a huge granite boulder, about 6 metres tall and estimated at around 250 tonnes, resting on a small patch of rock that looks far too small to hold it. It has stayed there for centuries. The local name, Krishna's Butter Ball, nods to stories of young Krishna stealing butter.",
+   "hook": "Wonder: what keeps a boulder that size from rolling? (Friction and a low centre of gravity.)",
+   "edition": "2026-11-23-am",
+   "order": 17,
+   "id": "2026-11-23-am-017"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Pick a default for repeat decisions",
+   "body": "Small daily choices (what to eat for breakfast, which bag, which route) quietly use up attention. Choose a default for the ones that repeat, like the same weekday breakfast, and only decide again when you want a change. That saves your deciding energy for the things that matter.",
+   "edition": "2026-11-23-am",
+   "order": 16,
+   "id": "2026-11-23-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 9: Optional.ifPresentOrElse",
+   "body": "Instead of checking isPresent() and calling get(), handle both cases in one call:\n\nuser.ifPresentOrElse(\n    u -> greet(u),\n    () -> showSignIn());\n\nThe first lambda runs with the value; the second runs when the Optional is empty.",
+   "edition": "2026-11-23-am",
+   "order": 15,
+   "id": "2026-11-23-am-015"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Ganymede is bigger than Mercury",
+   "body": "Jupiter's moon Ganymede is about 5,268 km across, wider than the planet Mercury (about 4,879 km). It's the largest moon in the Solar System. Mercury is still about twice as massive, because it's mostly rock and metal while Ganymede holds a lot of ice.",
+   "q": "Which is wider, Ganymede or Mercury?",
+   "a": "Ganymede, about 5,268 km against Mercury's 4,879 km, though Mercury is heavier.",
+   "edition": "2026-11-23-am",
+   "order": 14,
+   "id": "2026-11-23-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The clock at the railway halt",
+   "body": "The halt had one clock, and it ran four minutes fast. Everyone knew. The stationmaster had meant to fix it for eleven years.\n\nThe tea seller set his boiler by it. Schoolchildren ran by it. The 7:12 passenger always seemed late, and people stood a little longer under the neem, talking.\n\nThe day a repairman finally came, he looked at the platform, at the chatting crowd, and climbed back down. 'It's working,' he said, and wrote nothing in his book.",
+   "edition": "2026-11-23-am",
+   "order": 13,
+   "id": "2026-11-23-am-013"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Back-rank weakness and 'luft'",
+   "body": "After castling, a king behind three unmoved pawns can be mated by a single rook or queen landing on the back rank. The cure is cheap: at a calm moment, push one of those pawns a square (often h3 or h6) to make an escape hole. Players call it 'luft', German for 'air'.",
+   "q": "What is 'luft' in chess?",
+   "a": "An escape square made for the king, usually by pushing a pawn in front of it, so it can't be mated on the back rank.",
+   "edition": "2026-11-23-am",
+   "order": 12,
+   "id": "2026-11-23-am-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Let it first blossom",
+   "body": "No great thing comes into being all at once, any more than a bunch of grapes or a fig. If you tell me you want a fig, I'll say: give it time. Let it first blossom, then bear fruit, then ripen.",
+   "who": "Epictetus, Discourses I.15 (own rendering)",
+   "edition": "2026-11-23-am",
+   "order": 11,
+   "id": "2026-11-23-am-011"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Gemini API previews on-demand tool loading",
+   "body": "Google is previewing a 'Tool Retrieval' feature for the Gemini API. Instead of reading every tool's full description on each call, an agent can pull in a tool's details only when it actually needs that tool. That keeps prompts shorter when an agent has many tools available.",
+   "hook": "Wonder: how many tools could a well-organised agent handle this way?",
+   "source": {
+    "name": "AI Agent Store, weekly news",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-23-am",
+   "order": 10,
+   "id": "2026-11-23-am-010"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Penguins have knees",
+   "body": "Penguins look as if their feet stick straight out of their bodies, but they have thigh bones and knees like other birds. The upper leg is tucked up inside the body under feathers and fat, which is why they waddle.",
+   "edition": "2026-11-23-am",
+   "order": 9,
+   "id": "2026-11-23-am-009"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "How @ got into email",
+   "body": "In 1971 Ray Tomlinson sent messages between two computers on the ARPANET and needed a symbol to separate the user's name from the machine's name. He picked @ because it read naturally ('user at host') and never appeared in names. He later said he couldn't remember what the first test message said.",
+   "hook": "Wonder: what does your language call the @ sign?",
+   "edition": "2026-11-23-am",
+   "order": 8,
+   "id": "2026-11-23-am-008"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The curse of knowledge",
+   "body": "In a 1990 Stanford study, people tapped out well-known songs on a table and guessed listeners would name about half of them. Listeners got roughly 3 out of 120. Once you know something, it's hard to imagine not knowing it. When explaining, add the step that feels too obvious to say.",
+   "q": "In the tapping study, how often did listeners name the song?",
+   "a": "About 3 times out of 120, while tappers expected about 50%.",
+   "edition": "2026-11-23-am",
+   "order": 7,
+   "id": "2026-11-23-am-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Rani ki Vav, a stepwell turned upside-down temple",
+   "body": "Rani ki Vav in Patan, Gujarat, is an 11th-century stepwell that goes down seven levels, lined with hundreds of carved sculptures. It was built like an inverted temple, honouring the sacredness of water. It became a UNESCO World Heritage Site in 2014 and appears on the back of India's lavender ₹100 note.",
+   "hook": "Wonder: why build a temple going down instead of up?",
+   "edition": "2026-11-23-am",
+   "order": 6,
+   "id": "2026-11-23-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Snowflake IDs: unique, and in time order",
+   "body": "Twitter's Snowflake scheme (2010) makes 64-bit IDs without a central counter: 41 bits of milliseconds since a chosen start date, 10 bits of machine ID and 12 bits of a per-millisecond sequence. Each machine can mint up to 4,096 IDs per millisecond, and sorting IDs roughly sorts them by creation time.",
+   "q": "What are the three parts of a Snowflake ID?",
+   "a": "A timestamp (41 bits), a machine ID (10 bits) and a sequence number (12 bits).",
+   "edition": "2026-11-23-am",
+   "order": 5,
+   "id": "2026-11-23-am-005"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Let streaks have rest days",
+   "body": "A habit streak can help, until one missed day breaks it and the whole thing feels ruined. Build in rest days from the start: for example, 'five days out of seven counts as a full week'. A planned skip isn't a failure, so you're far more likely to pick it up again tomorrow.",
+   "edition": "2026-11-23-am",
+   "order": 4,
+   "id": "2026-11-23-am-004"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A gap in black hole sizes hints at quiet collapses",
+   "body": "A Caltech-led team looked at the masses of black holes in 257 mergers caught by the LIGO, Virgo and KAGRA gravitational-wave detectors. Black holes around 10 times the Sun's mass are common, but there is a noticeable shortage between about 12 and 16 solar masses. The authors suggest the common ones may form when a star collapses quietly, without a supernova. They note it's a hint, not proof.",
+   "hook": "Wonder: how do you weigh something you can't see? (By the shape of the ripples it makes in space-time.)",
+   "source": {
+    "name": "ScienceDaily / Caltech",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261121221126.htm"
+   },
+   "edition": "2026-11-23-am",
+   "order": 3,
+   "id": "2026-11-23-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Monday, the first rangoli powder",
+   "body": "A pinch of white\nbetween two fingers,\nthe doorstep still cool.\n\nOne line, then a loop,\nthen the loop remembers\nwhere it began.\n\nBy noon the feet will blur it.\nThat was always the deal.",
+   "edition": "2026-11-23-am",
+   "order": 2,
+   "id": "2026-11-23-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Microsoft Foundry gives agents their own work identities",
+   "body": "Microsoft says organisations can now set up agents as named members of Microsoft 365, each with its own Entra agent identity, mailbox, calendar and OneDrive, and a human manager who is accountable for it. Templates cover agents meant for a whole company or for one team.",
+   "q": "In Microsoft's new setup, who is accountable for each agent?",
+   "a": "A named human manager assigned to that agent.",
+   "source": {
+    "name": "AI Agent Store, weekly news",
+    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
+   },
+   "edition": "2026-11-23-am",
+   "order": 1,
+   "id": "2026-11-23-am-001"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Gukesh vs Sindarov: the title match begins on Tuesday",
+   "body": "The World Championship match between Gukesh Dommaraju and Javokhir Sindarov opened with a press conference and ceremony on 22 November. It is 14 classical games at the Fondation Martin Bodmer in Cologny, near Geneva. At the ceremony Gukesh picked a clock with a black knight, so Sindarov has White in game one, which starts Tuesday 24 November at 15:00 CET (7:30 pm in India).",
+   "hook": "Wonder: does having White in game one matter much over 14 games?",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/live-the-world-championship-kicks-off-press-conference-and-opening-ceremony-today"
+   },
+   "edition": "2026-11-23-am",
+   "order": 0,
+   "id": "2026-11-23-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9705,341 +10020,6 @@
    "edition": "2026-11-08-pm",
    "order": 19,
    "id": "2026-11-08-pm-019"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "A sea lion that keeps the beat",
-   "body": "A California sea lion named Ronan learned to bob her head in time to music, and then kept the beat to songs she had never heard, at new tempos. Researchers had long thought rhythm-keeping needed vocal mimicry; Ronan showed it isn't so simple.",
-   "q": "What was surprising about Ronan the sea lion?",
-   "a": "She could keep time to music, even new songs and tempos, though sea lions aren't known vocal mimics.",
-   "edition": "2026-11-08-pm",
-   "order": 18,
-   "id": "2026-11-08-pm-018"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Self-explanation",
-   "body": "When you read a worked solution, pause at each step and say why it follows. Learners who explain steps to themselves, even silently, tend to understand and transfer the idea better than those who just reread. The gaps you notice while explaining are exactly the bits to study.",
-   "hook": "Wonder: which step in something you 'know' would you struggle to justify out loud?",
-   "edition": "2026-11-08-pm",
-   "order": 17,
-   "id": "2026-11-08-pm-017"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Chinese Rapid Championship reaches its final four",
-   "body": "The Chinese Rapid Championship's quarterfinals were decided, some only in blitz tiebreaks. Yu Yangyi, Xiao Tong, Xu Xiangyu and Lu Shanglei go through to the semifinals.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/chinese-rapid-championship-2026-quarterfinals"
-   },
-   "edition": "2026-11-08-pm",
-   "order": 16,
-   "id": "2026-11-08-pm-016"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Ask the question before you open the tab",
-   "body": "Research can become an endless corridor. Before searching, write the one question you're answering and what 'answered' looks like. When you find it, close the tabs. Anything else interesting goes on a 'later' list, not into this session.",
-   "hook": "Wonder: how often does a five-minute lookup become an hour, and what was the original question?",
-   "edition": "2026-11-08-pm",
-   "order": 15,
-   "id": "2026-11-08-pm-015"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java: fail-fast iterators",
-   "body": "Change an ArrayList while a for-each loop walks it and you'll usually get a ConcurrentModificationException. That's deliberate: the iterator notices the list's modification count changed and stops early rather than giving quietly wrong results. To remove while iterating, use iterator.remove() or list.removeIf(...).",
-   "q": "What's the safe way to remove elements from an ArrayList based on a condition?",
-   "a": "list.removeIf(condition), or iterator.remove() inside an explicit iterator loop.",
-   "edition": "2026-11-08-pm",
-   "order": 14,
-   "id": "2026-11-08-pm-014"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Northern Taurids peak around 12 November",
-   "body": "The Northern Taurid meteor shower peaks around 12 November, with roughly five meteors an hour under dark skies. Taurids are slow and known for occasional bright fireballs, and the Leonids follow before dawn on 17–18 November.",
-   "q": "Which shower peaks around 12 November, known for its slow, bright fireballs?",
-   "a": "The Northern Taurids.",
-   "source": {
-    "name": "Lake County News (NASA JPL 'What's Up')",
-    "url": "https://lakeconews.com/en/85662-space-news-whats-up-for-november-2026"
-   },
-   "edition": "2026-11-08-pm",
-   "order": 13,
-   "id": "2026-11-08-pm-013"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Save the weight for the end of the sentence",
-   "body": "English readers lean toward the last words of a sentence. Put the familiar part first and the new or striking part last. 'The letter she'd waited a year for came on a Tuesday' lands on an ordinary day; 'On a Tuesday, the letter came: the one she'd waited a year for' lands on the wait.",
-   "q": "Where in a sentence does emphasis naturally fall in English?",
-   "a": "Near the end, so place the new or important idea there.",
-   "edition": "2026-11-08-pm",
-   "order": 12,
-   "id": "2026-11-08-pm-012"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "A whole cliff turned into a story",
-   "body": "At Mamallapuram, Pallava-era sculptors carved a huge open-air relief across two boulders, about 27 metres long and 9 metres high. Often called Arjuna's Penance or the Descent of the Ganga, it is crowded with gods, sages, hunters and life-sized elephants, and a natural cleft down the middle stands in for the river.",
-   "hook": "Wonder: how did sculptors plan a scene that size before the first chisel stroke?",
-   "edition": "2026-11-08-pm",
-   "order": 11,
-   "id": "2026-11-08-pm-011"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Vercel Labs' agent-desktop reads the screen as structure",
-   "body": "Vercel Labs released agent-desktop, an open-source command-line tool that lets AI agents operate desktop apps on macOS, Windows and Linux. Instead of reading screenshots, it uses the operating system's accessibility tree, which uses fewer tokens and doesn't take over your cursor.",
-   "q": "What does agent-desktop use instead of screenshots to understand an app?",
-   "a": "The operating system's accessibility tree.",
-   "source": {
-    "name": "AIToolly",
-    "url": "https://aitoolly.com/ai-news/2026-11-07"
-   },
-   "edition": "2026-11-08-pm",
-   "order": 10,
-   "id": "2026-11-08-pm-010"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Small help, seen large",
-   "body": "Though the help given is as small as a millet seed, those who know its worth see it as large as a palm tree.",
-   "who": "Thirukkural 104 (own rendering)",
-   "edition": "2026-11-08-pm",
-   "order": 9,
-   "id": "2026-11-08-pm-009"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "On Venus the Sun rises in the west",
-   "body": "Venus spins in the opposite direction to most planets, and very slowly. Stand on its surface (if you could see through the clouds) and the Sun would rise in the west and set in the east.",
-   "hook": "Wonder: how might a planet end up spinning backwards in the first place?",
-   "edition": "2026-11-08-pm",
-   "order": 8,
-   "id": "2026-11-08-pm-008"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Memory that was woven by hand",
-   "body": "From the 1950s to the 1970s, many computers stored data in magnetic core memory: tiny ferrite rings threaded onto a grid of wires, often by hand. The Apollo guidance computer went further with 'core rope' memory, where its programs were literally woven: a wire passing through a core meant 1, around it meant 0.",
-   "q": "In Apollo's core rope memory, how was a 1 vs a 0 encoded?",
-   "a": "By whether a wire passed through a core (1) or bypassed it (0).",
-   "edition": "2026-11-08-pm",
-   "order": 7,
-   "id": "2026-11-08-pm-007"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "A checklist for the routine you 'already know'",
-   "body": "Pilots run checklists for things they've done thousands of times, because familiarity doesn't stop a skipped step. A short, visible list for your morning or leaving-the-house routine takes the remembering off your working memory. Tick it; don't trust it to your head.",
-   "hook": "Wonder: which daily routine of yours has a step that quietly goes missing?",
-   "edition": "2026-11-08-pm",
-   "order": 6,
-   "id": "2026-11-08-pm-006"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The method of loci",
-   "body": "Place each thing you want to remember at a spot along a route you know well: the gate, the stairs, the kitchen shelf. To recall, walk the route in your mind. It works because spatial memory is old, strong and orderly, so it lends its structure to facts that have none.",
-   "q": "What does the method of loci borrow to organise new memories?",
-   "a": "A familiar physical route: spatial memory gives the items an order and a place.",
-   "edition": "2026-11-08-pm",
-   "order": 5,
-   "id": "2026-11-08-pm-005"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Aadik Theophane Leninn becomes India's newest IM",
-   "body": "At the 1st Chola Chess GM tournament in Chennai, 14-year-old Aadik Theophane Leninn secured his final International Master norm with a round to spare. Going into the last round, GMs Pranesh M and Vitaliy Bernadskiy and Pa Iniyan shared the lead on 6 points.",
-   "q": "Which Chennai event saw Aadik Theophane Leninn complete his IM title?",
-   "a": "The 1st Chola Chess GM 2026.",
-   "source": {
-    "name": "ChessBase India",
-    "url": "https://www.chessbase.in/news/1st-chola-chess-gm-2026-round-8-report"
-   },
-   "edition": "2026-11-08-pm",
-   "order": 4,
-   "id": "2026-11-08-pm-004"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Power cut, 9 pm",
-   "body": "The fan slows to a stop\nand the street remembers its crickets.\nSomeone finds a candle,\nsomeone finds a story,\nand for an hour\nthe whole house sits in one room.",
-   "edition": "2026-11-08-pm",
-   "order": 3,
-   "id": "2026-11-08-pm-003"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Meta's Muse can now build small 'Spaces'",
-   "body": "Meta introduced Spaces for its Muse assistant: you describe what you need and it assembles a small app-like module inside the chat, such as a music tracker, a school dashboard or a trivia game. Muse also gained real-time voice conversations with an animated avatar for US users.",
-   "hook": "Wonder: what small tool would you ask for if building it took one sentence?",
-   "source": {
-    "name": "AI Agents Directory brief",
-    "url": "https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-november-7-2026"
-   },
-   "edition": "2026-11-08-pm",
-   "order": 2,
-   "id": "2026-11-08-pm-002"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Fencing tokens: the lease's missing half",
-   "body": "A lease can expire while its holder is paused (a long GC, a slow network) and still thinks it owns the lock. The fix: each new lease comes with a number that only ever goes up. The storage layer remembers the highest number it has seen and rejects writes carrying an older one.",
-   "q": "What stops a paused former lock-holder from overwriting newer data?",
-   "a": "A fencing token: a monotonically increasing number checked by the storage layer, which rejects stale tokens.",
-   "edition": "2026-11-08-pm",
-   "order": 1,
-   "id": "2026-11-08-pm-001"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "The first of three supermoons rises on 24 November",
-   "body": "NASA JPL's November sky guide says the full Moon on 24 November will be a supermoon, the first of three in a row (November, December and January). Look east around sunset to catch it rising.",
-   "hook": "Wonder: why does a Moon near the horizon look bigger than one high in the sky, even when it isn't?",
-   "source": {
-    "name": "ScienceDaily (NASA JPL)",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261105224547.htm"
-   },
-   "edition": "2026-11-08-pm",
-   "order": 0,
-   "id": "2026-11-08-pm-000"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Pluto's long year",
-   "body": "Pluto takes about 248 Earth years to go once around the Sun. Since its discovery in 1930, it has travelled less than half of one orbit.",
-   "hook": "Wonder: where in the sky will Pluto be when it finally completes its first 'discovery year'?",
-   "edition": "2026-11-08-am",
-   "order": 29,
-   "id": "2026-11-08-am-029"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Make 'I'm not sure' a valid answer",
-   "body": "If your instructions only reward answers, an agent will produce answers. Tell it explicitly that 'I'm not sure, here's what I'd check' is acceptable. You'll get fewer confident guesses and more useful next steps.",
-   "q": "What explicit permission reduces confident guessing from an agent?",
-   "a": "Allowing it to say it isn't sure and suggest what to check.",
-   "edition": "2026-11-08-am",
-   "order": 28,
-   "id": "2026-11-08-am-028"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Tea, second cup",
-   "body": "The first cup was for waking.\nThis one is for sitting\nwhile the light walks slowly\nacross the floor\nlooking for nothing in particular.",
-   "edition": "2026-11-08-am",
-   "order": 27,
-   "id": "2026-11-08-am-027"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Leko and Svidler will call the title match",
-   "body": "GMs Peter Leko and Peter Svidler will commentate the 14-game World Championship match between Gukesh and Javokhir Sindarov, which begins on 24 November at the Fondation Martin Bodmer near Geneva.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/world-championship-2026-commentators"
-   },
-   "edition": "2026-11-08-am",
-   "order": 26,
-   "id": "2026-11-08-am-026"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "What we may be",
-   "who": "Shakespeare, Hamlet",
-   "body": "We know what we are, but know not what we may be.",
-   "edition": "2026-11-08-am",
-   "order": 25,
-   "id": "2026-11-08-am-025"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Merkle trees: comparing big data cheaply",
-   "body": "A Merkle tree hashes data in blocks, then hashes those hashes up to a single root. Two replicas can compare roots; if they match, everything matches. If not, they walk down only the branches that differ. Cassandra and Dynamo-style stores use this for quiet background repair.",
-   "hook": "Wonder: how could two libraries check their catalogues match without reading every card?",
-   "edition": "2026-11-08-am",
-   "order": 24,
-   "id": "2026-11-08-am-024"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Pineapples take their time",
-   "body": "A pineapple plant usually needs around 18 to 24 months to produce a single fruit, and each plant gives just one main pineapple per cycle.",
-   "q": "Roughly how long does a pineapple take to grow?",
-   "a": "About 18 to 24 months.",
-   "edition": "2026-11-08-am",
-   "order": 23,
-   "id": "2026-11-08-am-023"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The floppy began at eight inches",
-   "body": "IBM's first floppy disk, introduced in 1971, was 8 inches across and read-only. It was made to load start-up instructions into mainframes. Smaller 5¼-inch and 3½-inch versions came later and carried software into homes.",
-   "hook": "Wonder: what's the oldest storage medium you've ever held?",
-   "edition": "2026-11-08-am",
-   "order": 22,
-   "id": "2026-11-08-am-022"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Old light from Andromeda",
-   "body": "On a dark November evening, the Andromeda Galaxy appears as a faint smudge to the naked eye. Its light set out about 2.5 million years ago, so the glow you see left before our own species existed.",
-   "q": "About how long has Andromeda's light been travelling to reach us?",
-   "a": "About 2.5 million years.",
-   "edition": "2026-11-08-am",
-   "order": 21,
-   "id": "2026-11-08-am-021"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Let the first try fail",
-   "body": "When a character wants something, let their first attempt not quite work. The failure tells us what is in the way and makes the second attempt matter. Even in a 200-word story, one small stumble gives the ending somewhere to land.",
-   "hook": "Wonder: what does your character try first, and why doesn't it work?",
-   "edition": "2026-11-08-am",
-   "order": 20,
-   "id": "2026-11-08-am-020"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Reward now, not later",
-   "body": "Rewards that arrive weeks later barely register for many ADHD brains; rewards that arrive right away do. Attach a small, immediate treat to the end of a dull task, such as a favourite song, a walk to the balcony or a cup of tea, so finishing pays off on the spot.",
-   "edition": "2026-11-08-am",
-   "order": 19,
-   "id": "2026-11-08-am-019"
   }
  ]
 }
