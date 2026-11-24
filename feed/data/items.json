@@ -1,6 +1,364 @@
 {
- "updated": "2026-11-24T02:13:49+00:00",
+ "updated": "2026-11-24T17:16:17+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the last chai glass",
+   "body": "Washed, upturned on the steel tray,\nit holds a small round of street light\nthe way a palm holds a coin\nit means to give away tomorrow.",
+   "who": "Original",
+   "edition": "2026-11-24-pm",
+   "order": 30,
+   "id": "2026-11-24-pm-030"
+  },
+  {
+   "topic": "ai",
+   "kind": "tip",
+   "title": "Ask the agent to list its assumptions",
+   "body": "Before an agent starts a bigger task, ask it to write down the assumptions it's making: which file is the source of truth, which version to target, what it will leave alone. A wrong assumption is cheap to fix as one line of text, and expensive to fix after it has shaped a hundred lines of code.",
+   "q": "Why ask an agent for its assumptions up front?",
+   "a": "A wrong assumption is cheap to fix before it shapes the work.",
+   "edition": "2026-11-24-pm",
+   "order": 29,
+   "id": "2026-11-24-pm-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Jungle' once meant dry land",
+   "body": "The English word 'jungle' came from Hindi jangal, which goes back to Sanskrit jāṅgala. In Sanskrit it meant dry, open, sparsely wooded country, almost the opposite of the dense rainforest the word suggests today. Meanings travel, and sometimes they turn around on the way.",
+   "q": "What did Sanskrit jāṅgala originally mean?",
+   "a": "Dry, open, sparsely wooded land.",
+   "edition": "2026-11-24-pm",
+   "order": 28,
+   "id": "2026-11-24-pm-028"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Hedged requests: ask twice, take the first",
+   "body": "In a big system, a few requests are slow just by bad luck. A hedged request waits a short time (say, the usual 95th-percentile latency), and if no reply has come, sends the same request to another replica. Whichever answers first wins and the other is cancelled. Google's 'The Tail at Scale' paper (2013) showed this can cut slow-tail latency sharply for only a few percent more load.",
+   "q": "When is a hedged request sent?",
+   "a": "After a short delay, if the first request hasn't answered yet.",
+   "edition": "2026-11-24-pm",
+   "order": 27,
+   "id": "2026-11-24-pm-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Gukesh and Sindarov meet the press",
+   "body": "At the pre-match press conference in Geneva, Gukesh said he had come to win the title again and called Sindarov's recent form very consistent. Sindarov, in his first World Championship match, rated his chances at about 50/50 and said he'd prepared for three or four months. Gukesh's team includes trainer Grzegorz Gajewski and mental coach Paddy Upton.",
+   "q": "How did Sindarov rate his chances before the match?",
+   "a": "About 50/50.",
+   "source": {
+    "name": "ChessBase India, 23 Nov 2026",
+    "url": "https://chessbase.in/news/salesforce-fide-world-chess-championship-2026-press-conference"
+   },
+   "edition": "2026-11-24-pm",
+   "order": 26,
+   "id": "2026-11-24-pm-026"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Green views to rest attention",
+   "body": "Attention restoration theory, proposed by Rachel and Stephen Kaplan, suggests that natural scenes hold our attention gently, letting the effortful kind recover. Studies are mixed on how big the effect is, but a short walk among trees, or even a few minutes looking at greenery, is a low-cost break worth trying between deep-work blocks.",
+   "hook": "Wonder: is there a tree you could look at during your next break?",
+   "edition": "2026-11-24-pm",
+   "order": 25,
+   "id": "2026-11-24-pm-025"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Webb maps the dust inside Cassiopeia A",
+   "body": "Cassiopeia A is the glowing remains of a star that exploded about 11,000 light-years away. Using the Webb telescope's mid-infrared spectrometer, a team led by Tea Temim mapped which kinds of dust sit in each clump of the debris. The patterns suggest the star's inner layers had begun to merge shortly before it exploded, so its debris now holds clues to the star's last days.",
+   "hook": "Wonder: what can dust tell us about a star that is no longer there?",
+   "source": {
+    "name": "Universe Today, 23 Nov 2026",
+    "url": "https://www.universetoday.com/articles/making-sense-of-chaotic-supernova-ejecta-with-the-jwst"
+   },
+   "edition": "2026-11-24-pm",
+   "order": 24,
+   "id": "2026-11-24-pm-024"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Check the basics before blaming focus",
+   "body": "When focus suddenly won't come, run a quick body check before deciding the task is impossible: Have I eaten? Had water? Moved in the last hour? Is the room too warm? Fixing a simple need often brings back more attention than another round of willpower.",
+   "q": "What should you check before blaming your focus?",
+   "a": "Food, water, movement and comfort.",
+   "edition": "2026-11-24-pm",
+   "order": 23,
+   "id": "2026-11-24-pm-023"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Poompuhar, the port at the river's mouth",
+   "body": "Poompuhar, also called Kaveripoompattinam, sat where the Kaveri meets the Bay of Bengal and was a great port of the early Cholas. The Sangam poem Pattinappalai describes its busy harbour, warehouses and ships, and the epic Silappatikaram opens there, with the city's festivals and merchant streets. Today it's a quiet coastal town, but excavations nearby keep turning up traces of the old port.",
+   "q": "Which Tamil epic opens in Poompuhar?",
+   "a": "Silappatikaram.",
+   "edition": "2026-11-24-pm",
+   "order": 22,
+   "id": "2026-11-24-pm-022"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "YouTube tries feeds you describe in words",
+   "body": "YouTube is testing Custom Feeds, which let you describe in plain language the kind of videos you want to see, rather than relying only on what the recommendation system guesses. It's a small step toward feeds you steer, not just feeds that steer you.",
+   "hook": "Wonder: how would you describe your ideal calm feed in one sentence?",
+   "source": {
+    "name": "The Neuron, 23 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-23-2026/"
+   },
+   "edition": "2026-11-24-pm",
+   "order": 21,
+   "id": "2026-11-24-pm-021"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The Xerox Alto, 1973",
+   "body": "At Xerox PARC in 1973, researchers built the Alto, a computer with a screen that showed pictures as well as text, a three-button mouse, overlapping windows and a connection to Ethernet. It was never sold as a mass product, but a couple of thousand were built for research use, and the ideas it carried went on to shape the Lisa and the Macintosh.",
+   "hook": "Wonder: which idea from the Alto do you use every single day?",
+   "edition": "2026-11-24-pm",
+   "order": 20,
+   "id": "2026-11-24-pm-020"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A pineapple is many fruits at once",
+   "body": "A pineapple grows from a cluster of over a hundred small flowers. Each flower forms a little fruit, and they all fuse around a central stem into one. The diamond pattern on the skin is the map: every 'eye' was once its own flower.",
+   "q": "What is each 'eye' on a pineapple's skin?",
+   "a": "A separate flower's fruit, fused with the others.",
+   "edition": "2026-11-24-pm",
+   "order": 19,
+   "id": "2026-11-24-pm-019"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Give the character a small want in every scene",
+   "body": "Even in a quiet scene, let someone want something small: a seat by the window, the last biscuit, to leave before the rain. A small want gives the scene direction, and the reader leans in to see whether they'll get it. Big goals carry a story; small wants carry a page.",
+   "hook": "Wonder: what does your character want in the next five minutes?",
+   "edition": "2026-11-24-pm",
+   "order": 18,
+   "id": "2026-11-24-pm-018"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Fencing tokens: proof you still hold the lock",
+   "body": "A lease can expire while a worker is paused, say during a long garbage-collection stop, and then two workers both think they own the lock. Fencing tokens fix this. Each time the lock is granted, the lock service hands out a number that always goes up. The worker sends it with every write, and the storage rejects any write carrying a number older than one it has already seen.",
+   "q": "What does storage do with a write carrying an old fencing token?",
+   "a": "Rejects it, because a newer lock holder has already written.",
+   "edition": "2026-11-24-pm",
+   "order": 17,
+   "id": "2026-11-24-pm-017"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Small help, at the right time",
+   "body": "Help given in the hour of need, however small, is larger than the whole world.",
+   "who": "Thirukkural 102 (own rendering)",
+   "edition": "2026-11-24-pm",
+   "order": 16,
+   "id": "2026-11-24-pm-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The Berlin Wall",
+   "body": "The Berlin Defence is old, but it became famous in 2000, when Vladimir Kramnik used it against Garry Kasparov in their World Championship match in London. Kasparov's 1.e4 kept running into it and never broke through. Kramnik won the match without losing a game, and the opening earned the nickname 'the Berlin Wall'. Its trick is an early queen trade: White gets a small edge, Black gets a very solid position.",
+   "q": "Who made the Berlin Defence famous, and against whom?",
+   "a": "Kramnik, against Kasparov in the 2000 World Championship.",
+   "edition": "2026-11-24-pm",
+   "order": 15,
+   "id": "2026-11-24-pm-015"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A shock wave in the Milky Way's bar",
+   "body": "A University of Sydney team led by Hillary Davis used simulations and the positions of masers (natural microwave 'lasers' in gas clouds) to study the bar of stars at our galaxy's centre. They suggest the bar drives shock fronts that squeeze gas and set off star formation, and that part of what we call the Norma arm may really be a star-forming lane along the bar's edge. They estimate the bar stretches about 14,000 light-years.",
+   "hook": "Wonder: how do you map a galaxy you can only see from the inside?",
+   "source": {
+    "name": "ScienceDaily, 23 Nov 2026",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261122060329.htm"
+   },
+   "edition": "2026-11-24-pm",
+   "order": 14,
+   "id": "2026-11-24-pm-014"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Practise the way you'll use it",
+   "body": "Psychologists call it transfer-appropriate processing: memory works best when the way you learn matches the way you'll later need the knowledge. In a 1977 study, people who studied words by their sounds did better on a rhyming test than people who studied meanings, and the other way round. So if you'll need to explain a design aloud, practise explaining it aloud, not just re-reading notes.",
+   "q": "What is transfer-appropriate processing?",
+   "a": "Memory works best when learning matches the way it'll be used later.",
+   "edition": "2026-11-24-pm",
+   "order": 13,
+   "id": "2026-11-24-pm-013"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "A question-answering model that fits on a floppy",
+   "body": "A hobby project called Tiny 2.1 is a question-answering model with about 367,000 parameters, small enough to fit on a floppy disk and run on old 486 and Pentium PCs. It's a playful reminder that 'language model' covers a huge range of sizes, from data-centre giants to something your 1995 computer could load.",
+   "hook": "Wonder: what's the smallest useful thing a model could know?",
+   "source": {
+    "name": "The Neuron, 23 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-23-2026/"
+   },
+   "edition": "2026-11-24-pm",
+   "order": 12,
+   "id": "2026-11-24-pm-012"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Sittanavasal's painted lotus pond",
+   "body": "Near Pudukkottai in Tamil Nadu, a small rock-cut Jain cave temple at Sittanavasal still holds traces of old murals on its ceiling, often dated to around the 9th century. The best-known shows a lotus pond: fish, ducks, elephants and people gathering flowers, painted in soft earthy colours. It's one of the rare places where early Tamil painting survives at all.",
+   "q": "What is the famous painting on Sittanavasal's ceiling?",
+   "a": "A lotus pond with fish, ducks, elephants and flower gatherers.",
+   "edition": "2026-11-24-pm",
+   "order": 11,
+   "id": "2026-11-24-pm-011"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The bookbinder's thread",
+   "body": "Every evening the bookbinder sewed one old book back together. Tonight it was a school atlas, its pages loose as leaves. Inside the back cover a child had once drawn a road between two countries that weren't neighbours, and labelled it 'my bridge'. He sewed carefully around the drawing, so the road would stay exactly where it was, and left the atlas on the counter for morning.",
+   "who": "Original",
+   "edition": "2026-11-24-pm",
+   "order": 10,
+   "id": "2026-11-24-pm-010"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Put the reward right after the step",
+   "body": "Rewards that arrive 'at the end of the month' often feel weightless to an ADHD brain, which tends to favour what's close in time. So shrink the gap: the tea comes right after the first email, the walk right after the form is sent. A small reward now often does more than a big one later.",
+   "hook": "Wonder: what tiny treat could sit right after your next dull task?",
+   "edition": "2026-11-24-pm",
+   "order": 9,
+   "id": "2026-11-24-pm-009"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 8: Map.merge for counting",
+   "body": "Counting words used to mean a get, a null check and a put. Map.merge does it in one line:\n\ncounts.merge(word, 1, Integer::sum);\n\nIf the key is missing, the value 1 is put in. If it's there, the old and new values are combined with Integer::sum. And if your function ever returns null, the key is removed.",
+   "q": "What happens in Map.merge if the remapping function returns null?",
+   "a": "The key is removed from the map.",
+   "edition": "2026-11-24-pm",
+   "order": 8,
+   "id": "2026-11-24-pm-008"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Dolphins sleep with half a brain",
+   "body": "Bottlenose dolphins rest one half of their brain at a time while the other half stays alert, often keeping one eye open. It lets them keep surfacing to breathe and keep track of their group. Scientists call it unihemispheric sleep; some birds do it too.",
+   "q": "How do dolphins sleep without forgetting to breathe?",
+   "a": "One brain half rests while the other stays awake.",
+   "edition": "2026-11-24-pm",
+   "order": 7,
+   "id": "2026-11-24-pm-007"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Game 1 in Geneva opens with a Berlin",
+   "body": "The World Championship match between Gukesh and Javokhir Sindarov began on Tuesday at the Fondation Martin Bodmer near Geneva. Sindarov, with White, opened 1.e4, and Gukesh answered with the Berlin Defence of the Ruy Lopez (1.e4 e5 2.Nf3 Nc6 3.Bb5 Nf6), one of the most solid replies in chess. The match runs up to 14 games, first to 7½ points.",
+   "hook": "Wonder: why would a player choose the quietest defence in the very first game?",
+   "source": {
+    "name": "ChessBase India, live coverage, 24 Nov 2026",
+    "url": "https://chessbase.in/live/fide-world-championship-2026-2"
+   },
+   "edition": "2026-11-24-pm",
+   "order": 6,
+   "id": "2026-11-24-pm-006"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Europa's sodium cloud seems to come from its ocean",
+   "body": "Europa, Jupiter's icy moon, is wrapped in a faint cloud of sodium tens of thousands of kilometres across. Using about two decades of observations from the Keck telescopes, a team led by Emma Lovett at Boston University found the cloud stays remarkably steady even when Io's volcanoes and Jupiter's surroundings change. Their conclusion: the sodium most likely comes up from Europa's own salty ocean beneath the ice. They are now looking for magnesium with Hubble.",
+   "q": "Where does Europa's sodium most likely come from?",
+   "a": "Its salty ocean under the ice, rather than from Io.",
+   "source": {
+    "name": "Universe Today, 23 Nov 2026",
+    "url": "https://www.universetoday.com/articles/new-research-reveals-europas-sodium-cloud-originated-from-its-interior-ocean"
+   },
+   "edition": "2026-11-24-pm",
+   "order": 5,
+   "id": "2026-11-24-pm-005"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "176 tiny pictures, 1999",
+   "body": "In 1999 Shigetaka Kurita designed a set of 176 emoji for NTT DoCoMo's i-mode phone service in Japan. Each was drawn on a grid of just 12 by 12 pixels: a sun, a cloud, a heart, a little umbrella. It wasn't the very first emoji set, but it was the one that made them popular, and in 2016 New York's Museum of Modern Art added it to its collection.",
+   "hook": "Wonder: which feeling would you find hardest to draw in 144 pixels?",
+   "edition": "2026-11-24-pm",
+   "order": 4,
+   "id": "2026-11-24-pm-004"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Not how long, but how well",
+   "body": "As with a play, so with a life: what matters is not how long it runs, but how well it is acted.",
+   "who": "Seneca, Letters 77 (own rendering)",
+   "edition": "2026-11-24-pm",
+   "order": 3,
+   "id": "2026-11-24-pm-003"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Google lets a judge model check an agent's tool calls",
+   "body": "Google has put 'semantic governance policies' into preview on its Gemini agent platform. You write the rules in plain language, and a separate judge model checks every tool call an agent proposes against those rules and the user's actual request, stopping it before it runs if it doesn't fit. Verdicts are logged, and Google suggests watching them in a dry-run mode for a while before switching enforcement on.",
+   "q": "When does the judge model check an agent's action?",
+   "a": "Before the tool call runs, against plain-language rules and the user's request.",
+   "source": {
+    "name": "Help Net Security, 23 Nov 2026",
+    "url": "https://www.helpnetsecurity.com/2026/11/23/google-semantic-governance-policies/"
+   },
+   "edition": "2026-11-24-pm",
+   "order": 2,
+   "id": "2026-11-24-pm-002"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Evening, the chess clock",
+   "body": "Two buttons, two small hills of time.\nOne sinks, the other rises,\nlike a see-saw in a park after dark\nwhere only patient people come to play.",
+   "who": "Original",
+   "edition": "2026-11-24-pm",
+   "order": 1,
+   "id": "2026-11-24-pm-001"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these before scrolling back up.",
+   "q": "1) Which opening did Game 1 in Geneva begin with? 2) Where does Europa's sodium cloud seem to come from? 3) What does Java's Map.merge do when the key is missing?",
+   "a": "1) The Berlin Defence (Ruy Lopez). 2) Its salty interior ocean. 3) It simply puts the value you gave it.",
+   "edition": "2026-11-24-pm",
+   "order": 0,
+   "id": "2026-11-24-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9688,358 +10046,6 @@
    "edition": "2026-11-10-am",
    "order": 18,
    "id": "2026-11-10-am-018"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Petrichor has a birthday",
-   "body": "The earthy smell after the first rain has a name, petrichor, coined in 1964 by Australian scientists Isabel Joy Bear and Richard Thomas in the journal Nature. Part of the scent comes from geosmin, made by soil bacteria, which human noses can detect at astonishingly low concentrations.",
-   "q": "What is the smell of rain on dry earth called?",
-   "a": "Petrichor, a word coined in 1964.",
-   "edition": "2026-11-10-am",
-   "order": 17,
-   "id": "2026-11-10-am-017"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Long-running agent harnesses on Cloudflare",
-   "body": "Cloudflare has published reference setups for running three open agent harnesses, Codex, Exo and Nanocode, inside its Durable Objects. The point is persistence: conversation history, tool results and half-finished steps survive a restart, so an agent can pick up where it left off.",
-   "source": {
-    "name": "Cloudflare changelog",
-    "url": "https://developers.cloudflare.com/changelog/post/2026-11-09-codex-harness/"
-   },
-   "edition": "2026-11-10-am",
-   "order": 16,
-   "id": "2026-11-10-am-016"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Sasikiran wins in Bavaria",
-   "body": "Krishnan Sasikiran won the Bavarian Chess Championship at Gmund am Tegernsee with 7.5/9, first on tiebreaks ahead of Frederik Svane and Roven Vogel. FM Arun Daakshin also finished on 7.5. A neat detail: all four leaders won their final-round games with the black pieces. The open drew 548 players.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/tegernsee-open-2026-r9"
-   },
-   "edition": "2026-11-10-am",
-   "order": 15,
-   "id": "2026-11-10-am-015"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "The wealth that stays",
-   "body": "Learning is the one wealth that does not wear away; other riches are not truly wealth at all.",
-   "who": "Thirukkural 400 (own rendering)",
-   "edition": "2026-11-10-am",
-   "order": 14,
-   "id": "2026-11-10-am-014"
-  },
-  {
-   "topic": "space",
-   "kind": "idea",
-   "title": "Gravity might tie and untie its own knots",
-   "body": "Two physicists, Luca Comisso and Felipe Asenjo, have rewritten Einstein's equations in a form that looks like the maths of plasmas. In that view, structures in a gravitational field could break and reconnect, much as solar magnetic field lines do, passing energy into matter. It is purely theoretical so far, but they suggest it might one day show up in gravitational waves from merging black holes.",
-   "hook": "Wonder: why does nature keep reusing the same patterns in very different places?",
-   "source": {
-    "name": "ScienceDaily (Columbia University)",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261104084011.htm"
-   },
-   "edition": "2026-11-10-am",
-   "order": 13,
-   "id": "2026-11-10-am-013"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The QR code began on a car-parts line",
-   "body": "In 1994, Masahiro Hara at Denso Wave, a Toyota group company, designed the QR code to track car parts faster than barcodes allowed. The black-and-white pattern was reportedly inspired by stones on a Go board. Denso chose not to enforce its patent, which is a big reason the code spread everywhere.",
-   "q": "What was the QR code originally designed to track?",
-   "a": "Automotive parts, at Denso Wave in 1994.",
-   "edition": "2026-11-10-am",
-   "order": 12,
-   "id": "2026-11-10-am-012"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The kolam at number 14",
-   "body": "Every morning the old woman at number 14 drew the same kolam: nine dots, one unbroken line looping around them. Every afternoon, school shoes scuffed it to dust. The boy from next door asked once why she bothered. She handed him the rice flour. He made a mess of it. The next day, a little less. By the monsoon, the line went all the way round without lifting, and she pretended not to watch.",
-   "edition": "2026-11-10-am",
-   "order": 11,
-   "id": "2026-11-10-am-011"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The hypercorrection effect",
-   "body": "Here is a kind surprise: the mistakes you were most sure about are often the easiest to fix. When people get confident answers wrong and then see the correct one, they tend to remember the correction better than for low-confidence errors (Butterfield and Metcalfe, 2001). A confident wrong guess is not wasted; it makes the right answer stand out.",
-   "hook": "Wonder: why might surprise help a memory stick?",
-   "edition": "2026-11-10-am",
-   "order": 10,
-   "id": "2026-11-10-am-010"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Robots that understand what you meant, not just what you said",
-   "body": "Researchers at MIT and NYU have built FLEX, a system that uses large language models to infer the wider intent behind a spoken instruction for robot motion. Tell a robot not to spill coffee on the laptop, and it learns to keep drinks away from electronics in general. The work, led by Andreea Bobu, will be presented at the Conference on Robot Learning.",
-   "q": "What does the FLEX system help a robot do?",
-   "a": "Generalise the intent behind a natural-language instruction, like keeping drinks away from all electronics, not just one laptop.",
-   "source": {
-    "name": "MIT News",
-    "url": "https://news.mit.edu/2026/ai-assisted-learning-platform-helps-robots-reason-beyond-literal-commands-1109"
-   },
-   "edition": "2026-11-10-am",
-   "order": 9,
-   "id": "2026-11-10-am-009"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "An octopus tastes with its arms",
-   "body": "The suckers on an octopus's arms carry chemical receptors, so touching something is also tasting it. Researchers at Harvard described these 'taste-by-touch' receptors in 2020. With much of its nervous system spread through the arms, each arm can explore a crevice fairly independently.",
-   "edition": "2026-11-10-am",
-   "order": 8,
-   "id": "2026-11-10-am-008"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Gangaikonda Cholapuram, the capital named for a river",
-   "body": "Around 1025 CE, Rajendra Chola I built a new capital in what is now Ariyalur district and named it Gangaikonda Cholapuram, 'the city of the Chola who took the Ganga', after his northern campaign. Its great Shiva temple echoes his father's Thanjavur temple but with gentler, curving lines. Today it is part of the UNESCO 'Great Living Chola Temples' listing.",
-   "hook": "Wonder: why would a king build a temple that looks like his father's, but softer?",
-   "edition": "2026-11-10-am",
-   "order": 7,
-   "id": "2026-11-10-am-007"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "A to-do list before bed",
-   "body": "If tomorrow's tasks keep circling as you try to sleep, write them down instead. In a 2018 sleep-lab study at Baylor University, people who spent five minutes writing a to-do list for the coming days fell asleep faster than those who wrote about tasks they had already finished. Paper holds the list, so your mind doesn't have to.",
-   "q": "In the Baylor study, which kind of bedtime writing helped people fall asleep faster?",
-   "a": "Writing a to-do list for the coming days, rather than listing tasks already done.",
-   "edition": "2026-11-10-am",
-   "order": 6,
-   "id": "2026-11-10-am-006"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Gossip protocols: news that spreads like a rumour",
-   "body": "In a big cluster, no single node can phone everyone. So each node, every second or so, picks a few random peers and swaps what it knows: who is alive, which version of a setting is current. Like village gossip, the news reaches everyone in roughly log(N) rounds, and no central server is needed. Cassandra and Consul use variations of this idea for membership and failure detection.",
-   "hook": "Wonder: why does random chatter spread information so reliably?",
-   "edition": "2026-11-10-am",
-   "order": 5,
-   "id": "2026-11-10-am-005"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Pranav V takes the World Junior Blitz title",
-   "body": "India's Pranav V won gold in the U20 Open of the World Junior Blitz Championship in Al Ain with 10.5 points, a point clear of Eldiyar Orozbaev and Robert Piliposyan. Days earlier he had also taken silver in the rapid event. In the girls' section, Valeria Kleymenova won gold on 10 points. The festival drew 185 young players from 40 countries.",
-   "q": "Where were the 2026 World Junior Rapid and Blitz Championships held?",
-   "a": "Al Ain, in the United Arab Emirates.",
-   "source": {
-    "name": "FIDE",
-    "url": "https://www.fide.com/world-junior-blitz-championship-2026-pranav-v-and-kleymenova-claim-titles-in-al-ain/"
-   },
-   "edition": "2026-11-10-am",
-   "order": 4,
-   "id": "2026-11-10-am-004"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Tuesday, early",
-   "body": "The milk packet waits on the step,\ncold as a small promise.\nA crow tests the railing, decides against it.\nSomewhere a pressure cooker clears its throat.\nI have not opened the day yet.\nIt is still folded,\nlike a letter I already know is kind.",
-   "edition": "2026-11-10-am",
-   "order": 3,
-   "id": "2026-11-10-am-003"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A robot arm builds a truss in orbit, alone",
-   "body": "A Caltech robotic arm, part of DARPA's NOM4D programme, has assembled pieces of a truss structure in orbit with no astronauts nearby. The experiment, called ASTRA, is working toward an 11-bay frame for a 1.4-metre reflector antenna, and has completed its third bay. With only a handful of 15-minute radio windows a day, the team solved problems using an identical twin of the robot in their lab.",
-   "q": "How did the ASTRA team troubleshoot with so little contact time?",
-   "a": "They tested fixes on an identical twin of the robot in their lab on the ground.",
-   "source": {
-    "name": "ScienceDaily (Caltech)",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261108233043.htm"
-   },
-   "edition": "2026-11-10-am",
-   "order": 2,
-   "id": "2026-11-10-am-002"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Google shares a plugin that makes coding agents write a spec first",
-   "body": "Google has open-sourced the Elephant-Goldfish Model (EGM), an Apache 2.0 plugin for AI coding agents. Before any code is written, the agent drafts a specification in a Markdown file, and fresh, stateless subagents read it back to catch wrong assumptions early. Google says thousands of its engineers use it internally, though the README notes it isn't an officially supported product.",
-   "hook": "Wonder: why might a reviewer with no memory of the conversation spot more gaps than one who was there?",
-   "source": {
-    "name": "MarkTechPost",
-    "url": "https://www.marktechpost.com/2026/11/08/google-elephant-goldfish-model-plugin-spec-review-coding-agents"
-   },
-   "edition": "2026-11-10-am",
-   "order": 1,
-   "id": "2026-11-10-am-001"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Before you scroll, a small warm-up. Three questions from today's edition sit below; try each one in your head first, then check. Guessing before you know is part of how memory sticks.",
-   "q": "In the Bavarian Championship, who won on tiebreaks with 7.5/9?",
-   "a": "Krishnan Sasikiran, ahead of Frederik Svane and Roven Vogel.",
-   "edition": "2026-11-10-am",
-   "order": 0,
-   "id": "2026-11-10-am-000"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Try to answer before you peek.",
-   "q": "What is 'successive relearning', and which two habits does it combine?",
-   "a": "Quizzing to one correct answer per item, repeated across several days. It combines retrieval practice and spacing.",
-   "edition": "2026-11-09-pm",
-   "order": 30,
-   "id": "2026-11-09-pm-030"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Night rain, Monday",
-   "body": "The rain arrives after dinner\nlike a guest who knows the way,\ntaps the window twice,\nand settles on the roof to talk\nabout nothing much,\nfor hours,\nin a voice that asks for no reply.",
-   "edition": "2026-11-09-pm",
-   "order": 29,
-   "id": "2026-11-09-pm-029"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Show the agent one finished example",
-   "body": "Describing the output you want takes a paragraph; showing one good example takes a moment and is usually clearer. Paste a single finished sample (a commit message, a summary, a table row) and say 'match this shape'. Agents copy structure faithfully, so one example often settles format questions that a page of rules leaves open.",
-   "hook": "Wonder: when could a single example mislead more than it helps?",
-   "edition": "2026-11-09-pm",
-   "order": 28,
-   "id": "2026-11-09-pm-028"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Everyone sees the same Moon phase",
-   "body": "At any moment, the Moon shows the same phase to everyone on Earth, because the phase depends only on where the Moon is relative to the Sun and Earth. What changes with where you stand is its tilt: a crescent can look like a smile near the equator and stand more upright farther north or south, and it appears flipped between the hemispheres.",
-   "hook": "Wonder: what would the Moon's phase look like to someone standing on the Moon?",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/moon-phases/do-we-all-see-the-same-moon-phase/"
-   },
-   "edition": "2026-11-09-pm",
-   "order": 27,
-   "id": "2026-11-09-pm-027"
-  },
-  {
-   "topic": "craft",
-   "kind": "tip",
-   "title": "Java: validate a record in its compact constructor",
-   "body": "Records can check their data without repeating every field:\n\nrecord Range(int lo, int hi) {\n    Range {\n        if (lo > hi) throw new IllegalArgumentException(\"lo > hi\");\n    }\n}\n\nThe compact constructor has no parameter list; the fields are assigned automatically after its body runs. You can even normalise values there by reassigning the parameters, like lo = Math.max(0, lo).",
-   "hook": "Wonder: why can you reassign the parameter but not this.lo inside a compact constructor?",
-   "edition": "2026-11-09-pm",
-   "order": 26,
-   "id": "2026-11-09-pm-026"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "At dawn",
-   "body": "At dawn, when you are slow to rise, keep this thought ready: I am getting up to do the work of a human being. Why grumble, if I am going to do what I was made for?",
-   "who": "Marcus Aurelius, Meditations 5.1 (own rendering)",
-   "edition": "2026-11-09-pm",
-   "order": 25,
-   "id": "2026-11-09-pm-025"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Prophylaxis: ask what they want",
-   "body": "Before choosing your move, ask one quiet question: 'If it were my opponent's turn, what would they play?' Aron Nimzowitsch called the habit of stopping that plan before it starts prophylaxis. Often the best move isn't an attack at all, just a pawn step or a rook shift that makes their best idea stop working.",
-   "q": "What is prophylaxis in chess?",
-   "a": "Preventing your opponent's plan before they can carry it out.",
-   "edition": "2026-11-09-pm",
-   "order": 24,
-   "id": "2026-11-09-pm-024"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "QWERTY came from a typewriter",
-   "body": "The QWERTY layout comes from the Sholes and Glidden typewriter, sold by Remington from 1874. Christopher Latham Sholes rearranged keys over several years of prototypes. The popular story says it was meant to slow typists down; historians think it was more about keeping often-paired letters apart so the typebars jammed less, and about how telegraph operators used early machines.",
-   "q": "Which machine gave us the QWERTY layout?",
-   "a": "The Sholes and Glidden typewriter, sold by Remington from 1874.",
-   "edition": "2026-11-09-pm",
-   "order": 23,
-   "id": "2026-11-09-pm-023"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Tidy one category, not one room",
-   "body": "'Clean the room' has no edges. 'Put away every cup' does. Pick one category (cups, chargers, clothes on the chair) and finish just that. It's easy to see when you're done, and the room often looks noticeably better after just two categories.",
-   "hook": "Wonder: which single category would change your desk the most?",
-   "edition": "2026-11-09-pm",
-   "order": 22,
-   "id": "2026-11-09-pm-022"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Carl Sagan was born on this day",
-   "body": "Carl Sagan was born on 9 November 1934 in Brooklyn. He helped design the plaques and Golden Records carried by the Pioneer and Voyager spacecraft and brought the cosmos to millions through the TV series Cosmos. He also suggested Voyager 1 turn its camera homeward in 1990, giving us the 'Pale Blue Dot' image.",
-   "q": "Which famous 1990 image did Carl Sagan push Voyager 1 to take?",
-   "a": "The 'Pale Blue Dot', Earth seen from about 6 billion km away.",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/space/carl-sagan-birthday-november-9-1934/"
-   },
-   "edition": "2026-11-09-pm",
-   "order": 21,
-   "id": "2026-11-09-pm-021"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Give your character a habit",
-   "body": "A small, repeated habit tells readers more than a paragraph of description: a man who folds every receipt into squares, a grandmother who taps the doorframe twice before leaving. Show it early, then let it change once at the moment that matters. When the habit breaks, readers feel the character break too.",
-   "hook": "Wonder: what habit of yours would a stranger notice first?",
-   "edition": "2026-11-09-pm",
-   "order": 20,
-   "id": "2026-11-09-pm-020"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "A Pallava king who wrote a comedy",
-   "body": "Mahendravarman I, the 7th-century Pallava king, is credited with writing Mattavilasa Prahasana ('The Farce of Drunken Revelry'), a one-act Sanskrit comedy. Its plot follows a lost begging bowl and the muddle of accusations that follows. Plays from the tradition are still staged in Kerala's Koodiyattam theatre.",
-   "q": "What kind of play did the Pallava king Mahendravarman I write?",
-   "a": "A one-act Sanskrit comedy (farce), Mattavilasa Prahasana.",
-   "edition": "2026-11-09-pm",
-   "order": 19,
-   "id": "2026-11-09-pm-019"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Successive relearning",
-   "body": "Combine two strong habits: retrieval and spacing. Quiz yourself until you get each item right once, then stop. Come back another day and do it again, and again a few days later. Research by Katherine Rawson and John Dunlosky found this 'successive relearning' gives durable memory for surprisingly little extra time, because later sessions get quicker.",
-   "hook": "Wonder: why do the later relearning sessions take less time than the first?",
-   "edition": "2026-11-09-pm",
-   "order": 18,
-   "id": "2026-11-09-pm-018"
   }
  ]
 }
