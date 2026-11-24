@@ -1,6 +1,356 @@
 {
- "updated": "2026-11-23T17:20:51+00:00",
+ "updated": "2026-11-24T02:13:49+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these before scrolling back up.",
+   "q": "1) How many neck vertebrae does a giraffe have? 2) In a Merkle-tree check, what is compared first? 3) Which planet reaches opposition on 25 November?",
+   "a": "1) Seven. 2) The root hash. 3) Uranus.",
+   "edition": "2026-11-24-am",
+   "order": 29,
+   "id": "2026-11-24-am-029"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Morning, the newspaper on the gate",
+   "body": "Rolled tight, tucked in the grille,\nit waits like a letter nobody's in a hurry to open.\nThe crow inspects it, finds no news worth eating,\nand goes back to the sky.",
+   "who": "Original",
+   "edition": "2026-11-24-am",
+   "order": 28,
+   "id": "2026-11-24-am-028"
+  },
+  {
+   "topic": "ai",
+   "kind": "tip",
+   "title": "Paste the error, not your summary",
+   "body": "When an agent's change breaks something, give it the exact error message and the command that produced it, not 'it doesn't work'. The full text carries line numbers, types and names that point straight at the cause, and it saves a round of guessing.",
+   "q": "What should you give an agent when something breaks?",
+   "a": "The exact error text and the command that produced it.",
+   "edition": "2026-11-24-am",
+   "order": 27,
+   "id": "2026-11-24-am-027"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Think, then begin",
+   "body": "Weigh it well, then begin. To begin and weigh it afterwards is the mistake.",
+   "who": "Thirukkural 467 (own rendering)",
+   "edition": "2026-11-24-am",
+   "order": 26,
+   "id": "2026-11-24-am-026"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first floppy disk, 1971",
+   "body": "IBM introduced the 8-inch floppy disk in 1971, first to load start-up instructions into its large mainframes. The original disks were read-only and held about 80 kilobytes. Smaller, writable versions followed, and the floppy became how a generation carried files around.",
+   "q": "How big was the first floppy disk?",
+   "a": "8 inches across, holding about 80 KB.",
+   "edition": "2026-11-24-am",
+   "order": 25,
+   "id": "2026-11-24-am-025"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 9: Optional.or for a fallback lookup",
+   "body": "When the fallback is itself an Optional, use or() instead of nesting:\n\nfindInCache(id).or(() -> findInDb(id))\n\nIf the first Optional has a value it's returned as is; otherwise the supplier runs and its Optional is returned. Unlike orElseGet, the result stays an Optional, so you can chain another or().",
+   "q": "How does Optional.or differ from orElseGet?",
+   "a": "or() takes a supplier of an Optional and returns an Optional; orElseGet returns a plain value.",
+   "edition": "2026-11-24-am",
+   "order": 24,
+   "id": "2026-11-24-am-024"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The principle of two weaknesses",
+   "body": "One weakness in a position can often be defended. The classic plan is to create a second weakness on the other side of the board. The defender can't guard both at once, and when their pieces shuttle back and forth, something eventually gives. It's patient chess: stretch, then strike.",
+   "q": "Why create a second weakness?",
+   "a": "A single weakness can be defended; two far apart overstretch the defence.",
+   "edition": "2026-11-24-am",
+   "order": 23,
+   "id": "2026-11-24-am-023"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Goodbye' was once a blessing",
+   "body": "'Goodbye' is a squeezed-down form of 'God be with ye', a parting phrase from the late 1500s. Over time it was reshaped by greetings like 'good day' and 'good night', and the 'good' took over.",
+   "hook": "Wonder: what will today's 'see ya' have worn down to in 400 years?",
+   "edition": "2026-11-24-am",
+   "order": 22,
+   "id": "2026-11-24-am-022"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Uranus at opposition",
+   "body": "Uranus reaches opposition on 25 November, sitting opposite the Sun in Taurus and up all night. At about magnitude 5.6 it's technically at the edge of naked-eye visibility, but this week's bright Moon makes binoculars or a small telescope the better bet. Look for a tiny, steady blue-green dot.",
+   "q": "In which constellation is Uranus at this opposition?",
+   "a": "Taurus.",
+   "source": {
+    "name": "Star Walk, Sky Tonight",
+    "url": "https://starwalk.space/en/news/night-sky-tonight"
+   },
+   "edition": "2026-11-24-am",
+   "order": 21,
+   "id": "2026-11-24-am-021"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Give small decisions a short deadline",
+   "body": "For low-stakes choices (which notebook, which recipe, which reply first), set a five-minute timer and pick when it rings. Most small decisions have several fine answers, and the time spent comparing them can eat the energy meant for the task itself.",
+   "q": "Why time-box small decisions?",
+   "a": "Several options are usually fine, and long deliberation drains energy for the actual task.",
+   "edition": "2026-11-24-am",
+   "order": 20,
+   "id": "2026-11-24-am-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Show a character being good at something",
+   "body": "Readers warm to competence. Let a character do one ordinary task with quiet skill: the tailor who measures by eye, the cook who knows the oil is ready by its sound. A few lines of someone being good at their work tell us who they are faster than a paragraph of description.",
+   "hook": "Wonder: what small skill would reveal your main character?",
+   "edition": "2026-11-24-am",
+   "order": 19,
+   "id": "2026-11-24-am-019"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Show-Context: see what a coding agent reads",
+   "body": "A new open-source tool called Show-Context displays which files and data Claude Code looks at during a coding session. It's a small transparency aid: you can see what the agent drew on before trusting its suggestion.",
+   "source": {
+    "name": "AI Agents Directory, 23 Nov 2026",
+    "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-23-2026"
+   },
+   "edition": "2026-11-24-am",
+   "order": 18,
+   "id": "2026-11-24-am-018"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Ramappa, the temple named for its sculptor",
+   "body": "The Rudreshwara temple at Palampet in Telangana was built in the early 13th century under the Kakatiyas, yet it's known by the name of its chief sculptor, Ramappa. Its carved dancers and polished pillars helped it become a UNESCO World Heritage Site in 2021. Its tower is said to use bricks so light they float on water.",
+   "q": "Whose name does the Ramappa temple carry?",
+   "a": "Its chief sculptor, Ramappa.",
+   "edition": "2026-11-24-am",
+   "order": 17,
+   "id": "2026-11-24-am-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Context comes along with the memory",
+   "body": "In a 1975 study, Godden and Baddeley had divers learn word lists either on land or underwater. Recall tended to be better in the same setting where the words were learned. Later studies find the effect is often smaller, but there's a usable takeaway: if you can't return to the place, picturing it in detail can help bring the memory back.",
+   "q": "What were the divers in Godden and Baddeley's study asked to do?",
+   "a": "Learn and recall word lists on land or underwater.",
+   "edition": "2026-11-24-am",
+   "order": 16,
+   "id": "2026-11-24-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Merkle trees: compare a summary, then zoom in",
+   "body": "To check whether two replicas hold the same data, hash small ranges of keys, then hash those hashes in pairs, up to a single root. If the roots match, the replicas agree. If not, compare the children and walk down only the branches that differ. Dynamo-style stores such as Cassandra use this for anti-entropy repair, so they move just the out-of-sync ranges instead of everything.",
+   "q": "What do two replicas compare first in a Merkle-tree check?",
+   "a": "The root hash; they descend only into branches that differ.",
+   "edition": "2026-11-24-am",
+   "order": 15,
+   "id": "2026-11-24-am-015"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Mars meets Regulus in Leo",
+   "body": "From 24 to 27 November, reddish Mars sits close to blue-white Regulus, the brightest star in Leo. They're under two degrees apart, closest on 26 November, and fit together in one binocular view. Look late at night and before dawn; the colour contrast is the treat.",
+   "hook": "Wonder: which is farther away, and by how much?",
+   "source": {
+    "name": "Star Walk, Sky Tonight",
+    "url": "https://starwalk.space/en/news/night-sky-tonight"
+   },
+   "edition": "2026-11-24-am",
+   "order": 14,
+   "id": "2026-11-24-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The barber's chessboard",
+   "body": "The barber kept a chessboard on the bench for customers who had to wait. Nobody finished a game; each one played a few moves and left when called. By evening the position was a mess no grandmaster would recognise. He studied it while sweeping up, made one move for the next morning's first customer, and switched off the light.",
+   "who": "Original",
+   "edition": "2026-11-24-am",
+   "order": 13,
+   "id": "2026-11-24-am-013"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "OpenAI's MedChemBench",
+   "body": "OpenAI has released MedChemBench, a benchmark of 99 problems drawn from real medicinal-chemistry research. It checks whether models can read molecular evidence and suggest compounds worth testing next, the kind of judgement a chemist makes before stepping into the lab.",
+   "q": "How many problems are in MedChemBench?",
+   "a": "99, drawn from medicinal-chemistry research.",
+   "source": {
+    "name": "The Neuron, 23 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-23-2026/"
+   },
+   "edition": "2026-11-24-am",
+   "order": 12,
+   "id": "2026-11-24-am-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Dyed by thought",
+   "body": "Such as are thy habitual thoughts, such also will be the character of thy mind; for the soul is dyed by the thoughts.",
+   "who": "Marcus Aurelius, Meditations 5.16 (tr. George Long)",
+   "edition": "2026-11-24-am",
+   "order": 11,
+   "id": "2026-11-24-am-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Tennis for Two, 1958",
+   "body": "In October 1958 physicist William Higinbotham set up a game for visitors' day at Brookhaven National Laboratory in New York. An analog computer drew a ball bouncing over a net on an oscilloscope screen, and two players used small controllers to hit it. Visitors queued to play, and it's often counted among the first video games.",
+   "hook": "Wonder: what would a 1958 visitor have made of a phone game today?",
+   "edition": "2026-11-24-am",
+   "order": 10,
+   "id": "2026-11-24-am-010"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A giraffe's neck has seven bones",
+   "body": "A giraffe has seven neck vertebrae, the same number as a human and almost every other mammal. Theirs are simply very long, each roughly 25 cm. Length came from stretching the bones, not adding more of them.",
+   "q": "How many neck vertebrae does a giraffe have?",
+   "a": "Seven, the same as you.",
+   "edition": "2026-11-24-am",
+   "order": 9,
+   "id": "2026-11-24-am-009"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Muzychuk takes the blitz in the Women's Tour Grand Final",
+   "body": "Anna Muzychuk won the blitz section of the WR Women's Chess Tour Grand Final on 22 November, beating Kateryna Lagno 2½–1½ in the final. She leads the standings going into the rapid knockout that follows.",
+   "q": "Whom did Anna Muzychuk beat in the blitz final?",
+   "a": "Kateryna Lagno, 2½–1½.",
+   "source": {
+    "name": "Chess.com News",
+    "url": "https://www.chess.com/news/view/2026-wr-womens-chess-tour-grand-final-day-1"
+   },
+   "edition": "2026-11-24-am",
+   "order": 8,
+   "id": "2026-11-24-am-008"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Decide the 'B-minus' version first",
+   "body": "Before starting, write down what a good-enough version looks like: three bullet points instead of a polished page, one tidy shelf instead of the whole cupboard. Having a modest bar you're allowed to stop at makes it easier to begin, and anything beyond it becomes a bonus.",
+   "q": "What is the 'B-minus version' of a task?",
+   "a": "A good-enough finish you decide on in advance and are allowed to stop at.",
+   "edition": "2026-11-24-am",
+   "order": 7,
+   "id": "2026-11-24-am-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The Five Rathas of Mamallapuram",
+   "body": "The Pancha Rathas at Mamallapuram were cut from a long granite outcrop in the 7th century, under the Pallavas. Each 'chariot' shows a different style of temple roof and tower, almost like a set of stone models. They are popularly named after the five Pandavas and Draupadi, though those names came much later.",
+   "hook": "Wonder: were the Rathas a showroom of designs for future temples?",
+   "edition": "2026-11-24-am",
+   "order": 6,
+   "id": "2026-11-24-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 11: String.lines and isBlank",
+   "body": "To process text line by line without splitting on \"\\n\" yourself:\n\ntext.lines().filter(l -> !l.isBlank()).map(String::strip).toList()\n\nlines() returns a Stream<String> and understands \\n, \\r and \\r\\n. isBlank() is true for an empty string or one that is only whitespace.",
+   "q": "What does \"  \".isBlank() return?",
+   "a": "true. Whitespace-only strings count as blank.",
+   "edition": "2026-11-24-am",
+   "order": 5,
+   "id": "2026-11-24-am-005"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The memory palace",
+   "body": "The method of loci links things to remember with places along a route you know well: the gate, the shoe rack, the kitchen. To recall, you walk the route in your mind and 'see' each item where you left it. Legend credits the Greek poet Simonides with the idea, and memory competitors still rely on it today.",
+   "q": "What does the method of loci attach memories to?",
+   "a": "Places along a familiar route, walked in the mind.",
+   "hook": "Wonder: which room in your home would hold a list best?",
+   "edition": "2026-11-24-am",
+   "order": 4,
+   "id": "2026-11-24-am-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Tuesday, the big moon",
+   "body": "The moon came up too large for the lane,\nso it rested a while on the water tank,\nlet the dogs have a look,\nthen climbed on, a little smaller, a little ours.",
+   "who": "Original",
+   "edition": "2026-11-24-am",
+   "order": 3,
+   "id": "2026-11-24-am-003"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "AI agents sketch out a new CPU",
+   "body": "Startup Architect Labs says AI agents designed a general-purpose CPU, called Frostbite, with its own new instruction set. In simulated tests of a 7-nanometre design across 25 workloads, it reported about 4.6 times the performance per watt of a similar-sized conventional in-order CPU, and about 3.8 times on the 15 workloads with no AI-specific tuning. No physical chip has been made yet, so these are simulation numbers.",
+   "q": "Has the Frostbite CPU been built as a physical chip?",
+   "a": "Not yet; its results come from pre-silicon simulation.",
+   "source": {
+    "name": "The Neuron, 23 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-november-23-2026/"
+   },
+   "edition": "2026-11-24-am",
+   "order": 2,
+   "id": "2026-11-24-am-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Tonight's Beaver Supermoon",
+   "body": "The Full Moon on the evening of 24 November is also a supermoon, appearing about 6.5% larger and 13.5% brighter than an average Full Moon. Look just after moonrise, when it sits low and can glow golden-orange. It also passes close to the Pleiades over these few nights.",
+   "hook": "Wonder: why does a low Moon look bigger, even though it isn't?",
+   "source": {
+    "name": "Star Walk, Sky Tonight",
+    "url": "https://starwalk.space/en/news/night-sky-tonight"
+   },
+   "edition": "2026-11-24-am",
+   "order": 1,
+   "id": "2026-11-24-am-001"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Game 1 in Geneva: Sindarov with White, Gukesh with Black",
+   "body": "The World Championship's first game is today, 24 November, at the Fondation Martin Bodmer in Cologny, near Geneva. Gukesh and Javokhir Sindarov are both 20, making this the youngest title match ever played. There are up to 14 classical games; the first to 7½ points wins. Each player gets 120 minutes for the first 40 moves, then 30 more, with 30 seconds added per move from move 41.",
+   "q": "How many points does a player need to win the 2026 title match?",
+   "a": "7½ out of a possible 14.",
+   "source": {
+    "name": "Al Jazeera",
+    "url": "https://www.aljazeera.com/sports/2026/11/22/gukesh-vs-sindarov-the-youngest-world-chess-championship-in-history"
+   },
+   "edition": "2026-11-24-am",
+   "order": 0,
+   "id": "2026-11-24-am-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9690,341 +10040,6 @@
    "edition": "2026-11-09-pm",
    "order": 18,
    "id": "2026-11-09-pm-018"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Database agents for Oracle, Postgres and more",
-   "body": "Tessell launched three agents built with Google Gemini on Google Cloud: an Ops Agent for recovery and scaling, a Governance Agent for compliance settings, and a Migrate Agent for taking inventory before a move. They cover Oracle, SQL Server, PostgreSQL and MySQL, with an enterprise preview planned this quarter.",
-   "source": {
-    "name": "AI Agent Store",
-    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
-   },
-   "edition": "2026-11-09-pm",
-   "order": 17,
-   "id": "2026-11-09-pm-017"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Venus, not Mercury, is the hottest planet",
-   "body": "Mercury is closest to the Sun, but Venus is hotter: its surface sits around 465 °C, day and night. Its thick carbon-dioxide atmosphere traps heat so well that it's hot enough to melt lead. Mercury, with almost no air, swings from scorching days to freezing nights.",
-   "q": "Which planet has the hottest surface, and why?",
-   "a": "Venus, because its thick CO2 atmosphere traps heat.",
-   "edition": "2026-11-09-pm",
-   "order": 16,
-   "id": "2026-11-09-pm-016"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Write-through vs write-behind caches",
-   "body": "A write-through cache writes to the cache and the database together, so reads after writes are fresh, but every write pays the database's cost. A write-behind (write-back) cache accepts the write in the cache and flushes to the database later in batches: fast, but a crash before the flush can lose data. Choose by asking: what does losing the last few seconds of writes cost me?",
-   "q": "What's the main risk of a write-behind cache?",
-   "a": "Writes not yet flushed to the database can be lost if the cache fails.",
-   "edition": "2026-11-09-pm",
-   "order": 15,
-   "id": "2026-11-09-pm-015"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The jasmine seller's last string",
-   "body": "At eight, the jasmine seller had one string left, too short to sell. She looked at the bus stop: a tired nurse, a boy with a schoolbag, an old man with a cloth bag of onions. She cut the string into three and handed them out without a word. The bus came. Three people rode home smelling of flowers and didn't know why they were smiling.",
-   "edition": "2026-11-09-pm",
-   "order": 14,
-   "id": "2026-11-09-pm-014"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Bullet Grandpa takes a game from Dubov",
-   "body": "In the Season 1 final of Chess.com's 100-0 Project, Arizona amateur Josh Smith, known online as Bullet Grandpa, won a game against super-GM Daniil Dubov in game 28. That one win meant there would be no 100-0 sweep. A small, happy reminder that every game starts level.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/bullet-grandpa-wins-2026-100-project-season-1"
-   },
-   "edition": "2026-11-09-pm",
-   "order": 13,
-   "id": "2026-11-09-pm-013"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Rubin finds a world that orbits backwards",
-   "body": "EarthSky reports that the Vera C. Rubin Observatory has found an object beyond Neptune on a retrograde orbit, travelling around the Sun in the opposite direction to the planets. Almost everything in the solar system circles the same way, a leftover from the spinning disc it formed in, so the backward ones are clues to old gravitational nudges.",
-   "hook": "Wonder: what could flip a small world's orbit around?",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/space/rubin-retrograde-object-far-solar-system-r631/"
-   },
-   "edition": "2026-11-09-pm",
-   "order": 12,
-   "id": "2026-11-09-pm-012"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Ripe fruit",
-   "body": "To speak harsh words when kind ones are at hand is like picking unripe fruit while ripe fruit hangs on the same tree.",
-   "who": "Thiruvalluvar, Thirukkural 100 (own rendering)",
-   "edition": "2026-11-09-pm",
-   "order": 11,
-   "id": "2026-11-09-pm-011"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Hamming's weekend problem",
-   "body": "At Bell Labs in the late 1940s, Richard Hamming ran long jobs on a relay computer over weekends. When the machine detected an error, it simply dropped his job, and he'd come back on Monday to nothing. Annoyed, he asked: if a machine can detect an error, why can't it fix one? His 1950 paper on error-correcting codes answered that, and Hamming codes still help protect data in memory today.",
-   "q": "What question led Richard Hamming to invent error-correcting codes?",
-   "a": "If the machine can detect an error, why can't it locate and correct it?",
-   "edition": "2026-11-09-pm",
-   "order": 10,
-   "id": "2026-11-09-pm-010"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Watching an agent from your phone",
-   "body": "DigitalOcean introduced Cuttlefish, an iPhone app for its Managed Agents. You can follow an agent's live session, approve or deny the tools it wants to use, steer it, or stop it. Managed Agents is still in public preview.",
-   "hook": "Wonder: which agent actions would you always want to approve yourself?",
-   "source": {
-    "name": "AI Agent Store",
-    "url": "https://aiagentstore.ai/ai-agent-news/this-week"
-   },
-   "edition": "2026-11-09-pm",
-   "order": 9,
-   "id": "2026-11-09-pm-009"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Measure chores in songs",
-   "body": "Minutes are abstract; songs are not. Put on one song and do the dishes until it ends. A song is about three or four minutes, has a clear finish line, and makes time something you can hear. If you want to keep going, play another; if not, you've still done a full song's worth.",
-   "q": "Why can a song work better than a minute timer for starting a chore?",
-   "a": "It makes time audible and gives a clear, short finish line.",
-   "edition": "2026-11-09-pm",
-   "order": 8,
-   "id": "2026-11-09-pm-008"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Sound is faster underwater",
-   "body": "In air at room temperature, sound travels about 343 metres per second. In seawater it travels about 1,500 metres per second, more than four times as fast, because water is far stiffer, which more than makes up for being denser. That's one reason whale calls can carry across whole ocean basins.",
-   "hook": "Wonder: is sound even faster through steel?",
-   "edition": "2026-11-09-pm",
-   "order": 7,
-   "id": "2026-11-09-pm-007"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Poompuhar, the port at the river's mouth",
-   "body": "Poompuhar, also called Kaveripattinam, sat where the Kaveri meets the sea and was a major early Chola port. Sangam-era works such as Pattinappalai and the Silappatikaram describe its busy markets, warehouses and ships. The Silappatikaram's heroine Kannagi and her husband Kovalan begin their story in this city.",
-   "q": "Which Chola port city, at the Kaveri's mouth, opens the Silappatikaram?",
-   "a": "Poompuhar (Kaveripattinam).",
-   "edition": "2026-11-09-pm",
-   "order": 6,
-   "id": "2026-11-09-pm-006"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The production effect",
-   "body": "Words you say out loud are remembered better than words you read silently. Researchers call this the production effect: saying, writing or typing an item makes it stand out from the rest. It works best when you produce only the key items, not everything, so the important lines become the distinctive ones.",
-   "hook": "Wonder: why does the effect shrink if you read every single word aloud?",
-   "edition": "2026-11-09-pm",
-   "order": 5,
-   "id": "2026-11-09-pm-005"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Vector clocks: who knew what, when",
-   "body": "A Lamport clock gives one number per event, which orders events but can't tell you whether two updates were concurrent. A vector clock keeps one counter per node. Each node bumps its own entry on every event and takes the element-wise maximum when it receives a message. If every entry of A is less than or equal to B's, then A happened before B; if neither dominates, the two were concurrent, and you have a real conflict to resolve.",
-   "q": "With vector clocks, how do you tell two events were concurrent?",
-   "a": "Neither vector is less-than-or-equal to the other in every entry.",
-   "edition": "2026-11-09-pm",
-   "order": 4,
-   "id": "2026-11-09-pm-004"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "No moon",
-   "body": "Tonight the moon took a day off.\nThe sky, unsupervised,\nlet every small star speak.\nI stood on the terrace a long time,\nlistening with my eyes.",
-   "edition": "2026-11-09-pm",
-   "order": 3,
-   "id": "2026-11-09-pm-003"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "India heads to the Asian Nations Cup",
-   "body": "The Asian Nations Chess Cup runs in Abu Dhabi from 9 to 18 November. India's squad includes GMs Nihal Sarin, Aravindh Chithambaram, V Pranav and M Pranesh, with WGM Vantika Agarwal, WIMs Guntaka Aamukta and Sirin Kalyani, WFM Shubhi Gupta and WCM Modipalli Deekshitha.",
-   "hook": "Wonder: in a team event, why does board order matter so much?",
-   "source": {
-    "name": "Telangana Today",
-    "url": "https://telanganatoday.com/indian-chess-team-set-for-asian-nations-cup-in-abu-dhabi"
-   },
-   "edition": "2026-11-09-pm",
-   "order": 2,
-   "id": "2026-11-09-pm-002"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "A 284-billion-parameter model on a CPU-only machine",
-   "body": "An open-source project called llama-modchip squeezes DeepSeek V4-Flash, a 284B-parameter model, into about 57 GB using a custom quantisation of roughly 1.7 bits per weight. Its authors report it running on 64 GB machines with no GPU (AMD Zen 5, Apple Silicon and ARM64) at around 9 to 15 tokens per second. Big models are slowly becoming things you can run at home.",
-   "q": "About how many bits per weight does llama-modchip use to fit a 284B model in ~57 GB?",
-   "a": "Roughly 1.7 bits per weight.",
-   "source": {
-    "name": "AI Weekly",
-    "url": "https://aiweekly.co/alerts/llama-modchip-runs-a-284b-deepseek-v4-flash-model-in-57gb-of-ram-on-a-cpu-only"
-   },
-   "edition": "2026-11-09-pm",
-   "order": 1,
-   "id": "2026-11-09-pm-001"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "New Moon tonight: the darkest skies of the month",
-   "body": "The Moon is new on 9 November, so the next few evenings are moonless and dark. EarthSky's November guide notes Mars and Jupiter drawing closer together in the sky. A clear night this week is a good one to step outside, let your eyes adjust for ten minutes, and see how many more stars appear.",
-   "hook": "Wonder: why does a new Moon rise and set with the Sun, so it never lights the night?",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/astronomy-essentials/visible-planets-tonight-mars-jupiter-venus-saturn-mercury/"
-   },
-   "edition": "2026-11-09-pm",
-   "order": 0,
-   "id": "2026-11-09-pm-000"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Try to answer before you peek.",
-   "q": "What happens to effort as a goal comes into view, and what's that called?",
-   "a": "Effort tends to speed up near the finish. It's called the goal-gradient effect.",
-   "edition": "2026-11-09-am",
-   "order": 29,
-   "id": "2026-11-09-am-029"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Long enough",
-   "body": "Life is long enough, if you know how to use it.",
-   "who": "Seneca, On the Shortness of Life (own rendering)",
-   "edition": "2026-11-09-am",
-   "order": 28,
-   "id": "2026-11-09-am-028"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Ledger of a slow evening",
-   "body": "Credit: one long shadow of the neem.\nCredit: the neighbour's radio, low.\nDebit: nothing.\nCarried forward: the last of the light,\nwhich I did not spend,\nonly watched.",
-   "edition": "2026-11-09-am",
-   "order": 27,
-   "id": "2026-11-09-am-027"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Ask the agent what it assumed",
-   "body": "When an agent finishes a task, ask one more question: 'List the assumptions you made that I didn't state.' Hidden guesses (which file, which time zone, which version) are where most quiet mistakes live, and naming them takes seconds.",
-   "edition": "2026-11-09-am",
-   "order": 26,
-   "id": "2026-11-09-am-026"
-  },
-  {
-   "topic": "craft",
-   "kind": "tip",
-   "title": "Java: sort by more than one thing",
-   "body": "Comparators chain cleanly:\n\npeople.sort(Comparator.comparing(Person::city)\n    .thenComparing(Person::age, Comparator.reverseOrder()));\n\nThis sorts by city, then oldest first within each city. Java's List.sort is stable, so items that are equal on every key keep their original order.",
-   "hook": "Wonder: why does a stable sort let you build multi-key sorts one key at a time?",
-   "edition": "2026-11-09-am",
-   "order": 25,
-   "id": "2026-11-09-am-025"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "CSIRAC, the computer that played music",
-   "body": "CSIRAC, Australia's first stored-program computer, was among the first computers anywhere to play music. Programmers made its speaker pulse at chosen rates to form notes, and it played tunes such as the 'Colonel Bogey March' for an audience in 1951. Today the machine is kept at Museums Victoria in Melbourne.",
-   "q": "Which early computer, now in Melbourne, played music in 1951?",
-   "a": "CSIRAC, Australia's first stored-program computer.",
-   "edition": "2026-11-09-am",
-   "order": 24,
-   "id": "2026-11-09-am-024"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "An admin hour for the small stuff",
-   "body": "Tiny chores (a form, a bill, a reply) each cost a switch of attention. Collect them in one list and give them a single weekly slot, with music and a cup of something. One hour of small wins in a row feels lighter than twenty interruptions scattered across the week.",
-   "edition": "2026-11-09-am",
-   "order": 23,
-   "id": "2026-11-09-am-023"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "A second crazyhouse crown for Awatramani",
-   "body": "Janak Awatramani won the 2026 Chess.com Crazyhouse Championship, his second title in the event. In crazyhouse, captured pieces switch sides and can be dropped back onto the board, so games stay lively to the end.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/2026-crazyhouse-chess-championship-awatramani"
-   },
-   "edition": "2026-11-09-am",
-   "order": 22,
-   "id": "2026-11-09-am-022"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "The lotus pond of Sittanavasal",
-   "body": "In a Jain cave temple at Sittanavasal, in Pudukkottai district, faint old paintings still cover the ceiling: a lotus pond with fish, ducks, elephants and people gathering flowers. Dated by scholars to somewhere between the 7th and 9th centuries, they are among the oldest surviving paintings in Tamil Nadu.",
-   "hook": "Wonder: what made those pigments last more than a thousand years on a cave ceiling?",
-   "edition": "2026-11-09-am",
-   "order": 21,
-   "id": "2026-11-09-am-021"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Jupiter spins in under ten hours",
-   "body": "The largest planet has the shortest day in the solar system: Jupiter turns once in about 9 hours 56 minutes. The fast spin flattens it slightly, so it is noticeably wider at the equator than from pole to pole.",
-   "q": "How long is a day on Jupiter?",
-   "a": "About 9 hours 56 minutes, the shortest of any planet.",
-   "edition": "2026-11-09-am",
-   "order": 20,
-   "id": "2026-11-09-am-020"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "End the scene on a turn",
-   "body": "A useful test for any scene: is something different at the end compared with the start? A hope becomes a doubt, a secret becomes shared, a stranger becomes an ally. If nothing has turned, the scene may be scenery. Keep the best image and fold it into a scene that moves.",
-   "q": "What simple test tells you a scene is earning its place?",
-   "a": "Something has turned: a value or situation has changed between the scene's start and end.",
-   "edition": "2026-11-09-am",
-   "order": 19,
-   "id": "2026-11-09-am-019"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The Pacific is wider than the Moon",
-   "body": "At its widest, from Indonesia to the coast of Colombia, the Pacific Ocean stretches about 19,800 km. That's more than five times the Moon's diameter of about 3,475 km.",
-   "hook": "Wonder: how many Moons could you line up across the Pacific?",
-   "edition": "2026-11-09-am",
-   "order": 18,
-   "id": "2026-11-09-am-018"
   }
  ]
 }
