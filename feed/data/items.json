@@ -1,6 +1,362 @@
 {
- "updated": "2026-11-24T17:16:17+00:00",
+ "updated": "2026-11-25T02:14:02+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Evening, the kite on the wire",
+   "body": "Caught since Sankranti, faded now,\nit still leans toward the wind\neach evening, as if remembering\nthe hand that let it go.",
+   "who": "Original",
+   "edition": "2026-11-25-am",
+   "order": 30,
+   "id": "2026-11-25-am-030"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Avatar' means descent",
+   "body": "'Avatar' comes from Sanskrit avatāra, 'descent', from ava (down) and tṛ (to cross). It first named a god's descent to earth in a new form. The 1980s online game Habitat borrowed it for a player's on-screen figure, and the word has lived a second life in computing ever since.",
+   "q": "What does Sanskrit avatāra literally mean?",
+   "a": "Descent.",
+   "edition": "2026-11-25-am",
+   "order": 29,
+   "id": "2026-11-25-am-029"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The production effect",
+   "body": "Studies led by Colin MacLeod found that words read aloud are remembered better than words read silently. Saying something makes it stand out from everything you only read. When a few lines really matter, read just those aloud, so they become the distinct ones.",
+   "q": "Which is remembered better, words read aloud or silently?",
+   "a": "Aloud.",
+   "edition": "2026-11-25-am",
+   "order": 28,
+   "id": "2026-11-25-am-028"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The robbed that smiles",
+   "body": "The robb'd that smiles steals something from the thief.",
+   "who": "William Shakespeare, Othello",
+   "edition": "2026-11-25-am",
+   "order": 27,
+   "id": "2026-11-25-am-027"
+  },
+  {
+   "topic": "ai",
+   "kind": "tip",
+   "title": "Show the shape of the answer",
+   "body": "If you want an agent's output in a certain form, show a tiny example instead of describing it: two rows of the table, one filled-in entry of the JSON, a sample commit message. A short example removes guesswork that a paragraph of description often leaves behind.",
+   "q": "What works better than describing the output format?",
+   "a": "Showing a small example of it.",
+   "edition": "2026-11-25-am",
+   "order": 26,
+   "id": "2026-11-25-am-026"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Turochamp, a chess program run by hand",
+   "body": "In 1948 Alan Turing and David Champernowne wrote Turochamp, a chess-playing program, before any computer could run it. In 1952 Turing played it against his colleague Alick Glennie by working through the rules himself on paper, taking around half an hour per move. The program lost, but it was among the very first chess programs ever written.",
+   "hook": "Wonder: what would you be willing to compute by hand to see an idea work?",
+   "edition": "2026-11-25-am",
+   "order": 25,
+   "id": "2026-11-25-am-025"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 21: StringBuilder.repeat",
+   "body": "Java 21 added repeat to StringBuilder: sb.repeat(\"-\", 20) appends twenty dashes, and sb.repeat('*', 5) works with a single character. It saves a loop or a temporary String.repeat call when you're already building text, for example underlining a heading in a report.",
+   "q": "Which Java version added StringBuilder.repeat?",
+   "a": "Java 21.",
+   "edition": "2026-11-25-am",
+   "order": 24,
+   "id": "2026-11-25-am-024"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The bad bishop",
+   "body": "A bishop is called 'bad' when your own pawns are fixed on squares of its colour, so it bumps into them and has little to do. A simple habit: if you have one bishop left, try to put your pawns on the opposite colour, so the bishop guards the squares the pawns can't. A bad bishop can still defend well, but it rarely attacks.",
+   "q": "What makes a bishop 'bad'?",
+   "a": "Its own pawns are fixed on its colour, blocking it.",
+   "edition": "2026-11-25-am",
+   "order": 23,
+   "id": "2026-11-25-am-023"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Printing in Tamil at Tranquebar",
+   "body": "At Tranquebar (Tharangambadi), the Danish missionary Bartholomäus Ziegenbalg set up a printing press that arrived in 1712. Using Tamil type, the press printed the Gospels in 1714 and the complete New Testament in Tamil by 1715, one of the earliest printed books in an Indian language.",
+   "q": "Which town hosted Ziegenbalg's Tamil printing press?",
+   "a": "Tranquebar (Tharangambadi).",
+   "edition": "2026-11-25-am",
+   "order": 22,
+   "id": "2026-11-25-am-022"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let the reader do the sum",
+   "body": "Instead of telling the reader what to conclude, place two facts side by side and let them add them up. 'She set out two cups. Then she put one back.' The reader works out the loneliness, and because they worked it out, they feel it more.",
+   "hook": "Wonder: which sentence in your draft explains what the reader could have worked out?",
+   "edition": "2026-11-25-am",
+   "order": 21,
+   "id": "2026-11-25-am-021"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A strange drag on very fast light sails",
+   "body": "Light sails could one day be pushed by powerful lasers toward other stars. A new preprint by Chao Shen and Jiaze Li of the Harbin Institute of Technology finds that near 75% of light speed, relativity bends the scattered light in a way that pushes back on the sail as a gentle drag. The laser still wins overall, but the effect is something future sail designers will have to plan around.",
+   "q": "At about what speed does the drag effect appear?",
+   "a": "Around 75% of the speed of light.",
+   "source": {
+    "name": "ScienceDaily, 22 Nov 2026",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261120071305.htm"
+   },
+   "edition": "2026-11-25-am",
+   "order": 20,
+   "id": "2026-11-25-am-020"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Say the next step out loud",
+   "body": "When you drift between steps, narrate quietly: 'Now I'm opening the form. Now I'm filling in the address.' Speaking the next action keeps it in mind longer than a silent intention, and it's a simple way to pull attention back without a fight.",
+   "hook": "Wonder: what would you say out loud for your next task?",
+   "edition": "2026-11-25-am",
+   "order": 19,
+   "id": "2026-11-25-am-019"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Polar bears have black skin",
+   "body": "Under its coat, a polar bear's skin is black. Its fur isn't truly white either: the guard hairs are clear and hollow-cored, and they look white because they scatter light, much as snow and clouds do.",
+   "q": "What colour is a polar bear's skin?",
+   "a": "Black.",
+   "edition": "2026-11-25-am",
+   "order": 18,
+   "id": "2026-11-25-am-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "GPT-6.2 Sol arrives in ChatGPT",
+   "body": "OpenAI began rolling out GPT-6.2 Sol to ChatGPT Plus, Pro, Business and Enterprise users. OpenAI says it follows complex, multi-part instructions more reliably and notices small details in images better.",
+   "hook": "Wonder: which instruction do your assistants most often miss?",
+   "source": {
+    "name": "The Neuron, 24 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-24-2026/"
+   },
+   "edition": "2026-11-25-am",
+   "order": 17,
+   "id": "2026-11-25-am-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The hypercorrection effect",
+   "body": "You might expect confident mistakes to be the hardest to fix. Research by Butterfield and Metcalfe (2001) found the opposite: errors made with high confidence were more likely to be corrected later, once people saw the right answer. The surprise seems to grab attention. Being boldly wrong in practice can be one of the better ways to learn.",
+   "q": "Which errors are most often corrected after feedback?",
+   "a": "High-confidence ones.",
+   "edition": "2026-11-25-am",
+   "order": 16,
+   "id": "2026-11-25-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 9: Map.ofEntries for bigger maps",
+   "body": "Map.of(...) takes at most ten key–value pairs. For more, use Map.ofEntries(Map.entry(\"a\", 1), Map.entry(\"b\", 2), ...). Like Map.of, the result is unmodifiable and rejects null keys, null values and duplicate keys, which makes it a neat fit for constant lookup tables.",
+   "q": "How many pairs can Map.of take directly?",
+   "a": "Up to ten; use Map.ofEntries beyond that.",
+   "edition": "2026-11-25-am",
+   "order": 15,
+   "id": "2026-11-25-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Deflection: pull the guard away",
+   "body": "A deflection forces a defending piece away from the square or line it guards. Often it's a sacrifice: you offer something the defender must take, and once it moves, the thing it was protecting falls, perhaps a back-rank square or a queen. When you see a piece doing an important job, ask: can I make it leave?",
+   "q": "What does a deflection do?",
+   "a": "Forces a defender away from what it was guarding.",
+   "edition": "2026-11-25-am",
+   "order": 14,
+   "id": "2026-11-25-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The kite maker's spare tail",
+   "body": "Every kite left the shop with a paper tail, and every evening the kite maker cut one more and hung it on a nail. 'For the kite that comes back torn,' he said. Most days no one came. On the day after the festival, a girl arrived holding a kite with no tail at all. He lifted the spare from its nail as if it had been waiting for her name.",
+   "who": "Original",
+   "edition": "2026-11-25-am",
+   "order": 13,
+   "id": "2026-11-25-am-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A new portrait of the Betta Fish Nebula",
+   "body": "The Dark Energy Camera on the 4-metre Blanco telescope in Chile has imaged SNR G295.5+09.7, a supernova remnant about 6,800 light-years away in Centaurus, nicknamed the Betta Fish Nebula for its flowing, fin-like shape. The star's core collapsed into a neutron star rather than a black hole. The picture may be the first of this nebula taken by a professional observatory.",
+   "hook": "Wonder: what shapes would you name if you were first to see a nebula?",
+   "source": {
+    "name": "Sci.News, 23 Nov 2026",
+    "url": "https://www.sci.news/astronomy/betta-fish-nebula-15216.html"
+   },
+   "edition": "2026-11-25-am",
+   "order": 12,
+   "id": "2026-11-25-am-012"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Anthropic tries Claude Ship for pull requests",
+   "body": "Anthropic launched Claude Ship in beta for Team and Enterprise plans. It brings together automated code review (now generally available), a helper that keeps pull requests moving, and approvals, started with a /ship command in Claude Code. Most reviews are reported to finish in 6 to 10 minutes.",
+   "q": "Which command starts Claude Ship in Claude Code?",
+   "a": "/ship",
+   "source": {
+    "name": "Rio Rundown, 24 Nov 2026",
+    "url": "https://riorundown.substack.com/p/ai-news-nov-24-2026-anthropic-agent"
+   },
+   "edition": "2026-11-25-am",
+   "order": 11,
+   "id": "2026-11-25-am-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Master of himself",
+   "body": "No man is free who is not master of himself.",
+   "who": "Epictetus, Fragments",
+   "edition": "2026-11-25-am",
+   "order": 10,
+   "id": "2026-11-25-am-010"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "ASCII, 1963, all in capitals",
+   "body": "ASCII, the code that gave each letter, digit and symbol a number, was first published in 1963. It used 7 bits, so 128 codes in all. The first version had no lowercase letters; those were added in the 1967 revision. Its first 128 characters still live on today, unchanged, inside Unicode.",
+   "q": "What was missing from the 1963 version of ASCII?",
+   "a": "Lowercase letters (added in 1967).",
+   "edition": "2026-11-25-am",
+   "order": 9,
+   "id": "2026-11-25-am-009"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "The Kollam era began in 825 CE",
+   "body": "Kerala's traditional Malayalam calendar counts years in the Kollam era, or Kolla Varsham, which began in 825 CE. Its months are named after the signs of the zodiac, and in most of Kerala the year begins in the month of Chingam, around August–September, the season of Onam.",
+   "q": "In which year CE did the Kollam era begin?",
+   "a": "825 CE.",
+   "edition": "2026-11-25-am",
+   "order": 8,
+   "id": "2026-11-25-am-008"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The self-reference effect",
+   "body": "In a classic 1977 study by Rogers, Kuiper and Kirker, people remembered words better when they had asked 'Does this describe me?' than when they had judged the words' meaning or sound. Linking new material to yourself gives it more hooks. When you learn something, ask: where have I seen this in my own life?",
+   "hook": "Wonder: where in your own week does today's idea already show up?",
+   "edition": "2026-11-25-am",
+   "order": 7,
+   "id": "2026-11-25-am-007"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Hippo milk isn't pink",
+   "body": "A popular myth says hippos make pink milk. They don't; it's an ordinary pale colour. The myth likely comes from hippo skin, which oozes a reddish-orange fluid sometimes called 'blood sweat'. It isn't blood or sweat at all, but a natural sunscreen that also helps keep the skin clean.",
+   "q": "What is a hippo's 'blood sweat' really?",
+   "a": "A reddish skin secretion that works like sunscreen.",
+   "edition": "2026-11-25-am",
+   "order": 6,
+   "id": "2026-11-25-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Two-phase commit, and why it's avoided",
+   "body": "Two-phase commit lets several databases agree on one transaction. First a coordinator asks everyone, 'Can you commit?' and each votes yes or no. If all say yes, it tells them to commit; otherwise, to roll back. The catch: if the coordinator fails after the votes, participants can be stuck holding locks, unsure what to do. That's why many systems prefer sagas or the outbox pattern across services.",
+   "q": "What's the main weakness of two-phase commit?",
+   "a": "If the coordinator fails after voting, participants can block, holding locks.",
+   "edition": "2026-11-25-am",
+   "order": 5,
+   "id": "2026-11-25-am-005"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Clear one surface, not the room",
+   "body": "When the whole room feels like too much, pick a single surface, just the desk or just the bedside table, and clear only that. A finished small space gives the eye one calm place to land and a quick win to build on. The rest of the room can wait for another day.",
+   "hook": "Wonder: which one surface would make tomorrow morning easier?",
+   "edition": "2026-11-25-am",
+   "order": 4,
+   "id": "2026-11-25-am-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Geneva: Game 2 today, and the move-40 rule",
+   "body": "Game 1 of Sindarov vs Gukesh ended in a draw by threefold repetition on move 38. That mattered, because in this match players may not simply agree a draw before Black's 40th move; repetition is one of the few ways out. Game 2 is on Wednesday 25 November, Game 3 follows on Thursday, and Friday is the first rest day. The match runs over 14 classical games at the Fondation Martin Bodmer near Geneva.",
+   "q": "Before which move can players not agree a draw in this match?",
+   "a": "Black's 40th move (repetition is an exception).",
+   "source": {
+    "name": "ChessBase, 24 Nov 2026",
+    "url": "https://en.chessbase.com/post/world-championship-2026-1"
+   },
+   "edition": "2026-11-25-am",
+   "order": 3,
+   "id": "2026-11-25-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Wednesday, the window grille",
+   "body": "Morning lays the grille's shadow\nacross the bed in neat squares,\nand the cat chooses one,\nthe warmest, and calls it home.",
+   "who": "Original",
+   "edition": "2026-11-25-am",
+   "order": 2,
+   "id": "2026-11-25-am-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Mira's giant flare",
+   "body": "Mira, the famous pulsing red giant about 330 light-years away in Cetus, was caught by the ALMA telescope in Chile during a magnetic storm. The flare threw out a loop of gas that reached as far from the star as Saturn is from our Sun. Two papers in Astronomy & Astrophysics, from a team at Chalmers University of Technology, suggest flares like this help lift the star's outer layers off into space.",
+   "q": "Which telescope caught Mira's flare?",
+   "a": "ALMA, in Chile.",
+   "source": {
+    "name": "Sci.News, 24 Nov 2026",
+    "url": "https://www.sci.news/astronomy/mira-record-breaking-eruption-15218.html"
+   },
+   "edition": "2026-11-25-am",
+   "order": 1,
+   "id": "2026-11-25-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "DeepMind's agents find faster quantum algorithms",
+   "body": "Google DeepMind had teams of AI agents search for better quantum algorithms for problems that come up in fusion research. The best results cut the estimated computing cost by about 11.8 times, and every solution was checked by a formal proof system, so the speed-up isn't just a hopeful guess.",
+   "hook": "Wonder: what changes when an agent's answer comes with a proof attached?",
+   "source": {
+    "name": "The Neuron, 24 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-24-2026/"
+   },
+   "edition": "2026-11-25-am",
+   "order": 0,
+   "id": "2026-11-25-am-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
@@ -9694,358 +10050,6 @@
    "edition": "2026-11-10-pm",
    "order": 18,
    "id": "2026-11-10-pm-018"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "The Saturn V's first flight",
-   "body": "On 9 November 1967, the Saturn V flew for the first time on Apollo 4, with no crew aboard. It tested all three stages at once, restarted the third stage in orbit, and sent the command module back into the atmosphere at Moon-return speed to prove its heat shield. Just over a year later, Saturn V carried people around the Moon.",
-   "q": "Was anyone aboard Apollo 4?",
-   "a": "No, it was an uncrewed test of the Saturn V.",
-   "edition": "2026-11-10-pm",
-   "order": 17,
-   "id": "2026-11-10-pm-017"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Tell the agent what 'done' looks like",
-   "body": "Agents tend to either stop too early or keep polishing forever. Give them a finish line they can check: 'done when the tests pass and the README mentions the new flag'. A concrete stop condition saves time, tokens and second-guessing on both sides.",
-   "hook": "Wonder: could you write the finish line of today's task in one sentence?",
-   "edition": "2026-11-10-pm",
-   "order": 16,
-   "id": "2026-11-10-pm-016"
-  },
-  {
-   "topic": "craft",
-   "kind": "tip",
-   "title": "Java: EnumMap when the keys are an enum",
-   "body": "If your map's keys are an enum, use EnumMap. Internally it's a plain array indexed by each constant's ordinal, so it's compact and fast, and it iterates in the enum's declared order. new EnumMap<>(Day.class) is all it takes.",
-   "q": "In what order does an EnumMap iterate its keys?",
-   "a": "In the order the enum constants are declared.",
-   "edition": "2026-11-10-pm",
-   "order": 15,
-   "id": "2026-11-10-pm-015"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The clockmaker's quiet hour",
-   "body": "Every shop clock in the lane ran a little wrong, and everyone knew to ask Mr. Rao for the real time. At four each afternoon he wound them all, one after another, and for a moment the whole street seemed to tick together. He never set them exactly right. 'If they all agreed,' he said, 'nobody would come in to ask.'",
-   "edition": "2026-11-10-pm",
-   "order": 14,
-   "id": "2026-11-10-pm-014"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Yu Yangyi keeps his Chinese Rapid title",
-   "body": "In Shaoxing, GM Yu Yangyi retained the Chinese Rapid Championship, beating 18-year-old Xiao Tong in a final that was level after rapid and blitz games and went to an Armageddon decider, which Yu won on move 48. Xiao had knocked out Ding Liren earlier. Lu Shanglei finished third.",
-   "q": "How was the Chinese Rapid final finally decided?",
-   "a": "By an Armageddon game, won by Yu Yangyi.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/chinese-rapid-championship-2026-final"
-   },
-   "edition": "2026-11-10-pm",
-   "order": 13,
-   "id": "2026-11-10-pm-013"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Why honey keeps",
-   "body": "Sealed honey resists spoiling for a very long time. It holds very little water, it's mildly acidic, and an enzyme bees add slowly produces a little hydrogen peroxide. Microbes that land in it get the water pulled right out of them. If it crystallises, it hasn't gone bad; warm the jar gently and it turns clear again.",
-   "q": "Does crystallised honey mean it has spoiled?",
-   "a": "No. It's just sugar forming crystals; gentle warming reverses it.",
-   "edition": "2026-11-10-pm",
-   "order": 12,
-   "id": "2026-11-10-pm-012"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Pascal's adding machine",
-   "body": "Around 1642, a teenage Blaise Pascal built a mechanical calculator to help his father, a tax official in Rouen, with endless sums. Turning dials moved geared wheels, and a clever ratchet carried a one to the next wheel, just like carrying in long addition. He made around fifty of these 'Pascalines' over the following decade.",
-   "hook": "Wonder: how do you make a gear 'carry the one'?",
-   "edition": "2026-11-10-pm",
-   "order": 11,
-   "id": "2026-11-10-pm-011"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "The quiet room inside",
-   "body": "Nowhere either with more quiet or more freedom from trouble does a man retire than into his own soul.",
-   "who": "Marcus Aurelius, Meditations 4.3 (tr. George Long)",
-   "edition": "2026-11-10-pm",
-   "order": 10,
-   "id": "2026-11-10-pm-010"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "NASA's step-by-step road back to the Moon",
-   "body": "NASA has laid out a two-step plan. Artemis III, in 2027, is a crewed test flight in Earth orbit, where four astronauts on Orion will practise meeting and docking with the Blue Moon and Starship landers. Artemis IV, planned for 2028, is the landing itself. NASA also says rocket preparation times have been cut by about half.",
-   "q": "What is Artemis III now planned to practise?",
-   "a": "Rendezvous and docking with the lunar landers, in Earth orbit, in 2027.",
-   "source": {
-    "name": "ScienceDaily (NASA)",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261108233054.htm"
-   },
-   "edition": "2026-11-10-pm",
-   "order": 9,
-   "id": "2026-11-10-pm-009"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The forgetting curve",
-   "body": "In 1885 Hermann Ebbinghaus memorised lists of nonsense syllables and tested himself over days. Forgetting was steep at first and then levelled off. The kind part: each review made the next drop gentler. A short look back a day later, then a few days later, saves far more than one long session.",
-   "q": "What did Ebbinghaus find about forgetting over time?",
-   "a": "It's fastest at first, then levels off, and each review slows it further.",
-   "edition": "2026-11-10-pm",
-   "order": 8,
-   "id": "2026-11-10-pm-008"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Same model, different harness, very different results",
-   "body": "A researcher compared nine coding-agent harnesses running the same open models across nearly 29,000 trials. The harness alone moved the solve rate by about two times and the cost per solved task by roughly ten times or more. One updated harness jumped from near the bottom to tied for first. The quiet lesson: the scaffolding around a model matters as much as the model.",
-   "hook": "Wonder: how much of 'the model is smart' is really 'the loop around it is well built'?",
-   "source": {
-    "name": "AIBriefs",
-    "url": "https://aibriefs.news/card/d322755d-e1e5-4ff9-bdc7-f7f37dbf56f8"
-   },
-   "edition": "2026-11-10-pm",
-   "order": 7,
-   "id": "2026-11-10-pm-007"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Madhava's infinite series",
-   "body": "Madhava of Sangamagrama, who lived in Kerala around 1340 to 1425, founded a school of mathematics and astronomy. He and his students worked out infinite series for pi, sine and cosine, ideas that appeared in Europe only about two to three centuries later with Gregory, Newton and Leibniz. Much of his work survives through later Kerala texts such as the Yuktibhasa, written in Malayalam.",
-   "q": "Which region was home to Madhava's school of mathematics?",
-   "a": "Kerala (Sangamagrama, near present-day Irinjalakuda).",
-   "edition": "2026-11-10-pm",
-   "order": 6,
-   "id": "2026-11-10-pm-006"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "The two-minute version",
-   "body": "When a task feels too big to begin, ask: what's the two-minute version? Not 'clean the kitchen' but 'put the cups in the sink'. Not 'write the report' but 'type the three headings'. Starting is often the hardest part; once you're moving, you're free to stop or keep going. Both count.",
-   "q": "What question helps shrink a task you can't start?",
-   "a": "What's the two-minute version of this?",
-   "edition": "2026-11-10-pm",
-   "order": 5,
-   "id": "2026-11-10-pm-005"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Bulkheads: one leak shouldn't sink the ship",
-   "body": "Ships are split into watertight compartments so one hole floods one room, not the whole hull. Services can do the same: give each downstream dependency its own small thread pool or connection pool. If the recommendations service gets slow, it can only tie up its own ten threads, and checkout keeps working with the rest.",
-   "hook": "Wonder: which one slow dependency in your system could currently use up every thread?",
-   "edition": "2026-11-10-pm",
-   "order": 4,
-   "id": "2026-11-10-pm-004"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Pranesh wins the first Chola Chess Open",
-   "body": "GM Pranesh M won the inaugural Chola Chess Open in Chennai with 7/9, half a point clear, after beating Iniyan Panneerselvam in the final round. S. L. Narayanan took second on tiebreak. The event produced nine title norms, including a second GM norm for 16-year-old Viresh Sharnarthi and a first IM norm for 11-year-old Sarbartho Mani.",
-   "q": "How many title norms came out of the first Chola Chess Open?",
-   "a": "Nine.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/chola-chess-open-2026-final-report"
-   },
-   "edition": "2026-11-10-pm",
-   "order": 3,
-   "id": "2026-11-10-pm-003"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Night train, Tuesday",
-   "body": "The carriage lights go soft at ten.\nA child asleep on a folded shawl,\na man peeling an orange in one long ribbon,\nthe window showing only us.\nOutside, somewhere, a village\nwith one lamp on,\nkeeping the dark company.",
-   "edition": "2026-11-10-pm",
-   "order": 2,
-   "id": "2026-11-10-pm-002"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A 93-billion-mile tail of dust around a young star",
-   "body": "Hubble has taken the first visible-light pictures of the 'Cat's Tail', a long, dark streak of dust beside the young star Beta Pictoris, about 63 light-years away. The structure stretches roughly 93 billion miles. Researchers think it is debris from a collision between two Pluto-sized bodies, made of very porous, carbon-rich grains about a micron across.",
-   "q": "What do astronomers think made the 'Cat's Tail' near Beta Pictoris?",
-   "a": "A collision between two Pluto-sized bodies; the tail is the leftover dust.",
-   "source": {
-    "name": "ScienceDaily (University of Arizona)",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261105224555.htm"
-   },
-   "edition": "2026-11-10-pm",
-   "order": 1,
-   "id": "2026-11-10-pm-001"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "DeepMind's agents check Signal's crypto code, proof by proof",
-   "body": "Google DeepMind introduced AlphaProof Code, a team of cooperating AI agents that write formal proofs in the Lean language. In about four weeks they verified the core cryptographic code of the Signal protocol all the way down to machine instructions, flagging roughly 1% of the code for people to review by hand. As a test, the team slipped two old, already-fixed bugs back into a copy, and the system produced checked proofs that those versions were unsafe.",
-   "hook": "Wonder: what would you trust more, a test that passed or a proof that can't be wrong?",
-   "source": {
-    "name": "Google DeepMind",
-    "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
-   },
-   "edition": "2026-11-10-pm",
-   "order": 0,
-   "id": "2026-11-10-pm-000"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Bus depot, 8 pm",
-   "body": "Engines settle like tired cattle.\nA conductor counts coins into a cloth bag,\nthe same small music every night.\nThe last bus sighs its doors shut.\nAbove the tin roof, one star\nclocks in for its shift.",
-   "edition": "2026-11-10-am",
-   "order": 30,
-   "id": "2026-11-10-am-030"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Write the spec, then the code",
-   "body": "An agent that starts typing code straight away bakes its guesses into the design. A short written spec first, covering what is being built, what it won't do and how you'll know it works, gives you a cheap moment to catch a misunderstanding. Editing two paragraphs is much easier than unwinding two hundred lines.",
-   "hook": "Wonder: what's the smallest spec that would have saved your last rework?",
-   "edition": "2026-11-10-am",
-   "order": 29,
-   "id": "2026-11-10-am-029"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Sticky sessions vs stateless servers",
-   "body": "A load balancer can send each user back to the same server ('sticky sessions'), which is simple when that server holds the user's session in memory. But it makes scaling and restarts awkward: lose the server and you lose the session. The calmer design is to keep servers stateless and put session data in a shared store like Redis, so any server can answer any request.",
-   "q": "Why do stateless servers make scaling easier?",
-   "a": "Any server can handle any request, so you can add, remove or restart servers without losing user sessions.",
-   "edition": "2026-11-10-am",
-   "order": 28,
-   "id": "2026-11-10-am-028"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "To thine own self",
-   "body": "This above all: to thine own self be true,\nAnd it must follow, as the night the day,\nThou canst not then be false to any man.",
-   "who": "William Shakespeare, Hamlet",
-   "edition": "2026-11-10-am",
-   "order": 27,
-   "id": "2026-11-10-am-027"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Sloths are patient swimmers",
-   "body": "Sloths move slowly on land, but they swim well, using a breaststroke-like motion. By slowing their heart rate, they can hold their breath for up to about 40 minutes, longer than many marine mammals.",
-   "hook": "Wonder: what else looks slow only because we watch it in the wrong place?",
-   "edition": "2026-11-10-am",
-   "order": 26,
-   "id": "2026-11-10-am-026"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Nakamura wins a come-from-behind Bullet Brawl",
-   "body": "Hikaru Nakamura won Chess.com's 7 November Bullet Brawl, a two-hour one-minute arena with 225 players, finishing on 165 points. Ediz Gurel led for much of the event, but Nakamura closed it with a run of six straight wins to finish 12 points ahead. Parham Maghsoodloo was third.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/hikaru-nakamura-wins-bullet-brawl-nov-7-2026"
-   },
-   "edition": "2026-11-10-am",
-   "order": 25,
-   "id": "2026-11-10-am-025"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The transistor's quiet debut",
-   "body": "In December 1947, at Bell Labs, John Bardeen and Walter Brattain, working in William Shockley's group, got a small point-contact device to amplify a signal. It was the first working transistor. The three shared the 1956 Nobel Prize in Physics, and every chip today carries billions of the transistor's descendants.",
-   "q": "Where and when was the first working transistor demonstrated?",
-   "a": "Bell Labs, December 1947.",
-   "edition": "2026-11-10-am",
-   "order": 24,
-   "id": "2026-11-10-am-024"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Decide your 'stuck' move in advance",
-   "body": "Getting stuck isn't a failure; staying stuck for an hour is just expensive. Before you start, pick your stuck move: after ten minutes with no progress, I'll write down the exact question, ask someone, or switch to the smallest next piece. Deciding it now means you don't have to find willpower later.",
-   "hook": "Wonder: what's your usual sign that you've been stuck too long?",
-   "edition": "2026-11-10-am",
-   "order": 23,
-   "id": "2026-11-10-am-023"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Gommateshwara, carved from a single rock",
-   "body": "On the hill of Vindhyagiri at Shravanabelagola in Karnataka stands a statue of Bahubali about 17 metres tall, carved from one granite boulder around 983 CE under Chavundaraya, a minister of the Western Ganga dynasty. Every twelve years or so, the Mahamastakabhisheka festival bathes it in milk, turmeric and flower petals.",
-   "q": "Which dynasty's minister commissioned the Gommateshwara statue?",
-   "a": "Chavundaraya, minister of the Western Ganga dynasty.",
-   "edition": "2026-11-10-am",
-   "order": 22,
-   "id": "2026-11-10-am-022"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Two bright morning planets later this month",
-   "body": "If you're up before dawn, the next few weeks are kind. Mercury reaches its greatest distance west of the Sun on 21 November, its best morning showing for a while, low in the east. Venus reaches its greatest brilliancy in the morning sky on 29 November.",
-   "q": "On what date does Venus reach greatest brilliancy this month?",
-   "a": "29 November, in the morning sky.",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/astronomy-essentials/visible-planets-tonight-mars-jupiter-venus-saturn-mercury/"
-   },
-   "edition": "2026-11-10-am",
-   "order": 21,
-   "id": "2026-11-10-am-021"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Read it out loud",
-   "body": "Your ear catches what your eye forgives. Reading a draft aloud, even in a whisper, reveals sentences that run out of breath, words that repeat, and rhythms that clunk. Where you stumble, the reader will too. It takes five minutes and is the cheapest edit there is.",
-   "hook": "Wonder: why do we hear mistakes we can't see?",
-   "edition": "2026-11-10-am",
-   "order": 20,
-   "id": "2026-11-10-am-020"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The quiet eye",
-   "body": "Sport scientist Joan Vickers found that skilled performers, in golf putting, basketball free throws and more, tend to hold a steady final gaze on the target a little longer just before they move. This 'quiet eye' seems to give the brain a calm moment to set up the action, and it can be trained. A chess version might be one still look at the board before you touch a piece.",
-   "edition": "2026-11-10-am",
-   "order": 19,
-   "id": "2026-11-10-am-019"
-  },
-  {
-   "topic": "craft",
-   "kind": "tip",
-   "title": "Java: joining strings without the trailing comma",
-   "body": "Instead of a loop that adds commas and then trims the last one, let Java do it:\n\nString.join(\", \", names)\n\nor, from a stream:\n\nnames.stream().map(String::trim).collect(Collectors.joining(\", \", \"[\", \"]\"))\n\nThe second form also adds a prefix and suffix. Both quietly handle the empty and single-item cases.",
-   "q": "Which collector joins stream elements with a separator, prefix and suffix?",
-   "a": "Collectors.joining(delimiter, prefix, suffix).",
-   "edition": "2026-11-10-am",
-   "order": 18,
-   "id": "2026-11-10-am-018"
   }
  ]
 }
