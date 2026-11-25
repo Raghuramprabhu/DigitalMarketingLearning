@@ -1,6 +1,348 @@
 {
- "updated": "2026-11-25T02:14:02+00:00",
+ "updated": "2026-11-25T17:15:06+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the neighbour's veena",
+   "body": "Through the wall, a slow alapana,\nhalting where the hand forgets,\nbeginning again, the same phrase,\nuntil even the wall is learning it.",
+   "who": "Original",
+   "edition": "2026-11-25-pm",
+   "order": 29,
+   "id": "2026-11-25-pm-029"
+  },
+  {
+   "topic": "ai",
+   "kind": "tip",
+   "title": "Ask for the change explained to a new teammate",
+   "body": "When an agent finishes, ask it to explain the change as it would to a new teammate: what was wrong, what it changed, and what to watch for. If the explanation is muddled or skips a step, that's often where the code is muddled too, and you find out before you merge.",
+   "hook": "Wonder: could you explain your last change in three sentences?",
+   "edition": "2026-11-25-pm",
+   "order": 28,
+   "id": "2026-11-25-pm-028"
+  },
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "Steinitz, the first official world champion",
+   "body": "In 1886 Wilhelm Steinitz beat Johannes Zukertort in a match played in New York, St Louis and New Orleans, widely counted as the first official World Chess Championship. Steinitz also taught a new, patient way of playing: build up small advantages and attack only when the position justifies it.",
+   "q": "Whom did Steinitz beat in 1886?",
+   "a": "Johannes Zukertort.",
+   "edition": "2026-11-25-pm",
+   "order": 27,
+   "id": "2026-11-25-pm-027"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Bungalow' means 'from Bengal'",
+   "body": "'Bungalow' comes from Hindi bangla, 'of Bengal', the name for a style of low, one-storey house with a wide veranda common in Bengal. British officials adopted the design and the word in the 17th and 18th centuries, and it travelled the world from there.",
+   "q": "What does the root of 'bungalow' mean?",
+   "a": "'Of Bengal' (Hindi bangla).",
+   "edition": "2026-11-25-pm",
+   "order": 26,
+   "id": "2026-11-25-pm-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The wealth that does not perish",
+   "body": "Learning is the flawless, lasting wealth; other riches are not truly riches.",
+   "who": "Thirukkural 400 (own rendering)",
+   "edition": "2026-11-25-pm",
+   "order": 25,
+   "id": "2026-11-25-pm-025"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Deliberate practice, not just hours",
+   "body": "In a 1993 study of violinists, Anders Ericsson and colleagues found that the best players had spent more time in deliberate practice: focused work on specific weaknesses, with quick feedback, just beyond current ability. The '10,000-hour rule' later drawn from this was a popular simplification; Ericsson stressed that the kind of practice matters more than any magic number.",
+   "q": "What matters more than total hours, per Ericsson?",
+   "a": "The kind of practice: focused, with feedback, just beyond current ability.",
+   "edition": "2026-11-25-pm",
+   "order": 24,
+   "id": "2026-11-25-pm-024"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 14: helpful NullPointerExceptions",
+   "body": "Older Java just said 'NullPointerException' and a line number, leaving you to guess which part of a.b().c was null. JEP 358, added in Java 14 and switched on by default in Java 15, makes the message name the culprit, for example: Cannot invoke \"String.length()\" because \"name\" is null.",
+   "q": "In which Java version did helpful NPE messages become on by default?",
+   "a": "Java 15 (introduced in 14).",
+   "edition": "2026-11-25-pm",
+   "order": 23,
+   "id": "2026-11-25-pm-023"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Deep Blue, 1997",
+   "body": "In May 1997, in New York, IBM's Deep Blue beat world champion Garry Kasparov 3½–2½ in a six-game match, the first time a computer won a match against a reigning champion under standard time controls. It ran on specialised chess chips that searched hundreds of millions of positions per second. Kasparov had won their first match the year before.",
+   "q": "What was the score of the 1997 Deep Blue–Kasparov match?",
+   "a": "3½–2½ to Deep Blue.",
+   "edition": "2026-11-25-pm",
+   "order": 22,
+   "id": "2026-11-25-pm-022"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Why we only see one face of the Moon",
+   "body": "The Moon turns once on its axis in the same time it takes to orbit Earth, about 27.3 days, so the same side always faces us. This is tidal locking: long ago, Earth's pull slowed the Moon's spin until it matched its orbit. A slight wobble, called libration, lets us glimpse about 59% of the surface over time.",
+   "q": "How much of the Moon's surface can we see from Earth over time?",
+   "a": "About 59%, thanks to libration.",
+   "edition": "2026-11-25-pm",
+   "order": 21,
+   "id": "2026-11-25-pm-021"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Borrow a deadline",
+   "body": "Tasks with no deadline tend to drift forever. Make a small, friendly one: tell a friend, 'I'll send you the draft by Friday', or book a call where the thing will be needed. A gentle outside date gives the brain the urgency it often waits for, without the panic of a real crunch.",
+   "q": "Why borrow a deadline?",
+   "a": "An outside date gives the urgency that open-ended tasks lack.",
+   "edition": "2026-11-25-pm",
+   "order": 20,
+   "id": "2026-11-25-pm-020"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Ellora's Kailasa temple, cut from one rock",
+   "body": "Cave 16 at Ellora, the Kailasa temple, was carved in the 8th century under the Rashtrakuta king Krishna I. Workers cut down into a single basalt hillside from the top, removing rock to leave behind a full temple with halls, shrines, pillars and life-sized elephants. Nothing was added; everything there was released from the stone.",
+   "q": "Which dynasty's king is credited with Ellora's Kailasa temple?",
+   "a": "The Rashtrakutas (Krishna I).",
+   "edition": "2026-11-25-pm",
+   "order": 19,
+   "id": "2026-11-25-pm-019"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Read your dialogue out loud",
+   "body": "Dialogue that looks fine on the page often sounds stiff in the mouth. Read it aloud, or whisper it, and you'll hear where nobody would really talk like that: too many full names, too-tidy sentences, speeches that answer every question. Real people interrupt, trail off and say less than they mean.",
+   "hook": "Wonder: which line in your draft would no one actually say?",
+   "edition": "2026-11-25-pm",
+   "order": 18,
+   "id": "2026-11-25-pm-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Tracing which agent acted for whom on AWS",
+   "body": "AWS published a guide to tracking an AI agent's delegated access with Amazon Cognito's token exchange, a feature launched on 12 November. An exchanged token keeps the user's identity and records the acting service in an 'act' claim. It only carries permissions that both user and client share, can't outlive the user's token, and comes without a refresh token.",
+   "q": "Which claim records the acting service in an exchanged token?",
+   "a": "The 'act' claim.",
+   "source": {
+    "name": "RIO Rundown (via Superpower Daily), 25 Nov 2026",
+    "url": "https://riorundown.substack.com/p/ai-news-nov-25-2026-agentic-ai-security"
+   },
+   "edition": "2026-11-25-pm",
+   "order": 17,
+   "id": "2026-11-25-pm-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Sharks are older than trees",
+   "body": "Sharks appear in the fossil record more than 400 million years ago. The first true trees, such as Archaeopteris, came later, around 385 million years ago. Sharks have been cruising the seas through every age since, including before the first forests rose on land.",
+   "hook": "Wonder: what else has been around longer than forests?",
+   "edition": "2026-11-25-pm",
+   "order": 16,
+   "id": "2026-11-25-pm-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Monotonic reads: never step back in time",
+   "body": "With several replicas, a user might read a fresh copy, refresh, hit a lagging copy and see older data, as if time went backwards. Monotonic reads promises that once you've seen a value, later reads won't show anything older. A simple way to get it is to route each user to the same replica, for example by hashing their user ID.",
+   "q": "What does monotonic reads guarantee?",
+   "a": "Later reads never show older data than you've already seen.",
+   "edition": "2026-11-25-pm",
+   "order": 15,
+   "id": "2026-11-25-pm-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "En passant: the pawn that gets caught passing",
+   "body": "If a pawn moves two squares and lands right beside an enemy pawn on its fifth rank, that enemy pawn may capture it as if it had moved only one square. The catch: this is allowed only on the very next move. The rule arrived when pawns gained the two-square first step, so they couldn't slip past an enemy pawn's guard for free.",
+   "q": "When must an en passant capture be made?",
+   "a": "Immediately, on the very next move.",
+   "edition": "2026-11-25-pm",
+   "order": 14,
+   "id": "2026-11-25-pm-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The postman's extra minute",
+   "body": "The postman on Third Cross Street took one minute longer than his route allowed. It went to the old man at number 14, who never had letters but always stood at the gate. They talked about the sky for exactly that minute. When the postman retired, he left a note for his replacement in the sorting room: 'Number 14. Budget one minute. Talk about the sky.'",
+   "who": "Original",
+   "edition": "2026-11-25-pm",
+   "order": 13,
+   "id": "2026-11-25-pm-013"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Hubble's new look at NGC 4394",
+   "body": "A new Hubble image shows NGC 4394, a barred spiral galaxy about 55 million light-years away in Coma Berenices, on the outskirts of the Virgo Cluster. The picture combines older ACS data from 2016 with recent WFC3 observations from a programme studying 40 galaxies, to compare how star formation winds down in crowded clusters and in quieter space.",
+   "hook": "Wonder: does a galaxy's neighbourhood change how it grows old?",
+   "source": {
+    "name": "The Good News Brief (NASA report), 24 Nov 2026",
+    "url": "https://thegoodnewsbrief.com/stories/hubble-captures-detailed-view-of-barred-spiral-galaxy-ngc-4394-1ppfllx"
+   },
+   "edition": "2026-11-25-pm",
+   "order": 12,
+   "id": "2026-11-25-pm-012"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Everywhere is nowhere",
+   "body": "The one who is everywhere is nowhere.",
+   "who": "Seneca, Letters to Lucilius 2 (own rendering)",
+   "edition": "2026-11-25-pm",
+   "order": 11,
+   "id": "2026-11-25-pm-011"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The Pascaline, 1642",
+   "body": "In 1642, at about 19, Blaise Pascal designed a mechanical calculator to help his father, a tax official in Rouen, with endless sums. Numbers were dialled in on wheels, and a clever carry mechanism moved a 1 into the next column when a wheel passed 9. It added and subtracted directly. Several Pascalines still survive in museums.",
+   "q": "Who was the Pascaline built to help?",
+   "a": "Pascal's father, a tax official.",
+   "edition": "2026-11-25-pm",
+   "order": 10,
+   "id": "2026-11-25-pm-010"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Claude artifacts can become desktop apps",
+   "body": "Anthropic announced a beta that installs Claude artifacts as standalone apps on Mac and Windows. They open in their own windows, can send notifications or sit in the menu bar or tray, and come with three permission levels. Full computer access is only available for apps made by you or members of your organisation, and installed apps update when their creator edits the artifact.",
+   "q": "How do installed artifact apps get updated?",
+   "a": "Automatically, when the creator edits the artifact.",
+   "source": {
+    "name": "RIO Rundown (via Claude), 25 Nov 2026",
+    "url": "https://riorundown.substack.com/p/ai-news-nov-25-2026-agentic-ai-security"
+   },
+   "edition": "2026-11-25-pm",
+   "order": 9,
+   "id": "2026-11-25-pm-009"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Leave the tool out where you'll see it",
+   "body": "Starting is easier when the first object is already in view: the guitar on its stand, not in the case; the notebook open on the desk at the right page; the running shoes by the bed. Every step you remove between noticing and doing makes it more likely you'll begin.",
+   "hook": "Wonder: which tool could you leave out tonight for tomorrow's first task?",
+   "edition": "2026-11-25-pm",
+   "order": 8,
+   "id": "2026-11-25-pm-008"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Shampoo' began as a massage",
+   "body": "'Shampoo' comes from Hindi chāmpo, from chāmpnā, 'to press or knead'. In English it first meant a head-and-body massage. Sake Dean Mahomed, a traveller from Patna, made 'shampooing' baths fashionable in Brighton in the early 1800s. Only later did the word settle on washing hair.",
+   "q": "What did 'shampoo' first mean in English?",
+   "a": "A massage (from Hindi chāmpo, 'press, knead').",
+   "edition": "2026-11-25-pm",
+   "order": 7,
+   "id": "2026-11-25-pm-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Keezhadi, a Sangam-era town on the Vaigai",
+   "body": "At Keezhadi (Keeladi), in Sivaganga district near Madurai, excavations along the Vaigai river since 2015 have uncovered brick buildings, ring wells, drains, beads and pottery scratched with Tamil-Brahmi letters. Together they show an organised town life in the Sangam age. A site museum at Keeladi opened in 2023, so the finds can be seen close to where they were dug up.",
+   "hook": "Wonder: what would a potsherd from your kitchen tell someone in two thousand years?",
+   "edition": "2026-11-25-pm",
+   "order": 6,
+   "id": "2026-11-25-pm-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 15: text blocks",
+   "body": "Since Java 15, a text block lets you write multi-line strings between triple quotes (\"\"\"). JSON, SQL or HTML can sit in your code looking like itself, without \\n and + on every line. Java strips the common indentation for you, based on the leftmost line, so the block can stay neatly indented with the rest of the code.",
+   "q": "Which delimiter opens and closes a Java text block?",
+   "a": "Three double quotes: \"\"\".",
+   "edition": "2026-11-25-pm",
+   "order": 5,
+   "id": "2026-11-25-pm-005"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Ebbinghaus and the forgetting curve",
+   "body": "In 1885 Hermann Ebbinghaus published experiments he ran on himself, memorising lists of nonsense syllables and testing how fast they faded. Forgetting was steepest in the first hours and then levelled off. He also found that relearning was quicker than the first learning, even when he could no longer recall a list. Each review flattens the curve a little more, which is why short, spaced reviews work so well.",
+   "q": "When is forgetting fastest, according to Ebbinghaus?",
+   "a": "Soon after learning, in the first hours.",
+   "edition": "2026-11-25-pm",
+   "order": 4,
+   "id": "2026-11-25-pm-004"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Evening, the pressure cooker's last whistle",
+   "body": "Three whistles and then a fourth\nno one asked for, a small brag\nfrom the kitchen, before the steam\nsighs down and the house sits to eat.",
+   "who": "Original",
+   "edition": "2026-11-25-pm",
+   "order": 3,
+   "id": "2026-11-25-pm-003"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Game 2 in Geneva: a London System and a quick draw",
+   "body": "With White for the first time in the match, Gukesh chose the London System. Sindarov answered with an interesting ...Qb6 on move 7, and after about 20 moves the game ended in a draw by threefold repetition. The match is level at 1–1 with twelve games left. Game 3 is on Thursday, with Sindarov back on the white side.",
+   "q": "Which opening did Gukesh play in Game 2?",
+   "a": "The London System.",
+   "source": {
+    "name": "The Tribune (ANI), 25 Nov 2026",
+    "url": "https://www.tribuneindia.com/news/chess/world-chess-championship-game-2-ends-in-quick-draw-between-gukesh-and-sindarov"
+   },
+   "edition": "2026-11-25-pm",
+   "order": 2,
+   "id": "2026-11-25-pm-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "TangiMap: turning knobs into software controls",
+   "body": "MIT researcher Yunyi Zhu and Boston University's Chang Xiao built TangiMap, an LLM-driven agent that maps an app's functions onto physical controls. It works out what a program can do through its APIs, MCP servers or even screenshots, then wires those actions to sliders and knobs. Their demos used audio-mixer style hardware to drive Adobe Lightroom, Blender and Character Animator.",
+   "hook": "Wonder: which app you use daily would feel better with a real dial?",
+   "source": {
+    "name": "RIO Rundown (via MIT News), 25 Nov 2026",
+    "url": "https://riorundown.substack.com/p/ai-news-nov-25-2026-agentic-ai-security"
+   },
+   "edition": "2026-11-25-pm",
+   "order": 1,
+   "id": "2026-11-25-pm-001"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "An eclipse between two asteroids",
+   "body": "ESA's Hera spacecraft has photographed a tiny solar eclipse: the small moonlet Dimorphos casting its shadow onto the surface of its larger partner, Didymos. Hera took the picture from about 195 million km from Earth. Dimorphos is the moonlet NASA's DART spacecraft nudged in 2022, and Hera is there to study what that nudge left behind.",
+   "q": "Whose shadow falls on Didymos in Hera's photo?",
+   "a": "Its moonlet, Dimorphos.",
+   "source": {
+    "name": "Space.com, 24 Nov 2026",
+    "url": "https://www.space.com/astronomy/asteroids/double-asteroid-solar-eclipse-caught-on-camera-space-photo-of-the-day-for-nov-24-2026"
+   },
+   "edition": "2026-11-25-pm",
+   "order": 0,
+   "id": "2026-11-25-pm-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
@@ -9715,341 +10057,6 @@
    "edition": "2026-11-11-am",
    "order": 18,
    "id": "2026-11-11-am-018"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Anthropic releases Claude Fable 5.2",
-   "body": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, aimed at long, complex technical work. Fable is available to everyone, while Mythos, which keeps some specialist capabilities, is offered to verified organisations. Anthropic says a team of more than 1,000 Fable 5.2 agents worked together for eight days to build a bootable operating system; that's the company's own report.",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-november-10-2026/"
-   },
-   "edition": "2026-11-11-am",
-   "order": 17,
-   "id": "2026-11-11-am-017"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The platypus glows",
-   "body": "Under ultraviolet light, platypus fur gives off a soft blue-green glow. Researchers reported it in 2020 after checking museum specimens. Nobody is yet sure whether the glow does anything for the animal or is simply a quirk of its fur.",
-   "edition": "2026-11-11-am",
-   "order": 16,
-   "id": "2026-11-11-am-016"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Load shedding: say no early, and politely",
-   "body": "When a service gets more requests than it can handle, trying to serve all of them can make it slow for everyone. Load shedding means refusing some work early, often with a quick 'try again later' (HTTP 503), so the requests you do accept still finish quickly. Good systems shed the least important work first, like background jobs before checkout.",
-   "hook": "Wonder: when is 'not now' the most helpful answer a server can give?",
-   "edition": "2026-11-11-am",
-   "order": 15,
-   "id": "2026-11-11-am-015"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Tata Steel 2027 announces its fields",
-   "body": "The 89th Tata Steel Chess tournament will run from 15 to 31 January 2027 in Wijk aan Zee, Netherlands. Defending champion Nodirbek Abdusattorov leads a 14-player Masters field that includes Javokhir Sindarov, Levon Aronian, Anish Giri, Alireza Firouzja and India's Nihal Sarin. India's Aravindh Chithambaram plays in the Challengers.",
-   "q": "Where is the Tata Steel Chess tournament held?",
-   "a": "Wijk aan Zee, Netherlands.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/abdusattorov-sindarov-top-tata-steel-chess-2027-field"
-   },
-   "edition": "2026-11-11-am",
-   "order": 14,
-   "id": "2026-11-11-am-014"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The lamp repairer",
-   "body": "Every lamp that came to Selvi's stall arrived with a story. 'It flickers when it rains,' said one man. 'It was my mother's,' said a girl, holding it like a bird. Selvi never asked more than she needed. She rewired, she polished, she tested each one in the dim corner by the cloth shop. On Sundays she kept one lamp lit that nobody had ever come back for. It was the brightest on the street, and she liked to think it was waiting patiently, the way she did.",
-   "edition": "2026-11-11-am",
-   "order": 13,
-   "id": "2026-11-11-am-013"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Mercury's long, slow day",
-   "body": "Mercury circles the Sun in 88 Earth days and spins once every 59 days. Put together, one sunrise to the next takes about 176 Earth days, so a single solar day on Mercury lasts two of its years.",
-   "hook": "Wonder: what would a calendar look like if one day lasted two years?",
-   "edition": "2026-11-11-am",
-   "order": 12,
-   "id": "2026-11-11-am-012"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Ctrl+Alt+Del was a developer's shortcut",
-   "body": "David Bradley, an engineer on the original IBM PC in 1981, created the Ctrl+Alt+Del key combination so developers could restart a machine without switching it off. He picked keys far apart on purpose, so nobody would press all three by accident. It was never meant for everyday users, which is why it feels a little awkward.",
-   "q": "Why were Ctrl, Alt and Del chosen for the restart shortcut?",
-   "a": "They were far apart, so it was hard to press them all by accident.",
-   "edition": "2026-11-11-am",
-   "order": 11,
-   "id": "2026-11-11-am-011"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Few things",
-   "body": "Occupy thyself with few things, says the philosopher, if thou wouldst be tranquil.",
-   "who": "Marcus Aurelius, Meditations 4.24 (tr. George Long)",
-   "edition": "2026-11-11-am",
-   "order": 10,
-   "id": "2026-11-11-am-010"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Wakeful rest: let it settle",
-   "body": "In studies by Michaela Dewar and colleagues, people who sat quietly for about ten minutes after learning a list remembered more later than people who went straight on to another task. The quiet seems to give fresh memories a chance to settle before new information crowds in. After a hard study block, try a few minutes of doing nothing at all, no phone.",
-   "q": "What did Dewar's studies find about resting quietly right after learning?",
-   "a": "A few minutes of quiet rest improved later recall compared with starting a new task.",
-   "edition": "2026-11-11-am",
-   "order": 9,
-   "id": "2026-11-11-am-009"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Meta's smallest Muse model, built for repetitive agent work",
-   "body": "Meta has released Muse Ember, the smallest and most efficient model in its Muse family. It is aimed at the many small, repeated steps agents take, rather than at deep reasoning, and is priced at $0.10 per million input tokens through Meta's Model API. Small, cheap models doing the routine steps, with bigger ones called only when needed, is becoming a common agent design.",
-   "hook": "Wonder: how much of an agent's day is routine work that a small model could do?",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-november-10-2026/"
-   },
-   "edition": "2026-11-11-am",
-   "order": 8,
-   "id": "2026-11-11-am-008"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Darasuram's temple on wheels",
-   "body": "The Airavatesvara Temple at Darasuram, near Kumbakonam, was built by the Chola king Rajaraja II in the 12th century. Its front hall is carved as a chariot, complete with stone wheels and horses. Together with Thanjavur and Gangaikonda Cholapuram it forms the UNESCO World Heritage site called the Great Living Chola Temples.",
-   "q": "Which Chola king built the Airavatesvara Temple at Darasuram?",
-   "a": "Rajaraja II, in the 12th century.",
-   "edition": "2026-11-11-am",
-   "order": 7,
-   "id": "2026-11-11-am-007"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Two choices, not ten",
-   "body": "When a decision stalls you (what to eat, which task first), shrink the menu to two options and pick one within a minute. A short list keeps the decision from swallowing the energy meant for the task. Any reasonable pick, made quickly, usually beats the perfect pick made an hour later.",
-   "edition": "2026-11-11-am",
-   "order": 6,
-   "id": "2026-11-11-am-006"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java: strip() knows more spaces than trim()",
-   "body": "String.trim() removes characters up to U+0020, which covers the ASCII space and control characters. Java 11's strip() uses Character.isWhitespace, so it also removes Unicode whitespace such as the ideographic space. For text that arrives from users in many languages, strip(), stripLeading() and stripTrailing() are usually the kinder choice.",
-   "q": "Which Java method removes Unicode whitespace: trim() or strip()?",
-   "a": "strip() (Java 11+). trim() only handles characters up to U+0020.",
-   "edition": "2026-11-11-am",
-   "order": 5,
-   "id": "2026-11-11-am-005"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Grown-up sunflowers face east",
-   "body": "Young sunflowers really do follow the Sun, turning west by day and back east overnight. Once they open, most stop and settle facing east. A 2016 study found that east-facing heads warm up faster in the morning and draw more bee visits.",
-   "hook": "Wonder: what does a flower gain by greeting the morning?",
-   "edition": "2026-11-11-am",
-   "order": 4,
-   "id": "2026-11-11-am-004"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Movahed takes his fourth Titled Tuesday of the year",
-   "body": "GM Sina Movahed won the 10 November Titled Tuesday on 9.5 points, edging GM Denis Lazavik on tiebreak, with GM Dmitry Andreikin third on 9. It was Movahed's fourth Titled Tuesday win of 2026, level with Jan-Krzysztof Duda for the most this year. He recovered from a fifth-round loss to Christopher Yoo to finish on top.",
-   "q": "Who finished second to Sina Movahed on tiebreak?",
-   "a": "GM Denis Lazavik, also on 9.5.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/movahed-wins-titled-tuesday-november-10-2026"
-   },
-   "edition": "2026-11-11-am",
-   "order": 3,
-   "id": "2026-11-11-am-003"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Wednesday, first light",
-   "body": "The milk packet waits on the step,\ncold as a small moon.\nA crow tests the parapet,\nthinks better of it.\nInside, the kettle starts its long vowel,\nand the day, not yet asked for anything,\nsits down beside me.",
-   "edition": "2026-11-11-am",
-   "order": 2,
-   "id": "2026-11-11-am-002"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "NASA offers a prize for gentler, longer-lasting thrusters",
-   "body": "NASA has opened the AMPERE Challenge, a $500,000 competition for US companies to build working Hall-effect thrusters in the 3 to 7 kilowatt range. These engines push charged particles with electric and magnetic fields: the thrust is tiny, but they sip propellant, which suits patient jobs like nudging a satellite's orbit over months. Registration runs until 27 January 2027.",
-   "hook": "Wonder: why would a spacecraft prefer a whisper of thrust that lasts for months over one big push?",
-   "source": {
-    "name": "ScienceDaily (NASA)",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261109205404.htm"
-   },
-   "edition": "2026-11-11-am",
-   "order": 1,
-   "id": "2026-11-11-am-001"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "IBM and Microsoft team up on 'Imagine Enterprise'",
-   "body": "On 10 November IBM and Microsoft announced Imagine Enterprise, a platform for building, running and governing AI agents that carry out industry-specific work. IBM brings more than 6,000 prebuilt agents and assets from its consulting arm; Microsoft supplies the cloud, data and security layer. The first ready-made frameworks cover financial services, insurance and retail.",
-   "q": "How many prebuilt agents and assets does IBM Consulting bring to Imagine Enterprise?",
-   "a": "More than 6,000.",
-   "source": {
-    "name": "Microsoft Source",
-    "url": "https://news.microsoft.com/source/2026/11/10/ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation"
-   },
-   "edition": "2026-11-11-am",
-   "order": 0,
-   "id": "2026-11-11-am-000"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Before you scroll on, try to recall: what made the Cat's Tail near Beta Pictoris? What does a bulkhead protect a service from? Who built a calculator for his tax-official father?",
-   "q": "Who built the Pascaline, and for whom?",
-   "a": "Blaise Pascal, around 1642, to help his father with tax sums.",
-   "edition": "2026-11-10-pm",
-   "order": 29,
-   "id": "2026-11-10-pm-029"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Evening, the last bus",
-   "body": "The conductor counts his coins\ninto little towers by the window.\nNobody is in a hurry now.\nThe road hums, the jasmine on the dashboard\nnods at every turn,\nand the town, one lit door at a time,\ngoes home.",
-   "edition": "2026-11-10-pm",
-   "order": 28,
-   "id": "2026-11-10-pm-028"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Stripe's internal helper agent, built in about a week",
-   "body": "Stripe described Kai, a company-wide productivity agent built in roughly a week on LangChain's LangGraph and Deep Agents tools. It reportedly reached around 5,000 internal users within about a month. The appeal of small, quick internal agents is that they meet people where their daily work already happens.",
-   "q": "Roughly how long did it take Stripe to build its internal agent Kai?",
-   "a": "About a week.",
-   "source": {
-    "name": "AIBriefs",
-    "url": "https://aibriefs.news/card/2d372091-9333-49b6-8d24-b87ca352a132"
-   },
-   "edition": "2026-11-10-pm",
-   "order": 27,
-   "id": "2026-11-10-pm-027"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The turtle that breathes through its tail end",
-   "body": "Australia's Fitzroy River turtle can take up oxygen through its cloaca, the opening at the back of its body, drawing in water across thin, blood-rich surfaces. This lets it stay underwater for very long stretches without coming up for air.",
-   "hook": "Wonder: how many other ways of breathing has evolution tried?",
-   "edition": "2026-11-10-pm",
-   "order": 26,
-   "id": "2026-11-10-pm-026"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Optimistic locking: check the version, then write",
-   "body": "Instead of locking a row while a user edits it, keep a version number. Read the row with its version, and when saving, update only if the version is still the same, bumping it as you go. If someone else saved first, nothing changes and you retry with fresh data. It works beautifully when conflicts are rare.",
-   "q": "In optimistic locking, what tells you someone else saved first?",
-   "a": "The version number no longer matches, so the update affects zero rows.",
-   "edition": "2026-11-10-pm",
-   "order": 25,
-   "id": "2026-11-10-pm-025"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "A staff on slippery ground",
-   "body": "The words of good people are like a walking stick on slippery ground: they keep you on your feet.",
-   "who": "Thirukkural 415 (own rendering)",
-   "edition": "2026-11-10-pm",
-   "order": 24,
-   "id": "2026-11-10-pm-024"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The coffee pot that went online",
-   "body": "In 1991, people in the Cambridge University Computer Lab got tired of walking to the Trojan Room coffee pot and finding it empty. They pointed a camera at it and wrote a small program to show the image on their screens. In 1993 it went on the web, and it's often called the first webcam.",
-   "q": "What did the famous Trojan Room camera watch?",
-   "a": "A coffee pot in the Cambridge Computer Lab.",
-   "edition": "2026-11-10-pm",
-   "order": 23,
-   "id": "2026-11-10-pm-023"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Interference: when similar things blur",
-   "body": "Learning two very similar things back to back can make them blur: the new phone number trips over the old one. Psychologists call this interference. A gentle fix is to study similar items side by side on purpose and name the difference out loud, so each one gets its own handle.",
-   "hook": "Wonder: which two things do you keep mixing up, and what's the one difference between them?",
-   "edition": "2026-11-10-pm",
-   "order": 22,
-   "id": "2026-11-10-pm-022"
-  },
-  {
-   "topic": "writing",
-   "kind": "tip",
-   "title": "Give each scene one clear change",
-   "body": "Before writing a scene, finish this sentence: at the start ___, by the end ___. A secret is out, a door closes, a mind turns. If nothing is different by the end, the scene may belong inside another one. Small changes are fine; they just have to be real.",
-   "q": "What quick test tells you if a scene earns its place?",
-   "a": "Something is different at the end than at the start.",
-   "edition": "2026-11-10-pm",
-   "order": 21,
-   "id": "2026-11-10-pm-021"
-  },
-  {
-   "topic": "chess",
-   "kind": "fact",
-   "title": "Tal, the magician, was born 90 years ago",
-   "body": "Mikhail Tal was born in Riga on 9 November 1936. Known as the Magician from Riga, he played wild, sacrificial attacks that were often hard to refute over the board, and he won the world title in 1960 at 23. His lesson for the rest of us: sometimes asking the opponent difficult questions is worth a pawn or two.",
-   "hook": "Wonder: when did you last make a move just to ask a hard question?",
-   "edition": "2026-11-10-pm",
-   "order": 20,
-   "id": "2026-11-10-pm-020"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Stones that ring",
-   "body": "At the Vittala temple in Hampi, built in the Vijayanagara era, the slender stone pillars of the main hall are known as musical pillars: tapped gently, different columns give different tones. Visitors today are asked not to tap them, so the stones stay whole for the next few centuries.",
-   "q": "Which Hampi temple is famous for its musical pillars?",
-   "a": "The Vittala temple.",
-   "edition": "2026-11-10-pm",
-   "order": 19,
-   "id": "2026-11-10-pm-019"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Pair the dull with the pleasant",
-   "body": "Save something you enjoy for a task you avoid: a favourite podcast only while folding laundry, a nice tea only during email. Researchers call this temptation bundling. The dull task borrows a little of the pleasant one's pull, and you get to stop waiting for motivation.",
-   "hook": "Wonder: which small treat could you link to tomorrow's least favourite chore?",
-   "edition": "2026-11-10-pm",
-   "order": 18,
-   "id": "2026-11-10-pm-018"
   }
  ]
 }
