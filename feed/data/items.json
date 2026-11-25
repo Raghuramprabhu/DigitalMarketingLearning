@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T17:15:06+00:00",
+ "updated": "2026-11-25T17:15:29+00:00",
  "items": [
   {
    "topic": "writing",
@@ -147,9 +147,10 @@
   {
    "topic": "facts",
    "kind": "fact",
-   "title": "Sharks are older than trees",
-   "body": "Sharks appear in the fossil record more than 400 million years ago. The first true trees, such as Archaeopteris, came later, around 385 million years ago. Sharks have been cruising the seas through every age since, including before the first forests rose on land.",
-   "hook": "Wonder: what else has been around longer than forests?",
+   "title": "Old windows don't sag because glass flows",
+   "body": "A popular myth says glass is a slow liquid, and that's why some old church windows are thicker at the bottom. In fact, old glassmaking made uneven panes, and glaziers often set the thicker edge at the bottom. Researchers have estimated that glass at room temperature would take far longer than the age of the universe to flow visibly.",
+   "q": "Why are some old window panes thicker at the bottom?",
+   "a": "Uneven old glassmaking, with the thick edge set downward, not flowing glass.",
    "edition": "2026-11-25-pm",
    "order": 16,
    "id": "2026-11-25-pm-016"
