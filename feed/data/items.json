@@ -1,6 +1,325 @@
 {
- "updated": "2026-11-25T17:15:29+00:00",
+ "updated": "2026-11-26T02:19:23+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the folded map",
+   "body": "The old road map in the drawer\nstill knows the way to everywhere\nwe meant to go.\nIts creases are soft as cloth now.\nI don't open it.\nI just like that it remembers\nthe roads for us.",
+   "edition": "2026-11-26-am",
+   "order": 28,
+   "id": "2026-11-26-am-028"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "To thine own self",
+   "body": "This above all: to thine own self be true,\nAnd it must follow, as the night the day,\nThou canst not then be false to any man.",
+   "who": "William Shakespeare, Hamlet, Act 1, Scene 3",
+   "edition": "2026-11-26-am",
+   "order": 27,
+   "id": "2026-11-26-am-027"
+  },
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "A chess book among the first printed in English",
+   "body": "The Game and Playe of the Chesse, translated by William Caxton and printed around 1474, was one of the very first books printed in English. It's less about how to play and more a gentle sermon: each piece stands for a role in society, from the king to the labourers represented by the pawns.",
+   "edition": "2026-11-26-am",
+   "order": 26,
+   "id": "2026-11-26-am-026"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "The Great Red Spot is shrinking, but still huge",
+   "body": "Jupiter's Great Red Spot is a storm that has been watched since at least the 1800s. It has been slowly getting smaller and rounder over the past century, yet it's still wider than the whole Earth.",
+   "q": "Is Jupiter's Great Red Spot bigger or smaller than Earth?",
+   "a": "Still wider than Earth, though it has been slowly shrinking.",
+   "edition": "2026-11-26-am",
+   "order": 25,
+   "id": "2026-11-26-am-025"
+  },
+  {
+   "topic": "ai",
+   "kind": "tip",
+   "title": "Tell the agent your versions",
+   "body": "Coding agents often write code for whichever version of a library they've seen most. Put the versions you actually use (Java 21, Spring Boot 3.x, and so on) in your notes file or first message. You'll get fewer methods that don't exist yet, or no longer exist.",
+   "edition": "2026-11-26-am",
+   "order": 24,
+   "id": "2026-11-26-am-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "QWERTY began with typewriters",
+   "body": "The QWERTY layout comes from Christopher Latham Sholes's typewriter, developed in the 1870s and sold by Remington. Its arrangement was refined over several years of trial and error with the machine. Computer keyboards simply kept the layout people already knew.",
+   "hook": "Wonder: which other habits in computing are really leftovers from older machines?",
+   "edition": "2026-11-26-am",
+   "order": 23,
+   "id": "2026-11-26-am-023"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Load shedding: say no early",
+   "body": "When a service is overloaded, trying to serve everyone means serving everyone slowly, and timeouts pile up. Load shedding turns some requests away quickly (a fast 503 or 'try later') so the rest still finish in time. Shed the cheapest-to-retry or lowest-priority work first, and reject at the front door, before the work has used any resources.",
+   "q": "Why reject some requests on purpose under overload?",
+   "a": "So the remaining requests still finish in time, instead of every request slowing down and timing out.",
+   "edition": "2026-11-26-am",
+   "order": 22,
+   "id": "2026-11-26-am-022"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Give your alarms names",
+   "body": "An alarm that just rings at 4:40 makes you stop and wonder why. Most phones let you label alarms and reminders, so write the action instead: 'Leave for pickup, keys are on the hook.' The label does the remembering, and you get straight to the doing.",
+   "edition": "2026-11-26-am",
+   "order": 21,
+   "id": "2026-11-26-am-021"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Mangulam, letters cut above stone beds",
+   "body": "In the hills at Mangulam, near Madurai, there are rock shelters with smooth stone beds for Jain monks, and above them inscriptions in Tamil-Brahmi script. They're usually dated to around the 2nd century BCE and are among the earliest written records of the Tamil language. One mentions a gift made in the time of a Pandya king.",
+   "q": "What script are the Mangulam inscriptions written in?",
+   "a": "Tamil-Brahmi.",
+   "edition": "2026-11-26-am",
+   "order": 20,
+   "id": "2026-11-26-am-020"
+  },
+  {
+   "topic": "writing",
+   "kind": "tip",
+   "title": "Give your character a habit with their hands",
+   "body": "Hands tell readers what dialogue hides. A grandmother who keeps folding the same napkin, a clerk who taps his pen twice before saying no. Pick one small, specific gesture and let it return at a key moment, maybe changed slightly. The reader will feel the shift without being told.",
+   "hook": "Wonder: what do your own hands do when you're nervous?",
+   "edition": "2026-11-26-am",
+   "order": 19,
+   "id": "2026-11-26-am-019"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "Worked examples first, then fade them",
+   "body": "When something is brand new, studying a fully worked example teaches more than struggling alone, because your working memory isn't swamped. Then take the steps away one at a time: next example, you fill in the last step; after that, the last two. Researchers call this fading. By the end you're solving the whole thing, with support removed as you grew.",
+   "hook": "Wonder: what are you learning now that could use one fully solved example?",
+   "edition": "2026-11-26-am",
+   "order": 18,
+   "id": "2026-11-26-am-018"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A lifetime of honey fits in a spoon",
+   "body": "A single worker honeybee, in her few weeks of foraging, makes only about a twelfth of a teaspoon of honey. A full jar is the work of many hundreds of bees and many thousands of flower visits.",
+   "hook": "Wonder: how many flowers went into your morning spoonful?",
+   "edition": "2026-11-26-am",
+   "order": 17,
+   "id": "2026-11-26-am-017"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Biomni Swarm: a team of agents for biomedical questions",
+   "body": "Phylo introduced Biomni Swarm, a group of AI agents designed to work together on complex biomedical research questions rather than a single agent tackling everything alone.",
+   "hook": "Wonder: what roles would you give a small team of research agents?",
+   "source": {
+    "name": "The Neuron, AI digest for 25 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/"
+   },
+   "edition": "2026-11-26-am",
+   "order": 16,
+   "id": "2026-11-26-am-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Read repair: fix it on the way past",
+   "body": "In leaderless, Dynamo-style stores, a read often asks several replicas. If their answers disagree, the coordinator returns the newest value and, in the background, writes that value back to the replicas that were behind. Popular data heals itself just by being read. Data nobody reads still needs a separate background sync (anti-entropy) to catch up.",
+   "q": "In read repair, what happens to a stale replica?",
+   "a": "The coordinator writes the newer value back to it after spotting the mismatch during a read.",
+   "edition": "2026-11-26-am",
+   "order": 15,
+   "id": "2026-11-26-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Prophylaxis: ask what they want",
+   "body": "Before choosing your move, ask one question: if it were my opponent's turn, what would they play? Then see whether you can quietly stop it. Aron Nimzowitsch made this 'prophylactic' thinking famous, and later Tigran Petrosian built a whole style on it. Often the best move doesn't do much on its own; it just takes away the other side's best idea.",
+   "q": "What question does prophylactic thinking ask?",
+   "a": "What would my opponent play if it were their move, and can I prevent it?",
+   "edition": "2026-11-26-am",
+   "order": 14,
+   "id": "2026-11-26-am-014"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Moon, Jupiter, Mars and Regulus share the dawn",
+   "body": "Before sunrise on 30 November, the waning Moon gathers with Jupiter, Mars and Regulus, the bright star in Leo, high in the south. Jupiter is the brightest point, Mars is the orange one sitting just beside Regulus, and all four fit in a single binocular field. Early risers in India can look south-ish, high up, in the last hour of darkness.",
+   "hook": "Wonder: which of the three points of light is actually a star?",
+   "source": {
+    "name": "When the Curves Line Up (Jeffrey Hunt), 28 Nov almanac",
+    "url": "https://whenthecurveslineup.com/2026/11/19/2026-november-28-almanac-for-sun-moon-and-planets/"
+   },
+   "edition": "2026-11-26-am",
+   "order": 13,
+   "id": "2026-11-26-am-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The spare chair",
+   "body": "Every evening, the tea stall owner set out six plastic chairs and one wooden one. The wooden one was never for sale. Regulars learned not to sit in it.\n\nOne rainy night a schoolboy waited there for his father's bus, dripping, and sat in it without knowing. The owner looked, said nothing, and brought him a glass of tea with extra sugar.\n\nWhen the boy left, the owner wiped the seat and smiled at it, the way you smile at someone who's finally been useful again.",
+   "edition": "2026-11-26-am",
+   "order": 12,
+   "id": "2026-11-26-am-012"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Arthur Samuel's checkers player",
+   "body": "In the 1950s, at IBM, Arthur Samuel wrote a program that played checkers and improved by playing against itself and by remembering positions it had seen. In his 1959 paper on it, he helped popularise a new phrase: machine learning.",
+   "q": "Which game did Arthur Samuel's early learning program play?",
+   "a": "Checkers (draughts).",
+   "edition": "2026-11-26-am",
+   "order": 11,
+   "id": "2026-11-26-am-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Rising to the work",
+   "body": "In the morning when thou risest unwillingly, let this thought be present: I am rising to the work of a human being.",
+   "who": "Marcus Aurelius, Meditations 5.1 (George Long translation)",
+   "edition": "2026-11-26-am",
+   "order": 10,
+   "id": "2026-11-26-am-010"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Pyjama' means 'leg garment'",
+   "body": "The word comes from Persian and Hindustani pāy-jāma: pāy for leg, jāma for garment. British people in India borrowed both the loose trousers and the name, and carried them home in the 1800s, where the word slowly grew to mean the whole sleeping outfit.",
+   "q": "What do the two parts of 'pyjama' mean?",
+   "a": "pāy = leg, jāma = garment.",
+   "edition": "2026-11-26-am",
+   "order": 9,
+   "id": "2026-11-26-am-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "MCP turns two, and learns new tricks",
+   "body": "On the Model Context Protocol's second anniversary, Anthropic announced two additions: Skills over MCP, so packaged know-how can be served through the protocol, and Tasks. The direction is towards agents coordinating with each other, not just calling tools.",
+   "hook": "Wonder: what changes when an agent can borrow a skill instead of carrying it?",
+   "source": {
+    "name": "The Neuron, AI digest for 25 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/"
+   },
+   "edition": "2026-11-26-am",
+   "order": 8,
+   "id": "2026-11-26-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Gommateshwara at Shravanabelagola",
+   "body": "On the hill of Vindhyagiri in Karnataka stands a statue of Bahubali, carved from a single block of granite around 983 CE under Chavundaraya, a minister of the Western Ganga kings. At about 17 metres (57 feet), it's one of the largest free-standing monolithic statues in the world. Every twelve years or so, pilgrims gather for the Mahamastakabhisheka, when the statue is bathed in milk, saffron and flowers from scaffolds above its head.",
+   "q": "Roughly how tall is the Gommateshwara statue?",
+   "a": "About 17 metres (57 feet), carved from a single granite block.",
+   "edition": "2026-11-26-am",
+   "order": 7,
+   "id": "2026-11-26-am-007"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 16: Stream.mapMulti",
+   "body": "mapMulti lets each element emit zero, one or many results without building a little stream for each one, as flatMap would.\n\nlist.stream()\n    .<String>mapMulti((order, out) -> {\n        for (var line : order.lines()) out.accept(line.sku());\n    })\n    .toList();\n\nIt shines when most elements produce only a few outputs, or when the logic is easier to write as a loop.",
+   "hook": "Wonder: when would a plain loop inside a stream read more clearly than flatMap?",
+   "edition": "2026-11-26-am",
+   "order": 6,
+   "id": "2026-11-26-am-006"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The odd one out gets remembered",
+   "body": "In 1933 Hedwig von Restorff showed that in a list of similar items, the one that's different (a number among syllables, say) is remembered better. It's called the isolation effect. You can use it gently: when one idea in your notes really matters, make it look different. A box, a colour, a sketch. Use it sparingly, though; if everything stands out, nothing does.",
+   "q": "What is the von Restorff (isolation) effect?",
+   "a": "An item that differs from the others around it is remembered better.",
+   "edition": "2026-11-26-am",
+   "order": 5,
+   "id": "2026-11-26-am-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Geneva: 1–1 after two draws, Game 3 today",
+   "body": "The World Championship between Javokhir Sindarov and D Gukesh is level at 1–1. Game 1 was a 38-move Berlin that ended in a repetition, and Game 2 a 20-move London System, also drawn by repetition. Game 3 is on Thursday 26 November at 15:00 CET (19:30 IST), with Friday a rest day and Game 4 on Saturday. First to 7½ points wins.",
+   "q": "How many points does a player need to win this 14-game match outright?",
+   "a": "7½.",
+   "source": {
+    "name": "ChessBase, World Championship live page",
+    "url": "https://en.chessbase.com/post/world-championship-2026-live"
+   },
+   "edition": "2026-11-26-am",
+   "order": 4,
+   "id": "2026-11-26-am-004"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Turn a weekly chore into a checklist",
+   "body": "Chores you do every week (laundry, the grocery order, paying the bills) are full of tiny steps that your brain has to rebuild each time. Write the steps down once, in order, and keep the list where the chore happens. Next week you just follow it. Nothing to remember, nothing to decide.",
+   "hook": "Wonder: which weekly job do you re-plan every single time?",
+   "edition": "2026-11-26-am",
+   "order": 3,
+   "id": "2026-11-26-am-003"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Far-side Moon rocks tell a gentler story",
+   "body": "Rocks brought back by China's Chang'e-6, the first mission to return samples from the Moon's far side, have been dated by a team led from the Guangzhou Institute of Geochemistry. The impact melts span roughly 4.33 to 1.13 billion years ago, and the record suggests asteroid hits tapered off gradually over billions of years rather than arriving in one single great bombardment. The work appears in Science Advances.",
+   "q": "Which mission returned the first samples from the Moon's far side?",
+   "a": "Chang'e-6.",
+   "source": {
+    "name": "ScienceDaily (Curtin University), 24 Nov 2026",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261121221136.htm"
+   },
+   "edition": "2026-11-26-am",
+   "order": 2,
+   "id": "2026-11-26-am-002"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Thursday, the first kettle",
+   "body": "The kettle starts its quiet hum\nbefore the house has spoken.\nSteam writes a word on the window\nthat nobody needs to read.\nOutside, a crow decides on the wall.\nInside, two cups wait, turned up,\nlike small hands open for the day.",
+   "edition": "2026-11-26-am",
+   "order": 1,
+   "id": "2026-11-26-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Two amateur astronomers go planet-hunting with Astra",
+   "body": "OpenAI shared a story about two amateur astronomers who used its Astra tool together with Codex to sift through public observations from NASA's Kepler and TESS space telescopes. The search turned up candidate exoplanets: possible worlds that still need follow-up before anyone calls them confirmed.",
+   "hook": "Wonder: how many planets are still hiding in data that's already public?",
+   "source": {
+    "name": "The Neuron, AI digest for 25 Nov 2026",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-25-2026/"
+   },
+   "edition": "2026-11-26-am",
+   "order": 0,
+   "id": "2026-11-26-am-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
@@ -9747,317 +10066,6 @@
    "edition": "2026-11-11-pm",
    "order": 16,
    "id": "2026-11-11-pm-016"
-  },
-  {
-   "topic": "craft",
-   "kind": "tip",
-   "title": "Java: a default without the ternary",
-   "body": "Instead of `name != null ? name : \"guest\"`, write `Objects.requireNonNullElse(name, \"guest\")` (Java 9+). If the default is expensive to build, use `requireNonNullElseGet(name, () -> loadDefault())` so it's only created when needed. Small, but the intent reads in one glance.",
-   "q": "Which method avoids building an expensive default unless it's needed?",
-   "a": "Objects.requireNonNullElseGet, with a Supplier.",
-   "edition": "2026-11-11-pm",
-   "order": 15,
-   "id": "2026-11-11-pm-015"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Vaishali beats Niemann and So in Budapest",
-   "body": "In the Total Chess opening blitz, R. Vaishali beat Hans Niemann in round 1 and Wesley So in round 3, both with Black, and drew with Duda, Rapport, Giri and Assaubayeva, finishing on 4/9. She now plays in Group D alongside So, Arjun Erigaisi, Vachier-Lagrave, Niemann and Assaubayeva.",
-   "source": {
-    "name": "ChessBase India",
-    "url": "https://chessbase.in/news/magnus-carlsen-wins-total-chess-world-championship-pilot-2026-blitz"
-   },
-   "edition": "2026-11-11-pm",
-   "order": 14,
-   "id": "2026-11-11-pm-014"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The bell at the cycle shop",
-   "body": "Murugan's cycle shop had a bell on the door that had lost its clapper years ago. Customers still pushed the door and paused, waiting for the ring that never came. Murugan liked that pause. It was the moment people stopped hurrying. One evening a boy fixed the bell with a bolt from the spare-parts tin and rang it proudly. Murugan thanked him, and that night he took the bolt out again, gently, and kept it in his shirt pocket as a gift.",
-   "hook": "Wonder: what small 'broken' thing in your day actually helps you slow down?",
-   "edition": "2026-11-11-pm",
-   "order": 13,
-   "id": "2026-11-11-pm-013"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Wave at Voyager 1 in Morse code",
-   "body": "NASA says Voyager 1 will be one light-day from Earth at 10:16 UTC on 18 November 2026 (3:46 pm IST), about 25.9 billion kilometres away, 49 years after launch. To mark it, NASA's 'Shine Bright' event invites people to flash V-G-R in Morse code with a torch after sunset on 17 November: dot-dot-dot-dash, dash-dash-dot, dot-dash-dot.",
-   "hook": "Wonder: a message from Earth now takes a whole day to reach it. What would you send?",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/space/voyager-1-1-light-day-from-earth-november-17-18-2026/"
-   },
-   "edition": "2026-11-11-pm",
-   "order": 12,
-   "id": "2026-11-11-pm-012"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Moore's law began as a 1965 magazine piece",
-   "body": "In 1965 Gordon Moore wrote an article for Electronics magazine predicting that the number of components on a chip would double about every year. In 1975 he revised the pace to roughly every two years. It was an observation about engineering and economics, not a law of physics, yet the industry treated it as a target for decades.",
-   "q": "How did Moore revise his prediction in 1975?",
-   "a": "From doubling about every year to roughly every two years.",
-   "edition": "2026-11-11-pm",
-   "order": 11,
-   "id": "2026-11-11-pm-011"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Smile at it",
-   "body": "When trouble comes, meet it with a smile; nothing overcomes trouble quite like that.",
-   "who": "Thirukkural 621 (own rendering)",
-   "edition": "2026-11-11-pm",
-   "order": 10,
-   "id": "2026-11-11-pm-010"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Reminders that know where you are",
-   "body": "Time-based reminders often fire when you can't act on them. Most phones can remind you by place instead: 'buy batteries' when you reach the shop, 'take the parcel' when you leave home. The nudge arrives at the one moment it's useful, so you don't have to hold it in mind all day.",
-   "edition": "2026-11-11-pm",
-   "order": 9,
-   "id": "2026-11-11-pm-009"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Give the agent a way to say 'blocked'",
-   "body": "Agents tend to keep trying when they hit a wall: a missing permission, a vague requirement, a test that can't run. Add an explicit 'blocked' outcome with a short reason, and make it a respectable result rather than a failure. You'll get fewer creative workarounds and a clearer picture of what actually needs a human.",
-   "edition": "2026-11-11-pm",
-   "order": 8,
-   "id": "2026-11-11-pm-008"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Aathichoodi: Tamil wisdom in alphabetical order",
-   "body": "Avvaiyar's Aathichoodi is a set of very short lines of advice, each beginning with the next letter of the Tamil alphabet. The first, 'Aram seya virumbu', means 'Love to do good'. Because each line is only a few words and follows the alphabet, generations of Tamil children have learned their letters and their values together.",
-   "hook": "Wonder: what would your own alphabet of one-line advice say?",
-   "edition": "2026-11-11-pm",
-   "order": 7,
-   "id": "2026-11-11-pm-007"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The dot on the i has a name",
-   "body": "The little dot above a lowercase i or j is called a tittle. The word is centuries old, and it may even be behind the phrase 'to a T', meaning exactly, though that origin isn't certain.",
-   "q": "What is the dot above a lowercase i called?",
-   "a": "A tittle.",
-   "edition": "2026-11-11-pm",
-   "order": 6,
-   "id": "2026-11-11-pm-006"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Rendezvous hashing: let every node bid",
-   "body": "To decide which server owns a key, compute a score for every server, hash(key + server), and pick the highest. That's rendezvous (highest-random-weight) hashing. If a server leaves, only its keys move, each to its next-highest bidder; everything else stays put. It needs no ring and no virtual nodes, at the cost of scoring every server per lookup.",
-   "q": "In rendezvous hashing, which server owns a key?",
-   "a": "The one with the highest hash(key, server) score.",
-   "edition": "2026-11-11-pm",
-   "order": 5,
-   "id": "2026-11-11-pm-005"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Write it down to think better",
-   "body": "Working memory holds only a few things at a time. Psychologists call it cognitive offloading when you move some of that load into the world: a note, a sketch, a list. Research reviewed by Evan Risko and Sam Gilbert suggests people offload naturally when a task gets heavy, and it often improves performance. A messy scratch page is not a sign of weakness; it's extra working memory.",
-   "hook": "Wonder: which part of today's work could live on paper instead of in your head?",
-   "edition": "2026-11-11-pm",
-   "order": 4,
-   "id": "2026-11-11-pm-004"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Carlsen wins the Total Chess opening blitz unbeaten",
-   "body": "The Total Chess pilot in Budapest began on 10 November with a nine-round blitz Swiss for 24 players. Magnus Carlsen finished on 7/9 with five wins and four draws, half a point ahead of Maxime Vachier-Lagrave, with Levon Aronian third on 6. The blitz doesn't award prize money; it sets tiebreaks for the group stage, which runs 11 to 15 November at 45 minutes plus 30 seconds a move.",
-   "q": "What was Carlsen's score in the Budapest opening blitz?",
-   "a": "7/9, unbeaten (five wins, four draws).",
-   "source": {
-    "name": "ChessBase India",
-    "url": "https://chessbase.in/news/magnus-carlsen-wins-total-chess-world-championship-pilot-2026-blitz"
-   },
-   "edition": "2026-11-11-pm",
-   "order": 3,
-   "id": "2026-11-11-pm-003"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A lava world wearing a reflective veil",
-   "body": "Webb watched the super-Earth TOI-561 b for 37 hours, covering three of its orbits; it circles its star in under 10.5 hours, about 280 light-years away in Sextans. A planet that close should be scorched bare, yet the light suggests reflective clouds or haze that bounce much of the starlight back into space, like a sunscreen.",
-   "q": "How long does TOI-561 b take to orbit its star?",
-   "a": "Under 10.5 hours.",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/space/lava-planets-surprising-atmosphere-toi-561-b-super-earth/"
-   },
-   "edition": "2026-11-11-pm",
-   "order": 2,
-   "id": "2026-11-11-pm-002"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Wednesday, lamps on",
-   "body": "The vegetable cart folds its last shade.\nA boy carries home a single bulb\nas if it might spill.\nWindows take their turns lighting up,\nslow and unhurried,\nlike someone counting\nwho doesn't mind losing their place.",
-   "edition": "2026-11-11-pm",
-   "order": 1,
-   "id": "2026-11-11-pm-001"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Gemini 4 Carbon reaches the paid API",
-   "body": "Google has made Gemini 4 Carbon available to paid API and AI Ultra users, at an introductory $2 per million input tokens and $10 per million output tokens until 30 November. Google says it ranks first on several agent benchmarks, including CursorBench 4.0. It also brings a /swarm feature to Antigravity that turns a single prompt into a small team of coordinated agents.",
-   "hook": "Wonder: when one prompt becomes a team, who decides which agent does what?",
-   "source": {
-    "name": "AI Weekly",
-    "url": "https://aiweekly.co/ai-news-today"
-   },
-   "edition": "2026-11-11-pm",
-   "order": 0,
-   "id": "2026-11-11-pm-000"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Before you scroll on, try to recall: what kind of engine is NASA's AMPERE prize for? Which way do grown-up sunflowers face? Which Chola temple is carved as a chariot?",
-   "q": "Why does a solar day on Mercury last two of its years?",
-   "a": "It spins slowly (59 days) while orbiting in 88 days, so sunrise to sunrise takes about 176 Earth days.",
-   "edition": "2026-11-11-am",
-   "order": 30,
-   "id": "2026-11-11-am-030"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Terrace, after the rain",
-   "body": "Water stands in the dent of the old chair.\nThe neem shakes off what it was holding.\nSomewhere a radio finds its station,\nloses it, finds it again.\nI do the same with the evening.",
-   "edition": "2026-11-11-am",
-   "order": 29,
-   "id": "2026-11-11-am-029"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The kiwi's very big egg",
-   "body": "A female kiwi lays an egg that can be around a fifth of her own body weight, one of the largest eggs relative to body size of any bird. The chick hatches well developed, with a yolk store that keeps it going for its first days.",
-   "edition": "2026-11-11-am",
-   "order": 28,
-   "id": "2026-11-11-am-028"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Read the trace, not just the answer",
-   "body": "An agent's final answer tells you what it concluded; its trace tells you how. When something goes wrong, the steps (which files it read, which tool calls failed, where it guessed) usually show the real fix faster than rewriting the prompt. Make the trace easy to read, and you'll improve the agent faster.",
-   "hook": "Wonder: what would you learn if you watched every step of your own work as closely?",
-   "edition": "2026-11-11-am",
-   "order": 27,
-   "id": "2026-11-11-am-027"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Like a good book",
-   "body": "The company of the good is like a fine book: the more often you return to it, the more it gives.",
-   "who": "Thirukkural 783 (own rendering)",
-   "edition": "2026-11-11-am",
-   "order": 26,
-   "id": "2026-11-11-am-026"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java: groupingBy in one line",
-   "body": "Collectors.groupingBy turns a list into a map of lists. For example, orders.stream().collect(groupingBy(Order::city)) gives a Map from each city to its orders. Add a second collector to summarise each group: groupingBy(Order::city, counting()) gives a count per city instead of the full lists.",
-   "edition": "2026-11-11-am",
-   "order": 25,
-   "id": "2026-11-11-am-025"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "A rook on the seventh rank",
-   "body": "A rook that reaches the opponent's second rank (your seventh) is often worth an extra pawn's activity. From there it attacks pawns that haven't moved and can trap the enemy king on its back rank. Two rooks doubled on the seventh are strong enough that players have a nickname for them: 'pigs on the seventh', because they eat everything.",
-   "q": "Why is a rook on the seventh rank so strong?",
-   "a": "It attacks unmoved pawns and can confine the enemy king to its back rank.",
-   "edition": "2026-11-11-am",
-   "order": 24,
-   "id": "2026-11-11-am-024"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "TIFRAC, an early computer built in India",
-   "body": "TIFRAC (Tata Institute of Fundamental Research Automatic Calculator) was designed and built at TIFR in Bombay in the late 1950s and was in use by 1960. It was one of the first electronic digital computers built in India, using thousands of vacuum tubes and a ferrite-core memory. It served Indian scientists for several years before commercial machines took over.",
-   "hook": "Wonder: what does it take to build a computer when there is no one to buy one from?",
-   "edition": "2026-11-11-am",
-   "order": 23,
-   "id": "2026-11-11-am-023"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Give messages their own visiting hours",
-   "body": "Turn off most notifications and pick two or three set times a day to check messages. Write those times on a sticky note so your brain can trust they'll come. Batching messages turns a hundred small interruptions into a few short, finished visits.",
-   "edition": "2026-11-11-am",
-   "order": 22,
-   "id": "2026-11-11-am-022"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "The Orion Nebula is a nursery you can see",
-   "body": "On November nights Orion climbs into the eastern sky by late evening. Below his belt hangs a short line of stars, his sword, and the fuzzy middle 'star' is the Orion Nebula, a cloud where new stars are forming about 1,300 light-years away. Even ordinary binoculars show it as a soft glow.",
-   "q": "What is the fuzzy patch in Orion's sword?",
-   "a": "The Orion Nebula, a star-forming cloud about 1,300 light-years away.",
-   "edition": "2026-11-11-am",
-   "order": 21,
-   "id": "2026-11-11-am-021"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Open with a question the reader wants answered",
-   "body": "A first line works when it makes the reader curious about something specific. 'The letter had been posted in 1994 and arrived on a Tuesday' asks a question without saying so. You don't need a mystery, just one small gap the reader wants filled, and then the patience to fill it at the right moment.",
-   "edition": "2026-11-11-am",
-   "order": 20,
-   "id": "2026-11-11-am-020"
-  },
-  {
-   "topic": "mind",
-   "kind": "fact",
-   "title": "Tip-of-the-tongue moments are normal",
-   "body": "Most people have a word stuck on the tip of the tongue now and then, often for names. You frequently know the first letter or the number of syllables while the word itself hides. Usually it turns up on its own a little later, so it helps to note what you were reaching for and move on.",
-   "hook": "Wonder: how can you know a word's first letter without knowing the word?",
-   "edition": "2026-11-11-am",
-   "order": 19,
-   "id": "2026-11-11-am-019"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Korkai, the pearl port of the Pandyas",
-   "body": "Korkai, near the mouth of the Tamirabarani river, was an early port of the Pandya kings and was known for its pearl fishery. Greek and Roman writers knew it too: the Periplus of the Erythraean Sea and Ptolemy mention a pearl-fishing place called Kolchoi. Over centuries the shoreline moved, and Korkai now sits a few kilometres inland.",
-   "q": "What was the ancient Pandya port of Korkai famous for?",
-   "a": "Its pearl fishery.",
-   "edition": "2026-11-11-am",
-   "order": 18,
-   "id": "2026-11-11-am-018"
   }
  ]
 }
