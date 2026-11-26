@@ -1,6 +1,358 @@
 {
- "updated": "2026-11-26T02:19:23+00:00",
+ "updated": "2026-11-26T17:15:15+00:00",
  "items": [
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the ceiling fan",
+   "body": "The fan turns its three slow arms\nas if stirring the dark like tea.\nIt has nowhere to go\nand goes there faithfully.\nI count four turns, then lose count.\nThat is how sleep comes:\nnot arriving, just no longer being counted.",
+   "who": "Original",
+   "edition": "2026-11-26-pm",
+   "order": 30,
+   "id": "2026-11-26-pm-030"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try to answer before you scroll back up.",
+   "q": "1) What did Cloudflare's new feature give websites? 2) Which Indian town gave its name to calico? 3) In which Java version did instanceof pattern matching become standard?",
+   "a": "1) A /.well-known/search endpoint so agents can search a site. 2) Calicut (Kozhikode). 3) Java 16.",
+   "edition": "2026-11-26-pm",
+   "order": 29,
+   "id": "2026-11-26-pm-029"
+  },
+  {
+   "topic": "ai",
+   "kind": "tip",
+   "title": "Give the agent one example to copy",
+   "body": "Describing your code style in words takes a paragraph and still leaves gaps. Pointing to one good file takes a line: 'Write the new handler the way OrderHandler.java is written.' The agent picks up naming, error handling and layout from the example, and you spend less time on review.",
+   "hook": "Wonder: which file in your project best shows how you like things done?",
+   "edition": "2026-11-26-pm",
+   "order": 28,
+   "id": "2026-11-26-pm-028"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The protégé effect",
+   "body": "People who study expecting to teach the material tend to remember it better than those who study only expecting a test, even if they never actually teach. In a 2014 study by Nestojko and colleagues, the 'you'll teach this' group recalled more and organised it better. Try reading tonight's article as if you'll explain it to a friend tomorrow.",
+   "hook": "Wonder: who would you explain today's most interesting idea to?",
+   "edition": "2026-11-26-pm",
+   "order": 27,
+   "id": "2026-11-26-pm-027"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Even to their bones",
+   "body": "Those without love keep everything for themselves.\nThose with love belong to others, even to their bones.",
+   "who": "Thirukkural 72 (own rendering)",
+   "edition": "2026-11-26-pm",
+   "order": 26,
+   "id": "2026-11-26-pm-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "Anand, India's first grandmaster",
+   "body": "In 1988 Viswanathan Anand, from Chennai, became India's first grandmaster. He went on to become world champion in 2000. Within forty years India has grown from one grandmaster to a hundred, many of them inspired by watching him play.",
+   "q": "When did Viswanathan Anand become India's first grandmaster?",
+   "a": "1988.",
+   "edition": "2026-11-26-pm",
+   "order": 25,
+   "id": "2026-11-26-pm-025"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Cot' came from Hindi",
+   "body": "The English word cot comes from the Hindi khāṭ, a light bed of woven rope on a wooden frame (from Sanskrit khaṭvā). It entered English in the 1600s through people living in India, and today it travels everywhere, from hospital wards to camping trips.",
+   "q": "Which Hindi word gave English 'cot'?",
+   "a": "Khāṭ, a woven-rope bed.",
+   "edition": "2026-11-26-pm",
+   "order": 24,
+   "id": "2026-11-26-pm-024"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "ESCAPADE looks back at home",
+   "body": "NASA's twin ESCAPADE probes, on their way to study how Mars loses its upper atmosphere, swung past Earth on 9 November 2026 and took a picture of their home planet before heading out. The flyby gave them the boost they needed for the long road to Mars.",
+   "q": "What will the ESCAPADE probes study at Mars?",
+   "a": "How Mars's upper atmosphere is lost to space.",
+   "source": {
+    "name": "EarthSky, 24 Nov 2026",
+    "url": "https://earthsky.org/space/escapade-mission-mars-gold-and-blue-probes/"
+   },
+   "edition": "2026-11-26-pm",
+   "order": 23,
+   "id": "2026-11-26-pm-023"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 16: pattern matching for instanceof",
+   "body": "No more casting right after a type check:\n\nif (obj instanceof String s && !s.isBlank()) {\n    System.out.println(s.length());\n}\n\nThe variable s exists only where the check is known to be true, so it can even be used later in the same condition. It's the small first step towards the bigger pattern matching in switch.",
+   "q": "In which Java version did pattern matching for instanceof become standard?",
+   "a": "Java 16.",
+   "edition": "2026-11-26-pm",
+   "order": 22,
+   "id": "2026-11-26-pm-022"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Chidambaram's golden roof",
+   "body": "At the Nataraja temple in Chidambaram, the Chit Sabha, the hall of the dancing Shiva, has a gold-covered roof. Tradition says it holds 21,600 gold tiles, one for each breath a person takes in a day, fixed with 72,000 nails, one for each of the body's subtle channels (nadis) described in yoga texts.",
+   "hook": "Wonder: why might builders hide a whole philosophy in the count of tiles?",
+   "edition": "2026-11-26-pm",
+   "order": 21,
+   "id": "2026-11-26-pm-021"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "A 3D-printed robot hand you can talk to",
+   "body": "A team at NJIT built the PHD Hand: a robotic hand made from 3D-printed joints, metal rods and hobby servos, controlled from a web browser or by speech with AI help. If power is lost, the fingers gently return to a neutral position. The paper is due at the IEEE Humanoids conference in December.",
+   "hook": "Wonder: what would you ask a robot hand to do first?",
+   "source": {
+    "name": "RIO Rundown, AI news for 26 Nov 2026",
+    "url": "https://riorundown.substack.com/p/ai-news-nov-26-2026-agentic-ai-infrastructure"
+   },
+   "edition": "2026-11-26-pm",
+   "order": 20,
+   "id": "2026-11-26-pm-020"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "The two-minute rule",
+   "body": "If a task takes less than two minutes (rinse the cup, reply 'yes, Tuesday works', hang up the towel), do it now, instead of writing it down. Writing and remembering it costs more than doing it. Keep the rule for small jobs only; anything bigger goes on the list.",
+   "q": "Under the two-minute rule, what do you do with a task that takes less than two minutes?",
+   "a": "Do it right away instead of adding it to a list.",
+   "edition": "2026-11-26-pm",
+   "order": 19,
+   "id": "2026-11-26-pm-019"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first webcam watched a coffee pot",
+   "body": "In 1991, researchers at the University of Cambridge's Computer Laboratory pointed a camera at the coffee pot in the Trojan Room, so people in other parts of the building could check whether it was empty before walking over. In 1993 the picture was put on the web, and the coffee pot became world famous. It ran until 2001.",
+   "hook": "Wonder: which tiny everyday annoyance could lead to the next big invention?",
+   "edition": "2026-11-26-pm",
+   "order": 18,
+   "id": "2026-11-26-pm-018"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The sign painter's last letter",
+   "body": "The old sign painter on the bazaar road had painted every shop name for forty years, by hand, in three scripts.\n\nWhen the sweet shop ordered a new board, his grandson offered to print it instead. Faster, he said. Straighter.\n\nThe painter nodded, then asked for one thing: let him paint just the last letter. The grandson laughed and handed him the brush.\n\nNow the printed board hangs bright and even, and at the very end the final letter leans a little, warm and alive, like a man waving from a doorway.",
+   "who": "Original",
+   "edition": "2026-11-26-pm",
+   "order": 17,
+   "id": "2026-11-26-pm-017"
+  },
+  {
+   "topic": "mind",
+   "kind": "tip",
+   "title": "Take an awe walk",
+   "body": "In a 2020 study, older adults took a 15-minute walk once a week for eight weeks. One group was simply asked to notice things that felt vast or wonderful: a big sky, the detail of a leaf. That 'awe walk' group reported more daily joy and gratitude than the group that just walked. Try it on your next stroll: look up, look close.",
+   "hook": "Wonder: what is the largest thing you can see from your street?",
+   "edition": "2026-11-26-pm",
+   "order": 16,
+   "id": "2026-11-26-pm-016"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "A rook on the seventh rank",
+   "body": "A rook that reaches the opponent's second rank (your seventh) attacks pawns that haven't moved and can trap the enemy king on the back row. Two rooks there together are nicknamed 'pigs on the seventh', because they gobble everything in their path. In endgames, getting there first is often worth a pawn.",
+   "q": "What are two rooks on the seventh rank nicknamed?",
+   "a": "'Pigs on the seventh'.",
+   "edition": "2026-11-26-pm",
+   "order": 15,
+   "id": "2026-11-26-pm-015"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Retire into thyself",
+   "body": "For nowhere either with more quiet or more freedom from trouble does a man retire than into his own soul.",
+   "who": "Marcus Aurelius, Meditations 4.3 (George Long translation)",
+   "edition": "2026-11-26-pm",
+   "order": 14,
+   "id": "2026-11-26-pm-014"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The Event Horizon Telescope looks down a jet",
+   "body": "The Event Horizon Telescope collaboration, the team behind the first black-hole images, has resolved the innermost part of the jet from the blazar 3C 279 in unprecedented detail. 3C 279 is a galaxy billions of light-years away whose central black hole fires a jet almost straight at us, so we can trace how the jet is shaped and how it moves close to where it starts.",
+   "hook": "Wonder: how can a telescope the size of Earth be built from dishes on different continents?",
+   "source": {
+    "name": "Universe Today, 25 Nov 2026",
+    "url": "https://www.universetoday.com/articles/the-event-horizon-telescope-views-the-dynamics-and-geometry-of-a-black-hole-jet-in-extreme-detailele"
+   },
+   "edition": "2026-11-26-pm",
+   "order": 13,
+   "id": "2026-11-26-pm-013"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Gossip: let servers spread news like rumours",
+   "body": "In a gossip protocol, every second or so each node picks a few random peers and swaps what it knows: who is alive, who joined, which versions they hold. News spreads like a rumour in a village and reaches the whole cluster in roughly log(N) rounds, with no central coordinator to fail. Cassandra uses gossip to keep track of cluster membership.",
+   "q": "Roughly how many rounds does gossip need to reach all N nodes?",
+   "a": "About log(N) rounds.",
+   "edition": "2026-11-26-pm",
+   "order": 12,
+   "id": "2026-11-26-pm-012"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Calico came from Calicut",
+   "body": "Calico, the plain cotton cloth, takes its name from Calicut, today's Kozhikode on the Kerala coast. Cotton textiles shipped from there were so prized in Europe in the 1600s that the town's name became the name of the cloth itself.",
+   "q": "Which Indian port town gave its name to calico?",
+   "a": "Calicut (Kozhikode), in Kerala.",
+   "edition": "2026-11-26-pm",
+   "order": 11,
+   "id": "2026-11-26-pm-011"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "A physics benchmark that filled up fast",
+   "body": "Physicist Suvrat Raju and colleagues built TheoPhysEval, a set of unpublished theoretical-physics problems. As reported by Ars Technica, OpenAI's GPT-6 Astra solved 49 of the 50 questions, for under $3 an answer, and even spotted subtle errors in some of the human solutions. Since the test is now nearly maxed out, Raju doesn't plan a second version.",
+   "hook": "Wonder: what makes a good test once machines can pass the old ones?",
+   "source": {
+    "name": "RIO Rundown, AI news for 26 Nov 2026 (citing Ars Technica)",
+    "url": "https://riorundown.substack.com/p/ai-news-nov-26-2026-agentic-ai-infrastructure"
+   },
+   "edition": "2026-11-26-pm",
+   "order": 10,
+   "id": "2026-11-26-pm-010"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Tholkappiyam, the oldest Tamil grammar",
+   "body": "Tholkappiyam, attributed to Tolkappiyar, is the oldest surviving grammar of Tamil. It has three books: on letters and sounds (Ezhuthathikaram), on words (Sollathikaram), and on subject matter (Porulathikaram), which also covers poetics, including the akam and puram themes of love and public life. Scholars still debate its date, but its layers go back many centuries.",
+   "q": "Name the three books of Tholkappiyam.",
+   "a": "Ezhuthathikaram (letters), Sollathikaram (words), Porulathikaram (subject matter and poetics).",
+   "edition": "2026-11-26-pm",
+   "order": 9,
+   "id": "2026-11-26-pm-009"
+  },
+  {
+   "topic": "writing",
+   "kind": "tip",
+   "title": "Let the obstacle have a point",
+   "body": "A story feels thin when whatever stands in the way is simply wrong. Give the stubborn aunt, the strict headmaster or the rival a reason the reader could almost agree with. Then the choice your character makes costs something, and the reader feels both sides pulling.",
+   "hook": "Wonder: who in your story would tell it very differently, and fairly?",
+   "edition": "2026-11-26-pm",
+   "order": 8,
+   "id": "2026-11-26-pm-008"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The goal-gradient effect",
+   "body": "Effort tends to speed up as a goal gets closer. Clark Hull saw it in 1932 with rats running faster near the food. In a 2006 study, coffee-shop customers given a 12-stamp card with two stamps already filled finished faster than those with a plain 10-stamp card, though both needed ten coffees. Feeling 'already started' helps. Show yourself the progress you've already made.",
+   "q": "Why did the pre-stamped 12-stamp cards get finished faster?",
+   "a": "Starting with visible progress made the goal feel closer, which sped people up.",
+   "edition": "2026-11-26-pm",
+   "order": 7,
+   "id": "2026-11-26-pm-007"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first .com was symbolics.com",
+   "body": "On 15 March 1985, Symbolics, a company that made Lisp machines, registered symbolics.com. It was the very first .com domain name. Registrations were slow at first: only a handful more were added that year.",
+   "q": "What was the first .com domain ever registered?",
+   "a": "symbolics.com, on 15 March 1985.",
+   "edition": "2026-11-26-pm",
+   "order": 6,
+   "id": "2026-11-26-pm-006"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Open the mail next to the bin",
+   "body": "Paper piles up because each envelope asks for a small decision later. Open post standing beside the recycling bin: junk goes straight in, anything needing action goes into one 'to do' tray, and the rest gets filed or tossed right there. One spot, one minute, no pile.",
+   "hook": "Wonder: where in your home do small decisions quietly collect?",
+   "edition": "2026-11-26-pm",
+   "order": 5,
+   "id": "2026-11-26-pm-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Game 3 in Geneva: Sindarov with White again",
+   "body": "With the World Championship level at 1–1, Javokhir Sindarov took White for Game 3 on Thursday against D Gukesh, and the game opened with a Ruy Lopez, the same opening family as Game 1's Berlin. Friday is a rest day. Colours swap on even-numbered games, so Gukesh has White for Game 4 on Saturday 28 November, again at 19:30 IST.",
+   "hook": "Wonder: how does a player prepare differently for a rest day than for a game day?",
+   "source": {
+    "name": "BozokMedia, Game 3 updates, 26 Nov 2026",
+    "url": "https://www.bozokmedia.com/en/sports/2026/11/26/gukesh-vs-sindarov-world-chess-championship-game-3-433170/"
+   },
+   "edition": "2026-11-26-pm",
+   "order": 4,
+   "id": "2026-11-26-pm-004"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Optimistic locking: check the version, then write",
+   "body": "Give each row a version number. Read it with the data, then update with a guard:\n\nUPDATE account SET balance = ?, version = version + 1\nWHERE id = ? AND version = ?\n\nIf zero rows changed, someone else got there first, so reload and try again. No locks are held while the user thinks. In JPA, a field marked @Version does this for you. It suits data where clashes are rare.",
+   "q": "In optimistic locking, what does 'zero rows updated' tell you?",
+   "a": "Someone else changed the row since you read it; reload and retry.",
+   "edition": "2026-11-26-pm",
+   "order": 3,
+   "id": "2026-11-26-pm-003"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Potatoes that grew in pretend Moon soil",
+   "body": "Researchers grew potatoes in simulated lunar soil mixed with organic matter and found they were safe to eat, with growth and yields comparable to Earth-grown ones. It's a small, homely step towards future Moon bases feeding themselves rather than shipping every meal from home.",
+   "q": "What was added to the simulated lunar soil to help the potatoes grow?",
+   "a": "Organic matter.",
+   "source": {
+    "name": "Universe Today, 25 Nov 2026",
+    "url": "https://www.universetoday.com/articles/study-finds-artemis-astronauts-will-enjoy-moon-grown-potatoes"
+   },
+   "edition": "2026-11-26-pm",
+   "order": 2,
+   "id": "2026-11-26-pm-002"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Thursday, the evening queue",
+   "body": "At the ration shop counter\nthe line moves one bag at a time.\nA girl reads her school book standing,\nlips shaping the hard words.\nThe clerk weighs rice like a careful thought.\nNobody hurries.\nThe street lamp comes on for all of us at once.",
+   "who": "Original",
+   "edition": "2026-11-26-pm",
+   "order": 1,
+   "id": "2026-11-26-pm-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Cloudflare gives websites a search box for agents",
+   "body": "Cloudflare launched Search for Agents in beta, available on all plans. One dashboard toggle indexes a site's content and opens a standard /.well-known/search endpoint that returns results as Markdown. Instead of crawling page after page, an agent can simply ask the site what it has.",
+   "hook": "Wonder: what would your own notes look like if an agent could search them politely?",
+   "source": {
+    "name": "AI Agent Store, daily agent news for 26 Nov 2026",
+    "url": "https://aiagentstore.ai/ai-agent-news/daily/2026-11-26"
+   },
+   "edition": "2026-11-26-pm",
+   "order": 0,
+   "id": "2026-11-26-pm-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
@@ -9718,354 +10070,6 @@
    "edition": "2026-11-12-am",
    "order": 16,
    "id": "2026-11-12-am-016"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Room for kindness",
-   "body": "Wherever there is a human being, there is an opportunity for a kindness.",
-   "who": "Seneca, On the Happy Life",
-   "edition": "2026-11-12-am",
-   "order": 15,
-   "id": "2026-11-12-am-015"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "The sidecar pattern",
-   "body": "Instead of building logging, TLS and retries into every service, run a small helper process beside each one: a sidecar. It shares the service's network and lifecycle, so the app talks to localhost and the sidecar handles the plumbing. Service meshes like Istio work this way, and teams can upgrade the plumbing without touching the app.",
-   "q": "What does a sidecar share with the service it sits beside?",
-   "a": "Its network and lifecycle (it starts and stops with it).",
-   "edition": "2026-11-12-am",
-   "order": 14,
-   "id": "2026-11-12-am-014"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Van Foreest and Martirosyan bounce back in Budapest",
-   "body": "On day two of the Total Chess pilot in Budapest, Jorden van Foreest beat Levon Aronian and Haik Martirosyan beat Shakhriyar Mamedyarov, both recovering from first-round losses. Magnus Carlsen and Anish Giri drew. No one has a perfect score yet, and only the four group winners go through to the title stage.",
-   "q": "How many players from each group reach the Total Chess title stage?",
-   "a": "Only the group winner.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/2026-total-chess-world-championship-tour-pilot-day-2"
-   },
-   "edition": "2026-11-12-am",
-   "order": 13,
-   "id": "2026-11-12-am-013"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Let the ending echo the opening",
-   "body": "A short piece feels finished when its last image quietly answers its first. Open on a locked gate, close on someone leaving it open. The reader doesn't need it explained; they feel the circle close, and the change in between becomes the story.",
-   "hook": "Wonder: what object could open and close your next piece?",
-   "edition": "2026-11-12-am",
-   "order": 12,
-   "id": "2026-11-12-am-012"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "The Martian moon that rises in the west",
-   "body": "Phobos, the larger moon of Mars, circles the planet in about 7 hours 39 minutes, faster than Mars turns. So from the Martian surface it rises in the west and sets in the east, crossing the sky roughly twice a day.",
-   "q": "Why does Phobos rise in the west?",
-   "a": "It orbits Mars faster than Mars rotates.",
-   "edition": "2026-11-12-am",
-   "order": 11,
-   "id": "2026-11-12-am-011"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Keep a 'waiting for' list",
-   "body": "A surprising amount of mental noise comes from things you're waiting on: a reply, a parcel, a form. Give them one short list with the date you asked. Your brain can stop holding them, and a quick weekly glance tells you which ones need a gentle nudge.",
-   "hook": "Wonder: how many open loops are you quietly carrying right now?",
-   "edition": "2026-11-12-am",
-   "order": 10,
-   "id": "2026-11-12-am-010"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Wi-Fi doesn't stand for anything",
-   "body": "'Wi-Fi' was coined in 1999 by the branding firm Interbrand as a friendlier name than 'IEEE 802.11b Direct Sequence'. It was chosen as a pleasant echo of 'hi-fi'. The phrase 'wireless fidelity' was attached afterwards and was never the real meaning.",
-   "q": "Who coined the name Wi-Fi, and when?",
-   "a": "The branding firm Interbrand, in 1999.",
-   "edition": "2026-11-12-am",
-   "order": 9,
-   "id": "2026-11-12-am-009"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "End every agent run with a changelog",
-   "body": "When an agent finishes, ask it for a short list: files touched, commands run, anything it skipped and why. It takes a few seconds to read, and it turns 'it said it was done' into something you can check. Over time the changelogs also show you which tasks it handles well and which need a closer eye.",
-   "hook": "Wonder: what would you want to know first if a colleague did this work?",
-   "edition": "2026-11-12-am",
-   "order": 8,
-   "id": "2026-11-12-am-008"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Sanchi's great stupa",
-   "body": "The Great Stupa at Sanchi in Madhya Pradesh was first built in the 3rd century BCE under the emperor Ashoka, as a simple brick dome. Later generations enlarged it in stone and added four carved gateways, the toranas, which tell stories from the Buddha's life without ever showing him in human form; he appears as a footprint, a tree or an empty seat.",
-   "hook": "Wonder: how would you tell a story about someone without drawing them?",
-   "edition": "2026-11-12-am",
-   "order": 7,
-   "id": "2026-11-12-am-007"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Seahorse fathers carry the babies",
-   "body": "In seahorses, the female places her eggs into a pouch on the male's belly. He fertilises them, carries them for a few weeks, and then gives birth to tiny, fully formed seahorses, sometimes hundreds at once.",
-   "q": "Which seahorse parent carries the eggs until birth?",
-   "a": "The father, in a pouch on his belly.",
-   "edition": "2026-11-12-am",
-   "order": 6,
-   "id": "2026-11-12-am-006"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "First and last stick best",
-   "body": "Read someone a list of words and ask them to recall it: the first few and the last few come back most easily, and the middle sags. Psychologists call this the serial position effect, with primacy at the start and recency at the end. If a study session has a middle, give it a quick review on its own.",
-   "hook": "Wonder: which part of today's meeting can you remember least?",
-   "edition": "2026-11-12-am",
-   "order": 5,
-   "id": "2026-11-12-am-005"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "India welcomes its 100th grandmaster",
-   "body": "Anuj Shrivatri, 22, won the ASEAN Plus Open in the Philippines with a performance rating of 2586, completing the requirements for the grandmaster title. He becomes India's 100th GM, a round number that would have been hard to imagine when Viswanathan Anand became the first in 1988.",
-   "q": "Who became India's 100th grandmaster?",
-   "a": "Anuj Shrivatri, aged 22.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/india-s-100th-grandmaster"
-   },
-   "edition": "2026-11-12-am",
-   "order": 4,
-   "id": "2026-11-12-am-004"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Java: Math.floorMod for wrap-around",
-   "body": "In Java, -7 % 3 is -1, because % keeps the sign of the left side. That surprises anyone wrapping an index around a ring buffer or a clock face. Math.floorMod(-7, 3) returns 2, which is usually what you meant: a result that is never negative when the divisor is positive.",
-   "q": "What does Math.floorMod(-7, 3) return?",
-   "a": "2 (whereas -7 % 3 is -1).",
-   "edition": "2026-11-12-am",
-   "order": 3,
-   "id": "2026-11-12-am-003"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "ElevenLabs releases Scribe v3",
-   "body": "ElevenLabs has a new speech-to-text model, Scribe v3, plus a live version for real-time use. In its multilingual tests the company reports about 27% fewer word errors than Scribe v2, and the live version adds speaker labels so a transcript knows who said what.",
-   "q": "What does Scribe v3 Live add for conversations?",
-   "a": "Speaker diarization: labels for who said what.",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/"
-   },
-   "edition": "2026-11-12-am",
-   "order": 2,
-   "id": "2026-11-12-am-002"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Thursday, before the milk comes",
-   "body": "The street is still deciding\nwhat colour it will be.\nA crow tries one word, then another.\nI hold the tumbler with both hands,\nnot because it is cold,\nbut because the morning is.",
-   "hook": "Wonder: what small object anchors your first ten minutes?",
-   "edition": "2026-11-12-am",
-   "order": 1,
-   "id": "2026-11-12-am-001"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "The planet that stopped crossing its star",
-   "body": "Astronomers following the hot Jupiter TOI-2535 b with NASA's TESS satellite from 2019 to 2026 watched its transits drift early and late by up to six hours, grow shorter and shallower, and then stop altogether. A hidden neighbour on a tilted orbit is slowly tipping its path, so for now it simply misses our line of sight. The team expects it to start transiting again in 30 to 50 years.",
-   "q": "Why did TOI-2535 b stop transiting?",
-   "a": "A neighbouring planet on a tilted orbit is slowly tipping its orbit out of our line of sight.",
-   "source": {
-    "name": "BBC Sky at Night Magazine",
-    "url": "https://www.skyatnightmagazine.com/news/toi-2535-b-disappearing-planet"
-   },
-   "edition": "2026-11-12-am",
-   "order": 0,
-   "id": "2026-11-12-am-000"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Before you scroll on, try to recall: what does Voyager's Morse message spell? Which piece did Nimzowitsch prefer as a blockader? What is the dot on an i called?",
-   "q": "What did Carlsen score in the Budapest opening blitz?",
-   "a": "7/9, unbeaten.",
-   "edition": "2026-11-11-pm",
-   "order": 30,
-   "id": "2026-11-11-pm-030"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Before sleep",
-   "body": "The fan counts the same four words.\nA neighbour's tap runs, stops.\nI set down the day\nthe way you set down a full glass,\nslowly, watching the rim,\nand nothing spills.",
-   "edition": "2026-11-11-pm",
-   "order": 29,
-   "id": "2026-11-11-pm-029"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "WikiTrace: agent memory you can trace back",
-   "body": "Researchers describe WikiTrace, a memory design for agents with three linked layers: short lessons, compiled summaries, and the raw records of past runs they came from. Across five agent benchmarks it averaged 90.2%, versus 87.0% with lessons alone and 79.5% with no memory, while adding only about 17% extra compute at test time.",
-   "q": "What three layers does WikiTrace link?",
-   "a": "Insights (lessons), compilations, and the raw run trajectories.",
-   "source": {
-    "name": "AI Weekly",
-    "url": "https://aiweekly.co/ai-news-today"
-   },
-   "edition": "2026-11-11-pm",
-   "order": 28,
-   "id": "2026-11-11-pm-028"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "A jiffy is a real unit",
-   "body": "'Back in a jiffy' sounds vague, but scientists have borrowed the word for exact durations. In physics it has been used for the time light takes to cross one centimetre, about 33 trillionths of a second. In computing, a jiffy is one tick of the system timer. Either way, it's quicker than anyone who says it.",
-   "edition": "2026-11-11-pm",
-   "order": 27,
-   "id": "2026-11-11-pm-027"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Change data capture: read the database's diary",
-   "body": "Every serious database keeps a log of its changes for its own recovery. Change data capture tools such as Debezium read that log and publish each insert, update and delete as an event. Search indexes, caches and analytics can follow along without the application having to remember to tell them, and without polling.",
-   "hook": "Wonder: what other systems already keep a diary you could read?",
-   "edition": "2026-11-11-pm",
-   "order": 26,
-   "id": "2026-11-11-pm-026"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Your own friend",
-   "body": "Lift yourself by your own effort; do not let yourself sink. You alone can be your own best friend.",
-   "who": "Bhagavad Gita 6.5 (own rendering)",
-   "edition": "2026-11-11-pm",
-   "order": 25,
-   "id": "2026-11-11-pm-025"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Blockade the passed pawn",
-   "body": "Aron Nimzowitsch, born 140 years ago this month, taught that a passed pawn should be stopped by a piece placed directly in front of it. A knight is ideal: it isn't hemmed in by the pawn, and from that square it still reaches in every direction. 'First restrain, then blockade, then destroy' is the order he recommended.",
-   "q": "Which piece did Nimzowitsch consider the best blockader?",
-   "a": "The knight.",
-   "edition": "2026-11-11-pm",
-   "order": 24,
-   "id": "2026-11-11-pm-024"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The first text message said 'Merry Christmas'",
-   "body": "On 3 December 1992, engineer Neil Papworth sent 'Merry Christmas' from a computer to a mobile phone on the Vodafone network in the UK. Phones couldn't yet type replies, so the recipient simply read it. Within a decade, texting had become one of the most common ways people talk.",
-   "hook": "Wonder: what would you send if you knew it was the first message ever?",
-   "edition": "2026-11-11-pm",
-   "order": 23,
-   "id": "2026-11-11-pm-023"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Mars and Jupiter meet before dawn on 15 November",
-   "body": "Mars and Jupiter will be at their closest around 3 UTC on 15 November (8:30 am IST, so look in the hours before sunrise, low in the east). Mars passes about 1.2 degrees north of Jupiter, a little more than two full-Moon widths. Jupiter will be the brighter of the two; Mars has a faint orange tint.",
-   "q": "Which is brighter in the 15 November pairing, Mars or Jupiter?",
-   "a": "Jupiter.",
-   "source": {
-    "name": "EarthSky",
-    "url": "https://earthsky.org/astronomy-essentials/visible-planets-tonight-mars-jupiter-venus-saturn-mercury/"
-   },
-   "edition": "2026-11-11-pm",
-   "order": 22,
-   "id": "2026-11-11-pm-022"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Keep a few ready-made replies",
-   "body": "Small replies stall because each one needs a fresh start: 'Thanks, received', 'Can we move this to Thursday?', 'Here's the file you asked for'. Save your five most common messages as text shortcuts or notes. Sending one becomes a tap and a tweak, not a blank screen.",
-   "edition": "2026-11-11-pm",
-   "order": 21,
-   "id": "2026-11-11-pm-021"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Music written on a rock at Kudumiyanmalai",
-   "body": "On a rock face at Kudumiyanmalai, in Tamil Nadu's Pudukkottai district, there is an inscription from around the 7th century that records musical notation. It is one of the oldest surviving written records of Indian music, and it is often linked to the Pallava king Mahendravarman I, though scholars still discuss the attribution.",
-   "q": "Where is the old rock inscription recording musical notation?",
-   "a": "Kudumiyanmalai, in Pudukkottai district, Tamil Nadu.",
-   "edition": "2026-11-11-pm",
-   "order": 20,
-   "id": "2026-11-11-pm-020"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Let the reader arrive a beat early",
-   "body": "If the reader can guess what a character is about to realise, just a moment before the character does, they lean in. Plant one small clue earlier in the scene, then let the character catch up. The reader feels clever, not tricked, and the realisation lands twice: once in them, once on the page.",
-   "edition": "2026-11-11-pm",
-   "order": 19,
-   "id": "2026-11-11-pm-019"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Anthropic adds Sheets, Meetings and Whiteboards to Claude",
-   "body": "At an event in San Francisco on 10 November, Anthropic introduced Claude Sheets (in beta on paid plans, with Excel export), Claude Meetings, which can join Google Meet calls for Team and Enterprise users, and Claude Whiteboards. Claude Data, the renamed Dashboards, became generally available alongside plugins for Adobe, Atlassian and HubSpot.",
-   "source": {
-    "name": "AI Weekly",
-    "url": "https://aiweekly.co/ai-news-today"
-   },
-   "edition": "2026-11-11-pm",
-   "order": 18,
-   "id": "2026-11-11-pm-018"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Avocados ripen only after picking",
-   "body": "An avocado stays firm while it hangs on the tree; it only begins to soften after it's picked. Growers can leave fruit on the branch for weeks or months as a kind of living storage. At home, putting one in a paper bag with a banana speeds things up, thanks to the ripening gas ethylene.",
-   "hook": "Wonder: what else in your kitchen is quietly waiting for its cue?",
-   "edition": "2026-11-11-pm",
-   "order": 17,
-   "id": "2026-11-11-pm-017"
-  },
-  {
-   "topic": "mind",
-   "kind": "fact",
-   "title": "Name the feeling",
-   "body": "In a 2007 study led by Matthew Lieberman, people who picked a word for the emotion in a photo showed less amygdala activity than people who simply looked at it or matched it to another face. Researchers call this affect labelling. Quietly naming what you feel ('this is frustration') can take a little of the heat out of it.",
-   "q": "What is affect labelling?",
-   "a": "Putting a feeling into words, which in studies dampened emotional reactivity.",
-   "edition": "2026-11-11-pm",
-   "order": 16,
-   "id": "2026-11-11-pm-016"
   }
  ]
 }
