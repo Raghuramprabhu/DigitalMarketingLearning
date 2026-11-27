@@ -1,6 +1,357 @@
 {
- "updated": "2026-11-27T02:18:24+00:00",
+ "updated": "2026-11-27T17:19:10+00:00",
  "items": [
+  {
+   "topic": "chess",
+   "kind": "fact",
+   "title": "Morphy's game at the opera",
+   "body": "In 1858, at the Paris opera house, Paul Morphy played the Duke of Brunswick and Count Isouard together during a performance. He won in 17 moves with a string of sacrifices, finishing with a queen sacrifice and a rook mate. It's still one of the first games teachers show for development and open lines.",
+   "q": "How many moves did Morphy's Opera Game last?",
+   "a": "17.",
+   "edition": "2026-11-27-pm",
+   "order": 30,
+   "id": "2026-11-27-pm-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Night, the last auto",
+   "who": "Original",
+   "body": "One auto at the corner,\nmeter folded down,\nthe driver's radio humming\nan old film tune to no one.\n\nHe isn't waiting for a fare.\nHe's waiting for the song to end.",
+   "edition": "2026-11-27-pm",
+   "order": 29,
+   "id": "2026-11-27-pm-029"
+  },
+  {
+   "topic": "ai",
+   "kind": "idea",
+   "title": "Separate the gathering from the writing",
+   "body": "Ask an agent to research and write in one go and the draft bends toward whatever it found first. Split it: one pass only collects sources and notes, with links. Read those yourself, trim, then start a fresh pass that writes only from the notes. You get a draft you can check line by line.",
+   "edition": "2026-11-27-pm",
+   "order": 28,
+   "id": "2026-11-27-pm-028"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Robot' came from a Czech play",
+   "body": "The word 'robot' first appeared in Karel Čapek's 1920 play R.U.R. It comes from the Czech 'robota', meaning forced labour, and Čapek credited his brother Josef with suggesting it.",
+   "q": "Who suggested the word 'robot' to Karel Čapek?",
+   "a": "His brother, Josef Čapek.",
+   "edition": "2026-11-27-pm",
+   "order": 27,
+   "id": "2026-11-27-pm-027"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Thiruvaiyaru's chorus on the Kaveri",
+   "body": "Each January, musicians gather on the banks of the Kaveri at Thiruvaiyaru, near Thanjavur, to honour the composer Tyagaraja (1767–1847). The highlight is the group singing of his five Pancharatna Kritis, hundreds of voices in one raga after another.",
+   "hook": "Wonder: what does a song sound like sung by hundreds at once?",
+   "edition": "2026-11-27-pm",
+   "order": 26,
+   "id": "2026-11-27-pm-026"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java: EnumMap for enum keys",
+   "body": "If your map's keys are an enum, use EnumMap. Inside, it's a plain array indexed by each constant's ordinal, so lookups are fast, memory is small, and iteration follows the order you declared the constants.\n\nvar counts = new EnumMap<Day, Integer>(Day.class);",
+   "q": "What backs an EnumMap internally?",
+   "a": "An array indexed by the enum's ordinal.",
+   "edition": "2026-11-27-pm",
+   "order": 25,
+   "id": "2026-11-27-pm-025"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "The wealth of listening",
+   "who": "Thirukkural 411 (own rendering)",
+   "body": "Of all riches, the richest is listening;\nit stands first among every wealth.",
+   "edition": "2026-11-27-pm",
+   "order": 24,
+   "id": "2026-11-27-pm-024"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The pratfall effect",
+   "body": "In a 1966 study, Elliot Aronson and colleagues had people listen to a recording of a very capable quiz contestant who, at the end, clumsily spilled coffee. Listeners liked him more after the slip. Later work suggests the effect is smaller and depends on context, but the gentle lesson holds: small mistakes rarely cost as much as we fear.",
+   "q": "Who did the 1966 'spilled coffee' study?",
+   "a": "Elliot Aronson and colleagues.",
+   "edition": "2026-11-27-pm",
+   "order": 23,
+   "id": "2026-11-27-pm-023"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Hub: one dispatcher for many coding agents",
+   "body": "Hub, launched on Product Hunt, is an open-source dispatcher that coordinates several Claude Code or OpenAI Codex sessions at once. You hand it goals from a browser or Telegram and it shares the work out among the sessions.",
+   "hook": "Wonder: what would you delegate if you had five helpers at once?",
+   "source": {
+    "name": "Product Hunt",
+    "url": "https://www.producthunt.com/products/hub-20"
+   },
+   "edition": "2026-11-27-pm",
+   "order": 22,
+   "id": "2026-11-27-pm-022"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "Moore's law began as a 1965 magazine piece",
+   "body": "In 1965 Gordon Moore wrote in Electronics magazine that the number of components on a chip was doubling about every year. In 1975 he revised it to roughly every two years. It was an observation about industry pace, not a law of nature, yet it guided chip roadmaps for decades.",
+   "q": "How did Moore revise his doubling period in 1975?",
+   "a": "From about one year to about two years.",
+   "edition": "2026-11-27-pm",
+   "order": 21,
+   "id": "2026-11-27-pm-021"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Time the break, too",
+   "body": "Timers for work are common; timers for breaks are rarer, and that's where a 'five-minute' pause turns into an hour. When you stand up, set a second timer. When it rings, the only job is to sit back down and read the first line of what you left.",
+   "hook": "Wonder: what's your break's natural length, if you measured it?",
+   "edition": "2026-11-27-pm",
+   "order": 20,
+   "id": "2026-11-27-pm-020"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The oldest close pair of quasars yet",
+   "body": "Astronomers have found the oldest known compact pair of quasars, two bright cores powered by black holes that shone about 900 million years after the Big Bang. Two such giants side by side, that early, gives researchers a new puzzle about how black holes grew so fast.",
+   "q": "Roughly when did this quasar pair shine?",
+   "a": "About 900 million years after the Big Bang.",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261122060342.htm"
+   },
+   "edition": "2026-11-27-pm",
+   "order": 19,
+   "id": "2026-11-27-pm-019"
+  },
+  {
+   "topic": "writing",
+   "kind": "idea",
+   "title": "Let the setting do one job",
+   "body": "Description that only decorates gets skimmed. Give it a job: slow the reader down before a reveal, mirror a character's mood, or plant an object that matters later. One sentence of setting with a purpose beats a paragraph without one.",
+   "edition": "2026-11-27-pm",
+   "order": 18,
+   "id": "2026-11-27-pm-018"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Knights hate rook's pawns",
+   "body": "A knight trying to stop a pawn on the a- or h-file has a hard job. At the edge of the board it has far fewer squares to jump between, and it often can't reach the queening square in time. In knight-versus-pawn endgames, a rook's pawn on the seventh rank is the classic case where the knight may fail.",
+   "hook": "Wonder: why do edges shrink a knight's world?",
+   "edition": "2026-11-27-pm",
+   "order": 17,
+   "id": "2026-11-27-pm-017"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Ketchup started as a fish sauce",
+   "body": "The word 'ketchup' most likely comes from a Hokkien Chinese word for a fermented fish sauce. British cooks in the 1700s made 'catchups' from mushrooms, walnuts and oysters. Tomatoes came later, and took over.",
+   "q": "What was the original 'ketchup'?",
+   "a": "A fermented fish sauce, from a Hokkien word.",
+   "edition": "2026-11-27-pm",
+   "order": 16,
+   "id": "2026-11-27-pm-016"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Vector clocks: who saw what first",
+   "body": "Each server keeps a small counter for every server it knows about. On a local change it bumps its own counter; when it hears from another server it takes the maximum of each counter. Compare two versions: if every counter in A is ≤ B, then A happened before B. If each has something the other lacks, the edits were concurrent, and the system knows it must merge rather than overwrite.",
+   "q": "What does it mean if neither vector clock is ≤ the other?",
+   "a": "The changes were concurrent and need merging.",
+   "edition": "2026-11-27-pm",
+   "order": 15,
+   "id": "2026-11-27-pm-015"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Ant Group releases Ling-3.2-air under an MIT licence",
+   "body": "Ant Group released Ling-3.2-air, a model that works with text, images and video. The weights can be downloaded and adapted, including commercially, under the MIT licence. On Ant's own test of office-work tasks it completed 61%, up from 15.7% for its earlier Ling-3.0-flash-VL.",
+   "q": "What licence does Ling-3.2-air use?",
+   "a": "MIT, which allows commercial adaptation.",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-26-2026/"
+   },
+   "edition": "2026-11-27-pm",
+   "order": 14,
+   "id": "2026-11-27-pm-014"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Lothal's great basin",
+   "body": "Lothal, in Gujarat, was a Harappan town about 4,000 years old. Its most famous feature is a large brick-lined basin, around 200 metres long, which its excavator S. R. Rao read as a dockyard linked to a river channel. Some scholars think it was a water reservoir instead; either way, it shows remarkable engineering for its time.",
+   "hook": "Wonder: how do archaeologists tell a dock from a tank?",
+   "edition": "2026-11-27-pm",
+   "order": 13,
+   "id": "2026-11-27-pm-013"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The night watchman's thermos",
+   "who": "Original",
+   "body": "Every night at two, Murugan poured half his tea into the thermos lid and set it on the wall for whoever walked past. Mostly no one did. Some nights a delivery boy, once a tired nurse, once a man who just wanted to talk about cricket. On the night the lid stayed full, Murugan drank it himself, slowly, and said aloud to the empty road, 'Your loss. It was a good batch.'",
+   "edition": "2026-11-27-pm",
+   "order": 12,
+   "id": "2026-11-27-pm-012"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Look away to think",
+   "body": "When a question gets hard, people tend to look away from the person asking. A 1998 study by Arthur Glenberg and colleagues found that averting your gaze, or closing your eyes, actually helped people answer harder recall questions. Looking at a busy scene takes attention; looking at a blank wall frees some up.",
+   "q": "Why might staring at a plain wall help you remember?",
+   "a": "Less to look at leaves more attention for the thinking.",
+   "edition": "2026-11-27-pm",
+   "order": 11,
+   "id": "2026-11-27-pm-011"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Phoebe: a black hole that may be older than stars",
+   "body": "Astronomers have spotted an object nicknamed Phoebe when it briefly magnified the light of a more distant star. Its small mass makes it a candidate primordial black hole, one that might have formed in the first instant after the Big Bang rather than from a collapsing star. It's a candidate, not a certainty, and that's what makes it fun to follow.",
+   "hook": "Wonder: how do you weigh something you can't see?",
+   "source": {
+    "name": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/releases/2026/11/261122060346.htm"
+   },
+   "edition": "2026-11-27-pm",
+   "order": 10,
+   "id": "2026-11-27-pm-010"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Remedies within",
+   "who": "William Shakespeare, All's Well That Ends Well (I.i)",
+   "body": "Our remedies oft in ourselves do lie,\nWhich we ascribe to heaven.",
+   "edition": "2026-11-27-pm",
+   "order": 9,
+   "id": "2026-11-27-pm-009"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The first transistor, December 1947",
+   "body": "At Bell Labs in December 1947, John Bardeen and Walter Brattain showed a working point-contact transistor, a small block of germanium with gold contacts pressed against it. William Shockley soon designed the junction transistor. The three shared the 1956 Nobel Prize in Physics.",
+   "q": "What semiconductor was the first transistor made from?",
+   "a": "Germanium.",
+   "edition": "2026-11-27-pm",
+   "order": 8,
+   "id": "2026-11-27-pm-008"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Put the reminder on the thing itself",
+   "body": "A note in an app is far from the moment you need it. A sticky note on the lunch box, the charger looped over the door handle, the letter on top of your shoes: cues placed right where the action happens do more of the remembering for you. Researchers call this the 'point of performance'.",
+   "hook": "Wonder: which object could carry tomorrow's first reminder?",
+   "edition": "2026-11-27-pm",
+   "order": 7,
+   "id": "2026-11-27-pm-007"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Grown-up sunflowers face east",
+   "body": "Young sunflowers follow the Sun across the sky and swing back overnight. Once they bloom, most stop and settle facing east. A 2016 study found east-facing heads warm up faster in the morning and get more visits from bees.",
+   "q": "Which direction do mature sunflower heads usually face?",
+   "a": "East, toward the morning Sun.",
+   "edition": "2026-11-27-pm",
+   "order": 6,
+   "id": "2026-11-27-pm-006"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Geneva: Game 4 tomorrow, Gukesh with White",
+   "body": "After three draws, including Thursday's 60-move game, the title match in Geneva stands level at 1.5–1.5. Friday was a rest day. Game 4 starts Saturday at 15:00 Geneva time (19:30 IST), with Gukesh taking the white pieces. The first to 7.5 points wins.",
+   "hook": "Wonder: how do players prepare differently for White days?",
+   "source": {
+    "name": "Wikipedia: World Chess Championship 2026",
+    "url": "https://en.wikipedia.org/wiki/World_Chess_Championship_2026"
+   },
+   "edition": "2026-11-27-pm",
+   "order": 5,
+   "id": "2026-11-27-pm-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 25: a main method without the ceremony",
+   "body": "Java 25 finalised compact source files and instance main methods (JEP 512). A first program can now be just:\n\nvoid main() {\n    IO.println(\"Hello\");\n}\n\nNo class declaration, no 'public static', no String[] args. It's the same language underneath; the scaffolding just arrives when you need it.",
+   "q": "Which JEP lets a Java file start with a bare void main()?",
+   "a": "JEP 512, final in Java 25.",
+   "edition": "2026-11-27-pm",
+   "order": 4,
+   "id": "2026-11-27-pm-004"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "NVIDIA's Nemotron 3.5 Parse reads documents into data",
+   "body": "NVIDIA released Nemotron 3.5 Parse, a compact model that turns images of documents into structured data. Alongside it came synthetic datasets of charts and tables and a recipe for fine-tuning it on your own kinds of pages.",
+   "q": "What does a 'parse' model like this take in, and what does it give back?",
+   "a": "Pictures of documents in; structured data (text, tables, chart values) out.",
+   "source": {
+    "name": "Hugging Face blog",
+    "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin"
+   },
+   "edition": "2026-11-27-pm",
+   "order": 3,
+   "id": "2026-11-27-pm-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Friday, the rest-day board",
+   "who": "Original",
+   "body": "The pieces wait in rows tonight,\nno clock, no crowd, no move to find.\nThe kings stand close, the pawns stand straight,\nand nothing asks to be resolved.\n\nTomorrow there is thinking.\nTonight there is the board.",
+   "edition": "2026-11-27-pm",
+   "order": 2,
+   "id": "2026-11-27-pm-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Webb looks inside the Red Spider Nebula",
+   "body": "Webb's NIRCam has taken a fresh look at NGC 6537, the Red Spider Nebula. Its spidery 'legs' turn out to be closed, bubble-like lobes, each roughly 3 light-years long. An S-shaped trail of glowing ionised iron shows where a fast jet from the centre has run into older gas. The central star looks red because warm dust, probably a disc, surrounds it.",
+   "hook": "Wonder: what shapes a dying star's breath into bubbles?",
+   "source": {
+    "name": "Orbital Radar",
+    "url": "https://orbitalradar.com/blog/cosmic-gallery-2026-11-27"
+   },
+   "edition": "2026-11-27-pm",
+   "order": 1,
+   "id": "2026-11-27-pm-001"
+  },
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try to answer before you scroll back up.\n1. What does Java 25 let a beginner's program skip?\n2. Which way do grown sunflowers face?\n3. Where does the word 'ketchup' come from?",
+   "q": "Which chess piece struggles most against a rook's pawn?",
+   "a": "The knight, because a pawn on the edge leaves it few squares to work with.",
+   "edition": "2026-11-27-pm",
+   "order": 0,
+   "id": "2026-11-27-pm-000"
+  },
   {
    "topic": "mind",
    "kind": "recall",
@@ -9745,347 +10096,6 @@
    "edition": "2026-11-13-am",
    "order": 16,
    "id": "2026-11-13-am-016"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Zugzwang: when moving hurts",
-   "body": "Zugzwang is German for 'compulsion to move'. It describes a position where you'd be fine if you could pass, but every legal move makes things worse. It shows up most in king-and-pawn endings, where one spare tempo can decide the game.",
-   "q": "In which kind of position does zugzwang show up most often?",
-   "a": "Endgames, especially king-and-pawn endings.",
-   "edition": "2026-11-13-am",
-   "order": 15,
-   "id": "2026-11-13-am-015"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Running with the stars",
-   "body": "Look round at the courses of the stars, as if thou wert going along with them.",
-   "who": "Marcus Aurelius, Meditations 7.47 (George Long translation)",
-   "edition": "2026-11-13-am",
-   "order": 14,
-   "id": "2026-11-13-am-014"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Lumina: watching the first light spread",
-   "body": "MIT and Harvard researchers built a huge supercomputer simulation, called Lumina, that follows 2 billion years of early cosmic history across a region about 1.6 billion light-years wide. It shows how the first stars, galaxies and black holes slowly lit up and re-ionized the hydrogen and helium filling the young universe.",
-   "hook": "Wonder: what did the universe look like the moment its first stars switched on?",
-   "source": {
-    "name": "ScienceDaily",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261110042534.htm"
-   },
-   "edition": "2026-11-13-am",
-   "order": 13,
-   "id": "2026-11-13-am-013"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The ticket inspector's sums",
-   "body": "On the 7:10 local, the inspector never punched tickets right away. He asked each child on the way to school one sum. Seven eights. Twelve plus nineteen. A girl by the window got hers wrong every morning for a month, and every morning he said, 'Tomorrow, then.'\n\nIn March she held out her ticket and said, 'Fifty-six, before you ask.' He punched it with a little flourish, like a stamp in a passport.",
-   "edition": "2026-11-13-am",
-   "order": 12,
-   "id": "2026-11-13-am-012"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Git was written in a hurry",
-   "body": "In April 2005, after Linux lost free use of the BitKeeper tool, Linus Torvalds started writing Git. Within days it was tracking its own source code. A few months later he handed it to Junio Hamano, who has maintained it ever since.",
-   "hook": "Wonder: what would you build if you only had a couple of weeks and a clear need?",
-   "edition": "2026-11-13-am",
-   "order": 11,
-   "id": "2026-11-13-am-011"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The fresh start effect",
-   "body": "People are more likely to begin a new goal on a calendar landmark: a Monday, the first of the month, a birthday. Researchers Hengchen Dai, Katherine Milkman and Jason Riis called this the fresh start effect (2014).\n\nYou don't have to wait for one, though. You can draw your own line: 'After this cup of tea, a new chapter.'",
-   "q": "What do we call the boost in motivation people feel on dates like Mondays or birthdays?",
-   "a": "The fresh start effect.",
-   "edition": "2026-11-13-am",
-   "order": 10,
-   "id": "2026-11-13-am-010"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "There's no lead in a pencil",
-   "body": "Pencil 'lead' is graphite mixed with clay. Early users mistook graphite for a kind of lead ore, and the name stuck. Pencils have never had lead in their cores.",
-   "hook": "Wonder: how many everyday names are leftover mistakes?",
-   "edition": "2026-11-13-am",
-   "order": 9,
-   "id": "2026-11-13-am-009"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "A local AWS stand-in, written by agents",
-   "body": "Amazon released a free local tool that simulates more than 200 AWS services, so developers can test cloud code on their own machine. Amazon says AI agents wrote and maintain all of its code. It notes the emulator doesn't fully copy every real-world limit, such as service restrictions.",
-   "source": {
-    "name": "GeekWire",
-    "url": "https://www.geekwire.com/2026/aws-gives-developers-a-free-local-stand-in-for-its-cloud-built-from-scratch-by-ai-agents/"
-   },
-   "edition": "2026-11-13-am",
-   "order": 8,
-   "id": "2026-11-13-am-008"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Kodumanal, a Sangam-age workshop town",
-   "body": "Near the Noyyal river in Tamil Nadu's Erode district, excavations at Kodumanal have found an ancient craft centre: beads of beryl, quartz and carnelian, evidence of iron and steel working, and potsherds scratched with Tamil-Brahmi letters. Sangam poetry seems to remember it as Kodumanam.",
-   "q": "Which river does the ancient craft town of Kodumanal sit near?",
-   "a": "The Noyyal, in Erode district, Tamil Nadu.",
-   "edition": "2026-11-13-am",
-   "order": 7,
-   "id": "2026-11-13-am-007"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Count up, not down",
-   "body": "A countdown timer can feel like a ticking alarm. Try a stopwatch that counts up instead. It quietly shows how long you've been at something, so time becomes visible without the pressure of a deadline.\n\nWhen you stop, glance at it: 'I did 14 minutes.' That's a small, honest win.",
-   "hook": "Wonder: does your focus change when time feels like a tally rather than a fuse?",
-   "edition": "2026-11-13-am",
-   "order": 6,
-   "id": "2026-11-13-am-006"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Caruana and Niemann sweep in Budapest",
-   "body": "Day 3 of the Total Chess World Championship Tour pilot belonged to two players who won both their games. Fabiano Caruana beat Praggnanandhaa twice and leads Group B with 10 points; Hans Niemann beat Vaishali twice to share the Group D lead with Maxime Vachier-Lagrave. Bibisara Assaubayeva also earned a career-best win over Arjun Erigaisi in one of their games.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/2026-total-chess-world-championship-tour-pilot-day-3"
-   },
-   "edition": "2026-11-13-am",
-   "order": 5,
-   "id": "2026-11-13-am-005"
-  },
-  {
-   "topic": "craft",
-   "kind": "tip",
-   "title": "Java 21: getFirst, getLast, reversed",
-   "body": "Java 21 added sequenced collections (JEP 431). List, Deque and LinkedHashSet now share methods like getFirst(), getLast(), addFirst(), removeLast() and reversed().\n\nSo list.get(list.size() - 1) becomes list.getLast(), and list.reversed() gives a reversed view without copying.",
-   "q": "Which Java 21 method gives a reversed view of a List without copying it?",
-   "a": "list.reversed(), from the sequenced collections added in Java 21.",
-   "edition": "2026-11-13-am",
-   "order": 4,
-   "id": "2026-11-13-am-004"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Hubble's M30, a cluster swimming upstream",
-   "body": "A new Hubble image shows Messier 30, a globular cluster about 27,500 light-years away in Capricornus. Its stars are ancient, some estimated at 11.5 to 13.5 billion years old. M30 orbits against the direction the Milky Way spins, a hint that it may have been born elsewhere and adopted by our galaxy long ago.",
-   "hook": "Wonder: what would the sky look like from inside a ball of a hundred thousand stars?",
-   "source": {
-    "name": "Space.com",
-    "url": "https://www.space.com/astronomy/hubble-space-telescope/hubble-space-telescope-reveals-glittering-stars-with-mysterious-origins-space-photo-of-the-day-for-nov-11-2026"
-   },
-   "edition": "2026-11-13-am",
-   "order": 3,
-   "id": "2026-11-13-am-003"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Friday, first kettle",
-   "body": "The kettle clears its throat,\nthe window learns the colour grey,\na sparrow tests the railing\nlike it owns the day.\nNothing urgent is awake yet.\nI let it stay that way.",
-   "edition": "2026-11-13-am",
-   "order": 2,
-   "id": "2026-11-13-am-002"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Gemini gets an API for quick decisions",
-   "body": "Google introduced a Gemini Decisions API built for short verdicts rather than long answers. One request can carry up to 1,000 yes/no questions, multiple-choice picks or scoring criteria, and each answer comes back with a confidence score. It accepts text and other media as input.",
-   "hook": "Wonder: how many of your daily tasks are really a long list of small yes/no calls?",
-   "source": {
-    "name": "Google Blog",
-    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
-   },
-   "edition": "2026-11-13-am",
-   "order": 1,
-   "id": "2026-11-13-am-001"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Before you scroll, a warm-up: three small questions from this edition are waiting further down. Try answering each before you peek.",
-   "q": "What does 'zugzwang' mean in chess?",
-   "a": "Being forced to move when every move makes your position worse; German for 'compulsion to move'.",
-   "edition": "2026-11-13-am",
-   "order": 0,
-   "id": "2026-11-13-am-000"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Before you scroll on, try to recall: how old is moonlight? What did 'robota' mean in Czech? Why can a B-tree answer range queries?",
-   "q": "Which comedy show gave Python its name?",
-   "a": "Monty Python's Flying Circus.",
-   "edition": "2026-11-12-pm",
-   "order": 30,
-   "id": "2026-11-12-pm-030"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Rehearse the agent before the stage",
-   "body": "Before an agent touches real email or real money, give it a sandbox with fake but realistic data and a few tricky scenarios: a missing file, an ambiguous request, a tool that times out. Watching it handle rehearsals tells you more than any demo, and the fixes are free.",
-   "edition": "2026-11-12-pm",
-   "order": 29,
-   "id": "2026-11-12-pm-029"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Pigeons, 7 am",
-   "body": "They queue on the parapet\nlike commuters with no train,\npuff, shuffle, settle.\nOne leaves.\nThe rest move up a step,\nas if it were their turn\nfor the sun.",
-   "edition": "2026-11-12-pm",
-   "order": 28,
-   "id": "2026-11-12-pm-028"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Tamarind is a bean",
-   "body": "The tamarind in your rasam comes from a pod, and the tree belongs to the legume family, alongside peas, beans and lentils. The sour pulp surrounds the seeds inside the brown, curved pods.",
-   "hook": "Wonder: which other kitchen staples are secretly legumes?",
-   "edition": "2026-11-12-pm",
-   "order": 27,
-   "id": "2026-11-12-pm-027"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Sambuev wins Sahel Chess Festival unbeaten",
-   "body": "Canadian grandmaster Bator Sambuev won the second Sahel Chess Festival in Monastir, Tunisia, with an unbeaten 8/9, ahead of Wafa Hamed and Valerio Carnicelli. More than 300 players took part, and Margarita Potapova earned a WGM norm.",
-   "q": "What score did Sambuev make at the Sahel Chess Festival?",
-   "a": "8/9, unbeaten.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/sahel-chess-festival-2026-report"
-   },
-   "edition": "2026-11-12-pm",
-   "order": 26,
-   "id": "2026-11-12-pm-026"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Blue-green deployments",
-   "body": "Run two identical environments: blue serves users while green gets the new release. Test green, then switch the router. If something looks off, switch back in seconds. The cost is double capacity during the swap; the gift is a calm, reversible release.",
-   "hook": "Wonder: how fast could you undo your last deployment?",
-   "edition": "2026-11-12-pm",
-   "order": 25,
-   "id": "2026-11-12-pm-025"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Sermons in stones",
-   "body": "And this our life, exempt from public haunt, finds tongues in trees, books in the running brooks, sermons in stones, and good in every thing.",
-   "who": "William Shakespeare, As You Like It",
-   "edition": "2026-11-12-pm",
-   "order": 24,
-   "id": "2026-11-12-pm-024"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Python is named after a comedy show",
-   "body": "When Guido van Rossum started Python around Christmas 1989, he picked the name because he was reading scripts of Monty Python's Flying Circus and wanted something short and a little mysterious. It was never named after the snake.",
-   "q": "What inspired the name of the Python language?",
-   "a": "Monty Python's Flying Circus.",
-   "edition": "2026-11-12-pm",
-   "order": 23,
-   "id": "2026-11-12-pm-023"
-  },
-  {
-   "topic": "space",
-   "kind": "fact",
-   "title": "Moonlight is about 1.3 seconds old",
-   "body": "The Moon sits roughly 384,000 km away, so light reflected from its surface reaches your eyes in about 1.3 seconds. The moonlight you see is sunlight that has already travelled about eight minutes, bounced, and then taken a short extra hop.",
-   "q": "Roughly how long does light take to travel from the Moon to Earth?",
-   "a": "About 1.3 seconds.",
-   "edition": "2026-11-12-pm",
-   "order": 22,
-   "id": "2026-11-12-pm-022"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "One 'now' card",
-   "body": "Write the single task you're doing on a sticky note and put it at the edge of your screen. When you surface from a detour, the card answers 'what was I doing?' instantly. Swap the card only when the task is done or deliberately paused.",
-   "edition": "2026-11-12-pm",
-   "order": 21,
-   "id": "2026-11-12-pm-021"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Slow the clock when it matters",
-   "body": "Story time doesn't have to match real time. Skip a week in one line, then spend a whole paragraph on the three seconds before a door opens. Readers feel weight where you linger, so linger on the moment that changes things.",
-   "edition": "2026-11-12-pm",
-   "order": 20,
-   "id": "2026-11-12-pm-020"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The expertise reversal effect",
-   "body": "Step-by-step guidance that helps beginners can slow experts down: they already hold the steps in their heads, and reading them again adds load. As you improve, swap full worked examples for bare problems. Good teaching fades the scaffolding.",
-   "q": "What is the expertise reversal effect?",
-   "a": "Guidance that helps novices can hinder learners who are already skilled.",
-   "edition": "2026-11-12-pm",
-   "order": 19,
-   "id": "2026-11-12-pm-019"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Plurai raises money to build practice worlds for agents",
-   "body": "Plurai announced $13 million in seed funding to build simulation tools where AI agents can be tested and improved before they meet real users. The idea is a flight simulator for agents: rehearse many messy situations safely, then ship.",
-   "hook": "Wonder: what would a 'driving test' for your favourite agent include?",
-   "source": {
-    "name": "AI Agents Directory",
-    "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-november-11-2026"
-   },
-   "edition": "2026-11-12-pm",
-   "order": 18,
-   "id": "2026-11-12-pm-018"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Rainbows are full circles",
-   "body": "A rainbow is really a circle of light around the point directly opposite the Sun. From the ground the horizon cuts it into an arc, but from an aircraft or a high cliff you can sometimes see the whole ring.",
-   "q": "Why do we usually see only an arc of a rainbow?",
-   "a": "The ground cuts off the lower part of what is really a full circle.",
-   "edition": "2026-11-12-pm",
-   "order": 17,
-   "id": "2026-11-12-pm-017"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Ajanta, found again in 1819",
-   "body": "The Buddhist cave temples of Ajanta, carved and painted between roughly the 2nd century BCE and the 5th century CE, slipped out of common memory for centuries. In April 1819 a British officer, John Smith, came upon them from across the ravine and scratched his name on a wall. Today their murals are a UNESCO World Heritage Site.",
-   "hook": "Wonder: what kept those paintings safe through centuries of quiet?",
-   "edition": "2026-11-12-pm",
-   "order": 16,
-   "id": "2026-11-12-pm-016"
   }
  ]
 }
