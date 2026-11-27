@@ -1,6 +1,366 @@
 {
- "updated": "2026-11-26T17:15:15+00:00",
+ "updated": "2026-11-27T02:18:24+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try to answer before you scroll back up.",
+   "q": "1) How many particles were in the new Milky Way simulation? 2) Which Tamil word is 'curry' traced to? 3) What does the bulkhead pattern give each dependency?",
+   "a": "1) 5.4 trillion. 2) Kari. 3) Its own isolated thread or connection pool.",
+   "edition": "2026-11-27-am",
+   "order": 30,
+   "id": "2026-11-27-am-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Friday, the rest day",
+   "body": "No game in Geneva today.\nThe pieces sleep in their wooden box,\nkings lying down beside pawns.\nSomewhere a player walks by the lake,\nletting the water think for him.\nTomorrow the clock starts again.\nToday, only the waves move first.",
+   "who": "Original",
+   "edition": "2026-11-27-am",
+   "order": 29,
+   "id": "2026-11-27-am-029"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "Rest days are for walking, too",
+   "body": "In a long match, the rest day is part of the work. Players and their teams review the last game, prepare openings for the next, and often deliberately get outside, walking, swimming or playing football, to reset. In a 14-game match, how a player recovers can matter as much as one sharp novelty.",
+   "hook": "Wonder: what does your own 'rest day' between hard tasks look like?",
+   "edition": "2026-11-27-am",
+   "order": 28,
+   "id": "2026-11-27-am-028"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Vaporised rock around a newborn star",
+   "body": "For the first time, astronomers have detected titanium oxide as a gas around a young, massive star. At such temperatures rock itself turns to vapour, so the finding gives a glimpse of the very earliest stage of a planetary system, before any dust or pebbles have condensed.",
+   "hook": "Wonder: what was our own Solar System like before it had a single grain of dust?",
+   "source": {
+    "name": "Universe Today, 26 Nov 2026",
+    "url": "https://www.universetoday.com/articles/detection-of-vaporized-rock-reveals-the-birth-of-a-solar-system"
+   },
+   "edition": "2026-11-27-am",
+   "order": 27,
+   "id": "2026-11-27-am-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Write-through vs write-behind caching",
+   "body": "Write-through: every write goes to the cache and the database together, so the cache is always fresh but each write waits for the database. Write-behind (write-back): the write lands in the cache and is flushed to the database later in batches, which is fast but can lose recent writes if the cache dies before flushing. Choose by how much a lost write would hurt.",
+   "q": "What's the main risk of write-behind caching?",
+   "a": "Recent writes can be lost if the cache fails before it flushes them to the database.",
+   "edition": "2026-11-27-am",
+   "order": 26,
+   "id": "2026-11-27-am-026"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Firm in intent",
+   "body": "What people set their minds on, they reach just as they intended, if only they stay firm in that intent.",
+   "who": "Thirukkural 666 (own rendering)",
+   "edition": "2026-11-27-am",
+   "order": 25,
+   "id": "2026-11-27-am-025"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Google's Workspace MCP servers are now generally available",
+   "body": "Google made its Workspace MCP servers generally available on 24 November, giving agents a standard way to work with Gmail, Drive, Calendar and more. There's a free Standard tier and a paid Scaled tier for heavy use. The Gmail tools focus on searching, reading threads, drafting and labelling, so an agent can prepare a reply while you stay the one who sends it.",
+   "q": "What can the Gmail MCP tools do, according to the announcement?",
+   "a": "Search mail, read threads, create drafts and add labels.",
+   "source": {
+    "name": "RC Labs daily, AI agent news (linking Google Workspace Updates)",
+    "url": "https://daily.rclabs.in/t/agents"
+   },
+   "edition": "2026-11-27-am",
+   "order": 24,
+   "id": "2026-11-27-am-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The 80-column punch card",
+   "body": "In 1928 IBM introduced a punch card with 80 columns and rectangular holes, packing in more data than earlier cards. It was so widespread that, decades later, many computer terminals showed 80 characters per line, and some coding style guides still suggest keeping lines under about 80 characters.",
+   "hook": "Wonder: what other habits in your tools are echoes of old paper?",
+   "edition": "2026-11-27-am",
+   "order": 23,
+   "id": "2026-11-27-am-023"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "Sea otters hold hands while they sleep",
+   "body": "Sea otters often rest floating on their backs in groups called rafts. Some hold paws, and many wrap themselves in strands of kelp, so they don't drift apart from each other while they sleep.",
+   "q": "What do sea otters wrap themselves in to stay put while sleeping?",
+   "a": "Kelp.",
+   "edition": "2026-11-27-am",
+   "order": 22,
+   "id": "2026-11-27-am-022"
+  },
+  {
+   "topic": "writing",
+   "kind": "tip",
+   "title": "Give the scene one sound",
+   "body": "Most drafts are all sight. Pick one sound for the scene and let it return: a pressure cooker, a ceiling fan, rain on a tin roof. Mention it at the start, then again at the turning point, slightly changed. The reader feels time passing without being told.",
+   "hook": "Wonder: what is the one sound in the room around you right now?",
+   "edition": "2026-11-27-am",
+   "order": 21,
+   "id": "2026-11-27-am-021"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Saturn, with its rings nearly edge-on",
+   "body": "Saturn is high in the south in the early evening these weeks, a steady golden point noticeably brighter than the star Fomalhaut to its lower right. Its rings are tipped only about 6 degrees towards us, so in a small telescope (above about 30x) they look like a thin bright line through the planet.",
+   "hook": "Wonder: what would it be like to stand on a moon and see the rings edge-on?",
+   "source": {
+    "name": "Space.com, 26 Nov 2026",
+    "url": "https://www.space.com/stargazing/thanksgiving-night-sky-2026-what-to-look-for-after-dinner-tonight"
+   },
+   "edition": "2026-11-27-am",
+   "order": 20,
+   "id": "2026-11-27-am-020"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The serial position effect",
+   "body": "Give someone a list to remember and they'll usually recall the first few items (the primacy effect) and the last few (the recency effect) best, with the middle sagging. When you study a long chapter, give the middle extra attention, or break it up so there are more 'beginnings' and 'ends'.",
+   "q": "What are the two halves of the serial position effect called?",
+   "a": "The primacy effect and the recency effect.",
+   "edition": "2026-11-27-am",
+   "order": 19,
+   "id": "2026-11-27-am-019"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Darasuram's temple on stone wheels",
+   "body": "The Airavatesvara temple at Darasuram, near Kumbakonam, was built by the Chola king Rajaraja II in the 12th century. One of its halls is carved as a chariot, with stone wheels and horses, and the walls are covered in tiny, detailed sculptures. Together with the temples at Thanjavur and Gangaikonda Cholapuram, it is a UNESCO World Heritage Site, the Great Living Chola Temples.",
+   "q": "Which Chola king built the Airavatesvara temple at Darasuram?",
+   "a": "Rajaraja II, in the 12th century.",
+   "edition": "2026-11-27-am",
+   "order": 18,
+   "id": "2026-11-27-am-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "An AI identifies the artist of an 1808 sketchbook",
+   "body": "Historian Mark Humphries writes that GPT-6.2 Astra, tested before its release, worked out who made an anonymous 1808 sketchbook held at Yale's Beinecke Library. Working from public sources, it reached its answer in 22 minutes and found an archive document that backed it up. It's one historian's first-hand account, but a lovely kind of detective story.",
+   "hook": "Wonder: which unsigned object in your family would you love to trace?",
+   "source": {
+    "name": "Today's (real) AI news, 27 Nov 2026 (linking Generative History)",
+    "url": "https://dailyaicaffeinenobs.substack.com/p/todays-real-ai-news-27-nov-26"
+   },
+   "edition": "2026-11-27-am",
+   "order": 17,
+   "id": "2026-11-27-am-017"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Java 24: stream gatherers",
+   "body": "Java 24 finalised stream gatherers (JEP 485), a way to write your own intermediate steps. A few come ready-made in the Gatherers class:\n\nStream.of(1, 2, 3, 4, 5)\n      .gather(Gatherers.windowFixed(2))\n      .toList();   // [[1, 2], [3, 4], [5]]\n\nThere are also windowSliding, fold and scan. Before, grouping into fixed-size chunks meant an awkward collector or a loop.",
+   "q": "Which method adds a gatherer to a stream, and in which Java version were gatherers finalised?",
+   "a": "Stream.gather(...); Java 24.",
+   "edition": "2026-11-27-am",
+   "order": 16,
+   "id": "2026-11-27-am-016"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Give each kind of work its own spot",
+   "body": "Places carry habits. If bills, reading and scrolling all happen on the same sofa, the sofa invites scrolling. Try a small rule: admin at the kitchen table, reading in the window chair, phone on the sofa. After a while, simply sitting in the 'admin chair' makes starting feel a little easier.",
+   "hook": "Wonder: which spot in your home already makes you want to focus?",
+   "edition": "2026-11-27-am",
+   "order": 15,
+   "id": "2026-11-27-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "idea",
+   "title": "The outside passed pawn",
+   "body": "A passed pawn far from the other pawns, say on the a-file when the rest are on the kingside, is called an outside passed pawn. In a king-and-pawn ending it works like a decoy: the enemy king must walk over to stop it, and while it's away your king goes and eats the pawns it left behind.",
+   "q": "In a pawn ending, what is the outside passed pawn's main job?",
+   "a": "To lure the enemy king away so your king can win pawns on the other side.",
+   "edition": "2026-11-27-am",
+   "order": 14,
+   "id": "2026-11-27-am-014"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Few things",
+   "body": "Occupy thyself with few things, says the philosopher, if thou wouldst be tranquil.",
+   "who": "Marcus Aurelius, Meditations 4.24 (tr. George Long)",
+   "edition": "2026-11-27-am",
+   "order": 13,
+   "id": "2026-11-27-am-013"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The Manchester Baby, 1948",
+   "body": "On 21 June 1948, a machine at the University of Manchester nicknamed the 'Baby' ran the first program ever stored in a computer's own electronic memory. Written by Tom Kilburn, it searched for the highest factor of a number and ran for about 52 minutes. Until then, machines were set up by rewiring; from then on, a program could live in memory like data.",
+   "q": "What did the first stored program on the Manchester Baby calculate?",
+   "a": "The highest proper factor of a number.",
+   "edition": "2026-11-27-am",
+   "order": 12,
+   "id": "2026-11-27-am-012"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Europa Clipper's slingshot past home",
+   "body": "NASA's Europa Clipper is heading for an Earth flyby that will add speed for its long journey to Jupiter's icy moon Europa. The pass also gives the team a chance to point the instruments at a familiar target, our own planet, to check and calibrate them before the quiet years of cruising.",
+   "hook": "Wonder: what would Earth look like through instruments built to study an ocean moon?",
+   "source": {
+    "name": "Universe Today, 26 Nov 2026",
+    "url": "https://www.universetoday.com/articles/slingshot-earth-nasas-europa-clipper-will-gain-speed-and-tests-its-instruments-during-its-earth-flyb"
+   },
+   "edition": "2026-11-27-am",
+   "order": 11,
+   "id": "2026-11-27-am-011"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The clock mender's spare minute",
+   "body": "Every clock in the mender's shop showed a slightly different time. Customers found it funny.\n\n'Which one is right?' a boy asked one evening.\n\n'None of them yet,' said the mender. 'That's why they're here.'\n\nThe boy came back every day after school to watch. By the end of the month, all the clocks ticked together, one sound filling the little room like rain on a roof.\n\nOn the last day the mender gave him the smallest clock, set one minute fast. 'So you're always a little early,' he said, 'for good things.'",
+   "who": "Original",
+   "edition": "2026-11-27-am",
+   "order": 10,
+   "id": "2026-11-27-am-010"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Curry' came from Tamil",
+   "body": "The English word curry is generally traced to the Tamil kari, meaning a spiced sauce or relish eaten with rice. Portuguese traders picked it up on the coast of South India in the 1500s, and from there it spread into English, eventually becoming a word for a whole world of dishes.",
+   "q": "Which Tamil word is curry usually traced to?",
+   "a": "Kari, a spiced sauce or relish.",
+   "edition": "2026-11-27-am",
+   "order": 9,
+   "id": "2026-11-27-am-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Perplexity lets agents look at the web of the past",
+   "body": "Perplexity added a feature called Time Machine to its Search and Context APIs. It lets an agent see web content as it stood at a chosen date, up to 365 days back. That helps with questions like 'what did this page say in March?' and with testing a forecast against what was known at the time.",
+   "hook": "Wonder: which page would you like to see as it was a year ago?",
+   "source": {
+    "name": "RC Labs daily, AI agent news (linking The Next Web)",
+    "url": "https://daily.rclabs.in/t/agents"
+   },
+   "edition": "2026-11-27-am",
+   "order": 8,
+   "id": "2026-11-27-am-008"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The next-in-line effect",
+   "body": "In a meeting where everyone takes turns to speak, people tend to remember least about what the person just before them said. Malcolm Brenner described this in 1973: while we wait our turn, attention goes to rehearsing our own lines. If you want to remember the others, jot your point down early, then listen.",
+   "q": "Whose words do we tend to forget in the next-in-line effect?",
+   "a": "The person who spoke just before us.",
+   "edition": "2026-11-27-am",
+   "order": 7,
+   "id": "2026-11-27-am-007"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Kudumiyanmalai's music written in stone",
+   "body": "On a rock face at Kudumiyanmalai in Pudukkottai district, Tamil Nadu, a 7th-century Pallava-era inscription sets out musical notes in organised groups, a kind of exercise for a stringed instrument. It is often counted among the oldest surviving musical notations in India, and is usually linked to King Mahendravarman I, who was himself a musician.",
+   "hook": "Wonder: how would you write down a tune if paper didn't last?",
+   "edition": "2026-11-27-am",
+   "order": 6,
+   "id": "2026-11-27-am-006"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Bulkheads: keep one leak from sinking the ship",
+   "body": "Ships are split into sealed compartments so one breach doesn't flood the hull. In a service, give each downstream dependency its own small thread pool or connection pool. If the payments API turns slow, only its pool fills up; search and login keep their own threads and stay quick. Pair bulkheads with timeouts so a full pool fails fast instead of waiting.",
+   "q": "In the bulkhead pattern, what do you give each dependency?",
+   "a": "Its own isolated pool (threads or connections), so one slow dependency can't use up everything.",
+   "edition": "2026-11-27-am",
+   "order": 5,
+   "id": "2026-11-27-am-005"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Geneva: 1.5–1.5 after a 60-move draw",
+   "body": "Game 3 of the World Championship ended in a draw after 60 moves. D Gukesh, with Black, surprised Javokhir Sindarov with the Rio de Janeiro Variation of the Berlin and gained about a 50-minute lead on the clock. Sindarov reached move 40 with just six seconds to spare. The match is level at 1.5–1.5, today (27 November) is a rest day, and Gukesh has White in Game 4 on Saturday at 19:30 IST.",
+   "q": "What is the match score after Game 3, and who has White in Game 4?",
+   "a": "1.5–1.5; Gukesh has White.",
+   "source": {
+    "name": "Chess.com, Game 3 report, 26 Nov 2026",
+    "url": "https://www.chess.com/news/view/2026-fide-world-chess-championship-game-3"
+   },
+   "edition": "2026-11-27-am",
+   "order": 4,
+   "id": "2026-11-27-am-004"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Lay out tomorrow tonight",
+   "body": "Mornings ask for many tiny decisions at once: what to wear, what to carry, what to do first. Before bed, put tomorrow's clothes on the chair, the bag by the door, and a sticky note with the first task on your desk. Tomorrow-you only has to follow the trail.",
+   "hook": "Wonder: which morning decision could you make tonight in thirty seconds?",
+   "edition": "2026-11-27-am",
+   "order": 3,
+   "id": "2026-11-27-am-003"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "A Milky Way built from 5.4 trillion particles",
+   "body": "Researchers linked three supercomputers and added an AI model that stands in for exploding stars, so each supernova doesn't have to be calculated from scratch. The result is a simulation of our galaxy with 5.4 trillion particles, about 10,000 times more than other leading simulations, detailed enough to follow individual stars.",
+   "hook": "Wonder: if you could zoom into a simulated Milky Way, which corner would you visit first?",
+   "source": {
+    "name": "Universe Today, 26 Nov 2026",
+    "url": "https://www.universetoday.com/articles/ai-helps-three-powerful-supercomputers-simulate-the-milky-way-in-extraordinary-detail"
+   },
+   "edition": "2026-11-27-am",
+   "order": 2,
+   "id": "2026-11-27-am-002"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Claude agents help move an API from Python to Rust",
+   "body": "Anthropic wrote up how Claude agents helped migrate its Messages API from Python to Rust. The rewritten service uses roughly 70% less CPU for each request. It's a large, careful piece of engineering done step by step, with agents doing much of the translation work.",
+   "q": "Roughly how much less CPU per request did the Rust version of the Messages API use?",
+   "a": "About 70% less.",
+   "source": {
+    "name": "Today's (real) AI news, 27 Nov 2026 (linking Anthropic)",
+    "url": "https://dailyaicaffeinenobs.substack.com/p/todays-real-ai-news-27-nov-26"
+   },
+   "edition": "2026-11-27-am",
+   "order": 1,
+   "id": "2026-11-27-am-001"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Friday, the milkman's bell",
+   "body": "Before the crows begin,\nthe milkman's bell comes down the lane,\ntwo rings at every gate.\nA packet set on each step\nlike a small white promise.\nSomewhere a kettle answers.\nThe whole street wakes up one doorstep at a time.",
+   "who": "Original",
+   "edition": "2026-11-27-am",
+   "order": 0,
+   "id": "2026-11-27-am-000"
+  },
   {
    "topic": "writing",
    "kind": "poem",
@@ -9726,350 +10086,6 @@
    "edition": "2026-11-12-pm",
    "order": 16,
    "id": "2026-11-12-pm-016"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Overloading: one piece, two jobs",
-   "body": "A defender is overloaded when it guards two things at once. Attack one of them and it must choose, leaving the other unguarded. When you spot a piece doing double duty, ask what happens if you make it do just one.",
-   "hook": "Wonder: which of your pieces is quietly holding two posts right now?",
-   "edition": "2026-11-12-pm",
-   "order": 15,
-   "id": "2026-11-12-pm-015"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Why indexes are trees",
-   "body": "Most database indexes are B-trees: wide, shallow trees that keep keys in sorted order. Because each node holds hundreds of keys, even a billion rows sit only a few levels deep, so a lookup touches a handful of disk pages. Sorted order is also why the same index serves ranges like 'created between June and July'.",
-   "q": "Why can one B-tree index answer range queries?",
-   "a": "It keeps keys in sorted order, so a range is a contiguous walk.",
-   "edition": "2026-11-12-pm",
-   "order": 14,
-   "id": "2026-11-12-pm-014"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "ChatGPT opens a front desk for businesses",
-   "body": "OpenAI introduced Businesses in ChatGPT in beta. Verified businesses can claim a profile in a Business Hub, and Business Agents, clearly labelled assistants that speak for a brand, are rolling out first to eligible US online shops and services.",
-   "q": "What is the name of the brand-representing assistants in ChatGPT's new business feature?",
-   "a": "Business Agents.",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/"
-   },
-   "edition": "2026-11-12-pm",
-   "order": 13,
-   "id": "2026-11-12-pm-013"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The postbox at the corner",
-   "body": "Every evening Mrs. Iyer posted one letter, though no one knew to whom. The postman finally asked. 'To my granddaughter in Pune,' she said. 'She replies by phone, but she keeps the letters in a tin.' The next week the postman left a small note in her own box: 'Your handwriting is the best on my route.' She kept that in a tin too.",
-   "edition": "2026-11-12-pm",
-   "order": 12,
-   "id": "2026-11-12-pm-012"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Hubble revisits the Jellyfish Cluster",
-   "body": "New Hubble observations of Messier 30, a globular cluster about 27,500 light-years away in Capricornus, are helping astronomers ask whether some of its ancient stars, or even the whole cluster, first formed outside our galaxy. Its stars are among the oldest in the Milky Way.",
-   "hook": "Wonder: can a star cluster be an immigrant?",
-   "source": {
-    "name": "Sci.News",
-    "url": "https://www.sci.news/astronomy/hubble-globular-cluster-messier-30-15182.html"
-   },
-   "edition": "2026-11-12-pm",
-   "order": 11,
-   "id": "2026-11-12-pm-011"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "'Vague but exciting'",
-   "body": "In March 1989 Tim Berners-Lee handed his boss at CERN, Mike Sendall, a proposal for an information management system. Sendall wrote 'Vague but exciting...' on the cover and let him carry on. That proposal grew into the World Wide Web.",
-   "q": "What did Mike Sendall write on Tim Berners-Lee's 1989 proposal?",
-   "a": "'Vague but exciting...'",
-   "edition": "2026-11-12-pm",
-   "order": 10,
-   "id": "2026-11-12-pm-010"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Keep learning how to live",
-   "body": "As long as you live, keep learning how to live.",
-   "who": "Seneca, Letters to Lucilius 76",
-   "edition": "2026-11-12-pm",
-   "order": 9,
-   "id": "2026-11-12-pm-009"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Lyrics compete with reading",
-   "body": "Research on the 'irrelevant speech effect' finds that background speech, including sung lyrics, makes it harder to hold words in order in memory, even when you try to ignore it. Instrumental music or steady noise interferes far less. For reading and memorising, wordless sound is the kinder choice.",
-   "hook": "Wonder: does your study playlist have words in it?",
-   "edition": "2026-11-12-pm",
-   "order": 8,
-   "id": "2026-11-12-pm-008"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Where the word 'robot' came from",
-   "body": "'Robot' first appeared in Karel Čapek's 1920 Czech play R.U.R. It comes from the Czech robota, meaning forced labour, and Čapek credited his brother Josef with suggesting it.",
-   "q": "Who suggested the word 'robot' to Karel Čapek?",
-   "a": "His brother, Josef Čapek.",
-   "edition": "2026-11-12-pm",
-   "order": 7,
-   "id": "2026-11-12-pm-007"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Book the in-between time",
-   "body": "Time blindness often hides in the gaps: the walk, the parking, the 'just finishing this email'. When you add something to your calendar, add a separate 10–15 minute block before it called 'get there'. Transitions stop stealing from the thing itself, and you arrive less rushed.",
-   "hook": "Wonder: how long does getting ready actually take you, start to door?",
-   "edition": "2026-11-12-pm",
-   "order": 6,
-   "id": "2026-11-12-pm-006"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Total Chess: four groups, four leaders",
-   "body": "After the first day of Fast Classic group play at the Total Chess pilot in Budapest, Firouzja and Duda lead Group A, Caruana and Liem Le share Group B, Nepomniachtchi leads Group C and Vachier-Lagrave leads Group D, each on 4 points. Carlsen and Giri drew both their games. Wins count 3 points here, so every decisive game matters.",
-   "hook": "Wonder: how does 3 points for a win change the way a top player plays a level position?",
-   "source": {
-    "name": "Arab News",
-    "url": "https://www.arabnews.com/sport/quartet-shine-as-total-chess-world-championship-tour-pilot-beginsf-3011420"
-   },
-   "edition": "2026-11-12-pm",
-   "order": 5,
-   "id": "2026-11-12-pm-005"
-  },
-  {
-   "topic": "craft",
-   "kind": "tip",
-   "title": "Java: Collectors.partitioningBy",
-   "body": "When you need to split a list into two groups by a yes/no test, partitioningBy is clearer than groupingBy:\nMap<Boolean, List<Order>> split = orders.stream().collect(Collectors.partitioningBy(o -> o.total() > 1000));\nBoth keys, true and false, are always present, even if one list is empty, so you never get a surprise null.",
-   "q": "What keys does partitioningBy always return?",
-   "a": "Both true and false, even when a group is empty.",
-   "edition": "2026-11-12-pm",
-   "order": 4,
-   "id": "2026-11-12-pm-004"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Lothal's ancient dock",
-   "body": "At Lothal in Gujarat, Harappan builders around 2400 BCE lined a large rectangular basin with fired bricks. Many archaeologists read it as one of the world's earliest dockyards, linked by channel to a river that led to the sea, with warehouses and bead workshops nearby. Some scholars think it held water instead, which keeps the conversation lively.",
-   "q": "In which present-day Indian state is Lothal?",
-   "a": "Gujarat.",
-   "edition": "2026-11-12-pm",
-   "order": 3,
-   "id": "2026-11-12-pm-003"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Gemini Robotics 2.5 steps onto factory floors",
-   "body": "Google DeepMind announced Gemini Robotics 2.5, a model that turns what a robot sees and is told into actions. In reported trials, Apptronik's Apollo 2 humanoid reached a 96% success rate sorting car parts into kits at Mercedes-Benz plants in Germany and Hungary, and handled obstacles more safely than before.",
-   "q": "Which humanoid robot was reported using Gemini Robotics 2.5 for car-parts kitting?",
-   "a": "Apptronik's Apollo 2.",
-   "source": {
-    "name": "DEV Community AI Daily Digest",
-    "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-11-2026-claude-becomes-an-office-suite-chatgpt-gets-business-agents-3bg8"
-   },
-   "edition": "2026-11-12-pm",
-   "order": 2,
-   "id": "2026-11-12-pm-002"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Thursday, the fridge hums",
-   "body": "Everyone asleep.\nThe fridge keeps its one long note,\nthe clock adds a soft drum.\nI rinse the last cup\nand leave it upside down,\nready for morning\nlike a small promise.",
-   "edition": "2026-11-12-pm",
-   "order": 1,
-   "id": "2026-11-12-pm-001"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "The oldest close pair of quasars",
-   "body": "Astronomers have found two quasars, brilliantly feeding supermassive black holes, sitting only about 18,100 light-years apart. We see them as they were roughly 900 million years after the Big Bang, and their masses are about 1.5 billion and 400 million Suns. Pairs this close, this early, are a fresh puzzle for how the first giant black holes grew.",
-   "hook": "Wonder: what would the night sky look like from a galaxy with two quasars?",
-   "source": {
-    "name": "Sci.News",
-    "url": "https://www.sci.news/astronomy/record-breaking-quasar-pair-early-universe-15191.html"
-   },
-   "edition": "2026-11-12-pm",
-   "order": 0,
-   "id": "2026-11-12-pm-000"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Before you scroll on, try to recall: why does Phobos rise in the west? What does Math.floorMod(-7, 3) return? Which parent seahorse carries the eggs?",
-   "q": "Who is India's 100th grandmaster?",
-   "a": "Anuj Shrivatri.",
-   "edition": "2026-11-12-am",
-   "order": 30,
-   "id": "2026-11-12-am-030"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Ask for two options, then a pick",
-   "body": "When an agent faces a design choice, ask it to sketch two approaches in a few lines each and then recommend one. You'll see the trade-off it noticed, catch the times its favourite rests on a wrong assumption, and stay the person who decides.",
-   "hook": "Wonder: what did the agent consider and quietly drop last time?",
-   "edition": "2026-11-12-am",
-   "order": 29,
-   "id": "2026-11-12-am-029"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The Moon has quakes",
-   "body": "Seismometers left by Apollo astronauts recorded moonquakes until 1977. Some are triggered by Earth's tides, some by meteorite impacts, and some by the surface warming and contracting as the long lunar day turns to night. Because the Moon is dry and rigid, it can ring for a long time after a quake.",
-   "q": "How do we know the Moon has quakes?",
-   "a": "Seismometers left by the Apollo missions recorded them until 1977.",
-   "edition": "2026-11-12-am",
-   "order": 28,
-   "id": "2026-11-12-am-028"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Ledger of things that went right",
-   "body": "The bus waited.\nThe dosa was crisp at the edge.\nA stranger held a door,\nand I held the next one.\nSmall sums,\nbut the column is longer than I thought.",
-   "edition": "2026-11-12-am",
-   "order": 27,
-   "id": "2026-11-12-am-027"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "The first letter",
-   "body": "As every letter begins with A, so the whole world begins with the First Being.",
-   "who": "Thirukkural 1 (own rendering)",
-   "edition": "2026-11-12-am",
-   "order": 26,
-   "id": "2026-11-12-am-026"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Cursor pagination beats offset",
-   "body": "OFFSET 100000 makes the database walk past a hundred thousand rows before it returns anything, and new rows arriving mid-scroll shift every page. Cursor (or keyset) pagination instead says 'give me 50 rows after id 8812'. It uses the index directly, stays fast on page one thousand, and never shows the same row twice.",
-   "q": "Why does keyset pagination stay fast deep into results?",
-   "a": "It seeks straight to the cursor via the index instead of skipping rows.",
-   "edition": "2026-11-12-am",
-   "order": 25,
-   "id": "2026-11-12-am-025"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "Bishops love pawns on both wings",
-   "body": "When pawns are spread across both sides of the board, a bishop usually beats a knight: it can sweep from one wing to the other in a single move, while the knight needs several hops. With all the pawns on one side, the knight's slowness matters far less.",
-   "hook": "Wonder: in your last endgame, which side were the pawns on?",
-   "edition": "2026-11-12-am",
-   "order": 24,
-   "id": "2026-11-12-am-024"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "COBOL was designed by committee, on purpose",
-   "body": "In 1959 a group called CODASYL, drawing on Grace Hopper's FLOW-MATIC, designed COBOL so business programs could read almost like English: ADD TAX TO TOTAL. The goal was a language that worked across different manufacturers' machines. Much of it still quietly runs payroll and banking systems today.",
-   "q": "Which earlier language strongly influenced COBOL?",
-   "a": "Grace Hopper's FLOW-MATIC.",
-   "edition": "2026-11-12-am",
-   "order": 23,
-   "id": "2026-11-12-am-023"
-  },
-  {
-   "topic": "space",
-   "kind": "tip",
-   "title": "The Pleiades are up all night",
-   "body": "In November the Pleiades, a little cluster of blue-white stars in Taurus, rise in the east soon after dark and stay up through the night. Most people see six or seven stars by eye. A pair of binoculars turns them into dozens, a sparkling handful of young siblings about 440 light-years away.",
-   "q": "Roughly how many Pleiades stars can most people see without binoculars?",
-   "a": "Six or seven.",
-   "edition": "2026-11-12-am",
-   "order": 22,
-   "id": "2026-11-12-am-022"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Turn the task into a question",
-   "body": "'Write the report' is a wall. 'What's the first sentence of the report?' is a door. Rephrasing a task as a small, specific question gives your curiosity something to grab, and once one answer is down the next question usually appears on its own.",
-   "hook": "Wonder: what's the first question hiding inside your biggest task?",
-   "edition": "2026-11-12-am",
-   "order": 21,
-   "id": "2026-11-12-am-021"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Vikramashila, Nalanda's sister",
-   "body": "Around the end of the 8th century, the Pala king Dharmapala founded Vikramashila in what is now Bihar. It grew into one of the great monastic universities of its age, and its scholar Atisha later travelled to Tibet in the 11th century, where his teaching left a lasting mark.",
-   "hook": "Wonder: what would a reading list at Vikramashila have looked like?",
-   "edition": "2026-11-12-am",
-   "order": 20,
-   "id": "2026-11-12-am-020"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The tailor's last button",
-   "body": "Every shirt Mr. Ilango finished had one button sewn on with a different thread, a pale blue. Customers rarely noticed. When his granddaughter asked, he said it was so he could find his own work again someday. Forty years later she found a shirt at a secondhand stall in Mylapore, turned the cuff, and there it was: blue, holding.",
-   "edition": "2026-11-12-am",
-   "order": 19,
-   "id": "2026-11-12-am-019"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "The IKEA effect",
-   "body": "In 2012 Michael Norton, Daniel Mochon and Dan Ariely found people valued items they had assembled themselves, even plain flat-pack boxes, more than identical ones built for them. Effort breeds attachment. It is a useful nudge for learning: notes you make, rather than ones you're handed, tend to feel worth returning to.",
-   "q": "What is the IKEA effect?",
-   "a": "We value things more when we've helped build them.",
-   "edition": "2026-11-12-am",
-   "order": 18,
-   "id": "2026-11-12-am-018"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Adobe lets outside agents work on real project files",
-   "body": "Adobe added new agent features across Photoshop, Premiere and Firefly, and an MCP integration so outside AI agents can work with editable Adobe project files rather than flattened images. Photoshop 2027 also adds Relight and Generative Restyle.",
-   "q": "What does Adobe's MCP integration let outside agents do?",
-   "a": "Work with editable Adobe project files.",
-   "source": {
-    "name": "The Neuron",
-    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-11-2026/"
-   },
-   "edition": "2026-11-12-am",
-   "order": 17,
-   "id": "2026-11-12-am-017"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The cashew grows outside its fruit",
-   "body": "A cashew nut hangs beneath a fleshy, pear-shaped 'cashew apple', in a hard shell of its own. The apple is juicy and eaten fresh in Goa and Brazil, and in Goa it is also used to make feni. The nut has to be roasted or steamed out of its shell, which is why cashews are always sold shelled.",
-   "hook": "Wonder: what does a cashew apple taste like?",
-   "edition": "2026-11-12-am",
-   "order": 16,
-   "id": "2026-11-12-am-016"
   }
  ]
 }
