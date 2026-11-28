@@ -1,0 +1,1 @@
+Bundled: chessground GPL-3.0-or-later (lichess-org/chessground), roughjs MIT, @floating-ui/dom MIT, canvas-confetti ISC, gsap (GSAP standard 'no charge' license).

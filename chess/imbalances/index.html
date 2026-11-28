@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f1e6">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Imbalances: from Steinitz to Silman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg: #f7f1e6; --paper: #fffdf8; --ink: #231d18; --soft: #5c524a; --dim: #8b7f72; --line: #e4d8c4; --amber: #d98c00; --green: #2b8a3e; --violet: #6741d9; color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(1200px 700px at 50% 0%, #fbf7ef, var(--bg)); color: var(--ink); font: 17px/1.6 "DM Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: calc(18px + env(safe-area-inset-top)) 18px 60px; }
+    .back { color: var(--soft); text-decoration: none; font-weight: 600; font-size: 15px; }
+    .eyebrow { font: 700 12px "DM Sans"; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); margin-top: 26px; }
+    h1 { font: 700 clamp(34px, 7vw, 56px)/1.03 "Fraunces", Georgia, serif; margin: 8px 0 12px; letter-spacing: -.02em; }
+    .lead { font-size: 19px; color: #3a322b; max-width: 640px; }
+    .hand { font: 700 1.35em/1.1 "Caveat", cursive; color: var(--amber); }
+    .tree { margin: 22px 0 8px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font: 700 22px "Caveat", cursive; color: var(--soft); }
+    .tree span { background: var(--paper); border-radius: 999px; padding: 4px 14px; box-shadow: 0 0 0 1.5px rgba(35,29,24,.7); color: var(--ink); }
+    .tree i { font-style: normal; color: var(--amber); }
+    .cards { display: grid; gap: 16px; margin-top: 22px; }
+    @media (min-width: 760px) { .cards { grid-template-columns: 1fr 1fr; } }
+    a.card, .card { position: relative; display: block; text-decoration: none; color: inherit; background: var(--paper); border-radius: 22px; padding: 20px 20px 18px; box-shadow: 0 0 0 1.5px rgba(35,29,24,.85), 5px 6px 0 rgba(35,29,24,.1); transition: transform .15s, box-shadow .15s; }
+    a.card:hover { transform: translate(-2px, -2px); box-shadow: 0 0 0 1.5px rgba(35,29,24,.85), 8px 9px 0 rgba(35,29,24,.12); }
+    .num { font: 700 13px "DM Sans"; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
+    .card h2 { font: 700 26px/1.1 "Fraunces", serif; margin: 6px 0 8px; }
+    .card p { margin: 0 0 12px; color: #3a322b; font-size: 16px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags span { font-size: 13px; background: #faf3e6; border-radius: 999px; padding: 4px 10px; color: var(--soft); }
+    .status { position: absolute; right: 16px; top: 16px; font: 700 12px "DM Sans"; padding: 3px 10px; border-radius: 999px; background: #fff3dc; color: #a35a00; }
+    .status.done { background: #e6f4e9; color: var(--green); }
+    .card.soon { box-shadow: 0 0 0 1.5px rgba(35,29,24,.35); background: #fbf6ec; }
+    .card.soon h2 { color: var(--soft); }
+    .how { margin-top: 30px; background: var(--paper); border-radius: 20px; padding: 18px 20px; box-shadow: 0 0 0 1px var(--line); }
+    .how h3 { font: 700 20px "Fraunces", serif; margin: 0 0 8px; }
+    .how ul { margin: 0; padding-left: 20px; } .how li { margin: 4px 0; }
+    footer { margin-top: 28px; font-size: 13px; color: var(--dim); }
+    footer a { color: var(--soft); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../">← Chess</a>
+    <div class="eyebrow">A 3-chapter series · plus your own game</div>
+    <h1>Imbalances: from Steinitz to Silman</h1>
+    <p class="lead">How strong players choose a plan when there's no tactic on the board. One family tree of ideas, three famous games replayed on a full-screen board, and a war story in the middle of each one for the <span class="hand">aha.</span></p>
+    <div class="tree"><span>Steinitz</span><i>→</i><span>Stone vs Fire</span><i>→</i><span>Silman</span><i>→</i><span>You</span></div>
+
+    <div class="cards">
+      <a class="card" href="steinitz.html" data-id="steinitz">
+        <div class="num">Chapter 1 · Accumulation</div>
+        <h2>The Miser's Jar</h2>
+        <p>Don't swing first. Collect small advantages like coins. When the jar is full, the combination appears on its own.</p>
+        <div class="tags"><span>♟ Steinitz – von Bardeleben, 1895</span><span>📜 Fabius the Delayer</span></div>
+      </a>
+      <a class="card" href="dynamic.html" data-id="dynamic">
+        <div class="num">Chapter 2 · Static vs dynamic</div>
+        <h2>Stone vs Fire</h2>
+        <p>Some advantages last, some burn out. Morphy feeds the fire with his pieces and mates with almost nothing left.</p>
+        <div class="tags"><span>♟ Morphy's Opera Game, 1858</span><span>💡 France, May 1940</span></div>
+      </a>
+      <a class="card" href="imbalances.html" data-id="silman">
+        <div class="num">Chapter 3 · Imbalances</div>
+        <h2>Fight With Your Difference</h2>
+        <p>Ask "what's different?" before "what's best?". Kasparov plays a pawn down with a knight that paralyses the world champion.</p>
+        <div class="tags"><span>♟ Karpov – Kasparov, 1985</span><span>🏹 Agincourt, 1415</span></div>
+      </a>
+      <div class="card soon">
+        <span class="status">Next</span>
+        <div class="num">Chapter 4 · Your game</div>
+        <h2>Scan Your Own Game</h2>
+        <p>Same full-screen board and clouds, but the position is one you actually played. You find the imbalances; the theory becomes yours.</p>
+        <div class="tags"><span>♟ one of your Chess.com games</span></div>
+      </div>
+    </div>
+
+    <div class="how">
+      <h3>How each chapter works</h3>
+      <ul>
+        <li>The board fills the screen. Lessons arrive as clouds that move out of the way of the pieces that matter. <b>Tap a cloud</b> to see through it.</li>
+        <li>At key moments it stops and asks you first: find the move on the board, or pick an answer.</li>
+        <li>Halfway through, a war story takes over the screen, then hands you back to the board.</li>
+        <li>Each chapter ends with a fresh position to judge on your own, plus two quick recall questions.</li>
+      </ul>
+    </div>
+    <footer>Moves checked with chess.js, key evaluations with Stockfish. Board: <a href="https://github.com/lichess-org/chessground">Chessground</a> (GPL-3.0). Pieces: cburnett (CC BY-SA 3.0). Also uses GSAP, Rough.js, Floating UI and canvas-confetti.</footer>
+  </div>
+  <script>
+    document.querySelectorAll('a.card[data-id]').forEach(function (c) {
+      var st = null; try { st = JSON.parse(localStorage.getItem('imb-' + c.dataset.id) || 'null'); } catch (e) { }
+      if (!st) return; var s = document.createElement('span');
+      if (st.done) { s.className = 'status done'; s.textContent = '✓ Done'; } else if (st.at > 0) { s.className = 'status'; s.textContent = 'Step ' + (st.at + 1); } else return;
+      c.appendChild(s);
+    });
+  </script>
+</body>
+</html>
