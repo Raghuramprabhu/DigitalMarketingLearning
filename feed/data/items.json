@@ -1,6 +1,353 @@
 {
- "updated": "2026-11-27T17:19:10+00:00",
+ "updated": "2026-11-28T02:15:24+00:00",
  "items": [
+  {
+   "topic": "mind",
+   "kind": "recall",
+   "title": "Quick retrieval: this edition",
+   "body": "Try these from memory before scrolling back: Which two languages' routes gave us 'tea' and 'chai'? What does Java 21's list.reversed() return? Which river flows past Kodumanal? How many eyes does a honeybee have? What does change data capture read from?",
+   "edition": "2026-11-28-am",
+   "order": 30,
+   "id": "2026-11-28-am-030"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Late November",
+   "body": "The light comes later now\nand leaves before tea,\nso the lamps wake early\nand the windows turn to gold.\n\nNobody minds.\nThe evenings are longer\nfor reading.",
+   "edition": "2026-11-28-am",
+   "order": 29,
+   "id": "2026-11-28-am-029"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Avocado' comes from Nahuatl",
+   "body": "The word traces back to ahuacatl, from Nahuatl, the language of the Aztecs. Spanish speakers turned it into aguacate, and English then reshaped that into avocado. Tomato took a similar path, from the Nahuatl tomatl.",
+   "q": "Which language gave English the word avocado?",
+   "a": "Nahuatl, via Spanish aguacate.",
+   "edition": "2026-11-28-am",
+   "order": 28,
+   "id": "2026-11-28-am-028"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Shuffle the questions to catch a memorising model",
+   "body": "A write-up reproduces a neat test for benchmark contamination: give a model the test questions in their original order and in ten random orders. A model that has seen the test during training does noticeably better on the original order. In the demo, a deliberately contaminated small model scored a z-score of 5.7, while a clean one scored 0.1; above 3 is the warning sign.",
+   "hook": "Wonder: why would the order of questions matter to a model that truly understood them?",
+   "source": {
+    "name": "RIO Rundown",
+    "url": "https://riorundown.substack.com/p/ai-news-nov-27-2026-ai-infrastructure"
+   },
+   "edition": "2026-11-28-am",
+   "order": 27,
+   "id": "2026-11-28-am-027"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java: Objects.requireNonNullElse",
+   "body": "Since Java 9, Objects.requireNonNullElse(value, fallback) returns value unless it is null, in which case you get the fallback. Its sibling requireNonNullElseGet takes a Supplier, so an expensive default is only built when needed. It reads more clearly than a ternary when all you want is a sensible default.",
+   "q": "Which variant should you use when the default is costly to build?",
+   "a": "Objects.requireNonNullElseGet, which takes a Supplier.",
+   "edition": "2026-11-28-am",
+   "order": 26,
+   "id": "2026-11-28-am-026"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "The London Chess Classic is under way",
+   "body": "The XTX Markets London Chess Classic began this week, and Nodirbek Abdusattorov and Woodward were among the round-one winners, Abdusattorov beating England's young grandmaster Shreyas Royal. With the World Championship in Geneva at the same time, chess fans have a full afternoon and evening of games to follow.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news"
+   },
+   "edition": "2026-11-28-am",
+   "order": 25,
+   "id": "2026-11-28-am-025"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Think on paper",
+   "body": "Working memory is the mental desk where you hold numbers and steps while you use them, and with ADHD that desk can feel small. Give it an extension: jot the figures, the three options or the order of steps on a scrap of paper as you think. Your head then gets to do the comparing, not the remembering.",
+   "q": "Why does writing steps down help while you work through a problem?",
+   "a": "It offloads working memory, so attention can go to thinking rather than holding.",
+   "edition": "2026-11-28-am",
+   "order": 24,
+   "id": "2026-11-28-am-024"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The internet's switch-over day, 1983",
+   "body": "On 1 January 1983 the ARPANET switched from its original protocol, NCP, to TCP/IP in a single planned changeover. Machines that hadn't made the move simply couldn't talk to the network any more. Many people mark that day as the internet's quiet birthday, because the same protocols still carry this page to you.",
+   "hook": "Wonder: what makes a 'flag day' switch easier than a slow migration, and what makes it harder?",
+   "edition": "2026-11-28-am",
+   "order": 23,
+   "id": "2026-11-28-am-023"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Like the earth",
+   "who": "Thirukkural 151 (own rendering)",
+   "body": "The earth holds up even those who dig into it. In the same way, the best course is to bear with those who belittle us.",
+   "edition": "2026-11-28-am",
+   "order": 22,
+   "id": "2026-11-28-am-022"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Nalanda, a university of the ancient world",
+   "body": "Nalanda in Bihar grew into a great centre of learning from the fifth century CE, with lecture halls, libraries and monasteries for thousands of students. The Chinese traveller Xuanzang studied there in the seventh century and wrote about its teachers and debates. Its excavated red-brick ruins are now a UNESCO World Heritage Site.",
+   "q": "Which Chinese traveller studied at Nalanda in the seventh century?",
+   "a": "Xuanzang.",
+   "edition": "2026-11-28-am",
+   "order": 21,
+   "id": "2026-11-28-am-021"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "Storage strength and retrieval strength",
+   "body": "Robert and Elizabeth Bjork describe two strengths for every memory: how deeply it is stored and how easily it comes to mind right now. Rereading boosts the second, which feels good but fades. Recalling something after you have half-forgotten it grows the first. That is why a struggle to remember is often a sign that learning is happening.",
+   "hook": "Wonder: what did you half-forget this week that is worth recalling today?",
+   "edition": "2026-11-28-am",
+   "order": 20,
+   "id": "2026-11-28-am-020"
+  },
+  {
+   "topic": "space",
+   "kind": "fact",
+   "title": "Spica is two stars",
+   "body": "Spica looks like one bright point, but it is two hot blue stars orbiting each other in about four days. They are so close that each is pulled into a slight egg shape, and the pair's light varies a little as they turn. They sit roughly 250 light-years away.",
+   "q": "How long do Spica's two stars take to orbit each other?",
+   "a": "About four days.",
+   "edition": "2026-11-28-am",
+   "order": 19,
+   "id": "2026-11-28-am-019"
+  },
+  {
+   "topic": "writing",
+   "kind": "story",
+   "title": "The library card",
+   "body": "Meena found her grandfather's library card tucked inside a book on stars. It was stamped with dates from 1974, and every book was about the sky. She took the card to the counter. The librarian smiled, typed slowly, and said the account was still open. Meena borrowed the first book on the list and walked home looking up.",
+   "edition": "2026-11-28-am",
+   "order": 18,
+   "id": "2026-11-28-am-018"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "A public scoreboard for llama.cpp on AMD GPUs",
+   "body": "A new dashboard on Hugging Face, launched on 26 November, tracks how fast llama.cpp runs local models on AMD's Radeon 8060S and Radeon AI Pro R9700S. Weekly automated runs measure prompt processing and text generation speed, with Flash Attention on and off and ten repetitions each, so you can see whether a new release made things quicker.",
+   "source": {
+    "name": "RIO Rundown",
+    "url": "https://riorundown.substack.com/p/ai-news-nov-27-2026-ai-infrastructure"
+   },
+   "edition": "2026-11-28-am",
+   "order": 17,
+   "id": "2026-11-28-am-017"
+  },
+  {
+   "topic": "craft",
+   "kind": "idea",
+   "title": "Change data capture: read the database's diary",
+   "body": "Instead of having every service remember to publish an event after writing to the database, change data capture reads the database's own write log and turns each committed change into a stream of events. Nothing gets forgotten, because the log is the record of what actually happened. Debezium reading the MySQL binlog or Postgres WAL is the common example.",
+   "hook": "Wonder: what does CDC give you that a 'remember to publish' rule can't?",
+   "edition": "2026-11-28-am",
+   "order": 16,
+   "id": "2026-11-28-am-016"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "A honeybee has five eyes",
+   "body": "Two large compound eyes on the sides of the head do most of the seeing, each made of thousands of tiny lenses. Three small simple eyes, called ocelli, sit in a triangle on top of the head and help the bee sense light and keep level in flight.",
+   "q": "How many eyes does a honeybee have?",
+   "a": "Five: two compound eyes and three ocelli.",
+   "edition": "2026-11-28-am",
+   "order": 15,
+   "id": "2026-11-28-am-015"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Firouzja beats Artemiev to reach the Speed Chess quarterfinals",
+   "body": "Alireza Firouzja won his Speed Chess Championship round-of-16 match against Vladislav Artemiev 11–7 across blitz and bullet. In the quarterfinals he will meet the winner of Sindarov versus Caruana, a match that waits until the World Championship is over.",
+   "source": {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/news"
+   },
+   "edition": "2026-11-28-am",
+   "order": 14,
+   "id": "2026-11-28-am-014"
+  },
+  {
+   "topic": "writing",
+   "kind": "tip",
+   "title": "Let the ending echo the opening",
+   "body": "A short story often feels finished when its last page touches something from its first: the same object, place or line of dialogue, now seen differently. The echo tells the reader the circle is closed without you having to say so. Plant it lightly at the start; don't underline it at the end.",
+   "edition": "2026-11-28-am",
+   "order": 13,
+   "id": "2026-11-28-am-013"
+  },
+  {
+   "topic": "computing",
+   "kind": "fact",
+   "title": "The Antikythera mechanism",
+   "body": "In 1901 sponge divers off the Greek island of Antikythera brought up corroded lumps of bronze from an ancient shipwreck. Inside were dozens of interlocking gear wheels. Built over two thousand years ago, the device modelled the movements of the Sun and Moon, the Moon's phases and the timing of eclipses, an analogue calculator turned by hand.",
+   "q": "What did the gears of the Antikythera mechanism model?",
+   "a": "The movements of the Sun and Moon, lunar phases and eclipse timing.",
+   "edition": "2026-11-28-am",
+   "order": 12,
+   "id": "2026-11-28-am-012"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "The close supernova came from a young star",
+   "body": "SN 2026ahvu, the Type Ia supernova in NGC 1433 about 50 million light-years away, is giving up clues. A team led by Sumit Sarbadhicary suggests the white dwarf that exploded was less than 100 million years old, which is young for such a star. Whether its partner was a second white dwarf or an ordinary star is still open, and radio telescopes are now listening for the answer.",
+   "hook": "Wonder: how can the age of a star that no longer exists be measured?",
+   "source": {
+    "name": "Science News",
+    "url": "https://www.sciencenews.org/article/close-supernova-secrets-white-dwarf"
+   },
+   "edition": "2026-11-28-am",
+   "order": 11,
+   "id": "2026-11-28-am-011"
+  },
+  {
+   "topic": "wisdom",
+   "kind": "quote",
+   "title": "Room for a kindness",
+   "who": "Seneca, On the Happy Life (own rendering)",
+   "body": "Wherever there is a human being, there is room for a kindness.",
+   "edition": "2026-11-28-am",
+   "order": 10,
+   "id": "2026-11-28-am-010"
+  },
+  {
+   "topic": "mind",
+   "kind": "idea",
+   "title": "The illusion of explanatory depth",
+   "body": "Most of us feel we understand how a zip, a flush toilet or a cylinder lock works, until asked to explain it step by step. In studies by Rozenblit and Keil, people's confidence dropped sharply after trying. The gentle lesson: writing out the mechanism is a cheap way to find exactly where your understanding thins out.",
+   "q": "What reliably lowers people's confidence that they understand a device?",
+   "a": "Trying to explain how it works, step by step.",
+   "edition": "2026-11-28-am",
+   "order": 9,
+   "id": "2026-11-28-am-009"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "QA.tech sends agents to test apps like real users",
+   "body": "QA.tech has launched testing agents that click through software the way a person would, looking for broken buttons, dead ends and flows that don't finish. The pitch is fewer hand-written test scripts to maintain: when the interface changes, the agent re-reads the screen instead of failing on a stale selector.",
+   "hook": "Wonder: what would an agent tester notice that a scripted test never could?",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-27-2026/"
+   },
+   "edition": "2026-11-28-am",
+   "order": 8,
+   "id": "2026-11-28-am-008"
+  },
+  {
+   "topic": "history",
+   "kind": "fact",
+   "title": "Kodumanal, a Sangam-era workshop village",
+   "body": "On the banks of the Noyyal river near Erode lies Kodumanal, which was once a busy craft centre. Excavations have found furnaces for iron and steel, workshops for beads of carnelian, beryl and quartz, and pottery scratched with Tamil-Brahmi names. It sat on a route linking the western coast with the Kaveri delta, so its beads travelled far.",
+   "q": "Which river runs beside the ancient craft village of Kodumanal?",
+   "a": "The Noyyal, near Erode.",
+   "edition": "2026-11-28-am",
+   "order": 7,
+   "id": "2026-11-28-am-007"
+  },
+  {
+   "topic": "adhd",
+   "kind": "tip",
+   "title": "Start in the middle",
+   "body": "If the opening of a task is the hard part, skip it. Write the easy section of the report first, answer the email's simple question before the tricky one, wash the cups before the pan. Momentum from the middle often carries you back to the beginning, and the blank-page feeling never gets a chance to settle in.",
+   "edition": "2026-11-28-am",
+   "order": 6,
+   "id": "2026-11-28-am-006"
+  },
+  {
+   "topic": "facts",
+   "kind": "fact",
+   "title": "'Tea' and 'chai' are the same word",
+   "body": "Both words come from Chinese. 'Cha' travelled overland along the old trade routes, giving chai in Hindi, Persian and Russian. 'Te', from the Min dialect spoken around the port of Xiamen, travelled by sea with Dutch traders, giving tea, thé and Tee. So the way a language says 'tea' hints at how the leaf first arrived.",
+   "hook": "Wonder: which way did tea reach your own language?",
+   "edition": "2026-11-28-am",
+   "order": 5,
+   "id": "2026-11-28-am-005"
+  },
+  {
+   "topic": "craft",
+   "kind": "tip",
+   "title": "Java 21: getFirst, getLast and reversed",
+   "body": "Java 21 added the SequencedCollection interface, so lists, deques and LinkedHashSet share one vocabulary for 'ends'. Instead of list.get(list.size() - 1) you can write list.getLast(), and list.reversed() gives a reversed view without copying. LinkedHashMap gets the matching firstEntry() and lastEntry().",
+   "q": "What does list.reversed() return in Java 21 — a copy or a view?",
+   "a": "A view: changes to the original show through it.",
+   "edition": "2026-11-28-am",
+   "order": 4,
+   "id": "2026-11-28-am-004"
+  },
+  {
+   "topic": "chess",
+   "kind": "news",
+   "title": "Geneva: Game 4 today, level at 1.5–1.5",
+   "body": "After three draws, Gukesh and Sindarov return from their first rest day for Game 4 of the World Championship at the Fondation Martin Bodmer near Geneva. Gukesh has the white pieces. Play starts at 15:00 local time, which is 19:30 in India. Games 5 and 6 follow on the next two days before the next rest day on 1 December.",
+   "source": {
+    "name": "ChessBase",
+    "url": "https://en.chessbase.com/post/world-championship-2026-live"
+   },
+   "edition": "2026-11-28-am",
+   "order": 3,
+   "id": "2026-11-28-am-003"
+  },
+  {
+   "topic": "writing",
+   "kind": "poem",
+   "title": "Filter coffee",
+   "body": "The decoction drips\nlike a slow clock in steel,\none dark bead at a time.\n\nNo one hurries it.\nThe kitchen learns to wait,\nand the waiting smells of morning.",
+   "edition": "2026-11-28-am",
+   "order": 2,
+   "id": "2026-11-28-am-002"
+  },
+  {
+   "topic": "space",
+   "kind": "news",
+   "title": "Venus wears a crescent beside Spica",
+   "body": "Before dawn this week, look low in the south-east for Venus, the brightest point there, sitting about four degrees from Spica, the blue-white star of Virgo. A small telescope shows Venus as a crescent only about a quarter lit. Higher up, Jupiter and orange Mars still keep company with Regulus in Leo, and the Moon reaches last quarter on 1 December.",
+   "hook": "Wonder: why does Venus look thinner but brighter as it swings closer to us?",
+   "source": {
+    "name": "When the Curves Line Up",
+    "url": "https://whenthecurveslineup.com/2026/11/19/2026-november-28-almanac-for-sun-moon-and-planets/"
+   },
+   "edition": "2026-11-28-am",
+   "order": 1,
+   "id": "2026-11-28-am-001"
+  },
+  {
+   "topic": "ai",
+   "kind": "news",
+   "title": "Tencent open-sources DFly2 to speed up replies",
+   "body": "Tencent has released DFly2, a tool that lets a small helper guess several pieces of text ahead while the main model simply checks the guesses. Accepted guesses come almost for free. Tencent reports up to 81% more throughput for DeepSeek-V4.1-Flash at a 64K-token context, and agent tasks on its Hy4 Flash model running up to 4.2 times faster.",
+   "q": "In speculative decoding, what does the big model do with the small model's guesses?",
+   "a": "It verifies them, keeping the ones it agrees with, so several tokens can be accepted in one step.",
+   "source": {
+    "name": "The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-27-2026/"
+   },
+   "edition": "2026-11-28-am",
+   "order": 0,
+   "id": "2026-11-28-am-000"
+  },
   {
    "topic": "chess",
    "kind": "fact",
@@ -9754,348 +10101,6 @@
    "edition": "2026-11-13-pm",
    "order": 16,
    "id": "2026-11-13-pm-016"
-  },
-  {
-   "topic": "writing",
-   "kind": "story",
-   "title": "The radio repairman's quiet",
-   "body": "Every radio that came into Selvam's shop got the same first test: he switched it on and listened to the hiss for a full minute. Customers fidgeted. 'The hiss tells me more than the music,' he'd say.\n\nOne evening a boy brought a radio that worked perfectly. 'My grandfather listened to it,' he said. 'I just wanted someone to hear it with.' Selvam turned it on, and they listened to the hiss together for a full minute, and then the news of rain, and then a song neither of them knew.",
-   "edition": "2026-11-13-pm",
-   "order": 15,
-   "id": "2026-11-13-pm-015"
-  },
-  {
-   "topic": "chess",
-   "kind": "idea",
-   "title": "The Saavedra position",
-   "body": "A famous endgame from 1895: White has a pawn about to promote against a lone rook. Making a queen sounds obvious, but Black has a trick that leads to stalemate. Promoting to a rook instead dodges the stalemate, and White wins with a double threat a move later.\n\nIt's one of the loveliest reminders that the 'best' piece isn't always the right one.",
-   "q": "What does White promote to in the Saavedra position?",
-   "a": "A rook, because a queen would allow a stalemate defence.",
-   "edition": "2026-11-13-pm",
-   "order": 14,
-   "id": "2026-11-13-pm-014"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Put the label on the picture",
-   "body": "When a diagram's labels sit in a separate legend, your eyes bounce back and forth and your working memory does the stitching. Researchers call this the split-attention effect. Placing each label right on the part it names, or the explanation next to the step it explains, makes the same material easier to learn.",
-   "hook": "Wonder: which of your own notes would get easier if the words moved closer to the picture?",
-   "edition": "2026-11-13-pm",
-   "order": 13,
-   "id": "2026-11-13-pm-013"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "The Easter egg in Adventure",
-   "body": "Warren Robinett hid a secret room in Adventure, his 1980 game for the Atari 2600, with the words 'Created by Warren Robinett'. Atari didn't credit its programmers at the time, so he signed his work in secret. It's one of the most famous early video-game Easter eggs, and it helped the term catch on.",
-   "q": "Why did Warren Robinett hide his name inside Adventure?",
-   "a": "Atari didn't credit programmers, so he signed the game in a secret room.",
-   "edition": "2026-11-13-pm",
-   "order": 12,
-   "id": "2026-11-13-pm-012"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Clean within",
-   "body": "Keep the mind free of stain: that alone is virtue. Everything else is only noise.",
-   "who": "Thirukkural 34 (own rendering)",
-   "edition": "2026-11-13-pm",
-   "order": 11,
-   "id": "2026-11-13-pm-011"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A 'supernova impostor' finally explained",
-   "body": "For years, an object called AT 2016blu in the galaxy NGC 4559 kept flaring as if a star were exploding, yet the star never died. Astronomers now think a hidden companion, a black hole or neutron star, is feeding on an unstable massive star, and each feeding spell sets off an outburst that mimics a supernova.",
-   "hook": "Wonder: how many 'explosions' in the sky are really long conversations between two stars?",
-   "source": {
-    "name": "Space.com",
-    "url": "https://www.space.com/astronomy/black-holes/this-supernova-impostor-baffled-astronomers-for-15-years-until-they-found-a-hidden-black-hole-feeding-on-an-unstable-star"
-   },
-   "edition": "2026-11-13-pm",
-   "order": 10,
-   "id": "2026-11-13-pm-010"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Manimekalai, the epic that came next",
-   "body": "Manimekalai, one of the five great epics of Tamil literature, is often read as a sequel to Silappatikaram. Its heroine is the daughter of Kovalan and Madhavi, and her story follows a quieter path, towards learning, compassion and a begging bowl that never empties. It is traditionally credited to the poet Sattanar.",
-   "hook": "Wonder: what would it be like to write the sequel to someone else's famous story?",
-   "edition": "2026-11-13-pm",
-   "order": 9,
-   "id": "2026-11-13-pm-009"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "MCP and Agent Skills grow up in the open",
-   "body": "Google's open-source blog describes how the Model Context Protocol (MCP) and Agent Skills are now maintained under the Linux Foundation's Agentic AI Foundation, with Google Cloud engineers among the co-maintainers. The aim is a shared, open way to give agents tools and context, so one integration works across many agents.",
-   "q": "Which foundation now hosts MCP and Agent Skills?",
-   "a": "The Agentic AI Foundation (AAIF), part of the Linux Foundation.",
-   "source": {
-    "name": "Google Open Source Blog",
-    "url": "https://opensource.googleblog.com/2026/11/scaling-ai-agents-open-standards-mcp-aaif.html"
-   },
-   "edition": "2026-11-13-pm",
-   "order": 8,
-   "id": "2026-11-13-pm-008"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "Apples float",
-   "body": "Apples float in water because roughly a quarter of their volume is air, trapped between their cells. That's why apple bobbing works at all.",
-   "q": "Why do apples float?",
-   "a": "About a quarter of an apple's volume is air trapped between its cells.",
-   "edition": "2026-11-13-pm",
-   "order": 7,
-   "id": "2026-11-13-pm-007"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "A five-minute Friday shutdown",
-   "body": "Before the weekend, spend five minutes closing loops: jot down what's half-done, where you left it, and the very next step for Monday. Then close the tabs.\n\nMonday-you gets a map instead of a fog, and weekend-you doesn't have to keep carrying it.",
-   "hook": "Wonder: what's the one line Monday-you would most like to find?",
-   "edition": "2026-11-13-pm",
-   "order": 6,
-   "id": "2026-11-13-pm-006"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Vallejo opens with three wins in Salamanca",
-   "body": "Paco Vallejo started the Salamanca Masters with a perfect 3/3, beating Anastasiia Hnatyshyn, José Martínez and Loek van Wely to take the sole lead. Martínez is second on 2/3. Eleven-year-old Bodhana Sivanandan bounced back from two early losses to beat Elisabeth Paehtz in round three.",
-   "source": {
-    "name": "ChessBase",
-    "url": "https://en.chessbase.com/post/salamanca-festival-2026-1"
-   },
-   "edition": "2026-11-13-pm",
-   "order": 5,
-   "id": "2026-11-13-pm-005"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Event sourcing: keep the story, not just the ending",
-   "body": "Most databases store only the current state: balance = 420. Event sourcing stores every change instead: deposited 500, paid 80. The current state is just the events replayed in order.\n\nYou get a full history for free, can rebuild views later, and can answer 'how did we get here?'. The cost: replays get slow, so systems save periodic snapshots and replay only the events after them.",
-   "q": "In event sourcing, how is the current state of an account produced?",
-   "a": "By replaying its stored events in order, usually starting from the latest snapshot.",
-   "edition": "2026-11-13-pm",
-   "order": 4,
-   "id": "2026-11-13-pm-004"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "Friday, the late lamp",
-   "body": "The week folds itself\nlike a shirt nobody asked to iron.\nOne lamp stays on in the hall,\nnot for work,\njust so the stairs remember\nwhere they go.",
-   "hook": "Wonder: what small light do you leave on for yourself?",
-   "edition": "2026-11-13-pm",
-   "order": 3,
-   "id": "2026-11-13-pm-003"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "Earth's water may be homemade",
-   "body": "A new study suggests some of Earth's water may not have arrived on comets or asteroids at all. In lab conditions, hot rocky material reacting with hydrogen produced water, hinting that the young Earth's fiery early atmosphere could have made a large amount of its own, possibly many oceans' worth.",
-   "hook": "Wonder: the water in your glass might have been cooked up by the young planet itself.",
-   "source": {
-    "name": "ScienceDaily",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261110042549.htm"
-   },
-   "edition": "2026-11-13-pm",
-   "order": 2,
-   "id": "2026-11-13-pm-002"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Databricks' Genie can keep working in the background",
-   "body": "Databricks has introduced an always-on mode for Genie, its data agent. Instead of waiting for each question, it can run in the background, pull together company information and take on longer assignments. A new 'Ontology' feature maps how people, projects and data relate to each other. The always-on mode is heading to preview first.",
-   "hook": "Wonder: what's one slow, repetitive question you'd hand to a background helper?",
-   "source": {
-    "name": "Databricks",
-    "url": "https://www.databricks.com/blog/new-genie-autonomous-ai-complex-enterprise-work"
-   },
-   "edition": "2026-11-13-pm",
-   "order": 1,
-   "id": "2026-11-13-pm-001"
-  },
-  {
-   "topic": "mind",
-   "kind": "recall",
-   "title": "Quick retrieval: this edition",
-   "body": "Before you scroll, a warm-up: a few small questions from this edition are waiting further down. Try answering each before you peek.",
-   "q": "In the Saavedra position, why does White promote to a rook instead of a queen?",
-   "a": "A new queen allows a stalemate trick; the rook avoids stalemate and still wins.",
-   "edition": "2026-11-13-pm",
-   "order": 0,
-   "id": "2026-11-13-pm-000"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "A Mars day is a little longer",
-   "body": "A solar day on Mars, called a sol, lasts about 24 hours and 40 minutes. Mission teams on Earth who live on Mars time shift their schedules about 40 minutes later each day.",
-   "hook": "Wonder: what would you do with an extra 40 minutes every day?",
-   "edition": "2026-11-13-am",
-   "order": 30,
-   "id": "2026-11-13-am-030"
-  },
-  {
-   "topic": "writing",
-   "kind": "poem",
-   "title": "The postman's bicycle",
-   "body": "Its bell has one opinion,\nits basket holds the town:\na birthday, a bill, a postcard\nfrom someone's sister in Kodaikanal,\nall leaning on each other\non the long ride down.",
-   "edition": "2026-11-13-am",
-   "order": 29,
-   "id": "2026-11-13-am-029"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Sliding-window rate limits",
-   "body": "A fixed-window limiter ('100 requests per minute, resetting at :00') lets bursts slip through at the boundary: 100 at 0:59, another 100 at 1:00. A sliding window counts requests over the last 60 seconds from right now, so the limit holds smoothly.\n\nA cheap version blends the current and previous window's counts, weighted by how far into the current window you are.",
-   "q": "What weakness of fixed-window rate limiting does a sliding window fix?",
-   "a": "Bursts at window boundaries, where a client can send almost double the limit in a short span.",
-   "edition": "2026-11-13-am",
-   "order": 28,
-   "id": "2026-11-13-am-028"
-  },
-  {
-   "topic": "wisdom",
-   "kind": "quote",
-   "title": "Answer harm with kindness",
-   "body": "To answer those who hurt you, do them good, until they feel ashamed; then let both the hurt and the kindness be forgotten.",
-   "who": "Thirukkural 314 (own rendering)",
-   "edition": "2026-11-13-am",
-   "order": 27,
-   "id": "2026-11-13-am-027"
-  },
-  {
-   "topic": "chess",
-   "kind": "news",
-   "title": "Nakamura stays with Chess.com",
-   "body": "Hikaru Nakamura has signed a new long-term agreement with Chess.com, extending a partnership that began in 2013. He'll join the commentary team for some key games of the upcoming World Championship match, and a 'Hikaru vs. The World' event is planned for 2027.",
-   "source": {
-    "name": "Chess.com",
-    "url": "https://www.chess.com/news/view/hikaru-nakamura-renews-with-chess-com"
-   },
-   "edition": "2026-11-13-am",
-   "order": 26,
-   "id": "2026-11-13-am-026"
-  },
-  {
-   "topic": "ai",
-   "kind": "idea",
-   "title": "Let the agent ask one question",
-   "body": "When you hand an agent a task, allow it exactly one clarifying question before it starts. One question forces it to find the biggest gap in your request, without turning the job into an interview.\n\nOften the question itself shows you what you forgot to say.",
-   "hook": "Wonder: what would your most-asked clarifying question be?",
-   "edition": "2026-11-13-am",
-   "order": 25,
-   "id": "2026-11-13-am-025"
-  },
-  {
-   "topic": "mind",
-   "kind": "idea",
-   "title": "Flow lives at the edge of skill",
-   "body": "Psychologist Mihaly Csikszentmihalyi found that deep absorption, which he called flow, tends to appear when a task's challenge sits just above your current skill. Too easy and you drift into boredom; too hard and you tense up.\n\nIf you're bored, add a constraint. If you're anxious, shrink the step.",
-   "edition": "2026-11-13-am",
-   "order": 24,
-   "id": "2026-11-13-am-024"
-  },
-  {
-   "topic": "computing",
-   "kind": "fact",
-   "title": "Tetris began in Moscow, 1984",
-   "body": "Alexey Pajitnov wrote the first Tetris in June 1984 on an Elektronika 60 computer at the Soviet Academy of Sciences. The name blends 'tetromino' (a shape of four squares) and 'tennis', his favourite sport.",
-   "q": "Which two words were blended to make the name 'Tetris'?",
-   "a": "Tetromino and tennis.",
-   "edition": "2026-11-13-am",
-   "order": 23,
-   "id": "2026-11-13-am-023"
-  },
-  {
-   "topic": "space",
-   "kind": "news",
-   "title": "A hidden twist in the solar wind",
-   "body": "Using Parker Solar Probe data, an international team found that turbulent magnetic fields in the solar wind flip their direction of rotation at very small scales. The flip happens where the plasma stops acting like a fluid and starts acting like individual particles, a clue that could help improve space-weather forecasts.",
-   "source": {
-    "name": "ScienceDaily",
-    "url": "https://www.sciencedaily.com/releases/2026/11/261109205411.htm"
-   },
-   "edition": "2026-11-13-am",
-   "order": 22,
-   "id": "2026-11-13-am-022"
-  },
-  {
-   "topic": "adhd",
-   "kind": "tip",
-   "title": "Give big tasks a progress bar",
-   "body": "Long tasks feel endless because you can't see them moving. Split one into 10 pieces and draw 10 empty boxes on a sticky note. Fill a box each time a piece is done.\n\nWatching the bar fill gives your brain the steady small rewards it likes.",
-   "edition": "2026-11-13-am",
-   "order": 21,
-   "id": "2026-11-13-am-021"
-  },
-  {
-   "topic": "history",
-   "kind": "fact",
-   "title": "Charminar, 1591",
-   "body": "Hyderabad's Charminar ('four minarets') was built in 1591 by Muhammad Quli Qutb Shah, the Qutb Shahi ruler who founded the city. It stood at the heart of the new city's layout, and its upper floor holds a small mosque.",
-   "hook": "Wonder: what does a city choose to put at its very centre?",
-   "edition": "2026-11-13-am",
-   "order": 20,
-   "id": "2026-11-13-am-020"
-  },
-  {
-   "topic": "writing",
-   "kind": "idea",
-   "title": "Give the reader a small mystery early",
-   "body": "Plant one unexplained detail in the first lines: a locked drawer, a name no one says, a coat that's too big. You don't need a big secret. A small open question gives the reader a reason to keep going, and answering it later feels like a reward.",
-   "edition": "2026-11-13-am",
-   "order": 19,
-   "id": "2026-11-13-am-019"
-  },
-  {
-   "topic": "facts",
-   "kind": "fact",
-   "title": "The far side isn't dark",
-   "body": "The side of the Moon we never see from Earth gets just as much sunlight as the side we do. 'Dark side' only meant unknown. During our new Moon, the far side is in full daylight.",
-   "q": "When the Moon is 'new' for us, what is the far side doing?",
-   "a": "Basking in full sunlight.",
-   "edition": "2026-11-13-am",
-   "order": 18,
-   "id": "2026-11-13-am-018"
-  },
-  {
-   "topic": "ai",
-   "kind": "news",
-   "title": "Google Labs tries Tabletop",
-   "body": "Google Labs opened a waitlist for Tabletop, an experiment that builds small shared spaces from a prompt: a trip plan, a shared expense tracker, a dinner poll or a tournament bracket. Friends can join and edit together in real time. For now it's limited to adults in the US.",
-   "source": {
-    "name": "The Verge",
-    "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability"
-   },
-   "edition": "2026-11-13-am",
-   "order": 17,
-   "id": "2026-11-13-am-017"
-  },
-  {
-   "topic": "craft",
-   "kind": "idea",
-   "title": "Canary releases",
-   "body": "Instead of shipping a new version to everyone at once, send it to a small slice of traffic first, say 1%. Watch error rates and latency. If it behaves, widen the slice step by step; if not, roll back while most users never noticed.\n\nThe name comes from the canaries miners once carried as an early warning.",
-   "hook": "Wonder: what's the smallest audience that would still tell you something true?",
-   "edition": "2026-11-13-am",
-   "order": 16,
-   "id": "2026-11-13-am-016"
   }
  ]
 }
